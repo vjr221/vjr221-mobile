@@ -1,0 +1,9 @@
+import { useState } from 'react';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { HomeScreen } from '../features/home/HomeScreen';
+import { colors } from '../theme/tokens';
+import { strings } from '../i18n/strings';
+type Tab = 'home' | 'explore' | 'search' | 'favorites' | 'more';
+const labels: Record<Tab, string> = { home: strings.fr.home, explore: strings.fr.explore, search: strings.fr.search, favorites: strings.fr.favorites, more: strings.fr.more };
+export function AppNavigator() { const [tab, setTab] = useState<Tab>('home'); return <View style={styles.root}>{tab === 'home' ? <HomeScreen /> : <View style={styles.placeholder}><Text style={styles.placeholderTitle}>{labels[tab]}</Text><Text style={styles.placeholderText}>Cet espace est prêt à être relié aux contenus VJR 221.</Text></View>}<View accessibilityRole="tablist" style={styles.tabs}>{(Object.keys(labels) as Tab[]).map((key) => <Pressable accessibilityRole="tab" accessibilityState={{ selected: tab === key }} key={key} onPress={() => setTab(key)} style={styles.tab}><Text style={[styles.tabText, tab === key && styles.tabTextActive]}>{labels[key]}</Text></Pressable>)}</View></View>; }
+const styles = StyleSheet.create({ root: { flex: 1 }, tabs: { flexDirection: 'row', backgroundColor: colors.card, borderTopColor: colors.border, borderTopWidth: 1, paddingVertical: 10 }, tab: { flex: 1, alignItems: 'center', paddingVertical: 4 }, tabText: { fontSize: 11, color: colors.muted, fontWeight: '600' }, tabTextActive: { color: colors.primary, fontWeight: '800' }, placeholder: { flex: 1, padding: 24, justifyContent: 'center', backgroundColor: colors.surface }, placeholderTitle: { fontSize: 28, fontWeight: '800', color: colors.primary }, placeholderText: { marginTop: 8, color: colors.muted, fontSize: 16 } });

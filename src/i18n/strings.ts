@@ -1,0 +1,2 @@
+export type Locale = 'fr' | 'wo';
+export const strings = { fr: { home: 'Accueil', explore: 'Explorer', search: 'Recherche', favorites: 'Favoris', more: 'Plus', tagline: 'Le Sénégal dans sa diversité', discover: 'Explorer le Sénégal', featured: 'À la une', categories: 'Explorer par univers' }, wo: { home: 'Kër gi', explore: 'Seet', search: 'Wut', favorites: 'Tànn', more: 'Yeneen', tagline: 'Senegaal ci ay wuuteem', discover: 'Seet Senegaal', featured: 'Ci kanam', categories: 'Seet ci wàll' } } as const;
