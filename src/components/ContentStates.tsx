@@ -1,0 +1,6 @@
+import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
+import { colors, radii, spacing } from '../theme/tokens';
+export function LoadingState() { return <View style={styles.center}><ActivityIndicator color={colors.primary} /><Text style={styles.text}>Chargement des contenus…</Text></View>; }
+export function EmptyState({ message }: { message: string }) { return <View style={styles.box}><Text style={styles.text}>{message}</Text></View>; }
+export function ErrorState({ onRetry }: { onRetry: () => void }) { return <View style={styles.box}><Text style={styles.text}>Impossible de charger ce contenu.</Text><Pressable accessibilityRole="button" onPress={onRetry} style={styles.button}><Text style={styles.buttonText}>Réessayer</Text></Pressable></View>; }
+const styles = StyleSheet.create({ center: { padding: spacing.xl, alignItems: 'center', gap: spacing.sm }, box: { padding: spacing.lg, backgroundColor: colors.sand, borderRadius: radii.md, alignItems: 'flex-start', gap: spacing.sm }, text: { color: colors.muted, textAlign: 'center' }, button: { backgroundColor: colors.primary, borderRadius: radii.pill, paddingHorizontal: spacing.md, paddingVertical: spacing.sm }, buttonText: { color: colors.white, fontWeight: '700' } });

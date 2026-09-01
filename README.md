@@ -10,15 +10,24 @@ Application mobile officielle de **VJR 221 — Le Sénégal dans sa diversité**
 
 Utiliser `npm run android`, `npm run ios` ou `npm run web` selon la cible.
 
-## Principes
+## Architecture et données
 
 - Une seule base TypeScript cross-platform.
-- API WordPress configurée par variables d'environnement, sans contenu métier fictif.
-- Interface accessible et responsive, avec navigation Accueil, Explorer, Recherche, Favoris et Plus.
-- Préparée pour le français et le wolof, le cache local, l'offline, les deep links et les environnements dev/staging/prod.
+- API WordPress configurée par variables d'environnement, sans contenu métier fictif. La collection publique actuellement exposée est `wp/v2/posts`; les univers sans API publique affichent un état explicite.
+- Navigation Accueil, Explorer, Recherche, Favoris et Plus, avec fiches réutilisables, partage et ouverture de liens source.
+- Français et wolof : les libellés d'interface sont centralisés, le choix de langue est persistant et le français reste le fallback.
+- Cache local avec TTL de 15 minutes : en cas de réseau indisponible, le dernier contenu connu s'affiche avec un indicateur.
+
+## Environnements
+
+`EXPO_PUBLIC_APP_ENV` accepte `development`, `staging` ou `production`. Les URLs du site et de l'API sont configurées avec `EXPO_PUBLIC_SITE_URL` et `EXPO_PUBLIC_API_BASE_URL`.
 
 Voir [l'architecture](docs/architecture.md).
 
 ## Vérification
 
-`npm run typecheck` vérifie les contrats TypeScript et `npm run lint` lance Expo lint.
+`npm run typecheck` vérifie les contrats TypeScript, `npm run lint` lance Expo lint et `npm test` exécute Jest. `npx expo export --platform android` produit un bundle de vérification ; EAS Build peut ensuite être connecté pour les builds de distribution.
+
+## Roadmap
+
+Voir [l'architecture](docs/architecture.md), [l'API](docs/API.md) et la [roadmap](docs/ROADMAP.md).
