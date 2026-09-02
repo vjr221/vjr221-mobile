@@ -33,6 +33,10 @@ function wait(ms: number, signal: AbortSignal): Promise<void> {
 }
 
 async function fetchOnce<T>(baseUrl: string, path: string, signal: AbortSignal): Promise<T> {
+  if (signal.aborted) {
+    throw new DOMException('La requête a été interrompue.', 'AbortError');
+  }
+
   const response = await fetch(joinUrl(baseUrl, path), {
     headers: { Accept: 'application/json' },
     signal,
