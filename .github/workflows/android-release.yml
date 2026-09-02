@@ -28,7 +28,7 @@ jobs:
           gh --version
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Use official VJR 221 app icon
         run: |
