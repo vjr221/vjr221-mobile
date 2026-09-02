@@ -1,0 +1,16 @@
+name: Actions Diagnostic
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  startup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Diagnostic
+        run: echo "VJR 221 GitHub Actions startup OK"
