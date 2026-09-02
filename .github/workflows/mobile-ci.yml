@@ -10,15 +10,21 @@ permissions:
 jobs:
   quality:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
+      - name: Checkout repository (native git)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach "${GITHUB_SHA}"
+      - name: Runtime information
+        run: |
+          node --version
+          npm --version
+          git --version
       - name: Install dependencies
         run: npm ci
       - name: Typecheck
