@@ -2,18 +2,33 @@ import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { categories } from '../../config/categories';
 import { EmptyState } from '../../components/ContentStates';
-import { GeoExplorer } from './GeoExplorer';
+import { DirectoryScreen } from '../directory/DirectoryScreen';
+import { GeoExplorer, type GeoView } from './GeoExplorer';
 import { colors, radii, spacing } from '../../theme/tokens';
 import { useI18n } from '../../i18n/I18nProvider';
 import type { TranslationKey } from '../../i18n/strings';
-import type { ContentType } from '../../types/content';
+import type { ContentItem, ContentType } from '../../types/content';
 
-export function ExploreScreen() {
+export function ExploreScreen({
+  onOpen,
+  initialCollection,
+  initialGeoView,
+  initialDirectoryCategory,
+}: {
+  onOpen: (item: ContentItem) => void;
+  initialCollection?: ContentType;
+  initialGeoView?: GeoView;
+  initialDirectoryCategory?: string;
+}) {
   const { t } = useI18n();
-  const [openCollection, setOpenCollection] = useState<ContentType | null>(null);
+  const [openCollection, setOpenCollection] = useState<ContentType | null>(initialCollection ?? null);
 
   if (openCollection === 'regions') {
-    return <GeoExplorer onExit={() => setOpenCollection(null)} />;
+    return <GeoExplorer onExit={() => setOpenCollection(null)} onOpenContent={onOpen} initialView={initialGeoView} />;
+  }
+
+  if (openCollection === 'directory') {
+    return <DirectoryScreen onOpen={onOpen} initialCategory={initialDirectoryCategory} />;
   }
 
   return (

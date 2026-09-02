@@ -58,6 +58,7 @@ export const strings = {
     seeVillages: 'Voir les quartiers et villages',
     exploreRegionsIntro: 'Parcourez le Sénégal région par région, jusqu’à la commune.',
     loadMore: 'Charger plus',
+    relatedContent: 'Contenus associés',
   },
   wo: {
     home: 'Kër gi',
@@ -116,6 +117,7 @@ export const strings = {
     seeVillages: 'Xool dëkk yu ndaw yi',
     exploreRegionsIntro: 'Seetal Senegaal diiwaan ci diiwaan, ba ci commune.',
     loadMore: 'Yokk ñeneen',
+    relatedContent: 'Yëf yu ko aju',
   },
 } as const;
 

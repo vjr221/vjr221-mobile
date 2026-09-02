@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
 import { GeoDetailCard } from './GeoDetailCard';
 import { GeoListRow } from './GeoListRow';
@@ -16,9 +17,11 @@ import {
   getVillage,
   getVillages,
 } from '../../services/geoRepository';
+import { getLieuContent } from '../../services/contentRepository';
 import type { Commune, Department, Region, Village } from '../../types/geo';
+import type { ContentItem } from '../../types/content';
 
-type GeoView =
+export type GeoView =
   | { kind: 'regions' }
   | { kind: 'region'; id: number }
   | { kind: 'department'; id: number }
@@ -34,8 +37,8 @@ type LoadState = 'loading' | 'ready' | 'error';
  * recherche/filtre par nom à chaque niveau ; états loading/error/empty/offline explicites ;
  * aucune donnée n'est jamais fabriquée si l'API ne la fournit pas.
  */
-export function GeoExplorer({ onExit }: { onExit: () => void }) {
-  const [stack, setStack] = useState<GeoView[]>([{ kind: 'regions' }]);
+export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: () => void; onOpenContent: (item: ContentItem) => void; initialView?: GeoView }) {
+  const [stack, setStack] = useState<GeoView[]>(initialView ? [{ kind: 'regions' }, initialView] : [{ kind: 'regions' }]);
   const top = stack[stack.length - 1];
 
   const push = (view: GeoView) => setStack((current) => [...current, view]);
@@ -43,10 +46,10 @@ export function GeoExplorer({ onExit }: { onExit: () => void }) {
 
   const Screen = {
     regions: <RegionsListScreen onOpen={(id) => push({ kind: 'region', id })} />,
-    region: top.kind === 'region' ? <RegionScreen id={top.id} onOpenDepartment={(id) => push({ kind: 'department', id })} /> : null,
-    department: top.kind === 'department' ? <DepartmentScreen id={top.id} onOpenCommune={(id) => push({ kind: 'commune', id })} /> : null,
-    commune: top.kind === 'commune' ? <CommuneScreen id={top.id} onOpenVillage={(id) => push({ kind: 'village', id })} /> : null,
-    village: top.kind === 'village' ? <VillageScreen id={top.id} /> : null,
+    region: top.kind === 'region' ? <RegionScreen id={top.id} onOpenDepartment={(id) => push({ kind: 'department', id })} onOpenContent={onOpenContent} /> : null,
+    department: top.kind === 'department' ? <DepartmentScreen id={top.id} onOpenCommune={(id) => push({ kind: 'commune', id })} onOpenContent={onOpenContent} /> : null,
+    commune: top.kind === 'commune' ? <CommuneScreen id={top.id} onOpenVillage={(id) => push({ kind: 'village', id })} onOpenContent={onOpenContent} /> : null,
+    village: top.kind === 'village' ? <VillageScreen id={top.id} onOpenContent={onOpenContent} /> : null,
   }[top.kind];
 
   return (
@@ -100,7 +103,7 @@ function RegionsListScreen({ onOpen }: { onOpen: (id: number) => void }) {
 // Détail région → liste départements
 // ---------------------------------------------------------------------------
 
-function RegionScreen({ id, onOpenDepartment }: { id: number; onOpenDepartment: (id: number) => void }) {
+function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onOpenDepartment: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const [region, setRegion] = useState<Region | null>(null);
   const [content, setContent] = useState<string | null>(null);
@@ -137,6 +140,7 @@ function RegionScreen({ id, onOpenDepartment }: { id: number; onOpenDepartment: 
       {items.map((department) => (
         <GeoListRow key={department.id} title={department.title} subtitle={refLabel(department.arrondissement)} onPress={() => onOpenDepartment(department.id)} />
       ))}
+      <RelatedContent lieuId={id} onOpenContent={onOpenContent} />
     </View>
   );
 }
@@ -145,7 +149,7 @@ function RegionScreen({ id, onOpenDepartment }: { id: number; onOpenDepartment: 
 // Détail département → liste communes
 // ---------------------------------------------------------------------------
 
-function DepartmentScreen({ id, onOpenCommune }: { id: number; onOpenCommune: (id: number) => void }) {
+function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; onOpenCommune: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const [department, setDepartment] = useState<Department | null>(null);
   const [content, setContent] = useState<string | null>(null);
@@ -182,6 +186,7 @@ function DepartmentScreen({ id, onOpenCommune }: { id: number; onOpenCommune: (i
       {items.map((commune) => (
         <GeoListRow key={commune.id} title={commune.title} subtitle={refLabel(commune.arrondissement)} onPress={() => onOpenCommune(commune.id)} />
       ))}
+      <RelatedContent lieuId={id} onOpenContent={onOpenContent} />
     </View>
   );
 }
@@ -190,7 +195,7 @@ function DepartmentScreen({ id, onOpenCommune }: { id: number; onOpenCommune: (i
 // Détail commune → liste villages/quartiers
 // ---------------------------------------------------------------------------
 
-function CommuneScreen({ id, onOpenVillage }: { id: number; onOpenVillage: (id: number) => void }) {
+function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpenVillage: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const [commune, setCommune] = useState<Commune | null>(null);
   const [content, setContent] = useState<string | null>(null);
@@ -227,6 +232,7 @@ function CommuneScreen({ id, onOpenVillage }: { id: number; onOpenVillage: (id: 
       {items.map((village) => (
         <GeoListRow key={village.id} title={village.title} subtitle={village.excerpt} onPress={() => onOpenVillage(village.id)} />
       ))}
+      <RelatedContent lieuId={id} onOpenContent={onOpenContent} />
     </View>
   );
 }
@@ -235,7 +241,7 @@ function CommuneScreen({ id, onOpenVillage }: { id: number; onOpenVillage: (id: 
 // Détail village (feuille de l'arbre)
 // ---------------------------------------------------------------------------
 
-function VillageScreen({ id }: { id: number }) {
+function VillageScreen({ id, onOpenContent }: { id: number; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const [village, setVillage] = useState<Village | null>(null);
   const [content, setContent] = useState<string | null>(null);
@@ -250,7 +256,12 @@ function VillageScreen({ id }: { id: number }) {
   if (state === 'loading') return <LoadingState />;
   if (state === 'error' || !village) return <ErrorState onRetry={loadVillage} />;
 
-  return <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} />;
+  return (
+    <View>
+      <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} />
+      <RelatedContent lieuId={id} onOpenContent={onOpenContent} />
+    </View>
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -259,6 +270,30 @@ function VillageScreen({ id }: { id: number }) {
 
 function refLabel(value: string | null | undefined): string | null {
   return value && value.trim() ? value : null;
+}
+
+function RelatedContent({ lieuId, onOpenContent }: { lieuId: number; onOpenContent: (item: ContentItem) => void }) {
+  const { t } = useI18n();
+  const [items, setItems] = useState<ContentItem[]>([]);
+  const [state, setState] = useState<'loading' | 'ready'>('loading');
+
+  useEffect(() => {
+    let active = true;
+    getLieuContent(lieuId).then((result) => { if (active) { setItems(result.items); setState('ready'); } }).catch(() => { if (active) setState('ready'); });
+    return () => { active = false; };
+  }, [lieuId]);
+
+  if (state === 'loading') return null; // discret : pas de spinner bloquant pour une section secondaire
+  if (!items.length) return null; // aucun contenu associé -> section simplement absente, rien d'inventé
+
+  return (
+    <View style={styles.relatedSection}>
+      <Text style={styles.sectionTitle}>{t('relatedContent')}</Text>
+      {items.map((item) => (
+        <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={onOpenContent} />
+      ))}
+    </View>
+  );
 }
 
 function OfflineBanner() {
@@ -279,5 +314,6 @@ const styles = StyleSheet.create({
   sectionTitle: { color: colors.ink, fontWeight: '800', fontSize: 18, marginTop: spacing.sm, marginBottom: spacing.sm },
   input: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border, borderRadius: radii.sm, height: 46, paddingHorizontal: spacing.md, color: colors.ink, marginBottom: spacing.md },
   offline: { backgroundColor: colors.sand, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.sm },
+  relatedSection: { marginTop: spacing.lg },
   offlineText: { color: colors.primaryDark, fontWeight: '600', fontSize: 12 },
 });
