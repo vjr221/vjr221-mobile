@@ -3,27 +3,49 @@
     "name": "VJR 221",
     "slug": "vjr221-mobile",
     "scheme": "vjr221",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "sn.vjr221.mobile",
+      "buildNumber": "2",
+      "associatedDomains": [
+        "applinks:vjr221.sn"
+      ]
     },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+      "package": "sn.vjr221.mobile",
+      "versionCode": 2,
+      "icon": "./assets/icon.png",
+      "predictiveBackGestureEnabled": false,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "vjr221.sn"
+            },
+            {
+              "scheme": "https",
+              "host": "www.vjr221.sn"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-localization"
+      "expo-font"
     ]
   }
 }
