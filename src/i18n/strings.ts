@@ -67,6 +67,13 @@ export const strings = {
     notificationPrefsCaption: "Ces réglages sont enregistrés dès maintenant, mais VJR 221 n'envoie pas encore de notifications réelles. Ils seront appliqués automatiquement dès leur activation.",
     hours: 'Horaires',
     email: 'Email',
+    favoritesEmpty: 'Aucun contenu enregistré pour le moment. Touchez « Favori » sur une fiche pour la retrouver ici.',
+    favoritesIntro: 'Vos fiches enregistrées, disponibles même hors connexion.',
+    moreIntro: 'Langue, compte et préférences de VJR 221.',
+    darkMode: 'Apparence',
+    darkModeSystem: 'Automatique (système)',
+    darkModeLight: 'Clair',
+    darkModeDark: 'Sombre',
   },
   wo: {
     home: 'Kër gi',
@@ -134,6 +141,13 @@ export const strings = {
     notificationPrefsCaption: 'Tànnéef yii danañu leen denc léegi, waaye VJR 221 jotul woon yónnee yégle yu wóor. Danañu leen jëfandikoo ci kanam bu ñu leen ubbee.',
     hours: 'Waxtu ubbite',
     email: 'Imeel',
+    favoritesEmpty: 'Amul benn yëf tànn léegi. Bind « Tànn » ci ab fiche ngir fekk ko fii.',
+    favoritesIntro: 'Say yëf yu tànn, dañu am su nekkul internet itam.',
+    moreIntro: 'Làkk, kontu ak tànnéef VJR 221.',
+    darkMode: 'Melokaan',
+    darkModeSystem: 'Otomatik (sistem)',
+    darkModeLight: 'Set',
+    darkModeDark: 'Lëndëm',
   },
 } as const;
 

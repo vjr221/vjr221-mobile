@@ -1,5 +1,7 @@
-import { Text, StyleSheet } from 'react-native';
-import { colors } from '../theme/tokens';
+import { useMemo } from 'react';
+import { StyleSheet, Text } from 'react-native';
+import { useTheme } from '../theme/ThemeProvider';
+import { fonts } from '../theme/tokens';
 import { distanceKm, formatDistance, type Coordinates } from '../services/mapService';
 
 /**
@@ -9,10 +11,14 @@ import { distanceKm, formatDistance, type Coordinates } from '../services/mapSer
  * l'appelant lorsque disponible.
  */
 export function DistanceLabel({ from, to }: { from: Coordinates | null; to: Coordinates | null }) {
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   if (!from || !to) return null;
   return <Text style={styles.text}>{formatDistance(distanceKm(from, to))}</Text>;
 }
 
-const styles = StyleSheet.create({
-  text: { color: colors.primary, fontWeight: '700', fontSize: 12, marginTop: 4 },
-});
+function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+  return StyleSheet.create({
+    text: { color: colors.terreStrong, fontFamily: fonts.monoSemiBold, fontSize: 12, marginTop: 4 },
+  });
+}
