@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
@@ -12,8 +12,7 @@ type LoadState = 'loading' | 'ready' | 'error';
 
 /**
  * Annuaire national VJR 221 : catégories, recherche, filtres, fiches.
- * Réutilise le système de fiches existant (ContentItem / ContentCard /
- * ContentDetailScreen) plutôt que de dupliquer une seconde UI.
+ * Réutilise le système de fiches existant plutôt que de dupliquer une seconde UI.
  */
 export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: ContentItem) => void; initialCategory?: string }) {
   const { t } = useI18n();
@@ -25,16 +24,30 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
   const [items, setItems] = useState<ContentItem[]>([]);
   const [state, setState] = useState<LoadState>('loading');
   const [cached, setCached] = useState(false);
+  const requestId = useRef(0);
 
   useEffect(() => {
-    getDirectoryCategories().then(setCategories).catch(() => setCategories([]));
+    let mounted = true;
+    getDirectoryCategories()
+      .then((result) => { if (mounted) setCategories(result); })
+      .catch(() => { if (mounted) setCategories([]); });
+    return () => { mounted = false; };
   }, []);
 
   const load = useCallback((categorie: string | undefined, q: string) => {
+    const id = ++requestId.current;
     setState('loading');
     getDirectoryEntries({ categorie, q: q || undefined, perPage: 30 })
-      .then((result) => { setItems(result.items); setCached(result.fromCache); setState('ready'); })
-      .catch(() => setState('error'));
+      .then((result) => {
+        if (id !== requestId.current) return;
+        setItems(result.items);
+        setCached(result.fromCache);
+        setState('ready');
+      })
+      .catch(() => {
+        if (id !== requestId.current) return;
+        setState('error');
+      });
   }, []);
 
   useEffect(() => {
@@ -42,9 +55,6 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
     return () => clearTimeout(timer);
   }, [activeCategory, term, load]);
 
-  // La liste ne renvoie qu'un extrait (payload léger) ; on charge la fiche
-  // complète avant de l'ouvrir. En cas d'échec, on ouvre quand même la
-  // version légère plutôt que de bloquer l'utilisateur.
   const openEntry = (item: ContentItem) => {
     getDirectoryEntry(item.id).then(onOpen).catch(() => onOpen(item));
   };
