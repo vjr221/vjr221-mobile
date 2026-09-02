@@ -30,6 +30,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Use official VJR 221 app icon
+        run: |
+          curl --fail --location --retry 3 --retry-delay 2 \
+            "https://vjr221.sn/wp-content/uploads/2026/08/app-mobile-1024x1024-1.png" \
+            --output assets/icon.png
+          file assets/icon.png
+          test -s assets/icon.png
+          ls -lh assets/icon.png
+
       - name: Quality gates
         env:
           EXPO_PUBLIC_APP_ENV: production
@@ -82,5 +91,5 @@ jobs:
           gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 \
             --repo "$GITHUB_REPOSITORY" \
             --title "VJR221 Android APK ${GITHUB_SHA::7}" \
-            --notes "APK Android de production VJR221. Le bundle JavaScript est embarqué dans l'APK et le build utilise l'icône VJR221. Build généré depuis le commit ${GITHUB_SHA}." \
+            --notes "APK Android de production VJR221. Le bundle JavaScript est embarqué dans l'APK et l'icône officielle de la médiathèque VJR 221 est utilisée. Build généré depuis le commit ${GITHUB_SHA}." \
             --prerelease
