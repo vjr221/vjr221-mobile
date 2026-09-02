@@ -1,0 +1,283 @@
+import { useCallback, useEffect, useState } from 'react';
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
+import { GeoDetailCard } from './GeoDetailCard';
+import { GeoListRow } from './GeoListRow';
+import { useI18n } from '../../i18n/I18nProvider';
+import { useOnlineStatus } from '../../hooks/useOnlineStatus';
+import { colors, radii, spacing } from '../../theme/tokens';
+import {
+  getCommune,
+  getCommunes,
+  getDepartment,
+  getDepartments,
+  getRegion,
+  getRegions,
+  getVillage,
+  getVillages,
+} from '../../services/geoRepository';
+import type { Commune, Department, Region, Village } from '../../types/geo';
+
+type GeoView =
+  | { kind: 'regions' }
+  | { kind: 'region'; id: number }
+  | { kind: 'department'; id: number }
+  | { kind: 'commune'; id: number }
+  | { kind: 'village'; id: number };
+
+type LoadState = 'loading' | 'ready' | 'error';
+
+/**
+ * Explorateur géographique : Sénégal → Région → Département → Commune → Village.
+ *
+ * Navigation locale par pile (l'application n'utilise pas de librairie de routing) ;
+ * recherche/filtre par nom à chaque niveau ; états loading/error/empty/offline explicites ;
+ * aucune donnée n'est jamais fabriquée si l'API ne la fournit pas.
+ */
+export function GeoExplorer({ onExit }: { onExit: () => void }) {
+  const [stack, setStack] = useState<GeoView[]>([{ kind: 'regions' }]);
+  const top = stack[stack.length - 1];
+
+  const push = (view: GeoView) => setStack((current) => [...current, view]);
+  const back = () => (stack.length > 1 ? setStack((current) => current.slice(0, -1)) : onExit());
+
+  const Screen = {
+    regions: <RegionsListScreen onOpen={(id) => push({ kind: 'region', id })} />,
+    region: top.kind === 'region' ? <RegionScreen id={top.id} onOpenDepartment={(id) => push({ kind: 'department', id })} /> : null,
+    department: top.kind === 'department' ? <DepartmentScreen id={top.id} onOpenCommune={(id) => push({ kind: 'commune', id })} /> : null,
+    commune: top.kind === 'commune' ? <CommuneScreen id={top.id} onOpenVillage={(id) => push({ kind: 'village', id })} /> : null,
+    village: top.kind === 'village' ? <VillageScreen id={top.id} /> : null,
+  }[top.kind];
+
+  return (
+    <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+      <Pressable accessibilityRole="button" onPress={back} style={styles.backRow}>
+        <Text style={styles.backText}>← Retour</Text>
+      </Pressable>
+      {Screen}
+    </ScrollView>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Régions
+// ---------------------------------------------------------------------------
+
+function RegionsListScreen({ onOpen }: { onOpen: (id: number) => void }) {
+  const { t } = useI18n();
+  const online = useOnlineStatus();
+  const [term, setTerm] = useState('');
+  const [items, setItems] = useState<Region[]>([]);
+  const [state, setState] = useState<LoadState>('loading');
+  const [cached, setCached] = useState(false);
+
+  const load = useCallback((q: string) => {
+    setState('loading');
+    getRegions({ q: q || undefined })
+      .then((result) => { setItems(result.items); setCached(result.fromCache); setState('ready'); })
+      .catch(() => setState('error'));
+  }, []);
+
+  useEffect(() => { const timer = setTimeout(() => load(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, load]);
+
+  return (
+    <View>
+      <Text style={styles.title}>{t('regions')}</Text>
+      <Text style={styles.intro}>{t('exploreRegionsIntro')}</Text>
+      {(!online || cached) ? <OfflineBanner /> : null}
+      <TextInput value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+      {state === 'loading' ? <LoadingState /> : null}
+      {state === 'error' ? <ErrorState onRetry={() => load(term)} /> : null}
+      {state === 'ready' && !items.length ? <EmptyState message={term ? t('noGeoResults') : t('noChildren')} /> : null}
+      {items.map((region) => (
+        <GeoListRow key={region.id} title={region.title} subtitle={region.infos.chefLieu} onPress={() => onOpen(region.id)} />
+      ))}
+    </View>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Détail région → liste départements
+// ---------------------------------------------------------------------------
+
+function RegionScreen({ id, onOpenDepartment }: { id: number; onOpenDepartment: (id: number) => void }) {
+  const { t } = useI18n();
+  const [region, setRegion] = useState<Region | null>(null);
+  const [content, setContent] = useState<string | null>(null);
+  const [detailState, setDetailState] = useState<LoadState>('loading');
+
+  const loadRegion = useCallback(() => {
+    setDetailState('loading');
+    getRegion(id).then((detail) => { setRegion(detail.entity); setContent(detail.content); setDetailState('ready'); }).catch(() => setDetailState('error'));
+  }, [id]);
+  useEffect(() => { const timer = setTimeout(loadRegion, 0); return () => clearTimeout(timer); }, [loadRegion]);
+
+  const [term, setTerm] = useState('');
+  const [items, setItems] = useState<Department[]>([]);
+  const [listState, setListState] = useState<LoadState>('loading');
+
+  const loadDepartments = useCallback((q: string) => {
+    setListState('loading');
+    getDepartments({ regionId: id, q: q || undefined }).then((result) => { setItems(result.items); setListState('ready'); }).catch(() => setListState('error'));
+  }, [id]);
+
+  useEffect(() => { const timer = setTimeout(() => loadDepartments(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, loadDepartments]);
+
+  if (detailState === 'loading') return <LoadingState />;
+  if (detailState === 'error' || !region) return <ErrorState onRetry={loadRegion} />;
+
+  return (
+    <View>
+      <GeoDetailCard title={region.title} excerpt={region.excerpt} content={content} image={region.image} infos={region.infos} breadcrumb={t('region')} />
+      <Text style={styles.sectionTitle}>{t('departments')}</Text>
+      <TextInput value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+      {listState === 'loading' ? <LoadingState /> : null}
+      {listState === 'error' ? <ErrorState onRetry={() => loadDepartments(term)} /> : null}
+      {listState === 'ready' && !items.length ? <EmptyState message={term ? t('noGeoResults') : t('noChildren')} /> : null}
+      {items.map((department) => (
+        <GeoListRow key={department.id} title={department.title} subtitle={refLabel(department.arrondissement)} onPress={() => onOpenDepartment(department.id)} />
+      ))}
+    </View>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Détail département → liste communes
+// ---------------------------------------------------------------------------
+
+function DepartmentScreen({ id, onOpenCommune }: { id: number; onOpenCommune: (id: number) => void }) {
+  const { t } = useI18n();
+  const [department, setDepartment] = useState<Department | null>(null);
+  const [content, setContent] = useState<string | null>(null);
+  const [detailState, setDetailState] = useState<LoadState>('loading');
+
+  const loadDepartment = useCallback(() => {
+    setDetailState('loading');
+    getDepartment(id).then((detail) => { setDepartment(detail.entity); setContent(detail.content); setDetailState('ready'); }).catch(() => setDetailState('error'));
+  }, [id]);
+  useEffect(() => { const timer = setTimeout(loadDepartment, 0); return () => clearTimeout(timer); }, [loadDepartment]);
+
+  const [term, setTerm] = useState('');
+  const [items, setItems] = useState<Commune[]>([]);
+  const [listState, setListState] = useState<LoadState>('loading');
+
+  const loadCommunes = useCallback((q: string) => {
+    setListState('loading');
+    getCommunes({ departmentId: id, q: q || undefined }).then((result) => { setItems(result.items); setListState('ready'); }).catch(() => setListState('error'));
+  }, [id]);
+
+  useEffect(() => { const timer = setTimeout(() => loadCommunes(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, loadCommunes]);
+
+  if (detailState === 'loading') return <LoadingState />;
+  if (detailState === 'error' || !department) return <ErrorState onRetry={loadDepartment} />;
+
+  return (
+    <View>
+      <GeoDetailCard title={department.title} excerpt={department.excerpt} content={content} image={department.image} infos={department.infos} breadcrumb={refLabel(department.region?.name) ?? t('department')} />
+      <Text style={styles.sectionTitle}>{t('communes')}</Text>
+      <TextInput value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+      {listState === 'loading' ? <LoadingState /> : null}
+      {listState === 'error' ? <ErrorState onRetry={() => loadCommunes(term)} /> : null}
+      {listState === 'ready' && !items.length ? <EmptyState message={term ? t('noGeoResults') : t('noChildren')} /> : null}
+      {items.map((commune) => (
+        <GeoListRow key={commune.id} title={commune.title} subtitle={refLabel(commune.arrondissement)} onPress={() => onOpenCommune(commune.id)} />
+      ))}
+    </View>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Détail commune → liste villages/quartiers
+// ---------------------------------------------------------------------------
+
+function CommuneScreen({ id, onOpenVillage }: { id: number; onOpenVillage: (id: number) => void }) {
+  const { t } = useI18n();
+  const [commune, setCommune] = useState<Commune | null>(null);
+  const [content, setContent] = useState<string | null>(null);
+  const [detailState, setDetailState] = useState<LoadState>('loading');
+
+  const loadCommune = useCallback(() => {
+    setDetailState('loading');
+    getCommune(id).then((detail) => { setCommune(detail.entity); setContent(detail.content); setDetailState('ready'); }).catch(() => setDetailState('error'));
+  }, [id]);
+  useEffect(() => { const timer = setTimeout(loadCommune, 0); return () => clearTimeout(timer); }, [loadCommune]);
+
+  const [term, setTerm] = useState('');
+  const [items, setItems] = useState<Village[]>([]);
+  const [listState, setListState] = useState<LoadState>('loading');
+
+  const loadVillages = useCallback((q: string) => {
+    setListState('loading');
+    getVillages({ communeId: id, q: q || undefined }).then((result) => { setItems(result.items); setListState('ready'); }).catch(() => setListState('error'));
+  }, [id]);
+
+  useEffect(() => { const timer = setTimeout(() => loadVillages(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, loadVillages]);
+
+  if (detailState === 'loading') return <LoadingState />;
+  if (detailState === 'error' || !commune) return <ErrorState onRetry={loadCommune} />;
+
+  return (
+    <View>
+      <GeoDetailCard title={commune.title} excerpt={commune.excerpt} content={content} image={commune.image} infos={commune.infos} breadcrumb={refLabel(commune.departement?.name) ?? t('commune')} />
+      <Text style={styles.sectionTitle}>{t('villages')}</Text>
+      <TextInput value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+      {listState === 'loading' ? <LoadingState /> : null}
+      {listState === 'error' ? <ErrorState onRetry={() => loadVillages(term)} /> : null}
+      {listState === 'ready' && !items.length ? <EmptyState message={term ? t('noGeoResults') : t('noChildren')} /> : null}
+      {items.map((village) => (
+        <GeoListRow key={village.id} title={village.title} subtitle={village.excerpt} onPress={() => onOpenVillage(village.id)} />
+      ))}
+    </View>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Détail village (feuille de l'arbre)
+// ---------------------------------------------------------------------------
+
+function VillageScreen({ id }: { id: number }) {
+  const { t } = useI18n();
+  const [village, setVillage] = useState<Village | null>(null);
+  const [content, setContent] = useState<string | null>(null);
+  const [state, setState] = useState<LoadState>('loading');
+
+  const loadVillage = useCallback(() => {
+    setState('loading');
+    getVillage(id).then((detail) => { setVillage(detail.entity); setContent(detail.content); setState('ready'); }).catch(() => setState('error'));
+  }, [id]);
+  useEffect(() => { const timer = setTimeout(loadVillage, 0); return () => clearTimeout(timer); }, [loadVillage]);
+
+  if (state === 'loading') return <LoadingState />;
+  if (state === 'error' || !village) return <ErrorState onRetry={loadVillage} />;
+
+  return <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} />;
+}
+
+// ---------------------------------------------------------------------------
+// Aides
+// ---------------------------------------------------------------------------
+
+function refLabel(value: string | null | undefined): string | null {
+  return value && value.trim() ? value : null;
+}
+
+function OfflineBanner() {
+  const { t } = useI18n();
+  return (
+    <View style={styles.offline}>
+      <Text style={styles.offlineText}>{t('offline')}</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  content: { padding: spacing.md, paddingBottom: 105, backgroundColor: colors.surface },
+  backRow: { marginBottom: spacing.sm },
+  backText: { color: colors.primary, fontWeight: '700' },
+  title: { color: colors.ink, fontSize: 28, fontWeight: '800' },
+  intro: { color: colors.muted, marginTop: 4, marginBottom: spacing.md },
+  sectionTitle: { color: colors.ink, fontWeight: '800', fontSize: 18, marginTop: spacing.sm, marginBottom: spacing.sm },
+  input: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border, borderRadius: radii.sm, height: 46, paddingHorizontal: spacing.md, color: colors.ink, marginBottom: spacing.md },
+  offline: { backgroundColor: colors.sand, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.sm },
+  offlineText: { color: colors.primaryDark, fontWeight: '600', fontSize: 12 },
+});
