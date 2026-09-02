@@ -1,59 +1,37 @@
-# Politique de confidentialité — VJR 221 (brouillon)
+# Politique de confidentialité — VJR 221
 
-**⏳ Brouillon technique, à faire valider par un juriste avant publication.**
-Ce document décrit factuellement ce que l'application fait aujourd'hui
-(vérifié dans le code) — il ne doit pas être publié tel quel sans relecture
-légale ni mise à jour de la date/coordonnées de contact réelles.
+**Document technique à faire valider avant publication.**
 
-## Ce que l'application collecte
+## Données traitées par l'application
 
-**Rien n'est envoyé à un serveur autre que vjr221.sn**, et uniquement pour
-charger du contenu public (régions, communes, annuaire, actualités).
+L'application VJR 221 ne dispose actuellement d'aucun compte utilisateur ni d'outil d'analytics intégré.
 
-- **Favoris** : stockés uniquement sur l'appareil (`AsyncStorage`), jamais
-  transmis à un serveur (aucun backend de compte n'existe — voir
-  `src/services/authService.ts`).
-- **Préférence de langue** : stockée localement sur l'appareil.
-- **Préférences de notifications** : stockées localement sur l'appareil.
-  Aucune notification n'est envoyée actuellement.
-- **Aucun identifiant publicitaire, aucun tracker analytique, aucun cookie
-  tiers** n'est intégré dans le code de l'application à ce jour.
-- **Aucune géolocalisation automatique** de l'utilisateur (aucune dépendance
-  de géolocalisation n'est installée dans le projet).
+- Les favoris sont stockés uniquement sur l'appareil.
+- La préférence de langue est stockée localement.
+- Les préférences de notifications sont stockées localement ; les notifications push ne sont pas activées actuellement.
+- Aucun identifiant publicitaire ni tracker analytique n'est intégré dans l'application à ce stade.
+- L'application ne demande pas de géolocalisation automatique.
 
-## Appels réseau effectués par l'application
+## Connexions réseau
 
-- `https://vjr221.sn/wp-json/wp/v2/...` (publications)
-- `https://vjr221.sn/wp-json/vjr221/v1/...` (régions, départements,
-  communes, annuaire)
+L'application consulte `vjr221.sn` pour charger les contenus publics du portail : publications WordPress, données territoriales et annuaire. Ces requêtes sont effectuées sans authentification.
 
-Ces appels sont des lectures publiques, sans authentification, identiques à
-la consultation du site web vjr221.sn dans un navigateur.
+## Actions vers des services externes
 
-## Liens externes
+Lorsque l'utilisateur choisit explicitement une fonction telle que **Appeler**, **Localiser**, **Site web** ou **Partager**, le système peut ouvrir l'application Téléphone, Maps, le navigateur ou le partage natif de l'appareil.
 
-L'application peut ouvrir, à l'initiative de l'utilisateur (bouton
-"Appeler", "Localiser", "Site web", "Partager") :
+## Évolutions
 
-- l'application Téléphone de l'appareil,
-- l'application Plans/Maps par défaut,
-- le navigateur web,
-- le système de partage natif de l'appareil.
+Cette politique devra être mise à jour avant toute activation d'un compte utilisateur, de notifications push réelles, d'analytics ou de tout nouveau traitement de données personnelles.
 
-Aucune donnée n'est transmise automatiquement à ces services sans action
-explicite de l'utilisateur.
+## Responsable et contact
 
-## Évolutions futures nécessitant une mise à jour de ce document
+**VJR 221 — Le Sénégal dans sa diversité**
 
-Ce document devra être révisé **avant** l'activation de :
+Contact : `contact@vjr221.sn`
 
-- un système de compte utilisateur (`src/services/authService.ts` — non
-  activé),
-- des notifications push réelles (`src/services/notificationService.ts` —
-  non activé),
-- tout outil d'analytics.
+Adresse et identité juridique du responsable du traitement : **à compléter et valider avant publication**.
 
-## Contact
+Date de dernière mise à jour : **à compléter avant publication**.
 
-⏳ **À compléter** : adresse email/formulaire de contact réel du porteur du
-projet VJR 221, et date de dernière mise à jour.
+> Cette version décrit l'état technique actuel de l'application. Elle doit faire l'objet d'une validation juridique et être publiée sur une URL publique avant toute soumission aux stores.
