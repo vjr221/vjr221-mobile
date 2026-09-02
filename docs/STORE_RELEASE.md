@@ -78,12 +78,62 @@ La politique technique est dans `docs/PRIVACY_POLICY.md`. Elle doit être relue,
 
 ## Ce qui reste volontairement manuel
 
-- création/connexion des comptes développeur ;
-- signature et credentials Apple/Google ;
-- installation et tests sur appareils réels ;
-- captures store ;
-- questionnaire de confidentialité Apple/Google ;
-- validation juridique ;
-- soumission finale aux stores.
+- [ ] Comptes Google Play / Apple Developer créés
+- [ ] `applicationId`/`bundleIdentifier` confirmés par le porteur du projet
+- [ ] Politique de confidentialité relue et hébergée (URL publique)
+- [ ] Captures d'écran réelles (Android + iOS, plusieurs tailles)
+- [ ] `eas build --profile production` réussi sur les deux plateformes
+- [ ] Test d'installation manuel sur au moins un appareil Android et un iOS
+- [ ] Vérification des deep links (`vjr221.sn/...`) sur build de production
+  réel (l'`autoVerify`/`associatedDomains` ne peut être validé qu'avec un
+  domaine signé, pas en local)
+- [ ] Soumission (`eas submit`) — validation humaine obligatoire, jamais
+  automatique
 
 **Aucune publication automatique n'est configurée.**
+
+## Distribution hors stores (Phase 5)
+
+Avant la publication officielle sur les stores, VJR 221 est distribuée
+directement depuis le site : **https://vjr221.sn/application/**.
+
+Ce centre de distribution vit entièrement côté WordPress
+(`wp-content/novamira-sandbox/vjr221-mobile-distribution.php` +
+`vjr221-mobile-app-integration.php`, hors dépôt mobile — voir docs/API.md)
+et fonctionne selon 3 états qui n'exigent aucune reconstruction :
+
+| État | Android | iOS |
+| --- | --- | --- |
+| A — Pré-publication | APK direct (si `vjr221_android_apk_url` renseignée) | TestFlight (si `vjr221_testflight_url` renseignée) |
+| B — Test | idem | idem |
+| C — Stores publiés | Google Play prioritaire, APK optionnel en second choix | App Store prioritaire |
+
+Toute option non renseignée affiche un état honnête « Bientôt disponible »
+— jamais de lien fictif. Le QR code de la page pointe toujours vers
+`/application/` elle-même (jamais directement vers un APK ou un store), il
+reste donc valable avant, pendant et après la publication.
+
+### Android — APK
+
+- URL configurable dans **Réglages > VJR 221 App** (`vjr221_android_apk_url`),
+  hébergement libre (médiathèque WordPress — le type `.apk` est
+  explicitement autorisé — ou CDN/stockage externe).
+- Version, date, taille (détection automatique par requête HEAD si non
+  renseignée manuellement, mise en cache 24h) et notes de version affichées
+  si disponibles.
+- Instructions d'installation et note de sécurité affichées automatiquement
+  dès qu'un APK est configuré.
+
+### iOS — TestFlight
+
+- URL configurable (`vjr221_testflight_url`). Aucun fichier IPA n'est
+  jamais proposé en téléchargement direct (iOS ne le permet pas) — seul un
+  lien TestFlight ou App Store est affiché.
+
+### Cohérence des versions
+
+Le numéro de version affiché sur le site (`vjr221_android_version` /
+`vjr221_ios_version`) est saisi manuellement par l'administrateur et doit
+être tenu synchronisé avec `package.json` (`version`), `app.json`
+(`android.versionCode`, `ios.buildNumber`) au moment de chaque publication
+— rien n'est déduit ni fabriqué automatiquement côté site.

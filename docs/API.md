@@ -113,3 +113,12 @@ hors dépôt mobile) :
   `quartiers-villages`/`annuaire`, avec remontée d'arbre pour les sous-catégories
   imbriquées de l'annuaire), donc les deux couches ne peuvent pas diverger sans
   que ce soit visible aux tests des deux côtés.
+
+## Distribution hors stores (Phase 5)
+
+`https://vjr221.sn/application/` — centre de distribution avant/pendant/après
+publication stores. Entièrement côté WordPress, hors dépôt mobile.
+Détail complet : docs/STORE_RELEASE.md, section « Distribution hors stores ».
+Le shortcode `[vjr221_app_download]` (déjà documenté ci-dessus) accepte
+maintenant un attribut `layout="full"` pour le rendu complet de cette page ;
+`layout="compact"` (défaut) reste utilisable partout ailleurs sur le site.
