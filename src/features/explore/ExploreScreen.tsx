@@ -34,7 +34,7 @@ export function ExploreScreen({
   return (
     <ScrollView contentContainerStyle={styles.content}>
       <Text style={styles.title}>{t('explore')}</Text>
-      <Text style={styles.intro}>Découvrez les univers éditoriaux de VJR 221.</Text>
+      <Text style={styles.intro}>{t('exploreIntro')}</Text>
       <View style={styles.grid}>
         {categories.map((category) => (
           <Pressable

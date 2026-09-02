@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { colors, radii, spacing } from '../../theme/tokens';
 import { useAuthSession } from '../../services/authService';
+import { useI18n } from '../../i18n/I18nProvider';
 
 /**
  * Écran Compte. Tant qu'aucun backend d'authentification n'est branché
@@ -8,15 +9,16 @@ import { useAuthSession } from '../../services/authService';
  * plutôt qu'un formulaire de connexion qui ne mènerait nulle part.
  */
 export function AccountScreen() {
+  const { t } = useI18n();
   const session = useAuthSession();
 
   return (
     <View style={styles.card}>
-      <Text style={styles.title}>Compte VJR 221</Text>
+      <Text style={styles.title}>{t('accountTitle')}</Text>
       <Text style={styles.body}>
         {session.status === 'authenticated' && session.profile
-          ? `Connecté en tant que ${session.profile.displayName}.`
-          : 'La création de compte arrive prochainement. Vos favoris restent enregistrés sur cet appareil et fonctionnent dès maintenant, sans compte.'}
+          ? t('accountAuthenticated', { name: session.profile.displayName })
+          : t('accountAnonymous')}
       </Text>
     </View>
   );

@@ -47,13 +47,13 @@ export function ContentDetailScreen({ item, onBack }: { item: ContentItem; onBac
       ) : null}
       {practical?.hours ? (
         <View style={styles.practicalRow}>
-          <Text style={styles.practicalLabel}>Horaires</Text>
+          <Text style={styles.practicalLabel}>{t('hours')}</Text>
           <Text style={styles.practicalValue}>{practical.hours}</Text>
         </View>
       ) : null}
       {practical?.email ? (
         <Pressable accessibilityRole="button" style={styles.practicalRow} onPress={email}>
-          <Text style={styles.practicalLabel}>Email</Text>
+          <Text style={styles.practicalLabel}>{t('email')}</Text>
           <Text style={styles.practicalValue}>{practical.email}</Text>
         </Pressable>
       ) : null}
