@@ -1,1 +1,1 @@
-probe write access - safe to delete
+probe complete, no longer needed
