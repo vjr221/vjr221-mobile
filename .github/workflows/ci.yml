@@ -1,17 +1,16 @@
 name: Mobile CI
 
 on:
+  workflow_dispatch:
   pull_request:
-  push:
-    branches: [main]
 
 permissions:
   contents: read
 
 jobs:
-  quality:
+  startup:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Diagnostic
+        run: echo "VJR 221 Mobile CI startup OK"
