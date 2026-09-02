@@ -1,21 +1,16 @@
-name: Mobile CI
+name: Mobile CI (deprecated, disabled)
 
+# DEPRECATED: superseded by .github/workflows/mobile-ci.yml
+# This workflow used to run on every push/PR and duplicated mobile-ci.yml's
+# job, but relied on `npm ci` against a package-lock.json that is no longer
+# kept in sync with package.json (mobile-ci.yml uses `npm install` instead).
+# It has been disabled here (no automatic triggers) rather than deleted,
+# since this API cannot delete files. Safe to delete this file manually.
 on:
-  pull_request:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  quality:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - run: npm run typecheck
-      - run: npm run lint
-      - run: npm test
-      - run: npx expo export --platform android --output-dir .expo-export-check
+      - run: echo "This workflow is deprecated and disabled. See mobile-ci.yml."
