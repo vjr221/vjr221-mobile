@@ -1,5 +1,38 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import type { ContentItem } from '../types/content';
+import type { ContentItem, ContentType } from '../types/content';
 import { colors, radii, shadows, spacing } from '../theme/tokens';
-export function ContentCard({ item, onPress }: { item: ContentItem; onPress: (item: ContentItem) => void }) { return <Pressable accessibilityRole="button" accessibilityLabel={item.title} onPress={() => onPress(item)} style={styles.card}>{item.imageUrl ? <Image accessibilityIgnoresInvertColors source={{ uri: item.imageUrl }} style={styles.image} /> : null}<View style={styles.body}><Text style={styles.kicker}>{item.type === 'news' ? 'ACTUALITÉ' : item.type.toUpperCase()}</Text><Text numberOfLines={2} style={styles.title}>{item.title}</Text>{item.excerpt ? <Text numberOfLines={2} style={styles.excerpt}>{item.excerpt}</Text> : null}</View></Pressable>; }
-const styles = StyleSheet.create({ card: { backgroundColor: colors.card, overflow: 'hidden', borderRadius: radii.md, marginBottom: spacing.md, ...shadows.card }, image: { width: '100%', height: 150, backgroundColor: colors.sand }, body: { padding: spacing.md }, kicker: { color: colors.primary, fontSize: 11, letterSpacing: 1.1, fontWeight: '800' }, title: { color: colors.ink, fontWeight: '700', fontSize: 17, marginTop: 5 }, excerpt: { color: colors.muted, marginTop: 5, lineHeight: 19 } });
+import { useI18n } from '../i18n/I18nProvider';
+import type { TranslationKey } from '../i18n/strings';
+
+// Seuls ces types ont une traduction dédiée dans i18n/strings.ts ; les autres
+// (regions/departments/communes/practical/media/diaspora/community...) n'ont
+// pas encore de fiche ContentCard dédiée dans l'app, donc pas de kicker traduit.
+const KICKER_KEY: Partial<Record<ContentType, TranslationKey>> = {
+  news: 'news', tourism: 'tourism', heritage: 'heritage', gastronomy: 'gastronomy', people: 'people', directory: 'directory',
+};
+
+export function ContentCard({ item, onPress }: { item: ContentItem; onPress: (item: ContentItem) => void }) {
+  const { t } = useI18n();
+  const kickerKey = KICKER_KEY[item.type];
+  const kicker = kickerKey ? t(kickerKey).toUpperCase() : item.type.toUpperCase();
+
+  return (
+    <Pressable accessibilityRole="button" accessibilityLabel={item.title} onPress={() => onPress(item)} style={styles.card}>
+      {item.imageUrl ? <Image accessibilityIgnoresInvertColors source={{ uri: item.imageUrl }} style={styles.image} /> : null}
+      <View style={styles.body}>
+        <Text style={styles.kicker}>{kicker}</Text>
+        <Text numberOfLines={2} style={styles.title}>{item.title}</Text>
+        {item.excerpt ? <Text numberOfLines={2} style={styles.excerpt}>{item.excerpt}</Text> : null}
+      </View>
+    </Pressable>
+  );
+}
+
+const styles = StyleSheet.create({
+  card: { backgroundColor: colors.card, overflow: 'hidden', borderRadius: radii.md, marginBottom: spacing.md, ...shadows.card },
+  image: { width: '100%', height: 150, backgroundColor: colors.sand },
+  body: { padding: spacing.md },
+  kicker: { color: colors.primary, fontSize: 11, letterSpacing: 1.1, fontWeight: '800' },
+  title: { color: colors.ink, fontWeight: '700', fontSize: 17, marginTop: 5 },
+  excerpt: { color: colors.muted, marginTop: 5, lineHeight: 19 },
+});

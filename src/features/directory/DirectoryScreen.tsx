@@ -5,7 +5,7 @@ import { EmptyState, ErrorState, LoadingState } from '../../components/ContentSt
 import { useI18n } from '../../i18n/I18nProvider';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus';
 import { colors, radii, spacing } from '../../theme/tokens';
-import { getDirectoryCategories, getDirectoryEntries, type DirectoryCategory } from '../../services/directoryRepository';
+import { getDirectoryCategories, getDirectoryEntries, getDirectoryEntry, type DirectoryCategory } from '../../services/directoryRepository';
 import type { ContentItem } from '../../types/content';
 
 type LoadState = 'loading' | 'ready' | 'error';
@@ -42,6 +42,13 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
     return () => clearTimeout(timer);
   }, [activeCategory, term, load]);
 
+  // La liste ne renvoie qu'un extrait (payload léger) ; on charge la fiche
+  // complète avant de l'ouvrir. En cas d'échec, on ouvre quand même la
+  // version légère plutôt que de bloquer l'utilisateur.
+  const openEntry = (item: ContentItem) => {
+    getDirectoryEntry(item.id).then(onOpen).catch(() => onOpen(item));
+  };
+
   return (
     <View style={styles.root}>
       <View style={styles.header}>
@@ -72,7 +79,7 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
         data={items}
         keyExtractor={(item) => String(item.id)}
         contentContainerStyle={styles.list}
-        renderItem={({ item }) => <ContentCard item={item} onPress={onOpen} />}
+        renderItem={({ item }) => <ContentCard item={item} onPress={openEntry} />}
         ListEmptyComponent={
           state === 'loading' ? <LoadingState /> :
           state === 'error' ? <ErrorState onRetry={() => load(activeCategory, term)} /> :

@@ -17,7 +17,7 @@ import {
   getVillage,
   getVillages,
 } from '../../services/geoRepository';
-import { getLieuContent } from '../../services/contentRepository';
+import { getContentDetail, getLieuContent } from '../../services/contentRepository';
 import type { Commune, Department, Region, Village } from '../../types/geo';
 import type { ContentItem } from '../../types/content';
 
@@ -49,7 +49,7 @@ export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: ()
     region: top.kind === 'region' ? <RegionScreen id={top.id} onOpenDepartment={(id) => push({ kind: 'department', id })} onOpenContent={onOpenContent} /> : null,
     department: top.kind === 'department' ? <DepartmentScreen id={top.id} onOpenCommune={(id) => push({ kind: 'commune', id })} onOpenContent={onOpenContent} /> : null,
     commune: top.kind === 'commune' ? <CommuneScreen id={top.id} onOpenVillage={(id) => push({ kind: 'village', id })} onOpenContent={onOpenContent} /> : null,
-    village: top.kind === 'village' ? <VillageScreen id={top.id} onOpenContent={onOpenContent} /> : null,
+    village: top.kind === 'village' ? <VillageScreen id={top.id} /> : null,
   }[top.kind];
 
   return (
@@ -241,7 +241,7 @@ function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpe
 // Détail village (feuille de l'arbre)
 // ---------------------------------------------------------------------------
 
-function VillageScreen({ id, onOpenContent }: { id: number; onOpenContent: (item: ContentItem) => void }) {
+function VillageScreen({ id }: { id: number }) {
   const { t } = useI18n();
   const [village, setVillage] = useState<Village | null>(null);
   const [content, setContent] = useState<string | null>(null);
@@ -256,12 +256,11 @@ function VillageScreen({ id, onOpenContent }: { id: number; onOpenContent: (item
   if (state === 'loading') return <LoadingState />;
   if (state === 'error' || !village) return <ErrorState onRetry={loadVillage} />;
 
-  return (
-    <View>
-      <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} />
-      <RelatedContent lieuId={id} onOpenContent={onOpenContent} />
-    </View>
-  );
+  // Pas de RelatedContent ici : le champ ACF "lieu associé" des contenus
+  // encyclopédiques ne peut cibler que région/département/commune, jamais un
+  // village -- cette section serait donc systématiquement (et durablement)
+  // vide. On évite l'appel réseau plutôt que d'afficher une section fantôme.
+  return <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} />;
 }
 
 // ---------------------------------------------------------------------------
@@ -283,6 +282,14 @@ function RelatedContent({ lieuId, onOpenContent }: { lieuId: number; onOpenConte
     return () => { active = false; };
   }, [lieuId]);
 
+  // La liste "/lieu/{id}/contenus" ne renvoie qu'un extrait (payload léger) ;
+  // on récupère la fiche complète (contenu, embed) avant de l'ouvrir plutôt
+  // que d'afficher un article tronqué. Si ça échoue, on ouvre quand même
+  // la version légère plutôt que de bloquer l'utilisateur.
+  const openFull = (item: ContentItem) => {
+    getContentDetail(item.id).then(onOpenContent).catch(() => onOpenContent(item));
+  };
+
   if (state === 'loading') return null; // discret : pas de spinner bloquant pour une section secondaire
   if (!items.length) return null; // aucun contenu associé -> section simplement absente, rien d'inventé
 
@@ -290,7 +297,7 @@ function RelatedContent({ lieuId, onOpenContent }: { lieuId: number; onOpenConte
     <View style={styles.relatedSection}>
       <Text style={styles.sectionTitle}>{t('relatedContent')}</Text>
       {items.map((item) => (
-        <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={onOpenContent} />
+        <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={openFull} />
       ))}
     </View>
   );
