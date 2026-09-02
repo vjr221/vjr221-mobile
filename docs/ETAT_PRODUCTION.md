@@ -1,6 +1,6 @@
 # État de production — VJR 221 Mobile
 
-Dernière mise à jour : Phase 4 (2026-09-01). Légende : ✅ opérationnel et
+Dernière mise à jour : Phase 6 (2026-09-02). Légende : ✅ opérationnel et
 vérifié · ⏳ nécessite une action humaine · 🔜 prévu ultérieurement.
 
 ## ✅ Opérationnel et vérifié
@@ -12,24 +12,41 @@ vérifié · ⏳ nécessite une action humaine · 🔜 prévu ultérieurement.
 - Deep links : schéma app `vjr221://open/...` **et** permaliens réels du
   site (`https://vjr221.sn/mon-article/`) résolus par slug.
 - Cache offline TTL 15 min avec retry automatique sur échec réseau transitoire.
-- TypeScript strict (0 erreur), ESLint (0 erreur/warning), 56 tests Jest
+- TypeScript strict (0 erreur), ESLint (0 erreur/warning), 64 tests Jest
   (0 échec), build de vérification Expo Android et iOS (0 échec).
 - `applicationId`/`bundleIdentifier` : **`sn.vjr221.mobile`** — confirmé et
   verrouillé par le porteur du projet.
+- **APK Android 1.0.1 publié et distribué** : build de production généré
+  par la CI (`.github/workflows/android-release.yml`, bundle JS embarqué,
+  icône officielle VJR 221 depuis la médiathèque), publié en GitHub Release
+  (`android-75672173e569`) et relié à **https://vjr221.sn/application/**
+  via l'option `vjr221_android_apk_url` (136,4 Mo, version affichée
+  "1.0.1"). QR code de la page vérifié fonctionnel (pointe vers
+  `/application/` elle-même, conformément à docs/STORE_RELEASE.md). Numéro
+  de version synchronisé entre `app.json` (`1.0.1`), `package.json`
+  (`1.0.1`) et l'option WordPress `vjr221_android_version`.
+- Bandeau "Lire dans l'application" (schéma `vjr221://`) actif sur les
+  fiches, cohérent avec le mapping catégorie→segment côté mobile.
 
 ## ⏳ Nécessite une action humaine
 
 - Comptes Google Play Console et Apple Developer Program (aucun n'existe
   encore à ma connaissance).
-- Premier build réel (`eas build`) — nécessite un compte EAS connecté,
-  jamais exécuté depuis cet environnement.
+- Premier build EAS réel (`eas build`) — nécessite un compte EAS connecté,
+  jamais exécuté depuis cet environnement. Le build Android actuellement
+  distribué vient de la CI GitHub Actions (Gradle direct), pas d'EAS.
 - Test réel sur appareil physique/simulateur Android et iOS — **jamais
-  effectué**, cet environnement n'en dispose pas.
+  effectué**, cet environnement n'en dispose pas. L'APK est publié et
+  téléchargeable, mais son bon fonctionnement sur un appareil réel reste
+  à valider (voir `docs/DEVICE_TESTING_CHECKLIST.md`).
 - Politique de confidentialité (`docs/PRIVACY_POLICY.md`) : relecture
   juridique puis hébergement sur une URL publique.
 - Captures d'écran réelles pour les fiches store.
+- iOS : build TestFlight — bloqué tant qu'aucun compte Apple Developer
+  Program n'existe. `app.json` est déjà prêt côté configuration
+  (`bundleIdentifier`, `buildNumber`, `associatedDomains`).
 - Renseignement des options WordPress `vjr221_playstore_url` /
-  `vjr221_appstore_url` une fois l'app publiée.
+  `vjr221_appstore_url` une fois l'app publiée sur les stores.
 
 ## 🔜 Prévu ultérieurement (architecture déjà prête)
 
