@@ -1,21 +1,26 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
+import { Icon } from '../../components/icons/Icon';
 import { useI18n } from '../../i18n/I18nProvider';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus';
-import { colors, radii, spacing } from '../../theme/tokens';
+import { useTheme } from '../../theme/ThemeProvider';
+import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { getDirectoryCategories, getDirectoryEntries, getDirectoryEntry, type DirectoryCategory } from '../../services/directoryRepository';
 import type { ContentItem } from '../../types/content';
 
 type LoadState = 'loading' | 'ready' | 'error';
 
 /**
- * Annuaire national VJR 221 : catégories, recherche, filtres, fiches.
- * Réutilise le système de fiches existant plutôt que de dupliquer une seconde UI.
+ * Annuaire national VJR 221 : expérience professionnelle — filtres en chips,
+ * recherche en évidence, fiches à deux colonnes visuelles. Réutilise le
+ * système de fiches existant plutôt que de dupliquer une seconde UI.
  */
 export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: ContentItem) => void; initialCategory?: string }) {
   const { t } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const online = useOnlineStatus();
 
   const [categories, setCategories] = useState<DirectoryCategory[]>([]);
@@ -64,7 +69,10 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
       <View style={styles.header}>
         <Text style={styles.title}>{t('directory')}</Text>
         {(!online || cached) ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}
-        <TextInput accessibilityLabel={t('search')} value={term} onChangeText={setTerm} placeholder={t('searchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+        <View style={styles.inputWrap}>
+          <Icon name="search" size={17} color={colors.inkSoft} />
+          <TextInput accessibilityLabel={t('search')} value={term} onChangeText={setTerm} placeholder={t('searchPlaceholder')} placeholderTextColor={colors.inkSoft} style={styles.input} autoCapitalize="none" />
+        </View>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -100,17 +108,20 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
   );
 }
 
-const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: colors.surface },
-  header: { paddingHorizontal: spacing.md, paddingTop: spacing.md },
-  title: { color: colors.ink, fontSize: 28, fontWeight: '800' },
-  offline: { backgroundColor: colors.sand, borderRadius: radii.sm, padding: spacing.sm, marginTop: spacing.sm },
-  offlineText: { color: colors.primaryDark, fontWeight: '600', fontSize: 12 },
-  input: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border, borderRadius: radii.sm, height: 46, paddingHorizontal: spacing.md, color: colors.ink, marginTop: spacing.md },
-  chips: { gap: spacing.xs, paddingVertical: spacing.md },
-  chip: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border, borderRadius: radii.pill, paddingHorizontal: spacing.md, paddingVertical: 8 },
-  chipActive: { backgroundColor: colors.primary, borderColor: colors.primary },
-  chipText: { color: colors.ink, fontWeight: '600', fontSize: 13 },
-  chipTextActive: { color: colors.white },
-  list: { padding: spacing.md, paddingTop: 0, paddingBottom: 105 },
-});
+function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+  return StyleSheet.create({
+    root: { flex: 1, backgroundColor: colors.bg },
+    header: { paddingHorizontal: spacing.md, paddingTop: spacing.md },
+    title: { color: colors.ink, fontSize: type.display - 8, fontFamily: fonts.displayBold },
+    offline: { backgroundColor: colors.surfaceSoft, borderRadius: radii.sm, padding: spacing.sm, marginTop: spacing.sm },
+    offlineText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 12 },
+    inputWrap: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, backgroundColor: colors.surface, borderRadius: radii.pill, height: 48, paddingHorizontal: spacing.md, marginTop: spacing.md },
+    input: { flex: 1, color: colors.ink, fontFamily: fonts.body, fontSize: 15 },
+    chips: { gap: spacing.xs, paddingVertical: spacing.md },
+    chip: { backgroundColor: colors.surface, borderRadius: radii.pill, paddingHorizontal: spacing.md, paddingVertical: 9 },
+    chipActive: { backgroundColor: colors.savane },
+    chipText: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 13 },
+    chipTextActive: { color: colors.onSavane },
+    list: { padding: spacing.md, paddingTop: 0, paddingBottom: 120 },
+  });
+}

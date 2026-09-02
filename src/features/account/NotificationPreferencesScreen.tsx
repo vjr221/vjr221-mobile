@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { StyleSheet, Switch, Text, View } from 'react-native';
-import { colors, radii, spacing } from '../../theme/tokens';
+import { useTheme } from '../../theme/ThemeProvider';
+import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { getNotificationPreferences, setNotificationPreferences, type NotificationPreferences } from '../../services/notificationService';
 import { useI18n } from '../../i18n/I18nProvider';
 
@@ -13,6 +14,8 @@ import { useI18n } from '../../i18n/I18nProvider';
  */
 export function NotificationPreferencesScreen() {
   const { t, locale } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [preferences, setPreferences] = useState<NotificationPreferences | null>(null);
 
   useEffect(() => {
@@ -41,20 +44,28 @@ export function NotificationPreferencesScreen() {
     <View style={styles.card}>
       <Text style={styles.title}>{t('notificationPrefsTitle')}</Text>
       <Text style={styles.caption}>{t('notificationPrefsCaption')}</Text>
-      {(Object.keys(labels) as (keyof NotificationPreferences)[]).map((key) => (
-        <View key={key} style={styles.row}>
+      {(Object.keys(labels) as (keyof NotificationPreferences)[]).map((key, index, all) => (
+        <View key={key} style={[styles.row, index === all.length - 1 && styles.rowLast]}>
           <Text style={styles.label}>{labels[key]}</Text>
-          <Switch value={preferences[key]} onValueChange={(value) => update(key, value)} trackColor={{ true: colors.primary }} />
+          <Switch
+            value={preferences[key]}
+            onValueChange={(value) => update(key, value)}
+            trackColor={{ false: colors.line, true: colors.terre }}
+            thumbColor={colors.white}
+          />
         </View>
       ))}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  card: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border, borderRadius: radii.md, padding: spacing.md, marginTop: spacing.md },
-  title: { color: colors.ink, fontWeight: '800', fontSize: 16, marginBottom: 4 },
-  caption: { color: colors.muted, fontSize: 12, lineHeight: 17, marginBottom: spacing.sm },
-  row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: spacing.sm, borderTopWidth: 1, borderTopColor: colors.border },
-  label: { color: colors.ink, fontWeight: '600' },
-});
+function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+  return StyleSheet.create({
+    card: { backgroundColor: colors.surface, borderRadius: radii.lg, padding: spacing.md, marginTop: spacing.md },
+    title: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 15, marginBottom: 4 },
+    caption: { color: colors.inkSoft, fontSize: type.caption, lineHeight: 17, marginBottom: spacing.sm, fontFamily: fonts.body },
+    row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: spacing.sm, borderTopWidth: 1, borderTopColor: colors.line },
+    rowLast: {},
+    label: { color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14 },
+  });
+}
