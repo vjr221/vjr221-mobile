@@ -47,7 +47,7 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
       <View style={styles.header}>
         <Text style={styles.title}>{t('directory')}</Text>
         {(!online || cached) ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}
-        <TextInput value={term} onChangeText={setTerm} placeholder={t('searchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+        <TextInput accessibilityLabel={t('search')} value={term} onChangeText={setTerm} placeholder={t('searchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -55,7 +55,14 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
           keyExtractor={(item) => String(item.slug ?? 'all')}
           contentContainerStyle={styles.chips}
           renderItem={({ item }) => (
-            <Pressable onPress={() => setActiveCategory(item.slug)} style={[styles.chip, activeCategory === item.slug && styles.chipActive]}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityState={{ selected: activeCategory === item.slug }}
+              accessibilityLabel={item.name}
+              hitSlop={8}
+              onPress={() => setActiveCategory(item.slug)}
+              style={[styles.chip, activeCategory === item.slug && styles.chipActive]}
+            >
               <Text style={[styles.chipText, activeCategory === item.slug && styles.chipTextActive]}>{item.name}</Text>
             </Pressable>
           )}
