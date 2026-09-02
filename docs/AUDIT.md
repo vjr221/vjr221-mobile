@@ -159,3 +159,25 @@ nouvelle URL d'archive répondent toutes deux HTTP 200).
 - La persistance réelle des favoris à travers un redémarrage d'app n'a été
   vérifiée qu'au niveau logique (tests `favoritesSyncService`), pas en
   conditions réelles sur appareil.
+
+## Suite de l'audit Phase 4 (même session, poursuite)
+
+Points 5, 8, 9 de la checklist repassés en revue avec correctifs réels :
+
+- **Point 5 (favoris)** : `toggleFavorite` extrait en fonction pure et
+  testée (ajout, suppression, cycle complet, non-mutation). La
+  persistance `AsyncStorage` réelle sur redémarrage d'app n'est
+  vérifiable qu'au niveau logique dans cet environnement (pas d'appareil).
+- **Point 8 (notifications)** : les interrupteurs de préférences
+  n'indiquaient nulle part qu'aucune notification réelle n'est envoyée —
+  un utilisateur pouvait raisonnablement croire le contraire. Ajout d'une
+  légende explicite.
+- **Point 9 (FR/Wolof)** : 4 écrans introduits ce tour avaient des textes
+  français en dur sans équivalent wolof (`AccountScreen`,
+  `NotificationPreferencesScreen`, `ExploreScreen`, `ContentDetailScreen`).
+  Corrigé — les 56 clés i18n sont maintenant strictement symétriques
+  FR/WO, verrouillé par `strings.test.ts`. Les textes hérités de la Phase 2
+  (`ContentStates.tsx`) restent non traduits : préexistants, hors périmètre
+  de cet audit.
+
+**Total tests après cette suite : 60/60.**
