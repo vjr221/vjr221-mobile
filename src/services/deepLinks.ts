@@ -23,6 +23,7 @@ export type DeepLinkDestination =
   | { kind: 'directory'; id: number }
   | { kind: 'directory-category'; slug: string }
   | { kind: 'home' }
+  | { kind: 'permalink'; slug: string; url: string }
   | { kind: 'unknown'; url: string };
 
 const GEO_SEGMENT_TO_KIND: Record<string, 'region' | 'department' | 'commune' | 'village'> = {
@@ -94,9 +95,17 @@ export function parseDeepLink(rawUrl: string): DeepLinkDestination {
     if (second) return { kind: 'category', slug: second };
   }
 
-  // Permalien WordPress classique : /mon-article-slug/ (pas d'ID visible).
-  // On ne peut pas résoudre un ID depuis un slug sans appel réseau supplémentaire ;
-  // c'est au fallback web de gérer ce cas plutôt que d'inventer une correspondance.
+  // Permalien WordPress classique : /mon-article-slug/ (pas d'ID visible dans l'URL,
+  // c'est la forme de la GRANDE majorité des liens réellement partagés depuis le site).
+  // On ne fabrique pas de correspondance ici : on renvoie le slug pour qu'un appel
+  // réseau explicite (resolveContentBySlug, côté appelant) le résolve. Uniquement
+  // pour un chemin à un seul segment sur le domaine du site -- pas pour /wp-admin/,
+  // /feed/, etc. Si aucune correspondance n'est trouvée par l'appelant, il doit
+  // retomber sur le fallback web, jamais inventer une fiche.
+  if (segments.length === 1 && /^[a-z0-9-]+$/i.test(first)) {
+    return { kind: 'permalink', slug: first, url: rawUrl };
+  }
+
   return { kind: 'unknown', url: rawUrl };
 }
 
@@ -106,5 +115,6 @@ function stripWww(hostname: string): string {
 
 /** URL de secours à ouvrir dans le navigateur quand la destination n'est pas reconnue. */
 export function fallbackWebUrl(destination: DeepLinkDestination): string {
-  return destination.kind === 'unknown' ? destination.url : env.siteUrl;
+  if (destination.kind === 'unknown' || destination.kind === 'permalink') return destination.url;
+  return env.siteUrl;
 }

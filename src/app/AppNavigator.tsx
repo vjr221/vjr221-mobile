@@ -11,7 +11,7 @@ import { useI18n } from '../i18n/I18nProvider';
 import { useFavorites } from '../stores/FavoritesProvider';
 import { colors, radii, spacing } from '../theme/tokens';
 import type { ContentItem, ContentType } from '../types/content';
-import { getContentDetail } from '../services/contentRepository';
+import { getContentDetail, resolveContentBySlug } from '../services/contentRepository';
 import { getDirectoryEntry } from '../services/directoryRepository';
 import { fallbackWebUrl, type DeepLinkDestination } from '../services/deepLinks';
 import { useDeepLinkRouter } from '../hooks/useDeepLinkRouter';
@@ -66,6 +66,15 @@ export function AppNavigator() {
         // Pas encore d'écran dédié par catégorie éditoriale : on atterrit sur
         // le menu Explorer plutôt que d'inventer une destination.
         goToExplore({ collection: null });
+        return;
+      case 'permalink':
+        // La quasi-totalité des URLs réellement partagées depuis vjr221.sn
+        // n'ont pas d'ID visible (permaliens WordPress classiques) : on
+        // résout par slug avant de retomber sur le navigateur si rien ne
+        // correspond -- jamais de fiche inventée.
+        resolveContentBySlug(destination.slug)
+          .then((item) => (item ? setDetail(item) : Linking.openURL(fallbackWebUrl(destination))))
+          .catch(() => Linking.openURL(fallbackWebUrl(destination)));
         return;
       case 'home':
         setDetail(null);

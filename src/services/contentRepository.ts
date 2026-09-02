@@ -52,3 +52,16 @@ export async function getLieuContent(lieuId: number): Promise<CollectionResult> 
     throw error;
   }
 }
+
+/**
+ * Résout un contenu par son slug WordPress (permalien réel du site, ex.
+ * "region-de-dakar") plutôt que par ID. Utilisé pour les deep links
+ * provenant de vrais liens partagés (voir deepLinks.ts, destination
+ * 'permalink') puisque l'immense majorité des URLs vjr221.sn n'exposent
+ * pas d'ID. Renvoie `null` sans rien fabriquer si rien ne correspond.
+ */
+export async function resolveContentBySlug(slug: string): Promise<ContentItem | null> {
+  const posts = await getJson<WordPressPost[]>(`/posts?slug=${encodeURIComponent(slug)}&_embed`);
+  const post = posts[0];
+  return post ? toContentItem(post) : null;
+}

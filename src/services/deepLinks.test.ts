@@ -47,8 +47,14 @@ describe('parseDeepLink', () => {
     expect(result.kind).toBe('unknown');
   });
 
-  it('renvoie "unknown" pour un permalien WordPress sans identifiant (pas de correspondance inventée)', () => {
-    const result = parseDeepLink('https://vjr221.sn/un-article-quelconque/');
+  it('renvoie "permalink" (avec le slug, sans résoudre) pour un permalien WordPress classique', () => {
+    expect(parseDeepLink('https://vjr221.sn/un-article-quelconque/')).toEqual({
+      kind: 'permalink', slug: 'un-article-quelconque', url: 'https://vjr221.sn/un-article-quelconque/',
+    });
+  });
+
+  it('renvoie "unknown" (pas "permalink") pour un chemin à plusieurs segments non reconnu', () => {
+    const result = parseDeepLink('https://vjr221.sn/wp-admin/edit.php');
     expect(result.kind).toBe('unknown');
   });
 
@@ -56,5 +62,10 @@ describe('parseDeepLink', () => {
     const destination = parseDeepLink('https://exemple-externe.com/x');
     expect(fallbackWebUrl(destination)).toBe('https://exemple-externe.com/x');
     expect(fallbackWebUrl({ kind: 'home' })).toBe('https://vjr221.sn');
+  });
+
+  it('fournit aussi un fallback pour un permalien non résolu', () => {
+    const destination = parseDeepLink('https://vjr221.sn/un-article-quelconque/');
+    expect(fallbackWebUrl(destination)).toBe('https://vjr221.sn/un-article-quelconque/');
   });
 });
