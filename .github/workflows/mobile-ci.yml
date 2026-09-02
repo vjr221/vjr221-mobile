@@ -1,0 +1,16 @@
+name: Mobile CI v2
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Startup check
+        run: echo "VJR 221 Mobile CI v2 startup OK"
