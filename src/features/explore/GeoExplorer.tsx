@@ -1,12 +1,14 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
+import { Icon } from '../../components/icons/Icon';
 import { GeoDetailCard } from './GeoDetailCard';
 import { GeoListRow } from './GeoListRow';
 import { useI18n } from '../../i18n/I18nProvider';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus';
-import { colors, radii, spacing } from '../../theme/tokens';
+import { useTheme } from '../../theme/ThemeProvider';
+import { fonts, radii, spacing, type } from '../../theme/tokens';
 import {
   getCommune,
   getCommunes,
@@ -38,6 +40,8 @@ type LoadState = 'loading' | 'ready' | 'error';
  * aucune donnée n'est jamais fabriquée si l'API ne la fournit pas.
  */
 export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: () => void; onOpenContent: (item: ContentItem) => void; initialView?: GeoView }) {
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [stack, setStack] = useState<GeoView[]>(initialView ? [{ kind: 'regions' }, initialView] : [{ kind: 'regions' }]);
   const top = stack[stack.length - 1];
 
@@ -55,7 +59,8 @@ export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: ()
   return (
     <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
       <Pressable accessibilityRole="button" onPress={back} style={styles.backRow}>
-        <Text style={styles.backText}>← Retour</Text>
+        <Icon name="chevronLeft" size={16} color={colors.terreStrong} />
+        <Text style={styles.backText}>Retour</Text>
       </Pressable>
       {Screen}
     </ScrollView>
@@ -68,6 +73,8 @@ export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: ()
 
 function RegionsListScreen({ onOpen }: { onOpen: (id: number) => void }) {
   const { t } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const online = useOnlineStatus();
   const [term, setTerm] = useState('');
   const [items, setItems] = useState<Region[]>([]);
@@ -88,7 +95,7 @@ function RegionsListScreen({ onOpen }: { onOpen: (id: number) => void }) {
       <Text style={styles.title}>{t('regions')}</Text>
       <Text style={styles.intro}>{t('exploreRegionsIntro')}</Text>
       {(!online || cached) ? <OfflineBanner /> : null}
-      <TextInput value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+      <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {state === 'loading' ? <LoadingState /> : null}
       {state === 'error' ? <ErrorState onRetry={() => load(term)} /> : null}
       {state === 'ready' && !items.length ? <EmptyState message={term ? t('noGeoResults') : t('noChildren')} /> : null}
@@ -105,6 +112,8 @@ function RegionsListScreen({ onOpen }: { onOpen: (id: number) => void }) {
 
 function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onOpenDepartment: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [region, setRegion] = useState<Region | null>(null);
   const [content, setContent] = useState<string | null>(null);
   const [detailState, setDetailState] = useState<LoadState>('loading');
@@ -133,7 +142,7 @@ function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onO
     <View>
       <GeoDetailCard title={region.title} excerpt={region.excerpt} content={content} image={region.image} infos={region.infos} breadcrumb={t('region')} />
       <Text style={styles.sectionTitle}>{t('departments')}</Text>
-      <TextInput value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+      <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
       {listState === 'error' ? <ErrorState onRetry={() => loadDepartments(term)} /> : null}
       {listState === 'ready' && !items.length ? <EmptyState message={term ? t('noGeoResults') : t('noChildren')} /> : null}
@@ -151,6 +160,8 @@ function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onO
 
 function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; onOpenCommune: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [department, setDepartment] = useState<Department | null>(null);
   const [content, setContent] = useState<string | null>(null);
   const [detailState, setDetailState] = useState<LoadState>('loading');
@@ -179,7 +190,7 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
     <View>
       <GeoDetailCard title={department.title} excerpt={department.excerpt} content={content} image={department.image} infos={department.infos} breadcrumb={refLabel(department.region?.name) ?? t('department')} />
       <Text style={styles.sectionTitle}>{t('communes')}</Text>
-      <TextInput value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+      <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
       {listState === 'error' ? <ErrorState onRetry={() => loadCommunes(term)} /> : null}
       {listState === 'ready' && !items.length ? <EmptyState message={term ? t('noGeoResults') : t('noChildren')} /> : null}
@@ -197,6 +208,8 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
 
 function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpenVillage: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [commune, setCommune] = useState<Commune | null>(null);
   const [content, setContent] = useState<string | null>(null);
   const [detailState, setDetailState] = useState<LoadState>('loading');
@@ -225,7 +238,7 @@ function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpe
     <View>
       <GeoDetailCard title={commune.title} excerpt={commune.excerpt} content={content} image={commune.image} infos={commune.infos} breadcrumb={refLabel(commune.departement?.name) ?? t('commune')} />
       <Text style={styles.sectionTitle}>{t('villages')}</Text>
-      <TextInput value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} placeholderTextColor={colors.muted} style={styles.input} autoCapitalize="none" />
+      <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
       {listState === 'error' ? <ErrorState onRetry={() => loadVillages(term)} /> : null}
       {listState === 'ready' && !items.length ? <EmptyState message={term ? t('noGeoResults') : t('noChildren')} /> : null}
@@ -273,6 +286,8 @@ function refLabel(value: string | null | undefined): string | null {
 
 function RelatedContent({ lieuId, onOpenContent }: { lieuId: number; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [items, setItems] = useState<ContentItem[]>([]);
   const [state, setState] = useState<'loading' | 'ready'>('loading');
 
@@ -303,8 +318,21 @@ function RelatedContent({ lieuId, onOpenContent }: { lieuId: number; onOpenConte
   );
 }
 
+function SearchField({ value, onChangeText, placeholder }: { value: string; onChangeText: (value: string) => void; placeholder: string }) {
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
+  return (
+    <View style={styles.inputWrap}>
+      <Icon name="search" size={16} color={colors.inkSoft} />
+      <TextInput value={value} onChangeText={onChangeText} placeholder={placeholder} placeholderTextColor={colors.inkSoft} style={styles.input} autoCapitalize="none" />
+    </View>
+  );
+}
+
 function OfflineBanner() {
   const { t } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <View style={styles.offline}>
       <Text style={styles.offlineText}>{t('offline')}</Text>
@@ -312,15 +340,18 @@ function OfflineBanner() {
   );
 }
 
-const styles = StyleSheet.create({
-  content: { padding: spacing.md, paddingBottom: 105, backgroundColor: colors.surface },
-  backRow: { marginBottom: spacing.sm },
-  backText: { color: colors.primary, fontWeight: '700' },
-  title: { color: colors.ink, fontSize: 28, fontWeight: '800' },
-  intro: { color: colors.muted, marginTop: 4, marginBottom: spacing.md },
-  sectionTitle: { color: colors.ink, fontWeight: '800', fontSize: 18, marginTop: spacing.sm, marginBottom: spacing.sm },
-  input: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border, borderRadius: radii.sm, height: 46, paddingHorizontal: spacing.md, color: colors.ink, marginBottom: spacing.md },
-  offline: { backgroundColor: colors.sand, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.sm },
-  relatedSection: { marginTop: spacing.lg },
-  offlineText: { color: colors.primaryDark, fontWeight: '600', fontSize: 12 },
-});
+function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+  return StyleSheet.create({
+    content: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg },
+    backRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginBottom: spacing.sm, alignSelf: 'flex-start' },
+    backText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 14 },
+    title: { color: colors.ink, fontSize: type.display - 8, fontFamily: fonts.displayBold },
+    intro: { color: colors.inkSoft, marginTop: 4, marginBottom: spacing.md, fontFamily: fonts.body, fontSize: type.body, lineHeight: 20 },
+    sectionTitle: { color: colors.ink, fontFamily: fonts.displaySemiBold, fontSize: type.h2, marginTop: spacing.sm, marginBottom: spacing.sm },
+    inputWrap: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, backgroundColor: colors.surface, borderRadius: radii.pill, height: 46, paddingHorizontal: spacing.md, marginBottom: spacing.md },
+    input: { flex: 1, color: colors.ink, fontFamily: fonts.body, fontSize: 14 },
+    offline: { backgroundColor: colors.surfaceSoft, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.sm },
+    relatedSection: { marginTop: spacing.lg },
+    offlineText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 12 },
+  });
+}
