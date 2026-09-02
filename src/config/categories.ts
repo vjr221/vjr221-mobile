@@ -19,6 +19,6 @@ export const categories: Category[] = [
   { id: 'culture', labelKey: 'culture', emoji: '◈', available: false },
   { id: 'events', labelKey: 'events', emoji: '✦', available: false },
   { id: 'people', labelKey: 'people', emoji: '●', available: false },
-  { id: 'directory', labelKey: 'directory', emoji: '▦', available: false },
+  { id: 'directory', labelKey: 'directory', emoji: '▦', available: true },
   { id: 'news', labelKey: 'news', emoji: '▤', available: true },
 ];
