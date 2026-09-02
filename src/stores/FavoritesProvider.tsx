@@ -5,6 +5,13 @@ import { syncFavorites } from '../services/favoritesSyncService';
 
 type Favorites = { items: ContentItem[]; toggle: (item: ContentItem) => void; has: (id: number) => boolean };
 
+/** Logique pure d'ajout/retrait, extraite pour être testable sans rendu. */
+export function toggleFavorite(current: ContentItem[], item: ContentItem): ContentItem[] {
+  return current.some((entry) => entry.id === item.id)
+    ? current.filter((entry) => entry.id !== item.id)
+    : [item, ...current];
+}
+
 const Context = createContext<Favorites | null>(null);
 
 export function FavoritesProvider({ children }: { children: React.ReactNode }) {
@@ -30,7 +37,7 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const toggle = (item: ContentItem) => setItems((current) => {
-    const next = current.some((entry) => entry.id === item.id) ? current.filter((entry) => entry.id !== item.id) : [item, ...current];
+    const next = toggleFavorite(current, item);
     AsyncStorage.setItem('favorites', JSON.stringify(next)).catch(() => {});
     return next;
   });
