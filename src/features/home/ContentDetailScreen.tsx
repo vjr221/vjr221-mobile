@@ -1,92 +1,121 @@
-import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useMemo } from 'react';
+import { Image, Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useFavorites } from '../../stores/FavoritesProvider';
 import type { ContentItem } from '../../types/content';
-import { colors, radii, spacing } from '../../theme/tokens';
+import { useTheme } from '../../theme/ThemeProvider';
+import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { useI18n } from '../../i18n/I18nProvider';
 import { shareFiche } from '../../services/shareService';
 import { LocationPreview } from '../../components/LocationPreview';
+import { Badge } from '../../components/Badge';
+import { Button } from '../../components/Button';
+import { Icon } from '../../components/icons/Icon';
 
+/** Fiche de contenu = véritable fiche encyclopédique premium : image en pleine largeur, typographie éditoriale, actions pratiques groupées. */
 export function ContentDetailScreen({ item, onBack }: { item: ContentItem; onBack: () => void }) {
   const { t } = useI18n();
+  const { colors } = useTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const { has, toggle } = useFavorites();
   const { practical } = item;
   const coordinates = practical?.coordinates ? { lat: practical.coordinates.latitude, lng: practical.coordinates.longitude } : null;
+  const saved = has(item.id);
 
   const share = () => shareFiche({ title: item.title, summary: item.excerpt, url: item.url ?? item.title });
   const call = () => practical?.phone && Linking.openURL(`tel:${practical.phone.replace(/\s+/g, '')}`);
   const email = () => practical?.email && Linking.openURL(`mailto:${practical.email}`);
 
+  const practicalRows: { icon: 'phone' | 'pin' | 'clock' | 'mail'; label: TranslationKeyLabel; value: string; onPress?: () => void }[] = [];
+  if (practical?.phone) practicalRows.push({ icon: 'phone', label: t('call'), value: practical.phone, onPress: call });
+  if (practical?.address) practicalRows.push({ icon: 'pin', label: t('location'), value: practical.address });
+  if (practical?.hours) practicalRows.push({ icon: 'clock', label: t('hours'), value: practical.hours });
+  if (practical?.email) practicalRows.push({ icon: 'mail', label: t('email'), value: practical.email, onPress: email });
+
   return (
-    <ScrollView contentContainerStyle={styles.content}>
-      <Pressable onPress={onBack} accessibilityRole="button"><Text style={styles.back}>← {t('home')}</Text></Pressable>
-      <Text style={styles.kicker}>{item.type.toUpperCase()}</Text>
-      <Text style={styles.title}>{item.title}</Text>
-      {item.content || item.excerpt ? <Text style={styles.copy}>{item.content ?? item.excerpt}</Text> : null}
+    <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+      {item.imageUrl ? (
+        <Image accessibilityIgnoresInvertColors source={{ uri: item.imageUrl }} style={styles.hero} />
+      ) : (
+        <View style={[styles.hero, styles.heroFallback]}>
+          <Icon name="image" size={38} color={colors.line} />
+        </View>
+      )}
 
-      <View style={styles.actions}>
-        <Pressable accessibilityRole="button" style={styles.primary} onPress={() => toggle(item)}>
-          <Text style={styles.primaryText}>{has(item.id) ? t('saved') : t('save')}</Text>
+      <View style={styles.body}>
+        <Pressable onPress={onBack} accessibilityRole="button" style={styles.backRow}>
+          <Icon name="chevronLeft" size={16} color={colors.terreStrong} />
+          <Text style={styles.back}>{t('home')}</Text>
         </Pressable>
-        <Pressable accessibilityRole="button" style={styles.secondary} onPress={share}>
-          <Text style={styles.secondaryText}>{t('share')}</Text>
-        </Pressable>
+
+        <Badge tone="terre">{item.type.toUpperCase()}</Badge>
+        <Text style={styles.title}>{item.title}</Text>
+        {item.content || item.excerpt ? <Text style={styles.copy}>{item.content ?? item.excerpt}</Text> : null}
+
+        <View style={styles.actions}>
+          <Button variant="primary" onPress={() => toggle(item)} style={styles.primaryAction}>
+            {saved ? t('saved') : t('save')}
+          </Button>
+          <Button variant="secondary" onPress={share}>
+            {t('share')}
+          </Button>
+        </View>
+
+        {practicalRows.length ? (
+          <View style={styles.practicalCard}>
+            {practicalRows.map((row, index) => (
+              <Pressable
+                key={row.label}
+                accessibilityRole={row.onPress ? 'button' : undefined}
+                onPress={row.onPress}
+                disabled={!row.onPress}
+                style={[styles.practicalRow, index === practicalRows.length - 1 && styles.practicalRowLast]}
+              >
+                <Icon name={row.icon} size={16} color={colors.inkSoft} />
+                <Text style={styles.practicalLabel}>{row.label}</Text>
+                <Text numberOfLines={1} style={styles.practicalValue}>{row.value}</Text>
+              </Pressable>
+            ))}
+          </View>
+        ) : null}
+
+        <LocationPreview coordinates={coordinates} label={item.title} />
+
+        {practical?.website ? (
+          <Pressable accessibilityRole="link" style={styles.link} onPress={() => Linking.openURL(practical.website!)}>
+            <Text style={styles.linkText}>{t('website')}</Text>
+            <Icon name="chevronRight" size={13} color={colors.terreStrong} />
+          </Pressable>
+        ) : item.url ? (
+          <Pressable accessibilityRole="link" style={styles.link} onPress={() => Linking.openURL(item.url!)}>
+            <Text style={styles.linkText}>{t('website')}</Text>
+            <Icon name="chevronRight" size={13} color={colors.terreStrong} />
+          </Pressable>
+        ) : null}
       </View>
-
-      {/* Actions pratiques : uniquement affichées si la donnée correspondante existe. */}
-      {practical?.phone ? (
-        <Pressable accessibilityRole="button" style={styles.practicalRow} onPress={call}>
-          <Text style={styles.practicalLabel}>{t('call')}</Text>
-          <Text style={styles.practicalValue}>{practical.phone}</Text>
-        </Pressable>
-      ) : null}
-      {practical?.address ? (
-        <View style={styles.practicalRow}>
-          <Text style={styles.practicalLabel}>{t('location')}</Text>
-          <Text style={styles.practicalValue}>{practical.address}</Text>
-        </View>
-      ) : null}
-      {practical?.hours ? (
-        <View style={styles.practicalRow}>
-          <Text style={styles.practicalLabel}>{t('hours')}</Text>
-          <Text style={styles.practicalValue}>{practical.hours}</Text>
-        </View>
-      ) : null}
-      {practical?.email ? (
-        <Pressable accessibilityRole="button" style={styles.practicalRow} onPress={email}>
-          <Text style={styles.practicalLabel}>{t('email')}</Text>
-          <Text style={styles.practicalValue}>{practical.email}</Text>
-        </Pressable>
-      ) : null}
-
-      <LocationPreview coordinates={coordinates} label={item.title} />
-
-      {practical?.website ? (
-        <Pressable accessibilityRole="link" style={styles.link} onPress={() => Linking.openURL(practical.website!)}>
-          <Text style={styles.linkText}>{t('website')} ↗</Text>
-        </Pressable>
-      ) : item.url ? (
-        <Pressable accessibilityRole="link" style={styles.link} onPress={() => Linking.openURL(item.url!)}>
-          <Text style={styles.linkText}>{t('website')} ↗</Text>
-        </Pressable>
-      ) : null}
     </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  content: { padding: spacing.md, paddingBottom: 60, backgroundColor: colors.surface },
-  back: { color: colors.primary, fontWeight: '700', marginVertical: spacing.md },
-  kicker: { color: colors.primary, fontWeight: '800', fontSize: 11, letterSpacing: 1.2, marginTop: spacing.lg },
-  title: { color: colors.ink, fontSize: 30, fontWeight: '800', marginTop: spacing.sm },
-  copy: { color: colors.ink, lineHeight: 25, fontSize: 17, marginTop: spacing.lg },
-  actions: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.xl },
-  primary: { flex: 1, padding: spacing.md, borderRadius: radii.pill, backgroundColor: colors.primary, alignItems: 'center' },
-  primaryText: { color: colors.white, fontWeight: '800' },
-  secondary: { padding: spacing.md, borderRadius: radii.pill, backgroundColor: colors.primarySoft },
-  secondaryText: { color: colors.primaryDark, fontWeight: '800' },
-  practicalRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: spacing.sm, borderBottomWidth: 1, borderBottomColor: colors.border, marginTop: spacing.sm },
-  practicalLabel: { color: colors.muted, fontWeight: '700', fontSize: 13 },
-  practicalValue: { color: colors.primary, fontWeight: '700', fontSize: 14, flexShrink: 1, textAlign: 'right' },
-  link: { marginTop: spacing.md, alignSelf: 'flex-start' },
-  linkText: { color: colors.primary, fontWeight: '700' },
-});
+type TranslationKeyLabel = string;
+
+function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+  return StyleSheet.create({
+    content: { paddingBottom: 60, backgroundColor: colors.bg },
+    hero: { width: '100%', height: 260, backgroundColor: colors.surfaceSoft },
+    heroFallback: { alignItems: 'center', justifyContent: 'center' },
+    body: { padding: spacing.md },
+    backRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginVertical: spacing.md, alignSelf: 'flex-start' },
+    back: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 14 },
+    title: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.sm, lineHeight: 36 },
+    copy: { color: colors.ink, lineHeight: 26, fontSize: type.bodyLg, marginTop: spacing.lg, fontFamily: fonts.body },
+    actions: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.xl, flexWrap: 'wrap' },
+    primaryAction: { flexGrow: 1 },
+    practicalCard: { backgroundColor: colors.surface, borderRadius: radii.lg, marginTop: spacing.lg, paddingHorizontal: spacing.md },
+    practicalRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, paddingVertical: spacing.md, borderBottomWidth: 1, borderBottomColor: colors.line },
+    practicalRowLast: { borderBottomWidth: 0 },
+    practicalLabel: { color: colors.inkSoft, fontFamily: fonts.bodySemiBold, fontSize: 13, width: 66 },
+    practicalValue: { color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14, flex: 1, textAlign: 'right' },
+    link: { marginTop: spacing.lg, flexDirection: 'row', alignItems: 'center', gap: 4, alignSelf: 'flex-start' },
+    linkText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 14 },
+  });
+}
