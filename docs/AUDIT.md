@@ -106,3 +106,56 @@ docs/API.md).
 - Contraste des couleurs du design system : hérité des phases précédentes,
   non modifié dans cet audit — à vérifier avec un outil dédié (ex.
   Accessibility Inspector) lors d'un futur passage design.
+
+---
+
+# Audit Phase 4 — finalisation production (2026-09-01, suite)
+
+Patch `vjr221-mobile-phase4-complet.patch` appliqué via `git am` sur un
+clone frais de `origin/main` : **0 conflit, 14/14 commits acceptés**.
+
+## Découvertes de cet audit
+
+### P1 — corrigé : les vraies URLs du site n'ouvraient pas l'application
+
+Toutes les URLs réellement partagées depuis vjr221.sn (permaliens WordPress
+standards, ex. `https://vjr221.sn/region-de-dakar/`) n'ont pas d'ID dans le
+chemin. Le parseur de deep links ne reconnaissait que son propre schéma
+synthétique `vjr221://open/{segment}/{id}` (utilisé par le bandeau "Lire
+dans l'application" côté WordPress) et retombait sur `unknown` → navigateur
+pour tout permalien réel. Aucun crash, mais l'objectif de la Priorité 6
+n'était pas atteint pour le partage réel. **Corrigé** : nouvelle destination
+`permalink` + résolution par slug via `wp/v2/posts?slug=X` (endpoint vérifié
+en direct sur vjr221.sn). Voir commit `fix(deeplinks)`.
+
+### P2 — corrigé : dépendance `expo-localization` inutilisée
+
+Déclarée dans `package.json` et `app.json` mais jamais importée dans le
+code — `I18nProvider` gère la langue via `AsyncStorage`, pas via
+l'appareil. Retirée des deux fichiers.
+
+### Bug WordPress trouvé et corrigé (hors dépôt mobile, côté vjr221.sn)
+
+La catégorie "Écrivains" (`personnalites-lettres`) avait `parent: 0` au
+lieu d'être rattachée à "Personnalités" — seule anomalie parmi 7
+sous-catégories, cause probable d'une saisie manuelle. Conséquence
+concrète : les contenus liés à cette branche (romanciers, poètes,
+essayistes) remontaient `type: "news"` et `category: null` dans
+`/wp-json/vjr221/v1/lieu/{id}/contenus` au lieu de `type: "people"`.
+Corrigé via `wp_update_term`, vérifié sans régression (ancienne et
+nouvelle URL d'archive répondent toutes deux HTTP 200).
+
+## Ce qui n'a PAS pu être testé dans cet environnement
+
+- **Aucun test sur appareil physique ou simulateur** Android/iOS : cet
+  environnement ne dispose ni d'émulateur, ni d'appareil connecté. Tout ce
+  qui est qualifié de "testé" dans ce document est soit un test automatisé
+  (Jest), soit une vérification HTTP directe de l'API — jamais une
+  vérification visuelle réelle sur écran.
+- Le comportement natif des deep links (`vjr221://`, Android App Links,
+  iOS Universal Links) au niveau du système d'exploitation n'a pas pu être
+  vérifié : seule la logique de parsing/résolution (`deepLinks.ts`,
+  `resolveContentBySlug`) a été testée, unitairement et contre l'API réelle.
+- La persistance réelle des favoris à travers un redémarrage d'app n'a été
+  vérifiée qu'au niveau logique (tests `favoritesSyncService`), pas en
+  conditions réelles sur appareil.
