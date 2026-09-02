@@ -27,7 +27,7 @@ jobs:
           git --version
           java -version
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Typecheck
         run: npm run typecheck
       - name: Lint
