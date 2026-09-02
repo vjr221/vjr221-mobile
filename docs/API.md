@@ -54,7 +54,7 @@ Forme d'un élément de liste :
 ```
 
 `region` / `departement` (objets `{id, name, slug}` ou `null`) n'apparaissent que sur
-départements/communes. `commune` (même forme) n'apparait que sur les villages/quartiers.
+départements/communes. `commune` (même forme) n'apparaît que sur les villages/quartiers.
 Un détail (`/regions/{id}`, etc.) ajoute `content`, `galerie` (tableau d'images) et
 `liens_utiles` (tableau `{label, url}`).
 
@@ -82,3 +82,34 @@ exact des champs (`vjr_ann_*`).
 Aucun composant n'appelle une URL directement : tout passe par
 `src/services/contentRepository.ts` (actualités) ou `src/services/geoRepository.ts`
 (territoire), qui gèrent aussi le cache offline (TTL 15 min, `src/services/cache.ts`).
+
+## Contenus liés à un lieu — `GET /lieu/{id}/contenus`
+
+Personnalités, tourisme, patrimoine et gastronomie réellement rattachés à une
+région/un département/une commune via le champ ACF "Lieu associé"
+(`vjr_lieu_associe`, post_object, cible uniquement region/departement/commune
+— jamais un village). Payload volontairement léger (pas de `content` complet)
+pour les listes ; le mobile recharge la fiche complète via `getContentDetail(id)`
+avant d'ouvrir l'écran de détail.
+
+```json
+{ "items": [{ "id": 9428, "title": "…", "excerpt": "…", "permalink": "…", "image": null, "type": "people", "category": { "id": 34, "slug": "personnalites-arts", "name": "Artistes et Musiciens" } }] }
+```
+
+`type` est dérivé de la catégorie (`people`, `tourism`, `heritage`, `gastronomy`)
+et correspond directement au `ContentType` mobile.
+
+## Intégration site ↔ application
+
+Côté WordPress (`wp-content/novamira-sandbox/vjr221-mobile-app-integration.php`,
+hors dépôt mobile) :
+
+- Shortcode `[vjr221_app_download]` : badges Play Store/App Store + QR code,
+  pilotés par les options `vjr221_playstore_url`/`vjr221_appstore_url` (vides
+  par défaut → état honnête "Bientôt disponible", jamais de lien fictif).
+- Bandeau "Lire dans l'application" injecté sur chaque fiche (mobile uniquement),
+  pointant vers `vjr221://open/{segment}/{id}` — le même mapping catégorie→segment
+  que `src/services/deepLinks.ts` (`regions`/`departements`/`communes`/
+  `quartiers-villages`/`annuaire`, avec remontée d'arbre pour les sous-catégories
+  imbriquées de l'annuaire), donc les deux couches ne peuvent pas diverger sans
+  que ce soit visible aux tests des deux côtés.

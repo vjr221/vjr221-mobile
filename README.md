@@ -30,4 +30,4 @@ Voir [l'architecture](docs/architecture.md).
 
 ## Roadmap
 
-Voir [l'architecture](docs/architecture.md), [l'API](docs/API.md) et la [roadmap](docs/ROADMAP.md).
+Voir [l'architecture](docs/architecture.md), [l'API](docs/API.md), la [roadmap](docs/ROADMAP.md), l'[audit qualité](docs/AUDIT.md) et la [préparation de publication](docs/STORE_RELEASE.md).
