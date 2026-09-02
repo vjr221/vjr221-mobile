@@ -91,5 +91,5 @@ jobs:
           gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 \
             --repo "$GITHUB_REPOSITORY" \
             --title "VJR221 Android APK ${GITHUB_SHA::7}" \
-            --notes "APK Android de production VJR221. Le bundle JavaScript est embarqué dans l'APK et l'icône officielle de la médiathèque VJR 221 est utilisée. Build généré depuis le commit ${GITHUB_SHA}."
+            --notes "APK Android de production VJR221. Le bundle JavaScript est embarqué dans l'APK et l'icône officielle de la médiathèque VJR 221 est utilisée. Build généré depuis le commit ${GITHUB_SHA}." \
             --prerelease
