@@ -12,7 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Startup check
-        run: echo "VJR 221 checkout CI startup OK"
+        run: echo "VJR 221 workflow startup OK"
