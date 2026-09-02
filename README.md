@@ -13,14 +13,14 @@ Utiliser `npm run android`, `npm run ios` ou `npm run web` selon la cible.
 ## Architecture et données
 
 - Une seule base TypeScript cross-platform.
-- API WordPress configurée par variables d'environnement, sans contenu métier fictif. La collection publique actuellement exposée est `wp/v2/posts`; les univers sans API publique affichent un état explicite.
-- Navigation Accueil, Explorer, Recherche, Favoris et Plus, avec fiches réutilisables, partage et ouverture de liens source.
+- API WordPress configurée par variables d'environnement, sans contenu métier fictif. Les publications utilisent `wp/v2/posts`; la hiérarchie territoriale (régions/départements/communes/villages) et l'annuaire utilisent l'API custom `vjr221/v1` (voir docs/API.md). Les univers sans API dédiée affichent un état explicite « à venir ».
+- Navigation Accueil, Explorer, Recherche, Favoris et Plus, avec fiches réutilisables, partage et ouverture de liens source. Explorer permet de parcourir le Sénégal région par région jusqu'à la commune et au quartier/village (`src/features/explore/GeoExplorer.tsx`), avec recherche/filtre et états loading/error/empty/offline.
 - Français et wolof : les libellés d'interface sont centralisés, le choix de langue est persistant et le français reste le fallback.
 - Cache local avec TTL de 15 minutes : en cas de réseau indisponible, le dernier contenu connu s'affiche avec un indicateur.
 
 ## Environnements
 
-`EXPO_PUBLIC_APP_ENV` accepte `development`, `staging` ou `production`. Les URLs du site et de l'API sont configurées avec `EXPO_PUBLIC_SITE_URL` et `EXPO_PUBLIC_API_BASE_URL`.
+`EXPO_PUBLIC_APP_ENV` accepte `development`, `staging` ou `production`. Les URLs sont configurées avec `EXPO_PUBLIC_SITE_URL`, `EXPO_PUBLIC_API_BASE_URL` (publications WordPress) et `EXPO_PUBLIC_GEO_API_BASE_URL` (territoire et annuaire, API custom `vjr221/v1`).
 
 Voir [l'architecture](docs/architecture.md).
 
@@ -30,4 +30,4 @@ Voir [l'architecture](docs/architecture.md).
 
 ## Roadmap
 
-Voir [l'architecture](docs/architecture.md), [l'API](docs/API.md) et la [roadmap](docs/ROADMAP.md).
+Voir [l'architecture](docs/architecture.md), [l'API](docs/API.md), la [roadmap](docs/ROADMAP.md), l'[audit qualité](docs/AUDIT.md) et la [préparation de publication](docs/STORE_RELEASE.md).
