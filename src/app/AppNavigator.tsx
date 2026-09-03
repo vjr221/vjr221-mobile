@@ -19,10 +19,10 @@ import { fallbackWebUrl, type DeepLinkDestination } from '../services/deepLinks'
 import { useDeepLinkRouter } from '../hooks/useDeepLinkRouter';
 
 type Tab = 'home' | 'explore' | 'search' | 'favorites' | 'more';
-
 const TAB_ICON: Record<Tab, IconName> = { home: 'home', explore: 'compass', search: 'search', favorites: 'heart', more: 'more' };
-
 type ExploreSeed = { collection: ContentType | null; geoView?: GeoView; directoryCategory?: string };
+
+type DetailNavigationContext = { items: ContentItem[]; index: number };
 
 export function AppNavigator() {
   const { locale, setLocale, t } = useI18n();
@@ -30,28 +30,43 @@ export function AppNavigator() {
   const { colors, shadow } = useTheme();
   const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
   const [tab, setTab] = useState<Tab>('home');
-  const [detail, setDetail] = useState<ContentItem | null>(null);
+  const [detailStack, setDetailStack] = useState<ContentItem[]>([]);
+  const [detailContext, setDetailContext] = useState<DetailNavigationContext | null>(null);
   const [exploreSeed, setExploreSeed] = useState<ExploreSeed>({ collection: null });
   const [exploreSeedVersion, setExploreSeedVersion] = useState(0);
 
-  const open = (item: ContentItem) => setDetail(item);
+  const open = useCallback((item: ContentItem, context?: DetailNavigationContext) => {
+    setDetailStack((current) => {
+      const existing = current.findIndex((entry) => entry.id === item.id);
+      return existing >= 0 ? current.slice(0, existing + 1) : [...current, item];
+    });
+    setDetailContext(context ?? null);
+  }, []);
 
-  const goToExplore = (seed: ExploreSeed) => {
-    setDetail(null);
+  const closeDetail = useCallback(() => {
+    setDetailStack((current) => current.slice(0, -1));
+    setDetailContext(null);
+  }, []);
+
+  const navigateDetail = useCallback((item: ContentItem) => {
+    setDetailStack((current) => current.length ? [...current.slice(0, -1), item] : [item]);
+  }, []);
+
+  const goToExplore = useCallback((seed: ExploreSeed) => {
+    setDetailStack([]);
+    setDetailContext(null);
     setExploreSeed(seed);
     setExploreSeedVersion((v) => v + 1);
     setTab('explore');
-  };
+  }, []);
 
-  // ---- Deep links : une URL vjr221.sn/... ou vjr221://... ouvre directement
-  // la bonne destination dans l'app ; si elle n'est pas reconnue, fallback web.
   const handleDestination = useCallback((destination: DeepLinkDestination) => {
     switch (destination.kind) {
       case 'content':
-        getContentDetail(destination.id).then(setDetail).catch(() => Linking.openURL(fallbackWebUrl(destination)));
+        getContentDetail(destination.id).then((item) => open(item)).catch(() => Linking.openURL(fallbackWebUrl(destination)));
         return;
       case 'directory':
-        getDirectoryEntry(destination.id).then(setDetail).catch(() => Linking.openURL(fallbackWebUrl(destination)));
+        getDirectoryEntry(destination.id).then((item) => open(item)).catch(() => Linking.openURL(fallbackWebUrl(destination)));
         return;
       case 'directory-category':
         goToExplore({ collection: 'directory', directoryCategory: destination.slug || undefined });
@@ -69,44 +84,42 @@ export function AppNavigator() {
         goToExplore({ collection: 'regions', geoView: { kind: 'village', id: destination.id } });
         return;
       case 'category':
-        // Pas encore d'écran dédié par catégorie éditoriale : on atterrit sur
-        // le menu Explorer plutôt que d'inventer une destination.
         goToExplore({ collection: null });
         return;
       case 'permalink':
-        // La quasi-totalité des URLs réellement partagées depuis vjr221.sn
-        // n'ont pas d'ID visible (permaliens WordPress classiques) : on
-        // résout par slug avant de retomber sur le navigateur si rien ne
-        // correspond -- jamais de fiche inventée.
         resolveContentBySlug(destination.slug)
-          .then((item) => (item ? setDetail(item) : Linking.openURL(fallbackWebUrl(destination))))
+          .then((item) => (item ? open(item) : Linking.openURL(fallbackWebUrl(destination))))
           .catch(() => Linking.openURL(fallbackWebUrl(destination)));
         return;
       case 'home':
-        setDetail(null);
+        setDetailStack([]);
+        setDetailContext(null);
         setTab('home');
         return;
       case 'unknown':
       default:
         Linking.openURL(fallbackWebUrl(destination)).catch(() => {});
     }
-  }, []);
+  }, [goToExplore, open]);
 
   useDeepLinkRouter(handleDestination);
 
-  if (detail) return <ContentDetailScreen item={detail} onBack={() => setDetail(null)} />;
+  if (detailStack.length) {
+    return (
+      <ContentDetailScreen
+        item={detailStack[detailStack.length - 1]}
+        onBack={closeDetail}
+        navigationContext={detailContext ?? undefined}
+        onNavigate={navigateDetail}
+      />
+    );
+  }
 
   const screen =
     tab === 'home' ? (
       <HomeScreen onOpen={open} onSearch={() => setTab('search')} onExplore={() => goToExplore({ collection: null })} />
     ) : tab === 'explore' ? (
-      <ExploreScreen
-        key={exploreSeedVersion}
-        onOpen={open}
-        initialCollection={exploreSeed.collection ?? undefined}
-        initialGeoView={exploreSeed.geoView}
-        initialDirectoryCategory={exploreSeed.directoryCategory}
-      />
+      <ExploreScreen key={exploreSeedVersion} onOpen={open} initialCollection={exploreSeed.collection ?? undefined} initialGeoView={exploreSeed.geoView} initialDirectoryCategory={exploreSeed.directoryCategory} />
     ) : tab === 'search' ? (
       <SearchScreen onOpen={open} />
     ) : tab === 'favorites' ? (
@@ -116,7 +129,6 @@ export function AppNavigator() {
     );
 
   const tabs: Tab[] = ['home', 'explore', 'search', 'favorites', 'more'];
-
   return (
     <View style={styles.root}>
       {screen}
