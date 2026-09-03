@@ -1,20 +1,24 @@
 import { useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { categories } from '../../config/categories';
-import { Badge } from '../../components/Badge';
 import { Icon } from '../../components/icons/Icon';
 import { DirectoryScreen } from '../directory/DirectoryScreen';
 import { GeoExplorer, type GeoView } from './GeoExplorer';
+import { CategoryContentScreen } from './CategoryContentScreen';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { useI18n } from '../../i18n/I18nProvider';
-import type { TranslationKey } from '../../i18n/strings';
 import type { ContentItem, ContentType } from '../../types/content';
 
 /**
  * Explorer = hub de découverte du Sénégal : grande grille de territoires et
- * d'univers éditoriaux, chacun avec son propre statut (disponible / à venir),
- * plutôt qu'une simple liste administrative de collections.
+ * d'univers éditoriaux. Tous les univers sont désormais connectés à de vrais
+ * contenus WordPress (voir config/categories.ts) : Régions et Annuaire
+ * gardent leur écran dédié, les huit autres (Tourisme, Patrimoine,
+ * Gastronomie, Histoire, Nature, Culture, Événements, Personnalités,
+ * Actualités) ouvrent CategoryContentScreen, un écran générique filtré par
+ * les vraies catégories du site — plus de badge Disponible/À venir, devenu
+ * inutile, remplacé par une légende courte par univers.
  */
 export function ExploreScreen({
   onOpen,
@@ -40,6 +44,19 @@ export function ExploreScreen({
     return <DirectoryScreen onOpen={onOpen} initialCategory={initialDirectoryCategory} />;
   }
 
+  const openCategory = categories.find((category) => category.id === openCollection && category.introKey);
+  if (openCategory?.introKey) {
+    return (
+      <CategoryContentScreen
+        type={openCategory.id}
+        titleKey={openCategory.labelKey}
+        introKey={openCategory.introKey}
+        onOpen={onOpen}
+        onExit={() => setOpenCollection(null)}
+      />
+    );
+  }
+
   return (
     <ScrollView contentContainerStyle={styles.content}>
       <Text style={styles.title}>{t('explore')}</Text>
@@ -55,8 +72,10 @@ export function ExploreScreen({
             <View style={styles.iconWrap}>
               <Icon name={category.icon} size={22} color={colors.terreStrong} />
             </View>
-            <Text style={styles.name}>{t(category.labelKey as TranslationKey)}</Text>
-            <Badge tone={category.available ? 'savane' : 'outline'}>{category.available ? t('available') : t('comingSoon')}</Badge>
+            <View>
+              <Text style={styles.name}>{t(category.labelKey)}</Text>
+              <Text numberOfLines={2} style={styles.desc}>{t(category.descKey)}</Text>
+            </View>
           </Pressable>
         ))}
       </View>
@@ -75,5 +94,6 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     unavailable: { opacity: 0.6 },
     iconWrap: { width: 40, height: 40, borderRadius: radii.pill, backgroundColor: colors.surfaceSoft, alignItems: 'center', justifyContent: 'center' },
     name: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 15 },
+    desc: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: 12.5, lineHeight: 16, marginTop: 3 },
   });
 }

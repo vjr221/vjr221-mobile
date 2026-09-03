@@ -1,4 +1,25 @@
-import { toContentItem } from './contentRepository';
+import { CATEGORY_TAXONOMY, getCategoryContent, toContentItem } from './contentRepository';
+
+describe('CATEGORY_TAXONOMY', () => {
+  it('couvre tous les univers éditoriaux connectés à Explorer', () => {
+    // Régression : si une entrée disparaît ici sans que categories.ts soit
+    // mis à jour, la tuile correspondante ouvrirait un écran vide.
+    expect(Object.keys(CATEGORY_TAXONOMY).sort()).toEqual(
+      ['culture', 'events', 'gastronomy', 'heritage', 'history', 'nature', 'news', 'people', 'tourism'].sort()
+    );
+  });
+
+  it("ne renvoie jamais un tableau de catégories vide pour un univers déclaré", () => {
+    Object.values(CATEGORY_TAXONOMY).forEach((ids) => expect(ids && ids.length).toBeGreaterThan(0));
+  });
+});
+
+describe('getCategoryContent', () => {
+  it("renvoie une liste vide sans appel réseau pour un univers non cartographié (jamais de contenu inventé)", async () => {
+    const result = await getCategoryContent('practical');
+    expect(result).toEqual({ items: [], fromCache: false, stale: false, hasMore: false });
+  });
+});
 
 describe('toContentItem', () => {
   it('normalise une réponse WordPress sans conserver le HTML', () => {

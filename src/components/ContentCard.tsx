@@ -10,13 +10,16 @@ import type { TranslationKey } from '../i18n/strings';
 
 // Seuls ces types ont une traduction dédiée dans i18n/strings.ts ; les autres
 // (regions/departments/communes/practical/media/diaspora/community...) n'ont
-// pas encore de fiche ContentCard dédiée dans l'app, donc pas de kicker traduit.
+// pas de fiche ContentCard dédiée dans l'app (pas de liste nationale dédiée),
+// donc pas de kicker traduit — ils retombent sur item.type en majuscules.
 const KICKER_KEY: Partial<Record<ContentType, TranslationKey>> = {
   news: 'news', tourism: 'tourism', heritage: 'heritage', gastronomy: 'gastronomy', people: 'people', directory: 'directory',
+  history: 'history', nature: 'nature', culture: 'culture', events: 'events',
 };
 
 const KICKER_TONE: Partial<Record<ContentType, BadgeTone>> = {
   news: 'terre', tourism: 'savane', heritage: 'safran', gastronomy: 'terre', people: 'savane', directory: 'neutral',
+  history: 'safran', nature: 'savane', culture: 'safran', events: 'terre',
 };
 
 /**
