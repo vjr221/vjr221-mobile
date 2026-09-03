@@ -1,5 +1,6 @@
 import { Component, type ReactNode } from 'react';
 import { Appearance, Pressable, StyleSheet, Text, View } from 'react-native';
+import { reportError } from '../services/sentry';
 import { darkPalette, lightPalette, type Palette } from '../theme/tokens';
 
 /**
@@ -24,6 +25,7 @@ export class ErrorBoundary extends Component<{ children: ReactNode }, { error: E
 
   componentDidCatch(error: Error, info: { componentStack?: string | null }) {
     console.error('[ErrorBoundary]', error, info.componentStack);
+    reportError(error, { componentStack: info.componentStack });
   }
 
   reset = () => this.setState({ error: null });
