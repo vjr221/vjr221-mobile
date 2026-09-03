@@ -45,7 +45,20 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "resizeMode": "contain",
+          "backgroundColor": "#F4E9D6",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#11170F"
+          }
+        }
+      ]
     ]
   }
 }
