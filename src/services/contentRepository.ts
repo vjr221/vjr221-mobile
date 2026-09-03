@@ -1,13 +1,100 @@
 import { getJson } from './http';
-import { readCache, writeCache } from './cache';
+import { withCacheFallback } from './cache';
 import { env } from '../config/env';
 import type { ContentItem, ContentType } from '../types/content';
-export type WordPressPost = { id: number; date: string; link: string; title: { rendered: string }; excerpt: { rendered: string }; content?: { rendered: string }; tags?: number[]; _embedded?: { 'wp:featuredmedia'?: { source_url: string }[] } };
-const stripHtml = (value: string) => value.replace(/<[^>]*>/g, '').trim();
-export const toContentItem = (post: WordPressPost): ContentItem => ({ id: post.id, title: stripHtml(post.title.rendered), excerpt: stripHtml(post.excerpt.rendered), content: post.content ? stripHtml(post.content.rendered) : undefined, type: 'news', url: post.link, publishedAt: post.date, imageUrl: post._embedded?.['wp:featuredmedia']?.[0]?.source_url });
+export type WordPressPost = {
+  id: number;
+  date: string;
+  link: string;
+  title: { rendered: string };
+  excerpt: { rendered: string };
+  content?: { rendered: string };
+  tags?: number[];
+  _embedded?: { 'wp:featuredmedia'?: WordPressFeaturedMedia[] };
+};
+
+/** Média mis en avant tel qu'exposé par `_embed` sur `/wp/v2/posts`.
+ * `media_details.sizes` est fourni par WordPress pour toute image mise en
+ * avant classique ; absent uniquement pour un média externe/non standard —
+ * on retombe alors sur `source_url` (voir `pickThumbnail`). */
+export type WordPressFeaturedMedia = {
+  source_url: string;
+  media_details?: { sizes?: Record<string, { source_url: string }> };
+};
+// Table des entités HTML nommées les plus courantes dans le contenu WordPress
+// (ponctuation typographique française + quelques lettres accentuées passées
+// en entités par certains éditeurs). Les entités numériques (décimales et
+// hexadécimales, y compris les emojis au-delà du plan de base) sont décodées
+// dynamiquement plus bas, sans avoir besoin d'être listées ici.
+const NAMED_HTML_ENTITIES: Record<string, string> = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
+  hellip: '…', mdash: '—', ndash: '–',
+  lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”',
+  laquo: '«', raquo: '»',
+  agrave: 'à', acirc: 'â', auml: 'ä',
+  eacute: 'é', egrave: 'è', ecirc: 'ê', euml: 'ë',
+  icirc: 'î', iuml: 'ï',
+  ocirc: 'ô', ouml: 'ö',
+  ugrave: 'ù', ucirc: 'û', uuml: 'ü',
+  ccedil: 'ç', ntilde: 'ñ',
+  Agrave: 'À', Eacute: 'É', Egrave: 'È', Ccedil: 'Ç',
+  oelig: 'œ', OElig: 'Œ', aelig: 'æ', AElig: 'Æ',
+  copy: '©', reg: '®', trade: '™',
+};
+
+/** Décode les entités HTML (numériques décimales/hexadécimales et nommées),
+ * y compris les emojis multi-code-points (ex. `&#9999;&#65039;` -> ✏️),
+ * pour éviter d'afficher des codes bruts dans l'app quand WordPress renvoie
+ * du contenu déjà « entity-encodé ». */
+const decodeHtmlEntities = (value: string): string =>
+  value.replace(/&(#x[0-9a-fA-F]+|#[0-9]+|[a-zA-Z][a-zA-Z0-9]*);/g, (match, entity: string) => {
+    if (entity[0] === '#') {
+      const isHex = entity[1] === 'x' || entity[1] === 'X';
+      const code = parseInt(entity.slice(isHex ? 2 : 1), isHex ? 16 : 10);
+      if (Number.isNaN(code) || code < 0 || code > 0x10ffff) return match;
+      try {
+        return String.fromCodePoint(code);
+      } catch {
+        return match;
+      }
+    }
+    return NAMED_HTML_ENTITIES[entity] ?? match;
+  });
+
+const stripHtml = (value: string) => decodeHtmlEntities(value.replace(/<[^>]*>/g, '')).trim();
+
+/** Choisit la meilleure miniature disponible pour une image mise en avant
+ * WordPress (taille `medium`, sinon `medium_large`, sinon l'image d'origine)
+ * — jamais la pleine résolution dans une liste/fiche compacte. */
+function pickThumbnail(media: WordPressFeaturedMedia | undefined): string | undefined {
+  if (!media) return undefined;
+  const sizes = media.media_details?.sizes;
+  return sizes?.medium?.source_url ?? sizes?.medium_large?.source_url ?? media.source_url;
+}
+
+export const toContentItem = (post: WordPressPost): ContentItem => {
+  const media = post._embedded?.['wp:featuredmedia']?.[0];
+  return {
+    id: post.id,
+    title: stripHtml(post.title.rendered),
+    excerpt: stripHtml(post.excerpt.rendered),
+    content: post.content ? stripHtml(post.content.rendered) : undefined,
+    type: 'news',
+    url: post.link,
+    publishedAt: post.date,
+    imageUrl: media?.source_url,
+    thumbnailUrl: pickThumbnail(media),
+  };
+};
 export type CollectionResult = { items: ContentItem[]; fromCache: boolean; stale: boolean };
 const CACHE_TTL = 15 * 60 * 1000;
-async function getPosts(query: string, cacheKey: string): Promise<CollectionResult> { try { const posts = await getJson<WordPressPost[]>(`/posts?${query}&_embed`); const items = posts.map(toContentItem); await writeCache(cacheKey, items); return { items, fromCache: false, stale: false }; } catch (error) { const cached = await readCache<ContentItem[]>(cacheKey, CACHE_TTL); if (cached) return { items: cached.value, fromCache: true, stale: cached.stale }; throw error; } }
+async function getPosts(query: string, cacheKey: string): Promise<CollectionResult> {
+  const result = await withCacheFallback(cacheKey, CACHE_TTL, async () => {
+    const posts = await getJson<WordPressPost[]>(`/posts?${query}&_embed`);
+    return posts.map(toContentItem);
+  });
+  return { items: result.value, fromCache: result.fromCache, stale: result.stale };
+}
 export async function getFeaturedContent(): Promise<CollectionResult> { return getPosts('per_page=6', 'home:featured'); }
 export async function searchContent(term: string, page = 1): Promise<CollectionResult> { const clean = term.trim(); if (!clean) return { items: [], fromCache: false, stale: false }; return getPosts(`per_page=12&page=${page}&search=${encodeURIComponent(clean)}`, `search:${clean}:${page}`); }
 export async function getContentDetail(id: number): Promise<ContentItem> { const result = await getPosts(`include=${id}&per_page=1`, `detail:${id}`); const item = result.items[0]; if (!item) throw new Error('Contenu introuvable.'); return item; }
@@ -30,7 +117,7 @@ const KNOWN_LIEU_TYPES: ContentType[] = ['tourism', 'heritage', 'gastronomy', 'p
 
 function toLieuContentItem(raw: RawLieuContentItem): ContentItem {
   const type = (KNOWN_LIEU_TYPES as string[]).includes(raw.type) ? (raw.type as ContentType) : 'news';
-  return { id: raw.id, title: raw.title, excerpt: raw.excerpt ?? undefined, imageUrl: raw.image?.url, type, url: raw.permalink, tags: raw.category ? [raw.category.name] : undefined };
+  return { id: raw.id, title: raw.title, excerpt: raw.excerpt ?? undefined, imageUrl: raw.image?.url, thumbnailUrl: raw.image?.thumb, type, url: raw.permalink, tags: raw.category ? [raw.category.name] : undefined };
 }
 
 /**
@@ -40,17 +127,11 @@ function toLieuContentItem(raw: RawLieuContentItem): ContentItem {
  * rattaché — jamais de contenu associé inventé.
  */
 export async function getLieuContent(lieuId: number): Promise<CollectionResult> {
-  const cacheKey = `lieu-content:${lieuId}`;
-  try {
+  const result = await withCacheFallback(`lieu-content:${lieuId}`, CACHE_TTL, async () => {
     const raw = await getJson<{ items: RawLieuContentItem[] }>(`/lieu/${lieuId}/contenus`, undefined, env.geoApiBaseUrl);
-    const items = raw.items.map(toLieuContentItem);
-    await writeCache(cacheKey, items);
-    return { items, fromCache: false, stale: false };
-  } catch (error) {
-    const cached = await readCache<ContentItem[]>(cacheKey, CACHE_TTL);
-    if (cached) return { items: cached.value, fromCache: true, stale: cached.stale };
-    throw error;
-  }
+    return raw.items.map(toLieuContentItem);
+  });
+  return { items: result.value, fromCache: result.fromCache, stale: result.stale };
 }
 
 /**
@@ -115,18 +196,19 @@ export async function getCategoryContent(type: ContentType, opts: { page?: numbe
   const page = opts.page ?? 1;
   const search = opts.q?.trim();
   const query = `categories=${categoryIds.join(',')}&per_page=${CATEGORY_PAGE_SIZE}&page=${page}${search ? `&search=${encodeURIComponent(search)}` : ''}`;
-  const cacheKey = `category:${type}:${page}:${search ?? ''}`;
 
-  try {
+  const fetchPage = async () => {
     const posts = await getJson<WordPressPost[]>(`/posts?${query}&_embed`);
-    const items = posts.map((post) => toTypedContentItem(post, type));
-    if (page === 1) await writeCache(cacheKey, items);
-    return { items, fromCache: false, stale: false, hasMore: posts.length === CATEGORY_PAGE_SIZE };
-  } catch (error) {
-    if (page === 1) {
-      const cached = await readCache<ContentItem[]>(cacheKey, CACHE_TTL);
-      if (cached) return { items: cached.value, fromCache: true, stale: cached.stale, hasMore: false };
-    }
-    throw error;
+    return posts.map((post) => toTypedContentItem(post, type));
+  };
+
+  // Seule la première page est mise en cache (comportement inchangé) : une
+  // page suivante est un "charger plus" explicite, jamais servie périmée.
+  if (page !== 1) {
+    const items = await fetchPage();
+    return { items, fromCache: false, stale: false, hasMore: items.length === CATEGORY_PAGE_SIZE };
   }
+
+  const result = await withCacheFallback(`category:${type}:1:${search ?? ''}`, CACHE_TTL, fetchPage);
+  return { items: result.value, fromCache: result.fromCache, stale: result.stale, hasMore: result.fromCache ? false : result.value.length === CATEGORY_PAGE_SIZE };
 }

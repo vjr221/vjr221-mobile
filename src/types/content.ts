@@ -25,6 +25,8 @@ export interface ContentItem {
   excerpt?: string;
   content?: string;
   imageUrl?: string;
+  /** Variante allégée de `imageUrl` (miniature WordPress ou champ `.thumb` des API géo/annuaire), à préférer dans les listes/fiches ; retombe sur `imageUrl` quand aucune variante réduite n'existe. Ne jamais utiliser pour un hero plein écran. */
+  thumbnailUrl?: string;
   type: ContentType;
   url?: string;
   publishedAt?: string;

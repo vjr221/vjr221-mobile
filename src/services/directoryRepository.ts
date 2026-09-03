@@ -1,6 +1,6 @@
 import { env } from '../config/env';
 import { getJson } from './http';
-import { readCache, writeCache } from './cache';
+import { withCacheFallback } from './cache';
 import type { ContentItem } from '../types/content';
 
 const CACHE_TTL = 15 * 60 * 1000;
@@ -59,6 +59,7 @@ function toContentItem(raw: RawDirectoryItem): ContentItem {
     title: raw.title,
     excerpt: raw.excerpt ?? undefined,
     imageUrl: raw.image?.url,
+    thumbnailUrl: raw.image?.thumb,
     type: 'directory',
     url: raw.permalink,
     tags: raw.category ? [raw.category.name] : undefined,
@@ -81,16 +82,11 @@ function toContentItemDetail(raw: RawDirectoryDetail): ContentItem {
 }
 
 export async function getDirectoryCategories(): Promise<DirectoryCategory[]> {
-  const cacheKey = 'directory:categories';
-  try {
+  const result = await withCacheFallback('directory:categories', CACHE_TTL, async () => {
     const raw = await getJson<{ items: DirectoryCategory[] }>('/annuaire/categories', undefined, env.geoApiBaseUrl);
-    await writeCache(cacheKey, raw.items);
     return raw.items;
-  } catch (error) {
-    const cached = await readCache<DirectoryCategory[]>(cacheKey, CACHE_TTL);
-    if (cached) return cached.value;
-    throw error;
-  }
+  });
+  return result.value;
 }
 
 export interface DirectoryListResult {
@@ -110,38 +106,16 @@ export async function getDirectoryEntries(options: { categorie?: string; q?: str
   const path = `/annuaire${query ? `?${query}` : ''}`;
   const cacheKey = `directory:list:${options.categorie ?? ''}:${options.q ?? ''}:${options.page ?? 1}`;
 
-  try {
-    const raw = await getJson<RawList>(path, undefined, env.geoApiBaseUrl);
-    await writeCache(cacheKey, raw);
-    return {
-      items: raw.items.map(toContentItem),
-      meta: { page: raw.meta.page, perPage: raw.meta.per_page, total: raw.meta.total, totalPages: raw.meta.total_pages },
-      fromCache: false,
-      stale: false,
-    };
-  } catch (error) {
-    const cached = await readCache<RawList>(cacheKey, CACHE_TTL);
-    if (cached) {
-      return {
-        items: cached.value.items.map(toContentItem),
-        meta: { page: cached.value.meta.page, perPage: cached.value.meta.per_page, total: cached.value.meta.total, totalPages: cached.value.meta.total_pages },
-        fromCache: true,
-        stale: cached.stale,
-      };
-    }
-    throw error;
-  }
+  const result = await withCacheFallback(cacheKey, CACHE_TTL, () => getJson<RawList>(path, undefined, env.geoApiBaseUrl));
+  return {
+    items: result.value.items.map(toContentItem),
+    meta: { page: result.value.meta.page, perPage: result.value.meta.per_page, total: result.value.meta.total, totalPages: result.value.meta.total_pages },
+    fromCache: result.fromCache,
+    stale: result.stale,
+  };
 }
 
 export async function getDirectoryEntry(id: number): Promise<ContentItem> {
-  const cacheKey = `directory:entry:${id}`;
-  try {
-    const raw = await getJson<RawDirectoryDetail>(`/annuaire/${id}`, undefined, env.geoApiBaseUrl);
-    await writeCache(cacheKey, raw);
-    return toContentItemDetail(raw);
-  } catch (error) {
-    const cached = await readCache<RawDirectoryDetail>(cacheKey, CACHE_TTL);
-    if (cached) return toContentItemDetail(cached.value);
-    throw error;
-  }
+  const result = await withCacheFallback(`directory:entry:${id}`, CACHE_TTL, () => getJson<RawDirectoryDetail>(`/annuaire/${id}`, undefined, env.geoApiBaseUrl));
+  return toContentItemDetail(result.value);
 }

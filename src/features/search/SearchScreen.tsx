@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, RefreshControl, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
 import { Icon } from '../../components/icons/Icon';
@@ -8,6 +8,7 @@ import type { ContentItem } from '../../types/content';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { useI18n } from '../../i18n/I18nProvider';
+import { useLatestRequest } from '../../hooks/useLatestRequest';
 
 /** Recherche moderne et visuelle : champ en évidence, résultats en fiches, jamais une liste texte brute. */
 export function SearchScreen({ onOpen }: { onOpen: (item: ContentItem) => void }) {
@@ -18,14 +19,23 @@ export function SearchScreen({ onOpen }: { onOpen: (item: ContentItem) => void }
   const [items, setItems] = useState<ContentItem[]>([]);
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
   const [cached, setCached] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+  const { start, isCurrent } = useLatestRequest();
 
-  const load = useCallback((query = term) => {
+  const load = useCallback((query = term, opts: { silent?: boolean } = {}) => {
     if (!query.trim()) return;
-    setState('loading');
+    const id = start();
+    if (!opts.silent) setState('loading');
     searchContent(query)
-      .then((result) => { setItems(result.items); setCached(result.fromCache); setState('idle'); })
-      .catch(() => setState('error'));
-  }, [term]);
+      .then((result) => {
+        if (!isCurrent(id)) return;
+        setItems(result.items);
+        setCached(result.fromCache);
+        setState('idle');
+      })
+      .catch(() => { if (isCurrent(id)) setState('error'); })
+      .finally(() => { if (isCurrent(id)) setRefreshing(false); });
+  }, [term, start, isCurrent]);
 
   useEffect(() => {
     if (!term.trim()) return;
@@ -33,8 +43,18 @@ export function SearchScreen({ onOpen }: { onOpen: (item: ContentItem) => void }
     return () => clearTimeout(timer);
   }, [term, load]);
 
+  const onRefresh = useCallback(() => {
+    if (!term.trim()) return;
+    setRefreshing(true);
+    load(term, { silent: true });
+  }, [load, term]);
+
   return (
-    <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
+    <ScrollView
+      contentContainerStyle={styles.content}
+      keyboardShouldPersistTaps="handled"
+      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}
+    >
       <Text style={styles.title}>{t('search')}</Text>
       {cached ? (
         <View style={styles.offline}>
@@ -55,7 +75,7 @@ export function SearchScreen({ onOpen }: { onOpen: (item: ContentItem) => void }
           onSubmitEditing={() => load()}
         />
         {term ? (
-          <Pressable accessibilityRole="button" hitSlop={8} onPress={() => setTerm('')}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}>
             <Icon name="close" size={16} color={colors.inkSoft} />
           </Pressable>
         ) : null}
