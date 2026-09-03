@@ -9,6 +9,7 @@ import { I18nProvider } from './src/i18n/I18nProvider';
 import { FavoritesProvider } from './src/stores/FavoritesProvider';
 import { ThemeProvider, useBrandFonts, useTheme } from './src/theme/ThemeProvider';
 import { getThemePreference, setThemePreference, type ThemePreference } from './src/services/themePreference';
+import { initSentry } from './src/services/sentry';
 import { ThemePreferenceContext } from './src/theme/ThemePreferenceContext';
 
 // Garde l'écran de démarrage natif affiché tant que les polices de marque ne
@@ -16,6 +17,10 @@ import { ThemePreferenceContext } from './src/theme/ThemePreferenceContext';
 // le premier rendu JS, exposant un bref flash (fond neutre système / police
 // de repli) avant que l'écran "vrai" fond de marque + polices ne s'affiche.
 SplashScreen.preventAutoHideAsync().catch(() => {});
+
+// Le plus tôt possible : capte aussi les exceptions qui surviennent avant le
+// premier rendu (providers, imports statiques).
+initSentry();
 
 export default function App() {
   const [preference, setPreference] = useState<ThemePreference>('system');
