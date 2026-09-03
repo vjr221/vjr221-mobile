@@ -10,8 +10,10 @@ import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { useI18n } from '../../i18n/I18nProvider';
 import { useLatestRequest } from '../../hooks/useLatestRequest';
 
-/** Recherche moderne et visuelle : champ en évidence, résultats en fiches, jamais une liste texte brute. */
-export function SearchScreen({ onOpen }: { onOpen: (item: ContentItem) => void }) {
+type DetailContext = { items: ContentItem[]; index: number };
+type OpenContent = (item: ContentItem, context?: DetailContext) => void;
+
+export function SearchScreen({ onOpen }: { onOpen: OpenContent }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -50,42 +52,18 @@ export function SearchScreen({ onOpen }: { onOpen: (item: ContentItem) => void }
   }, [load, term]);
 
   return (
-    <ScrollView
-      contentContainerStyle={styles.content}
-      keyboardShouldPersistTaps="handled"
-      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}
-    >
+    <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled" refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}>
       <Text style={styles.title}>{t('search')}</Text>
-      {cached ? (
-        <View style={styles.offline}>
-          <Text style={styles.offlineText}>{t('offline')}</Text>
-        </View>
-      ) : null}
+      {cached ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}
       <View style={styles.inputWrap}>
         <Icon name="search" size={18} color={colors.inkSoft} />
-        <TextInput
-          accessibilityLabel={t('search')}
-          value={term}
-          onChangeText={setTerm}
-          placeholder={t('searchPlaceholder')}
-          placeholderTextColor={colors.inkSoft}
-          style={styles.input}
-          autoCapitalize="none"
-          returnKeyType="search"
-          onSubmitEditing={() => load()}
-        />
-        {term ? (
-          <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}>
-            <Icon name="close" size={16} color={colors.inkSoft} />
-          </Pressable>
-        ) : null}
+        <TextInput accessibilityLabel={t('search')} value={term} onChangeText={setTerm} placeholder={t('searchPlaceholder')} placeholderTextColor={colors.inkSoft} style={styles.input} autoCapitalize="none" returnKeyType="search" onSubmitEditing={() => load()} />
+        {term ? <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}><Icon name="close" size={16} color={colors.inkSoft} /></Pressable> : null}
       </View>
       {state === 'loading' ? <LoadingState /> : null}
       {state === 'error' ? <ErrorState onRetry={() => load()} /> : null}
       {state === 'idle' && term && !items.length ? <EmptyState message={t('noResults')} /> : null}
-      {items.map((item) => (
-        <ContentCard key={item.id} item={item} onPress={onOpen} />
-      ))}
+      {items.map((item, index) => <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={() => onOpen(item, { items, index })} />)}
     </ScrollView>
   );
 }
