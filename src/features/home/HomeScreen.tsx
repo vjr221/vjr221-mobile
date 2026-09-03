@@ -11,15 +11,18 @@ import { useI18n } from '../../i18n/I18nProvider';
 import { getFeaturedContent } from '../../services/contentRepository';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
-import type { ContentItem } from '../../types/content';
+import type { ContentItem, ContentType } from '../../types/content';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus';
 
 /**
  * Accueil = vitrine de VJR 221. Hero éditorial (dégradé savane), accès direct
  * à la recherche, grille de territoires/univers, puis le fil de contenus
  * récents — jamais un simple flux plat consommant l'API.
+ *
+ * `onExplore` accepte un univers optionnel : toucher une tuile ("Tourisme"…)
+ * ouvre directement cet univers dans Explorer plutôt que son menu générique.
  */
-export function HomeScreen({ onOpen, onSearch, onExplore }: { onOpen: (item: ContentItem) => void; onSearch: () => void; onExplore: () => void }) {
+export function HomeScreen({ onOpen, onSearch, onExplore }: { onOpen: (item: ContentItem) => void; onSearch: () => void; onExplore: (collection?: ContentType) => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -58,18 +61,18 @@ export function HomeScreen({ onOpen, onSearch, onExplore }: { onOpen: (item: Con
           </View>
         </Pressable>
 
-        <Pressable accessibilityRole="button" onPress={onExplore} style={({ pressed }) => [styles.cta, pressed && styles.ctaPressed]}>
+        <Pressable accessibilityRole="button" onPress={() => onExplore()} style={({ pressed }) => [styles.cta, pressed && styles.ctaPressed]}>
           <Text style={styles.ctaText}>{t('discover')}</Text>
           <Icon name="chevronRight" size={15} color={colors.savane} />
         </Pressable>
       </LinearGradient>
 
-      <SectionHeader onSeeAll={onExplore} seeAllLabel={t('explore')}>{t('categories')}</SectionHeader>
+      <SectionHeader onSeeAll={() => onExplore()} seeAllLabel={t('explore')}>{t('categories')}</SectionHeader>
       <View style={styles.grid}>
         {categories.slice(0, 8).map((category) => (
           <Pressable
             key={category.id}
-            onPress={onExplore}
+            onPress={() => onExplore(category.id)}
             style={({ pressed }) => [styles.category, pressed && styles.categoryPressed]}
           >
             <View style={styles.categoryIconWrap}>

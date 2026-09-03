@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { HomeScreen } from '../features/home/HomeScreen';
 import { ContentDetailScreen } from '../features/home/ContentDetailScreen';
 import { ExploreScreen } from '../features/explore/ExploreScreen';
@@ -28,7 +29,8 @@ export function AppNavigator() {
   const { locale, setLocale, t } = useI18n();
   const { items } = useFavorites();
   const { colors, shadow } = useTheme();
-  const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
+  const insets = useSafeAreaInsets();
+  const styles = useMemo(() => makeStyles(colors, shadow, insets.bottom), [colors, shadow, insets.bottom]);
   const [tab, setTab] = useState<Tab>('home');
   const [detail, setDetail] = useState<ContentItem | null>(null);
   const [exploreSeed, setExploreSeed] = useState<ExploreSeed>({ collection: null });
@@ -98,7 +100,7 @@ export function AppNavigator() {
 
   const screen =
     tab === 'home' ? (
-      <HomeScreen onOpen={open} onSearch={() => setTab('search')} onExplore={() => goToExplore({ collection: null })} />
+      <HomeScreen onOpen={open} onSearch={() => setTab('search')} onExplore={(collection) => goToExplore({ collection: collection ?? null })} />
     ) : tab === 'explore' ? (
       <ExploreScreen
         key={exploreSeedVersion}
@@ -139,12 +141,18 @@ export function AppNavigator() {
   );
 }
 
-function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow']) {
+function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow'], insetBottom: number) {
   return StyleSheet.create({
     root: { flex: 1, backgroundColor: colors.bg },
     tabBarWrap: { backgroundColor: colors.surface, borderTopLeftRadius: 22, borderTopRightRadius: 22, ...shadow('floating') },
-    tabs: { flexDirection: 'row', paddingTop: 10, paddingBottom: 12, paddingHorizontal: spacing.xs },
-    tab: { flex: 1, alignItems: 'center', gap: 3 },
+    // paddingBottom inclut l'inset de sécurité de l'appareil (geste Android /
+    // home indicator iOS) : sans lui, les boutons collés au bord bas de
+    // l'écran tombent parfois dans la zone que le système réserve à son
+    // propre geste et le tap n'atteint jamais l'app. On agrandit la barre
+    // plutôt que de décaler les icônes, pour rester visuellement identique
+    // sur les appareils qui n'ont pas cette zone (barre de nav 3 boutons).
+    tabs: { flexDirection: 'row', paddingTop: 10, paddingBottom: 12 + insetBottom, paddingHorizontal: spacing.xs },
+    tab: { flex: 1, alignItems: 'center', gap: 3, minHeight: 44 },
     tabIconWrap: { width: 40, height: 30, borderRadius: 15, alignItems: 'center', justifyContent: 'center' },
     tabIconWrapActive: { backgroundColor: colors.surfaceSoft },
     tabText: { fontSize: 10.5, color: colors.inkSoft, fontFamily: fonts.bodyMedium },

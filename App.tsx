@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { AppNavigator } from './src/app/AppNavigator';
 import { I18nProvider } from './src/i18n/I18nProvider';
 import { FavoritesProvider } from './src/stores/FavoritesProvider';
@@ -21,11 +22,13 @@ export default function App() {
   };
 
   return (
-    <ThemePreferenceContext.Provider value={{ preference, setPreference: updatePreference }}>
-      <ThemeProvider forcedScheme={preference === 'system' ? undefined : preference}>
-        <AppShell />
-      </ThemeProvider>
-    </ThemePreferenceContext.Provider>
+    <SafeAreaProvider>
+      <ThemePreferenceContext.Provider value={{ preference, setPreference: updatePreference }}>
+        <ThemeProvider forcedScheme={preference === 'system' ? undefined : preference}>
+          <AppShell />
+        </ThemeProvider>
+      </ThemePreferenceContext.Provider>
+    </SafeAreaProvider>
   );
 }
 
@@ -42,7 +45,11 @@ function AppShell() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    // Bord bas exclu ici : AppNavigator gère lui-même l'inset bas (voir
+    // useSafeAreaInsets dans son tabBarWrap) pour que la barre d'onglets
+    // reste visuellement pleine jusqu'au bord de l'écran, tout en gardant
+    // ses boutons au-dessus de la zone de geste système / barre Android.
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <I18nProvider>
         <FavoritesProvider>
