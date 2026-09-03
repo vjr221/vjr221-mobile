@@ -2,10 +2,17 @@ name: Mobile CI
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - mobile/phase6-integration
   pull_request:
 
 permissions:
   contents: read
+
+concurrency:
+  group: mobile-ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   quality:
@@ -54,6 +61,6 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           p = Path('.ci-artifacts/VJR221.apk')
-          print(f'APK ready: {p} ({p.stat().st_size} bytes)')
+          print(f"APK ready: {p} ({p.stat().st_size} bytes)")
           PY
           echo "Artifact upload is intentionally handled by the runner after this step."
