@@ -14,35 +14,14 @@ import type { ContentItem, ContentType } from '../../types/content';
 import type { TranslationKey } from '../../i18n/strings';
 
 type LoadState = 'loading' | 'ready' | 'error';
+type DetailContext = { items: ContentItem[]; index: number };
+type OpenContent = (item: ContentItem, context?: DetailContext) => void;
 
-/**
- * Écran générique pour un univers éditorial national (Tourisme, Patrimoine,
- * Gastronomie, Histoire, Nature, Culture, Événements, Personnalités,
- * Actualités) : une seule implémentation pour ces rubriques plutôt que des
- * écrans quasi identiques, chacune filtrée sur ses vraies catégories
- * WordPress (voir contentRepository.CATEGORY_TAXONOMY) — jamais une liste
- * fabriquée. Recherche, pagination « Charger plus », états
- * loading/error/empty/offline explicites : même grammaire que GeoExplorer et
- * SearchScreen.
- */
-export function CategoryContentScreen({
-  type,
-  titleKey,
-  introKey,
-  onOpen,
-  onExit,
-}: {
-  type: ContentType;
-  titleKey: TranslationKey;
-  introKey: TranslationKey;
-  onOpen: (item: ContentItem) => void;
-  onExit: () => void;
-}) {
+export function CategoryContentScreen({ type: contentType, titleKey, introKey, onOpen, onExit }: { type: ContentType; titleKey: TranslationKey; introKey: TranslationKey; onOpen: OpenContent; onExit: () => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const online = useOnlineStatus();
-
   const [term, setTerm] = useState('');
   const [items, setItems] = useState<ContentItem[]>([]);
   const [page, setPage] = useState(1);
@@ -53,95 +32,43 @@ export function CategoryContentScreen({
   const [refreshing, setRefreshing] = useState(false);
   const { start, isCurrent } = useLatestRequest();
 
-  const load = useCallback(
-    (q: string, opts: { silent?: boolean } = {}) => {
-      const id = start();
-      if (!opts.silent) setState('loading');
-      setPage(1);
-      getCategoryContent(type, { q: q || undefined, page: 1 })
-        .then((result) => {
-          if (!isCurrent(id)) return;
-          setItems(result.items);
-          setHasMore(result.hasMore);
-          setCached(result.fromCache);
-          setState('ready');
-        })
-        .catch(() => { if (isCurrent(id)) setState('error'); })
-        .finally(() => { if (isCurrent(id)) setRefreshing(false); });
-    },
-    [type, start, isCurrent]
-  );
+  const load = useCallback((q: string, opts: { silent?: boolean } = {}) => {
+    const id = start();
+    if (!opts.silent) setState('loading');
+    setPage(1);
+    getCategoryContent(contentType, { q: q || undefined, page: 1 }).then((result) => {
+      if (!isCurrent(id)) return;
+      setItems(result.items); setHasMore(result.hasMore); setCached(result.fromCache); setState('ready');
+    }).catch(() => { if (isCurrent(id)) setState('error'); }).finally(() => { if (isCurrent(id)) setRefreshing(false); });
+  }, [contentType, start, isCurrent]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => load(term), term ? 350 : 0);
-    return () => clearTimeout(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [term, type]);
-
-  const onRefresh = useCallback(() => {
-    setRefreshing(true);
-    load(term, { silent: true });
-  }, [load, term]);
-
+  useEffect(() => { const timer = setTimeout(() => load(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, contentType]);
+  const onRefresh = useCallback(() => { setRefreshing(true); load(term, { silent: true }); }, [load, term]);
   const loadMore = () => {
     if (loadingMore || !hasMore) return;
     const nextPage = page + 1;
     setLoadingMore(true);
-    getCategoryContent(type, { q: term || undefined, page: nextPage })
-      .then((result) => {
-        setItems((current) => [...current, ...result.items]);
-        setHasMore(result.hasMore);
-        setPage(nextPage);
-      })
-      .catch(() => {})
-      .finally(() => setLoadingMore(false));
+    getCategoryContent(contentType, { q: term || undefined, page: nextPage }).then((result) => {
+      setItems((current) => [...current, ...result.items]); setHasMore(result.hasMore); setPage(nextPage);
+    }).catch(() => {}).finally(() => setLoadingMore(false));
   };
 
   return (
-    <ScrollView
-      contentContainerStyle={styles.content}
-      showsVerticalScrollIndicator={false}
-      keyboardShouldPersistTaps="handled"
-      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}
-    >
-      <Pressable accessibilityRole="button" onPress={onExit} style={styles.backRow}>
-        <Icon name="chevronLeft" size={16} color={colors.terreStrong} />
-        <Text style={styles.backText}>{t('back')}</Text>
-      </Pressable>
+    <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled" refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}>
+      <Pressable accessibilityRole="button" onPress={onExit} style={styles.backRow}><Icon name="chevronLeft" size={16} color={colors.terreStrong} /><Text style={styles.backText}>{t('back')}</Text></Pressable>
       <Text style={styles.title}>{t(titleKey)}</Text>
       <Text style={styles.intro}>{t(introKey)}</Text>
-      {!online || cached ? (
-        <View style={styles.offline}>
-          <Text style={styles.offlineText}>{t('offline')}</Text>
-        </View>
-      ) : null}
+      {!online || cached ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}
       <View style={styles.inputWrap}>
         <Icon name="search" size={16} color={colors.inkSoft} />
-        <TextInput
-          value={term}
-          onChangeText={setTerm}
-          placeholder={t('searchPlaceholder')}
-          placeholderTextColor={colors.inkSoft}
-          style={styles.input}
-          autoCapitalize="none"
-        />
-        {term ? (
-          <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}>
-            <Icon name="close" size={16} color={colors.inkSoft} />
-          </Pressable>
-        ) : null}
+        <TextInput value={term} onChangeText={setTerm} placeholder={t('searchPlaceholder')} placeholderTextColor={colors.inkSoft} style={styles.input} autoCapitalize="none" />
+        {term ? <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}><Icon name="close" size={16} color={colors.inkSoft} /></Pressable> : null}
       </View>
       {state === 'loading' ? <LoadingState /> : null}
       {state === 'error' ? <ErrorState onRetry={() => load(term)} /> : null}
       {state === 'ready' && !items.length ? <EmptyState message={term ? t('noResults') : t('categoryEmpty')} /> : null}
-      {items.map((item) => (
-        <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={onOpen} />
-      ))}
-      {state === 'ready' && hasMore ? (
-        <Button variant="secondary" size="sm" onPress={loadMore} loading={loadingMore} style={styles.loadMoreBtn}>
-          {t('loadMore')}
-        </Button>
-      ) : null}
+      {items.map((item, index) => <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={() => onOpen(item, { items, index })} />)}
+      {state === 'ready' && hasMore ? <Button variant="secondary" size="sm" onPress={loadMore} loading={loadingMore} style={styles.loadMoreBtn}>{t('loadMore')}</Button> : null}
     </ScrollView>
   );
 }
