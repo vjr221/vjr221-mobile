@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { BackHandler, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
 import { Icon } from '../../components/icons/Icon';
 import { GeoDetailCard } from './GeoDetailCard';
 import { GeoListRow } from './GeoListRow';
 import { useI18n } from '../../i18n/I18nProvider';
+import { useLatestRequest } from '../../hooks/useLatestRequest';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
@@ -46,7 +47,27 @@ export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: ()
   const top = stack[stack.length - 1];
 
   const push = (view: GeoView) => setStack((current) => [...current, view]);
-  const back = () => (stack.length > 1 ? setStack((current) => current.slice(0, -1)) : onExit());
+  const back = useCallback(() => {
+    setStack((current) => {
+      if (current.length > 1) return current.slice(0, -1);
+      onExit();
+      return current;
+    });
+  }, [onExit]);
+
+  // ---- Bouton retour matériel Android : la pile région → département →
+  // commune → village est purement locale à ce composant (aucune librairie de
+  // routing), donc sans ce gestionnaire le bouton retour système ignore cette
+  // pile et saute directement à l'onglet Accueil (géré par AppNavigator) au
+  // lieu de remonter d'un niveau géographique à la fois, ou de sortir proprement
+  // vers le sélecteur de collection (même comportement que le bouton "Retour" affiché).
+  useEffect(() => {
+    const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
+      back();
+      return true;
+    });
+    return () => subscription.remove();
+  }, [back]);
 
   const Screen = {
     regions: <RegionsListScreen onOpen={(id) => push({ kind: 'region', id })} />,
@@ -80,13 +101,15 @@ function RegionsListScreen({ onOpen }: { onOpen: (id: number) => void }) {
   const [items, setItems] = useState<Region[]>([]);
   const [state, setState] = useState<LoadState>('loading');
   const [cached, setCached] = useState(false);
+  const { start, isCurrent } = useLatestRequest();
 
   const load = useCallback((q: string) => {
+    const id = start();
     setState('loading');
     getRegions({ q: q || undefined })
-      .then((result) => { setItems(result.items); setCached(result.fromCache); setState('ready'); })
-      .catch(() => setState('error'));
-  }, []);
+      .then((result) => { if (isCurrent(id)) { setItems(result.items); setCached(result.fromCache); setState('ready'); } })
+      .catch(() => { if (isCurrent(id)) setState('error'); });
+  }, [start, isCurrent]);
 
   useEffect(() => { const timer = setTimeout(() => load(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, load]);
 
@@ -127,11 +150,15 @@ function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onO
   const [term, setTerm] = useState('');
   const [items, setItems] = useState<Department[]>([]);
   const [listState, setListState] = useState<LoadState>('loading');
+  const { start, isCurrent } = useLatestRequest();
 
   const loadDepartments = useCallback((q: string) => {
+    const reqId = start();
     setListState('loading');
-    getDepartments({ regionId: id, q: q || undefined }).then((result) => { setItems(result.items); setListState('ready'); }).catch(() => setListState('error'));
-  }, [id]);
+    getDepartments({ regionId: id, q: q || undefined })
+      .then((result) => { if (isCurrent(reqId)) { setItems(result.items); setListState('ready'); } })
+      .catch(() => { if (isCurrent(reqId)) setListState('error'); });
+  }, [id, start, isCurrent]);
 
   useEffect(() => { const timer = setTimeout(() => loadDepartments(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, loadDepartments]);
 
@@ -175,11 +202,15 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
   const [term, setTerm] = useState('');
   const [items, setItems] = useState<Commune[]>([]);
   const [listState, setListState] = useState<LoadState>('loading');
+  const { start, isCurrent } = useLatestRequest();
 
   const loadCommunes = useCallback((q: string) => {
+    const reqId = start();
     setListState('loading');
-    getCommunes({ departmentId: id, q: q || undefined }).then((result) => { setItems(result.items); setListState('ready'); }).catch(() => setListState('error'));
-  }, [id]);
+    getCommunes({ departmentId: id, q: q || undefined })
+      .then((result) => { if (isCurrent(reqId)) { setItems(result.items); setListState('ready'); } })
+      .catch(() => { if (isCurrent(reqId)) setListState('error'); });
+  }, [id, start, isCurrent]);
 
   useEffect(() => { const timer = setTimeout(() => loadCommunes(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, loadCommunes]);
 
@@ -223,11 +254,15 @@ function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpe
   const [term, setTerm] = useState('');
   const [items, setItems] = useState<Village[]>([]);
   const [listState, setListState] = useState<LoadState>('loading');
+  const { start, isCurrent } = useLatestRequest();
 
   const loadVillages = useCallback((q: string) => {
+    const reqId = start();
     setListState('loading');
-    getVillages({ communeId: id, q: q || undefined }).then((result) => { setItems(result.items); setListState('ready'); }).catch(() => setListState('error'));
-  }, [id]);
+    getVillages({ communeId: id, q: q || undefined })
+      .then((result) => { if (isCurrent(reqId)) { setItems(result.items); setListState('ready'); } })
+      .catch(() => { if (isCurrent(reqId)) setListState('error'); });
+  }, [id, start, isCurrent]);
 
   useEffect(() => { const timer = setTimeout(() => loadVillages(term), term ? 350 : 0); return () => clearTimeout(timer); }, [term, loadVillages]);
 

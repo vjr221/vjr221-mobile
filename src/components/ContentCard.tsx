@@ -1,5 +1,6 @@
-import { useMemo } from 'react';
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { memo, useMemo } from 'react';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Image } from 'expo-image';
 import type { ContentItem, ContentType } from '../types/content';
 import { useTheme } from '../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../theme/tokens';
@@ -25,9 +26,9 @@ const KICKER_TONE: Partial<Record<ContentType, BadgeTone>> = {
 /**
  * Fiche encyclopédique premium : image pleine largeur, kicker en badge,
  * titre éditorial, extrait. Sans image, garde une bande de couleur sobre
- * plutôt qu'un vide — jamais de placeholder générique bruyant.
+ * plutôt qu'un vide — jamais un placeholder générique bruyant.
  */
-export function ContentCard({ item, onPress, size = 'default' }: { item: ContentItem; onPress: (item: ContentItem) => void; size?: 'default' | 'compact' }) {
+export const ContentCard = memo(function ContentCard({ item, onPress, size = 'default' }: { item: ContentItem; onPress: (item: ContentItem) => void; size?: 'default' | 'compact' }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -35,11 +36,21 @@ export function ContentCard({ item, onPress, size = 'default' }: { item: Content
   const kicker = kickerKey ? t(kickerKey).toUpperCase() : item.type.toUpperCase();
   const tone = KICKER_TONE[item.type] ?? 'neutral';
   const compact = size === 'compact';
+  // Miniature dans la liste (légère) ; l'image pleine résolution est réservée
+  // au hero de ContentDetailScreen — jamais chargée ici.
+  const thumbnail = item.thumbnailUrl ?? item.imageUrl;
 
   return (
     <Pressable accessibilityRole="button" accessibilityLabel={item.title} onPress={() => onPress(item)} style={({ pressed }) => [styles.card, pressed && styles.pressed]}>
-      {item.imageUrl ? (
-        <Image accessibilityIgnoresInvertColors source={{ uri: item.imageUrl }} style={[styles.image, compact && styles.imageCompact]} />
+      {thumbnail ? (
+        <Image
+          accessibilityIgnoresInvertColors
+          source={{ uri: thumbnail }}
+          style={[styles.image, compact && styles.imageCompact]}
+          contentFit="cover"
+          cachePolicy="memory-disk"
+          transition={200}
+        />
       ) : (
         <View style={[styles.imageFallback, compact && styles.imageCompact]}>
           <Icon name="image" size={26} color={colors.line} />
@@ -52,7 +63,7 @@ export function ContentCard({ item, onPress, size = 'default' }: { item: Content
       </View>
     </Pressable>
   );
-}
+});
 
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({

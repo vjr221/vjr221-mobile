@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { TranslationKey } from '../../i18n/strings';
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, RefreshControl, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
@@ -30,18 +30,29 @@ export function HomeScreen({ onOpen, onSearch, onExplore }: { onOpen: (item: Con
   const [items, setItems] = useState<ContentItem[]>([]);
   const [state, setState] = useState<'loading' | 'ready' | 'error'>('loading');
   const [cached, setCached] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
-  const load = useCallback(() => {
-    setState('loading');
+  const load = useCallback((opts: { silent?: boolean } = {}) => {
+    if (!opts.silent) setState('loading');
     getFeaturedContent()
       .then((result) => { setItems(result.items); setCached(result.fromCache); setState('ready'); })
-      .catch(() => setState('error'));
+      .catch(() => setState('error'))
+      .finally(() => setRefreshing(false));
   }, []);
 
-  useEffect(() => { const timer = setTimeout(load, 0); return () => clearTimeout(timer); }, [load]);
+  useEffect(() => { const timer = setTimeout(() => load(), 0); return () => clearTimeout(timer); }, [load]);
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    load({ silent: true });
+  }, [load]);
 
   return (
-    <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+    <ScrollView
+      contentContainerStyle={styles.content}
+      showsVerticalScrollIndicator={false}
+      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}
+    >
       {(!online || cached) ? (
         <View style={styles.offline}>
           <Text style={styles.offlineText}>{t('offline')}</Text>
@@ -72,6 +83,8 @@ export function HomeScreen({ onOpen, onSearch, onExplore }: { onOpen: (item: Con
         {categories.slice(0, 8).map((category) => (
           <Pressable
             key={category.id}
+            accessibilityRole="button"
+            accessibilityLabel={t(category.labelKey as TranslationKey)}
             onPress={() => onExplore(category.id)}
             style={({ pressed }) => [styles.category, pressed && styles.categoryPressed]}
           >

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Svg, { Path, Circle, Line, Polyline, Rect } from 'react-native-svg';
 
 /**
@@ -34,14 +35,14 @@ export type IconName =
   | 'moon'
   | 'settings';
 
-export function Icon({ name, size = 22, color = 'currentColor', strokeWidth = 1.7 }: { name: IconName; size?: number; color: string; strokeWidth?: number }) {
+export const Icon = memo(function Icon({ name, size = 22, color, strokeWidth = 1.7 }: { name: IconName; size?: number; color: string; strokeWidth?: number }) {
   const common = { fill: 'none', stroke: color, strokeWidth, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
       {renderPaths(name, common)}
     </Svg>
   );
-}
+});
 
 function renderPaths(name: IconName, common: { fill: string; stroke: string; strokeWidth: number; strokeLinecap: 'round'; strokeLinejoin: 'round' }) {
   switch (name) {

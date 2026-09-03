@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { fonts, radii, spacing } from '../theme/tokens';
@@ -11,7 +11,7 @@ export type BadgeTone = 'savane' | 'terre' | 'safran' | 'neutral' | 'outline';
  * la teinte en fond légèrement transparent avec le texte dans la teinte pleine,
  * jamais en aplat saturé sur toute la surface.
  */
-export function Badge({ children, tone = 'neutral', style }: { children: string; tone?: BadgeTone; style?: object }) {
+export const Badge = memo(function Badge({ children, tone = 'neutral', style }: { children: string; tone?: BadgeTone; style?: object }) {
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const toneStyle = styles[tone];
@@ -20,7 +20,7 @@ export function Badge({ children, tone = 'neutral', style }: { children: string;
       <Text style={[styles.text, toneStyle.text]} numberOfLines={1}>{children}</Text>
     </View>
   );
-}
+});
 
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   const tint = (hex: string, alpha: number) => hexToRgba(hex, alpha);
@@ -31,7 +31,7 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   const tones: Record<BadgeTone, { wrap: object; text: object }> = {
     savane: { wrap: { backgroundColor: tint(colors.savane, colors.scheme === 'dark' ? 0.32 : 0.1) }, text: { color: colors.scheme === 'dark' ? colors.onSavane : colors.savane2 } },
     terre: { wrap: { backgroundColor: tint(colors.terre, colors.scheme === 'dark' ? 0.28 : 0.13) }, text: { color: colors.terreStrong } },
-    safran: { wrap: { backgroundColor: tint(colors.safran, colors.scheme === 'dark' ? 0.24 : 0.16) }, text: { color: colors.scheme === 'dark' ? colors.safran : '#8A6111' } },
+    safran: { wrap: { backgroundColor: tint(colors.safran, colors.scheme === 'dark' ? 0.24 : 0.16) }, text: { color: colors.safranText } },
     neutral: { wrap: { backgroundColor: colors.surfaceSoft }, text: { color: colors.inkSoft } },
     outline: { wrap: { backgroundColor: 'transparent', borderWidth: 1, borderColor: colors.line }, text: { color: colors.inkSoft } },
   };

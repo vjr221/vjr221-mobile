@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, RefreshControl, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
 import { Button } from '../../components/Button';
 import { Icon } from '../../components/icons/Icon';
 import { useI18n } from '../../i18n/I18nProvider';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus';
+import { useLatestRequest } from '../../hooks/useLatestRequest';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { getCategoryContent } from '../../services/contentRepository';
@@ -49,21 +50,26 @@ export function CategoryContentScreen({
   const [state, setState] = useState<LoadState>('loading');
   const [loadingMore, setLoadingMore] = useState(false);
   const [cached, setCached] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+  const { start, isCurrent } = useLatestRequest();
 
   const load = useCallback(
-    (q: string) => {
-      setState('loading');
+    (q: string, opts: { silent?: boolean } = {}) => {
+      const id = start();
+      if (!opts.silent) setState('loading');
       setPage(1);
       getCategoryContent(type, { q: q || undefined, page: 1 })
         .then((result) => {
+          if (!isCurrent(id)) return;
           setItems(result.items);
           setHasMore(result.hasMore);
           setCached(result.fromCache);
           setState('ready');
         })
-        .catch(() => setState('error'));
+        .catch(() => { if (isCurrent(id)) setState('error'); })
+        .finally(() => { if (isCurrent(id)) setRefreshing(false); });
     },
-    [type]
+    [type, start, isCurrent]
   );
 
   useEffect(() => {
@@ -71,6 +77,11 @@ export function CategoryContentScreen({
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [term, type]);
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    load(term, { silent: true });
+  }, [load, term]);
 
   const loadMore = () => {
     if (loadingMore || !hasMore) return;
@@ -87,7 +98,12 @@ export function CategoryContentScreen({
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled">
+    <ScrollView
+      contentContainerStyle={styles.content}
+      showsVerticalScrollIndicator={false}
+      keyboardShouldPersistTaps="handled"
+      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}
+    >
       <Pressable accessibilityRole="button" onPress={onExit} style={styles.backRow}>
         <Icon name="chevronLeft" size={16} color={colors.terreStrong} />
         <Text style={styles.backText}>{t('back')}</Text>
@@ -110,7 +126,7 @@ export function CategoryContentScreen({
           autoCapitalize="none"
         />
         {term ? (
-          <Pressable accessibilityRole="button" hitSlop={8} onPress={() => setTerm('')}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}>
             <Icon name="close" size={16} color={colors.inkSoft} />
           </Pressable>
         ) : null}
@@ -133,7 +149,7 @@ export function CategoryContentScreen({
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
     content: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg },
-    backRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginBottom: spacing.sm, alignSelf: 'flex-start' },
+    backRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginBottom: spacing.sm, alignSelf: 'flex-start', minHeight: 44 },
     backText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 14 },
     title: { color: colors.ink, fontSize: type.display - 8, fontFamily: fonts.displayBold },
     intro: { color: colors.inkSoft, marginTop: 4, marginBottom: spacing.md, fontFamily: fonts.body, fontSize: type.body, lineHeight: 20 },

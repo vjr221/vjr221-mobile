@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { Image } from 'expo-image';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { Badge } from '../../components/Badge';
@@ -36,7 +37,7 @@ export function GeoDetailCard({
   return (
     <View style={styles.card}>
       {image ? (
-        <Image accessibilityIgnoresInvertColors source={{ uri: image.thumb }} style={styles.image} />
+        <Image accessibilityIgnoresInvertColors source={{ uri: image.thumb }} style={styles.image} contentFit="cover" cachePolicy="memory-disk" transition={200} />
       ) : (
         <View style={styles.imageFallback}>
           <Icon name="territoires" size={30} color={colors.line} />
