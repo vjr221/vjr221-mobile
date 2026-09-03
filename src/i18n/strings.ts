@@ -99,6 +99,7 @@ export const strings = {
     darkModeSystem: 'Automatique (système)',
     darkModeLight: 'Clair',
     darkModeDark: 'Sombre',
+    close: 'Fermer',
   },
   wo: {
     home: 'Kër gi',
@@ -196,6 +197,7 @@ export const strings = {
     darkModeSystem: 'Otomatik (sistem)',
     darkModeLight: 'Set',
     darkModeDark: 'Lëndëm',
+    close: 'Tëj',
   },
 } as const;
 

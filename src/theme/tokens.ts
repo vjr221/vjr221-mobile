@@ -68,6 +68,8 @@ export interface Palette {
   onSavane: string;
   onSavaneSoft: string;
   white: string;
+  /** Texte du badge « safran » : plus foncé que `safran` en clair pour le contraste sur fond teinté, la teinte pleine en sombre. */
+  safranText: string;
   /** Composantes RGB (sans alpha) utilisées pour les ombres teintées. */
   shadowRgb: string;
 }
@@ -90,6 +92,7 @@ export const lightPalette: Palette = {
   onSavane: '#F4E9D6',
   onSavaneSoft: 'rgba(244,233,214,.78)',
   white: '#FFFFFF',
+  safranText: '#8A6111',
   shadowRgb: '18,51,34',
 };
 
@@ -112,6 +115,7 @@ export const darkPalette: Palette = {
   onSavane: '#F1ECDC',
   onSavaneSoft: 'rgba(241,236,220,.78)',
   white: '#FFFFFF',
+  safranText: '#F0C25E',
   shadowRgb: '0,0,0',
 };
 

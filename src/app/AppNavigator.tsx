@@ -1,5 +1,5 @@
-import { useCallback, useMemo, useState } from 'react';
-import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
+import { memo, useCallback, useEffect, useMemo, useState } from 'react';
+import { BackHandler, Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { HomeScreen } from '../features/home/HomeScreen';
 import { ContentDetailScreen } from '../features/home/ContentDetailScreen';
@@ -22,21 +22,20 @@ import { useDeepLinkRouter } from '../hooks/useDeepLinkRouter';
 type Tab = 'home' | 'explore' | 'search' | 'favorites' | 'more';
 
 const TAB_ICON: Record<Tab, IconName> = { home: 'home', explore: 'compass', search: 'search', favorites: 'heart', more: 'more' };
+const TABS: Tab[] = ['home', 'explore', 'search', 'favorites', 'more'];
 
 type ExploreSeed = { collection: ContentType | null; geoView?: GeoView; directoryCategory?: string };
 
 export function AppNavigator() {
-  const { locale, setLocale, t } = useI18n();
-  const { items } = useFavorites();
-  const { colors, shadow } = useTheme();
-  const insets = useSafeAreaInsets();
-  const styles = useMemo(() => makeStyles(colors, shadow, insets.bottom), [colors, shadow, insets.bottom]);
+  const { locale, setLocale } = useI18n();
+  const styles = useMemo(() => makeStyles(), []);
   const [tab, setTab] = useState<Tab>('home');
   const [detail, setDetail] = useState<ContentItem | null>(null);
   const [exploreSeed, setExploreSeed] = useState<ExploreSeed>({ collection: null });
   const [exploreSeedVersion, setExploreSeedVersion] = useState(0);
 
   const open = (item: ContentItem) => setDetail(item);
+  const closeDetail = useCallback(() => setDetail(null), []);
 
   const goToExplore = (seed: ExploreSeed) => {
     setDetail(null);
@@ -44,6 +43,28 @@ export function AppNavigator() {
     setExploreSeedVersion((v) => v + 1);
     setTab('explore');
   };
+
+  // ---- Bouton retour matériel Android (et geste retour) : sans ce gestionnaire,
+  // la navigation par onglets "maison" (pas de librairie de routing) n'a aucune
+  // notion de pile, et le comportement par défaut du système est de QUITTER
+  // L'APP -- que l'on soit sur la fiche d'un contenu ou sur n'importe quel
+  // onglet autre que Accueil. On adopte la convention standard des apps à
+  // onglets : retour ferme d'abord la fiche ouverte, puis ramène à l'onglet
+  // Accueil, et seulement alors laisse le système gérer (quitter l'app).
+  useEffect(() => {
+    const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (detail) {
+        closeDetail();
+        return true;
+      }
+      if (tab !== 'home') {
+        setTab('home');
+        return true;
+      }
+      return false;
+    });
+    return () => subscription.remove();
+  }, [detail, tab, closeDetail]);
 
   // ---- Deep links : une URL vjr221.sn/... ou vjr221://... ouvre directement
   // la bonne destination dans l'app ; si elle n'est pas reconnue, fallback web.
@@ -96,7 +117,7 @@ export function AppNavigator() {
 
   useDeepLinkRouter(handleDestination);
 
-  if (detail) return <ContentDetailScreen item={detail} onBack={() => setDetail(null)} />;
+  if (detail) return <ContentDetailScreen item={detail} onBack={closeDetail} />;
 
   const screen =
     tab === 'home' ? (
@@ -112,38 +133,61 @@ export function AppNavigator() {
     ) : tab === 'search' ? (
       <SearchScreen onOpen={open} />
     ) : tab === 'favorites' ? (
-      <FavoritesScreen items={items} onOpen={open} />
+      <FavoritesScreen onOpen={open} />
     ) : (
       <MoreScreen locale={locale} onLocale={setLocale} />
     );
 
-  const tabs: Tab[] = ['home', 'explore', 'search', 'favorites', 'more'];
-
   return (
     <View style={styles.root}>
       {screen}
-      <View accessibilityRole="tablist" style={styles.tabBarWrap}>
-        <View style={styles.tabs}>
-          {tabs.map((key) => {
-            const active = tab === key;
-            return (
-              <Pressable accessibilityRole="tab" accessibilityState={{ selected: active }} accessibilityLabel={t(key)} key={key} onPress={() => setTab(key)} style={styles.tab}>
-                <View style={[styles.tabIconWrap, active && styles.tabIconWrapActive]}>
-                  <Icon name={key === 'favorites' && items.length > 0 && active ? 'heartFilled' : TAB_ICON[key]} size={20} color={active ? colors.terreStrong : colors.inkSoft} />
-                </View>
-                <Text style={[styles.tabText, active && styles.tabTextActive]}>{t(key)}</Text>
-              </Pressable>
-            );
-          })}
-        </View>
-      </View>
+      <TabBar tab={tab} onChange={setTab} />
     </View>
   );
 }
 
-function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow'], insetBottom: number) {
+/**
+ * Barre d'onglets isolée dans son propre composant mémoïsé : elle est la
+ * SEULE partie de l'app qui lit `useFavorites()` au niveau racine (pour son
+ * badge « cœur plein »). En gardant cette lecture hors du corps d'AppNavigator,
+ * ajouter/retirer un favori ne re-rend plus tout l'écran actif (Accueil,
+ * Explorer...) à chaque appui sur "Favori" -- seule la barre elle-même se
+ * met à jour.
+ */
+const TabBar = memo(function TabBar({ tab, onChange }: { tab: Tab; onChange: (tab: Tab) => void }) {
+  const { t } = useI18n();
+  const { items } = useFavorites();
+  const { colors, shadow } = useTheme();
+  const insets = useSafeAreaInsets();
+  const styles = useMemo(() => makeTabBarStyles(colors, shadow, insets.bottom), [colors, shadow, insets.bottom]);
+
+  return (
+    <View accessibilityRole="tablist" style={styles.tabBarWrap}>
+      <View style={styles.tabs}>
+        {TABS.map((key) => {
+          const active = tab === key;
+          return (
+            <Pressable accessibilityRole="tab" accessibilityState={{ selected: active }} accessibilityLabel={t(key)} key={key} onPress={() => onChange(key)} style={styles.tab}>
+              <View style={[styles.tabIconWrap, active && styles.tabIconWrapActive]}>
+                <Icon name={key === 'favorites' && items.length > 0 && active ? 'heartFilled' : TAB_ICON[key]} size={20} color={active ? colors.terreStrong : colors.inkSoft} />
+              </View>
+              <Text style={[styles.tabText, active && styles.tabTextActive]}>{t(key)}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+    </View>
+  );
+});
+
+function makeStyles() {
   return StyleSheet.create({
-    root: { flex: 1, backgroundColor: colors.bg },
+    root: { flex: 1 },
+  });
+}
+
+function makeTabBarStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow'], insetBottom: number) {
+  return StyleSheet.create({
     tabBarWrap: { backgroundColor: colors.surface, borderTopLeftRadius: 22, borderTopRightRadius: 22, ...shadow('floating') },
     // paddingBottom inclut l'inset de sécurité de l'appareil (geste Android /
     // home indicator iOS) : sans lui, les boutons collés au bord bas de

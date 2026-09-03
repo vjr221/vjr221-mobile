@@ -1,10 +1,12 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { FlatList, Pressable, RefreshControl, StyleSheet, Text, TextInput, View } from 'react-native';
+import * as Haptics from 'expo-haptics';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
 import { Icon } from '../../components/icons/Icon';
 import { useI18n } from '../../i18n/I18nProvider';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus';
+import { useLatestRequest } from '../../hooks/useLatestRequest';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { getDirectoryCategories, getDirectoryEntries, getDirectoryEntry, type DirectoryCategory } from '../../services/directoryRepository';
@@ -29,7 +31,8 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
   const [items, setItems] = useState<ContentItem[]>([]);
   const [state, setState] = useState<LoadState>('loading');
   const [cached, setCached] = useState(false);
-  const requestId = useRef(0);
+  const [refreshing, setRefreshing] = useState(false);
+  const { start, isCurrent } = useLatestRequest();
 
   useEffect(() => {
     let mounted = true;
@@ -39,26 +42,34 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
     return () => { mounted = false; };
   }, []);
 
-  const load = useCallback((categorie: string | undefined, q: string) => {
-    const id = ++requestId.current;
-    setState('loading');
+  const load = useCallback((categorie: string | undefined, q: string, opts: { silent?: boolean } = {}) => {
+    const id = start();
+    if (!opts.silent) setState('loading');
     getDirectoryEntries({ categorie, q: q || undefined, perPage: 30 })
       .then((result) => {
-        if (id !== requestId.current) return;
+        if (!isCurrent(id)) return;
         setItems(result.items);
         setCached(result.fromCache);
         setState('ready');
       })
-      .catch(() => {
-        if (id !== requestId.current) return;
-        setState('error');
-      });
-  }, []);
+      .catch(() => { if (isCurrent(id)) setState('error'); })
+      .finally(() => { if (isCurrent(id)) setRefreshing(false); });
+  }, [start, isCurrent]);
 
   useEffect(() => {
     const timer = setTimeout(() => load(activeCategory, term), term ? 350 : 0);
     return () => clearTimeout(timer);
   }, [activeCategory, term, load]);
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    load(activeCategory, term, { silent: true });
+  }, [load, activeCategory, term]);
+
+  const selectCategory = (slug: string | undefined) => {
+    Haptics.selectionAsync().catch(() => {});
+    setActiveCategory(slug);
+  };
 
   const openEntry = (item: ContentItem) => {
     getDirectoryEntry(item.id).then(onOpen).catch(() => onOpen(item));
@@ -84,8 +95,8 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
               accessibilityRole="button"
               accessibilityState={{ selected: activeCategory === item.slug }}
               accessibilityLabel={item.name}
-              hitSlop={8}
-              onPress={() => setActiveCategory(item.slug)}
+              hitSlop={12}
+              onPress={() => selectCategory(item.slug)}
               style={[styles.chip, activeCategory === item.slug && styles.chipActive]}
             >
               <Text style={[styles.chipText, activeCategory === item.slug && styles.chipTextActive]}>{item.name}</Text>
@@ -98,6 +109,7 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
         keyExtractor={(item) => String(item.id)}
         contentContainerStyle={styles.list}
         renderItem={({ item }) => <ContentCard item={item} onPress={openEntry} />}
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}
         ListEmptyComponent={
           state === 'loading' ? <LoadingState /> :
           state === 'error' ? <ErrorState onRetry={() => load(activeCategory, term)} /> :

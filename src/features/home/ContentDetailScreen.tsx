@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
-import { Image, Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image } from 'expo-image';
+import * as Haptics from 'expo-haptics';
 import { useFavorites } from '../../stores/FavoritesProvider';
 import type { ContentItem } from '../../types/content';
 import { useTheme } from '../../theme/ThemeProvider';
@@ -24,8 +26,13 @@ export function ContentDetailScreen({ item, onBack }: { item: ContentItem; onBac
   const share = () => shareFiche({ title: item.title, summary: item.excerpt, url: item.url ?? item.title });
   const call = () => practical?.phone && Linking.openURL(`tel:${practical.phone.replace(/\s+/g, '')}`);
   const email = () => practical?.email && Linking.openURL(`mailto:${practical.email}`);
+  const toggleSaved = () => {
+    Haptics.impactAsync(saved ? Haptics.ImpactFeedbackStyle.Light : Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
+    toggle(item);
+  };
 
-  const practicalRows: { icon: 'phone' | 'pin' | 'clock' | 'mail'; label: TranslationKeyLabel; value: string; onPress?: () => void }[] = [];
+  // `label` est le texte déjà traduit (sortie de `t(...)`), pas une clé : `string` est le bon type ici.
+  const practicalRows: { icon: 'phone' | 'pin' | 'clock' | 'mail'; label: string; value: string; onPress?: () => void }[] = [];
   if (practical?.phone) practicalRows.push({ icon: 'phone', label: t('call'), value: practical.phone, onPress: call });
   if (practical?.address) practicalRows.push({ icon: 'pin', label: t('location'), value: practical.address });
   if (practical?.hours) practicalRows.push({ icon: 'clock', label: t('hours'), value: practical.hours });
@@ -34,7 +41,7 @@ export function ContentDetailScreen({ item, onBack }: { item: ContentItem; onBac
   return (
     <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
       {item.imageUrl ? (
-        <Image accessibilityIgnoresInvertColors source={{ uri: item.imageUrl }} style={styles.hero} />
+        <Image accessibilityIgnoresInvertColors source={{ uri: item.imageUrl }} style={styles.hero} contentFit="cover" cachePolicy="memory-disk" transition={200} />
       ) : (
         <View style={[styles.hero, styles.heroFallback]}>
           <Icon name="image" size={38} color={colors.line} />
@@ -52,7 +59,7 @@ export function ContentDetailScreen({ item, onBack }: { item: ContentItem; onBac
         {item.content || item.excerpt ? <Text style={styles.copy}>{item.content ?? item.excerpt}</Text> : null}
 
         <View style={styles.actions}>
-          <Button variant="primary" onPress={() => toggle(item)} style={styles.primaryAction}>
+          <Button variant="primary" onPress={toggleSaved} style={styles.primaryAction}>
             {saved ? t('saved') : t('save')}
           </Button>
           <Button variant="secondary" onPress={share}>
@@ -96,15 +103,13 @@ export function ContentDetailScreen({ item, onBack }: { item: ContentItem; onBac
   );
 }
 
-type TranslationKeyLabel = string;
-
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
     content: { paddingBottom: 60, backgroundColor: colors.bg },
     hero: { width: '100%', height: 260, backgroundColor: colors.surfaceSoft },
     heroFallback: { alignItems: 'center', justifyContent: 'center' },
     body: { padding: spacing.md },
-    backRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginVertical: spacing.md, alignSelf: 'flex-start' },
+    backRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginVertical: spacing.md, alignSelf: 'flex-start', minHeight: 44 },
     back: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 14 },
     title: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.sm, lineHeight: 36 },
     copy: { color: colors.ink, lineHeight: 26, fontSize: type.bodyLg, marginTop: spacing.lg, fontFamily: fonts.body },

@@ -28,18 +28,32 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
       <Text style={styles.intro}>{t('moreIntro')}</Text>
 
       <Text style={styles.sectionTitle}>{t('language')}</Text>
-      <View style={styles.segment}>
+      <View accessibilityRole="radiogroup" style={styles.segment}>
         {(['fr', 'wo'] as const).map((value) => (
-          <Pressable key={value} onPress={() => onLocale(value)} style={[styles.segmentOption, locale === value && styles.segmentOptionActive]}>
+          <Pressable
+            key={value}
+            accessibilityRole="radio"
+            accessibilityState={{ selected: locale === value }}
+            accessibilityLabel={value === 'fr' ? t('french') : t('wolof')}
+            onPress={() => onLocale(value)}
+            style={[styles.segmentOption, locale === value && styles.segmentOptionActive]}
+          >
             <Text style={[styles.segmentText, locale === value && styles.segmentTextActive]}>{value === 'fr' ? t('french') : t('wolof')}</Text>
           </Pressable>
         ))}
       </View>
 
       <Text style={styles.sectionTitle}>{t('darkMode')}</Text>
-      <View style={styles.optionList}>
+      <View accessibilityRole="radiogroup" style={styles.optionList}>
         {themeOptions.map((option, index) => (
-          <Pressable key={option.value} onPress={() => setPreference(option.value)} style={[styles.option, preference === option.value && styles.optionActive, index === themeOptions.length - 1 && styles.optionLast]}>
+          <Pressable
+            key={option.value}
+            accessibilityRole="radio"
+            accessibilityState={{ selected: preference === option.value }}
+            accessibilityLabel={option.label}
+            onPress={() => setPreference(option.value)}
+            style={[styles.option, preference === option.value && styles.optionActive, index === themeOptions.length - 1 && styles.optionLast]}
+          >
             <Icon name={option.icon} size={17} color={preference === option.value ? colors.terreStrong : colors.inkSoft} />
             <Text style={[styles.optionText, preference === option.value && styles.optionTextActive]}>{option.label}</Text>
             {preference === option.value ? <Icon name="check" size={16} color={colors.terreStrong} /> : null}

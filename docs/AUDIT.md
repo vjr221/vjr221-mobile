@@ -79,10 +79,14 @@ docs/API.md).
 
 - TypeScript strict : 0 erreur.
 - ESLint (`eslint-config-expo` + `react-hooks`) : 0 erreur, 0 warning.
-- 52 tests Jest, tous verts (mappers, cache, deep links, retry réseau,
-  fusion de favoris, notifications, cartographie).
-- CI (`.github/workflows/ci.yml`) : typecheck + lint + test + build de
-  vérification Android — inchangée, toujours valide.
+- 45 tests Jest, tous verts (mappers/décodage HTML, cache, deep links,
+  fusion de favoris, cartographie).
+- CI (`.github/workflows/mobile-ci.yml`) : typecheck + lint + test + build de
+  vérification Android, installation via `npm install` (`package-lock.json`
+  intentionnellement non committé à chaque changement de dépendance — voir
+  historique Git — donc `npm ci`, strict sur la synchronisation exacte du
+  lockfile, resterait fragile ici). L'ancien `ci.yml` dupliqué est désactivé
+  (déclencheurs retirés) — à supprimer manuellement sur GitHub.
 - Aucun secret dans Git (vérifié : `.env.example` ne contient que des URLs
   publiques).
 

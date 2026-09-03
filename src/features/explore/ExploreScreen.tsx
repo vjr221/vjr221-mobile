@@ -65,6 +65,9 @@ export function ExploreScreen({
         {categories.map((category) => (
           <Pressable
             key={category.id}
+            accessibilityRole="button"
+            accessibilityLabel={t(category.labelKey)}
+            accessibilityState={{ disabled: !category.available }}
             disabled={!category.available}
             onPress={() => category.available && setOpenCollection(category.id)}
             style={({ pressed }) => [styles.tile, !category.available && styles.unavailable, pressed && category.available && styles.tilePressed]}

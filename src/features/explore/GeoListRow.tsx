@@ -1,11 +1,11 @@
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { Icon } from '../../components/icons/Icon';
 
 /** Ligne compacte réutilisable pour région / département / commune / village. */
-export function GeoListRow({ title, subtitle, onPress }: { title: string; subtitle?: string | null; onPress: () => void }) {
+export const GeoListRow = memo(function GeoListRow({ title, subtitle, onPress }: { title: string; subtitle?: string | null; onPress: () => void }) {
   const { colors, shadow } = useTheme();
   const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
   return (
@@ -17,7 +17,7 @@ export function GeoListRow({ title, subtitle, onPress }: { title: string; subtit
       <Icon name="chevronRight" size={18} color={colors.inkSoft} />
     </Pressable>
   );
-}
+});
 
 function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow']) {
   return StyleSheet.create({

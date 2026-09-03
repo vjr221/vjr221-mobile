@@ -3,14 +3,16 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { Icon } from '../../components/icons/Icon';
 import { useI18n } from '../../i18n/I18nProvider';
+import { useFavorites } from '../../stores/FavoritesProvider';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import type { ContentItem } from '../../types/content';
 
 /** Favoris = expérience soignée : mêmes fiches que partout dans l'app, jamais une liste texte à part. */
-export function FavoritesScreen({ items, onOpen }: { items: ContentItem[]; onOpen: (item: ContentItem) => void }) {
+export function FavoritesScreen({ onOpen }: { onOpen: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
+  const { items } = useFavorites();
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
   return (
