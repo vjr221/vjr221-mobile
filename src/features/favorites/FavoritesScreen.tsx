@@ -8,8 +8,10 @@ import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import type { ContentItem } from '../../types/content';
 
-/** Favoris = expérience soignée : mêmes fiches que partout dans l'app, jamais une liste texte à part. */
-export function FavoritesScreen({ onOpen }: { onOpen: (item: ContentItem) => void }) {
+type DetailContext = { items: ContentItem[]; index: number };
+type OpenContent = (item: ContentItem, context?: DetailContext) => void;
+
+export function FavoritesScreen({ onOpen }: { onOpen: OpenContent }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const { items } = useFavorites();
@@ -20,12 +22,10 @@ export function FavoritesScreen({ onOpen }: { onOpen: (item: ContentItem) => voi
       <Text style={styles.pageTitle}>{t('favorites')}</Text>
       <Text style={styles.intro}>{t('favoritesIntro')}</Text>
       {items.length ? (
-        items.map((item) => <ContentCard key={item.id} item={item} onPress={onOpen} />)
+        items.map((item, index) => <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={() => onOpen(item, { items, index })} />)
       ) : (
         <View style={styles.empty}>
-          <View style={styles.emptyIcon}>
-            <Icon name="heart" size={24} color={colors.terreStrong} />
-          </View>
+          <View style={styles.emptyIcon}><Icon name="heart" size={24} color={colors.terreStrong} /></View>
           <Text style={styles.emptyText}>{t('favoritesEmpty')}</Text>
         </View>
       )}
