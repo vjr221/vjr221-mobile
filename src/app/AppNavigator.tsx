@@ -23,21 +23,38 @@ type Tab = 'home' | 'explore' | 'search' | 'favorites' | 'more';
 const TAB_ICON: Record<Tab, IconName> = { home: 'home', explore: 'compass', search: 'search', favorites: 'heart', more: 'more' };
 const TABS: Tab[] = ['home', 'explore', 'search', 'favorites', 'more'];
 type ExploreSeed = { collection: ContentType | null; geoView?: GeoView; directoryCategory?: string };
+export type DetailNavigationContext = { items: ContentItem[]; index: number };
+
+type OpenContent = (item: ContentItem, context?: DetailNavigationContext) => void;
 
 export function AppNavigator() {
   const { locale, setLocale } = useI18n();
   const styles = useMemo(() => makeStyles(), []);
   const [tab, setTab] = useState<Tab>('home');
   const [detailStack, setDetailStack] = useState<ContentItem[]>([]);
+  const [detailContext, setDetailContext] = useState<DetailNavigationContext | null>(null);
   const [exploreSeed, setExploreSeed] = useState<ExploreSeed>({ collection: null });
   const [exploreSeedVersion, setExploreSeedVersion] = useState(0);
 
   const detail = detailStack[detailStack.length - 1] ?? null;
-  const open = useCallback((item: ContentItem) => setDetailStack((stack) => stack.some((entry) => entry.id === item.id && entry.type === item.type) ? [...stack.slice(0, stack.findIndex((entry) => entry.id === item.id && entry.type === item.type) + 1)] : [...stack, item]), []);
-  const closeDetail = useCallback(() => setDetailStack((stack) => stack.slice(0, -1)), []);
+  const open: OpenContent = useCallback((item, context) => {
+    setDetailContext(context ?? null);
+    setDetailStack((stack) => stack.some((entry) => entry.id === item.id && entry.type === item.type)
+      ? [...stack.slice(0, stack.findIndex((entry) => entry.id === item.id && entry.type === item.type) + 1)]
+      : [...stack, item]);
+  }, []);
+  const closeDetail = useCallback(() => {
+    setDetailStack((stack) => stack.slice(0, -1));
+    setDetailContext(null);
+  }, []);
+  const navigateDetail = useCallback((item: ContentItem, context: DetailNavigationContext) => {
+    setDetailStack((stack) => stack.length ? [...stack.slice(0, -1), item] : [item]);
+    setDetailContext(context);
+  }, []);
 
   const goToExplore = useCallback((seed: ExploreSeed) => {
     setDetailStack([]);
+    setDetailContext(null);
     setExploreSeed(seed);
     setExploreSeedVersion((v) => v + 1);
     setTab('explore');
@@ -47,6 +64,7 @@ export function AppNavigator() {
     const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
       if (detailStack.length > 0) {
         setDetailStack((stack) => stack.slice(0, -1));
+        setDetailContext(null);
         return true;
       }
       if (tab !== 'home') {
@@ -61,30 +79,28 @@ export function AppNavigator() {
   const handleDestination = useCallback((destination: DeepLinkDestination) => {
     switch (destination.kind) {
       case 'content':
-        getContentDetail(destination.id).then((item) => setDetailStack([item])).catch(() => Linking.openURL(fallbackWebUrl(destination)));
+        getContentDetail(destination.id).then((item) => { setDetailContext(null); setDetailStack([item]); }).catch(() => Linking.openURL(fallbackWebUrl(destination)));
         return;
       case 'directory':
-        getDirectoryEntry(destination.id).then((item) => setDetailStack([item])).catch(() => Linking.openURL(fallbackWebUrl(destination)));
+        getDirectoryEntry(destination.id).then((item) => { setDetailContext(null); setDetailStack([item]); }).catch(() => Linking.openURL(fallbackWebUrl(destination)));
         return;
-      case 'directory-category':
-        goToExplore({ collection: 'directory', directoryCategory: destination.slug || undefined });
-        return;
+      case 'directory-category': goToExplore({ collection: 'directory', directoryCategory: destination.slug || undefined }); return;
       case 'region': goToExplore({ collection: 'regions', geoView: { kind: 'region', id: destination.id } }); return;
       case 'department': goToExplore({ collection: 'regions', geoView: { kind: 'department', id: destination.id } }); return;
       case 'commune': goToExplore({ collection: 'regions', geoView: { kind: 'commune', id: destination.id } }); return;
       case 'village': goToExplore({ collection: 'regions', geoView: { kind: 'village', id: destination.id } }); return;
       case 'category': goToExplore({ collection: null }); return;
       case 'permalink':
-        resolveContentBySlug(destination.slug).then((item) => (item ? setDetailStack([item]) : Linking.openURL(fallbackWebUrl(destination)))).catch(() => Linking.openURL(fallbackWebUrl(destination)));
+        resolveContentBySlug(destination.slug).then((item) => item ? (setDetailContext(null), setDetailStack([item])) : Linking.openURL(fallbackWebUrl(destination))).catch(() => Linking.openURL(fallbackWebUrl(destination)));
         return;
-      case 'home': setDetailStack([]); setTab('home'); return;
+      case 'home': setDetailStack([]); setDetailContext(null); setTab('home'); return;
       case 'unknown': default: Linking.openURL(fallbackWebUrl(destination)).catch(() => {});
     }
   }, [goToExplore]);
 
   useDeepLinkRouter(handleDestination);
 
-  if (detail) return <ContentDetailScreen item={detail} onBack={closeDetail} onOpen={open} />;
+  if (detail) return <ContentDetailScreen item={detail} onBack={closeDetail} onOpen={open} navigationContext={detailContext ?? undefined} onNavigate={navigateDetail} />;
 
   const screen =
     tab === 'home' ? <HomeScreen onOpen={open} onSearch={() => setTab('search')} onExplore={(collection) => goToExplore({ collection: collection ?? null })} /> :
