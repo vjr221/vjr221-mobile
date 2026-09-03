@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { AccountScreen } from '../account/AccountScreen';
 import { NotificationPreferencesScreen } from '../account/NotificationPreferencesScreen';
 import { Icon } from '../../components/icons/Icon';
@@ -9,7 +9,17 @@ import { useThemePreference } from '../../theme/ThemePreferenceContext';
 import type { ThemePreference } from '../../services/themePreference';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 
-/** Écran Plus : langue, apparence, notifications, compte — sections nettes, jamais un formulaire administratif. */
+const SITE_URL = 'https://vjr221.sn';
+const SITE_ACTIONS = [
+  { key: 'directory', label: 'Annuaire national', path: '/annuaire/' },
+  { key: 'establishment', label: 'Référencer mon établissement', path: '/ajouter-un-etablissement-a-l-annuaire/' },
+  { key: 'content', label: 'Proposer un contenu', path: '/proposer-un-contenu/' },
+  { key: 'pricing', label: 'Tarifs & offres', path: '/tarifs-annuaire/' },
+  { key: 'about', label: 'À propos de VJR 221', path: '/a-propos/' },
+  { key: 'contact', label: 'Contacter VJR 221', path: '/contact/' },
+] as const;
+
+/** Écran Plus : réglages et accès direct aux fonctionnalités déjà disponibles sur vjr221.sn. */
 export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale: (locale: 'fr' | 'wo') => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
@@ -22,6 +32,8 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
     { value: 'dark', label: t('darkModeDark'), icon: 'moon' },
   ];
 
+  const openSiteAction = (path: string) => Linking.openURL(`${SITE_URL}${path}`).catch(() => {});
+
   return (
     <ScrollView contentContainerStyle={styles.page}>
       <Text style={styles.pageTitle}>{t('more')}</Text>
@@ -30,14 +42,7 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
       <Text style={styles.sectionTitle}>{t('language')}</Text>
       <View accessibilityRole="radiogroup" style={styles.segment}>
         {(['fr', 'wo'] as const).map((value) => (
-          <Pressable
-            key={value}
-            accessibilityRole="radio"
-            accessibilityState={{ selected: locale === value }}
-            accessibilityLabel={value === 'fr' ? t('french') : t('wolof')}
-            onPress={() => onLocale(value)}
-            style={[styles.segmentOption, locale === value && styles.segmentOptionActive]}
-          >
+          <Pressable key={value} accessibilityRole="radio" accessibilityState={{ selected: locale === value }} accessibilityLabel={value === 'fr' ? t('french') : t('wolof')} onPress={() => onLocale(value)} style={[styles.segmentOption, locale === value && styles.segmentOptionActive]}>
             <Text style={[styles.segmentText, locale === value && styles.segmentTextActive]}>{value === 'fr' ? t('french') : t('wolof')}</Text>
           </Pressable>
         ))}
@@ -46,17 +51,26 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
       <Text style={styles.sectionTitle}>{t('darkMode')}</Text>
       <View accessibilityRole="radiogroup" style={styles.optionList}>
         {themeOptions.map((option, index) => (
-          <Pressable
-            key={option.value}
-            accessibilityRole="radio"
-            accessibilityState={{ selected: preference === option.value }}
-            accessibilityLabel={option.label}
-            onPress={() => setPreference(option.value)}
-            style={[styles.option, preference === option.value && styles.optionActive, index === themeOptions.length - 1 && styles.optionLast]}
-          >
+          <Pressable key={option.value} accessibilityRole="radio" accessibilityState={{ selected: preference === option.value }} accessibilityLabel={option.label} onPress={() => setPreference(option.value)} style={[styles.option, preference === option.value && styles.optionActive, index === themeOptions.length - 1 && styles.optionLast]}>
             <Icon name={option.icon} size={17} color={preference === option.value ? colors.terreStrong : colors.inkSoft} />
             <Text style={[styles.optionText, preference === option.value && styles.optionTextActive]}>{option.label}</Text>
             {preference === option.value ? <Icon name="check" size={16} color={colors.terreStrong} /> : null}
+          </Pressable>
+        ))}
+      </View>
+
+      <Text style={styles.sectionTitle}>VJR 221 sur le site</Text>
+      <View style={styles.siteActions}>
+        {SITE_ACTIONS.map((action, index) => (
+          <Pressable
+            key={action.key}
+            accessibilityRole="link"
+            accessibilityLabel={action.label}
+            onPress={() => openSiteAction(action.path)}
+            style={[styles.siteAction, index === SITE_ACTIONS.length - 1 && styles.optionLast]}
+          >
+            <View style={styles.siteIcon}><Icon name="chevronRight" size={16} color={colors.terreStrong} /></View>
+            <Text style={styles.siteActionText}>{action.label}</Text>
           </Pressable>
         ))}
       </View>
@@ -84,5 +98,9 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     optionActive: { backgroundColor: colors.surfaceSoft },
     optionText: { flex: 1, color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14 },
     optionTextActive: { fontFamily: fonts.bodySemiBold },
+    siteActions: { backgroundColor: colors.surface, borderRadius: radii.lg, overflow: 'hidden' },
+    siteAction: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, minHeight: 54, paddingHorizontal: spacing.md, borderBottomWidth: 1, borderBottomColor: colors.line },
+    siteIcon: { width: 30, height: 30, borderRadius: 15, backgroundColor: colors.surfaceSoft, alignItems: 'center', justifyContent: 'center' },
+    siteActionText: { flex: 1, color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14 },
   });
 }
