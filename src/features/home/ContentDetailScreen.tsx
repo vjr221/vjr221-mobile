@@ -13,9 +13,22 @@ import { LocationPreview } from '../../components/LocationPreview';
 import { Badge } from '../../components/Badge';
 import { Button } from '../../components/Button';
 import { Icon } from '../../components/icons/Icon';
+import type { DetailNavigationContext } from '../../app/AppNavigator';
 
-/** Fiche éditoriale premium avec navigation contextuelle et contenus associés réellement interactifs. */
-export function ContentDetailScreen({ item, onBack, onOpen }: { item: ContentItem; onBack: () => void; onOpen?: (item: ContentItem) => void }) {
+/** Fiche éditoriale premium : lecture, actions, navigation contextuelle et contenus associés. */
+export function ContentDetailScreen({
+  item,
+  onBack,
+  onOpen,
+  navigationContext,
+  onNavigate,
+}: {
+  item: ContentItem;
+  onBack: () => void;
+  onOpen?: (item: ContentItem) => void;
+  navigationContext?: DetailNavigationContext;
+  onNavigate?: (item: ContentItem, context: DetailNavigationContext) => void;
+}) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -24,9 +37,14 @@ export function ContentDetailScreen({ item, onBack, onOpen }: { item: ContentIte
   const { practical } = item;
   const coordinates = practical?.coordinates ? { lat: practical.coordinates.latitude, lng: practical.coordinates.longitude } : null;
   const saved = has(item.id);
+  const navIndex = navigationContext?.index ?? -1;
+  const navItems = navigationContext?.items ?? [];
+  const canPrevious = navIndex > 0;
+  const canNext = navIndex >= 0 && navIndex < navItems.length - 1;
 
   useEffect(() => {
     let active = true;
+    setRelated([]);
     getRelatedContent(item).then((items) => active && setRelated(items)).catch(() => active && setRelated([]));
     return () => { active = false; };
   }, [item.id, item.type]);
@@ -37,6 +55,14 @@ export function ContentDetailScreen({ item, onBack, onOpen }: { item: ContentIte
   const toggleSaved = () => {
     Haptics.impactAsync(saved ? Haptics.ImpactFeedbackStyle.Light : Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
     toggle(item);
+  };
+  const navigate = (offset: number) => {
+    const nextIndex = navIndex + offset;
+    const nextItem = navItems[nextIndex];
+    if (nextItem && onNavigate) {
+      Haptics.selectionAsync().catch(() => {});
+      onNavigate(nextItem, { items: navItems, index: nextIndex });
+    }
   };
 
   const practicalRows: { icon: 'phone' | 'pin' | 'clock' | 'mail'; label: string; value: string; onPress?: () => void }[] = [];
@@ -49,10 +75,11 @@ export function ContentDetailScreen({ item, onBack, onOpen }: { item: ContentIte
     <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
       <View style={styles.heroWrap}>
         {item.imageUrl ? (
-          <Image accessibilityIgnoresInvertColors source={{ uri: item.imageUrl }} style={styles.hero} contentFit="cover" cachePolicy="memory-disk" transition={200} />
+          <Image accessibilityIgnoresInvertColors source={{ uri: item.imageUrl }} style={styles.hero} contentFit="cover" cachePolicy="memory-disk" transition={220} />
         ) : (
           <View style={[styles.hero, styles.heroFallback]}><Icon name="image" size={38} color={colors.line} /></View>
         )}
+        <View style={styles.heroShade} pointerEvents="none" />
         <Pressable onPress={onBack} accessibilityRole="button" accessibilityLabel={t('back')} hitSlop={8} style={styles.heroBack}>
           <Icon name="chevronLeft" size={22} color={colors.ink} />
         </Pressable>
@@ -62,9 +89,24 @@ export function ContentDetailScreen({ item, onBack, onOpen }: { item: ContentIte
         <View style={styles.contextRow}>
           <Badge tone="terre">{item.type.toUpperCase()}</Badge>
         </View>
-        <Text style={styles.title}>{item.title}</Text>
-        {item.excerpt ? <Text style={styles.lead}>{item.excerpt}</Text> : null}
-        {item.content ? <Text style={styles.copy}>{item.content}</Text> : !item.excerpt ? null : null}
+        <Text selectable style={styles.title}>{item.title}</Text>
+        {item.excerpt ? <Text selectable style={styles.lead}>{item.excerpt}</Text> : null}
+
+        {navigationContext && navItems.length > 1 ? (
+          <View style={styles.navigationCard}>
+            <Pressable accessibilityRole="button" accessibilityState={{ disabled: !canPrevious }} disabled={!canPrevious} onPress={() => navigate(-1)} style={[styles.navButton, !canPrevious && styles.navDisabled]}>
+              <Icon name="chevronLeft" size={17} color={canPrevious ? colors.terreStrong : colors.inkSoft} />
+              <Text style={[styles.navText, !canPrevious && styles.navTextDisabled]}>{t('back')}</Text>
+            </Pressable>
+            <Text style={styles.position}>{navIndex + 1} / {navItems.length}</Text>
+            <Pressable accessibilityRole="button" accessibilityState={{ disabled: !canNext }} disabled={!canNext} onPress={() => navigate(1)} style={[styles.navButton, !canNext && styles.navDisabled]}>
+              <Text style={[styles.navText, !canNext && styles.navTextDisabled]}>{t('next')}</Text>
+              <Icon name="chevronRight" size={17} color={canNext ? colors.terreStrong : colors.inkSoft} />
+            </Pressable>
+          </View>
+        ) : null}
+
+        {item.content ? <Text selectable style={styles.copy}>{item.content}</Text> : null}
 
         <View style={styles.actions}>
           <Button variant="primary" onPress={toggleSaved} style={styles.primaryAction}>{saved ? t('saved') : t('save')}</Button>
@@ -74,10 +116,10 @@ export function ContentDetailScreen({ item, onBack, onOpen }: { item: ContentIte
         {practicalRows.length ? (
           <View style={styles.practicalCard}>
             {practicalRows.map((row, index) => (
-              <Pressable key={row.label} accessibilityRole={row.onPress ? 'button' : undefined} accessibilityLabel={`${row.label}: ${row.value}`} onPress={row.onPress} disabled={!row.onPress} style={[styles.practicalRow, index === practicalRows.length - 1 && styles.practicalRowLast]}>
+              <Pressable key={`${row.label}-${row.value}`} accessibilityRole={row.onPress ? 'button' : undefined} accessibilityLabel={`${row.label}: ${row.value}`} onPress={row.onPress} disabled={!row.onPress} style={[styles.practicalRow, index === practicalRows.length - 1 && styles.practicalRowLast]}>
                 <Icon name={row.icon} size={16} color={colors.inkSoft} />
                 <Text style={styles.practicalLabel}>{row.label}</Text>
-                <Text numberOfLines={1} style={styles.practicalValue}>{row.value}</Text>
+                <Text selectable numberOfLines={2} style={styles.practicalValue}>{row.value}</Text>
               </Pressable>
             ))}
           </View>
@@ -97,11 +139,14 @@ export function ContentDetailScreen({ item, onBack, onOpen }: { item: ContentIte
 
         {related.length ? (
           <View style={styles.relatedSection}>
-            <Text style={styles.sectionTitle}>{t('related')}</Text>
+            <View style={styles.sectionHeadingRow}>
+              <Text style={styles.sectionTitle}>{t('related')}</Text>
+              <Text style={styles.sectionHint}>{related.length}</Text>
+            </View>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.relatedList}>
               {related.map((candidate) => (
-                <Pressable key={`${candidate.type}-${candidate.id}`} accessibilityRole="button" accessibilityLabel={candidate.title} onPress={() => onOpen?.(candidate)} style={styles.relatedCard}>
-                  {candidate.thumbnailUrl || candidate.imageUrl ? <Image source={{ uri: candidate.thumbnailUrl ?? candidate.imageUrl }} style={styles.relatedImage} contentFit="cover" cachePolicy="memory-disk" /> : <View style={[styles.relatedImage, styles.relatedFallback]}><Icon name="image" size={20} color={colors.line} /></View>}
+                <Pressable key={`${candidate.type}-${candidate.id}`} accessibilityRole="button" accessibilityLabel={candidate.title} onPress={() => onOpen?.(candidate)} style={({ pressed }) => [styles.relatedCard, pressed && styles.relatedPressed]}>
+                  {candidate.thumbnailUrl || candidate.imageUrl ? <Image source={{ uri: candidate.thumbnailUrl ?? candidate.imageUrl }} style={styles.relatedImage} contentFit="cover" cachePolicy="memory-disk" transition={160} /> : <View style={[styles.relatedImage, styles.relatedFallback]}><Icon name="image" size={20} color={colors.line} /></View>}
                   <Text numberOfLines={2} style={styles.relatedTitle}>{candidate.title}</Text>
                   <Text style={styles.relatedType}>{candidate.type.toUpperCase()}</Text>
                 </Pressable>
@@ -116,29 +161,39 @@ export function ContentDetailScreen({ item, onBack, onOpen }: { item: ContentIte
 
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
-    content: { paddingBottom: 60, backgroundColor: colors.bg },
+    content: { paddingBottom: 70, backgroundColor: colors.bg },
     heroWrap: { position: 'relative' },
-    hero: { width: '100%', height: 280, backgroundColor: colors.surfaceSoft },
+    hero: { width: '100%', height: 290, backgroundColor: colors.surfaceSoft },
     heroFallback: { alignItems: 'center', justifyContent: 'center' },
-    heroBack: { position: 'absolute', top: 18, left: 16, width: 44, height: 44, borderRadius: 22, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center', opacity: 0.96 },
-    body: { padding: spacing.md },
-    contextRow: { marginTop: spacing.sm },
-    title: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.sm, lineHeight: 36 },
+    heroShade: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 72, backgroundColor: 'rgba(0,0,0,0.10)' },
+    heroBack: { position: 'absolute', top: 18, left: 16, width: 46, height: 46, borderRadius: 23, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center', opacity: 0.97 },
+    body: { paddingHorizontal: spacing.md, paddingTop: spacing.md },
+    contextRow: { marginBottom: spacing.xs },
+    title: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.xs, lineHeight: 36 },
     lead: { color: colors.inkSoft, lineHeight: 24, fontSize: type.bodyLg, marginTop: spacing.md, fontFamily: fonts.bodyMedium },
-    copy: { color: colors.ink, lineHeight: 26, fontSize: type.bodyLg, marginTop: spacing.lg, fontFamily: fonts.body },
+    navigationCard: { marginTop: spacing.lg, padding: spacing.xs, minHeight: 52, borderRadius: radii.lg, backgroundColor: colors.surface, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+    navButton: { minHeight: 44, minWidth: 82, paddingHorizontal: spacing.sm, borderRadius: radii.md, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 3 },
+    navDisabled: { opacity: 0.42 },
+    navText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 13 },
+    navTextDisabled: { color: colors.inkSoft },
+    position: { color: colors.inkSoft, fontFamily: fonts.bodySemiBold, fontSize: 12 },
+    copy: { color: colors.ink, lineHeight: 27, fontSize: type.bodyLg, marginTop: spacing.lg, fontFamily: fonts.body },
     actions: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.xl, flexWrap: 'wrap' },
     primaryAction: { flexGrow: 1 },
     practicalCard: { backgroundColor: colors.surface, borderRadius: radii.lg, marginTop: spacing.lg, paddingHorizontal: spacing.md },
-    practicalRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, paddingVertical: spacing.md, borderBottomWidth: 1, borderBottomColor: colors.line, minHeight: 52 },
+    practicalRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, paddingVertical: spacing.md, borderBottomWidth: 1, borderBottomColor: colors.line, minHeight: 54 },
     practicalRowLast: { borderBottomWidth: 0 },
     practicalLabel: { color: colors.inkSoft, fontFamily: fonts.bodySemiBold, fontSize: 13, width: 66 },
     practicalValue: { color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14, flex: 1, textAlign: 'right' },
     link: { marginTop: spacing.lg, flexDirection: 'row', alignItems: 'center', gap: 4, alignSelf: 'flex-start', minHeight: 44 },
     linkText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 14 },
     relatedSection: { marginTop: spacing.xxl },
-    sectionTitle: { color: colors.ink, fontFamily: fonts.displayBold, fontSize: 22, marginBottom: spacing.sm },
+    sectionHeadingRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm },
+    sectionTitle: { color: colors.ink, fontFamily: fonts.displayBold, fontSize: 22 },
+    sectionHint: { color: colors.inkSoft, fontFamily: fonts.bodyMedium, fontSize: 12 },
     relatedList: { gap: spacing.sm, paddingVertical: spacing.xs, paddingRight: spacing.md },
     relatedCard: { width: 190, backgroundColor: colors.surface, borderRadius: radii.lg, overflow: 'hidden', paddingBottom: spacing.sm },
+    relatedPressed: { opacity: 0.88, transform: [{ scale: 0.985 }] },
     relatedImage: { width: '100%', height: 110, backgroundColor: colors.surfaceSoft },
     relatedFallback: { alignItems: 'center', justifyContent: 'center' },
     relatedTitle: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 14, lineHeight: 19, paddingHorizontal: spacing.sm, paddingTop: spacing.sm },
