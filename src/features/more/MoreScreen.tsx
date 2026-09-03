@@ -13,8 +13,9 @@ const SITE_URL = 'https://vjr221.sn';
 const SITE_ACTIONS = [
   { key: 'directory', label: 'Annuaire national', path: '/annuaire/' },
   { key: 'establishment', label: 'Référencer mon établissement', path: '/ajouter-un-etablissement-a-l-annuaire/' },
-  { key: 'content', label: 'Proposer un contenu', path: '/proposer-un-contenu/' },
   { key: 'pricing', label: 'Tarifs & offres', path: '/tarifs-annuaire/' },
+  { key: 'partnership', label: 'Devenir partenaire', path: '/partenariat/' },
+  { key: 'support', label: 'Soutenir VJR 221', path: '/soutenir-vjr221/' },
   { key: 'about', label: 'À propos de VJR 221', path: '/a-propos/' },
   { key: 'contact', label: 'Contacter VJR 221', path: '/contact/' },
 ] as const;
@@ -62,13 +63,7 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
       <Text style={styles.sectionTitle}>VJR 221 sur le site</Text>
       <View style={styles.siteActions}>
         {SITE_ACTIONS.map((action, index) => (
-          <Pressable
-            key={action.key}
-            accessibilityRole="link"
-            accessibilityLabel={action.label}
-            onPress={() => openSiteAction(action.path)}
-            style={[styles.siteAction, index === SITE_ACTIONS.length - 1 && styles.optionLast]}
-          >
+          <Pressable key={action.key} accessibilityRole="link" accessibilityLabel={action.label} onPress={() => openSiteAction(action.path)} style={[styles.siteAction, index === SITE_ACTIONS.length - 1 && styles.optionLast]}>
             <View style={styles.siteIcon}><Icon name="chevronRight" size={16} color={colors.terreStrong} /></View>
             <Text style={styles.siteActionText}>{action.label}</Text>
           </Pressable>
