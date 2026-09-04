@@ -67,13 +67,13 @@ jobs:
           ls -lh android/app/build/outputs/apk/debug/app-debug.apk
       - name: Prepare APK artifact
         run: |
-          mkdir -p .ci-artifacts
-          cp android/app/build/outputs/apk/debug/app-debug.apk .ci-artifacts/VJR221.apk
-          sha256sum .ci-artifacts/VJR221.apk | tee .ci-artifacts/VJR221.apk.sha256
+          mkdir -p ci-artifacts
+          cp android/app/build/outputs/apk/debug/app-debug.apk ci-artifacts/VJR221.apk
+          sha256sum ci-artifacts/VJR221.apk | tee ci-artifacts/VJR221.apk.sha256
       - name: Upload APK artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: VJR221-Android-Debug
-          path: .ci-artifacts/*
+          path: ci-artifacts/*
           if-no-files-found: error
           retention-days: 7
