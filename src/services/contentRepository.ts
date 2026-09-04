@@ -24,7 +24,7 @@ const NAMED_HTML_ENTITIES: Record<string, string> = {
   gt: '>',
   quot: '"',
   apos: "'",
-  nbsp: ' ',
+  nbsp: ' ',
   hellip: '…',
   mdash: '—',
   ndash: '–',
