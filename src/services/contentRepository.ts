@@ -11,17 +11,13 @@ const decodeHtmlEntities = (value: string) => value
   .replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 
 const normalizeText = (value: string) => decodeHtmlEntities(value).replace(/\s+/g, ' ').trim();
-
 const stripUnsafeHtml = (value: string) => value
   .replace(/<script[\s\S]*?<\/script>/gi, '')
   .replace(/<style[\s\S]*?<\/style>/gi, '')
   .replace(/<iframe[\s\S]*?<\/iframe>/gi, '');
+const toPlainText = (value: string) => normalizeText(stripUnsafeHtml(value).replace(/<[^>]*>/g, ' '));
 
-/**
- * Convert WordPress HTML into readable text while preserving real HTTP(S)
- * links as compact link tokens. The UI can render these tokens as tappable
- * links without executing arbitrary HTML.
- */
+/** Convert WordPress HTML into readable text while preserving real HTTP(S) links. */
 const toSafeRichText = (value: string) => {
   const safe = stripUnsafeHtml(value);
   const withLinks = safe.replace(/<a\b[^>]*href=["'](https?:\/\/[^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi, ' [[LINK:$1|$2]] ');
@@ -30,8 +26,8 @@ const toSafeRichText = (value: string) => {
 
 export const toContentItem = (post: WordPressPost): ContentItem => ({
   id: post.id,
-  title: normalizeText(post.title.rendered),
-  excerpt: normalizeText(post.excerpt.rendered),
+  title: toPlainText(post.title.rendered),
+  excerpt: toPlainText(post.excerpt.rendered),
   content: post.content ? toSafeRichText(post.content.rendered) : undefined,
   type: 'news',
   url: post.link,
@@ -48,6 +44,6 @@ export async function getContentDetail(id: number): Promise<ContentItem> { const
 
 interface RawLieuContentItem { id: number; title: string; excerpt: string | null; permalink: string; image: { url: string; thumb: string; alt: string | null } | null; type: string; category: { id: number; slug: string; name: string } | null; }
 const KNOWN_LIEU_TYPES: ContentType[] = ['tourism', 'heritage', 'gastronomy', 'people', 'news'];
-function toLieuContentItem(raw: RawLieuContentItem): ContentItem { const type = (KNOWN_LIEU_TYPES as string[]).includes(raw.type) ? (raw.type as ContentType) : 'news'; return { id: raw.id, title: raw.title, excerpt: raw.excerpt ?? undefined, imageUrl: raw.image?.url, type, url: raw.permalink, tags: raw.category ? [raw.category.name] : undefined }; }
+function toLieuContentItem(raw: RawLieuContentItem): ContentItem { const type = (KNOWN_LIEU_TYPES as string[]).includes(raw.type) ? (raw.type as ContentType) : 'news'; return { id: raw.id, title: toPlainText(raw.title), excerpt: raw.excerpt ? toPlainText(raw.excerpt) : undefined, imageUrl: raw.image?.url, type, url: raw.permalink, tags: raw.category ? [raw.category.name] : undefined }; }
 export async function getLieuContent(lieuId: number): Promise<CollectionResult> { const cacheKey = `lieu-content:${lieuId}`; try { const raw = await getJson<{ items: RawLieuContentItem[] }>(`/lieu/${lieuId}/contenus`, undefined, env.geoApiBaseUrl); const items = raw.items.map(toLieuContentItem); await writeCache(cacheKey, items); return { items, fromCache: false, stale: false }; } catch (error) { const cached = await readCache<ContentItem[]>(cacheKey, CACHE_TTL); if (cached) return { items: cached.value, fromCache: true, stale: cached.stale }; throw error; } }
 export async function resolveContentBySlug(slug: string): Promise<ContentItem | null> { const posts = await getJson<WordPressPost[]>(`/posts?slug=${encodeURIComponent(slug)}&_embed`); const post = posts[0]; return post ? toContentItem(post) : null; }
