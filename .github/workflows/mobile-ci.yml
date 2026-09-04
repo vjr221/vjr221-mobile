@@ -8,7 +8,7 @@ on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: mobile-ci-${{ github.ref }}
@@ -33,6 +33,19 @@ jobs:
           npm --version
           git --version
           java -version
+      - name: Synchronize npm lockfile
+        if: github.event_name == 'push' && github.ref_name == 'mobile/phase6-integration'
+        run: |
+          npm install --package-lock-only --ignore-scripts
+          if git diff --quiet -- package-lock.json; then
+            echo "package-lock.json is already synchronized."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add package-lock.json
+            git commit -m "ci: synchronize npm lockfile with Phase 6 dependencies"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
       - name: Install dependencies
         run: npm ci
       - name: Typecheck
