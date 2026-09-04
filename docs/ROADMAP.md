@@ -9,11 +9,11 @@
 - Deep links `vjr221://` et liens web `vjr221.sn` : câblés côté application.
 - Configuration Android/iOS Expo et EAS : prête pour validation humaine des identifiants et credentials.
 - Documentation API, audit et publication : présente dans `docs/`.
-- CI GitHub : workflow unique `mobile-ci.yml`, sans action externe, avec validation TypeScript, lint, tests et export Android.
+- **CI GitHub : vert** — workflow unique `mobile-ci.yml` avec TypeScript, lint, **64 tests**, export Android, build APK Debug, vérification et archivage de l'artefact.
 
 ## Prochaine séquence
 
-1. Faire passer le CI complet sur GitHub.
+1. ~~Faire passer le CI complet sur GitHub.~~ **Terminé — CI #28 vert.**
 2. Installer un build preview Android sur appareil réel.
 3. Tester un build iOS sur appareil réel/distribution Apple.
 4. Vérifier les deep links et App Links sur builds réels.
