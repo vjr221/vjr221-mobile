@@ -1,31 +1,14 @@
 export type ContentType =
-  | 'regions'
-  | 'departments'
-  | 'communes'
-  | 'heritage'
-  | 'tourism'
-  | 'gastronomy'
-  | 'people'
-  | 'history'
-  | 'nature'
-  | 'wildlife'
-  | 'beaches'
-  | 'culture'
-  | 'events'
-  | 'news'
-  | 'directory'
-  | 'practical'
-  | 'media'
-  | 'diaspora'
-  | 'community';
+  | 'regions' | 'departments' | 'communes' | 'heritage' | 'tourism' | 'gastronomy' | 'people' | 'history' | 'nature' | 'wildlife' | 'beaches' | 'culture' | 'events' | 'news' | 'directory' | 'practical' | 'media' | 'diaspora' | 'community';
 
 export interface ContentItem {
   id: number;
   title: string;
   excerpt?: string;
   content?: string;
+  /** Version structurée de `content` pour le rendu riche en fiche. */
+  contentBlocks?: import('../services/richText').RichBlock[];
   imageUrl?: string;
-  /** Variante allégée de `imageUrl` (miniature WordPress ou champ `.thumb` des API géo/annuaire), à préférer dans les listes/fiches ; retombe sur `imageUrl` quand aucune variante réduite n'existe. Ne jamais utiliser pour un hero plein écran. */
   thumbnailUrl?: string;
   type: ContentType;
   url?: string;
