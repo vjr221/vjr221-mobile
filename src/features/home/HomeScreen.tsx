@@ -26,17 +26,15 @@ export function HomeScreen({ onOpen, onSearch, onExplore }: { onOpen: OpenConten
   const [state, setState] = useState<'loading' | 'ready' | 'error'>('loading');
   const [cached, setCached] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-
   const load = useCallback((opts: { silent?: boolean } = {}) => {
     if (!opts.silent) setState('loading');
     getFeaturedContent().then((result) => { setItems(result.items); setCached(result.fromCache); setState('ready'); }).catch(() => setState('error')).finally(() => setRefreshing(false));
   }, []);
   useEffect(() => { const timer = setTimeout(() => load(), 0); return () => clearTimeout(timer); }, [load]);
   const onRefresh = useCallback(() => { setRefreshing(true); load({ silent: true }); }, [load]);
-
   return (
     <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false} refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}>
-      {(!online || cached) ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}
+      {!online || cached ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}
       <LinearGradient colors={[colors.savane, colors.savane2]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.hero}>
         <Text style={styles.brand}>VJR <Text style={styles.brandAccent}>221</Text></Text>
         <Text style={styles.tagline}>{t('tagline')}</Text>
@@ -46,15 +44,15 @@ export function HomeScreen({ onOpen, onSearch, onExplore }: { onOpen: OpenConten
         </Pressable>
         <Pressable accessibilityRole="button" onPress={() => onExplore()} style={({ pressed }) => [styles.cta, pressed && styles.ctaPressed]}><Text style={styles.ctaText}>{t('discover')}</Text><Icon name="chevronRight" size={15} color={colors.savane} /></Pressable>
       </LinearGradient>
-
       <SectionHeader onSeeAll={() => onExplore()} seeAllLabel={t('explore')}>{t('categories')}</SectionHeader>
-      <View style={styles.grid}>
-        {categories.slice(0, 8).map((category) => <Pressable key={category.id} accessibilityRole="button" accessibilityLabel={t(category.labelKey as TranslationKey)} onPress={() => onExplore(category.id)} style={({ pressed }) => [styles.category, pressed && styles.categoryPressed]}>
-          <View style={styles.categoryIconWrap}><Icon name={category.icon} size={19} color={colors.terreStrong} /></View>
-          <Text numberOfLines={1} style={styles.categoryText}>{t(category.labelKey as TranslationKey)}</Text>
-        </Pressable>)}
-      </View>
-
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoryRow}>
+        {categories.map((category) => (
+          <Pressable key={category.id} accessibilityRole="button" accessibilityLabel={t(category.labelKey as TranslationKey)} onPress={() => onExplore(category.id)} style={({ pressed }) => [styles.category, pressed && styles.categoryPressed]}>
+            <View style={styles.categoryIconWrap}><Icon name={category.icon} size={19} color={colors.terreStrong} /></View>
+            <Text numberOfLines={1} style={styles.categoryText}>{t(category.labelKey as TranslationKey)}</Text>
+          </Pressable>
+        ))}
+      </ScrollView>
       <SectionHeader>{t('recent')}</SectionHeader>
       {state === 'loading' ? <LoadingState /> : null}
       {state === 'error' ? <ErrorState onRetry={load} /> : null}
@@ -63,7 +61,6 @@ export function HomeScreen({ onOpen, onSearch, onExplore }: { onOpen: OpenConten
     </ScrollView>
   );
 }
-
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
     content: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg },
@@ -78,8 +75,8 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     cta: { flexDirection: 'row', alignItems: 'center', gap: 6, alignSelf: 'flex-start', marginTop: spacing.lg, backgroundColor: colors.safran, borderRadius: radii.pill, paddingHorizontal: 18, paddingVertical: 12 },
     ctaPressed: { opacity: 0.88 },
     ctaText: { fontFamily: fonts.bodyBold, color: colors.savane, fontSize: 14 },
-    grid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
-    category: { width: '48%', padding: spacing.md, borderRadius: radii.lg, backgroundColor: colors.surface, flexDirection: 'row', gap: spacing.sm, alignItems: 'center' },
+    categoryRow: { gap: spacing.sm, paddingVertical: spacing.xs, paddingRight: spacing.md },
+    category: { width: 132, padding: spacing.md, borderRadius: radii.lg, backgroundColor: colors.surface, alignItems: 'flex-start', gap: spacing.sm },
     categoryPressed: { opacity: 0.9 },
     categoryIconWrap: { width: 38, height: 38, borderRadius: radii.pill, backgroundColor: colors.surfaceSoft, alignItems: 'center', justifyContent: 'center' },
     categoryText: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 14, flexShrink: 1 },
