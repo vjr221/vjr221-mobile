@@ -24,7 +24,7 @@ const NAMED_HTML_ENTITIES: Record<string, string> = {
   gt: '>',
   quot: '"',
   apos: "'",
-  nbsp: ' ',
+  nbsp: String.fromCharCode(160), // U+00A0 non-breaking space (ASCII-safe literal, avoids charset mangling)
   hellip: '…',
   mdash: '—',
   ndash: '–',
