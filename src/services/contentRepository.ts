@@ -19,24 +19,63 @@ export type WordPressFeaturedMedia = {
 };
 
 const NAMED_HTML_ENTITIES: Record<string, string> = {
-  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
-  hellip: '…', mdash: '—', ndash: '–', minus: '−',
-  lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”',
-  laquo: '«', raquo: '»',
-  agrave: 'à', acirc: 'â', auml: 'ä',
-  eacute: 'é', egrave: 'è', ecirc: 'ê', euml: 'ë',
-  icirc: 'î', iuml: 'ï',
-  ocirc: 'ô', ouml: 'ö',
-  ugrave: 'ù', ucirc: 'û', uuml: 'ü',
-  ccedil: 'ç', ntilde: 'ñ',
-  Agrave: 'À', Acirc: 'Â', Auml: 'Ä',
-  Eacute: 'É', Egrave: 'È', Ecirc: 'Ê', Euml: 'Ë',
-  IcirC: 'Î', Iuml: 'Ï',
-  OcirC: 'Ô', Ouml: 'Ö',
-  Ugrave: 'Ù', Ucirc: 'Û', Uuml: 'Ü',
-  Ccedil: 'Ç', Ntilde: 'Ñ',
-  oelig: 'œ', OElig: 'Œ', aelig: 'æ', AElig: 'Æ',
-  copy: '©', reg: '®', trade: '™', bull: '•', middot: '·',
+  amp: '&',
+  lt: '<',
+  gt: '>',
+  quot: '"',
+  apos: "'",
+  nbsp: ' ',
+  hellip: '…',
+  mdash: '—',
+  ndash: '–',
+  minus: '−',
+  lsquo: '‘',
+  rsquo: '’',
+  ldquo: '“',
+  rdquo: '”',
+  laquo: '«',
+  raquo: '»',
+  agrave: 'à',
+  acirc: 'â',
+  auml: 'ä',
+  eacute: 'é',
+  egrave: 'è',
+  ecirc: 'ê',
+  euml: 'ë',
+  icirc: 'î',
+  iuml: 'ï',
+  ocirc: 'ô',
+  ouml: 'ö',
+  ugrave: 'ù',
+  ucirc: 'û',
+  uuml: 'ü',
+  ccedil: 'ç',
+  ntilde: 'ñ',
+  Agrave: 'À',
+  Acirc: 'Â',
+  Auml: 'Ä',
+  Eacute: 'É',
+  Egrave: 'È',
+  Ecirc: 'Ê',
+  Euml: 'Ë',
+  IcirC: 'Î',
+  Iuml: 'Ï',
+  OcirC: 'Ô',
+  Ouml: 'Ö',
+  Ugrave: 'Ù',
+  Ucirc: 'Û',
+  Uuml: 'Ü',
+  Ccedil: 'Ç',
+  Ntilde: 'Ñ',
+  oelig: 'œ',
+  OElig: 'Œ',
+  aelig: 'æ',
+  AElig: 'Æ',
+  copy: '©',
+  reg: '®',
+  trade: '™',
+  bull: '•',
+  middot: '·',
 };
 
 /** Décodage défensif : entités HTML, double encodage et quelques cas de
@@ -49,7 +88,11 @@ export const decodeHtmlEntities = (value: string): string => {
         const isHex = entity[1] === 'x' || entity[1] === 'X';
         const code = parseInt(entity.slice(isHex ? 2 : 1), isHex ? 16 : 10);
         if (Number.isNaN(code) || code < 0 || code > 0x10ffff) return match;
-        try { return String.fromCodePoint(code); } catch { return match; }
+        try {
+          return String.fromCodePoint(code);
+        } catch {
+          return match;
+        }
       }
       return NAMED_HTML_ENTITIES[entity] ?? match;
     });
@@ -60,9 +103,7 @@ export const decodeHtmlEntities = (value: string): string => {
   // UTF-8 bytes affichés comme caractères Latin-1 (Ã©, â€™, Â°, etc.).
   if (/[ÃÂâð][\x80-\xBF]/.test(result)) {
     try {
-      const bytes = Array.from(result).map((char) => char.charCodeAt(0) <= 255
-        ? `%${char.charCodeAt(0).toString(16).padStart(2, '0')}`
-        : char);
+      const bytes = Array.from(result).map((char) => (char.charCodeAt(0) <= 255 ? `%${char.charCodeAt(0).toString(16).padStart(2, '0')}` : char));
       const repaired = decodeURIComponent(bytes.join(''));
       if (!repaired.includes('�')) result = repaired;
     } catch {
@@ -71,8 +112,7 @@ export const decodeHtmlEntities = (value: string): string => {
   }
 
   return result
-    .replace(/[\u200B-\u200D\uFEFF]/g, '')
-    .replace(/\u00A0/g, ' ')
+    .replace(/[​-‍﻿]/g, '')
     .replace(/[ \t]+\n/g, '\n')
     .trim();
 };
@@ -108,9 +148,20 @@ async function getPosts(query: string, cacheKey: string): Promise<CollectionResu
   });
   return { items: result.value, fromCache: result.fromCache, stale: result.stale };
 }
-export async function getFeaturedContent(): Promise<CollectionResult> { return getPosts('per_page=6', 'home:featured'); }
-export async function searchContent(term: string, page = 1): Promise<CollectionResult> { const clean = term.trim(); if (!clean) return { items: [], fromCache: false, stale: false }; return getPosts(`per_page=12&page=${page}&search=${encodeURIComponent(clean)}`, `search:${clean}:${page}`); }
-export async function getContentDetail(id: number): Promise<ContentItem> { const result = await getPosts(`include=${id}&per_page=1`, `detail:${id}`); const item = result.items[0]; if (!item) throw new Error('Contenu introuvable.'); return item; }
+export async function getFeaturedContent(): Promise<CollectionResult> {
+  return getPosts('per_page=6', 'home:featured');
+}
+export async function searchContent(term: string, page = 1): Promise<CollectionResult> {
+  const clean = term.trim();
+  if (!clean) return { items: [], fromCache: false, stale: false };
+  return getPosts(`per_page=12&page=${page}&search=${encodeURIComponent(clean)}`, `search:${clean}:${page}`);
+}
+export async function getContentDetail(id: number): Promise<ContentItem> {
+  const result = await getPosts(`include=${id}&per_page=1`, `detail:${id}`);
+  const item = result.items[0];
+  if (!item) throw new Error('Contenu introuvable.');
+  return item;
+}
 
 interface RawLieuContentItem {
   id: number;
@@ -125,7 +176,16 @@ interface RawLieuContentItem {
 const KNOWN_LIEU_TYPES: ContentType[] = ['tourism', 'heritage', 'gastronomy', 'people', 'news'];
 function toLieuContentItem(raw: RawLieuContentItem): ContentItem {
   const type = (KNOWN_LIEU_TYPES as string[]).includes(raw.type) ? (raw.type as ContentType) : 'news';
-  return { id: raw.id, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : undefined, imageUrl: raw.image?.url, thumbnailUrl: raw.image?.thumb, type, url: raw.permalink, tags: raw.category ? [decodeHtmlEntities(raw.category.name)] : undefined };
+  return {
+    id: raw.id,
+    title: decodeHtmlEntities(raw.title),
+    excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : undefined,
+    imageUrl: raw.image?.url,
+    thumbnailUrl: raw.image?.thumb,
+    type,
+    url: raw.permalink,
+    tags: raw.category ? [decodeHtmlEntities(raw.category.name)] : undefined,
+  };
 }
 
 export async function getLieuContent(lieuId: number): Promise<CollectionResult> {
@@ -155,7 +215,9 @@ export const CATEGORY_TAXONOMY: Partial<Record<ContentType, number[]>> = {
 };
 
 const CATEGORY_PAGE_SIZE = 12;
-function toTypedContentItem(post: WordPressPost, type: ContentType): ContentItem { return { ...toContentItem(post), type }; }
+function toTypedContentItem(post: WordPressPost, type: ContentType): ContentItem {
+  return { ...toContentItem(post), type };
+}
 export type CategoryPageResult = CollectionResult & { hasMore: boolean };
 export async function getCategoryContent(type: ContentType, opts: { page?: number; q?: string } = {}): Promise<CategoryPageResult> {
   const categoryIds = CATEGORY_TAXONOMY[type];
@@ -172,5 +234,10 @@ export async function getCategoryContent(type: ContentType, opts: { page?: numbe
     return { items, fromCache: false, stale: false, hasMore: items.length === CATEGORY_PAGE_SIZE };
   }
   const result = await withCacheFallback(`category:${type}:1:${search ?? ''}`, CACHE_TTL, fetchPage);
-  return { items: result.value, fromCache: result.fromCache, stale: result.stale, hasMore: result.fromCache ? false : result.value.length === CATEGORY_PAGE_SIZE };
+  return {
+    items: result.value,
+    fromCache: result.fromCache,
+    stale: result.stale,
+    hasMore: result.fromCache ? false : result.value.length === CATEGORY_PAGE_SIZE,
+  };
 }
