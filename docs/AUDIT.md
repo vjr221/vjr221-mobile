@@ -1,8 +1,6 @@
 # Audit produit et technique — VJR 221 Mobile
 
-Réalisé après les priorités 1 à 9. Inspection réelle du code (2230 lignes de
-`src/`), pas de revue théorique. Classement P0 (bloqueur) → P3 (optimisation
-future). Les P0/P1 listés ci-dessous ont été corrigés dans ce même lot.
+Réalisé après les priorités 1 à 9. Inspection réelle du code (`src/`), pas de revue théorique. Classement P0 (bloqueur) → P3 (optimisation future). Les P0/P1 listés ci-dessous ont été corrigés dans ce même lot.
 
 ## P0 — Bloqueur
 
@@ -79,10 +77,12 @@ docs/API.md).
 
 - TypeScript strict : 0 erreur.
 - ESLint (`eslint-config-expo` + `react-hooks`) : 0 erreur, 0 warning.
-- 52 tests Jest, tous verts (mappers, cache, deep links, retry réseau,
-  fusion de favoris, notifications, cartographie).
-- CI (`.github/workflows/ci.yml`) : typecheck + lint + test + build de
-  vérification Android — inchangée, toujours valide.
+- **64 tests Jest, tous verts** (mappers, cache, deep links, retry réseau,
+  fusion de favoris, notifications, cartographie et normalisation des textes
+  WordPress).
+- CI GitHub : workflow unique `.github/workflows/mobile-ci.yml` :
+  typecheck + lint + tests + export Android + build APK Debug + vérification
+  et archivage de l'artefact — **CI #28 vert**.
 - Aucun secret dans Git (vérifié : `.env.example` ne contient que des URLs
   publiques).
 
@@ -175,9 +175,9 @@ Points 5, 8, 9 de la checklist repassés en revue avec correctifs réels :
 - **Point 9 (FR/Wolof)** : 4 écrans introduits ce tour avaient des textes
   français en dur sans équivalent wolof (`AccountScreen`,
   `NotificationPreferencesScreen`, `ExploreScreen`, `ContentDetailScreen`).
-  Corrigé — les 56 clés i18n sont maintenant strictement symétriques
-  FR/WO, verrouillé par `strings.test.ts`. Les textes hérités de la Phase 2
+  Corrigé — les clés i18n sont maintenant strictement symétriques FR/WO,
+  verrouillé par `strings.test.ts`. Les textes hérités de la Phase 2
   (`ContentStates.tsx`) restent non traduits : préexistants, hors périmètre
   de cet audit.
 
-**Total tests après cette suite : 60/60.**
+**Total tests actuel : 64/64.**
