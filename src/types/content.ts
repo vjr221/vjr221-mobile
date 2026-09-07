@@ -23,4 +23,6 @@ export interface ContentItem {
     hours?: string;
     coordinates?: { latitude: number; longitude: number };
   };
+  /** Encart d'appel à l'action structuré fourni par l'API ([vjr_cta] côté WordPress) — jamais fabriqué côté app. */
+  cta?: { title: string; text: string; buttonLabel: string; buttonUrl: string } | null;
 }

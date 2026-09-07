@@ -2,6 +2,8 @@ import { env } from '../config/env';
 import { getJson } from './http';
 import { withCacheFallback } from './cache';
 import type { ContentItem } from '../types/content';
+import { decodeHtmlEntities } from './contentRepository';
+import { parseRichContent } from './richText';
 
 const CACHE_TTL = 15 * 60 * 1000;
 
@@ -43,6 +45,7 @@ interface RawDirectoryDetail extends RawDirectoryItem {
   services: string[];
   reseaux: { plateforme: string | null; url: string }[];
   horaires_detail: { jour: string; heures: string | null }[];
+  cta: { title: string; text: string; button_label: string; button_url: string } | null;
 }
 
 interface RawList {
@@ -50,14 +53,12 @@ interface RawList {
   meta: { page: number; per_page: number; total: number; total_pages: number };
 }
 
-const stripHtml = (value: string) => value.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
-
 function toContentItem(raw: RawDirectoryItem): ContentItem {
   const { contact } = raw;
   return {
     id: raw.id,
-    title: raw.title,
-    excerpt: raw.excerpt ?? undefined,
+    title: decodeHtmlEntities(raw.title),
+    excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : undefined,
     imageUrl: raw.image?.url,
     thumbnailUrl: raw.image?.thumb,
     type: 'directory',
@@ -77,8 +78,10 @@ function toContentItem(raw: RawDirectoryItem): ContentItem {
 
 function toContentItemDetail(raw: RawDirectoryDetail): ContentItem {
   const base = toContentItem(raw);
-  const content = raw.content ? stripHtml(raw.content) : undefined;
-  return { ...base, content };
+  const contentBlocks = raw.content ? parseRichContent(raw.content) : undefined;
+  const content = contentBlocks?.length ? undefined : raw.content ? decodeHtmlEntities(raw.content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()) : undefined;
+  const cta = raw.cta ? { title: decodeHtmlEntities(raw.cta.title), text: decodeHtmlEntities(raw.cta.text), buttonLabel: decodeHtmlEntities(raw.cta.button_label), buttonUrl: raw.cta.button_url } : null;
+  return { ...base, content, contentBlocks: contentBlocks?.length ? contentBlocks : undefined, cta };
 }
 
 export async function getDirectoryCategories(): Promise<DirectoryCategory[]> {

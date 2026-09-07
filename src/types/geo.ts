@@ -72,11 +72,20 @@ export interface Village extends GeoEntityBase {
 
 export type GeoEntity = Region | Department | Commune | Village;
 
+export interface GeoCta {
+  title: string;
+  text: string;
+  buttonLabel: string;
+  buttonUrl: string;
+}
+
 export interface GeoDetail<T extends GeoEntity> {
   entity: T;
   content: string | null;
   gallery: RemoteImage[];
   usefulLinks: UsefulLink[];
+  /** Encart d'appel à l'action structuré fourni par l'API ([vjr_cta] côté WordPress) — jamais fabriqué côté app. */
+  cta: GeoCta | null;
 }
 
 export interface GeoListMeta {
