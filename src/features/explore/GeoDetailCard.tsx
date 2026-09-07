@@ -1,12 +1,13 @@
 import { useMemo } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Linking, StyleSheet, Text, View } from 'react-native';
 import { Image } from 'expo-image';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { Badge } from '../../components/Badge';
+import { Button } from '../../components/Button';
 import { Icon } from '../../components/icons/Icon';
 import { useI18n } from '../../i18n/I18nProvider';
-import type { KeyInfos, RemoteImage } from '../../types/geo';
+import type { GeoCta, KeyInfos, RemoteImage } from '../../types/geo';
 
 /** Bloc « fiche » réutilisable pour région / département / commune / village. */
 export function GeoDetailCard({
@@ -16,6 +17,7 @@ export function GeoDetailCard({
   image,
   infos,
   breadcrumb,
+  cta,
 }: {
   title: string;
   excerpt: string | null;
@@ -23,6 +25,7 @@ export function GeoDetailCard({
   image: RemoteImage | null;
   infos: KeyInfos;
   breadcrumb?: string | null;
+  cta?: GeoCta | null;
 }) {
   const { t } = useI18n();
   const { colors } = useTheme();
@@ -58,6 +61,13 @@ export function GeoDetailCard({
           </View>
         ) : null}
         {content ? <Text style={styles.content}>{content}</Text> : null}
+        {cta ? (
+          <View style={styles.ctaBox}>
+            <Text style={styles.ctaTitle}>{cta.title}</Text>
+            <Text style={styles.ctaText}>{cta.text}</Text>
+            <Button variant="secondary" size="sm" onPress={() => Linking.openURL(cta.buttonUrl)} style={styles.ctaButton}>{cta.buttonLabel}</Button>
+          </View>
+        ) : null}
       </View>
     </View>
   );
@@ -76,5 +86,9 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     infoLabel: { color: colors.inkSoft, fontSize: 10.5, fontFamily: fonts.monoSemiBold, letterSpacing: 0.6, textTransform: 'uppercase' },
     infoValue: { color: colors.ink, fontSize: type.body, fontFamily: fonts.bodySemiBold, marginTop: 3 },
     content: { color: colors.ink, lineHeight: 24, marginTop: spacing.md, fontSize: type.bodyLg, fontFamily: fonts.body },
+    ctaBox: { backgroundColor: colors.surfaceSoft, borderRadius: radii.lg, marginTop: spacing.md, padding: spacing.md, gap: 6 },
+    ctaTitle: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: type.body },
+    ctaText: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: 13, lineHeight: 19 },
+    ctaButton: { marginTop: spacing.xs, alignSelf: 'flex-start' },
   });
 }
