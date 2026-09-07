@@ -1,6 +1,7 @@
 import { env } from '../config/env';
 import { getJson } from './http';
 import { readCache, writeCache } from './cache';
+import { decodeHtmlEntities } from './contentRepository';
 import type {
   Commune,
   Department,
@@ -39,6 +40,7 @@ interface RawGeoDetail extends RawGeoItem {
   content: string;
   galerie: RemoteImage[];
   liens_utiles: { label: string | null; url: string }[];
+  cta: { title: string; text: string; button_label: string; button_url: string } | null;
 }
 
 interface RawList {
@@ -61,32 +63,37 @@ const toMeta = (raw: RawList['meta']): GeoListMeta => ({
 });
 
 export function toRegion(raw: RawGeoItem): Region {
-  return { kind: 'region', id: raw.id, slug: raw.slug, title: raw.title, excerpt: raw.excerpt, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos) };
+  return { kind: 'region', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos) };
 }
 
 export function toDepartment(raw: RawGeoItem): Department {
   return {
-    kind: 'department', id: raw.id, slug: raw.slug, title: raw.title, excerpt: raw.excerpt, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos),
+    kind: 'department', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos),
     region: raw.region ?? null, departement: null, arrondissement: raw.arrondissement ?? null,
   };
 }
 
 export function toCommune(raw: RawGeoItem): Commune {
   return {
-    kind: 'commune', id: raw.id, slug: raw.slug, title: raw.title, excerpt: raw.excerpt, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos),
+    kind: 'commune', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos),
     region: raw.region ?? null, departement: raw.departement ?? null, arrondissement: raw.arrondissement ?? null,
   };
 }
 
 export function toVillage(raw: RawGeoItem): Village {
-  return { kind: 'village', id: raw.id, slug: raw.slug, title: raw.title, excerpt: raw.excerpt, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos), commune: raw.commune ?? null };
+  return { kind: 'village', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos), commune: raw.commune ?? null };
 }
 
-const stripHtml = (value: string) => value.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+const stripHtml = (value: string) => decodeHtmlEntities(value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim());
+
+function toCta(raw: RawGeoDetail['cta']): GeoDetail<GeoEntity>['cta'] {
+  if (!raw) return null;
+  return { title: decodeHtmlEntities(raw.title), text: decodeHtmlEntities(raw.text), buttonLabel: decodeHtmlEntities(raw.button_label), buttonUrl: raw.button_url };
+}
 
 function toDetail<T extends GeoEntity>(raw: RawGeoDetail, mapper: (r: RawGeoItem) => T): GeoDetail<T> {
   const content = raw.content ? stripHtml(raw.content) : '';
-  return { entity: mapper(raw), content: content || null, gallery: raw.galerie ?? [], usefulLinks: (raw.liens_utiles ?? []) as UsefulLink[] };
+  return { entity: mapper(raw), content: content || null, gallery: raw.galerie ?? [], usefulLinks: (raw.liens_utiles ?? []) as UsefulLink[], cta: toCta(raw.cta) };
 }
 
 function buildQuery(params: Record<string, string | number | undefined>): string {
