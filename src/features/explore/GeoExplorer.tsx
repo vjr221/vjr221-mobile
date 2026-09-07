@@ -21,7 +21,7 @@ import {
   getVillages,
 } from '../../services/geoRepository';
 import { getContentDetail, getLieuContent } from '../../services/contentRepository';
-import type { Commune, Department, Region, Village } from '../../types/geo';
+import type { Commune, Department, GeoCta, Region, Village } from '../../types/geo';
 import type { ContentItem } from '../../types/content';
 
 export type GeoView =
@@ -33,13 +33,6 @@ export type GeoView =
 
 type LoadState = 'loading' | 'ready' | 'error';
 
-/**
- * Explorateur géographique : Sénégal → Région → Département → Commune → Village.
- *
- * Navigation locale par pile (l'application n'utilise pas de librairie de routing) ;
- * recherche/filtre par nom à chaque niveau ; états loading/error/empty/offline explicites ;
- * aucune donnée n'est jamais fabriquée si l'API ne la fournit pas.
- */
 export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: () => void; onOpenContent: (item: ContentItem) => void; initialView?: GeoView }) {
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -55,12 +48,6 @@ export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: ()
     });
   }, [onExit]);
 
-  // ---- Bouton retour matériel Android : la pile région → département →
-  // commune → village est purement locale à ce composant (aucune librairie de
-  // routing), donc sans ce gestionnaire le bouton retour système ignore cette
-  // pile et saute directement à l'onglet Accueil (géré par AppNavigator) au
-  // lieu de remonter d'un niveau géographique à la fois, ou de sortir proprement
-  // vers le sélecteur de collection (même comportement que le bouton "Retour" affiché).
   useEffect(() => {
     const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
       back();
@@ -87,10 +74,6 @@ export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: ()
     </ScrollView>
   );
 }
-
-// ---------------------------------------------------------------------------
-// Régions
-// ---------------------------------------------------------------------------
 
 function RegionsListScreen({ onOpen }: { onOpen: (id: number) => void }) {
   const { t } = useI18n();
@@ -129,21 +112,18 @@ function RegionsListScreen({ onOpen }: { onOpen: (id: number) => void }) {
   );
 }
 
-// ---------------------------------------------------------------------------
-// Détail région → liste départements
-// ---------------------------------------------------------------------------
-
 function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onOpenDepartment: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [region, setRegion] = useState<Region | null>(null);
   const [content, setContent] = useState<string | null>(null);
+  const [cta, setCta] = useState<GeoCta | null>(null);
   const [detailState, setDetailState] = useState<LoadState>('loading');
 
   const loadRegion = useCallback(() => {
     setDetailState('loading');
-    getRegion(id).then((detail) => { setRegion(detail.entity); setContent(detail.content); setDetailState('ready'); }).catch(() => setDetailState('error'));
+    getRegion(id).then((detail) => { setRegion(detail.entity); setContent(detail.content); setCta(detail.cta); setDetailState('ready'); }).catch(() => setDetailState('error'));
   }, [id]);
   useEffect(() => { const timer = setTimeout(loadRegion, 0); return () => clearTimeout(timer); }, [loadRegion]);
 
@@ -167,7 +147,7 @@ function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onO
 
   return (
     <View>
-      <GeoDetailCard title={region.title} excerpt={region.excerpt} content={content} image={region.image} infos={region.infos} breadcrumb={t('region')} />
+      <GeoDetailCard title={region.title} excerpt={region.excerpt} content={content} image={region.image} infos={region.infos} breadcrumb={t('region')} cta={cta} />
       <Text style={styles.sectionTitle}>{t('departments')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -181,21 +161,18 @@ function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onO
   );
 }
 
-// ---------------------------------------------------------------------------
-// Détail département → liste communes
-// ---------------------------------------------------------------------------
-
 function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; onOpenCommune: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [department, setDepartment] = useState<Department | null>(null);
   const [content, setContent] = useState<string | null>(null);
+  const [cta, setCta] = useState<GeoCta | null>(null);
   const [detailState, setDetailState] = useState<LoadState>('loading');
 
   const loadDepartment = useCallback(() => {
     setDetailState('loading');
-    getDepartment(id).then((detail) => { setDepartment(detail.entity); setContent(detail.content); setDetailState('ready'); }).catch(() => setDetailState('error'));
+    getDepartment(id).then((detail) => { setDepartment(detail.entity); setContent(detail.content); setCta(detail.cta); setDetailState('ready'); }).catch(() => setDetailState('error'));
   }, [id]);
   useEffect(() => { const timer = setTimeout(loadDepartment, 0); return () => clearTimeout(timer); }, [loadDepartment]);
 
@@ -219,7 +196,7 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
 
   return (
     <View>
-      <GeoDetailCard title={department.title} excerpt={department.excerpt} content={content} image={department.image} infos={department.infos} breadcrumb={refLabel(department.region?.name) ?? t('department')} />
+      <GeoDetailCard title={department.title} excerpt={department.excerpt} content={content} image={department.image} infos={department.infos} breadcrumb={refLabel(department.region?.name) ?? t('department')} cta={cta} />
       <Text style={styles.sectionTitle}>{t('communes')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -233,21 +210,18 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
   );
 }
 
-// ---------------------------------------------------------------------------
-// Détail commune → liste villages/quartiers
-// ---------------------------------------------------------------------------
-
 function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpenVillage: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [commune, setCommune] = useState<Commune | null>(null);
   const [content, setContent] = useState<string | null>(null);
+  const [cta, setCta] = useState<GeoCta | null>(null);
   const [detailState, setDetailState] = useState<LoadState>('loading');
 
   const loadCommune = useCallback(() => {
     setDetailState('loading');
-    getCommune(id).then((detail) => { setCommune(detail.entity); setContent(detail.content); setDetailState('ready'); }).catch(() => setDetailState('error'));
+    getCommune(id).then((detail) => { setCommune(detail.entity); setContent(detail.content); setCta(detail.cta); setDetailState('ready'); }).catch(() => setDetailState('error'));
   }, [id]);
   useEffect(() => { const timer = setTimeout(loadCommune, 0); return () => clearTimeout(timer); }, [loadCommune]);
 
@@ -271,7 +245,7 @@ function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpe
 
   return (
     <View>
-      <GeoDetailCard title={commune.title} excerpt={commune.excerpt} content={content} image={commune.image} infos={commune.infos} breadcrumb={refLabel(commune.departement?.name) ?? t('commune')} />
+      <GeoDetailCard title={commune.title} excerpt={commune.excerpt} content={content} image={commune.image} infos={commune.infos} breadcrumb={refLabel(commune.departement?.name) ?? t('commune')} cta={cta} />
       <Text style={styles.sectionTitle}>{t('villages')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -285,35 +259,24 @@ function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpe
   );
 }
 
-// ---------------------------------------------------------------------------
-// Détail village (feuille de l'arbre)
-// ---------------------------------------------------------------------------
-
 function VillageScreen({ id }: { id: number }) {
   const { t } = useI18n();
   const [village, setVillage] = useState<Village | null>(null);
   const [content, setContent] = useState<string | null>(null);
+  const [cta, setCta] = useState<GeoCta | null>(null);
   const [state, setState] = useState<LoadState>('loading');
 
   const loadVillage = useCallback(() => {
     setState('loading');
-    getVillage(id).then((detail) => { setVillage(detail.entity); setContent(detail.content); setState('ready'); }).catch(() => setState('error'));
+    getVillage(id).then((detail) => { setVillage(detail.entity); setContent(detail.content); setCta(detail.cta); setState('ready'); }).catch(() => setState('error'));
   }, [id]);
   useEffect(() => { const timer = setTimeout(loadVillage, 0); return () => clearTimeout(timer); }, [loadVillage]);
 
   if (state === 'loading') return <LoadingState />;
   if (state === 'error' || !village) return <ErrorState onRetry={loadVillage} />;
 
-  // Pas de RelatedContent ici : le champ ACF "lieu associé" des contenus
-  // encyclopédiques ne peut cibler que région/département/commune, jamais un
-  // village -- cette section serait donc systématiquement (et durablement)
-  // vide. On évite l'appel réseau plutôt que d'afficher une section fantôme.
-  return <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} />;
+  return <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} cta={cta} />;
 }
-
-// ---------------------------------------------------------------------------
-// Aides
-// ---------------------------------------------------------------------------
 
 function refLabel(value: string | null | undefined): string | null {
   return value && value.trim() ? value : null;
@@ -332,16 +295,12 @@ function RelatedContent({ lieuId, onOpenContent }: { lieuId: number; onOpenConte
     return () => { active = false; };
   }, [lieuId]);
 
-  // La liste "/lieu/{id}/contenus" ne renvoie qu'un extrait (payload léger) ;
-  // on récupère la fiche complète (contenu, embed) avant de l'ouvrir plutôt
-  // que d'afficher un article tronqué. Si ça échoue, on ouvre quand même
-  // la version légère plutôt que de bloquer l'utilisateur.
   const openFull = (item: ContentItem) => {
     getContentDetail(item.id).then(onOpenContent).catch(() => onOpenContent(item));
   };
 
-  if (state === 'loading') return null; // discret : pas de spinner bloquant pour une section secondaire
-  if (!items.length) return null; // aucun contenu associé -> section simplement absente, rien d'inventé
+  if (state === 'loading') return null;
+  if (!items.length) return null;
 
   return (
     <View style={styles.relatedSection}>
