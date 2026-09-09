@@ -48,7 +48,24 @@ export const decodeHtmlEntities = (value: string): string => {
   }
   return result.replace(/[​-‍﻿]/g, '').replace(/[ \t]+\n/g, '\n').trim();
 };
-const stripHtml = (value: string) => decodeHtmlEntities(value.replace(/<[^>]*>/g, ''));
+
+/**
+ * Convert WordPress HTML to readable mobile text without collapsing block
+ * elements together. This matters especially for region/department excerpts
+ * where the API returns a table of contents followed by several paragraphs.
+ */
+const stripHtml = (value: string) => {
+  const withBreaks = value
+    .replace(/<\s*br\s*\/?>/gi, '\n')
+    .replace(/<\s*\/(?:p|div|section|article|li|h[1-6]|blockquote|ul|ol)\s*>/gi, '\n')
+    .replace(/<\s*(?:p|div|section|article|li|h[1-6]|blockquote|ul|ol)(?:\s[^>]*)?>/gi, '\n');
+  return decodeHtmlEntities(withBreaks.replace(/<[^>]*>/g, ''))
+    .replace(/\u00a0/g, ' ')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n[ \t]+/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+};
 function pickThumbnail(media: WordPressFeaturedMedia | undefined): string | undefined {
   if (!media) return undefined;
   const sizes = media.media_details?.sizes;
