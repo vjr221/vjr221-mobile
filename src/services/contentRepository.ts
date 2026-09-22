@@ -2,7 +2,21 @@ import { getJson } from './http';
 import { readCache, writeCache } from './cache';
 import { env } from '../config/env';
 import type { ContentItem, ContentType } from '../types/content';
-export type WordPressPost = { id: number; date: string; link: string; title: { rendered: string }; excerpt: { rendered: string }; content?: { rendered: string }; tags?: number[]; _embedded?: { 'wp:featuredmedia'?: { source_url: string }[] } };
+
+export type WordPressPost = {
+  id: number;
+  date: string;
+  link: string;
+  title: { rendered: string };
+  excerpt: { rendered: string };
+  content?: { rendered: string };
+  tags?: number[];
+  categories?: number[];
+  _embedded?: {
+    'wp:featuredmedia'?: { source_url: string }[];
+    'wp:term'?: Array<Array<{ id: number; taxonomy: string; slug: string; name: string }>>;
+  };
+};
 
 const decodeHtmlEntities = (value: string) => value
   .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
@@ -24,12 +38,52 @@ const toSafeRichText = (value: string) => {
   return normalizeText(withLinks.replace(/<[^>]*>/g, ' '));
 };
 
+/**
+ * VJR 221 WordPress category -> mobile content type.
+ * IDs are the current VJR 221 taxonomy source of truth.
+ */
+const CATEGORY_TYPE_MAP: Record<number, ContentType> = {
+  13: 'regions',
+  3: 'departments',
+  2: 'communes',
+  119: 'villages',
+  12: 'people',
+  8: 'heritage',
+  16: 'tourism',
+  6: 'gastronomy',
+};
+
+const CATEGORY_SLUG_TYPE_MAP: Record<string, ContentType> = {
+  'economie-agriculture': 'news',
+  'eco-agri-peche': 'news',
+  'histoire': 'history',
+  'culture': 'culture',
+  'actualites': 'news',
+  'stats-sante': 'news',
+  'sport': 'news',
+  'nature': 'nature',
+};
+
+function getPostType(post: WordPressPost): ContentType {
+  const embeddedTerms = post._embedded?.['wp:term']?.flat() ?? [];
+  const categoryTerms = embeddedTerms.filter((term) => term.taxonomy === 'category');
+  for (const categoryId of post.categories ?? []) {
+    const mapped = CATEGORY_TYPE_MAP[categoryId];
+    if (mapped) return mapped;
+  }
+  for (const term of categoryTerms) {
+    const mapped = CATEGORY_TYPE_MAP[term.id] ?? CATEGORY_SLUG_TYPE_MAP[term.slug];
+    if (mapped) return mapped;
+  }
+  return 'news';
+}
+
 export const toContentItem = (post: WordPressPost): ContentItem => ({
   id: post.id,
   title: toPlainText(post.title.rendered),
   excerpt: toPlainText(post.excerpt.rendered),
   content: post.content ? toSafeRichText(post.content.rendered) : undefined,
-  type: 'news',
+  type: getPostType(post),
   url: post.link,
   publishedAt: post.date,
   imageUrl: post._embedded?.['wp:featuredmedia']?.[0]?.source_url,
