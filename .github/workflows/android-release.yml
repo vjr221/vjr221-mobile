@@ -1,6 +1,8 @@
 name: Android APK Release
 
 on:
+  push:
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -32,12 +34,9 @@ jobs:
 
       - name: Use official VJR 221 app icon
         run: |
-          curl --fail --location --retry 3 --retry-delay 2 \
-            "https://vjr221.sn/wp-content/uploads/2026/08/app-mobile-1024x1024-1.png" \
-            --output assets/icon.png
+          curl --fail --location --retry 3 --retry-delay 2 "https://vjr221.sn/wp-content/uploads/2026/08/app-mobile-1024x1024-1.png" --output assets/icon.png
           file assets/icon.png
           test -s assets/icon.png
-          ls -lh assets/icon.png
 
       - name: Quality gates
         env:
@@ -63,16 +62,11 @@ jobs:
         run: |
           APK="android/app/build/outputs/apk/release/app-release.apk"
           test -f "$APK"
-          unzip -l "$APK" | grep -E 'assets/index\.android\.bundle|assets/index\.android.bundle.packager.map' || true
-          if ! unzip -l "$APK" | grep -q 'assets/index\.android\.bundle'; then
-            echo "ERROR: index.android.bundle is missing from the release APK"
-            exit 1
-          fi
+          unzip -l "$APK" | grep -q 'assets/index.android.bundle'
 
       - name: Verify launcher icon resources
         run: |
           test -f assets/icon.png
-          ls -lh assets/icon.png
           find android/app/src/main/res -type f \( -name '*launcher*' -o -name '*icon*' \) -print | head -80
 
       - name: Prepare public release asset
@@ -81,15 +75,10 @@ jobs:
           mkdir -p release
           cp android/app/build/outputs/apk/release/app-release.apk release/VJR221.apk
           sha256sum release/VJR221.apk | tee release/VJR221.apk.sha256
-          ls -lh release/VJR221.apk release/VJR221.apk.sha256
 
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="android-${GITHUB_SHA::12}"
-          gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 \
-            --repo "$GITHUB_REPOSITORY" \
-            --title "VJR221 Android APK ${GITHUB_SHA::7}" \
-            --notes "APK Android de production VJR221. Le bundle JavaScript est embarqué dans l'APK et l'icône officielle de la médiathèque VJR 221 est utilisée. Build généré depuis le commit ${GITHUB_SHA}." \
-            --prerelease
+          TAG="android-v1.2.0-${GITHUB_SHA::7}"
+          gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "$GITHUB_REPOSITORY" --title "VJR 221 Android 1.2.0" --notes "APK Android de production VJR 221 — version 1.2.0. Build généré depuis le commit ${GITHUB_SHA}." --prerelease
