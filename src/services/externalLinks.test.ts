@@ -10,6 +10,9 @@ describe('sanitizeExternalUrl', () => {
 
   it('accepts tel and mailto only through their dedicated kinds', () => {
     expect(sanitizeExternalUrl('tel:+221338000000', 'phone')).toBe('tel:+221338000000');
+    expect(sanitizeExternalUrl('tel:15', 'phone')).toBe('tel:15');
+    expect(sanitizeExternalUrl('tel:17', 'phone')).toBe('tel:17');
+    expect(sanitizeExternalUrl('tel:18', 'phone')).toBe('tel:18');
     expect(sanitizeExternalUrl('mailto:contact@vjr221.sn', 'email')).toBe('mailto:contact@vjr221.sn');
     expect(sanitizeExternalUrl('tel:+221338000000')).toBeNull();
     expect(sanitizeExternalUrl('mailto:contact@vjr221.sn')).toBeNull();

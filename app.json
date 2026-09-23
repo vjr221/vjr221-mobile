@@ -3,19 +3,19 @@
     "name": "VJR 221",
     "slug": "vjr221-mobile",
     "scheme": "vjr221",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "sn.vjr221.mobile",
-      "buildNumber": "6",
+      "buildNumber": "7",
       "associatedDomains": ["applinks:vjr221.sn"]
     },
     "android": {
       "package": "sn.vjr221.mobile",
-      "versionCode": 6,
+      "versionCode": 7,
       "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
