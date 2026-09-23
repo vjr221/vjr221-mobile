@@ -2,7 +2,7 @@ import { searchContent } from './contentRepository';
 import { getDirectoryEntries } from './directoryRepository';
 import { getRegions, getDepartments, getCommunes } from './geoRepository';
 import type { ContentItem } from '../types/content';
-import type { GeoEntity } from '../types/geo';
+import type { Commune, Department, Region } from '../types/geo';
 
 export type UnifiedGeoHit = {
   kind: 'region' | 'department' | 'commune';
@@ -18,7 +18,9 @@ export type UnifiedSearchResult = {
   fromCache: boolean;
 };
 
-function entityToHit(entity: GeoEntity): UnifiedGeoHit {
+type SearchableGeo = Region | Department | Commune;
+
+function entityToHit(entity: SearchableGeo): UnifiedGeoHit {
   if (entity.kind === 'region') {
     return { kind: 'region', id: entity.id, title: entity.title };
   }
