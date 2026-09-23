@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-import Constants from 'expo-constants';
 import { openExternalUrl } from '../../services/externalLinks';
 import { clearAppNetworkCache } from '../../services/appCache';
 import { AccountScreen } from '../account/AccountScreen';
@@ -15,6 +14,9 @@ import type { ThemePreference } from '../../services/themePreference';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 
 const SITE_URL = 'https://vjr221.sn';
+/** À garder aligné avec package.json / app.json. */
+const APP_VERSION = '1.4.0';
+
 const SITE_ACTIONS = [
   { key: 'directory', labelKey: 'siteDirectory' as TranslationKey, path: '/annuaire/' },
   { key: 'establishment', labelKey: 'siteEstablishment' as TranslationKey, path: '/ajouter-un-etablissement-a-l-annuaire/' },
@@ -24,11 +26,6 @@ const SITE_ACTIONS = [
   { key: 'about', labelKey: 'siteAbout' as TranslationKey, path: '/a-propos/' },
   { key: 'contact', labelKey: 'siteContact' as TranslationKey, path: '/contact/' },
 ] as const;
-
-const APP_VERSION =
-  Constants.expoConfig?.version ??
-  // fallback si le manifest n'est pas encore chargé
-  '1.4.0';
 
 export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale: (locale: 'fr' | 'wo') => void }) {
   const { t } = useI18n();
@@ -100,12 +97,7 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
 
       <Text style={styles.sectionTitle}>{t('dataSection')}</Text>
       <View style={styles.optionList}>
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel={t('clearCache')}
-          onPress={() => void onClearCache()}
-          style={[styles.option, styles.optionLast]}
-        >
+        <Pressable accessibilityRole="button" accessibilityLabel={t('clearCache')} onPress={() => void onClearCache()} style={[styles.option, styles.optionLast]}>
           <Icon name="settings" size={17} color={colors.terreStrong} />
           <Text style={styles.optionText}>
             {cacheState === 'working' ? t('clearCacheWorking') : cacheState === 'done' ? t('clearCacheDone') : t('clearCache')}
