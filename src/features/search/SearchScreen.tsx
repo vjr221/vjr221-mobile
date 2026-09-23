@@ -9,129 +9,21 @@ import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { useI18n } from '../../i18n/I18nProvider';
 import { useLatestRequest } from '../../hooks/useLatestRequest';
+import { useRefreshOnReconnect } from '../../hooks/useRefreshOnReconnect';
 
 type DetailContext = { items: ContentItem[]; index: number };
 type OpenContent = (item: ContentItem, context?: DetailContext) => void;
 
 export function SearchScreen({ onOpen }: { onOpen: OpenContent }) {
-  const { t } = useI18n();
-  const { colors } = useTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
-  const [term, setTerm] = useState('');
-  const [items, setItems] = useState<ContentItem[]>([]);
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
-  const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
-  const [loadingMore, setLoadingMore] = useState(false);
-  const [cached, setCached] = useState(false);
-  const [refreshing, setRefreshing] = useState(false);
+  const { t } = useI18n(); const { colors } = useTheme(); const styles = useMemo(() => makeStyles(colors), [colors]);
+  const [term, setTerm] = useState(''); const [items, setItems] = useState<ContentItem[]>([]); const [page, setPage] = useState(1); const [hasMore, setHasMore] = useState(false); const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle'); const [loadingMore, setLoadingMore] = useState(false); const [cached, setCached] = useState(false); const [refreshing, setRefreshing] = useState(false);
   const { start, isCurrent } = useLatestRequest();
-
-  const loadPage = useCallback((query: string, nextPage: number, opts: { silent?: boolean; append?: boolean } = {}) => {
-    const clean = query.trim();
-    if (!clean) return;
-
-    const requestId = start();
-    const append = Boolean(opts.append);
-
-    if (append) setLoadingMore(true);
-    else if (!opts.silent) setState('loading');
-
-    searchContent(clean, nextPage)
-      .then((result) => {
-        if (!isCurrent(requestId)) return;
-        setItems((current) => append ? [...current, ...result.items] : result.items);
-        setPage(nextPage);
-        setHasMore(result.items.length === 12);
-        setCached(result.fromCache && nextPage === 1);
-        setState('idle');
-      })
-      .catch(() => {
-        if (!isCurrent(requestId)) return;
-        if (!append) setState('error');
-      })
-      .finally(() => {
-        if (!isCurrent(requestId)) return;
-        setLoadingMore(false);
-        setRefreshing(false);
-      });
-  }, [start, isCurrent]);
-
-  useEffect(() => {
-    const clean = term.trim();
-    if (!clean) {
-      setItems([]);
-      setPage(1);
-      setHasMore(false);
-      setState('idle');
-      return;
-    }
-    const timer = setTimeout(() => loadPage(clean, 1), 350);
-    return () => clearTimeout(timer);
-  }, [term, loadPage]);
-
-  const onRefresh = useCallback(() => {
-    if (!term.trim()) return;
-    setRefreshing(true);
-    loadPage(term, 1, { silent: true });
-  }, [loadPage, term]);
-
-  const loadMore = useCallback(() => {
-    if (!term.trim() || !hasMore || loadingMore || state === 'loading') return;
-    loadPage(term, page + 1, { append: true });
-  }, [hasMore, loadingMore, loadPage, page, state, term]);
-
-  const listHeader = (
-    <View>
-      <Text style={styles.title}>{t('search')}</Text>
-      {cached ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}
-      <View style={styles.inputWrap}>
-        <Icon name="search" size={18} color={colors.inkSoft} />
-        <TextInput
-          accessibilityLabel={t('search')}
-          value={term}
-          onChangeText={setTerm}
-          placeholder={t('searchPlaceholder')}
-          placeholderTextColor={colors.inkSoft}
-          style={styles.input}
-          autoCapitalize="none"
-          returnKeyType="search"
-          onSubmitEditing={() => loadPage(term, 1)}
-        />
-        {term ? <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}><Icon name="close" size={16} color={colors.inkSoft} /></Pressable> : null}
-      </View>
-      {state === 'loading' ? <LoadingState /> : null}
-      {state === 'error' ? <ErrorState onRetry={() => loadPage(term, 1)} /> : null}
-      {state === 'idle' && term && !items.length ? <EmptyState message={t('noResults')} /> : null}
-    </View>
-  );
-
-  return (
-    <FlatList
-      data={items}
-      keyExtractor={(item) => `${item.type}-${item.id}`}
-      renderItem={({ item, index }) => <ContentCard item={item} onPress={() => onOpen(item, { items, index })} />}
-      contentContainerStyle={styles.content}
-      keyboardShouldPersistTaps="handled"
-      showsVerticalScrollIndicator={false}
-      ListHeaderComponent={listHeader}
-      ListFooterComponent={loadingMore ? <View style={styles.loadingMore}><ActivityIndicator size="small" color={colors.terreStrong} /></View> : <View style={styles.footerSpace} />}
-      onEndReached={loadMore}
-      onEndReachedThreshold={0.6}
-      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}
-    />
-  );
+  const loadPage = useCallback((query: string, nextPage: number, opts: { silent?: boolean; append?: boolean } = {}) => { const clean = query.trim(); if (!clean) return; const requestId = start(); const append = Boolean(opts.append); if (append) setLoadingMore(true); else if (!opts.silent) setState('loading'); searchContent(clean, nextPage).then((result) => { if (!isCurrent(requestId)) return; setItems((current) => append ? [...current, ...result.items] : result.items); setPage(nextPage); setHasMore(result.items.length === 12); setCached(result.fromCache && nextPage === 1); setState('idle'); }).catch(() => { if (!isCurrent(requestId) && append) return; if (!append) setState('error'); }).finally(() => { if (!isCurrent(requestId)) return; setLoadingMore(false); setRefreshing(false); }); }, [start, isCurrent]);
+  useRefreshOnReconnect(useCallback(() => { if (term.trim()) loadPage(term, 1, { silent: true }); }, [loadPage, term]));
+  useEffect(() => { const clean = term.trim(); if (!clean) { setItems([]); setPage(1); setHasMore(false); setState('idle'); return; } const timer = setTimeout(() => loadPage(clean, 1), 350); return () => clearTimeout(timer); }, [term, loadPage]);
+  const onRefresh = useCallback(() => { if (!term.trim()) return; setRefreshing(true); loadPage(term, 1, { silent: true }); }, [loadPage, term]);
+  const loadMore = useCallback(() => { if (!term.trim() || !hasMore || loadingMore || state === 'loading') return; loadPage(term, page + 1, { append: true }); }, [hasMore, loadingMore, loadPage, page, state, term]);
+  const listHeader = <View><Text style={styles.title}>{t('search')}</Text>{cached ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}<View style={styles.inputWrap}><Icon name="search" size={18} color={colors.inkSoft} /><TextInput accessibilityLabel={t('search')} value={term} onChangeText={setTerm} placeholder={t('searchPlaceholder')} placeholderTextColor={colors.inkSoft} style={styles.input} autoCapitalize="none" returnKeyType="search" onSubmitEditing={() => loadPage(term, 1)} />{term ? <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}><Icon name="close" size={16} color={colors.inkSoft} /></Pressable> : null}</View>{state === 'loading' ? <LoadingState /> : null}{state === 'error' ? <ErrorState onRetry={() => loadPage(term, 1)} /> : null}{state === 'idle' && term && !items.length ? <EmptyState message={t('noResults')} /> : null}</View>;
+  return <FlatList data={items} keyExtractor={(item) => `${item.type}-${item.id}`} renderItem={({ item, index }) => <ContentCard item={item} onPress={() => onOpen(item, { items, index })} />} contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false} ListHeaderComponent={listHeader} ListFooterComponent={loadingMore ? <View style={styles.loadingMore}><ActivityIndicator size="small" color={colors.terreStrong} /></View> : <View style={styles.footerSpace} />} onEndReached={loadMore} onEndReachedThreshold={0.6} refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />} />;
 }
-
-function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
-  return StyleSheet.create({
-    content: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg },
-    title: { color: colors.ink, fontSize: type.display - 6, fontFamily: fonts.displayBold, marginTop: spacing.md, marginBottom: spacing.md },
-    offline: { backgroundColor: colors.surfaceSoft, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.md },
-    offlineText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 12 },
-    inputWrap: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, backgroundColor: colors.surface, borderRadius: radii.pill, height: 52, paddingHorizontal: spacing.md, marginBottom: spacing.lg },
-    input: { flex: 1, color: colors.ink, fontFamily: fonts.body, fontSize: 16 },
-    loadingMore: { paddingVertical: spacing.lg, alignItems: 'center' },
-    footerSpace: { height: 24 },
-  });
-}
+function makeStyles(colors: ReturnType<typeof useTheme>['colors']) { return StyleSheet.create({ content: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg }, title: { color: colors.ink, fontSize: type.display - 6, fontFamily: fonts.displayBold, marginTop: spacing.md, marginBottom: spacing.md }, offline: { backgroundColor: colors.surfaceSoft, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.md }, offlineText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 12 }, inputWrap: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, backgroundColor: colors.surface, borderRadius: radii.pill, height: 52, paddingHorizontal: spacing.md, marginBottom: spacing.lg }, input: { flex: 1, color: colors.ink, fontFamily: fonts.body, fontSize: 16 }, loadingMore: { paddingVertical: spacing.lg, alignItems: 'center' }, footerSpace: { height: 24 } }); }
