@@ -34,6 +34,7 @@ export type GeoView =
 type LoadState = 'loading' | 'ready' | 'error';
 
 export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: () => void; onOpenContent: (item: ContentItem) => void; initialView?: GeoView }) {
+  const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [stack, setStack] = useState<GeoView[]>(initialView ? [{ kind: 'regions' }, initialView] : [{ kind: 'regions' }]);
@@ -68,7 +69,7 @@ export function GeoExplorer({ onExit, onOpenContent, initialView }: { onExit: ()
     <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
       <Pressable accessibilityRole="button" onPress={back} style={styles.backRow}>
         <Icon name="chevronLeft" size={16} color={colors.terreStrong} />
-        <Text style={styles.backText}>Retour</Text>
+        <Text style={styles.backText}>{t('back')}</Text>
       </Pressable>
       {Screen}
     </ScrollView>
@@ -147,7 +148,7 @@ function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onO
 
   return (
     <View>
-      <GeoDetailCard title={region.title} excerpt={region.excerpt} content={content} image={region.image} infos={region.infos} breadcrumb={t('region')} cta={cta} />
+      <GeoDetailCard title={region.title} excerpt={region.excerpt} content={content} image={region.image} infos={region.infos} breadcrumb={t('region')} cta={cta} gps={region.gps} />
       <Text style={styles.sectionTitle}>{t('departments')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -196,7 +197,7 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
 
   return (
     <View>
-      <GeoDetailCard title={department.title} excerpt={department.excerpt} content={content} image={department.image} infos={department.infos} breadcrumb={refLabel(department.region?.name) ?? t('department')} cta={cta} />
+      <GeoDetailCard title={department.title} excerpt={department.excerpt} content={content} image={department.image} infos={department.infos} breadcrumb={refLabel(department.region?.name) ?? t('department')} cta={cta} gps={department.gps} />
       <Text style={styles.sectionTitle}>{t('communes')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -245,7 +246,7 @@ function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpe
 
   return (
     <View>
-      <GeoDetailCard title={commune.title} excerpt={commune.excerpt} content={content} image={commune.image} infos={commune.infos} breadcrumb={refLabel(commune.departement?.name) ?? t('commune')} cta={cta} />
+      <GeoDetailCard title={commune.title} excerpt={commune.excerpt} content={content} image={commune.image} infos={commune.infos} breadcrumb={refLabel(commune.departement?.name) ?? t('commune')} cta={cta} gps={commune.gps} />
       <Text style={styles.sectionTitle}>{t('villages')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -275,7 +276,7 @@ function VillageScreen({ id }: { id: number }) {
   if (state === 'loading') return <LoadingState />;
   if (state === 'error' || !village) return <ErrorState onRetry={loadVillage} />;
 
-  return <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} cta={cta} />;
+  return <GeoDetailCard title={village.title} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} cta={cta} gps={village.gps} />;
 }
 
 function refLabel(value: string | null | undefined): string | null {
