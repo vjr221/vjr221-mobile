@@ -2,8 +2,6 @@ import { CATEGORY_TAXONOMY, getCategoryContent, toContentItem } from './contentR
 
 describe('CATEGORY_TAXONOMY', () => {
   it('couvre tous les univers éditoriaux connectés à Explorer', () => {
-    // Régression : si une entrée disparait ici sans que categories.ts soit
-    // mis à jour, la tuile correspondante ouvrirait un écran vide.
     expect(Object.keys(CATEGORY_TAXONOMY).sort()).toEqual(
       ['culture', 'events', 'gastronomy', 'heritage', 'history', 'nature', 'news', 'people', 'tourism'].sort()
     );
@@ -34,9 +32,6 @@ describe('toContentItem', () => {
   });
 
   it('décode les entités HTML numériques (y compris les emojis multi-code-points) au lieu de les afficher brutes', () => {
-    // Régression : WordPress renvoie parfois des emojis en entités numériques
-    // (&#128279; = 🔗, &#9999;&#65039; = ✏️) qui s'affichaient littéralement
-    // dans l'app avant décodage.
     const item = toContentItem({
       id: 2,
       date: '2026-01-01T00:00:00',
@@ -57,8 +52,21 @@ describe('toContentItem', () => {
       excerpt: { rendered: '&laquo;&nbsp;Vraiment&nbsp;&raquo; &mdash; test&hellip;' },
     });
     expect(item.title).toBe("Caéci & l'autre");
-    // &nbsp; se décode en insécable réelle (U+00A0), pas en espace normale ;
-    // construit via   explicite pour éviter toute ambiguïté d'espace.
     expect(item.excerpt).toBe('« Vraiment » — test…');
+  });
+
+  it('reconstruit la structure quand le titre et extrait sont doublement encodés', () => {
+    const item = toContentItem({
+      id: 4,
+      date: '2026-01-01T00:00:00',
+      link: 'https://vjr221.sn/region-de-ziguinchor/',
+      title: { rendered: '&lt;strong&gt;Région de Ziguinchor&lt;/strong&gt;' },
+      excerpt: { rendered: '&lt;p&gt;Présentation générale&lt;/p&gt;&lt;p&gt;Situation géographique&lt;/p&gt;' },
+      content: { rendered: '&lt;h2&gt;Présentation générale&lt;/h2&gt;&lt;p&gt;La région est située en Casamance.&lt;/p&gt;' },
+    });
+    expect(item.title).toBe('Région de Ziguinchor');
+    expect(item.excerpt).toBe('Présentation générale\nSituation géographique');
+    expect(item.contentBlocks?.some((block) => block.kind === 'heading')).toBe(true);
+    expect(item.contentBlocks?.some((block) => block.kind === 'paragraph')).toBe(true);
   });
 });
