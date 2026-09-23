@@ -164,7 +164,10 @@ export function AppNavigator() {
         initialDirectoryCategory={exploreSeed.directoryCategory}
       />
     ) : tab === 'search' ? (
-      <SearchScreen onOpen={open} />
+      <SearchScreen
+        onOpen={open}
+        onOpenGeo={(view) => goToExplore({ collection: 'regions', geoView: view })}
+      />
     ) : tab === 'favorites' ? (
       <FavoritesScreen onOpen={open} />
     ) : (
