@@ -13,7 +13,15 @@ import { DistanceLabel } from './DistanceLabel';
  * coordonnées et propose l'ouverture de la navigation externe. N'affiche
  * jamais rien si les coordonnées sont absentes (aucun emplacement inventé).
  */
-export function LocationPreview({ coordinates, label, fromCoordinates }: { coordinates: Coordinates | null; label?: string; fromCoordinates?: Coordinates | null }) {
+export function LocationPreview({
+  coordinates,
+  label,
+  fromCoordinates,
+}: {
+  coordinates: Coordinates | null;
+  label?: string;
+  fromCoordinates?: Coordinates | null;
+}) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -26,7 +34,9 @@ export function LocationPreview({ coordinates, label, fromCoordinates }: { coord
       </View>
       <View style={styles.info}>
         <Text style={styles.title}>{label ?? t('location')}</Text>
-        <Text style={styles.coords}>{coordinates.lat.toFixed(5)}, {coordinates.lng.toFixed(5)}</Text>
+        <Text style={styles.coords}>
+          {coordinates.lat.toFixed(5)}, {coordinates.lng.toFixed(5)}
+        </Text>
         {fromCoordinates ? <DistanceLabel from={fromCoordinates} to={coordinates} /> : null}
       </View>
       <OpenDirectionsAction coordinates={coordinates} label={label} />
@@ -40,8 +50,13 @@ export function OpenDirectionsAction({ coordinates, label }: { coordinates: Coor
   const styles = useMemo(() => makeStyles(colors), [colors]);
   if (!coordinates) return null;
   return (
-    <Pressable accessibilityRole="button" style={styles.button} onPress={() => openExternalNavigation(coordinates, label)}>
-      <Text style={styles.buttonText}>{t('location')}</Text>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={t('openMap')}
+      style={styles.button}
+      onPress={() => void openExternalNavigation(coordinates, label)}
+    >
+      <Text style={styles.buttonText}>{t('openMap')}</Text>
       <Icon name="chevronRight" size={14} color={colors.white} />
     </Pressable>
   );
@@ -49,12 +64,35 @@ export function OpenDirectionsAction({ coordinates, label }: { coordinates: Coor
 
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
-    card: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.surfaceSoft, borderRadius: radii.lg, padding: spacing.md, marginTop: spacing.sm, gap: spacing.sm },
-    iconWrap: { width: 36, height: 36, borderRadius: radii.pill, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center' },
+    card: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: colors.surfaceSoft,
+      borderRadius: radii.lg,
+      padding: spacing.md,
+      marginTop: spacing.sm,
+      gap: spacing.sm,
+    },
+    iconWrap: {
+      width: 36,
+      height: 36,
+      borderRadius: radii.pill,
+      backgroundColor: colors.surface,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
     info: { flex: 1 },
     title: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 14 },
     coords: { color: colors.inkSoft, fontFamily: fonts.mono, fontSize: 11.5, marginTop: 2 },
-    button: { flexDirection: 'row', alignItems: 'center', gap: 4, backgroundColor: colors.terre, borderRadius: radii.pill, paddingHorizontal: spacing.md, paddingVertical: 10 },
+    button: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: 4,
+      backgroundColor: colors.terre,
+      borderRadius: radii.pill,
+      paddingHorizontal: spacing.md,
+      paddingVertical: 10,
+    },
     buttonText: { color: colors.white, fontFamily: fonts.bodySemiBold, fontSize: 13 },
   });
 }

@@ -22,10 +22,22 @@ export function FavoritesScreen({ onOpen }: { onOpen: OpenContent }) {
       <Text style={styles.pageTitle}>{t('favorites')}</Text>
       <Text style={styles.intro}>{t('favoritesIntro')}</Text>
       {items.length ? (
-        items.map((item, index) => <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={() => onOpen(item, { items, index })} />)
+        <>
+          <View style={styles.countRow}>
+            <Text style={styles.countText}>
+              {items.length} {items.length === 1 ? t('favoriteOne') : t('favoriteMany')}
+            </Text>
+            <Text style={styles.offlineHint}>{t('favoritesOfflineHint')}</Text>
+          </View>
+          {items.map((item, index) => (
+            <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={() => onOpen(item, { items, index })} />
+          ))}
+        </>
       ) : (
         <View style={styles.empty}>
-          <View style={styles.emptyIcon}><Icon name="heart" size={24} color={colors.terreStrong} /></View>
+          <View style={styles.emptyIcon}>
+            <Icon name="heart" size={24} color={colors.terreStrong} />
+          </View>
           <Text style={styles.emptyText}>{t('favoritesEmpty')}</Text>
         </View>
       )}
@@ -37,9 +49,46 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
     page: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg, flexGrow: 1 },
     pageTitle: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.md },
-    intro: { color: colors.inkSoft, marginTop: 4, marginBottom: spacing.lg, fontFamily: fonts.body, fontSize: type.bodyLg, lineHeight: 22 },
-    empty: { alignItems: 'center', paddingVertical: spacing.xxl, backgroundColor: colors.surfaceSoft, borderRadius: radii.xl, gap: spacing.sm },
-    emptyIcon: { width: 52, height: 52, borderRadius: radii.pill, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center' },
-    emptyText: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: type.body, textAlign: 'center', paddingHorizontal: spacing.xl, lineHeight: 20 },
+    intro: {
+      color: colors.inkSoft,
+      marginTop: 4,
+      marginBottom: spacing.md,
+      fontFamily: fonts.body,
+      fontSize: type.bodyLg,
+      lineHeight: 22,
+    },
+    countRow: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: spacing.sm,
+      marginBottom: spacing.md,
+    },
+    countText: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 13 },
+    offlineHint: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: 12 },
+    empty: {
+      alignItems: 'center',
+      paddingVertical: spacing.xxl,
+      backgroundColor: colors.surfaceSoft,
+      borderRadius: radii.xl,
+      gap: spacing.sm,
+    },
+    emptyIcon: {
+      width: 52,
+      height: 52,
+      borderRadius: radii.pill,
+      backgroundColor: colors.surface,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    emptyText: {
+      color: colors.inkSoft,
+      fontFamily: fonts.body,
+      fontSize: type.body,
+      textAlign: 'center',
+      paddingHorizontal: spacing.xl,
+      lineHeight: 20,
+    },
   });
 }

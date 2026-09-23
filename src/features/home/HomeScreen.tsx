@@ -99,6 +99,37 @@ export function HomeScreen({
           </Pressable>
         </View>
       </LinearGradient>
+
+      <View style={styles.quickRow}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t('regions')}
+          onPress={() => onExplore('regions')}
+          style={({ pressed }) => [styles.quickCard, pressed && styles.categoryPressed]}
+        >
+          <Icon name="territoires" size={18} color={colors.terreStrong} />
+          <Text style={styles.quickText}>{t('regions')}</Text>
+        </Pressable>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t('directory')}
+          onPress={() => onExplore('directory')}
+          style={({ pressed }) => [styles.quickCard, pressed && styles.categoryPressed]}
+        >
+          <Icon name="annuaire" size={18} color={colors.terreStrong} />
+          <Text style={styles.quickText}>{t('directory')}</Text>
+        </Pressable>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t('search')}
+          onPress={onSearch}
+          style={({ pressed }) => [styles.quickCard, pressed && styles.categoryPressed]}
+        >
+          <Icon name="search" size={18} color={colors.terreStrong} />
+          <Text style={styles.quickText}>{t('search')}</Text>
+        </Pressable>
+      </View>
+
       <SectionHeader onSeeAll={() => onExplore()} seeAllLabel={t('explore')}>
         {t('categories')}
       </SectionHeader>
@@ -174,6 +205,19 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     ctaPressed: { opacity: 0.88 },
     ctaText: { fontFamily: fonts.bodyBold, color: colors.savane, fontSize: 14 },
     emergencyCtaText: { fontFamily: fonts.bodySemiBold, color: colors.onSavane, fontSize: 13 },
+    quickRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.lg, marginBottom: spacing.sm },
+    quickCard: {
+      flex: 1,
+      backgroundColor: colors.surface,
+      borderRadius: radii.lg,
+      paddingVertical: spacing.md,
+      paddingHorizontal: spacing.sm,
+      alignItems: 'center',
+      gap: 6,
+      minHeight: 72,
+      justifyContent: 'center',
+    },
+    quickText: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 12, textAlign: 'center' },
     categoryRow: { gap: spacing.sm, paddingVertical: spacing.xs, paddingRight: spacing.md },
     category: {
       width: 132,
