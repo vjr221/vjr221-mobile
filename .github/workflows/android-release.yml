@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: Checkout repository (native git)
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git init .
-          git remote add origin "https://x-access-token:\${GH_TOKEN}@github.com/\${GITHUB_REPOSITORY}.git"
-          git fetch --depth=1 origin "\${GITHUB_SHA}"
-          git checkout --detach "\${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach "${GITHUB_SHA}"
 
       - name: Configure Java 17
         run: |
@@ -42,8 +42,10 @@ jobs:
       - name: Use official VJR 221 app icon
         run: |
           curl --fail --location --retry 3 --retry-delay 2 "https://vjr221.sn/wp-content/uploads/2026/08/app-mobile-1024x1024-1.png" --output assets/icon.png
-          file assets/icon.png
+          cp assets/icon.png assets/splash-icon.png
+          file assets/icon.png assets/splash-icon.png
           test -s assets/icon.png
+          test -s assets/splash-icon.png
 
       - name: Quality gates
         env:
@@ -86,7 +88,7 @@ jobs:
 
       - name: Extract Android signing certificate fingerprint
         run: |
-          APKSIGNER="$(find "\${ANDROID_HOME:-$ANDROID_SDK_ROOT}/build-tools" -type f -name apksigner -print | sort -V | tail -1)"
+          APKSIGNER="$(find "${ANDROID_HOME:-$ANDROID_SDK_ROOT}/build-tools" -type f -name apksigner -print | sort -V | tail -1)"
           test -x "$APKSIGNER"
           CERT_SHA256="$("$APKSIGNER" verify --print-certs release/VJR221.apk 2>&1 | awk -F': ' '/SHA-256 digest:/{print $2; exit}')"
           test -n "$CERT_SHA256"
@@ -95,13 +97,17 @@ jobs:
 
       - name: Publish GitHub release
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="android-v1.2.0-\${GITHUB_SHA::7}"
-          NOTES="APK Android de production VJR 221 — version 1.2.0. Build généré depuis le commit \${GITHUB_SHA}.\n\nEmpreinte SHA-256 du certificat de signature Android : \${ANDROID_CERT_SHA256}"
-          if gh release view "$TAG" --repo "\${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
+          TAG="android-v1.2.1-${GITHUB_SHA::7}"
+          NOTES="APK Android de production VJR 221 — version 1.2.1. Build généré depuis le commit ${GITHUB_SHA}.
+
+Correctifs : rendu riche WordPress, détection du HTML doublement encodé, extraits redondants masqués et identité de chargement VJR 221.
+
+Empreinte SHA-256 du certificat de signature Android : ${ANDROID_CERT_SHA256}"
+          if gh release view "$TAG" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
             echo "Release $TAG already exists; replacing release assets."
-            gh release upload "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "\${GITHUB_REPOSITORY}" --clobber
+            gh release upload "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --clobber
           else
-            gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "\${GITHUB_REPOSITORY}" --title "VJR 221 Android 1.2.0" --notes "$NOTES" --prerelease
+            gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android 1.2.1" --notes "$NOTES" --prerelease
           fi
