@@ -30,11 +30,20 @@ function entityToHit(entity: GeoEntity): UnifiedGeoHit {
       subtitle: entity.region?.name,
     };
   }
+  if (entity.kind === 'commune') {
+    return {
+      kind: 'commune',
+      id: entity.id,
+      title: entity.title,
+      subtitle: entity.departement?.name ?? entity.region?.name,
+    };
+  }
+  // village — on l'expose comme entrée « commune » pour ouvrir le détail geo
   return {
     kind: 'commune',
     id: entity.id,
     title: entity.title,
-    subtitle: entity.departement?.name ?? entity.region?.name,
+    subtitle: entity.commune?.name,
   };
 }
 
