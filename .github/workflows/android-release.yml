@@ -1,8 +1,6 @@
 name: Android APK Release
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -45,6 +43,7 @@ jobs:
           PACKAGE_VERSION="$(node -p "require('./package.json').version")"
           test "$APP_VERSION" = "$PACKAGE_VERSION"
           echo "VJR 221 release version: $APP_VERSION"
+          echo "APP_VERSION=$APP_VERSION" >> "$GITHUB_ENV"
 
       - name: Use official VJR 221 app icon
         run: |
@@ -108,13 +107,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="android-v1.2.1-${GITHUB_SHA::7}"
-          NOTES="APK Android de production VJR 221 — version 1.2.1. Build généré depuis le commit ${GITHUB_SHA}."
-          NOTES="${NOTES} Correctifs : rendu riche WordPress, détection du HTML doublement encodé, extraits redondants masqués et identité de chargement VJR 221."
+          TAG="android-v${APP_VERSION}-${GITHUB_SHA::7}"
+          NOTES="APK Android de production VJR 221 — version ${APP_VERSION}. Build généré depuis le commit ${GITHUB_SHA}."
+          NOTES="${NOTES} Nouveautés : écran Urgences nationales (15/17/18), i18n des états d'erreur et des liens site, accès Urgences depuis l'accueil."
           NOTES="${NOTES} Empreinte SHA-256 du certificat de signature Android : ${ANDROID_CERT_SHA256}"
           if gh release view "$TAG" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
             echo "Release $TAG already exists; replacing release assets."
             gh release upload "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --clobber
           else
-            gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android 1.2.1" --notes "$NOTES" --prerelease
+            gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android ${APP_VERSION}" --notes "$NOTES" --prerelease
           fi

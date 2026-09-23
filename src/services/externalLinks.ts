@@ -9,7 +9,8 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
   const url = normalize(value);
   if (!url) return null;
 
-  if (kind === 'phone') return /^tel:\+?[0-9][0-9 .()\-]{5,}$/.test(url) ? url : null;
+  // Numéros d'urgence courts (15, 17, 18) et numéros internationaux.
+  if (kind === 'phone') return /^tel:\+?[0-9][0-9 .()\-]{1,}$/.test(url) ? url : null;
   if (kind === 'email') return /^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/i.test(url) ? url : null;
 
   if (kind === 'map') {
