@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { useI18n } from '../i18n/I18nProvider';
 import { useTheme } from '../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../theme/tokens';
 import { Button } from './Button';
@@ -22,13 +23,14 @@ export function EmptyState({ message }: { message: string }) {
 }
 
 export function ErrorState({ onRetry }: { onRetry: () => void }) {
+  const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <View style={styles.box}>
-      <Text style={styles.text}>Impossible de charger ce contenu.</Text>
+      <Text style={styles.text}>{t('loadError')}</Text>
       <Button variant="secondary" size="sm" onPress={onRetry} style={styles.retry}>
-        Réessayer
+        {t('retry')}
       </Button>
     </View>
   );
