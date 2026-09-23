@@ -1,7 +1,14 @@
-export type ExternalLinkKind = 'web' | 'phone' | 'email' | 'map';
+export type ExternalLinkKind = 'web' | 'phone' | 'email' | 'map' | 'whatsapp';
 
 function normalize(value: string): string {
   return value.trim().replace(/[\u0000-\u001F\u007F]/g, '');
+}
+
+/** Construit une URL WhatsApp sécurisée à partir d'un numéro brut. */
+export function buildWhatsAppUrl(phone: string): string | null {
+  const digits = phone.replace(/\D+/g, '');
+  if (digits.length < 8 || digits.length > 15) return null;
+  return `https://wa.me/${digits}`;
 }
 
 export function sanitizeExternalUrl(value: string | null | undefined, kind: ExternalLinkKind = 'web'): string | null {
@@ -12,6 +19,12 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
   // Numéros d'urgence courts (15, 17, 18) et numéros internationaux.
   if (kind === 'phone') return /^tel:\+?[0-9][0-9 .()\-]{1,}$/.test(url) ? url : null;
   if (kind === 'email') return /^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/i.test(url) ? url : null;
+
+  if (kind === 'whatsapp') {
+    if (/^https:\/\/wa\.me\/[0-9]{8,15}$/i.test(url)) return url;
+    if (/^whatsapp:\/\/send\?phone=[0-9]{8,15}/i.test(url)) return url;
+    return buildWhatsAppUrl(url);
+  }
 
   if (kind === 'map') {
     if (/^geo:-?\d+(?:\.\d+)?,-?\d+(?:\.\d+)?(?:\?[^\s]*)?$/i.test(url)) return url;
