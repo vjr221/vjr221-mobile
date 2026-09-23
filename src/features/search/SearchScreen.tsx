@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Pressable, RefreshControl, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, FlatList, Pressable, RefreshControl, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
 import { Icon } from '../../components/icons/Icon';
@@ -19,52 +19,107 @@ export function SearchScreen({ onOpen }: { onOpen: OpenContent }) {
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [term, setTerm] = useState('');
   const [items, setItems] = useState<ContentItem[]>([]);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(false);
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
+  const [loadingMore, setLoadingMore] = useState(false);
   const [cached, setCached] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const { start, isCurrent } = useLatestRequest();
 
-  const load = useCallback((query = term, opts: { silent?: boolean } = {}) => {
-    if (!query.trim()) return;
-    const id = start();
-    if (!opts.silent) setState('loading');
-    searchContent(query)
+  const loadPage = useCallback((query: string, nextPage: number, opts: { silent?: boolean; append?: boolean } = {}) => {
+    const clean = query.trim();
+    if (!clean) return;
+
+    const requestId = start();
+    const append = Boolean(opts.append);
+
+    if (append) setLoadingMore(true);
+    else if (!opts.silent) setState('loading');
+
+    searchContent(clean, nextPage)
       .then((result) => {
-        if (!isCurrent(id)) return;
-        setItems(result.items);
-        setCached(result.fromCache);
+        if (!isCurrent(requestId)) return;
+        setItems((current) => append ? [...current, ...result.items] : result.items);
+        setPage(nextPage);
+        setHasMore(result.items.length === 12);
+        setCached(result.fromCache && nextPage === 1);
         setState('idle');
       })
-      .catch(() => { if (isCurrent(id)) setState('error'); })
-      .finally(() => { if (isCurrent(id)) setRefreshing(false); });
-  }, [term, start, isCurrent]);
+      .catch(() => {
+        if (!isCurrent(requestId)) return;
+        if (!append) setState('error');
+      })
+      .finally(() => {
+        if (!isCurrent(requestId)) return;
+        setLoadingMore(false);
+        setRefreshing(false);
+      });
+  }, [start, isCurrent]);
 
   useEffect(() => {
-    if (!term.trim()) return;
-    const timer = setTimeout(() => load(term), 350);
+    const clean = term.trim();
+    if (!clean) {
+      setItems([]);
+      setPage(1);
+      setHasMore(false);
+      setState('idle');
+      return;
+    }
+    const timer = setTimeout(() => loadPage(clean, 1), 350);
     return () => clearTimeout(timer);
-  }, [term, load]);
+  }, [term, loadPage]);
 
   const onRefresh = useCallback(() => {
     if (!term.trim()) return;
     setRefreshing(true);
-    load(term, { silent: true });
-  }, [load, term]);
+    loadPage(term, 1, { silent: true });
+  }, [loadPage, term]);
 
-  return (
-    <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled" refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}>
+  const loadMore = useCallback(() => {
+    if (!term.trim() || !hasMore || loadingMore || state === 'loading') return;
+    loadPage(term, page + 1, { append: true });
+  }, [hasMore, loadingMore, loadPage, page, state, term]);
+
+  const listHeader = (
+    <View>
       <Text style={styles.title}>{t('search')}</Text>
       {cached ? <View style={styles.offline}><Text style={styles.offlineText}>{t('offline')}</Text></View> : null}
       <View style={styles.inputWrap}>
         <Icon name="search" size={18} color={colors.inkSoft} />
-        <TextInput accessibilityLabel={t('search')} value={term} onChangeText={setTerm} placeholder={t('searchPlaceholder')} placeholderTextColor={colors.inkSoft} style={styles.input} autoCapitalize="none" returnKeyType="search" onSubmitEditing={() => load()} />
+        <TextInput
+          accessibilityLabel={t('search')}
+          value={term}
+          onChangeText={setTerm}
+          placeholder={t('searchPlaceholder')}
+          placeholderTextColor={colors.inkSoft}
+          style={styles.input}
+          autoCapitalize="none"
+          returnKeyType="search"
+          onSubmitEditing={() => loadPage(term, 1)}
+        />
         {term ? <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => setTerm('')}><Icon name="close" size={16} color={colors.inkSoft} /></Pressable> : null}
       </View>
       {state === 'loading' ? <LoadingState /> : null}
-      {state === 'error' ? <ErrorState onRetry={() => load()} /> : null}
+      {state === 'error' ? <ErrorState onRetry={() => loadPage(term, 1)} /> : null}
       {state === 'idle' && term && !items.length ? <EmptyState message={t('noResults')} /> : null}
-      {items.map((item, index) => <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={() => onOpen(item, { items, index })} />)}
-    </ScrollView>
+    </View>
+  );
+
+  return (
+    <FlatList
+      data={items}
+      keyExtractor={(item) => `${item.type}-${item.id}`}
+      renderItem={({ item, index }) => <ContentCard item={item} onPress={() => onOpen(item, { items, index })} />}
+      contentContainerStyle={styles.content}
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={false}
+      ListHeaderComponent={listHeader}
+      ListFooterComponent={loadingMore ? <View style={styles.loadingMore}><ActivityIndicator size="small" color={colors.terreStrong} /></View> : <View style={styles.footerSpace} />}
+      onEndReached={loadMore}
+      onEndReachedThreshold={0.6}
+      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />}
+    />
   );
 }
 
@@ -76,5 +131,7 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     offlineText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 12 },
     inputWrap: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, backgroundColor: colors.surface, borderRadius: radii.pill, height: 52, paddingHorizontal: spacing.md, marginBottom: spacing.lg },
     input: { flex: 1, color: colors.ink, fontFamily: fonts.body, fontSize: 16 },
+    loadingMore: { paddingVertical: spacing.lg, alignItems: 'center' },
+    footerSpace: { height: 24 },
   });
 }
