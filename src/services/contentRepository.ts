@@ -24,7 +24,8 @@ const NAMED_HTML_ENTITIES: Record<string, string> = {
   Ugrave: 'Ù', Ucirc: 'Û', Uuml: 'Ü', Ccedil: 'Ç', Ntilde: 'Ñ', oelig: 'œ', OElig: 'Œ', aelig: 'æ', AElig: 'Æ', copy: '©', reg: '®', trade: '™', bull: '•', middot: '·',
   th: 'th',
 };
-export const decodeHtmlEntities = (value: string): string => {
+
+export const decodeHtmlEntities = (value: string, options: { trim?: boolean } = {}): string => {
   let result = value;
   for (let pass = 0; pass < 3; pass += 1) {
     const decoded = result.replace(/&(#x[0-9a-fA-F]+|#[0-9]+|[a-zA-Z][a-zA-Z0-9]*);?/g, (match, entity: string) => {
@@ -46,17 +47,13 @@ export const decodeHtmlEntities = (value: string): string => {
       if (!repaired.includes('�')) result = repaired;
     } catch { /* conserver le texte original */ }
   }
-  return result.replace(/[​-‍﻿]/g, '').replace(/[ \t]+\n/g, '\n').trim();
+  result = result.replace(/[​-‍﻿]/g, '').replace(/[ \t]+\n/g, '\n');
+  return options.trim === false ? result : result.trim();
 };
 
-/**
- * Convert WordPress HTML to readable mobile text without collapsing block
- * elements together. This matters especially for region/department excerpts
- * where the API returns a table of contents followed by several paragraphs.
- */
 const stripHtml = (value: string) => {
   const withBreaks = value
-    .replace(/<\s*br\s*\/?>/gi, '\n')
+    .replace(/<\s*br\s*\/?>(?)/gi, '\n')
     .replace(/<\s*\/(?:p|div|section|article|li|h[1-6]|blockquote|ul|ol)\s*>/gi, '\n')
     .replace(/<\s*(?:p|div|section|article|li|h[1-6]|blockquote|ul|ol)(?:\s[^>]*)?>/gi, '\n');
   return decodeHtmlEntities(withBreaks.replace(/<[^>]*>/g, ''))
@@ -65,19 +62,34 @@ const stripHtml = (value: string) => {
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 };
+
 function pickThumbnail(media: WordPressFeaturedMedia | undefined): string | undefined {
   if (!media) return undefined;
   const sizes = media.media_details?.sizes;
   return sizes?.medium?.source_url ?? sizes?.medium_large?.source_url ?? media.source_url;
 }
+
 export const toContentItem = (post: WordPressPost): ContentItem => {
   const media = post._embedded?.['wp:featuredmedia']?.[0];
   const rawContent = post.content?.rendered;
   const contentBlocks = rawContent ? parseRichContent(rawContent) : undefined;
-  return { id: post.id, title: stripHtml(post.title.rendered), excerpt: stripHtml(post.excerpt.rendered), content: rawContent ? stripHtml(rawContent) : undefined, contentBlocks: contentBlocks?.length ? contentBlocks : undefined, type: 'news', url: post.link, publishedAt: post.date, imageUrl: media?.source_url, thumbnailUrl: pickThumbnail(media) };
+  return {
+    id: post.id,
+    title: stripHtml(post.title.rendered),
+    excerpt: stripHtml(post.excerpt.rendered),
+    content: rawContent ? stripHtml(rawContent) : undefined,
+    contentBlocks: contentBlocks?.length ? contentBlocks : undefined,
+    type: 'news',
+    url: post.link,
+    publishedAt: post.date,
+    imageUrl: media?.source_url,
+    thumbnailUrl: pickThumbnail(media),
+  };
 };
+
 export type CollectionResult = { items: ContentItem[]; fromCache: boolean; stale: boolean };
 const CACHE_TTL = 15 * 60 * 1000;
+
 async function getPosts(query: string, cacheKey: string): Promise<CollectionResult> {
   const result = await withCacheFallback(cacheKey, CACHE_TTL, async () => {
     const posts = await getJson<WordPressPost[]>(`/posts?${query}&_embed`);
@@ -85,16 +97,102 @@ async function getPosts(query: string, cacheKey: string): Promise<CollectionResu
   });
   return { items: result.value, fromCache: result.fromCache, stale: result.stale };
 }
-export async function getFeaturedContent(): Promise<CollectionResult> { return getPosts('per_page=6', 'home:featured'); }
-export async function searchContent(term: string, page = 1): Promise<CollectionResult> { const clean = term.trim(); if (!clean) return { items: [], fromCache: false, stale: false }; return getPosts(`per_page=12&page=${page}&search=${encodeURIComponent(clean)}`, `search:${clean}:${page}`); }
-export async function getContentDetail(id: number): Promise<ContentItem> { const result = await getPosts(`include=${id}&per_page=1`, `detail:${id}`); const item = result.items[0]; if (!item) throw new Error('Contenu introuvable.'); return item; }
-interface RawLieuContentItem { id: number; title: string; excerpt: string | null; permalink: string; image: { url: string; thumb: string; alt: string | null } | null; type: string; category: { id: number; slug: string; name: string } | null; }
+
+export async function getFeaturedContent(): Promise<CollectionResult> {
+  return getPosts('per_page=6', 'home:featured');
+}
+
+export async function searchContent(term: string, page = 1): Promise<CollectionResult> {
+  const clean = term.trim();
+  if (!clean) return { items: [], fromCache: false, stale: false };
+  return getPosts(`per_page=12&page=${page}&search=${encodeURIComponent(clean)}`, `search:${clean}:${page}`);
+}
+
+export async function getContentDetail(id: number): Promise<ContentItem> {
+  const result = await getPosts(`include=${id}&per_page=1`, `detail:${id}`);
+  const item = result.items[0];
+  if (!item) throw new Error('Contenu introuvable.');
+  return item;
+}
+
+interface RawLieuContentItem {
+  id: number;
+  title: string;
+  excerpt: string | null;
+  permalink: string;
+  image: { url: string; thumb: string; alt: string | null } | null;
+  type: string;
+  category: { id: number; slug: string; name: string } | null;
+}
+
 const KNOWN_LIEU_TYPES: ContentType[] = ['tourism', 'heritage', 'gastronomy', 'people', 'news'];
-function toLieuContentItem(raw: RawLieuContentItem): ContentItem { const type = (KNOWN_LIEU_TYPES as string[]).includes(raw.type) ? (raw.type as ContentType) : 'news'; return { id: raw.id, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : undefined, imageUrl: raw.image?.url, thumbnailUrl: raw.image?.thumb, type, url: raw.permalink, tags: raw.category ? [decodeHtmlEntities(raw.category.name)] : undefined }; }
-export async function getLieuContent(lieuId: number): Promise<CollectionResult> { const result = await withCacheFallback(`lieu-content:${lieuId}`, CACHE_TTL, async () => { const raw = await getJson<{ items: RawLieuContentItem[] }>(`/lieu/${lieuId}/contenus`, undefined, env.geoApiBaseUrl); return raw.items.map(toLieuContentItem); }); return { items: result.value, fromCache: result.fromCache, stale: result.stale }; }
-export async function resolveContentBySlug(slug: string): Promise<ContentItem | null> { const posts = await getJson<WordPressPost[]>(`/posts?slug=${encodeURIComponent(slug)}&_embed`); const post = posts[0]; return post ? toContentItem(post) : null; }
-export const CATEGORY_TAXONOMY: Partial<Record<ContentType, number[]>> = { tourism: [16, 108, 41, 106, 40, 17], heritage: [8, 103, 105, 102], gastronomy: [6, 97, 209, 99], history: [14], nature: [10, 5, 120], culture: [11, 130, 134], events: [4], people: [12, 34, 35, 33, 38, 39, 303, 302, 312, 360, 335], news: [25] };
+
+function toLieuContentItem(raw: RawLieuContentItem): ContentItem {
+  const type = (KNOWN_LIEU_TYPES as string[]).includes(raw.type) ? (raw.type as ContentType) : 'news';
+  return {
+    id: raw.id,
+    title: decodeHtmlEntities(raw.title),
+    excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : undefined,
+    imageUrl: raw.image?.url,
+    thumbnailUrl: raw.image?.thumb,
+    type,
+    url: raw.permalink,
+    tags: raw.category ? [decodeHtmlEntities(raw.category.name)] : undefined,
+  };
+}
+
+export async function getLieuContent(lieuId: number): Promise<CollectionResult> {
+  const result = await withCacheFallback(`lieu-content:${lieuId}`, CACHE_TTL, async () => {
+    const raw = await getJson<{ items: RawLieuContentItem[] }>(`/lieu/${lieuId}/contenus`, undefined, env.geoApiBaseUrl);
+    return raw.items.map(toLieuContentItem);
+  });
+  return { items: result.value, fromCache: result.fromCache, stale: result.stale };
+}
+
+export async function resolveContentBySlug(slug: string): Promise<ContentItem | null> {
+  const posts = await getJson<WordPressPost[]>(`/posts?slug=${encodeURIComponent(slug)}&_embed`);
+  const post = posts[0];
+  return post ? toContentItem(post) : null;
+}
+
+export const CATEGORY_TAXONOMY: Partial<Record<ContentType, number[]>> = {
+  tourism: [16, 108, 41, 106, 40, 17],
+  heritage: [8, 103, 105, 102],
+  gastronomy: [6, 97, 209, 99],
+  history: [14],
+  nature: [10, 5, 120],
+  culture: [11, 130, 134],
+  events: [4],
+  people: [12, 34, 35, 33, 38, 39, 303, 302, 312, 360, 335],
+  news: [25],
+};
+
 const CATEGORY_PAGE_SIZE = 12;
-function toTypedContentItem(post: WordPressPost, type: ContentType): ContentItem { return { ...toContentItem(post), type }; }
+
+function toTypedContentItem(post: WordPressPost, type: ContentType): ContentItem {
+  return { ...toContentItem(post), type };
+}
+
 export type CategoryPageResult = CollectionResult & { hasMore: boolean };
-export async function getCategoryContent(type: ContentType, opts: { page?: number; q?: string } = {}): Promise<CategoryPageResult> { const categoryIds = CATEGORY_TAXONOMY[type]; if (!categoryIds?.length) return { items: [], fromCache: false, stale: false, hasMore: false }; const page = opts.page ?? 1; const search = opts.q?.trim(); const query = `categories=${categoryIds.join(',')}&per_page=${CATEGORY_PAGE_SIZE}&page=${page}${search ? `&search=${encodeURIComponent(search)}` : ''}`; const fetchPage = async () => { const posts = await getJson<WordPressPost[]>(`/posts?${query}&_embed`); return posts.map((post) => toTypedContentItem(post, type)); }; if (page !== 1) { const items = await fetchPage(); return { items, fromCache: false, stale: false, hasMore: items.length === CATEGORY_PAGE_SIZE }; } const result = await withCacheFallback(`category:${type}:1:${search ?? ''}`, CACHE_TTL, fetchPage); return { items: result.value, fromCache: result.fromCache, stale: result.stale, hasMore: result.fromCache ? false : result.value.length === CATEGORY_PAGE_SIZE }; }
+
+export async function getCategoryContent(type: ContentType, opts: { page?: number; q?: string } = {}): Promise<CategoryPageResult> {
+  const categoryIds = CATEGORY_TAXONOMY[type];
+  if (!categoryIds?.length) return { items: [], fromCache: false, stale: false, hasMore: false };
+
+  const page = opts.page ?? 1;
+  const search = opts.q?.trim();
+  const query = `categories=${categoryIds.join(',')}&per_page=${CATEGORY_PAGE_SIZE}&page=${page}${search ? `&search=${encodeURIComponent(search)}` : ''}`;
+
+  const fetchPage = async () => {
+    const posts = await getJson<WordPressPost[]>(`/posts?${query}&_embed`);
+    return posts.map((post) => toTypedContentItem(post, type));
+  };
+
+  if (page !== 1) {
+    const items = await fetchPage();
+    return { items, fromCache: false, stale: false, hasMore: items.length === CATEGORY_PAGE_SIZE };
+  }
+
+  const result = await withCacheFallback(`category:${type}:1:${search ?? ''}`, CACHE_TTL, fetchPage);
+  return { items: result.value, fromCache: result.fromCache, stale: result.stale, hasMore: result.fromCache ? false : result.value.length === CATEGORY_PAGE_SIZE };
+}
