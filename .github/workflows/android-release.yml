@@ -70,12 +70,12 @@ jobs:
         run: |
           APK="android/app/build/outputs/apk/release/app-release.apk"
           test -f "$APK"
-          unzip -l "$APK" | grep -q 'assets/index.android.bundle'
+          unzip -l "$APK" | grep -q "assets/index.android.bundle"
 
       - name: Verify launcher icon resources
         run: |
           test -f assets/icon.png
-          find android/app/src/main/res -type f \( -name '*launcher*' -o -name '*icon*' \) -print | head -80
+          find android/app/src/main/res -type f \( -name "*launcher*" -o -name "*icon*" \) -print | head -80
 
       - name: Prepare public release asset
         run: |
@@ -86,7 +86,7 @@ jobs:
 
       - name: Extract Android signing certificate fingerprint
         run: |
-          CERT_SHA256="$(keytool -printcert -jarfile release/VJR221.apk | awk -F': ' '/SHA256:/{print $2; exit}')"
+          CERT_SHA256="$(keytool -printcert -jarfile release/VJR221.apk | awk -F": " '/SHA256:/{print $2; exit}')"
           test -n "$CERT_SHA256"
           echo "ANDROID_CERT_SHA256=$CERT_SHA256" >> "$GITHUB_ENV"
           echo "Android signing certificate SHA-256: $CERT_SHA256"
@@ -96,9 +96,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="android-v1.2.0-${GITHUB_SHA::7}"
-          NOTES="APK Android de production VJR 221 — version 1.2.0. Build généré depuis le commit ${GITHUB_SHA}.
-
-Empreinte SHA-256 du certificat de signature Android : ${ANDROID_CERT_SHA256}"
+          NOTES="APK Android de production VJR 221 — version 1.2.0. Build généré depuis le commit ${GITHUB_SHA}.\n\nEmpreinte SHA-256 du certificat de signature Android : ${ANDROID_CERT_SHA256}"
           if gh release view "$TAG" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
             echo "Release $TAG already exists; replacing release assets."
             gh release upload "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --clobber
