@@ -76,6 +76,9 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
   if (practical?.hours) practicalRows.push({ icon: 'clock', label: t('hours'), value: practical.hours });
   if (practical?.email) practicalRows.push({ icon: 'mail', label: t('email'), value: practical.email, onPress: email });
   const typeLabel = TYPE_LABEL_KEY[item.type] ? t(TYPE_LABEL_KEY[item.type]!).toUpperCase() : item.type.toUpperCase();
+  const cleanLead = item.excerpt?.replace(/\s+/g, ' ').trim() ?? '';
+  const cleanBodyStart = item.content?.replace(/\s+/g, ' ').trim().slice(0, Math.max(cleanLead.length, 1)) ?? '';
+  const showLead = Boolean(cleanLead) && (!item.contentBlocks?.length || (cleanLead.length <= 320 && cleanLead !== cleanBodyStart));
 
   return (
     <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
@@ -87,7 +90,7 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
       <View style={styles.body}>
         <View style={styles.contextRow}><Badge tone="terre">{typeLabel}</Badge></View>
         <Text selectable style={styles.title}>{item.title}</Text>
-        {item.excerpt ? <Text selectable style={styles.lead}>{item.excerpt}</Text> : null}
+        {showLead ? <Text selectable style={styles.lead}>{cleanLead}</Text> : null}
         {navigationContext && navItems.length > 1 ? <View style={styles.navigationCard}><Pressable accessibilityRole="button" accessibilityState={{ disabled: !canPrevious }} disabled={!canPrevious} onPress={() => navigate(-1)} style={[styles.navButton, !canPrevious && styles.navDisabled]}><Icon name="chevronLeft" size={17} color={canPrevious ? colors.terreStrong : colors.inkSoft} /><Text style={[styles.navText, !canPrevious && styles.navTextDisabled]}>{t('back')}</Text></Pressable><Text style={styles.position}>{navIndex + 1} / {navItems.length}</Text><Pressable accessibilityRole="button" accessibilityState={{ disabled: !canNext }} disabled={!canNext} onPress={() => navigate(1)} style={[styles.navButton, !canNext && styles.navDisabled]}><Text style={[styles.navText, !canNext && styles.navTextDisabled]}>{t('next')}</Text><Icon name="chevronRight" size={17} color={canNext ? colors.terreStrong : colors.inkSoft} /></Pressable></View> : null}
         {item.contentBlocks?.length ? <RichText blocks={item.contentBlocks} /> : item.content ? <Text selectable style={styles.copy}>{item.content}</Text> : null}
         {item.cta ? <View style={styles.ctaBox}><Text style={styles.ctaTitle}>{item.cta.title}</Text><Text style={styles.ctaText}>{item.cta.text}</Text><Button variant="secondary" size="sm" onPress={() => { void openExternalUrl(item.cta!.buttonUrl); }} style={styles.ctaButton}>{item.cta.buttonLabel}</Button></View> : null}
