@@ -1,4 +1,4 @@
-export type ExternalLinkKind = 'web' | 'phone' | 'email';
+export type ExternalLinkKind = 'web' | 'phone' | 'email' | 'map';
 
 function normalize(value: string): string {
   return value.trim().replace(/[\u0000-\u001F\u007F]/g, '');
@@ -9,12 +9,12 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
   const url = normalize(value);
   if (!url) return null;
 
-  if (kind === 'phone') {
-    return /^tel:\+?[0-9][0-9 .()\-]{5,}$/.test(url) ? url : null;
-  }
+  if (kind === 'phone') return /^tel:\+?[0-9][0-9 .()\-]{5,}$/.test(url) ? url : null;
+  if (kind === 'email') return /^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/i.test(url) ? url : null;
 
-  if (kind === 'email') {
-    return /^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/i.test(url) ? url : null;
+  if (kind === 'map') {
+    if (/^geo:-?\d+(?:\.\d+)?,-?\d+(?:\.\d+)?(?:\?[^\s]*)?$/i.test(url)) return url;
+    if (/^maps:\/\/?\?[^\s]+$/i.test(url)) return url;
   }
 
   try {
