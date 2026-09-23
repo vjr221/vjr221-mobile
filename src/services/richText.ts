@@ -12,6 +12,12 @@ export type RichBlock =
 
 const VOID_RUN_TEXT = /^\s*$/;
 
+function normalizeHtml(html: string): string {
+  return decodeHtmlEntities(html, { trim: false })
+    .replace(/\r\n?/g, '\n')
+    .replace(/[\u200B-\u200D\uFEFF]/g, '');
+}
+
 function parseRuns(innerHtml: string): RichRun[] {
   const runs: RichRun[] = [];
   const INLINE_RE = /<(strong|b)[^>]*>([\s\S]*?)<\/\1>|<(em|i)[^>]*>([\s\S]*?)<\/\3>|<a\s[^>]*href=["']([^"']*)["'][^>]*>([\s\S]*?)<\/a>|<br\s*\/?>(?=)/gi;
@@ -53,7 +59,7 @@ function markListContext(html: string): string {
       return tag;
     }
     const ordered = depth[depth.length - 1]?.ordered ?? false;
-    return `<li data-ord="${ordered ? '1' : '0'}">`;
+    return '<li data-ord="' + (ordered ? '1' : '0') + '">';
   });
 }
 
@@ -79,7 +85,8 @@ const BLOCK_RE = /<(?:h([2-6]))[^>]*>([\s\S]*?)<\/h\1>|<blockquote[^>]*>([\s\S]*
 export function parseRichContent(html: string): RichBlock[] {
   if (!html) return [];
 
-  const { html: withoutToc, toc } = extractToc(html);
+  const normalized = normalizeHtml(html);
+  const { html: withoutToc, toc } = extractToc(normalized);
   const marked = markListContext(withoutToc);
   const blocks: RichBlock[] = [];
   if (toc) blocks.push({ kind: 'toc', items: toc });
@@ -111,6 +118,20 @@ export function parseRichContent(html: string): RichBlock[] {
       const runs = parseRuns(pInner);
       if (runs.length) blocks.push({ kind: 'paragraph', runs });
       lastListOrdered = null;
+    }
+  }
+
+  if (!blocks.length) {
+    const plain = decodeHtmlEntities(normalized.replace(/<[^>]*>/g, ''))
+      .replace(/[ \t]+\n/g, '\n')
+      .replace(/\n[ \t]+/g, '\n')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+    if (plain) {
+      return plain.split(/\n\s*\n/).map((paragraph) => ({
+        kind: 'paragraph' as const,
+        runs: [{ text: paragraph.trim() }],
+      }));
     }
   }
 
