@@ -1,6 +1,8 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import Constants from 'expo-constants';
 import { openExternalUrl } from '../../services/externalLinks';
+import { clearAppNetworkCache } from '../../services/appCache';
 import { AccountScreen } from '../account/AccountScreen';
 import { NotificationPreferencesScreen } from '../account/NotificationPreferencesScreen';
 import { EmergenciesScreen } from './EmergenciesScreen';
@@ -23,11 +25,17 @@ const SITE_ACTIONS = [
   { key: 'contact', labelKey: 'siteContact' as TranslationKey, path: '/contact/' },
 ] as const;
 
+const APP_VERSION =
+  Constants.expoConfig?.version ??
+  // fallback si le manifest n'est pas encore chargé
+  '1.4.0';
+
 export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale: (locale: 'fr' | 'wo') => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const { preference, setPreference } = useThemePreference();
   const styles = useMemo(() => makeStyles(colors), [colors]);
+  const [cacheState, setCacheState] = useState<'idle' | 'working' | 'done'>('idle');
   const themeOptions: { value: ThemePreference; label: string; icon: 'sun' | 'moon' | 'settings' }[] = [
     { value: 'system', label: t('darkModeSystem'), icon: 'settings' },
     { value: 'light', label: t('darkModeLight'), icon: 'sun' },
@@ -35,6 +43,17 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
   ];
   const openSiteAction = (path: string) => {
     void openExternalUrl(`${SITE_URL}${path}`);
+  };
+  const onClearCache = async () => {
+    if (cacheState === 'working') return;
+    setCacheState('working');
+    try {
+      await clearAppNetworkCache();
+      setCacheState('done');
+      setTimeout(() => setCacheState('idle'), 2500);
+    } catch {
+      setCacheState('idle');
+    }
   };
   return (
     <ScrollView contentContainerStyle={styles.page}>
@@ -79,6 +98,21 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
         ))}
       </View>
 
+      <Text style={styles.sectionTitle}>{t('dataSection')}</Text>
+      <View style={styles.optionList}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t('clearCache')}
+          onPress={() => void onClearCache()}
+          style={[styles.option, styles.optionLast]}
+        >
+          <Icon name="settings" size={17} color={colors.terreStrong} />
+          <Text style={styles.optionText}>
+            {cacheState === 'working' ? t('clearCacheWorking') : cacheState === 'done' ? t('clearCacheDone') : t('clearCache')}
+          </Text>
+        </Pressable>
+      </View>
+
       <Text style={styles.sectionTitle}>{t('siteSection')}</Text>
       <View style={styles.siteActions}>
         {SITE_ACTIONS.map((action, index) => (
@@ -99,6 +133,10 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
 
       <NotificationPreferencesScreen />
       <AccountScreen />
+
+      <Text style={styles.version}>
+        VJR 221 · {t('appVersion')} {APP_VERSION}
+      </Text>
     </ScrollView>
   );
 }
@@ -155,5 +193,12 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
       justifyContent: 'center',
     },
     siteActionText: { flex: 1, color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14 },
+    version: {
+      marginTop: spacing.xl,
+      textAlign: 'center',
+      color: colors.inkSoft,
+      fontFamily: fonts.mono,
+      fontSize: 11,
+    },
   });
 }

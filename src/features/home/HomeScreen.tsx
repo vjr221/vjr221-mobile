@@ -116,7 +116,7 @@ export function HomeScreen({
           onPress={() => onExplore('directory')}
           style={({ pressed }) => [styles.quickCard, pressed && styles.categoryPressed]}
         >
-          <Icon name="directory" size={18} color={colors.terreStrong} />
+          <Icon name="annuaire" size={18} color={colors.terreStrong} />
           <Text style={styles.quickText}>{t('directory')}</Text>
         </Pressable>
         <Pressable

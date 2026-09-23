@@ -3,14 +3,14 @@
     "name": "VJR 221",
     "slug": "vjr221-mobile",
     "scheme": "vjr221",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "sn.vjr221.mobile",
-      "buildNumber": "8",
+      "buildNumber": "9",
       "associatedDomains": ["applinks:vjr221.sn"],
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "VJR 221 utilise votre position pour afficher les établissements et lieux près de vous."
@@ -18,7 +18,7 @@
     },
     "android": {
       "package": "sn.vjr221.mobile",
-      "versionCode": 8,
+      "versionCode": 9,
       "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
