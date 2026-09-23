@@ -1,6 +1,6 @@
 {
   "name": "vjr221-mobile",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "index.ts",
   "dependencies": {
     "@expo-google-fonts/ibm-plex-mono": "^0.4.1",
@@ -46,5 +46,5 @@
   },
   "private": true,
   "jest": { "preset": "jest-expo", "setupFiles": ["<rootDir>/jest.setup.js"] },
-  "lint-staged": { "*.{ts,tsx}": ["eslint --fix"], "*.{ts,tsx,json,md}": ["prettier --write"] }
+  "lint-staged": { "*.{ts,tsx,json,md}": ["eslint --fix"], "*.{ts,tsx,json,md}": ["prettier --write"] }
 }
