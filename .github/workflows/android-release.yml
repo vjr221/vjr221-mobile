@@ -107,11 +107,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="android-v1.2.1-${GITHUB_SHA::7}"
-          NOTES="APK Android de production VJR 221 — version 1.2.1. Build généré depuis le commit ${GITHUB_SHA}.
+          NOTES=$(cat <<EOF
+APK Android de production VJR 221 — version 1.2.1. Build généré depuis le commit ${GITHUB_SHA}.
 
 Correctifs : rendu riche WordPress, détection du HTML doublement encodé, extraits redondants masqués et identité de chargement VJR 221.
 
-Empreinte SHA-256 du certificat de signature Android : ${ANDROID_CERT_SHA256}"
+Empreinte SHA-256 du certificat de signature Android : ${ANDROID_CERT_SHA256}
+EOF
+)
           if gh release view "$TAG" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
             echo "Release $TAG already exists; replacing release assets."
             gh release upload "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --clobber
