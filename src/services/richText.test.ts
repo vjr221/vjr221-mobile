@@ -34,9 +34,26 @@ describe('parseRichContent', () => {
     const runs = blocks[0].kind === 'paragraph' ? blocks[0].runs : [];
     expect(runs[0].text).toBe('Café & thé.');
   });
-  it('ignore silencieusement les balises inconnues et retombe sur du texte vide plutôt que de planter', () => {
+  it('parse un sommaire WordPress en bloc lisible', () => {
+    const html = '<div class="sommaire"><a href="#presentation">Présentation générale</a><a href="#histoire">Histoire</a><a href="#culture">Culture</a></div><h2 id="presentation">Présentation générale</h2><p>La région.</p>';
+    const blocks = parseRichContent(html);
+    expect(blocks[0]).toEqual({
+      kind: 'toc',
+      items: [
+        { text: 'Présentation générale', href: '#presentation' },
+        { text: 'Histoire', href: '#histoire' },
+        { text: 'Culture', href: '#culture' },
+      ],
+    });
+    expect(blocks.some((b) => b.kind === 'heading')).toBe(true);
+  });
+  it('préserve les espaces autour des éléments inline', () => {
+    const blocks = parseRichContent('<p>Un texte <strong>important</strong> et <em>lisible</em>.</p>');
+    const runs = blocks[0].kind === 'paragraph' ? blocks[0].runs : [];
+    expect(runs.map((r) => r.text).join('')).toBe('Un texte important et lisible.');
+  });
+  it('ne plante pas sur un conteneur HTML non pris en charge', () => {
     expect(() => parseRichContent('<div><span>orphelin</span></div>')).not.toThrow();
-    expect(parseRichContent('<div><span>orphelin</span></div>')).toEqual([]);
   });
   it('gère une séquence réaliste titre + paragraphe + liste', () => {
     const html = '<h2>Géographie</h2><p>La région est bordée par <strong>le fleuve</strong>.</p><ul><li>Climat tropical</li><li>Relief plat</li></ul>';

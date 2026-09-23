@@ -1,12 +1,14 @@
 import { decodeHtmlEntities } from './contentRepository';
 
 export type RichRun = { text: string; bold?: boolean; italic?: boolean; href?: string };
+export type TocItem = { text: string; href: string };
 
 export type RichBlock =
   | { kind: 'heading'; level: 2 | 3 | 4; runs: RichRun[] }
   | { kind: 'paragraph'; runs: RichRun[] }
   | { kind: 'listItem'; ordered: boolean; index: number; runs: RichRun[] }
-  | { kind: 'quote'; runs: RichRun[] };
+  | { kind: 'quote'; runs: RichRun[] }
+  | { kind: 'toc'; items: TocItem[] };
 
 const VOID_RUN_TEXT = /^\s*$/;
 
@@ -15,10 +17,14 @@ function parseRuns(innerHtml: string): RichRun[] {
   const INLINE_RE = /<(strong|b)[^>]*>([\s\S]*?)<\/\1>|<(em|i)[^>]*>([\s\S]*?)<\/\3>|<a\s[^>]*href=["']([^"']*)["'][^>]*>([\s\S]*?)<\/a>|<br\s*\/?>(?=)/gi;
   let last = 0;
   let match: RegExpExecArray | null;
+
   const pushText = (raw: string, extra: Partial<RichRun> = {}) => {
-    const text = decodeHtmlEntities(raw.replace(/<[^>]*>/g, ''));
+    const text = decodeHtmlEntities(raw.replace(/<[^>]*>/g, ''), { trim: false })
+      .replace(/[ \t]+\n/g, '\n')
+      .replace(/\n[ \t]+/g, '\n');
     if (!VOID_RUN_TEXT.test(text)) runs.push({ text, ...extra });
   };
+
   while ((match = INLINE_RE.exec(innerHtml))) {
     if (match.index > last) pushText(innerHtml.slice(last, match.index));
     if (match[1]) pushText(match[2] ?? '', { bold: true });
@@ -51,24 +57,48 @@ function markListContext(html: string): string {
   });
 }
 
-const BLOCK_RE = /<h([2-4])[^>]*>([\s\S]*?)<\/h\1>|<blockquote[^>]*>([\s\S]*?)<\/blockquote>|<li[^>]*data-ord="(\d)"[^>]*>([\s\S]*?)<\/li>|<p[^>]*>([\s\S]*?)<\/p>/gi;
+function extractToc(html: string): { html: string; toc: TocItem[] | null } {
+  const tocItems: TocItem[] = [];
+  const tocContainer = /<(?:div|nav|section)[^>]*(?:class|id)=["'][^"']*(?:toc|sommaire|table[-_ ]of[-_ ]contents)[^"']*["'][^>]*>([\s\S]*?)<\/(?:div|nav|section)>/i;
+  const match = tocContainer.exec(html);
+  if (!match) return { html, toc: null };
+
+  const linkRe = /<a\s[^>]*href=["'](#[^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  let link: RegExpExecArray | null;
+  while ((link = linkRe.exec(match[1]))) {
+    const text = decodeHtmlEntities(link[2].replace(/<[^>]*>/g, ''), { trim: true });
+    if (text) tocItems.push({ text, href: link[1] });
+  }
+
+  if (tocItems.length < 2) return { html, toc: null };
+  return { html: html.replace(match[0], ''), toc: tocItems };
+}
+
+const BLOCK_RE = /<(?:h([2-6]))[^>]*>([\s\S]*?)<\/h\1>|<blockquote[^>]*>([\s\S]*?)<\/blockquote>|<li[^>]*data-ord="(\d)"[^>]*>([\s\S]*?)<\/li>|<p[^>]*>([\s\S]*?)<\/p>/gi;
 
 export function parseRichContent(html: string): RichBlock[] {
   if (!html) return [];
-  const marked = markListContext(html);
+
+  const { html: withoutToc, toc } = extractToc(html);
+  const marked = markListContext(withoutToc);
   const blocks: RichBlock[] = [];
+  if (toc) blocks.push({ kind: 'toc', items: toc });
+
   let match: RegExpExecArray | null;
   let listIndex = 0;
   let lastListOrdered: boolean | null = null;
   BLOCK_RE.lastIndex = 0;
+
   while ((match = BLOCK_RE.exec(marked))) {
     const [, hLevel, hInner, quoteInner, liOrdered, liInner, pInner] = match;
+
     if (hLevel) {
       const runs = parseRuns(hInner ?? '');
-      if (runs.length) blocks.push({ kind: 'heading', level: Number(hLevel) as 2 | 3 | 4, runs });
+      const level = Math.min(Number(hLevel), 4) as 2 | 3 | 4;
+      if (runs.length) blocks.push({ kind: 'heading', level, runs });
       lastListOrdered = null;
     } else if (quoteInner !== undefined) {
-      const runs = parseRuns(quoteInner);
+      const runs = parseRuns(quoteInner.replace(/<p[^>]*>/gi, '').replace(/<\/p>/gi, '\n'));
       if (runs.length) blocks.push({ kind: 'quote', runs });
       lastListOrdered = null;
     } else if (liOrdered !== undefined) {
@@ -83,5 +113,6 @@ export function parseRichContent(html: string): RichBlock[] {
       lastListOrdered = null;
     }
   }
+
   return blocks;
 }
