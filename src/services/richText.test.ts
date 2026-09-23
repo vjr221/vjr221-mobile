@@ -60,4 +60,17 @@ describe('parseRichContent', () => {
     const blocks = parseRichContent(html);
     expect(blocks.map((b) => b.kind)).toEqual(['heading', 'paragraph', 'listItem', 'listItem']);
   });
+  it('récupère les balises HTML doublement encodées', () => {
+    const html = '&lt;div class="sommaire"&gt;&lt;a href="#presentation"&gt;Présentation générale&lt;/a&gt;&lt;a href="#histoire"&gt;Histoire&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;Présentation générale&lt;/h2&gt;&lt;p&gt;La région de Ziguinchor.&lt;/p&gt;';
+    const blocks = parseRichContent(html);
+    expect(blocks[0]).toEqual({
+      kind: 'toc',
+      items: [
+        { text: 'Présentation générale', href: '#presentation' },
+        { text: 'Histoire', href: '#histoire' },
+      ],
+    });
+    expect(blocks.some((b) => b.kind === 'heading')).toBe(true);
+    expect(blocks.some((b) => b.kind === 'paragraph')).toBe(true);
+  });
 });
