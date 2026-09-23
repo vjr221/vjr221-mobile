@@ -15,9 +15,12 @@ describe('sanitizeExternalUrl', () => {
     expect(sanitizeExternalUrl('mailto:contact@vjr221.sn')).toBeNull();
   });
 
-  it('rejects malformed or dangerous values', () => {
+  it('rejects malformed or dangerous values while allowing explicit map schemes', () => {
     expect(sanitizeExternalUrl('   ')).toBeNull();
     expect(sanitizeExternalUrl('data:text/html,<script>alert(1)</script>')).toBeNull();
     expect(sanitizeExternalUrl('javascript://https://vjr221.sn')).toBeNull();
+    expect(sanitizeExternalUrl('geo:14.7167,-17.4677?q=14.7167,-17.4677', 'map')).toBeTruthy();
+    expect(sanitizeExternalUrl('maps://?q=Dakar&ll=14.7167,-17.4677', 'map')).toBeTruthy();
+    expect(sanitizeExternalUrl('javascript:alert(1)', 'map')).toBeNull();
   });
 });
