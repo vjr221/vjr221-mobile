@@ -37,7 +37,9 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const { has, toggle } = useFavorites();
-  const [related, setRelated] = useState<ContentItem[]>([]);
+  const [relatedState, setRelatedState] = useState<{ key: string; items: ContentItem[] }>({ key: `${item.type}-${item.id}`, items: [] });
+  const itemKey = `${item.type}-${item.id}`;
+  const related = relatedState.key === itemKey ? relatedState.items : [];
   const { practical } = item;
   const coordinates = practical?.coordinates ? { lat: practical.coordinates.latitude, lng: practical.coordinates.longitude } : null;
   const saved = has(item.id);
@@ -48,10 +50,9 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
 
   useEffect(() => {
     let active = true;
-    setRelated([]);
     getRelatedContent(item)
-      .then((items) => { if (active) setRelated(items); })
-      .catch(() => { if (active) setRelated([]); });
+      .then((items) => { if (active) setRelatedState({ key: itemKey, items }); })
+      .catch(() => { if (active) setRelatedState({ key: itemKey, items: [] }); });
     return () => { active = false; };
   }, [item.id, item.type]);
 
