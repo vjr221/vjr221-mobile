@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Linking, StyleSheet, Text, View } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { fonts, spacing, type } from '../theme/tokens';
 import type { RichBlock, RichRun } from '../services/richText';
@@ -9,7 +9,7 @@ export function RichText({ blocks }: { blocks: RichBlock[] }) {
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
   return (
-    <View accessibilityRole="text">
+    <View>
       {blocks.map((block, index) => {
         switch (block.kind) {
           case 'toc':
@@ -17,16 +17,10 @@ export function RichText({ blocks }: { blocks: RichBlock[] }) {
               <View key={index} style={styles.toc}>
                 <Text style={styles.tocTitle}>Sommaire</Text>
                 {block.items.map((item) => (
-                  <Pressable
-                    key={item.href}
-                    accessibilityRole="link"
-                    accessibilityLabel={item.text}
-                    onPress={() => Linking.openURL(item.href).catch(() => {})}
-                    style={({ pressed }) => [styles.tocItem, pressed && styles.tocItemPressed]}
-                  >
+                  <View key={item.href} style={styles.tocItem}>
+                    <Text style={styles.tocBullet}>•</Text>
                     <Text numberOfLines={2} style={styles.tocText}>{item.text}</Text>
-                    <Text style={styles.tocArrow}>›</Text>
-                  </Pressable>
+                  </View>
                 ))}
               </View>
             );
@@ -61,10 +55,9 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
     toc: { marginTop: spacing.lg, padding: spacing.md, backgroundColor: colors.surfaceSoft, borderRadius: 16, borderWidth: 1, borderColor: colors.line },
     tocTitle: { color: colors.ink, fontFamily: fonts.bodyBold, fontSize: 16, marginBottom: spacing.xs },
-    tocItem: { minHeight: 44, flexDirection: 'row', alignItems: 'center', gap: spacing.sm, borderTopWidth: 1, borderTopColor: colors.line, paddingVertical: spacing.sm },
-    tocItemPressed: { opacity: 0.7 },
+    tocItem: { minHeight: 40, flexDirection: 'row', alignItems: 'center', gap: spacing.sm, borderTopWidth: 1, borderTopColor: colors.line, paddingVertical: spacing.sm },
+    tocBullet: { color: colors.terreStrong, fontFamily: fonts.bodyBold, fontSize: 17 },
     tocText: { flex: 1, color: colors.inkSoft, fontFamily: fonts.bodyMedium, fontSize: 14, lineHeight: 19 },
-    tocArrow: { color: colors.terreStrong, fontFamily: fonts.bodyBold, fontSize: 22 },
     paragraph: { color: colors.ink, lineHeight: 27, fontSize: type.bodyLg, marginTop: spacing.lg, fontFamily: fonts.body },
     heading: { color: colors.ink, fontFamily: fonts.displaySemiBold, marginTop: spacing.xl },
     h2: { fontSize: 22, lineHeight: 28 },
