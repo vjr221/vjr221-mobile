@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
-import { Linking, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { fonts, spacing, type } from '../theme/tokens';
 import type { RichBlock, RichRun } from '../services/richText';
+import { openExternalUrl } from '../services/externalLinks';
 
 export function RichText({ blocks }: { blocks: RichBlock[] }) {
   const { colors } = useTheme();
@@ -45,7 +46,7 @@ function renderRuns(runs: RichRun[], styles: ReturnType<typeof makeStyles>, colo
     const runStyle = [run.bold && styles.bold, run.italic && styles.italic, run.href && { color: colors.terreStrong, textDecorationLine: 'underline' as const }];
     if (run.href) {
       const url = run.href;
-      return <Text key={i} style={runStyle} onPress={() => Linking.openURL(url).catch(() => {})}>{run.text}</Text>;
+      return <Text key={i} style={runStyle} onPress={() => { void openExternalUrl(url); }}>{run.text}</Text>;
     }
     return <Text key={i} style={runStyle}>{run.text}</Text>;
   });
