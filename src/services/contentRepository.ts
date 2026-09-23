@@ -53,7 +53,7 @@ export const decodeHtmlEntities = (value: string, options: { trim?: boolean } = 
 
 const stripHtml = (value: string) => {
   const withBreaks = value
-    .replace(/<\s*br\s*\/?>(?)/gi, '\n')
+    .replace(/<\s*br\s*\/?>/gi, '\n')
     .replace(/<\s*\/(?:p|div|section|article|li|h[1-6]|blockquote|ul|ol)\s*>/gi, '\n')
     .replace(/<\s*(?:p|div|section|article|li|h[1-6]|blockquote|ul|ol)(?:\s[^>]*)?>/gi, '\n');
   return decodeHtmlEntities(withBreaks.replace(/<[^>]*>/g, ''))
