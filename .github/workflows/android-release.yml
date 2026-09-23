@@ -37,7 +37,7 @@ jobs:
           gh --version
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Verify release version consistency
         run: |
