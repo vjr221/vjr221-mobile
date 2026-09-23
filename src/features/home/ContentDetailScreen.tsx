@@ -51,8 +51,8 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
   useEffect(() => {
     let active = true;
     getRelatedContent(item)
-      .then((items) => { if (active) setRelatedState({ key: itemKey, items }); })
-      .catch(() => { if (active) setRelatedState({ key: itemKey, items: [] }); });
+      .then((items) => { if (active) setRelatedState({ key: `${item.type}-${item.id}`, items }); })
+      .catch(() => { if (active) setRelatedState({ key: `${item.type}-${item.id}`, items: [] }); });
     return () => { active = false; };
   }, [item.id, item.type]);
 
