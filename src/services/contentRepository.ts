@@ -52,9 +52,6 @@ export const decodeHtmlEntities = (value: string, options: { trim?: boolean } = 
 };
 
 const stripHtml = (value: string) => {
-  // Decode first: some WordPress/cache paths return HTML entities such as
-  // &lt;p&gt;...&lt;/p&gt;. Structural line breaks must be restored after that
-  // decode, otherwise headings/paragraphs collapse into one line.
   const decoded = decodeHtmlEntities(value, { trim: false });
   const withBreaks = decoded
     .replace(/<\s*br\s*\/?>/gi, '\n')
@@ -63,7 +60,7 @@ const stripHtml = (value: string) => {
   return decodeHtmlEntities(withBreaks.replace(/<[^>]*>/g, ''))
     .replace(/[ \t]+\n/g, '\n')
     .replace(/\n[ \t]+/g, '\n')
-    .replace(/\n{3,}/g, '\n\n')
+    .replace(/\n{2,}/g, '\n')
     .trim();
 };
 
