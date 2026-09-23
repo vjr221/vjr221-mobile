@@ -47,12 +47,16 @@ export const decodeHtmlEntities = (value: string, options: { trim?: boolean } = 
       if (!repaired.includes('�')) result = repaired;
     } catch { /* conserver le texte original */ }
   }
-  result = result.replace(/[​-‍﻿]/g, '').replace(/[ \t]+\n/g, '\n');
+  result = result.replace(/[\u200B-\u200D\uFEFF]/g, '').replace(/[ \t]+\n/g, '\n');
   return options.trim === false ? result : result.trim();
 };
 
 const stripHtml = (value: string) => {
-  const withBreaks = value
+  // Decode first: some WordPress/cache paths return HTML entities such as
+  // &lt;p&gt;...&lt;/p&gt;. Structural line breaks must be restored after that
+  // decode, otherwise headings/paragraphs collapse into one line.
+  const decoded = decodeHtmlEntities(value, { trim: false });
+  const withBreaks = decoded
     .replace(/<\s*br\s*\/?>/gi, '\n')
     .replace(/<\s*\/(?:p|div|section|article|li|h[1-6]|blockquote|ul|ol)\s*>/gi, '\n')
     .replace(/<\s*(?:p|div|section|article|li|h[1-6]|blockquote|ul|ol)(?:\s[^>]*)?>/gi, '\n');
