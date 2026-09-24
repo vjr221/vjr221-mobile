@@ -12,10 +12,9 @@ import { useTheme } from '../../theme/ThemeProvider';
 import { useThemePreference } from '../../theme/ThemePreferenceContext';
 import type { ThemePreference } from '../../services/themePreference';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
+import { APP_VERSION } from '../../config/appMeta';
 
 const SITE_URL = 'https://vjr221.sn';
-/** À garder aligné avec package.json / app.json. */
-const APP_VERSION = '1.4.0';
 
 const SITE_ACTIONS = [
   { key: 'directory', labelKey: 'siteDirectory' as TranslationKey, path: '/annuaire/' },
