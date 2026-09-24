@@ -94,7 +94,10 @@ export const strings = {
     accountTitle: 'Compte VJR 221',
     accountAuthenticated: 'Connecté en tant que {name}.',
     accountAnonymous:
-      'La création de compte arrive prochainement. Vos favoris restent enregistrés sur cet appareil et fonctionnent dès maintenant, sans compte.',
+      'Vos favoris restent sur cet appareil, sans compte. Pour créer un compte, vous connecter ou gérer vos fiches annuaire, utilisez l’espace membre sur le site.',
+    accountOpenSite: 'Mon compte sur le site',
+    claimListing: 'C’est mon établissement ?',
+    accountClaimHint: 'Réclamer ou gérer une fiche annuaire se fait sur le site VJR 221.',
     notificationPrefsTitle: 'Préférences de notifications',
     notificationPrefsCaption:
       "Ces réglages sont enregistrés dès maintenant, mais VJR 221 n'envoie pas encore de notifications réelles. Ils seront appliqués automatiquement dès leur activation.",
@@ -231,7 +234,10 @@ export const strings = {
     accountTitle: 'Kontub VJR 221',
     accountAuthenticated: 'Yaa nekk {name}.',
     accountAnonymous:
-      'Sos kontu dina am ci kanam. Say tànn danañu leen denc ci sàkkanu bi te dañu doon liggéey léegi, te kontu du ci wàjjal.',
+      'Say tànn danañu leen denc ci sàkkanu bi, te kontu du ci wàjjal. Ngir sos kontu, dugg walla toppatoo say fiches annuaire, jëfandikoo espace membre bi ci site bi.',
+    accountOpenSite: 'Sama kontu ci site bi',
+    claimListing: 'Sama établissement la ?',
+    accountClaimHint: 'Réclamer walla toppatoo fiche annuaire dafa am ci site VJR 221.',
     notificationPrefsTitle: 'Tànnéef yégle yi',
     notificationPrefsCaption:
       'Tànnéef yii danañu leen denc léegi, waaye VJR 221 jotul woon yónnee yégle yu wóor. Danañu leen jëfandikoo ci kanam bu ñu leen ubbee.',
