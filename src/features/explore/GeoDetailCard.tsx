@@ -11,6 +11,7 @@ import { RichText } from '../../components/RichText';
 import { openExternalNavigation } from '../../services/mapService';
 import { Icon } from '../../components/icons/Icon';
 import { useI18n } from '../../i18n/I18nProvider';
+import { getWolofContentBySlug } from '../../i18n/contentWolof';
 import type { GeoCta, GeoPoint, KeyInfos, RemoteImage } from '../../types/geo';
 
 export function GeoDetailCard({
@@ -24,6 +25,7 @@ export function GeoDetailCard({
   gps,
 }: {
   title: string;
+  slug?: string;
   excerpt: string | null;
   content: string | null;
   image: RemoteImage | null;
@@ -32,10 +34,14 @@ export function GeoDetailCard({
   cta?: GeoCta | null;
   gps?: GeoPoint | null;
 }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
-  const contentBlocks = useMemo(() => (content ? parseRichContent(content) : []), [content]);
+  const wolof = useMemo(() => (locale === 'wo' && slug ? getWolofContentBySlug(slug) : undefined), [locale, slug]);
+  const localizedTitle = locale === 'wo' ? (wolof?.titleWo ?? title) : title;
+  const localizedExcerpt = locale === 'wo' ? (wolof?.excerptWo ?? excerpt) : excerpt;
+  const localizedContent = locale === 'wo' ? (wolof?.contentWo ?? content) : content;
+  const contentBlocks = useMemo(() => (localizedContent ? parseRichContent(localizedContent) : []), [localizedContent]);
 
   const infoRows: [string, string | null][] = [
     [t('infoChefLieu'), infos.chefLieu],
@@ -55,8 +61,8 @@ export function GeoDetailCard({
       )}
       <View style={styles.body}>
         {breadcrumb ? <Badge tone="savane">{breadcrumb}</Badge> : null}
-        <Text style={styles.title}>{title}</Text>
-        {excerpt ? <Text style={styles.excerpt}>{excerpt}</Text> : null}
+        <Text style={styles.title}>{localizedTitle}</Text>
+        {localizedExcerpt ? <Text style={styles.excerpt}>{localizedExcerpt}</Text> : null}
         {infoRows.length ? (
           <View style={styles.infoGrid}>
             {infoRows.map(([label, value]) => (
@@ -72,7 +78,7 @@ export function GeoDetailCard({
           <Button
             variant="secondary"
             size="sm"
-            onPress={() => void openExternalNavigation({ lat: gps.lat, lng: gps.lng }, title)}
+            onPress={() => void openExternalNavigation({ lat: gps.lat, lng: gps.lng }, localizedTitle)}
             style={styles.mapButton}
           >
             {t('openMap')}
