@@ -19,6 +19,7 @@ import type { DetailNavigationContext } from '../../app/AppNavigator';
 import { env } from '../../config/env';
 import { buildWhatsAppUrl, openExternalUrl, sanitizeExternalUrl } from '../../services/externalLinks';
 import { localizeContent } from '../../services/contentRepository';
+import { parseRichContent } from '../../services/richText';
 
 const TYPE_LABEL_KEY: Partial<Record<ContentItem['type'], TranslationKey>> = {
   news: 'news',
@@ -56,6 +57,7 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
   const localized = localizeContent(item, locale);
   const websiteUrl = sanitizeExternalUrl(practical?.website) ?? sanitizeExternalUrl(item.url);
   const localizedBody = locale === 'wo' ? (item.contentWo || item.content) : item.content;
+  const localizedBodyBlocks = useMemo(() => (localizedBody ? parseRichContent(localizedBody) : []), [localizedBody]);
   const coordinates = practical?.coordinates
     ? { lat: practical.coordinates.latitude, lng: practical.coordinates.longitude }
     : null;
@@ -179,10 +181,8 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
         ) : null}
         {locale === 'fr' && item.contentBlocks?.length ? (
           <RichText blocks={item.contentBlocks} />
-        ) : localizedBody ? (
-          <Text selectable style={styles.copy}>
-            {localizedBody}
-          </Text>
+        ) : localizedBodyBlocks.length ? (
+          <RichText blocks={localizedBodyBlocks} />
         ) : null}
         {item.cta ? (
           <View style={styles.ctaBox}>
