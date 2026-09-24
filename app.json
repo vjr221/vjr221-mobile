@@ -3,15 +3,17 @@
     "name": "VJR 221",
     "slug": "vjr221-mobile",
     "scheme": "vjr221",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "sn.vjr221.mobile",
-      "buildNumber": "9",
-      "associatedDomains": ["applinks:vjr221.sn"],
+      "buildNumber": "10",
+      "associatedDomains": [
+        "applinks:vjr221.sn"
+      ],
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "VJR 221 utilise votre position pour afficher les établissements et lieux près de vous.",
         "ITSAppUsesNonExemptEncryption": false,
@@ -24,34 +26,50 @@
         "NSPrivacyAccessedAPITypes": [
           {
             "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
-            "NSPrivacyAccessedAPITypeReasons": ["CA92.1"]
+            "NSPrivacyAccessedAPITypeReasons": [
+              "CA92.1"
+            ]
           }
         ]
       }
     },
     "android": {
       "package": "sn.vjr221.mobile",
-      "versionCode": 9,
+      "versionCode": 10,
       "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#F4E9D6"
       },
       "predictiveBackGestureEnabled": false,
-      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"],
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
       "intentFilters": [
         {
           "action": "VIEW",
           "autoVerify": true,
           "data": [
-            { "scheme": "https", "host": "vjr221.sn" },
-            { "scheme": "https", "host": "www.vjr221.sn" }
+            {
+              "scheme": "https",
+              "host": "vjr221.sn"
+            },
+            {
+              "scheme": "https",
+              "host": "www.vjr221.sn"
+            }
           ],
-          "category": ["BROWSABLE", "DEFAULT"]
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
         }
       ]
     },
-    "web": { "favicon": "./assets/favicon.png" },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
     "plugins": [
       "expo-font",
       [
@@ -61,7 +79,10 @@
           "imageWidth": 180,
           "resizeMode": "contain",
           "backgroundColor": "#F4E9D6",
-          "dark": { "image": "./assets/icon.png", "backgroundColor": "#11170F" }
+          "dark": {
+            "image": "./assets/icon.png",
+            "backgroundColor": "#11170F"
+          }
         }
       ],
       [
