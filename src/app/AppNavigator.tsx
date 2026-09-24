@@ -215,9 +215,11 @@ function makeTabBarStyles(colors: ReturnType<typeof useTheme>['colors'], shadow:
     tabBarWrap: { backgroundColor: colors.surface, borderTopLeftRadius: 22, borderTopRightRadius: 22, ...shadow('floating') },
     tabs: { flexDirection: 'row', paddingTop: 10, paddingBottom: 12 + insetBottom, paddingHorizontal: spacing.xs },
     tab: { flex: 1, alignItems: 'center', gap: 3, minHeight: 44 },
-    tabIconWrap: { width: 40, height: 30, borderRadius: 15, alignItems: 'center', justifyContent: 'center' },
-    tabIconWrapActive: { backgroundColor: colors.surfaceSoft },
-    tabText: { fontSize: 10.5, color: colors.inkSoft, fontFamily: fonts.bodyMedium },
+    tabIconWrap: { width: 44, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
+    tabIconWrapActive: {
+      backgroundColor: colors.scheme === 'dark' ? 'rgba(227,138,76,0.18)' : 'rgba(190,90,33,0.12)',
+    },
+    tabText: { fontSize: 10.5, color: colors.inkSoft, fontFamily: fonts.bodyMedium, letterSpacing: 0.15 },
     tabTextActive: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold },
   });
 }
