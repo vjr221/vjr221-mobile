@@ -20,6 +20,29 @@ describe('getCategoryContent', () => {
 });
 
 describe('toContentItem', () => {
+  it('normalise les URLs d’images WordPress pour Android', () => {
+    const item = toContentItem({
+      id: 5,
+      date: '2026-01-01T00:00:00',
+      link: 'https://vjr221.sn/region-de-dakar/',
+      title: { rendered: 'Région de Dakar' },
+      excerpt: { rendered: 'Dakar' },
+      _embedded: {
+        'wp:featuredmedia': [{
+          source_url: 'http://vjr221.sn/wp-content/uploads/2026/01/dakar.jpg',
+          media_details: {
+            sizes: {
+              medium: { source_url: 'http://vjr221.sn/wp-content/uploads/2026/01/dakar-300x200.jpg' },
+            },
+          },
+        }],
+      },
+    });
+    expect(item.imageUrl).toBe('https://vjr221.sn/wp-content/uploads/2026/01/dakar.jpg');
+    expect(item.thumbnailUrl).toBe('https://vjr221.sn/wp-content/uploads/2026/01/dakar-300x200.jpg');
+  });
+
+
   it('normalise une réponse WordPress sans conserver le HTML', () => {
     const item = toContentItem({ id: 221, date: '2026-09-01T00:00:00', link: 'https://vjr221.sn/article', title: { rendered: '<strong>Dakar</strong>' }, excerpt: { rendered: '<p>Une capitale vivante.</p>' } });
     expect(item).toMatchObject({ id: 221, title: 'Dakar', excerpt: 'Une capitale vivante.', type: 'news' });
