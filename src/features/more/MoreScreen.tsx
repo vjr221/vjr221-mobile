@@ -16,17 +16,26 @@ import { APP_VERSION } from '../../config/appMeta';
 
 const SITE_URL = 'https://vjr221.sn';
 
-const SITE_ACTIONS = [
-  { key: 'directory', labelKey: 'siteDirectory' as TranslationKey, path: '/annuaire/' },
-  { key: 'establishment', labelKey: 'siteEstablishment' as TranslationKey, path: '/ajouter-un-etablissement-a-l-annuaire/' },
-  { key: 'pricing', labelKey: 'sitePricing' as TranslationKey, path: '/tarifs-annuaire/' },
-  { key: 'partnership', labelKey: 'sitePartnership' as TranslationKey, path: '/partenariat/' },
-  { key: 'support', labelKey: 'siteSupport' as TranslationKey, path: '/soutenir-vjr221/' },
-  { key: 'about', labelKey: 'siteAbout' as TranslationKey, path: '/a-propos/' },
-  { key: 'contact', labelKey: 'siteContact' as TranslationKey, path: '/contact/' },
+/** Annuaire = dans l'app ; le reste = pages dédiées du site (formulaires, tarifs, institutionnel). */
+const MORE_ACTIONS = [
+  { key: 'directory', labelKey: 'siteDirectory' as TranslationKey, mode: 'app' as const },
+  { key: 'establishment', labelKey: 'siteEstablishment' as TranslationKey, mode: 'web' as const, path: '/ajouter-un-etablissement-a-l-annuaire/' },
+  { key: 'pricing', labelKey: 'sitePricing' as TranslationKey, mode: 'web' as const, path: '/tarifs-annuaire/' },
+  { key: 'partnership', labelKey: 'sitePartnership' as TranslationKey, mode: 'web' as const, path: '/partenariat/' },
+  { key: 'support', labelKey: 'siteSupport' as TranslationKey, mode: 'web' as const, path: '/soutenir-vjr221/' },
+  { key: 'about', labelKey: 'siteAbout' as TranslationKey, mode: 'web' as const, path: '/a-propos/' },
+  { key: 'contact', labelKey: 'siteContact' as TranslationKey, mode: 'web' as const, path: '/contact/' },
 ] as const;
 
-export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale: (locale: 'fr' | 'wo') => void }) {
+export function MoreScreen({
+  locale,
+  onLocale,
+  onOpenDirectory,
+}: {
+  locale: 'fr' | 'wo';
+  onLocale: (locale: 'fr' | 'wo') => void;
+  onOpenDirectory?: () => void;
+}) {
   const { t } = useI18n();
   const { colors } = useTheme();
   const { preference, setPreference } = useThemePreference();
@@ -37,8 +46,12 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
     { value: 'light', label: t('darkModeLight'), icon: 'sun' },
     { value: 'dark', label: t('darkModeDark'), icon: 'moon' },
   ];
-  const openSiteAction = (path: string) => {
-    void openExternalUrl(`${SITE_URL}${path}`);
+  const openMoreAction = (action: (typeof MORE_ACTIONS)[number]) => {
+    if (action.mode === 'app') {
+      onOpenDirectory?.();
+      return;
+    }
+    void openExternalUrl(`${SITE_URL}${action.path}`, 'web');
   };
   const onClearCache = async () => {
     if (cacheState === 'working') return;
@@ -96,7 +109,14 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
 
       <Text style={styles.sectionTitle}>{t('dataSection')}</Text>
       <View style={styles.optionList}>
-        <Pressable accessibilityRole="button" accessibilityLabel={t('clearCache')} onPress={() => void onClearCache()} style={[styles.option, styles.optionLast]}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t('clearCache')}
+          onPress={() => {
+            void onClearCache();
+          }}
+          style={[styles.option, styles.optionLast]}
+        >
           <Icon name="settings" size={17} color={colors.terreStrong} />
           <Text style={styles.optionText}>
             {cacheState === 'working' ? t('clearCacheWorking') : cacheState === 'done' ? t('clearCacheDone') : t('clearCache')}
@@ -106,18 +126,30 @@ export function MoreScreen({ locale, onLocale }: { locale: 'fr' | 'wo'; onLocale
 
       <Text style={styles.sectionTitle}>{t('siteSection')}</Text>
       <View style={styles.siteActions}>
-        {SITE_ACTIONS.map((action, index) => (
+        {MORE_ACTIONS.map((action, index) => (
           <Pressable
             key={action.key}
-            accessibilityRole="link"
+            accessibilityRole={action.mode === 'web' ? 'link' : 'button'}
             accessibilityLabel={t(action.labelKey)}
-            onPress={() => openSiteAction(action.path)}
-            style={[styles.siteAction, index === SITE_ACTIONS.length - 1 && styles.optionLast]}
+            accessibilityHint={
+              action.mode === 'web'
+                ? locale === 'wo'
+                  ? 'Dina ubbi navigateur bi'
+                  : 'Ouvre la page sur vjr221.sn'
+                : locale === 'wo'
+                  ? 'Dina ubbi annuaire bi ci application bi'
+                  : "Ouvre l'annuaire dans l'application"
+            }
+            onPress={() => openMoreAction(action)}
+            style={[styles.siteAction, index === MORE_ACTIONS.length - 1 && styles.optionLast]}
           >
             <View style={styles.siteIcon}>
               <Icon name="chevronRight" size={16} color={colors.terreStrong} />
             </View>
             <Text style={styles.siteActionText}>{t(action.labelKey)}</Text>
+            {action.mode === 'web' ? (
+              <Text style={styles.externalHint}>{locale === 'wo' ? 'Site' : 'Site'}</Text>
+            ) : null}
           </Pressable>
         ))}
       </View>
@@ -184,6 +216,13 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
       justifyContent: 'center',
     },
     siteActionText: { flex: 1, color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14 },
+    externalHint: {
+      color: colors.inkSoft,
+      fontFamily: fonts.monoSemiBold,
+      fontSize: 10,
+      letterSpacing: 0.4,
+      textTransform: 'uppercase',
+    },
     version: {
       marginTop: spacing.xl,
       textAlign: 'center',
