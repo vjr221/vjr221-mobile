@@ -79,7 +79,7 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
     return () => {
       active = false;
     };
-  }, [item.id, item.type]);
+  }, [item]);
 
   const share = () => shareFiche({ title: localized.title, summary: localized.excerpt, url: item.url ?? env.siteUrl });
   const call = () => practical?.phone && openExternalUrl(`tel:${practical.phone.replace(/\s+/g, '')}`, 'phone');
@@ -144,141 +144,66 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
         <View style={styles.contextRow}>
           <Badge tone="terre">{typeLabel}</Badge>
         </View>
-        <Text selectable style={styles.title}>
-          {localized.title}
-        </Text>
-        {showLead ? (
-          <Text selectable style={styles.lead}>
-            {cleanLead}
-          </Text>
-        ) : null}
+        <Text selectable style={styles.title}>{localized.title}</Text>
+        {showLead ? <Text selectable style={styles.lead}>{cleanLead}</Text> : null}
         {navigationContext && navItems.length > 1 ? (
           <View style={styles.navigationCard}>
-            <Pressable
-              accessibilityRole="button"
-              accessibilityState={{ disabled: !canPrevious }}
-              disabled={!canPrevious}
-              onPress={() => navigate(-1)}
-              style={[styles.navButton, !canPrevious && styles.navDisabled]}
-            >
+            <Pressable accessibilityRole="button" accessibilityState={{ disabled: !canPrevious }} disabled={!canPrevious} onPress={() => navigate(-1)} style={[styles.navButton, !canPrevious && styles.navDisabled]}>
               <Icon name="chevronLeft" size={17} color={canPrevious ? colors.terreStrong : colors.inkSoft} />
               <Text style={[styles.navText, !canPrevious && styles.navTextDisabled]}>{t('back')}</Text>
             </Pressable>
-            <Text style={styles.position}>
-              {navIndex + 1} / {navItems.length}
-            </Text>
-            <Pressable
-              accessibilityRole="button"
-              accessibilityState={{ disabled: !canNext }}
-              disabled={!canNext}
-              onPress={() => navigate(1)}
-              style={[styles.navButton, !canNext && styles.navDisabled]}
-            >
+            <Text style={styles.position}>{navIndex + 1} / {navItems.length}</Text>
+            <Pressable accessibilityRole="button" accessibilityState={{ disabled: !canNext }} disabled={!canNext} onPress={() => navigate(1)} style={[styles.navButton, !canNext && styles.navDisabled]}>
               <Text style={[styles.navText, !canNext && styles.navTextDisabled]}>{t('next')}</Text>
               <Icon name="chevronRight" size={17} color={canNext ? colors.terreStrong : colors.inkSoft} />
             </Pressable>
           </View>
         ) : null}
-        {locale === 'fr' && item.contentBlocks?.length ? (
-          <RichText blocks={item.contentBlocks} />
-        ) : localizedBodyBlocks.length ? (
-          <RichText blocks={localizedBodyBlocks} />
-        ) : null}
+        {locale === 'fr' && item.contentBlocks?.length ? <RichText blocks={item.contentBlocks} /> : localizedBodyBlocks.length ? <RichText blocks={localizedBodyBlocks} /> : null}
         {item.cta ? (
           <View style={styles.ctaBox}>
             <Text style={styles.ctaTitle}>{item.cta.title}</Text>
             <Text style={styles.ctaText}>{item.cta.text}</Text>
-            <Button
-              variant="secondary"
-              size="sm"
-              onPress={() => {
-                void openExternalUrl(item.cta!.buttonUrl);
-              }}
-              style={styles.ctaButton}
-            >
+            <Button variant="secondary" size="sm" onPress={() => { void openExternalUrl(item.cta!.buttonUrl); }} style={styles.ctaButton}>
               {item.cta.buttonLabel}
             </Button>
           </View>
         ) : null}
         <View style={styles.actions}>
-          <Button variant="primary" onPress={toggleSaved} style={styles.primaryAction}>
-            {saved ? t('saved') : t('save')}
-          </Button>
-          <Button variant="secondary" onPress={share}>
-            {t('share')}
-          </Button>
-          {practical?.whatsapp ? (
-            <Button variant="secondary" onPress={whatsapp}>
-              {t('whatsapp')}
-            </Button>
-          ) : null}
+          <Button variant="primary" onPress={toggleSaved} style={styles.primaryAction}>{saved ? t('saved') : t('save')}</Button>
+          <Button variant="secondary" onPress={share}>{t('share')}</Button>
+          {practical?.whatsapp ? <Button variant="secondary" onPress={whatsapp}>{t('whatsapp')}</Button> : null}
         </View>
         {practicalRows.length ? (
           <View style={styles.practicalCard}>
             {practicalRows.map((row, index) => (
-              <Pressable
-                key={`${row.label}-${row.value}`}
-                accessibilityRole={row.onPress ? 'button' : undefined}
-                accessibilityLabel={`${row.label}: ${row.value}`}
-                onPress={row.onPress}
-                disabled={!row.onPress}
-                style={[styles.practicalRow, index === practicalRows.length - 1 && styles.practicalRowLast]}
-              >
+              <Pressable key={`${row.label}-${row.value}`} accessibilityRole={row.onPress ? 'button' : undefined} accessibilityLabel={`${row.label}: ${row.value}`} onPress={row.onPress} disabled={!row.onPress} style={[styles.practicalRow, index === practicalRows.length - 1 && styles.practicalRowLast]}>
                 <Icon name={row.icon} size={16} color={colors.inkSoft} />
                 <Text style={styles.practicalLabel}>{row.label}</Text>
-                <Text selectable numberOfLines={2} style={styles.practicalValue}>
-                  {row.value}
-                </Text>
+                <Text selectable numberOfLines={2} style={styles.practicalValue}>{row.value}</Text>
               </Pressable>
             ))}
           </View>
         ) : null}
         <LocationPreview coordinates={coordinates} label={item.title} />
         {websiteUrl ? (
-          <Pressable
-            accessibilityRole="link"
-            accessibilityLabel={t('website')}
-            accessibilityHint={locale === 'wo' ? 'Dina ubbi navigateur ngir seet site bi' : 'Ouvre le site web dans votre navigateur'}
-            style={styles.link}
-            onPress={() => {
-              void openExternalUrl(websiteUrl, 'web');
-            }}
-          >
+          <Pressable accessibilityRole="link" accessibilityLabel={t('website')} accessibilityHint={locale === 'wo' ? 'Dina ubbi navigateur ngir seet site bi' : 'Ouvre le site web dans votre navigateur'} style={styles.link} onPress={() => { void openExternalUrl(websiteUrl, 'web'); }}>
             <Text style={styles.linkText}>{t('website')}</Text>
             <Icon name="chevronRight" size={13} color={colors.terreStrong} />
           </Pressable>
         ) : null}
         {related.length ? (
           <View style={styles.relatedSection}>
-            <View style={styles.sectionHeadingRow}>
-              <Text style={styles.sectionTitle}>{t('related')}</Text>
-              <Text style={styles.sectionHint}>{related.length}</Text>
-            </View>
+            <View style={styles.sectionHeadingRow}><Text style={styles.sectionTitle}>{t('related')}</Text><Text style={styles.sectionHint}>{related.length}</Text></View>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.relatedList}>
               {related.map((candidate) => (
-                <Pressable
-                  key={`${candidate.type}-${candidate.id}`}
-                  accessibilityRole="button"
-                  accessibilityLabel={candidate.title}
-                  onPress={() => onOpen?.(candidate)}
-                  style={({ pressed }) => [styles.relatedCard, pressed && styles.relatedPressed]}
-                >
+                <Pressable key={`${candidate.type}-${candidate.id}`} accessibilityRole="button" accessibilityLabel={candidate.title} onPress={() => onOpen?.(candidate)} style={({ pressed }) => [styles.relatedCard, pressed && styles.relatedPressed]}>
                   {candidate.thumbnailUrl || candidate.imageUrl ? (
-                    <Image
-                      source={{ uri: candidate.thumbnailUrl ?? candidate.imageUrl }}
-                      style={styles.relatedImage}
-                      contentFit="cover"
-                      cachePolicy="memory-disk"
-                      transition={160}
-                    />
+                    <Image source={{ uri: candidate.thumbnailUrl ?? candidate.imageUrl }} style={styles.relatedImage} contentFit="cover" cachePolicy="memory-disk" transition={160} />
                   ) : (
-                    <View style={[styles.relatedImage, styles.relatedFallback]}>
-                      <Icon name="image" size={20} color={colors.line} />
-                    </View>
+                    <View style={[styles.relatedImage, styles.relatedFallback]}><Icon name="image" size={20} color={colors.line} /></View>
                   )}
-                  <Text numberOfLines={2} style={styles.relatedTitle}>
-                    {candidate.title}
-                  </Text>
+                  <Text numberOfLines={2} style={styles.relatedTitle}>{candidate.title}</Text>
                   <Text style={styles.relatedType}>{candidate.type.toUpperCase()}</Text>
                 </Pressable>
               ))}
@@ -297,42 +222,13 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     hero: { width: '100%', height: 290, backgroundColor: colors.surfaceSoft },
     heroFallback: { alignItems: 'center', justifyContent: 'center' },
     heroShade: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 72, backgroundColor: 'rgba(0,0,0,0.10)' },
-    heroBack: {
-      position: 'absolute',
-      top: 18,
-      left: 16,
-      width: 46,
-      height: 46,
-      borderRadius: 23,
-      backgroundColor: colors.surface,
-      alignItems: 'center',
-      justifyContent: 'center',
-      opacity: 0.97,
-    },
+    heroBack: { position: 'absolute', top: 18, left: 16, width: 46, height: 46, borderRadius: 23, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center', opacity: 0.97 },
     body: { paddingHorizontal: spacing.md, paddingTop: spacing.md },
     contextRow: { marginBottom: spacing.xs },
     title: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.xs, lineHeight: 36 },
     lead: { color: colors.inkSoft, lineHeight: 24, fontSize: type.bodyLg, marginTop: spacing.md, fontFamily: fonts.bodyMedium },
-    navigationCard: {
-      marginTop: spacing.lg,
-      padding: spacing.xs,
-      minHeight: 52,
-      borderRadius: radii.lg,
-      backgroundColor: colors.surface,
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-    },
-    navButton: {
-      minHeight: 44,
-      minWidth: 82,
-      paddingHorizontal: spacing.sm,
-      borderRadius: radii.md,
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 3,
-    },
+    navigationCard: { marginTop: spacing.lg, padding: spacing.xs, minHeight: 52, borderRadius: radii.lg, backgroundColor: colors.surface, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+    navButton: { minHeight: 44, minWidth: 82, paddingHorizontal: spacing.sm, borderRadius: radii.md, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 3 },
     navDisabled: { opacity: 0.42 },
     navText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 13 },
     navTextDisabled: { color: colors.inkSoft },
@@ -345,15 +241,7 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     ctaTitle: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: type.body },
     ctaText: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: 13, lineHeight: 19 },
     ctaButton: { marginTop: spacing.xs, alignSelf: 'flex-start' },
-    practicalRow: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      gap: spacing.sm,
-      paddingVertical: spacing.md,
-      borderBottomWidth: 1,
-      borderBottomColor: colors.line,
-      minHeight: 54,
-    },
+    practicalRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, paddingVertical: spacing.md, borderBottomWidth: 1, borderBottomColor: colors.line, minHeight: 54 },
     practicalRowLast: { borderBottomWidth: 0 },
     practicalLabel: { color: colors.inkSoft, fontFamily: fonts.bodySemiBold, fontSize: 13, width: 78 },
     practicalValue: { color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14, flex: 1, textAlign: 'right' },
@@ -368,21 +256,7 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     relatedPressed: { opacity: 0.88, transform: [{ scale: 0.985 }] },
     relatedImage: { width: '100%', height: 110, backgroundColor: colors.surfaceSoft },
     relatedFallback: { alignItems: 'center', justifyContent: 'center' },
-    relatedTitle: {
-      color: colors.ink,
-      fontFamily: fonts.bodySemiBold,
-      fontSize: 14,
-      lineHeight: 19,
-      paddingHorizontal: spacing.sm,
-      paddingTop: spacing.sm,
-    },
-    relatedType: {
-      color: colors.inkSoft,
-      fontFamily: fonts.bodyMedium,
-      fontSize: 9,
-      letterSpacing: 0.6,
-      paddingHorizontal: spacing.sm,
-      paddingTop: 5,
-    },
+    relatedTitle: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 14, lineHeight: 19, paddingHorizontal: spacing.sm, paddingTop: spacing.sm },
+    relatedType: { color: colors.inkSoft, fontFamily: fonts.bodyMedium, fontSize: 9, letterSpacing: 0.6, paddingHorizontal: spacing.sm, paddingTop: 5 },
   });
 }
