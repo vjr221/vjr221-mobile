@@ -29,8 +29,8 @@ export function HomeScreen({
   onEmergencies: () => void;
 }) {
   const { t } = useI18n();
-  const { colors } = useTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+  const { colors, shadow } = useTheme();
+  const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
   const [items, setItems] = useState<ContentItem[]>([]);
   const [state, setState] = useState<'loading' | 'ready' | 'error'>('loading');
   const [cached, setCached] = useState(false);
@@ -162,7 +162,7 @@ export function HomeScreen({
   );
 }
 
-function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow']) {
   return StyleSheet.create({
     content: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg },
     offline: { backgroundColor: colors.surfaceSoft, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.sm },
@@ -214,20 +214,26 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
       paddingHorizontal: spacing.sm,
       alignItems: 'center',
       gap: 6,
-      minHeight: 72,
+      minHeight: 76,
       justifyContent: 'center',
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: colors.line,
+      ...shadow('subtle'),
     },
     quickText: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 12, textAlign: 'center' },
     categoryRow: { gap: spacing.sm, paddingVertical: spacing.xs, paddingRight: spacing.md },
     category: {
-      width: 132,
+      width: 136,
       padding: spacing.md,
       borderRadius: radii.lg,
       backgroundColor: colors.surface,
       alignItems: 'flex-start',
       gap: spacing.sm,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: colors.line,
+      ...shadow('subtle'),
     },
-    categoryPressed: { opacity: 0.9 },
+    categoryPressed: { opacity: 0.92, transform: [{ scale: 0.98 }] },
     categoryIconWrap: {
       width: 38,
       height: 38,
