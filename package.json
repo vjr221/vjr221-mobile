@@ -1,6 +1,6 @@
 {
   "name": "vjr221-mobile",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "index.ts",
   "dependencies": {
     "@expo-google-fonts/ibm-plex-mono": "^0.4.1",
@@ -9,7 +9,6 @@
     "@expo-google-fonts/unbounded": "^0.4.1",
     "@react-native-async-storage/async-storage": "2.2.0",
     "@react-native-community/netinfo": "12.0.1",
-    "@sentry/react-native": "^8.25.0",
     "expo": "~57.0.18",
     "expo-font": "~57.0.3",
     "expo-haptics": "~57.0.2",
@@ -46,6 +45,15 @@
     "prepare": "husky"
   },
   "private": true,
-  "jest": { "preset": "jest-expo", "setupFiles": ["<rootDir>/jest.setup.js"] },
-  "lint-staged": { "*.{ts,tsx,json,md}": ["eslint --fix"], "*.{ts,tsx,json,md}": ["prettier --write"] }
+  "jest": {
+    "preset": "jest-expo",
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx,json,md}": [
+      "prettier --write"
+    ]
+  }
 }
