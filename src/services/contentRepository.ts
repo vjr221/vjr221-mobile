@@ -9,7 +9,9 @@ export type WordPressPost = {
   date: string;
   link: string;
   title: { rendered: string };
+  title_wo?: { rendered: string } | string;
   excerpt: { rendered: string };
+  excerpt_wo?: { rendered: string } | string;
   content?: { rendered: string };
   tags?: number[];
   _embedded?: { 'wp:featuredmedia'?: WordPressFeaturedMedia[] };
@@ -77,7 +79,9 @@ export const toContentItem = (post: WordPressPost): ContentItem => {
   return {
     id: post.id,
     title: stripHtml(post.title.rendered),
+    titleWo: post.title_wo ? stripHtml(typeof post.title_wo === 'string' ? post.title_wo : post.title_wo.rendered) : undefined,
     excerpt: stripHtml(post.excerpt.rendered),
+    excerptWo: post.excerpt_wo ? stripHtml(typeof post.excerpt_wo === 'string' ? post.excerpt_wo : post.excerpt_wo.rendered) : undefined,
     content: rawContent ? stripHtml(rawContent) : undefined,
     contentBlocks: contentBlocks?.length ? contentBlocks : undefined,
     type: 'news',
