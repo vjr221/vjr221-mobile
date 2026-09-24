@@ -4,7 +4,10 @@ export type ContentType =
 export interface ContentItem {
   id: number;
   title: string;
+  /** Traductions éditoriales fournies par WordPress quand elles existent. */
+  titleWo?: string;
   excerpt?: string;
+  excerptWo?: string;
   content?: string;
   /** Version structurée de `content` pour le rendu riche en fiche. */
   contentBlocks?: import('../services/richText').RichBlock[];
