@@ -3,6 +3,47 @@ import type { ContentItem } from '../types/content';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 const CONTENT_WO: Record<string, WolofContent> = {
+  'commune-des-hlm': { titleWo: 'Kominu HLM', excerptWo: 'Komin bu nekk ci agglomération Dakar, ci biir dëkk yu am solo ci dundug métropole bi.', contentWo: `### Jëmmal
+
+Kominu HLM bokk na ci agglomération Dakar. Mooy territoire urbain bu fees ak way-dëkk, commerce, services ak activités yu bés bu nekk.
+
+### Dund ak services
+
+Kër, écoles, commerces, services ak transport bokk nañu ci dundug komin bi. Jëmmal bi lëkkale na ak yokkute Dakar ak quartiers yi ci wetu.
+
+### Askan ak identité
+
+Ni askan yi di dund, di liggéey ak di bokkandoo ci quartier yi jox komin bi identité bu boppam. Aada ak initiatives locales mën nañu yokk mbooloo.`, },
+  'tourisme-communautaire-senegal': { titleWo: 'Turis bu askan wi ci Senegaal', excerptWo: 'Turis bu askan wi dafay boole gan ak askan yi ci dund, aada ak yokkute local.', contentWo: `### Jëmmal
+
+Turis bu askan wi mooy yoonu gan-gësté bu askan yi ci bérab bi bokk ci jëfandikoo ak jariñu tourisme. Ci Senegaal, mooy may gan yi gis aada, lekk, liggéeyu loxo, nature ak dundug dëkk yi ci yoon wu bokk ak askan wi.
+
+### Askan ak yokkute local
+
+Jariñ bi war na dem ba askan yi. Hébergement, restauration, guide, artisanat ak transport mën nañu sos ay liggéey te yokk xaalisu dëkk yi.
+
+### Aada ak nature
+
+Turis bu askan wi dafay boole seet ak xam. Gan yi mën nañu bokk ci yégle aada, togg, liggéeyu loxo, xew-xew ak seet nature.
+
+### Aar ak toppatoo
+
+Bérab bi war nañu ko aar, te gan-gësté war nañu topp aada ak environnement. Jokkoo diggante askan ak gan mooy tax tourisme bi mën a dund lu yàgg.`, },
+  'cap-skirring': { titleWo: 'Cap Skirring', excerptWo: 'Bérab bu géej ci Casamance, xam ko ci plages, nature ak tourisme.', contentWo: `### Jëmmal
+
+Cap Skirring nekk na ci Casamance, ci wetug Atlantique. Bérab bi xam nañu ko ci plages yu neex, nature ak tourisme.
+
+### Géej ak nature
+
+Plages yi, cocotiers, mangrove ak paysages yu Casamance di jox bérab bi melokaan bu am solo. Gan yi mën nañu seet géej, nature ak dundug dëkk.
+
+### Tourisme
+
+Hébergement, restauration, artisanat ak activités yu géej bokk nañu ci économie touristique. Jokkoo ak askan wi mooy benn ci solo yi ngir tourisme bi am jariñ.
+
+### Aar bérab bi
+
+Littoral ak ecosystems yi war nañu leen a aar. Développement bu tourisme war na bokk ak toppatoo environnement.`, },
   'tourisme-de-la-region-de-dakar-cap-vert-patrimoine-urbain-et-littoral': { titleWo: 'Turis ci Diiwaanu Dakar: Cap-Vert, patrimoine dëkk ak géej', excerptWo: 'Dakar dafa boole patrimoine urbain, géej, Gorée, aada ak bérab yu am solo ci tourisme.', contentWo: `### Jëmmal
 
 Diiwaanu Dakar dafa boole patrimoine urbain, géej, taariix ak aada. Cap-Vert mooy bérab bu am solo ci seet Senegaal.
