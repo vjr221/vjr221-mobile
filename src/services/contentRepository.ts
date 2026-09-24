@@ -2,6 +2,7 @@ import { getJson } from './http';
 import { withCacheFallback } from './cache';
 import { env } from '../config/env';
 import type { ContentItem, ContentType } from '../types/content';
+import type { Locale } from '../i18n/strings';
 import { parseRichContent } from './richText';
 
 export type WordPressPost = {
@@ -200,4 +201,9 @@ export async function getCategoryContent(type: ContentType, opts: { page?: numbe
 
   const result = await withCacheFallback(`category:${type}:1:${search ?? ''}`, CACHE_TTL, fetchPage);
   return { items: result.value, fromCache: result.fromCache, stale: result.stale, hasMore: result.fromCache ? false : result.value.length === CATEGORY_PAGE_SIZE };
+}
+
+export function localizeContent(item: ContentItem, locale: Locale): { title: string; excerpt?: string } {
+  if (locale === 'wo') return { title: item.titleWo?.trim() || item.title, excerpt: item.excerptWo?.trim() || item.excerpt };
+  return { title: item.title, excerpt: item.excerpt };
 }
