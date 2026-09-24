@@ -192,6 +192,20 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
             <Icon name="chevronRight" size={13} color={colors.terreStrong} />
           </Pressable>
         ) : null}
+        {item.type === 'directory' ? (
+          <Pressable
+            accessibilityRole="link"
+            accessibilityLabel={t('claimListing')}
+            accessibilityHint={locale === 'wo' ? 'Dina ubbi site bi ngir réclamer fiche bi' : 'Ouvre le site pour réclamer ou gérer cette fiche'}
+            style={styles.link}
+            onPress={() => {
+              void openExternalUrl('https://vjr221.sn/mon-compte/', 'web');
+            }}
+          >
+            <Text style={styles.linkText}>{t('claimListing')}</Text>
+            <Icon name="chevronRight" size={13} color={colors.terreStrong} />
+          </Pressable>
+        ) : null}
         {related.length ? (
           <View style={styles.relatedSection}>
             <View style={styles.sectionHeadingRow}><Text style={styles.sectionTitle}>{t('related')}</Text><Text style={styles.sectionHint}>{related.length}</Text></View>
