@@ -25,6 +25,7 @@ export function GeoDetailCard({
   cta,
   gps,
   usefulLinks = [],
+  permalink,
 }: {
   title: string;
   slug?: string;
@@ -36,6 +37,7 @@ export function GeoDetailCard({
   cta?: GeoCta | null;
   gps?: GeoPoint | null;
   usefulLinks?: UsefulLink[];
+  permalink?: string | null;
 }) {
   const { t, locale } = useI18n();
   const { colors } = useTheme();
@@ -119,6 +121,22 @@ export function GeoDetailCard({
             </Button>
           );
         })}
+        {(() => {
+          const siteUrl = sanitizeExternalUrl(permalink, 'web');
+          if (!siteUrl) return null;
+          const alreadyListed = usefulLinks.some((link) => sanitizeExternalUrl(link.url, 'web') === siteUrl);
+          if (alreadyListed) return null;
+          return (
+            <Button
+              variant="secondary"
+              size="sm"
+              onPress={() => void openExternalUrl(siteUrl, 'web')}
+              style={styles.mapButton}
+            >
+              {t('website')}
+            </Button>
+          );
+        })()}
         {cta ? (
           <View style={styles.ctaBox}>
             <Text style={styles.ctaTitle}>{cta.title}</Text>
