@@ -26,13 +26,13 @@ const KICKER_TONE: Partial<Record<ContentType, BadgeTone>> = {
 
 /**
  * Fiche encyclopédique premium : image pleine largeur, kicker en badge,
- * titre éditorial, extrait. Sans image, garde une bande de couleur sobre
+ * titre éditorial, extrait. Sans image, garde une bande de couleur sober
  * plutôt qu'un vide — jamais un placeholder générique bruyant.
  */
 export const ContentCard = memo(function ContentCard({ item, onPress, size = 'default' }: { item: ContentItem; onPress: (item: ContentItem) => void; size?: 'default' | 'compact' }) {
   const { t, locale } = useI18n();
-  const { colors } = useTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+  const { colors, shadow } = useTheme();
+  const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
   const kickerKey = KICKER_KEY[item.type];
   const kicker = kickerKey ? t(kickerKey).toUpperCase() : item.type.toUpperCase();
   const tone = KICKER_TONE[item.type] ?? 'neutral';
@@ -60,22 +60,30 @@ export const ContentCard = memo(function ContentCard({ item, onPress, size = 'de
       )}
       <View style={styles.body}>
         <Badge tone={tone}>{kicker}</Badge>
-        <Text numberOfLines={2} style={styles.title}>{item.title}</Text>
+        <Text numberOfLines={2} style={styles.title}>{localized.title}</Text>
         {item.excerpt && !compact ? <Text numberOfLines={2} style={styles.excerpt}>{localized.excerpt}</Text> : null}
       </View>
     </Pressable>
   );
 });
 
-function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow']) {
   return StyleSheet.create({
-    card: { backgroundColor: colors.surface, overflow: 'hidden', borderRadius: radii.lg, marginBottom: spacing.md },
-    pressed: { opacity: 0.92 },
-    image: { width: '100%', height: 168, backgroundColor: colors.surfaceSoft },
-    imageFallback: { width: '100%', height: 168, backgroundColor: colors.surfaceSoft, alignItems: 'center', justifyContent: 'center' },
-    imageCompact: { height: 128 },
-    body: { padding: spacing.md, gap: 6 },
-    title: { color: colors.ink, fontFamily: fonts.displaySemiBold, fontSize: type.h2, lineHeight: 25 },
-    excerpt: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: type.body, lineHeight: 20 },
+    card: {
+      backgroundColor: colors.surface,
+      overflow: 'hidden',
+      borderRadius: radii.lg,
+      marginBottom: spacing.md,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: colors.line,
+      ...shadow('subtle'),
+    },
+    pressed: { opacity: 0.94, transform: [{ scale: 0.985 }] },
+    image: { width: '100%', height: 176, backgroundColor: colors.surfaceSoft },
+    imageFallback: { width: '100%', height: 176, backgroundColor: colors.surfaceSoft, alignItems: 'center', justifyContent: 'center' },
+    imageCompact: { height: 132 },
+    body: { padding: spacing.md, gap: 8 },
+    title: { color: colors.ink, fontFamily: fonts.displaySemiBold, fontSize: type.h2, lineHeight: 26, letterSpacing: 0.15 },
+    excerpt: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: type.body, lineHeight: 21 },
   });
 }
