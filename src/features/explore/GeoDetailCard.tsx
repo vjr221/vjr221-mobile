@@ -5,14 +5,14 @@ import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { Badge } from '../../components/Badge';
 import { Button } from '../../components/Button';
-import { openExternalUrl } from '../../services/externalLinks';
+import { openExternalUrl, sanitizeExternalUrl } from '../../services/externalLinks';
 import { parseRichContent } from '../../services/richText';
 import { RichText } from '../../components/RichText';
 import { openExternalNavigation } from '../../services/mapService';
 import { Icon } from '../../components/icons/Icon';
 import { useI18n } from '../../i18n/I18nProvider';
 import { getWolofContentBySlug } from '../../i18n/contentWolof';
-import type { GeoCta, GeoPoint, KeyInfos, RemoteImage } from '../../types/geo';
+import type { GeoCta, GeoPoint, KeyInfos, RemoteImage, UsefulLink } from '../../types/geo';
 
 export function GeoDetailCard({
   title,
@@ -24,6 +24,7 @@ export function GeoDetailCard({
   breadcrumb,
   cta,
   gps,
+  usefulLinks = [],
 }: {
   title: string;
   slug?: string;
@@ -34,6 +35,7 @@ export function GeoDetailCard({
   breadcrumb?: string | null;
   cta?: GeoCta | null;
   gps?: GeoPoint | null;
+  usefulLinks?: UsefulLink[];
 }) {
   const { t, locale } = useI18n();
   const { colors } = useTheme();
@@ -85,6 +87,21 @@ export function GeoDetailCard({
             {t('openMap')}
           </Button>
         ) : null}
+        {usefulLinks.map((link, index) => {
+          const url = sanitizeExternalUrl(link.url, 'web');
+          if (!url) return null;
+          return (
+            <Button
+              key={link.label ? link.label + '-' + index : 'link-' + index}
+              variant="secondary"
+              size="sm"
+              onPress={() => void openExternalUrl(url, 'web')}
+              style={styles.mapButton}
+            >
+              {link.label?.trim() || t('website')}
+            </Button>
+          );
+        })}
         {cta ? (
           <View style={styles.ctaBox}>
             <Text style={styles.ctaTitle}>{cta.title}</Text>
