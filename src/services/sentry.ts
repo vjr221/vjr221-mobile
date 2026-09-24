@@ -1,16 +1,16 @@
 /**
- * Compatibility layer kept for ErrorBoundary.
+ * Relais d'erreurs pour ErrorBoundary — sans SDK natif.
  *
- * Sentry's native SDK was removed from the production build in 1.4.1 while
- * diagnosing the Android startup crash. Keeping these functions dependency-
- * free lets the existing error boundary remain intact without introducing a
- * native module during application startup.
+ * Le SDK Sentry React Native a été retiré du build de production après 1.2.1
+ * (crash démarrage Android). Ces fonctions restent sans dépendance native
+ * pour ne jamais faire échouer le démarrage ; en __DEV__ les erreurs
+ * remontent dans la console.
  */
 export function initSentry() {
-  // Intentionally disabled in 1.4.1.
+  // No-op : pas de SDK natif embarqué en 1.5.0.
 }
 
-/** Error relay used by ErrorBoundary -- must never throw. */
+/** Relais ErrorBoundary — ne doit jamais lever d'exception. */
 export function reportError(error: Error, extra?: Record<string, unknown>) {
   if (__DEV__) {
     console.warn('[VJR221] ErrorBoundary', error, extra);
