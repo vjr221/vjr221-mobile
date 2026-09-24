@@ -32,6 +32,18 @@ function wait(ms: number, signal: AbortSignal): Promise<void> {
   });
 }
 
+/** Strip accidental leading noise (PHP notices, BOM, digits) before the first JSON value. */
+function parseJsonBody<T>(raw: string): T {
+  const trimmed = raw.replace(/^\uFEFF/, '').trim();
+  const start = trimmed.search(/[{\[]/);
+  if (start < 0) throw new HttpError('Réponse serveur invalide.');
+  try {
+    return JSON.parse(trimmed.slice(start)) as T;
+  } catch {
+    throw new HttpError('Réponse serveur illisible.');
+  }
+}
+
 async function fetchOnce<T>(baseUrl: string, path: string, signal: AbortSignal): Promise<T> {
   if (signal.aborted) {
     throw new DOMException('La requête a été interrompue.', 'AbortError');
@@ -42,7 +54,8 @@ async function fetchOnce<T>(baseUrl: string, path: string, signal: AbortSignal):
     signal,
   });
   if (!response.ok) throw new HttpError('La ressource est indisponible.', response.status);
-  return response.json() as Promise<T>;
+  const raw = await response.text();
+  return parseJsonBody<T>(raw);
 }
 
 /** Délai de retry avec une petite marge aléatoire (jitter) pour éviter que de
