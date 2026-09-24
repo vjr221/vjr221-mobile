@@ -3,6 +3,118 @@ import type { ContentItem } from '../types/content';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 const CONTENT_WO: Record<string, WolofContent> = {
+'region-de-dakar': {
+    titleWo: 'Diiwaanu Dakar',
+    excerptWo: 'Diiwaan bu gën a ndaw ci réew mi ci superficie, waaye Dakar mooy dëkk bu mag bu politik, ekonom ak administrasyon.',
+    contentWo: `### Jëmmal
+
+Diiwaanu Dakar mooy diiwaan bu gën a ndaw ci Senegaal ci kaw superficie, waaye mu am solo lool ci mbirum politik, ekonom, administrasyon ak way-dëkk. Dakar, dëkk bu mag bu réew mi, mooy benn ci péninsule Cap-Vert, ci wetug géej gi.
+
+### Géeographie
+
+Dakar nekk na ci peninsule Cap-Vert, bérab bu gën a sori ci peninsule Afrig ci sowwu. Diiwaan bi dafa aju ci Atlantique ci norte, sowwu ak sud, te Thiès mooy ci penku.
+
+### Taariix
+
+Taariixu Dakar dafa lëkkale ak Cap-Vert ak Gorée. Gorée bokk na ci bérab yu am solo ci xelal nit ñi ci mbirum traite négrière atlantique. Ci finu XIXe siècle, Dakar tànn nañu ko ni capitale bu AOF. Gannaaw indipendance ci 1960, Dakar des na capitale bu République du Senegaal.
+
+### Toppatoo réew mi
+
+Diiwaan bi am na juróom benn départements : Dakar, Guédiawaye, Pikine, Keur Massar ak Rufisque. Ñu ngi boole communes ak quartiers yu bare ci métropole bi.
+
+### Way-dëkk ak ekonom
+
+Dakar mooy diiwaan bu gën a am way-dëkk ci Senegaal. Commerce, services, banques, assurances, télécommunications, industrie, numérique ak BTP bokk nañu ci sektëër yu am solo.
+
+### Transport ak infrastructures
+
+Port autonome de Dakar mooy hub logistique bu am solo ci Afrig Oksidan. TER boole Dakar ak Diamniadio ak Aéroport International Blaise Diagne. Autoroutes ak yeneen yoon yu mag bokk nañu ci réseau transport bi.
+
+### Jàng ak wér-gu-yaram
+
+Dakar dafa dajale universités, écoles ak instituts yu bare. Ci wér-gu-yaram itam, hôpitaux yu mag yi nekk nañu ci diiwaan bi.
+
+### Aada ak tourisme
+
+Dakar mooy benn ci kër yu mag ci aada Senegaal. Mbalax, jazz, hip-hop, musik yu aada, arts, peinture, sculpture, photographie ak festivals di dund ci dëkk bi. Gorée, Monument de la Renaissance Africaine, Corniche, Pointe des Almadies ak Village des Arts bokk nañu ci bérab yi gën a xam.
+`,
+  },
+'region-de-ziguinchor': {
+    titleWo: 'Diiwaanu Ziguinchor',
+    excerptWo: 'Xolum Casamance ci mbirum taariix, ekonom ak aada, diiwaan bu fees ak mangrove, tourism ak wuute culture.',
+    contentWo: `### Jëmmal
+
+Diiwaanu Ziguinchor nekk na ci penku-sowwu Senegaal. Mooy xolum Casamance ci mbirum taariix, ekonom ak aada. Fleuve Casamance, mangrove yi, tourisme ak wuute askan ak làkk yi jox nañu diiwaan bi melokaan bu boppam.
+
+### Géeographie
+
+Diiwaan bi nekk na ci sudu Senegaal. Gambia mooy ci norte, Sédhiou ci penku, Guinée-Bissau ci sud, Atlantique ci sowwu. Ziguinchor mooy chef-lieu.
+
+### Taariix ak aada
+
+Ziguinchor am na taariix bu fees ak échanges, commerce ak influence yu jóge ci Afrig ak Europe. Casamance dafa fees ak aada yu wuute, rawatina ci askanu Diola, Mandingue, Balante, Mancagne, Peul ak Wolof.
+
+### Toppatoo
+
+Diiwaan bi am na ñetti départements : Ziguinchor, Oussouye ak Bignona. Communes ak villages yi nekk ci diiwaan bi dafa bokk ci réseau territorial bu Casamance.
+
+### Ekonom
+
+Agriculture, pêche, commerce ak tourisme bokk nañu ci sektëër yu am solo. Suuf, ndox ak mangrove yi jox nañu ay ressources yu am solo ci dundug askan wi.
+
+### Aada ak tourisme
+
+Ziguinchor mooy bérab bu am solo ci aada Casamance. Fecc, musik, liggéey-loxo, rites initiatiques ak architecture traditionnelle bokk nañu ci patrimoine bi. Mangrove yi ak paysages yu géej ak fleuve di yokk solo tourism bi.
+`,
+  },
+'le-lac-rose': {
+    titleWo: 'Lac Rose',
+    excerptWo: 'Lac Retba, bérab bu am solo ci tourisme ak patrimoine naturel Senegaal, xam ko ci ndoxam bu mën a am melo rose.',
+    contentWo: `### Jëmmal
+
+Lac Rose, walla Lac Retba, mooy benn ci bérab yu naturel yi gën a xam ci Senegaal. Nekk na ci wetug Dakar, te dafa am solo ci tourisme ak patrimoine naturel réew mi.
+
+### Lu tax ñuy woowe ko Lac Rose?
+
+Melo rose bi mën na feeñ ci jamono yi, rawatina bu tàng bi tar te ndox mi am salinité bu rëy. Micro-algue Dunaliella salina dafay joxe pigment bu mën a soppi melo ndox mi.
+
+### Sel
+
+Lac bi am salinité bu rëy. Jëfandikoo sel mooy liggéey bu yàgg ci bérab bi. Récolteurs yi di génn sel ci suufu lac bi, denc ko ci pirogue yi te yóbbu ko ci rëŋŋ.
+
+### Tourisme
+
+Dunes, ndoxum sel, paysages ak pirogues yu fees ak sel def nañu lac bi bérab bu ñuy seetaan. Lac Rose itam bokk na ci xelal nit ñi ci arrivée bu rallye Paris-Dakar ci jamono yu weesu.
+
+### Aar environnement
+
+Lac Rose am na ay défis yu aju ci soppi gu climat, pression nit ñi ak changement ci écosystème. Aar bérab bi mooy tax patrimoine naturel bi mën a dund ak jariñ askan wi.
+`,
+  },
+'l-ile-de-goree': {
+    titleWo: 'Dunu Gorée',
+    excerptWo: 'Bérab bu xelal nit ñi, patrimoine ak jëfandikoo aada, ci géeju Dakar, bu am solo ci taariixu traite négrière atlantique.',
+    contentWo: `### Jëmmal
+
+Dunu Gorée nekk na ci géeju Dakar. Mooy benn ci bérab yu taariix yu gën a xam ci Senegaal ak Afrig. Gorée am na solo lool ci xelal nit ñi ci traite négrière atlantique.
+
+### Taariix
+
+Dunu bi am na ay occupations européennes yu wute ci ay jamono : Portugais, Néerlandais, Anglais ak Français. Positionam ci géej defoon na ko bérab bu am solo ci commerce maritime.
+
+### Mémoire
+
+Ci ay siècle yu weesu, Gorée bokkoon na ci réseau traite des esclaves. Goor ak jigéen ak xale ñu jële woon leen ci géej yi ci Afrig, yóbbu leen ci Amérique. Tey, Gorée mooy bérab bu xelal nit ñi ci tragédie boobu.
+
+### Patrimoine ak UNESCO
+
+Architecture bi, ru yi, kër yi ak bérab yu taariix yi def nañu Gorée bérab bu am solo. Dunu bi bind nañu ko ci patrimoine mondial UNESCO.
+
+### Aada ak tourisme
+
+Gorée accueille artistes, artisans ak musiciens. Way-dëkk ak gan yi mën nañu seet musées, bérab yu taariix, ru yi ak paysages yu géej. Dunu bi joxe itam message bu aju ci xelal, dialogue ak bokkandoo diggante askan yi.
+`,
+  },
 thiakry: {
     titleWo: 'Thiakry',
     excerptWo: 'Dessert ak naan bu ñu defee ak millet, nekk ci lekk yu gën a siiw ci Senegaal.',
@@ -125,17 +237,47 @@ Aar patrimoine immatériel du ko rekk denc ay mbir. War nañu itam dimbali askan
 
 VJR 221 bëgg na bind expression yii te lëkkale leen ak seen terroir, askan, làkk, nit ñu am solo, xew-xew ak bérab yi ñuy def leen. Bu expression amee xibaar bu doy, war nañu sosal ko fiche bu boppam ngir bañ a def doublon te aar xóotinu encyclopédie bi.`,
   },
-'commune-des-hlm': { titleWo: 'Kominu HLM', excerptWo: 'Komin bu nekk ci agglomération Dakar, ci biir dëkk yu am solo ci dundug métropole bi.', contentWo: `### Jëmmal
+'le-conte-au-senegal-oralite-transmission-et-patrimoine-vivant': { titleWo: 'Nettali ci Senegaal: wax, jàngale ak patrimoine bu dund', excerptWo: 'Nettali mooy yoon wu mag ngir jaarale xam-xam, aada ak xelal diggante maam ak doom.', contentWo: `### Jëmmal
 
-Kominu HLM bokk na ci agglomération Dakar. Mooy territoire urbain bu fees ak way-dëkk, commerce, services ak activités yu bés bu nekk.
+Nettali bokk na ci patrimoine bu dund ci Senegaal. Ci jamono yu weesu, mag ñi di nettali ci penku nit ñi, ci guddi walla ci ndaje, ngir jàngale, xelal ak neexal.
 
-### Dund ak services
+### Wax ak xam-xam
 
-Kër, écoles, commerces, services ak transport bokk nañu ci dundug komin bi. Jëmmal bi lëkkale na ak yokkute Dakar ak quartiers yi ci wetu.
+Nettali dafay jaarale ay leçon ci dund, aada, jikko ak jokkoo ak askan. Làkk yi di am solo ci yoon wi, ndax wax ak dégg mooy alal bu mag.
 
-### Askan ak identité
+### Transmission
 
-Ni askan yi di dund, di liggéey ak di bokkandoo ci quartier yi jox komin bi identité bu boppam. Aada ak initiatives locales mën nañu yokk mbooloo.`, },
+Jàngale nettali ci ndaw yi mën na tax aada yi bañ a réer. Tey, école, radio, télévision ak numérique mën nañu dimbali ci denc ak yégle nettali yi.
+
+### Patrimoine bu dund
+
+Nettali du mbind rekk. Mooy performance, baat, mouvement, humour ak jokkoo ak ñi déglu. Loolu moo tax mu nekk patrimoine bu dund.`, },
+'lartisanat-traditionnel-senegalais': { titleWo: 'Liggéeyu loxo bu aada ci Senegaal', excerptWo: 'Liggéeyu loxo dafa bokk ci aada, ekonom ak patrimoine Senegaal, ak xam-xam yu ñuy jële ci maam ba ci doom.', contentWo: `### Jëmmal
+
+Liggéeyu loxo bu aada mooy benn ci mbir yi gën a wone aada Senegaal. Xam-xam yi di jaar diggante maam ak doom ci liggéeyu loxo, melokaan ak jëfandikoo mbir yu jóge ci réew mi.
+
+### Ay xeet
+
+Tëggu métal, teg, rëdd, tissage, tegal, defar ay mbir ci ndoxum garab, cuir ak yeneen matières bokk nañu ci artisanat bi. Régions yi am nañu seen melokaan ak seen xam-xam.
+
+### Ekonom ak liggéey
+
+Artisanat dafay jox ay revenus ak liggéey. Marchés, foires, tourisme ak vente ci internet mën nañu yokk séddoo ak gan-gësté.
+
+### Aar xam-xam
+
+Aar artisanat mooy aar itam xam-xam. Jàngale ndaw yi, dimbali artisans ak wone seen liggéey ci yoon wu dëgër mën na tax patrimoine bi dund.`, },
+'tourisme-memoire-senegal': { titleWo: 'Turis ak xelal ci Senegaal', excerptWo: 'Bérab ak taariix yu may nit ñi xelal ci mbir yu am solo ci taariixu Senegaal.', contentWo: `### Jëmmal
+
+Turis ak xelal mooy seet bérab yi ak patrimoines yi ñuy lëkkale ak taariix, mémoire ak xew-xew yu am solo. Ci Senegaal, bérab yooyu mën nañu dimbali nit ñi xam lu weesu ak jàng ci moom.
+
+### Gorée ak mémoire
+
+Gorée bokk na ci bérab yi gën a am solo ci mémoire bu traite négrière atlantique. Musées, architecture ak bérab yu taariix yi di jox nit ñi xelal ak xam-xam.
+
+### Jàng ci taariix
+
+Turis ak mémoire du seet rekk. Mooy itam jàng, dëggal ay témoignage, aar patrimoine ak wone xew-xew yi ci yoon wu wér.`, },
 'tourisme-communautaire-senegal': { titleWo: 'Turis bu askan wi ci Senegaal', excerptWo: 'Turis bu askan wi dafay boole gan ak askan yi ci dund, aada ak yokkute local.', contentWo: `### Jëmmal
 
 Turis bu askan wi mooy yoonu gan-gësté bu askan yi ci bérab bi bokk ci jëfandikoo ak jariñu tourisme. Ci Senegaal, mooy may gan yi gis aada, lekk, liggéeyu loxo, nature ak dundug dëkk yi ci yoon wu bokk ak askan wi.
@@ -151,21 +293,6 @@ Turis bu askan wi dafay boole seet ak xam. Gan yi mën nañu bokk ci yégle aada
 ### Aar ak toppatoo
 
 Bérab bi war nañu ko aar, te gan-gësté war nañu topp aada ak environnement. Jokkoo diggante askan ak gan mooy tax tourisme bi mën a dund lu yàgg.`, },
-'cap-skirring': { titleWo: 'Cap Skirring', excerptWo: 'Bérab bu géej ci Casamance, xam ko ci plages, nature ak tourisme.', contentWo: `### Jëmmal
-
-Cap Skirring nekk na ci Casamance, ci wetug Atlantique. Bérab bi xam nañu ko ci plages yu neex, nature ak tourisme.
-
-### Géej ak nature
-
-Plages yi, cocotiers, mangrove ak paysages yu Casamance di jox bérab bi melokaan bu am solo. Gan yi mën nañu seet géej, nature ak dundug dëkk.
-
-### Tourisme
-
-Hébergement, restauration, artisanat ak activités yu géej bokk nañu ci économie touristique. Jokkoo ak askan wi mooy benn ci solo yi ngir tourisme bi am jariñ.
-
-### Aar bérab bi
-
-Littoral ak ecosystems yi war nañu leen a aar. Développement bu tourisme war na bokk ak toppatoo environnement.`, },
 'tourisme-de-la-region-de-dakar-cap-vert-patrimoine-urbain-et-littoral': { titleWo: 'Turis ci Diiwaanu Dakar: Cap-Vert, patrimoine dëkk ak géej', excerptWo: 'Dakar dafa boole patrimoine urbain, géej, Gorée, aada ak bérab yu am solo ci tourisme.', contentWo: `### Jëmmal
 
 Diiwaanu Dakar dafa boole patrimoine urbain, géej, taariix ak aada. Cap-Vert mooy bérab bu am solo ci seet Senegaal.
@@ -259,51 +386,32 @@ Ni ñuy togg, denc ak séddoo lekk yi mooy xam-xam bu jaar ci maam yi. Mbooloo n
 ### Ressources local
 
 Agriculture, jardinage ak produits yu dëkk bi mën nañu jox ay revenus te dimbali souveraineté alimentaire. Aar suuf ak ndox mooy benn ci défi yi.`, },
-'le-conte-au-senegal-oralite-transmission-et-patrimoine-vivant': { titleWo: 'Nettali ci Senegaal: wax, jàngale ak patrimoine bu dund', excerptWo: 'Nettali mooy yoon wu mag ngir jaarale xam-xam, aada ak xelal diggante maam ak doom.', contentWo: `### Jëmmal
+'commune-des-hlm': { titleWo: 'Kominu HLM', excerptWo: 'Komin bu nekk ci agglomération Dakar, ci biir dëkk yu am solo ci dundug métropole bi.', contentWo: `### Jëmmal
 
-Nettali bokk na ci patrimoine bu dund ci Senegaal. Ci jamono yu weesu, mag ñi di nettali ci penku nit ñi, ci guddi walla ci ndaje, ngir jàngale, xelal ak neexal.
+Kominu HLM bokk na ci agglomération Dakar. Mooy territoire urbain bu fees ak way-dëkk, commerce, services ak activités yu bés bu nekk.
 
-### Wax ak xam-xam
+### Dund ak services
 
-Nettali dafay jaarale ay leçon ci dund, aada, jikko ak jokkoo ak askan. Làkk yi di am solo ci yoon wi, ndax wax ak dégg mooy alal bu mag.
+Kër, écoles, commerces, services ak transport bokk nañu ci dundug komin bi. Jëmmal bi lëkkale na ak yokkute Dakar ak quartiers yi ci wetu.
 
-### Transmission
+### Askan ak identité
 
-Jàngale nettali ci ndaw yi mën na tax aada yi bañ a réer. Tey, école, radio, télévision ak numérique mën nañu dimbali ci denc ak yégle nettali yi.
+Ni askan yi di dund, di liggéey ak di bokkandoo ci quartier yi jox komin bi identité bu boppam. Aada ak initiatives locales mën nañu yokk mbooloo.`, },
+'cap-skirring': { titleWo: 'Cap Skirring', excerptWo: 'Bérab bu géej ci Casamance, xam ko ci plages, nature ak tourisme.', contentWo: `### Jëmmal
 
-### Patrimoine bu dund
+Cap Skirring nekk na ci Casamance, ci wetug Atlantique. Bérab bi xam nañu ko ci plages yu neex, nature ak tourisme.
 
-Nettali du mbind rekk. Mooy performance, baat, mouvement, humour ak jokkoo ak ñi déglu. Loolu moo tax mu nekk patrimoine bu dund.`, },
-'lartisanat-traditionnel-senegalais': { titleWo: 'Liggéeyu loxo bu aada ci Senegaal', excerptWo: 'Liggéeyu loxo dafa bokk ci aada, ekonom ak patrimoine Senegaal, ak xam-xam yu ñuy jële ci maam ba ci doom.', contentWo: `### Jëmmal
+### Géej ak nature
 
-Liggéeyu loxo bu aada mooy benn ci mbir yi gën a wone aada Senegaal. Xam-xam yi di jaar diggante maam ak doom ci liggéeyu loxo, melokaan ak jëfandikoo mbir yu jóge ci réew mi.
+Plages yi, cocotiers, mangrove ak paysages yu Casamance di jox bérab bi melokaan bu am solo. Gan yi mën nañu seet géej, nature ak dundug dëkk.
 
-### Ay xeet
+### Tourisme
 
-Tëggu métal, teg, rëdd, tissage, tegal, defar ay mbir ci ndoxum garab, cuir ak yeneen matières bokk nañu ci artisanat bi. Régions yi am nañu seen melokaan ak seen xam-xam.
+Hébergement, restauration, artisanat ak activités yu géej bokk nañu ci économie touristique. Jokkoo ak askan wi mooy benn ci solo yi ngir tourisme bi am jariñ.
 
-### Ekonom ak liggéey
+### Aar bérab bi
 
-Artisanat dafay jox ay revenus ak liggéey. Marchés, foires, tourisme ak vente ci internet mën nañu yokk séddoo ak gan-gësté.
-
-### Aar xam-xam
-
-Aar artisanat mooy aar itam xam-xam. Jàngale ndaw yi, dimbali artisans ak wone seen liggéey ci yoon wu dëgër mën na tax patrimoine bi dund.`, },
-'tourisme-memoire-senegal': { titleWo: 'Turis ak xelal ci Senegaal', excerptWo: 'Bérab ak taariix yu may nit ñi xelal ci mbir yu am solo ci taariixu Senegaal.', contentWo: `### Jëmmal
-
-Turis ak xelal mooy seet bérab yi ak patrimoines yi ñuy lëkkale ak taariix, mémoire ak xew-xew yu am solo. Ci Senegaal, bérab yooyu mën nañu dimbali nit ñi xam lu weesu ak jàng ci moom.
-
-### Gorée ak mémoire
-
-Gorée bokk na ci bérab yi gën a am solo ci mémoire bu traite négrière atlantique. Musées, architecture ak bérab yu taariix yi di jox nit ñi xelal ak xam-xam.
-
-### Jàng ci taariix
-
-Turis ak mémoire du seet rekk. Mooy itam jàng, dëggal ay témoignage, aar patrimoine ak wone xew-xew yi ci yoon wu wér.`, },
-export function getWolofContent(item: ContentItem): WolofContent | undefined {
-  const slug = item.url?.replace(/\/$/, '').split('/').pop();
-  return slug ? CONTENT_WO[slug] : undefined;
-}
+Littoral ak ecosystems yi war nañu leen a aar. Développement bu tourisme war na bokk ak toppatoo environnement.`, }
 };
 
 export function getWolofContent(item: ContentItem): WolofContent | undefined {
