@@ -9,6 +9,7 @@ export interface ContentItem {
   excerpt?: string;
   excerptWo?: string;
   content?: string;
+  contentWo?: string;
   /** Version structurée de `content` pour le rendu riche en fiche. */
   contentBlocks?: import('../services/richText').RichBlock[];
   imageUrl?: string;
