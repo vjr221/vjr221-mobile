@@ -13,7 +13,7 @@ export function buildWhatsAppUrl(phone: string): string | null {
 
 export function sanitizeExternalUrl(value: string | null | undefined, kind: ExternalLinkKind = 'web'): string | null {
   if (!value) return null;
-  const url = normalize(value);
+  let url = normalize(value);
   if (!url) return null;
 
   // Numéros d'urgence courts (15, 17, 18) et numéros internationaux.
@@ -31,6 +31,12 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
     if (/^maps:\/\/?\?[^\s]+$/i.test(url)) return url;
   }
 
+  // Les données WordPress peuvent contenir un domaine sans protocole.
+  // On le normalise en HTTPS avant validation afin que « Site web » reste fiable.
+  if (kind === 'web' && !/^[a-z][a-z0-9+.-]*:/i.test(url) && /^(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:[/?#].*)?$/i.test(url)) {
+    url = `https://${url}`;
+  }
+
   try {
     const parsed = new URL(url);
     if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return null;
@@ -45,7 +51,8 @@ export async function openExternalUrl(value: string | null | undefined, kind: Ex
   if (!safeUrl) return false;
   try {
     const { Linking } = await import('react-native');
-    if (!(await Linking.canOpenURL(safeUrl))) return false;
+    // Sur Android récent, canOpenURL peut retourner false si le package du
+    // navigateur n'est pas déclaré dans <queries>, alors que openURL fonctionne.
     await Linking.openURL(safeUrl);
     return true;
   } catch {
