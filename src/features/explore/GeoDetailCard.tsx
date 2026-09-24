@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Image } from 'expo-image';
 import { useTheme } from '../../theme/ThemeProvider';
@@ -44,7 +44,16 @@ export function GeoDetailCard({
   const localizedTitle = locale === 'wo' ? (wolof?.titleWo ?? title) : title;
   const localizedExcerpt = locale === 'wo' ? (wolof?.excerptWo ?? excerpt) : excerpt;
   const localizedContent = locale === 'wo' ? (wolof?.contentWo ?? content) : content;
-  const contentBlocks = useMemo(() => (localizedContent ? parseRichContent(localizedContent) : []), [localizedContent]);
+  const contentBlocks = useMemo(() => {
+    if (!localizedContent) return [];
+    try {
+      return parseRichContent(localizedContent);
+    } catch {
+      return [];
+    }
+  }, [localizedContent]);
+  const [imageFailed, setImageFailed] = useState(false);
+  const showImage = Boolean(image?.thumb) && !imageFailed;
 
   const infoRows: [string, string | null][] = [
     [t('infoChefLieu'), infos.chefLieu],
@@ -55,8 +64,16 @@ export function GeoDetailCard({
 
   return (
     <View style={styles.card}>
-      {image ? (
-        <Image accessibilityIgnoresInvertColors source={{ uri: image.thumb }} style={styles.image} contentFit="cover" cachePolicy="memory-disk" transition={200} />
+      {showImage ? (
+        <Image
+          accessibilityIgnoresInvertColors
+          source={{ uri: image!.thumb }}
+          style={styles.image}
+          contentFit="cover"
+          cachePolicy="memory-disk"
+          transition={200}
+          onError={() => setImageFailed(true)}
+        />
       ) : (
         <View style={styles.imageFallback}>
           <Icon name="territoires" size={30} color={colors.line} />
@@ -122,8 +139,8 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     image: { width: '100%', height: 190, backgroundColor: colors.surfaceSoft },
     imageFallback: { width: '100%', height: 190, backgroundColor: colors.surfaceSoft, alignItems: 'center', justifyContent: 'center' },
     body: { padding: spacing.lg, gap: 6 },
-    title: { color: colors.ink, fontFamily: fonts.displayBold, fontSize: type.display - 6, marginTop: 4 },
-    excerpt: { color: colors.inkSoft, fontFamily: fonts.body, marginTop: spacing.xs, lineHeight: 21, fontSize: type.bodyLg },
+    title: { color: colors.ink, fontFamily: fonts.displayBold, fontSize: type.display - 4, marginTop: 6, lineHeight: 30 },
+    excerpt: { color: colors.inkSoft, fontFamily: fonts.body, marginTop: spacing.sm, lineHeight: 22, fontSize: type.bodyLg },
     infoGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm, marginTop: spacing.md },
     infoCell: { minWidth: '46%', backgroundColor: colors.surfaceSoft, borderRadius: radii.md, padding: spacing.sm },
     infoLabel: { color: colors.inkSoft, fontSize: 10.5, fontFamily: fonts.monoSemiBold, letterSpacing: 0.6, textTransform: 'uppercase' },
