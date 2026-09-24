@@ -18,6 +18,7 @@ import { Icon } from '../../components/icons/Icon';
 import type { DetailNavigationContext } from '../../app/AppNavigator';
 import { env } from '../../config/env';
 import { buildWhatsAppUrl, openExternalUrl } from '../../services/externalLinks';
+import { localizeContent } from '../../services/contentRepository';
 
 const TYPE_LABEL_KEY: Partial<Record<ContentItem['type'], TranslationKey>> = {
   news: 'news',
@@ -41,7 +42,7 @@ type Props = {
 };
 
 export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, onNavigate }: Props) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const { has, toggle } = useFavorites();
@@ -52,6 +53,8 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
   const itemKey = `${item.type}-${item.id}`;
   const related = relatedState.key === itemKey ? relatedState.items : [];
   const { practical } = item;
+  const localized = localizeContent(item, locale);
+  const localizedBody = locale === 'wo' ? (item.contentWo || item.content) : item.content;
   const coordinates = practical?.coordinates
     ? { lat: practical.coordinates.latitude, lng: practical.coordinates.longitude }
     : null;
@@ -75,7 +78,7 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
     };
   }, [item.id, item.type]);
 
-  const share = () => shareFiche({ title: item.title, summary: item.excerpt, url: item.url ?? env.siteUrl });
+  const share = () => shareFiche({ title: localized.title, summary: localized.excerpt, url: item.url ?? env.siteUrl });
   const call = () => practical?.phone && openExternalUrl(`tel:${practical.phone.replace(/\s+/g, '')}`, 'phone');
   const email = () => practical?.email && openExternalUrl(`mailto:${practical.email}`, 'email');
   const whatsapp = () => {
@@ -108,8 +111,8 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
   if (practical?.hours) practicalRows.push({ icon: 'clock', label: t('hours'), value: practical.hours });
   if (practical?.email) practicalRows.push({ icon: 'mail', label: t('email'), value: practical.email, onPress: email });
   const typeLabel = TYPE_LABEL_KEY[item.type] ? t(TYPE_LABEL_KEY[item.type]!).toUpperCase() : item.type.toUpperCase();
-  const cleanLead = item.excerpt?.replace(/\s+/g, ' ').trim() ?? '';
-  const cleanBodyStart = item.content?.replace(/\s+/g, ' ').trim().slice(0, Math.max(cleanLead.length, 1)) ?? '';
+  const cleanLead = localized.excerpt?.replace(/\s+/g, ' ').trim() ?? '';
+  const cleanBodyStart = localizedBody?.replace(/\s+/g, ' ').trim().slice(0, Math.max(cleanLead.length, 1)) ?? '';
   const showLead = Boolean(cleanLead) && (!item.contentBlocks?.length || (cleanLead.length <= 320 && cleanLead !== cleanBodyStart));
 
   return (
@@ -139,7 +142,7 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
           <Badge tone="terre">{typeLabel}</Badge>
         </View>
         <Text selectable style={styles.title}>
-          {item.title}
+          {localized.title}
         </Text>
         {showLead ? (
           <Text selectable style={styles.lead}>
@@ -173,11 +176,11 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
             </Pressable>
           </View>
         ) : null}
-        {item.contentBlocks?.length ? (
+        {locale === 'fr' && item.contentBlocks?.length ? (
           <RichText blocks={item.contentBlocks} />
-        ) : item.content ? (
+        ) : localizedBody ? (
           <Text selectable style={styles.copy}>
-            {item.content}
+            {localizedBody}
           </Text>
         ) : null}
         {item.cta ? (
