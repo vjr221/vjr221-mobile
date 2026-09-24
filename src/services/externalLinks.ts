@@ -1,4 +1,5 @@
 import { Linking } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
 
 export type ExternalLinkKind = 'web' | 'phone' | 'email' | 'map' | 'whatsapp';
 
@@ -71,13 +72,35 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
   }
 }
 
+/**
+ * Ouvre une URL externe.
+ * Pour le web (http/https) : Chrome Custom Tabs / SFSafariViewController via
+ * expo-web-browser — indispensable car les App Links Android interceptent
+ * vjr221.sn et renverraient dans l'app au lieu du navigateur.
+ * Pour tel / mailto / maps / whatsapp : Linking natif.
+ */
 export async function openExternalUrl(value: string | null | undefined, kind: ExternalLinkKind = 'web'): Promise<boolean> {
   const safeUrl = sanitizeExternalUrl(value, kind);
   if (!safeUrl) return false;
   try {
+    // http(s) en kind web → navigateur (Custom Tabs) pour éviter le piège App Links
+    // qui rouvrirait l'app sur vjr221.sn au lieu de la page web.
+    if (kind === 'web') {
+      await WebBrowser.openBrowserAsync(safeUrl, {
+        presentationStyle: WebBrowser.WebBrowserPresentationStyle.PAGE_SHEET,
+        toolbarColor: '#1B4332',
+        controlsColor: '#F4E9D6',
+      });
+      return true;
+    }
     await Linking.openURL(safeUrl);
     return true;
   } catch {
-    return false;
+    try {
+      await Linking.openURL(safeUrl);
+      return true;
+    } catch {
+      return false;
+    }
   }
 }
