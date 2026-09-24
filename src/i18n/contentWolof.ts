@@ -3,6 +3,62 @@ import type { ContentItem } from '../types/content';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 const CONTENT_WO: Record<string, WolofContent> = {
+  'fondes': { titleWo: 'Fondé', excerptWo: 'Fondé mooy lekk bu aada bu ñuy def ci cereales, ak yoon yu wuute ci régions yi.', contentWo: `### Jëmmal
+
+Fondé mooy benn ci lekk yu aada yu aju ci cereales. Ci Senegaal, am na ay xeet yu wuute ci ni ñuy def ko ak ni ñuy lekk ko.
+
+### Cereales ak préparation
+
+Mil walla yeneen cereales mën nañu leen a jëfandikoo ci préparation bi. Ñu mën a boole ko ak meew, sucre, lait caillé walla yeneen ingrédients ci ni aada bi di ko jox.
+
+### Bérab bi mu am ci aada
+
+Fondé bokk na ci lekk yu ñuy def ci njaboot ak ci ay ndaje. Recipes yi di jaar ci maam ba ci doom, te wuute bi wone na diversité gastronomique bu Senegaal.`, },
+  'jus-et-boissons-traditionnelles-du-senegal': { titleWo: 'Jus ak naan yu aada ci Senegaal', excerptWo: 'Bissap, bouye, ditakh ak yeneen naan yu aada bokk nañu ci lekk ak dundug Senegaal.', contentWo: `### Jëmmal
+
+Senegaal am na naan yu aada yu bare. Ñu ngi boole fruits, graines, feuilles ak yeneen produits yu naturel ngir def ay boissons yu ñuy naan ci bés bu nekk ak ci màggal.
+
+### Bissap
+
+Bissap ñu koy def ak fleurs d’hibiscus. Mën nañu ko naan bu sedd, ak sucre ak parfois aromates. Mooy naan bu siiw lool ci Senegaal.
+
+### Bouye ak ditakh
+
+Bouye, bu jóge ci fruitu baobab, ak ditakh bokk nañu ci boissons yi ñu gën a xam. Ñu mën leen a defar ci yoon yu wuute ci ni njaboot yi di ko def.
+
+### Aada ak économie
+
+Boissons yii bokk nañu ci hospitalité ak gastronomie. Fruits ak produits yu ñuy jëfandikoo mën nañu itam jox ay opportunités ci transformation ak commerce local.`, },
+  'gastronomie-du-fouta-toro-cereales-lait-et-produits-du-fleuve': { titleWo: 'Gastronomi bu Fouta-Toro: cereales, meew ak produits yu fleuve', excerptWo: 'Lekk bu Fouta-Toro dafa aju ci cereales, meew, produits yu fleuve ak xam-xam yu aada.', contentWo: `### Jëmmal
+
+Fouta-Toro am na gastronomie bu aju ci cereales, meew ak ressources yu fleuve Sénégal. Lekki yi bokk nañu ci dundug askan wi ak aada yi.
+
+### Cereales
+
+Mil, sorgho ak yeneen cereales bokk nañu ci lekk yi. Ñu mën leen a defar ci xam-xam yu wuute, ak meew walla yeneen ingrédients.
+
+### Meew ak produits yu fleuve
+
+Meew ak produits yu jóge ci fleuve ak mbey yi di yokk wuute lekk yi. Pêche ak élevage itam bokk nañu ci économie local.
+
+### Transmission
+
+Recipes yi di jaar ci njaboot yi. Denc leen ak wone leen ci ndaw yi mooy aar patrimoine gastronomique bu Fouta-Toro.`, },
+  'gastronomie-de-haute-casamance-produits-agricoles-riz-et-traditions': { titleWo: 'Gastronomi bu Haute-Casamance: mbey, ceeb ak aada', excerptWo: 'Lekk ak aada yu Haute-Casamance, ak ceeb, produits yu mbey ak xam-xam yu jaar ci maam ba ci doom.', contentWo: `### Jëmmal
+
+Gastronomi bu Haute-Casamance dafa lëkkale ak suuf, mbey, ndox ak aada yu askan yi. Ceeb, légumes, fruits ak yeneen produits yu dëkk bi bokk nañu ci lekk yi.
+
+### Ceeb ak mbey
+
+Riz am na solo lool ci dund ak mbey ci Casamance. Askani yi di def ay xeet yu bare ci lekk, te ñuy yokk ko ak légumes, jën walla yapp ci ni aada bi di ko def.
+
+### Aada ak xam-xam
+
+Ni ñuy togg, denc ak séddoo lekk yi mooy xam-xam bu jaar ci maam yi. Mbooloo njaboot ak ndaje yi di yokk solo lekk bi.
+
+### Ressources local
+
+Agriculture, jardinage ak produits yu dëkk bi mën nañu jox ay revenus te dimbali souveraineté alimentaire. Aar suuf ak ndox mooy benn ci défi yi.`, },
   'le-conte-au-senegal-oralite-transmission-et-patrimoine-vivant': { titleWo: 'Nettali ci Senegaal: wax, jàngale ak patrimoine bu dund', excerptWo: 'Nettali mooy yoon wu mag ngir jaarale xam-xam, aada ak xelal diggante maam ak doom.', contentWo: `### Jëmmal
 
 Nettali bokk na ci patrimoine bu dund ci Senegaal. Ci jamono yu weesu, mag ñi di nettali ci penku nit ñi, ci guddi walla ci ndaje, ngir jàngale, xelal ak neexal.
