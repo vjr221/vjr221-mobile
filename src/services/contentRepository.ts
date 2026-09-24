@@ -4,6 +4,7 @@ import { env } from '../config/env';
 import type { ContentItem, ContentType } from '../types/content';
 import type { Locale } from '../i18n/strings';
 import { parseRichContent } from './richText';
+import { getWolofContent } from '../i18n/contentWolof';
 
 export type WordPressPost = {
   id: number;
@@ -78,7 +79,7 @@ export const toContentItem = (post: WordPressPost): ContentItem => {
   const media = post._embedded?.['wp:featuredmedia']?.[0];
   const rawContent = post.content?.rendered;
   const contentBlocks = rawContent ? parseRichContent(rawContent) : undefined;
-  return {
+  const base = {
     id: post.id,
     title: stripHtml(post.title.rendered),
     titleWo: post.title_wo ? stripHtml(typeof post.title_wo === 'string' ? post.title_wo : post.title_wo.rendered) : undefined,
@@ -93,6 +94,8 @@ export const toContentItem = (post: WordPressPost): ContentItem => {
     imageUrl: media?.source_url,
     thumbnailUrl: pickThumbnail(media),
   };
+  const wo = getWolofContent(base);
+  return wo ? { ...base, ...wo } : base;
 };
 
 export type CollectionResult = { items: ContentItem[]; fromCache: boolean; stale: boolean };
