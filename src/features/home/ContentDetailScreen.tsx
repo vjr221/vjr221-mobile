@@ -17,7 +17,7 @@ import { Button } from '../../components/Button';
 import { Icon } from '../../components/icons/Icon';
 import type { DetailNavigationContext } from '../../app/AppNavigator';
 import { env } from '../../config/env';
-import { buildWhatsAppUrl, openExternalUrl } from '../../services/externalLinks';
+import { buildWhatsAppUrl, openExternalUrl, sanitizeExternalUrl } from '../../services/externalLinks';
 import { localizeContent } from '../../services/contentRepository';
 
 const TYPE_LABEL_KEY: Partial<Record<ContentItem['type'], TranslationKey>> = {
@@ -54,6 +54,7 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
   const related = relatedState.key === itemKey ? relatedState.items : [];
   const { practical } = item;
   const localized = localizeContent(item, locale);
+  const websiteUrl = sanitizeExternalUrl(practical?.website) ?? sanitizeExternalUrl(item.url);
   const localizedBody = locale === 'wo' ? (item.contentWo || item.content) : item.content;
   const coordinates = practical?.coordinates
     ? { lat: practical.coordinates.latitude, lng: practical.coordinates.longitude }
@@ -233,25 +234,14 @@ export function ContentDetailScreen({ item, onBack, onOpen, navigationContext, o
           </View>
         ) : null}
         <LocationPreview coordinates={coordinates} label={item.title} />
-        {practical?.website ? (
+        {websiteUrl ? (
           <Pressable
             accessibilityRole="link"
             accessibilityLabel={t('website')}
+            accessibilityHint={locale === 'wo' ? 'Dina ubbi navigateur ngir seet site bi' : 'Ouvre le site web dans votre navigateur'}
             style={styles.link}
             onPress={() => {
-              void openExternalUrl(practical.website!);
-            }}
-          >
-            <Text style={styles.linkText}>{t('website')}</Text>
-            <Icon name="chevronRight" size={13} color={colors.terreStrong} />
-          </Pressable>
-        ) : item.url ? (
-          <Pressable
-            accessibilityRole="link"
-            accessibilityLabel={t('website')}
-            style={styles.link}
-            onPress={() => {
-              void openExternalUrl(item.url!);
+              void openExternalUrl(websiteUrl, 'web');
             }}
           >
             <Text style={styles.linkText}>{t('website')}</Text>
