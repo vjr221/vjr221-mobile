@@ -85,7 +85,9 @@ const BLOCK_RE = /<(?:h([2-6]))[^>]*>([\s\S]*?)<\/h\1>|<blockquote[^>]*>([\s\S]*
 export function parseRichContent(html: string): RichBlock[] {
   if (!html) return [];
 
-  const normalized = normalizeHtml(html);
+  const normalized = normalizeHtml(html)
+    .replace(/^\s*#{2,6}\s+(.+)$/gm, '<h3>$1</h3>')
+    .replace(/^\s*[-*]\s+(.+)$/gm, '<p>• $1</p>');
   const { html: withoutToc, toc } = extractToc(normalized);
   const marked = markListContext(withoutToc);
   const blocks: RichBlock[] = [];
