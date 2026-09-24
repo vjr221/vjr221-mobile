@@ -2,12 +2,16 @@ name: Android APK Release
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
   release:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.head_commit.message, 'release: build Android 1.4.2')
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
@@ -19,24 +23,20 @@ jobs:
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git fetch --depth=1 origin "${GITHUB_SHA}"
           git checkout --detach "${GITHUB_SHA}"
-
       - name: Configure Java 17
         run: |
           JAVA17_HOME="$(dirname "$(dirname "$(readlink -f "$(which java)")")")"
           echo "JAVA_HOME=$JAVA17_HOME" >> "$GITHUB_ENV"
           echo "$JAVA17_HOME/bin" >> "$GITHUB_PATH"
           java -version
-
       - name: Runtime information
         run: |
           node --version
           npm --version
           java -version
           gh --version
-
       - name: Install dependencies
         run: npm install
-
       - name: Verify release version consistency
         run: |
           APP_VERSION="$(node -p "require('./app.json').expo.version")"
@@ -44,15 +44,12 @@ jobs:
           test "$APP_VERSION" = "$PACKAGE_VERSION"
           echo "VJR 221 release version: $APP_VERSION"
           echo "APP_VERSION=$APP_VERSION" >> "$GITHUB_ENV"
-
       - name: Use official VJR 221 app icon
         run: |
           curl --fail --location --retry 3 --retry-delay 2 "https://vjr221.sn/wp-content/uploads/2026/08/app-mobile-1024x1024-1.png" --output assets/icon.png
           cp assets/icon.png assets/splash-icon.png
-          file assets/icon.png assets/splash-icon.png
           test -s assets/icon.png
           test -s assets/splash-icon.png
-
       - name: Quality gates
         env:
           EXPO_PUBLIC_APP_ENV: production
@@ -60,12 +57,10 @@ jobs:
           npm run typecheck
           npm run lint
           npm test
-
       - name: Generate Android project
         env:
           EXPO_PUBLIC_APP_ENV: production
         run: npx expo prebuild --platform android --no-install --non-interactive
-
       - name: Build production Android APK with embedded JS bundle
         env:
           EXPO_PUBLIC_APP_ENV: production
@@ -73,47 +68,28 @@ jobs:
           cd android
           chmod +x ./gradlew
           ./gradlew assembleRelease --no-daemon --stacktrace --no-parallel
-
       - name: Verify production bundle is embedded
         run: |
           APK="android/app/build/outputs/apk/release/app-release.apk"
           test -f "$APK"
           unzip -l "$APK" | grep -q "assets/index.android.bundle"
-
-      - name: Verify launcher icon resources
-        run: |
-          test -f assets/icon.png
-          find android/app/src/main/res -type f \( -name "*launcher*" -o -name "*icon*" \) -print | head -80
-
       - name: Prepare public release asset
         run: |
-          test -f android/app/build/outputs/apk/release/app-release.apk
           mkdir -p release
           cp android/app/build/outputs/apk/release/app-release.apk release/VJR221.apk
           sha256sum release/VJR221.apk | tee release/VJR221.apk.sha256
-
       - name: Extract Android signing certificate fingerprint
         run: |
           APK="release/VJR221.apk"
           APKSIGNER="$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -1)"
           test -x "$APKSIGNER"
-          echo "Using apksigner: $APKSIGNER"
           CERT_SHA256="$("$APKSIGNER" verify --print-certs "$APK" 2>&1 | awk -F': ' '/certificate SHA-256 digest:/{print $2; exit}')"
           test -n "$CERT_SHA256"
           echo "ANDROID_CERT_SHA256=$CERT_SHA256" >> "$GITHUB_ENV"
-          echo "Android signing certificate SHA-256: $CERT_SHA256"
-
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="android-v${APP_VERSION}-${GITHUB_SHA::7}"
-          NOTES="APK Android de production VJR 221 — version ${APP_VERSION}. Build généré depuis le commit ${GITHUB_SHA}."
-          NOTES="${NOTES} Nouveautés : écran Urgences nationales (15/17/18), i18n des états d'erreur et des liens site, accès Urgences depuis l'accueil."
-          NOTES="${NOTES} Empreinte SHA-256 du certificat de signature Android : ${ANDROID_CERT_SHA256}"
-          if gh release view "$TAG" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
-            echo "Release $TAG already exists; replacing release assets."
-            gh release upload "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --clobber
-          else
-            gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android ${APP_VERSION}" --notes "$NOTES" --prerelease
-          fi
+          NOTES="APK Android de production VJR 221 — version ${APP_VERSION}. Build généré depuis le commit ${GITHUB_SHA}. Test de stabilisation : module natif expo-location temporairement désactivé."
+          gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android ${APP_VERSION}" --notes "$NOTES" --prerelease
