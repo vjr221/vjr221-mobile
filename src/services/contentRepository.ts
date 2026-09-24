@@ -89,7 +89,7 @@ export const toContentItem = (post: WordPressPost): ContentItem => {
   const media = post._embedded?.['wp:featuredmedia']?.[0];
   const rawContent = post.content?.rendered;
   const contentBlocks = rawContent ? parseRichContent(rawContent) : undefined;
-  const base = {
+  const base: ContentItem = {
     id: post.id,
     title: stripHtml(post.title.rendered),
     titleWo: post.title_wo ? stripHtml(typeof post.title_wo === 'string' ? post.title_wo : post.title_wo.rendered) : undefined,
