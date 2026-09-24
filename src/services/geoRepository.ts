@@ -59,10 +59,43 @@ export const toInfos = (raw: RawGeoItem['infos']): KeyInfos => ({
 function cleanExcerpt(value: string | null | undefined): string | null {
   if (!value) return null;
   let text = decodeHtmlEntities(value, { trim: true });
-  // Retire un bloc « Sommaire… » collé en tête jusqu'à une phrase réelle.
-  text = text.replace(/^Sommaire(?:Présentation|Situation|Histoire|Organisation|Population|Économie|Transport|Culture|Tourisme|Patrimoine|Environnement|Investissement|Perspectives|Géographie|Infrastructures|Éducation|Santé)[^A-ZÀÂÄÉÈÊËÎÏÔÖÙÛÜÇ]*/i, '');
-  // Si le sommaire a tout mangé, garde une version tronquée du reste.
+  // WordPress colle parfois le sommaire entier en tête de l'extrait :
+  // « SommairePrésentation généraleSituation géographiqueHistoire… ».
+  text = text.replace(/^Sommaire\s*/i, '');
+  const tocSections = [
+    'Présentation générale',
+    'Situation géographique',
+    'Organisation administrative',
+    'Perspectives de développement',
+    'Infrastructures',
+    'Éducation',
+    'Population',
+    'Économie',
+    'Transport',
+    'Histoire',
+    'Culture',
+    'Tourisme',
+    'Patrimoine',
+    'Environnement',
+    'Investissement',
+    'Santé',
+    'Géographie',
+  ];
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const section of tocSections) {
+      const re = new RegExp('^' + section.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*', 'i');
+      if (re.test(text)) {
+        text = text.replace(re, '');
+        changed = true;
+        break;
+      }
+    }
+  }
   text = text.replace(/\s+/g, ' ').trim();
+  // Si l'extrait reste un bloc collé sans espace (résidu de TOC), on l'ignore.
+  if (text.length > 40 && !/\s/.test(text.slice(0, 40))) return null;
   if (text.length > 220) text = text.slice(0, 217).replace(/\s+\S*$/, '') + '…';
   return text || null;
 }
