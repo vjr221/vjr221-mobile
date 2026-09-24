@@ -8,6 +8,7 @@ import { Badge, type BadgeTone } from './Badge';
 import { Icon } from './icons/Icon';
 import { useI18n } from '../i18n/I18nProvider';
 import type { TranslationKey } from '../i18n/strings';
+import { localizeContent } from '../services/contentRepository';
 
 // Seuls ces types ont une traduction dédiée dans i18n/strings.ts ; les autres
 // (regions/departments/communes/practical/media/diaspora/community...) n'ont
@@ -29,7 +30,7 @@ const KICKER_TONE: Partial<Record<ContentType, BadgeTone>> = {
  * plutôt qu'un vide — jamais un placeholder générique bruyant.
  */
 export const ContentCard = memo(function ContentCard({ item, onPress, size = 'default' }: { item: ContentItem; onPress: (item: ContentItem) => void; size?: 'default' | 'compact' }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const kickerKey = KICKER_KEY[item.type];
@@ -39,9 +40,10 @@ export const ContentCard = memo(function ContentCard({ item, onPress, size = 'de
   // Miniature dans la liste (légère) ; l'image pleine résolution est réservée
   // au hero de ContentDetailScreen — jamais chargée ici.
   const thumbnail = item.thumbnailUrl ?? item.imageUrl;
+  const localized = localizeContent(item, locale);
 
   return (
-    <Pressable accessibilityRole="button" accessibilityLabel={item.title} onPress={() => onPress(item)} style={({ pressed }) => [styles.card, pressed && styles.pressed]}>
+    <Pressable accessibilityRole="button" accessibilityLabel={localized.title} onPress={() => onPress(item)} style={({ pressed }) => [styles.card, pressed && styles.pressed]}>
       {thumbnail ? (
         <Image
           accessibilityIgnoresInvertColors
@@ -59,7 +61,7 @@ export const ContentCard = memo(function ContentCard({ item, onPress, size = 'de
       <View style={styles.body}>
         <Badge tone={tone}>{kicker}</Badge>
         <Text numberOfLines={2} style={styles.title}>{item.title}</Text>
-        {item.excerpt && !compact ? <Text numberOfLines={2} style={styles.excerpt}>{item.excerpt}</Text> : null}
+        {item.excerpt && !compact ? <Text numberOfLines={2} style={styles.excerpt}>{localized.excerpt}</Text> : null}
       </View>
     </Pressable>
   );
