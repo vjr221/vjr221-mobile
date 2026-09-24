@@ -85,9 +85,24 @@ const BLOCK_RE = /<(?:h([2-6]))[^>]*>([\s\S]*?)<\/h\1>|<blockquote[^>]*>([\s\S]*
 export function parseRichContent(html: string): RichBlock[] {
   if (!html) return [];
 
-  const normalized = normalizeHtml(html)
+  let normalized = normalizeHtml(html)
     .replace(/^\s*#{2,6}\s+(.+)$/gm, '<h3>$1</h3>')
     .replace(/^\s*[-*]\s+(.+)$/gm, '<p>• $1</p>');
+
+  // Les fiches WordPress peuvent contenir un sommaire imbriqué dans plusieurs
+  // <div>. Le parseur regex ne doit jamais laisser ses libellés collés au début
+  // du texte. Si « Sommaire » précède le premier vrai titre, on retire uniquement
+  // cette zone d'introduction jusqu'au premier h2/h3/h4.
+  const firstHeading = normalized.search(/<h[2-4][^>]*>/i);
+  const tocMarker = normalized.search(/\b(?:sommaire|table\s+des\s+mati[eè]res)\b/i);
+  if (tocMarker >= 0 && (firstHeading < 0 || tocMarker < firstHeading)) {
+    const headingMatch = /<h[2-4][^>]*>/i.exec(normalized.slice(tocMarker));
+    if (headingMatch) {
+      const cutAt = tocMarker + headingMatch.index;
+      normalized = normalized.slice(0, tocMarker) + normalized.slice(cutAt);
+    }
+  }
+
   const { html: withoutToc, toc } = extractToc(normalized);
   const marked = markListContext(withoutToc);
   const blocks: RichBlock[] = [];
