@@ -31,7 +31,7 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
     if (/^maps:\/\/?\?[^\s]+$/i.test(url)) return url;
   }
 
-  // Les données WordPress peuvent contenir un domaine sans protocole.
+  // Les données WordPress peuvent contenir un domaine sans protocole ou un ancien lien HTTP.\n  // On force HTTPS pour éviter les blocages cleartext Android et garder un lien web fiable.
   // On le normalise en HTTPS avant validation afin que « Site web » reste fiable.
   if (kind === 'web' && !/^[a-z][a-z0-9+.-]*:/i.test(url) && /^(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:[/?#].*)?$/i.test(url)) {
     url = `https://${url}`;
