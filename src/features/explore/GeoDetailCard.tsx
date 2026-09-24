@@ -6,6 +6,8 @@ import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { Badge } from '../../components/Badge';
 import { Button } from '../../components/Button';
 import { openExternalUrl } from '../../services/externalLinks';
+import { parseRichContent } from '../../services/richText';
+import { RichText } from '../../components/RichText';
 import { openExternalNavigation } from '../../services/mapService';
 import { Icon } from '../../components/icons/Icon';
 import { useI18n } from '../../i18n/I18nProvider';
@@ -33,6 +35,8 @@ export function GeoDetailCard({
   const { t } = useI18n();
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
+  const contentBlocks = useMemo(() => (content ? parseRichContent(content) : []), [content]);
+
   const infoRows: [string, string | null][] = [
     [t('infoChefLieu'), infos.chefLieu],
     [t('infoSuperficie'), infos.superficie],
@@ -63,7 +67,7 @@ export function GeoDetailCard({
             ))}
           </View>
         ) : null}
-        {content ? <Text style={styles.content}>{content}</Text> : null}
+        {contentBlocks.length ? <View style={styles.content}><RichText blocks={contentBlocks} /></View> : null}
         {gps ? (
           <Button
             variant="secondary"
@@ -100,7 +104,7 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     infoCell: { minWidth: '46%', backgroundColor: colors.surfaceSoft, borderRadius: radii.md, padding: spacing.sm },
     infoLabel: { color: colors.inkSoft, fontSize: 10.5, fontFamily: fonts.monoSemiBold, letterSpacing: 0.6, textTransform: 'uppercase' },
     infoValue: { color: colors.ink, fontSize: type.body, fontFamily: fonts.bodySemiBold, marginTop: 3 },
-    content: { color: colors.ink, lineHeight: 24, marginTop: spacing.md, fontSize: type.bodyLg, fontFamily: fonts.body },
+    content: { marginTop: spacing.sm },
     mapButton: { marginTop: spacing.sm, alignSelf: 'flex-start' },
     ctaBox: { backgroundColor: colors.surfaceSoft, borderRadius: radii.lg, marginTop: spacing.md, padding: spacing.md, gap: 6 },
     ctaTitle: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: type.body },
