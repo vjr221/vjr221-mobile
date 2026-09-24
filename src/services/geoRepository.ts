@@ -145,6 +145,27 @@ async function fetchDetail<T extends GeoEntity>(path: string, cacheKey: string, 
   } catch (error) {
     const cached = await readCache<RawGeoDetail>(cacheKey, CACHE_TTL);
     if (cached) return toDetail(cached.value, mapper);
+
+    // Certains anciens enregistrements territoriaux peuvent ne pas être
+    // accessibles par l'endpoint détail alors qu'ils sont bien présents dans
+    // la liste. On utilise alors la fiche légère de la liste comme fallback
+    // afin que la navigation reste fonctionnelle au lieu d'afficher une erreur.
+    const match = /^\/(regions|departements|communes|villages)\/(\d+)$/.exec(path);
+    if (match) {
+      const collection = match[1];
+      const id = Number(match[2]);
+      const rawList = await getJson<RawList>(`/${collection}?per_page=100`, undefined, env.geoApiBaseUrl);
+      const item = rawList.items.find((candidate) => candidate.id === id);
+      if (item) {
+        return {
+          entity: mapper(item),
+          content: null,
+          gallery: [],
+          usefulLinks: [],
+          cta: null,
+        };
+      }
+    }
     throw error;
   }
 }
