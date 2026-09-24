@@ -13,7 +13,20 @@
       "buildNumber": "9",
       "associatedDomains": ["applinks:vjr221.sn"],
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "VJR 221 utilise votre position pour afficher les établissements et lieux près de vous."
+        "NSLocationWhenInUseUsageDescription": "VJR 221 utilise votre position pour afficher les établissements et lieux près de vous.",
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleAllowMixedLocalizations": true
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+            "NSPrivacyAccessedAPITypeReasons": ["CA92.1"]
+          }
+        ]
       }
     },
     "android": {
