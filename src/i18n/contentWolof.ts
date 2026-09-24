@@ -3,6 +3,43 @@ import type { ContentItem } from '../types/content';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 const CONTENT_WO: Record<string, WolofContent> = {
+  'tourisme-de-la-region-de-dakar-cap-vert-patrimoine-urbain-et-littoral': { titleWo: 'Turis ci Diiwaanu Dakar: Cap-Vert, patrimoine dëkk ak géej', excerptWo: 'Dakar dafa boole patrimoine urbain, géej, Gorée, aada ak bérab yu am solo ci tourisme.', contentWo: `### Jëmmal
+
+Diiwaanu Dakar dafa boole patrimoine urbain, géej, taariix ak aada. Cap-Vert mooy bérab bu am solo ci seet Senegaal.
+
+### Bérab yu am solo
+
+Gorée, Monument de la Renaissance Africaine, Corniche, Pointe des Almadies ak Village des Arts bokk nañu ci bérab yi gan yi gën a seet. Benn-benn ci bérab yii am na seen taariix ak seen jëmmal.
+
+### Aada ak dëkk
+
+Dakar mooy kër yu bare ci musik, arts ak festivals. Mbalax, jazz, hip-hop, peinture, sculpture ak photographie di yokk melokaanu tourisme bi.
+
+### Géej ak environnement
+
+Littoral bi am na solo ci dund ak tourisme. Aar géej, beaches ak ecosystems yi mooy défi bu am solo ngir tourisme bu yàgg.`, },
+  'sebbe-koliyabe-tradition-culturelle-du-fouta': { titleWo: 'Sebbe Koliyabe: aada bu Fouta', excerptWo: 'Sebbe Koliyabe di wone aada ak patrimoine bu Fouta, ak xam-xam yu jaar ci maam yi.', contentWo: `### Jëmmal
+
+Sebbe Koliyabe bokk na ci expression yu culture bu Fouta. Mu ngi wone ni aada, jikko ak xam-xam di jaar ci jamono yi.
+
+### Transmission
+
+Mag ñi ak askan wi di jàppale ci denc ak wone patrimoine bi. Nettali, cérémonies, musique ak yeneen jëf yu aada mën nañu nekk ci transmission bi.
+
+### Diversité
+
+Fouta am na diversité bu réy ci làkk, aada ak jikko. Expression yu mel ni Sebbe Koliyabe di yokk xam-xam ci diversité bu patrimoine Senegaal.`, },
+  'keur-simbara': { titleWo: 'Keur Simbara', excerptWo: 'Bérab bu wone aada ak patrimoine bu dëkk, ci biir diversité culturelle bu Senegaal.', contentWo: `### Jëmmal
+
+Keur Simbara bokk na ci bérab yi mën a wone aada, taariix ak dundug askan ci Senegaal. Bérab yi mel ni kii di dimbali nit ñi xam patrimoine ci contexte bi mu dund.
+
+### Aada ak askan
+
+Dundug dëkk, jokkoo diggante njaboot yi, aada ak xam-xam yi di jox bérab bi solo. Ñu war leen a denc ak wone leen ci ndaw yi.
+
+### Patrimoine bu dund
+
+Patrimoine du nekk ci kër ak bérab rekk. Mu ngi itam ci wax, liggéey, lekk, màggal ak jëf yi ñuy def ci bés bu nekk.`, },
   'fondes': { titleWo: 'Fondé', excerptWo: 'Fondé mooy lekk bu aada bu ñuy def ci cereales, ak yoon yu wuute ci régions yi.', contentWo: `### Jëmmal
 
 Fondé mooy benn ci lekk yu aada yu aju ci cereales. Ci Senegaal, am na ay xeet yu wuute ci ni ñuy def ko ak ni ñuy lekk ko.
