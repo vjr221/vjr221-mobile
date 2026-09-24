@@ -40,8 +40,8 @@ export function GeoDetailCard({
   permalink?: string | null;
 }) {
   const { t, locale } = useI18n();
-  const { colors } = useTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+  const { colors, shadow } = useTheme();
+  const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
   const wolof = useMemo(() => (locale === 'wo' && slug ? getWolofContentBySlug(slug) : undefined), [locale, slug]);
   const localizedTitle = locale === 'wo' ? (wolof?.titleWo ?? title) : title;
   const localizedExcerpt = locale === 'wo' ? (wolof?.excerptWo ?? excerpt) : excerpt;
@@ -100,43 +100,33 @@ export function GeoDetailCard({
           <Button
             variant="secondary"
             size="sm"
-            onPress={() => void openExternalNavigation({ lat: gps.lat, lng: gps.lng }, localizedTitle)}
+            onPress={() => openExternalNavigation(gps.lat, gps.lng, localizedTitle)}
             style={styles.mapButton}
           >
             {t('openMap')}
           </Button>
         ) : null}
-        {usefulLinks.map((link, index) => {
-          const url = sanitizeExternalUrl(link.url, 'web');
+        {usefulLinks.map((link) => {
+          const url = sanitizeExternalUrl(link.url);
           if (!url) return null;
           return (
-            <Button
-              key={link.label ? link.label + '-' + index : 'link-' + index}
-              variant="secondary"
-              size="sm"
-              onPress={() => void openExternalUrl(url, 'web')}
-              style={styles.mapButton}
-            >
-              {link.label?.trim() || t('website')}
+            <Button key={link.url + link.label} variant="secondary" size="sm" onPress={() => { void openExternalUrl(url, 'web'); }} style={styles.mapButton}>
+              {link.label}
             </Button>
           );
         })}
-        {(() => {
-          const siteUrl = sanitizeExternalUrl(permalink, 'web');
-          if (!siteUrl) return null;
-          const alreadyListed = usefulLinks.some((link) => sanitizeExternalUrl(link.url, 'web') === siteUrl);
-          if (alreadyListed) return null;
-          return (
-            <Button
-              variant="secondary"
-              size="sm"
-              onPress={() => void openExternalUrl(siteUrl, 'web')}
-              style={styles.mapButton}
-            >
-              {t('website')}
-            </Button>
-          );
-        })()}
+        {permalink ? (
+          <Button
+            variant="secondary"
+            size="sm"
+            onPress={() => {
+              void openExternalUrl(permalink, 'web');
+            }}
+            style={styles.mapButton}
+          >
+            {t('website')}
+          </Button>
+        ) : null}
         {cta ? (
           <View style={styles.ctaBox}>
             <Text style={styles.ctaTitle}>{cta.title}</Text>
@@ -151,13 +141,21 @@ export function GeoDetailCard({
   );
 }
 
-function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow']) {
   return StyleSheet.create({
-    card: { backgroundColor: colors.surface, borderRadius: radii.xl, overflow: 'hidden', marginBottom: spacing.lg },
+    card: {
+      backgroundColor: colors.surface,
+      borderRadius: radii.xl,
+      overflow: 'hidden',
+      marginBottom: spacing.lg,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: colors.line,
+      ...shadow('subtle'),
+    },
     image: { width: '100%', height: 190, backgroundColor: colors.surfaceSoft },
     imageFallback: { width: '100%', height: 190, backgroundColor: colors.surfaceSoft, alignItems: 'center', justifyContent: 'center' },
     body: { padding: spacing.lg, gap: 6 },
-    title: { color: colors.ink, fontFamily: fonts.displayBold, fontSize: type.display - 4, marginTop: 6, lineHeight: 30 },
+    title: { color: colors.ink, fontFamily: fonts.displayBold, fontSize: type.display - 4, marginTop: 6, lineHeight: 32, letterSpacing: 0.2 },
     excerpt: { color: colors.inkSoft, fontFamily: fonts.body, marginTop: spacing.sm, lineHeight: 22, fontSize: type.bodyLg },
     infoGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm, marginTop: spacing.md },
     infoCell: { minWidth: '46%', backgroundColor: colors.surfaceSoft, borderRadius: radii.md, padding: spacing.sm },
