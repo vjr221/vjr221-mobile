@@ -9,5 +9,5 @@ export const env = {
   apiBaseUrl: process.env.EXPO_PUBLIC_API_BASE_URL ?? `${siteUrl}/wp-json/wp/v2`,
   /** API custom VJR 221 (vjr221/v1) — territoire (régions/départements/communes/villages) et annuaire. */
   geoApiBaseUrl: process.env.EXPO_PUBLIC_GEO_API_BASE_URL ?? `${siteUrl}/wp-json/vjr221/v1`,
-  requestTimeoutMs: 12_000,
+  requestTimeoutMs: 20_000,
 };
