@@ -414,7 +414,12 @@ Hébergement, restauration, artisanat ak activités yu géej bokk nañu ci écon
 Littoral ak ecosystems yi war nañu leen a aar. Développement bu tourisme war na bokk ak toppatoo environnement.`, }
 };
 
+export function getWolofContentBySlug(slug: string): WolofContent | undefined {
+  const clean = slug.replace(/^\/+|\/+$/g, '').split('/').pop() ?? slug;
+  return CONTENT_WO[clean];
+}
+
 export function getWolofContent(item: ContentItem): WolofContent | undefined {
   const slug = item.url?.replace(/\/$/, '').split('/').pop();
-  return slug ? CONTENT_WO[slug] : undefined;
+  return slug ? getWolofContentBySlug(slug) : undefined;
 }
