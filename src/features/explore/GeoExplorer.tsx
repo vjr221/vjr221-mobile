@@ -120,11 +120,12 @@ function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onO
   const [region, setRegion] = useState<Region | null>(null);
   const [content, setContent] = useState<string | null>(null);
   const [cta, setCta] = useState<GeoCta | null>(null);
+  const [usefulLinks, setUsefulLinks] = useState<import('../../types/geo').UsefulLink[]>([]);
   const [detailState, setDetailState] = useState<LoadState>('loading');
 
   const loadRegion = useCallback(() => {
     setDetailState('loading');
-    getRegion(id).then((detail) => { setRegion(detail.entity); setContent(detail.content); setCta(detail.cta); setDetailState('ready'); }).catch(() => setDetailState('error'));
+    getRegion(id).then((detail) => { setRegion(detail.entity); setContent(detail.content); setCta(detail.cta); setUsefulLinks(detail.usefulLinks); setDetailState('ready'); }).catch(() => setDetailState('error'));
   }, [id]);
   useEffect(() => { const timer = setTimeout(loadRegion, 0); return () => clearTimeout(timer); }, [loadRegion]);
 
@@ -148,7 +149,7 @@ function RegionScreen({ id, onOpenDepartment, onOpenContent }: { id: number; onO
 
   return (
     <View>
-      <GeoDetailCard title={region.title} slug={region.slug} excerpt={region.excerpt} content={content} image={region.image} infos={region.infos} breadcrumb={t('region')} cta={cta} gps={region.gps} />
+      <GeoDetailCard title={region.title} slug={region.slug} excerpt={region.excerpt} content={content} image={region.image} infos={region.infos} breadcrumb={t('region')} cta={cta} gps={region.gps} usefulLinks={usefulLinks} />
       <Text style={styles.sectionTitle}>{t('departments')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -197,7 +198,7 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
 
   return (
     <View>
-      <GeoDetailCard title={department.title} slug={department.slug} excerpt={department.excerpt} content={content} image={department.image} infos={department.infos} breadcrumb={refLabel(department.region?.name) ?? t('department')} cta={cta} gps={department.gps} />
+      <GeoDetailCard title={department.title} slug={department.slug} excerpt={department.excerpt} content={content} image={department.image} infos={department.infos} breadcrumb={refLabel(department.region?.name) ?? t('department')} cta={cta} gps={department.gps} usefulLinks={usefulLinks} />
       <Text style={styles.sectionTitle}>{t('communes')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -246,7 +247,7 @@ function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpe
 
   return (
     <View>
-      <GeoDetailCard title={commune.title} slug={commune.slug} excerpt={commune.excerpt} content={content} image={commune.image} infos={commune.infos} breadcrumb={refLabel(commune.departement?.name) ?? t('commune')} cta={cta} gps={commune.gps} />
+      <GeoDetailCard title={commune.title} slug={commune.slug} excerpt={commune.excerpt} content={content} image={commune.image} infos={commune.infos} breadcrumb={refLabel(commune.departement?.name) ?? t('commune')} cta={cta} gps={commune.gps} usefulLinks={usefulLinks} />
       <Text style={styles.sectionTitle}>{t('villages')}</Text>
       <SearchField value={term} onChangeText={setTerm} placeholder={t('geoSearchPlaceholder')} />
       {listState === 'loading' ? <LoadingState /> : null}
@@ -276,7 +277,7 @@ function VillageScreen({ id }: { id: number }) {
   if (state === 'loading') return <LoadingState />;
   if (state === 'error' || !village) return <ErrorState onRetry={loadVillage} />;
 
-  return <GeoDetailCard title={village.title} slug={village.slug} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} cta={cta} gps={village.gps} />;
+  return <GeoDetailCard title={village.title} slug={village.slug} excerpt={village.excerpt} content={content} image={village.image} infos={village.infos} breadcrumb={refLabel(village.commune?.name) ?? t('village')} cta={cta} gps={village.gps} usefulLinks={usefulLinks} />;
 }
 
 function refLabel(value: string | null | undefined): string | null {
