@@ -3,6 +3,119 @@ import type { ContentItem } from '../types/content';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 const CONTENT_WO: Record<string, WolofContent> = {
+  'region-de-dakar': {
+    titleWo: 'Diiwaanu Dakar',
+    excerptWo: 'Diiwaan bu gën a ndaw ci réew mi ci superficie, waaye Dakar mooy dëkk bu mag bu politik, ekonom ak administrasyon.',
+    contentWo: `### Jëmmal
+
+Diiwaanu Dakar mooy diiwaan bu gën a ndaw ci Senegaal ci kaw superficie, waaye mu am solo lool ci mbirum politik, ekonom, administrasyon ak way-dëkk. Dakar, dëkk bu mag bu réew mi, mooy benn ci péninsule Cap-Vert, ci wetug géej gi.
+
+### Géeographie
+
+Dakar nekk na ci peninsule Cap-Vert, bérab bu gën a sori ci peninsule Afrig ci sowwu. Diiwaan bi dafa aju ci Atlantique ci norte, sowwu ak sud, te Thiès mooy ci penku.
+
+### Taariix
+
+Taariixu Dakar dafa lëkkale ak Cap-Vert ak Gorée. Gorée bokk na ci bérab yu am solo ci xelal nit ñi ci mbirum traite négrière atlantique. Ci finu XIXe siècle, Dakar tànn nañu ko ni capitale bu AOF. Gannaaw indipendance ci 1960, Dakar des na capitale bu République du Senegaal.
+
+### Toppatoo réew mi
+
+Diiwaan bi am na juróom benn départements : Dakar, Guédiawaye, Pikine, Keur Massar ak Rufisque. Ñu ngi boole communes ak quartiers yu bare ci métropole bi.
+
+### Way-dëkk ak ekonom
+
+Dakar mooy diiwaan bu gën a am way-dëkk ci Senegaal. Commerce, services, banques, assurances, télécommunications, industrie, numérique ak BTP bokk nañu ci sektëër yu am solo.
+
+### Transport ak infrastructures
+
+Port autonome de Dakar mooy hub logistique bu am solo ci Afrig Oksidan. TER boole Dakar ak Diamniadio ak Aéroport International Blaise Diagne. Autoroutes ak yeneen yoon yu mag bokk nañu ci réseau transport bi.
+
+### Jàng ak wér-gu-yaram
+
+Dakar dafa dajale universités, écoles ak instituts yu bare. Ci wér-gu-yaram itam, hôpitaux yu mag yi nekk nañu ci diiwaan bi.
+
+### Aada ak tourisme
+
+Dakar mooy benn ci kër yu mag ci aada Senegaal. Mbalax, jazz, hip-hop, musik yu aada, arts, peinture, sculpture, photographie ak festivals di dund ci dëkk bi. Gorée, Monument de la Renaissance Africaine, Corniche, Pointe des Almadies ak Village des Arts bokk nañu ci bérab yi gën a xam.
+`,
+  },
+  'region-de-ziguinchor': {
+    titleWo: 'Diiwaanu Ziguinchor',
+    excerptWo: 'Xolum Casamance ci mbirum taariix, ekonom ak aada, diiwaan bu fees ak mangrove, tourism ak wuute culture.',
+    contentWo: `### Jëmmal
+
+Diiwaanu Ziguinchor nekk na ci penku-sowwu Senegaal. Mooy xolum Casamance ci mbirum taariix, ekonom ak aada. Fleuve Casamance, mangrove yi, tourisme ak wuute askan ak làkk yi jox nañu diiwaan bi melokaan bu boppam.
+
+### Géeographie
+
+Diiwaan bi nekk na ci sudu Senegaal. Gambia mooy ci norte, Sédhiou ci penku, Guinée-Bissau ci sud, Atlantique ci sowwu. Ziguinchor mooy chef-lieu.
+
+### Taariix ak aada
+
+Ziguinchor am na taariix bu fees ak échanges, commerce ak influence yu jóge ci Afrig ak Europe. Casamance dafa fees ak aada yu wuute, rawatina ci askanu Diola, Mandingue, Balante, Mancagne, Peul ak Wolof.
+
+### Toppatoo
+
+Diiwaan bi am na ñetti départements : Ziguinchor, Oussouye ak Bignona. Communes ak villages yi nekk ci diiwaan bi dafa bokk ci réseau territorial bu Casamance.
+
+### Ekonom
+
+Agriculture, pêche, commerce ak tourisme bokk nañu ci sektëër yu am solo. Suuf, ndox ak mangrove yi jox nañu ay ressources yu am solo ci dundug askan wi.
+
+### Aada ak tourisme
+
+Ziguinchor mooy bérab bu am solo ci aada Casamance. Fecc, musik, liggéey-loxo, rites initiatiques ak architecture traditionnelle bokk nañu ci patrimoine bi. Mangrove yi ak paysages yu géej ak fleuve di yokk solo tourism bi.
+`,
+  },
+  'le-lac-rose': {
+    titleWo: 'Lac Rose',
+    excerptWo: 'Lac Retba, bérab bu am solo ci tourisme ak patrimoine naturel Senegaal, xam ko ci ndoxam bu mën a am melo rose.',
+    contentWo: `### Jëmmal
+
+Lac Rose, walla Lac Retba, mooy benn ci bérab yu naturel yi gën a xam ci Senegaal. Nekk na ci wetug Dakar, te dafa am solo ci tourisme ak patrimoine naturel réew mi.
+
+### Lu tax ñuy woowe ko Lac Rose?
+
+Melo rose bi mën na feeñ ci jamono yi, rawatina bu tàng bi tar te ndox mi am salinité bu rëy. Micro-algue Dunaliella salina dafay joxe pigment bu mën a soppi melo ndox mi.
+
+### Sel
+
+Lac bi am salinité bu rëy. Jëfandikoo sel mooy liggéey bu yàgg ci bérab bi. Récolteurs yi di génn sel ci suufu lac bi, denc ko ci pirogue yi te yóbbu ko ci rëŋŋ.
+
+### Tourisme
+
+Dunes, ndoxum sel, paysages ak pirogues yu fees ak sel def nañu lac bi bérab bu ñuy seetaan. Lac Rose itam bokk na ci xelal nit ñi ci arrivée bu rallye Paris-Dakar ci jamono yu weesu.
+
+### Aar environnement
+
+Lac Rose am na ay défis yu aju ci soppi gu climat, pression nit ñi ak changement ci écosystème. Aar bérab bi mooy tax patrimoine naturel bi mën a dund ak jariñ askan wi.
+`,
+  },
+  'l-ile-de-goree': {
+    titleWo: 'Dunu Gorée',
+    excerptWo: 'Bérab bu xelal nit ñi, patrimoine ak jëfandikoo aada, ci géeju Dakar, bu am solo ci taariixu traite négrière atlantique.',
+    contentWo: `### Jëmmal
+
+Dunu Gorée nekk na ci géeju Dakar. Mooy benn ci bérab yu taariix yu gën a xam ci Senegaal ak Afrig. Gorée am na solo lool ci xelal nit ñi ci traite négrière atlantique.
+
+### Taariix
+
+Dunu bi am na ay occupations européennes yu wute ci ay jamono : Portugais, Néerlandais, Anglais ak Français. Positionam ci géej defoon na ko bérab bu am solo ci commerce maritime.
+
+### Mémoire
+
+Ci ay siècle yu weesu, Gorée bokkoon na ci réseau traite des esclaves. Goor ak jigéen ak xale ñu jële woon leen ci géej yi ci Afrig, yóbbu leen ci Amérique. Tey, Gorée mooy bérab bu xelal nit ñi ci tragédie boobu.
+
+### Patrimoine ak UNESCO
+
+Architecture bi, ru yi, kër yi ak bérab yu taariix yi def nañu Gorée bérab bu am solo. Dunu bi bind nañu ko ci patrimoine mondial UNESCO.
+
+### Aada ak tourisme
+
+Gorée accueille artistes, artisans ak musiciens. Way-dëkk ak gan yi mën nañu seet musées, bérab yu taariix, ru yi ak paysages yu géej. Dunu bi joxe itam message bu aju ci xelal, dialogue ak bokkandoo diggante askan yi.
+`,
+  },
+
   thiakry: {
     titleWo: 'Thiakry',
     excerptWo: 'Dessert ak naan bu ñu defee ak millet, nekk ci lekk yu gën a siiw ci Senegaal.',
