@@ -25,7 +25,7 @@ export function SectionHeader({ children, onSeeAll, seeAllLabel = 'Tout voir' }:
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
     wrap: { marginTop: spacing.xl, marginBottom: spacing.md, flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' },
-    text: { color: colors.ink, fontSize: type.h1, fontFamily: fonts.displaySemiBold, letterSpacing: 0.1 },
+    text: { color: colors.ink, fontSize: type.h1, fontFamily: fonts.displaySemiBold, letterSpacing: 0.2 },
     link: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 13 },
   });
 }
