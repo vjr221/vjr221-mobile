@@ -89,12 +89,16 @@ export function parseRichContent(html: string): RichBlock[] {
     .replace(/^\s*#{2,6}\s+(.+)$/gm, '<h3>$1</h3>')
     .replace(/^\s*[-*]\s+(.+)$/gm, '<p>• $1</p>');
 
-  // Les fiches WordPress peuvent contenir un sommaire imbriqué dans plusieurs
-  // <div>. Le parseur regex ne doit jamais laisser ses libellés collés au début
-  // du texte. Si « Sommaire » précède le premier vrai titre, on retire uniquement
-  // cette zone d'introduction jusqu'au premier h2/h3/h4.
+  // 1) Extraire d'abord un sommaire structuré (class/id sommaire|toc|…).
+  //    Sinon le nettoyage textuel ci-dessous matchait aussi class="sommaire"
+  //    et détruisait les liens avant extractToc.
+  const { html: withoutStructuredToc, toc } = extractToc(normalized);
+  normalized = withoutStructuredToc;
+
+  // 2) Résidu WordPress : libellé « Sommaire » / « Table des matières » en
+  //    texte libre avant le premier titre — on le retire jusqu'au h2/h3/h4.
   const firstHeading = normalized.search(/<h[2-4][^>]*>/i);
-  const tocMarker = normalized.search(/\b(?:sommaire|table\s+des\s+mati[eè]res)\b/i);
+  const tocMarker = normalized.search(/(?:^|>)[^<]*\b(?:sommaire|table\s+des\s+mati[eè]res)\b/i);
   if (tocMarker >= 0 && (firstHeading < 0 || tocMarker < firstHeading)) {
     const headingMatch = /<h[2-4][^>]*>/i.exec(normalized.slice(tocMarker));
     if (headingMatch) {
@@ -103,8 +107,7 @@ export function parseRichContent(html: string): RichBlock[] {
     }
   }
 
-  const { html: withoutToc, toc } = extractToc(normalized);
-  const marked = markListContext(withoutToc);
+  const marked = markListContext(normalized);
   const blocks: RichBlock[] = [];
   if (toc) blocks.push({ kind: 'toc', items: toc });
 
