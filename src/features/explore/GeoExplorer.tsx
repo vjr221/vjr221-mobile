@@ -170,11 +170,12 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
   const [department, setDepartment] = useState<Department | null>(null);
   const [content, setContent] = useState<string | null>(null);
   const [cta, setCta] = useState<GeoCta | null>(null);
+  const [usefulLinks, setUsefulLinks] = useState<import('../../types/geo').UsefulLink[]>([]);
   const [detailState, setDetailState] = useState<LoadState>('loading');
 
   const loadDepartment = useCallback(() => {
     setDetailState('loading');
-    getDepartment(id).then((detail) => { setDepartment(detail.entity); setContent(detail.content); setCta(detail.cta); setDetailState('ready'); }).catch(() => setDetailState('error'));
+    getDepartment(id).then((detail) => { setDepartment(detail.entity); setContent(detail.content); setCta(detail.cta); setUsefulLinks(detail.usefulLinks); setDetailState('ready'); }).catch(() => setDetailState('error'));
   }, [id]);
   useEffect(() => { const timer = setTimeout(loadDepartment, 0); return () => clearTimeout(timer); }, [loadDepartment]);
 
@@ -223,7 +224,7 @@ function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpe
 
   const loadCommune = useCallback(() => {
     setDetailState('loading');
-    getCommune(id).then((detail) => { setCommune(detail.entity); setContent(detail.content); setCta(detail.cta); setDetailState('ready'); }).catch(() => setDetailState('error'));
+    getCommune(id).then((detail) => { setCommune(detail.entity); setContent(detail.content); setCta(detail.cta); setUsefulLinks(detail.usefulLinks); setDetailState('ready'); }).catch(() => setDetailState('error'));
   }, [id]);
   useEffect(() => { const timer = setTimeout(loadCommune, 0); return () => clearTimeout(timer); }, [loadCommune]);
 
@@ -266,11 +267,12 @@ function VillageScreen({ id }: { id: number }) {
   const [village, setVillage] = useState<Village | null>(null);
   const [content, setContent] = useState<string | null>(null);
   const [cta, setCta] = useState<GeoCta | null>(null);
+  const [usefulLinks, setUsefulLinks] = useState<import('../../types/geo').UsefulLink[]>([]);
   const [state, setState] = useState<LoadState>('loading');
 
   const loadVillage = useCallback(() => {
     setState('loading');
-    getVillage(id).then((detail) => { setVillage(detail.entity); setContent(detail.content); setCta(detail.cta); setState('ready'); }).catch(() => setState('error'));
+    getVillage(id).then((detail) => { setVillage(detail.entity); setContent(detail.content); setCta(detail.cta); setUsefulLinks(detail.usefulLinks); setState('ready'); }).catch(() => setState('error'));
   }, [id]);
   useEffect(() => { const timer = setTimeout(loadVillage, 0); return () => clearTimeout(timer); }, [loadVillage]);
 
