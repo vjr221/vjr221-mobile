@@ -69,10 +69,20 @@ const stripHtml = (value: string) => {
     .trim();
 };
 
+function normalizeMediaUrl(value: string | undefined): string | undefined {
+  if (!value?.trim()) return undefined;
+  const raw = value.trim();
+  if (raw.startsWith('//')) return `https:${raw}`;
+  if (raw.startsWith('http://')) return `https://${raw.slice('http://'.length)}`;
+  if (raw.startsWith('https://')) return raw;
+  if (raw.startsWith('/')) return `https://vjr221.sn${raw}`;
+  return raw;
+}
+
 function pickThumbnail(media: WordPressFeaturedMedia | undefined): string | undefined {
   if (!media) return undefined;
   const sizes = media.media_details?.sizes;
-  return sizes?.medium?.source_url ?? sizes?.medium_large?.source_url ?? media.source_url;
+  return normalizeMediaUrl(sizes?.medium?.source_url ?? sizes?.medium_large?.source_url ?? media.source_url);
 }
 
 export const toContentItem = (post: WordPressPost): ContentItem => {
@@ -91,7 +101,7 @@ export const toContentItem = (post: WordPressPost): ContentItem => {
     type: 'news',
     url: post.link,
     publishedAt: post.date,
-    imageUrl: media?.source_url,
+    imageUrl: normalizeMediaUrl(media?.source_url),
     thumbnailUrl: pickThumbnail(media),
   };
   const wo = getWolofContent(base);
@@ -144,8 +154,8 @@ function toLieuContentItem(raw: RawLieuContentItem): ContentItem {
     id: raw.id,
     title: decodeHtmlEntities(raw.title),
     excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : undefined,
-    imageUrl: raw.image?.url,
-    thumbnailUrl: raw.image?.thumb,
+    imageUrl: normalizeMediaUrl(raw.image?.url),
+    thumbnailUrl: normalizeMediaUrl(raw.image?.thumb),
     type,
     url: raw.permalink,
     tags: raw.category ? [decodeHtmlEntities(raw.category.name)] : undefined,
