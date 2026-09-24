@@ -63,28 +63,45 @@ const toMeta = (raw: RawList['meta']): GeoListMeta => ({
 });
 
 export function toRegion(raw: RawGeoItem): Region {
-  return { kind: 'region', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos) };
+  return { kind: 'region', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos) };
 }
 
 export function toDepartment(raw: RawGeoItem): Department {
   return {
-    kind: 'department', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos),
+    kind: 'department', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos),
     region: raw.region ?? null, departement: null, arrondissement: raw.arrondissement ?? null,
   };
 }
 
 export function toCommune(raw: RawGeoItem): Commune {
   return {
-    kind: 'commune', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos),
+    kind: 'commune', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos),
     region: raw.region ?? null, departement: raw.departement ?? null, arrondissement: raw.arrondissement ?? null,
   };
 }
 
 export function toVillage(raw: RawGeoItem): Village {
-  return { kind: 'village', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: raw.image, gps: raw.gps, infos: toInfos(raw.infos), commune: raw.commune ?? null };
+  return { kind: 'village', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos), commune: raw.commune ?? null };
 }
 
-const stripHtml = (value: string) => decodeHtmlEntities(value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim());
+const normalizeMediaUrl = (value: string | undefined): string | undefined => {
+  if (!value?.trim()) return undefined;
+  const raw = value.trim();
+  if (raw.startsWith('//')) return `https:${raw}`;
+  if (raw.startsWith('http://')) return `https://${raw.slice('http://'.length)}`;
+  if (raw.startsWith('https://')) return raw;
+  if (raw.startsWith('/')) return `https://vjr221.sn${raw}`;
+  return raw;
+};
+
+const normalizeRemoteImage = (image: RemoteImage | null): RemoteImage | null =>
+  image
+    ? {
+        ...image,
+        url: normalizeMediaUrl(image.url) ?? image.url,
+        thumb: normalizeMediaUrl(image.thumb) ?? image.thumb,
+      }
+    : null;
 
 function toCta(raw: RawGeoDetail['cta']): GeoDetail<GeoEntity>['cta'] {
   if (!raw) return null;
@@ -92,8 +109,8 @@ function toCta(raw: RawGeoDetail['cta']): GeoDetail<GeoEntity>['cta'] {
 }
 
 function toDetail<T extends GeoEntity>(raw: RawGeoDetail, mapper: (r: RawGeoItem) => T): GeoDetail<T> {
-  const content = raw.content ? stripHtml(raw.content) : '';
-  return { entity: mapper(raw), content: content || null, gallery: raw.galerie ?? [], usefulLinks: (raw.liens_utiles ?? []) as UsefulLink[], cta: toCta(raw.cta) };
+  const content = raw.content ? decodeHtmlEntities(raw.content, { trim: false }) : '';
+  return { entity: mapper(raw), content: content || null, gallery: (raw.galerie ?? []).map((image) => normalizeRemoteImage(image)).filter((image): image is RemoteImage => Boolean(image)), usefulLinks: (raw.liens_utiles ?? []) as UsefulLink[], cta: toCta(raw.cta) };
 }
 
 function buildQuery(params: Record<string, string | number | undefined>): string {
