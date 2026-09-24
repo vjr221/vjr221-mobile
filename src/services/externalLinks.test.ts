@@ -3,7 +3,7 @@ import { sanitizeExternalUrl } from './externalLinks';
 describe('sanitizeExternalUrl', () => {
   it('accepts only http and https web URLs', () => {
     expect(sanitizeExternalUrl('https://vjr221.sn/region-de-dakar/')).toBeTruthy();
-    expect(sanitizeExternalUrl('http://example.com')).toBeTruthy();
+    expect(sanitizeExternalUrl('http://example.com')).toBe('https://example.com/');
     expect(sanitizeExternalUrl('www.example.com/fiche')).toBe('https://www.example.com/fiche');
     expect(sanitizeExternalUrl('example.com/fiche')).toBe('https://example.com/fiche');
     expect(sanitizeExternalUrl('javascript:alert(1)')).toBeNull();
