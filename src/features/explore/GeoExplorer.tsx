@@ -216,6 +216,7 @@ function DepartmentScreen({ id, onOpenCommune, onOpenContent }: { id: number; on
 function CommuneScreen({ id, onOpenVillage, onOpenContent }: { id: number; onOpenVillage: (id: number) => void; onOpenContent: (item: ContentItem) => void }) {
   const { t } = useI18n();
   const { colors } = useTheme();
+  const [usefulLinks, setUsefulLinks] = useState<import('../../types/geo').UsefulLink[]>([]);
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [commune, setCommune] = useState<Commune | null>(null);
   const [content, setContent] = useState<string | null>(null);
