@@ -16,6 +16,7 @@ import type { GeoCta, GeoPoint, KeyInfos, RemoteImage } from '../../types/geo';
 
 export function GeoDetailCard({
   title,
+  slug,
   excerpt,
   content,
   image,
