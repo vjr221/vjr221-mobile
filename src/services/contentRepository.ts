@@ -14,6 +14,7 @@ export type WordPressPost = {
   excerpt: { rendered: string };
   excerpt_wo?: { rendered: string } | string;
   content?: { rendered: string };
+  content_wo?: { rendered: string } | string;
   tags?: number[];
   _embedded?: { 'wp:featuredmedia'?: WordPressFeaturedMedia[] };
 };
@@ -84,6 +85,7 @@ export const toContentItem = (post: WordPressPost): ContentItem => {
     excerpt: stripHtml(post.excerpt.rendered),
     excerptWo: post.excerpt_wo ? stripHtml(typeof post.excerpt_wo === 'string' ? post.excerpt_wo : post.excerpt_wo.rendered) : undefined,
     content: rawContent ? stripHtml(rawContent) : undefined,
+    contentWo: post.content_wo ? stripHtml(typeof post.content_wo === 'string' ? post.content_wo : post.content_wo.rendered) : undefined,
     contentBlocks: contentBlocks?.length ? contentBlocks : undefined,
     type: 'news',
     url: post.link,
