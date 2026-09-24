@@ -171,7 +171,7 @@ export function AppNavigator() {
     ) : tab === 'favorites' ? (
       <FavoritesScreen onOpen={open} />
     ) : (
-      <MoreScreen locale={locale} onLocale={setLocale} />
+      <MoreScreen locale={locale} onLocale={setLocale} onOpenDirectory={() => goToExplore({ collection: 'directory' })} />
     );
   return (
     <View style={styles.root}>
