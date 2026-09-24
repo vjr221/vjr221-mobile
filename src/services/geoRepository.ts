@@ -55,6 +55,18 @@ export const toInfos = (raw: RawGeoItem['infos']): KeyInfos => ({
   gentile: raw?.gentile ?? null,
 });
 
+/** Nettoie les extraits WordPress où le sommaire est collé sans espaces. */
+function cleanExcerpt(value: string | null | undefined): string | null {
+  if (!value) return null;
+  let text = decodeHtmlEntities(value, { trim: true });
+  // Retire un bloc « Sommaire… » collé en tête jusqu'à une phrase réelle.
+  text = text.replace(/^Sommaire(?:Présentation|Situation|Histoire|Organisation|Population|Économie|Transport|Culture|Tourisme|Patrimoine|Environnement|Investissement|Perspectives|Géographie|Infrastructures|Éducation|Santé)[^A-ZÀÂÄÉÈÊËÎÏÔÖÙÛÜÇ]*/i, '');
+  // Si le sommaire a tout mangé, garde une version tronquée du reste.
+  text = text.replace(/\s+/g, ' ').trim();
+  if (text.length > 220) text = text.slice(0, 217).replace(/\s+\S*$/, '') + '…';
+  return text || null;
+}
+
 const toMeta = (raw: RawList['meta']): GeoListMeta => ({
   page: raw.page,
   perPage: raw.per_page,
@@ -63,25 +75,25 @@ const toMeta = (raw: RawList['meta']): GeoListMeta => ({
 });
 
 export function toRegion(raw: RawGeoItem): Region {
-  return { kind: 'region', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos) };
+  return { kind: 'region', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: cleanExcerpt(raw.excerpt), permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos) };
 }
 
 export function toDepartment(raw: RawGeoItem): Department {
   return {
-    kind: 'department', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos),
+    kind: 'department', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: cleanExcerpt(raw.excerpt), permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos),
     region: raw.region ?? null, departement: null, arrondissement: raw.arrondissement ?? null,
   };
 }
 
 export function toCommune(raw: RawGeoItem): Commune {
   return {
-    kind: 'commune', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos),
+    kind: 'commune', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: cleanExcerpt(raw.excerpt), permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos),
     region: raw.region ?? null, departement: raw.departement ?? null, arrondissement: raw.arrondissement ?? null,
   };
 }
 
 export function toVillage(raw: RawGeoItem): Village {
-  return { kind: 'village', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: raw.excerpt ? decodeHtmlEntities(raw.excerpt) : null, permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos), commune: raw.commune ?? null };
+  return { kind: 'village', id: raw.id, slug: raw.slug, title: decodeHtmlEntities(raw.title), excerpt: cleanExcerpt(raw.excerpt), permalink: raw.permalink, image: normalizeRemoteImage(raw.image), gps: raw.gps, infos: toInfos(raw.infos), commune: raw.commune ?? null };
 }
 
 const normalizeMediaUrl = (value: string | undefined): string | undefined => {
