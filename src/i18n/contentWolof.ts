@@ -3,6 +3,62 @@ import type { ContentItem } from '../types/content';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 const CONTENT_WO: Record<string, WolofContent> = {
+  'le-conte-au-senegal-oralite-transmission-et-patrimoine-vivant': { titleWo: 'Nettali ci Senegaal: wax, jàngale ak patrimoine bu dund', excerptWo: 'Nettali mooy yoon wu mag ngir jaarale xam-xam, aada ak xelal diggante maam ak doom.', contentWo: `### Jëmmal
+
+Nettali bokk na ci patrimoine bu dund ci Senegaal. Ci jamono yu weesu, mag ñi di nettali ci penku nit ñi, ci guddi walla ci ndaje, ngir jàngale, xelal ak neexal.
+
+### Wax ak xam-xam
+
+Nettali dafay jaarale ay leçon ci dund, aada, jikko ak jokkoo ak askan. Làkk yi di am solo ci yoon wi, ndax wax ak dégg mooy alal bu mag.
+
+### Transmission
+
+Jàngale nettali ci ndaw yi mën na tax aada yi bañ a réer. Tey, école, radio, télévision ak numérique mën nañu dimbali ci denc ak yégle nettali yi.
+
+### Patrimoine bu dund
+
+Nettali du mbind rekk. Mooy performance, baat, mouvement, humour ak jokkoo ak ñi déglu. Loolu moo tax mu nekk patrimoine bu dund.`, },
+  'lartisanat-traditionnel-senegalais': { titleWo: 'Liggéeyu loxo bu aada ci Senegaal', excerptWo: 'Liggéeyu loxo dafa bokk ci aada, ekonom ak patrimoine Senegaal, ak xam-xam yu ñuy jële ci maam ba ci doom.', contentWo: `### Jëmmal
+
+Liggéeyu loxo bu aada mooy benn ci mbir yi gën a wone aada Senegaal. Xam-xam yi di jaar diggante maam ak doom ci liggéeyu loxo, melokaan ak jëfandikoo mbir yu jóge ci réew mi.
+
+### Ay xeet
+
+Tëggu métal, teg, rëdd, tissage, tegal, defar ay mbir ci ndoxum garab, cuir ak yeneen matières bokk nañu ci artisanat bi. Régions yi am nañu seen melokaan ak seen xam-xam.
+
+### Ekonom ak liggéey
+
+Artisanat dafay jox ay revenus ak liggéey. Marchés, foires, tourisme ak vente ci internet mën nañu yokk séddoo ak gan-gësté.
+
+### Aar xam-xam
+
+Aar artisanat mooy aar itam xam-xam. Jàngale ndaw yi, dimbali artisans ak wone seen liggéey ci yoon wu dëgër mën na tax patrimoine bi dund.`, },
+  'tourisme-memoire-senegal': { titleWo: 'Turis ak xelal ci Senegaal', excerptWo: 'Bérab ak taariix yu may nit ñi xelal ci mbir yu am solo ci taariixu Senegaal.', contentWo: `### Jëmmal
+
+Turis ak xelal mooy seet bérab yi ak patrimoines yi ñuy lëkkale ak taariix, mémoire ak xew-xew yu am solo. Ci Senegaal, bérab yooyu mën nañu dimbali nit ñi xam lu weesu ak jàng ci moom.
+
+### Gorée ak mémoire
+
+Gorée bokk na ci bérab yi gën a am solo ci mémoire bu traite négrière atlantique. Musées, architecture ak bérab yu taariix yi di jox nit ñi xelal ak xam-xam.
+
+### Jàng ci taariix
+
+Turis ak mémoire du seet rekk. Mooy itam jàng, dëggal ay témoignage, aar patrimoine ak wone xew-xew yi ci yoon wu wér.`, },
+  'tourisme-communautaire-senegal': { titleWo: 'Turis bu askan wi ci Senegaal', excerptWo: 'Turis bu askan wi dafay boole gan ak askan yi ci dund, aada ak yokkute local.', contentWo: `### Jëmmal
+
+Turis bu askan wi mooy yoonu gan-gësté bu askan yi ci bérab bi bokk ci jëfandikoo ak jariñu tourisme. Ci Senegaal, mooy may gan yi gis aada, lekk, liggéeyu loxo, nature ak dundug dëkk yi ci yoon wu bokk ak askan wi.
+
+### Askan ak yokkute local
+
+Jariñ bi war na dem ba askan yi. Hébergement, restauration, guide, artisanat ak transport mën nañu sos ay liggéey te yokk xaalisu dëkk yi.
+
+### Aada ak nature
+
+Turis bu askan wi dafay boole seet ak xam. Gan yi mën nañu bokk ci yégle aada, togg, liggéeyu loxo, xew-xew ak seet nature.
+
+### Aar ak toppatoo
+
+Bérab bi war nañu ko aar, te gan-gësté war nañu topp aada ak environnement. Jokkoo diggante askan ak gan mooy tax tourisme bi mën a dund lu yàgg.`, },
   'region-de-dakar': {
     titleWo: 'Diiwaanu Dakar',
     excerptWo: 'Diiwaan bu gën a ndaw ci réew mi ci superficie, waaye Dakar mooy dëkk bu mag bu politik, ekonom ak administrasyon.',
