@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FlatList, Pressable, RefreshControl, StyleSheet, Text, TextInput, View } from 'react-native';
-import * as Haptics from 'expo-haptics';
 import { ContentCard } from '../../components/ContentCard';
 import { DistanceLabel } from '../../components/DistanceLabel';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
@@ -81,12 +80,12 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
   }, [load, activeCategory, term]);
 
   const selectCategory = (slug: string | undefined) => {
-    Haptics.selectionAsync().catch(() => {});
+    void import('expo-haptics').then((H) => H.selectionAsync()).catch(() => {});
     setActiveCategory(slug);
   };
 
   const toggleNearMe = async () => {
-    Haptics.selectionAsync().catch(() => {});
+    void import('expo-haptics').then((H) => H.selectionAsync()).catch(() => {});
     if (nearMe) {
       setNearMe(false);
       return;
