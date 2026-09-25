@@ -56,7 +56,8 @@ jobs:
       - name: Generate Android project
         env:
           EXPO_PUBLIC_APP_ENV: production
-        run: npx expo prebuild --platform android --no-install --non-interactive
+          CI: "1"
+        run: npx expo prebuild --platform android --no-install
       - name: Build production Android APK with embedded JS bundle
         env:
           EXPO_PUBLIC_APP_ENV: production
