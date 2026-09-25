@@ -4,7 +4,7 @@ import { CONTENT_WO_EXTRA } from './contentWolofExtra';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 /**
- * Couche Wolof — régions, tourisme, patrimoine (vague 2 : textes enrichis).
+ * Couche Wolof — régions, tourisme, patrimoine.
  * Gastronomie & lieux : contentWolofExtra.ts
  */
 const CONTENT_WO_CORE: Record<string, WolofContent> = {
@@ -188,11 +188,22 @@ const CONTENT_WO_CORE: Record<string, WolofContent> = {
 const CONTENT_WO: Record<string, WolofContent> = { ...CONTENT_WO_CORE, ...CONTENT_WO_EXTRA };
 
 export function getWolofContentBySlug(slug: string): WolofContent | undefined {
-  const clean = slug.replace(/^\/+|\/+$/g, '').split('/').pop() ?? slug;
-  return CONTENT_WO[clean];
+  const clean = (slug.replace(/^\/+|\/+$/g, '').split('/').pop() ?? slug).toLowerCase();
+  if (CONTENT_WO[clean]) return CONTENT_WO[clean];
+  const withoutNum = clean.replace(/-\d+$/, '');
+  if (withoutNum !== clean && CONTENT_WO[withoutNum]) return CONTENT_WO[withoutNum];
+  return undefined;
 }
 
 export function getWolofContent(item: ContentItem): WolofContent | undefined {
-  const slug = item.url?.replace(/\/$/, '').split('/').pop();
-  return slug ? getWolofContentBySlug(slug) : undefined;
+  const candidates: string[] = [];
+  if (item.url) candidates.push(item.url.replace(/\/$/, '').split('/').pop() ?? '');
+  const maybeSlug = (item as { slug?: string }).slug;
+  if (maybeSlug) candidates.push(maybeSlug);
+  for (const c of candidates) {
+    if (!c) continue;
+    const wo = getWolofContentBySlug(c);
+    if (wo) return wo;
+  }
+  return undefined;
 }
