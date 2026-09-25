@@ -10,7 +10,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "sn.vjr221.mobile",
-      "buildNumber": "16",
+      "buildNumber": "17",
       "associatedDomains": [
         "applinks:vjr221.sn"
       ],
@@ -34,7 +34,7 @@
     },
     "android": {
       "package": "sn.vjr221.mobile",
-      "versionCode": 16,
+      "versionCode": 17,
       "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
@@ -46,19 +46,38 @@
           "action": "VIEW",
           "autoVerify": true,
           "data": [
-            {
-              "scheme": "https",
-              "host": "vjr221.sn"
-            },
-            {
-              "scheme": "https",
-              "host": "www.vjr221.sn"
-            }
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/regions" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/departements" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/communes" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/quartiers-villages" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/annuaire" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/directory" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/tourisme" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/patrimoine" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/gastronomie" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/personnalites" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/histoire" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/nature" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/culture" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/evenements" },
+            { "scheme": "https", "host": "vjr221.sn", "pathPrefix": "/actualites" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/regions" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/departements" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/communes" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/quartiers-villages" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/annuaire" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/directory" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/tourisme" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/patrimoine" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/gastronomie" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/personnalites" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/histoire" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/nature" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/culture" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/evenements" },
+            { "scheme": "https", "host": "www.vjr221.sn", "pathPrefix": "/actualites" }
           ],
-          "category": [
-            "BROWSABLE",
-            "DEFAULT"
-          ]
+          "category": ["BROWSABLE", "DEFAULT"]
         }
       ]
     },
