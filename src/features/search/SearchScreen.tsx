@@ -27,8 +27,8 @@ export function SearchScreen({
   onOpenGeo: (view: GeoView) => void;
 }) {
   const { t } = useI18n();
-  const { colors } = useTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+  const { colors, shadow } = useTheme();
+  const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
   const [term, setTerm] = useState('');
   const [result, setResult] = useState<UnifiedSearchResult>(EMPTY);
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
@@ -120,8 +120,9 @@ export function SearchScreen({
           placeholderTextColor={colors.inkSoft}
           style={styles.input}
           autoCapitalize="none"
+          autoCorrect={false}
           returnKeyType="search"
-          onSubmitEditing={() => load(term)}
+          clearButtonMode="while-editing"
         />
         {term ? (
           <Pressable accessibilityRole="button" accessibilityLabel={t('close')} hitSlop={12} onPress={() => updateTerm('')}>
@@ -132,44 +133,22 @@ export function SearchScreen({
       {state === 'loading' ? <LoadingState /> : null}
       {state === 'error' ? <ErrorState onRetry={() => load(term)} /> : null}
       {showEmpty ? <EmptyState message={t('noResults')} /> : null}
-
-      {result.places.length > 0 ? (
-        <View style={styles.section}>
-          <SectionHeader>{t('searchPlaces')}</SectionHeader>
-          {result.places.map((place) => (
-            <Pressable
-              key={`${place.kind}-${place.id}`}
-              accessibilityRole="button"
-              accessibilityLabel={place.title}
-              onPress={() => openPlace(place)}
-              style={styles.placeRow}
-            >
-              <View style={styles.placeIcon}>
-                <Icon name="pin" size={16} color={colors.terreStrong} />
-              </View>
-              <View style={styles.placeBody}>
-                <Text style={styles.placeTitle}>{place.title}</Text>
-                <Text style={styles.placeMeta}>
-                  {place.kind === 'region' ? t('region') : place.kind === 'department' ? t('department') : t('commune')}
-                  {place.subtitle ? ` · ${place.subtitle}` : ''}
-                </Text>
-              </View>
-              <Icon name="chevronRight" size={16} color={colors.inkSoft} />
-            </Pressable>
-          ))}
-        </View>
-      ) : null}
-
-      {result.directory.length > 0 ? (
-        <View style={styles.section}>
-          <SectionHeader>{t('directory')}</SectionHeader>
-          {result.directory.map((item) => (
-            <ContentCard key={`dir-${item.id}`} item={item} size="compact" onPress={openDirectory} />
-          ))}
-        </View>
-      ) : null}
-
-      {result.content.length > 0 ? <SectionHeader>{t('searchArticles')}</SectionHeader> : null}
+      {result.places.length ? <SectionHeader>{t('searchPlaces')}</SectionHeader> : null}
+      {result.places.map((place) => (
+        <Pressable key={`place-${place.kind}-${place.id}`} accessibilityRole="button" onPress={() => openPlace(place)} style={styles.placeRow}>
+          <Icon name="pin" size={16} color={colors.terreStrong} />
+          <View style={styles.placeBody}>
+            <Text style={styles.placeTitle}>{place.title}</Text>
+            {place.subtitle ? <Text style={styles.placeSub}>{place.subtitle}</Text> : null}
+          </View>
+          <Icon name="chevronRight" size={16} color={colors.inkSoft} />
+        </Pressable>
+      ))}
+      {result.directory.length ? <SectionHeader>{t('directory')}</SectionHeader> : null}
+      {result.directory.map((item, index) => (
+        <ContentCard key={`dir-${item.id}`} item={item} size="compact" onPress={() => openDirectory(item)} />
+      ))}
+      {result.content.length ? <SectionHeader>{t('searchArticles')}</SectionHeader> : null}
     </View>
   );
 
@@ -177,25 +156,24 @@ export function SearchScreen({
     <FlatList
       data={result.content}
       keyExtractor={(item) => `${item.type}-${item.id}`}
+      contentContainerStyle={styles.content}
+      ListHeaderComponent={listHeader}
       renderItem={({ item, index }) => (
         <ContentCard item={item} onPress={() => onOpen(item, { items: result.content, index })} />
       )}
-      contentContainerStyle={styles.content}
-      keyboardShouldPersistTaps="handled"
-      showsVerticalScrollIndicator={false}
-      ListHeaderComponent={listHeader}
-      ListFooterComponent={<View style={styles.footerSpace} />}
       refreshControl={
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.terreStrong} colors={[colors.terreStrong]} />
       }
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={false}
     />
   );
 }
 
-function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow']) {
   return StyleSheet.create({
     content: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg },
-    title: { color: colors.ink, fontSize: type.display - 6, fontFamily: fonts.displayBold, marginTop: spacing.md, marginBottom: spacing.md },
+    title: { color: colors.ink, fontSize: type.display - 6, fontFamily: fonts.displayBold, marginTop: spacing.md, marginBottom: spacing.md, letterSpacing: 0.2 },
     offline: { backgroundColor: colors.surfaceSoft, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.md },
     offlineText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 12 },
     inputWrap: {
@@ -207,29 +185,24 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
       height: 52,
       paddingHorizontal: spacing.md,
       marginBottom: spacing.lg,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: colors.line,
+      ...shadow('subtle'),
     },
     input: { flex: 1, color: colors.ink, fontFamily: fonts.body, fontSize: 16 },
-    section: { marginBottom: spacing.md },
     placeRow: {
       flexDirection: 'row',
       alignItems: 'center',
       gap: spacing.sm,
       backgroundColor: colors.surface,
-      borderRadius: radii.lg,
+      borderRadius: radii.md,
       padding: spacing.md,
       marginBottom: spacing.sm,
-    },
-    placeIcon: {
-      width: 34,
-      height: 34,
-      borderRadius: 17,
-      backgroundColor: colors.surfaceSoft,
-      alignItems: 'center',
-      justifyContent: 'center',
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: colors.line,
     },
     placeBody: { flex: 1 },
-    placeTitle: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: 15 },
-    placeMeta: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: 12, marginTop: 2 },
-    footerSpace: { height: 24 },
+    placeTitle: { color: colors.ink, fontFamily: fonts.bodySemiBold, fontSize: type.body },
+    placeSub: { color: colors.inkSoft, fontFamily: fonts.body, fontSize: type.caption, marginTop: 2 },
   });
 }
