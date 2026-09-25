@@ -37,8 +37,10 @@ jobs:
       - name: Expo Android export
         run: npx expo export --platform android --output-dir .expo-export-check
       - name: Build installable Android APK
+        env:
+          CI: "1"
         run: |
-          npx expo prebuild --platform android --no-install --non-interactive
+          npx expo prebuild --platform android --no-install
           cd android
           ./gradlew assembleDebug --no-daemon --stacktrace
       - name: Verify APK
