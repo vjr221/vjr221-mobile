@@ -1,5 +1,4 @@
 import { Linking } from 'react-native';
-import * as WebBrowser from 'expo-web-browser';
 
 export type ExternalLinkKind = 'web' | 'phone' | 'email' | 'map' | 'whatsapp';
 
@@ -46,15 +45,12 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
     if (/^maps:\/\/?\?[^\s]+$/i.test(url)) return url;
   }
 
-  // Ancres internes : non ouvrables dans le navigateur externe.
   if (url.startsWith('#')) return null;
 
-  // Chemins relatifs du site VJR 221.
   if (url.startsWith('/')) {
     url = `${SITE_ORIGIN}${url}`;
   }
 
-  // WordPress peut fournir des domaines sans protocole ou d'anciens liens HTTP.
   if (kind === 'web') {
     if (/^http:\/\//i.test(url)) {
       url = `https://${url.slice('http://'.length)}`;
@@ -74,33 +70,29 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
 
 /**
  * Ouvre une URL externe.
- * Pour le web (http/https) : Chrome Custom Tabs / SFSafariViewController via
- * expo-web-browser — indispensable car les App Links Android interceptent
- * vjr221.sn et renverraient dans l'app au lieu du navigateur.
- * Pour tel / mailto / maps / whatsapp : Linking natif.
+ * Web : expo-web-browser chargé à la demande (évite un crash démarrage si le
+ * module natif n'est pas prêt). Fallback Linking si WebBrowser échoue.
  */
 export async function openExternalUrl(value: string | null | undefined, kind: ExternalLinkKind = 'web'): Promise<boolean> {
   const safeUrl = sanitizeExternalUrl(value, kind);
   if (!safeUrl) return false;
   try {
-    // http(s) en kind web → navigateur (Custom Tabs) pour éviter le piège App Links
-    // qui rouvrirait l'app sur vjr221.sn au lieu de la page web.
     if (kind === 'web') {
-      await WebBrowser.openBrowserAsync(safeUrl, {
-        presentationStyle: WebBrowser.WebBrowserPresentationStyle.PAGE_SHEET,
-        toolbarColor: '#1B4332',
-        controlsColor: '#F4E9D6',
-      });
-      return true;
+      try {
+        const WebBrowser = await import('expo-web-browser');
+        await WebBrowser.openBrowserAsync(safeUrl, {
+          presentationStyle: WebBrowser.WebBrowserPresentationStyle.PAGE_SHEET,
+          toolbarColor: '#1B4332',
+          controlsColor: '#F4E9D6',
+        });
+        return true;
+      } catch {
+        // Module natif indisponible ou erreur Custom Tabs → Linking
+      }
     }
     await Linking.openURL(safeUrl);
     return true;
   } catch {
-    try {
-      await Linking.openURL(safeUrl);
-      return true;
-    } catch {
-      return false;
-    }
+    return false;
   }
 }

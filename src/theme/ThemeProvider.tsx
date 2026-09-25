@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { useColorScheme } from 'react-native';
 import { useFonts as useUnbounded, Unbounded_600SemiBold, Unbounded_700Bold, Unbounded_800ExtraBold } from '@expo-google-fonts/unbounded';
 import {
@@ -35,18 +35,34 @@ export function useTheme(): Theme {
   return useContext(ThemeContext);
 }
 
-/** true dès que les 4 familles de polices de marque sont prêtes. */
+/**
+ * true dès que les 4 familles de marque sont prêtes — ou en erreur/timeout.
+ * Ne jamais bloquer le démarrage indéfiniment : un splash figé est perçu comme un crash.
+ */
 export function useBrandFonts(): boolean {
-  const [unboundedLoaded] = useUnbounded({ Unbounded_600SemiBold, Unbounded_700Bold, Unbounded_800ExtraBold });
-  const [instrumentLoaded] = useInstrumentSans({
+  const [unboundedLoaded, unboundedError] = useUnbounded({ Unbounded_600SemiBold, Unbounded_700Bold, Unbounded_800ExtraBold });
+  const [instrumentLoaded, instrumentError] = useInstrumentSans({
     InstrumentSans_400Regular,
     InstrumentSans_500Medium,
     InstrumentSans_600SemiBold,
     InstrumentSans_700Bold,
   });
-  const [loraLoaded] = useLora({ Lora_400Regular_Italic });
-  const [plexMonoLoaded] = usePlexMono({ IBMPlexMono_500Medium, IBMPlexMono_600SemiBold });
-  return Boolean(unboundedLoaded && instrumentLoaded && loraLoaded && plexMonoLoaded);
+  const [loraLoaded, loraError] = useLora({ Lora_400Regular_Italic });
+  const [plexMonoLoaded, plexMonoError] = usePlexMono({ IBMPlexMono_500Medium, IBMPlexMono_600SemiBold });
+  const [timedOut, setTimedOut] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setTimedOut(true), 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const ready =
+    (unboundedLoaded || Boolean(unboundedError)) &&
+    (instrumentLoaded || Boolean(instrumentError)) &&
+    (loraLoaded || Boolean(loraError)) &&
+    (plexMonoLoaded || Boolean(plexMonoError));
+
+  return ready || timedOut;
 }
 
 export function ThemeProvider({ children, forcedScheme }: { children: React.ReactNode; forcedScheme?: ColorScheme }) {
