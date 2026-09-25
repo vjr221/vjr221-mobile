@@ -10,7 +10,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "sn.vjr221.mobile",
-      "buildNumber": "13",
+      "buildNumber": "14",
       "associatedDomains": [
         "applinks:vjr221.sn"
       ],
@@ -34,7 +34,7 @@
     },
     "android": {
       "package": "sn.vjr221.mobile",
-      "versionCode": 13,
+      "versionCode": 14,
       "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
@@ -79,7 +79,9 @@
             "backgroundColor": "#11170F"
           }
         }
-      ]
+      ],
+      "expo-web-browser",
+      "expo-haptics"
     ]
   }
 }

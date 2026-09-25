@@ -55,13 +55,16 @@ function AppShell() {
     if (fontsLoaded) SplashScreen.hideAsync().catch(() => {});
   }, [fontsLoaded]);
 
+  // Filet de sécurité : si les polices ne signalent jamais "ready", on force
+  // quand même l'UI après 5 s pour éviter un splash figé (= crash perçu).
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      SplashScreen.hideAsync().catch(() => {});
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   if (!fontsLoaded) {
-    // Écran de démarrage neutre (fond de marque) plutôt qu'un flash blanc ou
-    // un spinner générique le temps que les 4 familles de polices se chargent.
-    // Le splash natif (voir plugin expo-splash-screen dans app.json) reste
-    // affiché par-dessus jusqu'à l'appel hideAsync() ci-dessus : cette vue
-    // n'est donc jamais visible elle-même, elle sert de fond continu pendant
-    // la transition splash natif -> premier rendu JS.
     return <View style={styles.container} />;
   }
 
