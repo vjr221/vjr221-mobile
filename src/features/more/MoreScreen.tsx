@@ -37,9 +37,9 @@ export function MoreScreen({
   onOpenDirectory?: () => void;
 }) {
   const { t } = useI18n();
-  const { colors } = useTheme();
+  const { colors, shadow } = useTheme();
   const { preference, setPreference } = useThemePreference();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+  const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
   const [cacheState, setCacheState] = useState<'idle' | 'working' | 'done'>('idle');
   const themeOptions: { value: ThemePreference; label: string; icon: 'sun' | 'moon' | 'settings' }[] = [
     { value: 'system', label: t('darkModeSystem'), icon: 'settings' },
@@ -164,10 +164,10 @@ export function MoreScreen({
   );
 }
 
-function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow']) {
   return StyleSheet.create({
     page: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg, flexGrow: 1 },
-    pageTitle: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.md },
+    pageTitle: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.md, letterSpacing: 0.2 },
     intro: { color: colors.inkSoft, marginTop: 4, marginBottom: spacing.sm, fontFamily: fonts.body, fontSize: type.bodyLg, lineHeight: 22 },
     sectionTitle: {
       color: colors.inkSoft,
@@ -178,12 +178,12 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
       marginBottom: spacing.sm,
       marginTop: spacing.md,
     },
-    segment: { flexDirection: 'row', backgroundColor: colors.surfaceSoft, borderRadius: radii.pill, padding: 4, gap: 4 },
+    segment: { flexDirection: 'row', backgroundColor: colors.surfaceSoft, borderRadius: radii.pill, padding: 4, gap: 4, borderWidth: StyleSheet.hairlineWidth, borderColor: colors.line },
     segmentOption: { flex: 1, paddingVertical: 10, borderRadius: radii.pill, alignItems: 'center' },
     segmentOptionActive: { backgroundColor: colors.surface },
     segmentText: { color: colors.inkSoft, fontFamily: fonts.bodySemiBold, fontSize: 14 },
     segmentTextActive: { color: colors.ink },
-    optionList: { backgroundColor: colors.surface, borderRadius: radii.lg, overflow: 'hidden' },
+    optionList: { backgroundColor: colors.surface, borderRadius: radii.lg, overflow: 'hidden', borderWidth: StyleSheet.hairlineWidth, borderColor: colors.line, ...shadow('subtle') },
     option: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -197,7 +197,7 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     optionActive: { backgroundColor: colors.surfaceSoft },
     optionText: { flex: 1, color: colors.ink, fontFamily: fonts.bodyMedium, fontSize: 14 },
     optionTextActive: { fontFamily: fonts.bodySemiBold },
-    siteActions: { backgroundColor: colors.surface, borderRadius: radii.lg, overflow: 'hidden' },
+    siteActions: { backgroundColor: colors.surface, borderRadius: radii.lg, overflow: 'hidden', borderWidth: StyleSheet.hairlineWidth, borderColor: colors.line, ...shadow('subtle') },
     siteAction: {
       flexDirection: 'row',
       alignItems: 'center',
