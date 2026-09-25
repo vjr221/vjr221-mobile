@@ -1,4 +1,4 @@
-import { Linking } from 'react-native';
+import { Linking, Platform } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 export type ExternalLinkKind = 'web' | 'phone' | 'email' | 'map' | 'whatsapp';
@@ -79,43 +79,75 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
 }
 
 /**
+ * Force l'ouverture hors de notre app (évite les App Links Android).
+ * Ordre : Custom Tabs → Chrome/Firefox via intent → (autres domaines) Linking.
+ */
+async function openInSystemBrowser(url: string): Promise<boolean> {
+  try {
+    await WebBrowser.openBrowserAsync(url, {
+      toolbarColor: '#1B4332',
+      controlsColor: '#F4E9D6',
+      showTitle: true,
+      enableDefaultShareMenuItem: true,
+      showInRecents: true,
+    });
+    return true;
+  } catch {
+    // continue vers les fallbacks Android
+  }
+
+  if (Platform.OS === 'android') {
+    const stripped = url.replace(/^https:\/\//i, '');
+    const androidCandidates = [
+      `intent://${stripped}#Intent;scheme=https;package=com.android.chrome;end`,
+      `intent://${stripped}#Intent;scheme=https;package=com.chrome.beta;end`,
+      `intent://${stripped}#Intent;scheme=https;package=com.chrome.dev;end`,
+      `intent://${stripped}#Intent;scheme=https;package=org.mozilla.firefox;end`,
+      `intent://${stripped}#Intent;scheme=https;package=com.opera.browser;end`,
+      `googlechrome://navigate?url=${encodeURIComponent(url)}`,
+    ];
+    for (const candidate of androidCandidates) {
+      try {
+        await Linking.openURL(candidate);
+        return true;
+      } catch {
+        // essayer le suivant
+      }
+    }
+  }
+
+  if (!isVjr221Host(url)) {
+    try {
+      await Linking.openURL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  if (Platform.OS === 'ios') {
+    try {
+      await Linking.openURL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  return false;
+}
+
+/**
  * Ouvre une URL externe.
- *
- * Pour http(s) : Chrome Custom Tabs / SFSafariViewController via expo-web-browser.
- * Sur Android, Linking.openURL(vjr221.sn) est intercepté par les App Links et
- * rouvre l'app au lieu du site — d'où le « rechargement in-app ».
- * On n'utilise jamais Linking en fallback pour le domaine VJR 221.
+ * Pour le site VJR 221, ne jamais laisser Android rouvrir l'app via App Links.
  */
 export async function openExternalUrl(value: string | null | undefined, kind: ExternalLinkKind = 'web'): Promise<boolean> {
   const safeUrl = sanitizeExternalUrl(value, kind);
   if (!safeUrl) return false;
 
   const isHttp = /^https?:\/\//i.test(safeUrl);
-  const useBrowser = kind === 'web' || (isHttp && kind !== 'whatsapp');
-
-  if (useBrowser) {
-    try {
-      await WebBrowser.openBrowserAsync(safeUrl, {
-        presentationStyle: WebBrowser.WebBrowserPresentationStyle.FULL_SCREEN,
-        toolbarColor: '#1B4332',
-        controlsColor: '#F4E9D6',
-        showTitle: true,
-        enableDefaultShareMenuItem: true,
-        createTask: true,
-      });
-      return true;
-    } catch {
-      // Domaine VJR 221 : ne JAMAIS retomber sur Linking (boucle App Links).
-      if (isVjr221Host(safeUrl)) {
-        return false;
-      }
-      try {
-        await Linking.openURL(safeUrl);
-        return true;
-      } catch {
-        return false;
-      }
-    }
+  if (kind === 'web' || (isHttp && kind !== 'whatsapp' && kind !== 'map')) {
+    return openInSystemBrowser(safeUrl);
   }
 
   try {
