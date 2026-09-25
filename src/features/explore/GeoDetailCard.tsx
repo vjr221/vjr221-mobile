@@ -100,7 +100,9 @@ export function GeoDetailCard({
           <Button
             variant="secondary"
             size="sm"
-            onPress={() => openExternalNavigation(gps.lat, gps.lng, localizedTitle)}
+            onPress={() => {
+              void openExternalNavigation({ lat: gps.lat, lng: gps.lng }, localizedTitle);
+            }}
             style={styles.mapButton}
           >
             {t('openMap')}
@@ -108,10 +110,19 @@ export function GeoDetailCard({
         ) : null}
         {usefulLinks.map((link) => {
           const url = sanitizeExternalUrl(link.url);
-          if (!url) return null;
+          const label = link.label?.trim();
+          if (!url || !label) return null;
           return (
-            <Button key={link.url + link.label} variant="secondary" size="sm" onPress={() => { void openExternalUrl(url, 'web'); }} style={styles.mapButton}>
-              {link.label}
+            <Button
+              key={link.url + label}
+              variant="secondary"
+              size="sm"
+              onPress={() => {
+                void openExternalUrl(url, 'web');
+              }}
+              style={styles.mapButton}
+            >
+              {label}
             </Button>
           );
         })}
