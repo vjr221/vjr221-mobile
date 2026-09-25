@@ -79,9 +79,7 @@
             "backgroundColor": "#11170F"
           }
         }
-      ],
-      "expo-web-browser",
-      "expo-haptics"
+      ]
     ]
   }
 }
