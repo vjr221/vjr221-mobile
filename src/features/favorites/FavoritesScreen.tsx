@@ -48,7 +48,7 @@ export function FavoritesScreen({ onOpen }: { onOpen: OpenContent }) {
 function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
   return StyleSheet.create({
     page: { padding: spacing.md, paddingBottom: 120, backgroundColor: colors.bg, flexGrow: 1 },
-    pageTitle: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.md },
+    pageTitle: { color: colors.ink, fontSize: type.display - 4, fontFamily: fonts.displayBold, marginTop: spacing.md, letterSpacing: 0.2 },
     intro: {
       color: colors.inkSoft,
       marginTop: 4,
@@ -70,9 +70,11 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     empty: {
       alignItems: 'center',
       paddingVertical: spacing.xxl,
-      backgroundColor: colors.surfaceSoft,
+      backgroundColor: colors.surface,
       borderRadius: radii.xl,
       gap: spacing.sm,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: colors.line,
     },
     emptyIcon: {
       width: 52,

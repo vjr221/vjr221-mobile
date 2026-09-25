@@ -7,9 +7,8 @@ export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 export type ButtonSize = 'md' | 'sm';
 
 /**
- * Bouton pilule à trois variantes — jamais de bouton rectangulaire administratif.
- * `primary` (terre pleine) réservé à UNE action par écran ; `secondary` pour les
- * actions de second plan ; `ghost` pour un lien discret (retour, "voir tout"…).
+ * Bouton pilule — jamais rectangulaire administratif.
+ * primary = UNE action principale / écran ; secondary = second plan ; ghost = lien discret.
  */
 export function Button({
   children,
@@ -30,8 +29,8 @@ export function Button({
   style?: StyleProp<ViewStyle>;
   accessibilityLabel?: string;
 }) {
-  const { colors } = useTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+  const { colors, shadow } = useTheme();
+  const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
   const isDisabled = disabled || loading;
 
   return (
@@ -61,7 +60,7 @@ export function Button({
   );
 }
 
-function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
+function makeStyles(colors: ReturnType<typeof useTheme>['colors'], shadow: ReturnType<typeof useTheme>['shadow']) {
   return StyleSheet.create({
     base: {
       alignSelf: 'flex-start',
@@ -70,16 +69,23 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
       justifyContent: 'center',
       borderRadius: radii.pill,
       paddingHorizontal: spacing.lg,
-      paddingVertical: 13,
-      minHeight: 46,
+      paddingVertical: 14,
+      minHeight: 48,
     },
-    sm: { paddingHorizontal: spacing.md, paddingVertical: 9, minHeight: 36 },
-    pressed: { opacity: 0.86, transform: [{ scale: 0.98 }] },
-    disabled: { opacity: 0.45 },
-    primary: { backgroundColor: colors.terre },
-    secondary: { backgroundColor: colors.surfaceSoft, borderWidth: 1, borderColor: colors.line },
+    sm: { paddingHorizontal: spacing.md, paddingVertical: 10, minHeight: 38 },
+    pressed: { opacity: 0.88, transform: [{ scale: 0.975 }] },
+    disabled: { opacity: 0.42 },
+    primary: {
+      backgroundColor: colors.terre,
+      ...shadow('subtle'),
+    },
+    secondary: {
+      backgroundColor: colors.surfaceSoft,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: colors.line,
+    },
     ghost: { backgroundColor: 'transparent', paddingHorizontal: spacing.xs },
-    text: { fontFamily: fonts.bodySemiBold, fontSize: 15 },
+    text: { fontFamily: fonts.bodySemiBold, fontSize: 15, letterSpacing: 0.2 },
     smText: { fontSize: 13 },
     primaryText: { color: colors.white },
     secondaryText: { color: colors.ink },

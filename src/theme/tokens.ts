@@ -1,26 +1,23 @@
 /**
  * VJR 221 Mobile Design System 2026 — jetons de base.
  *
- * Palette et typographie reprises de l'identité déjà validée pour vjr221.sn
- * (artefact « VJR 221 — Wireframes modernisation » + page /application/) afin
- * que l'app reste le prolongement numérique naturel du site, pas une
- * interface générique consommant l'API.
- *
- * `spacing` / `radii` / `type` / `fonts` sont neutres (identiques clair/sombre).
- * Les couleurs, elles, dépendent du thème : voir `lightPalette` / `darkPalette`
- * et le hook `useTheme()` dans `./ThemeProvider`. Le mode sombre n'est pas une
- * inversion de la palette claire : chaque valeur est choisie séparément
- * (fond vert-nuit profond plutôt que noir neutre, terre/safran éclaircis pour
- * rester lisibles, ombres neutres plutôt que teintées savane).
+ * Direction produit (architecte / UI) :
+ * - L’app est le prolongement tactile de vjr221.sn, pas un shell générique.
+ * - Identité sénégalaise : savane (vert profond), terre (ocre), safran (or).
+ * - Typo de marque : Unbounded (titres), Instrument Sans (UI), Lora (citations),
+ *   IBM Plex Mono (métadonnées / kickers).
+ * - Surfaces claires, ombres mesurées, boutons pilule, pas de chrome administratif.
+ * - Mode sombre = « nuit sénégalaise » (vert-nuit), pas d’inversion pure.
  */
 
 export type ColorScheme = 'light' | 'dark';
 
 export const spacing = { xs: 4, sm: 8, md: 16, lg: 24, xl: 32, xxl: 48 } as const;
 
-export const radii = { sm: 10, md: 14, lg: 18, xl: 24, pill: 999 } as const;
+/** Rayons : un cran plus généreux qu’un admin panel, toujours lisible sur mobile. */
+export const radii = { sm: 12, md: 16, lg: 20, xl: 28, pill: 999 } as const;
 
-/** Échelle typographique (tailles) ; les graisses vivent dans `fonts`. */
+/** Échelle typographique (tailles). Les graisses vivent dans `fonts`. */
 export const type = {
   display: 34,
   h1: 26,
@@ -31,11 +28,19 @@ export const type = {
   micro: 11,
 } as const;
 
+/** Line-heights recommandées pour chaque grade (lisibilité encyclopédique). */
+export const leading = {
+  display: 40,
+  h1: 32,
+  h2: 26,
+  bodyLg: 26,
+  body: 22,
+  caption: 18,
+  micro: 14,
+} as const;
+
 /**
- * Noms de familles tels qu'exposés par les paquets @expo-google-fonts,
- * chargés par `ThemeProvider` via `useFonts`. Quatre rôles, comme sur le site :
- * Unbounded (display), Instrument Sans (corps/UI), Lora italique (citations
- * éditoriales), IBM Plex Mono (kickers/labels/métadonnées).
+ * Noms de familles @expo-google-fonts, chargés par ThemeProvider.
  */
 export const fonts = {
   displayBold: 'Unbounded_700Bold',
@@ -48,6 +53,14 @@ export const fonts = {
   serifItalic: 'Lora_400Regular_Italic',
   mono: 'IBMPlexMono_500Medium',
   monoSemiBold: 'IBMPlexMono_600SemiBold',
+} as const;
+
+/** Durées d’animation (ms) — feedback press, slide détail, skeleton. */
+export const motion = {
+  press: 120,
+  fade: 200,
+  slide: 280,
+  skeleton: 1100,
 } as const;
 
 export interface Palette {
@@ -68,54 +81,52 @@ export interface Palette {
   onSavane: string;
   onSavaneSoft: string;
   white: string;
-  /** Texte du badge « safran » : plus foncé que `safran` en clair pour le contraste sur fond teinté, la teinte pleine en sombre. */
   safranText: string;
-  /** Composantes RGB (sans alpha) utilisées pour les ombres teintées. */
   shadowRgb: string;
 }
 
 export const lightPalette: Palette = {
   scheme: 'light',
-  bg: '#F4E9D6',
-  bgAlt: '#EBDEC0',
+  bg: '#F3E8D4',
+  bgAlt: '#E9DCC0',
   surface: '#FFFFFF',
-  surfaceSoft: '#FBF5E8',
-  ink: '#20241F',
-  inkSoft: '#55604F',
-  line: '#DDD0B3',
-  savane: '#123322',
-  savane2: '#1B4A32',
-  terre: '#BE5A21',
+  surfaceSoft: '#FBF6EB',
+  ink: '#1C211B',
+  inkSoft: '#4F5A48',
+  line: '#E0D3B6',
+  savane: '#0F2E1F',
+  savane2: '#1A4530',
+  terre: '#C45F24',
   terreStrong: '#A34C1B',
-  safran: '#E5A324',
+  safran: '#E8A82A',
   rouge: '#9B2C33',
-  onSavane: '#F4E9D6',
-  onSavaneSoft: 'rgba(244,233,214,.78)',
+  onSavane: '#F3E8D4',
+  onSavaneSoft: 'rgba(243,232,212,.80)',
   white: '#FFFFFF',
-  safranText: '#8A6111',
-  shadowRgb: '18,51,34',
+  safranText: '#7A5610',
+  shadowRgb: '15,46,31',
 };
 
-/** « Nuit sénégalaise » — redessinée, pas une inversion de la palette claire. */
+/** Nuit sénégalaise — redessinée, pas une inversion. */
 export const darkPalette: Palette = {
   scheme: 'dark',
-  bg: '#11170F',
-  bgAlt: '#1A211A',
-  surface: '#1C231B',
-  surfaceSoft: '#222A21',
-  ink: '#F1ECDC',
-  inkSoft: '#B7B6A2',
-  line: '#37402F',
-  savane: '#0D1A12',
-  savane2: '#16301F',
-  terre: '#E38A4C',
-  terreStrong: '#F0A165',
-  safran: '#F0C25E',
-  rouge: '#E27A81',
-  onSavane: '#F1ECDC',
-  onSavaneSoft: 'rgba(241,236,220,.78)',
+  bg: '#0E140D',
+  bgAlt: '#161D15',
+  surface: '#1A2219',
+  surfaceSoft: '#222B20',
+  ink: '#F2EDDD',
+  inkSoft: '#B4B39E',
+  line: '#2F382A',
+  savane: '#0B1710',
+  savane2: '#142A1B',
+  terre: '#E69255',
+  terreStrong: '#F2A86E',
+  safran: '#F2C666',
+  rouge: '#E5858C',
+  onSavane: '#F2EDDD',
+  onSavaneSoft: 'rgba(242,237,221,.78)',
   white: '#FFFFFF',
-  safranText: '#F0C25E',
+  safranText: '#F2C666',
   shadowRgb: '0,0,0',
 };
 
@@ -126,9 +137,10 @@ export function palette(scheme: ColorScheme): Palette {
 export type ShadowLevel = 'subtle' | 'raised' | 'floating';
 
 /**
- * Trois niveaux d'élévation, à utiliser par rôle (voir le design system :
- * subtile pour les cartes en liste, surélevée pour le hero/CTA, flottante
- * pour une barre d'actions ou une modale) — jamais partout par réflexe.
+ * Trois niveaux d’élévation :
+ * - subtle : cartes en liste
+ * - raised : hero / CTA
+ * - floating : tab bar / modale
  */
 export function shadow(p: Palette, level: ShadowLevel) {
   const rgb = p.shadowRgb;
@@ -136,27 +148,27 @@ export function shadow(p: Palette, level: ShadowLevel) {
     case 'raised':
       return {
         shadowColor: `rgb(${rgb})`,
-        shadowOpacity: p.scheme === 'dark' ? 0.4 : 0.16,
-        shadowOffset: { width: 0, height: 12 },
-        shadowRadius: 28,
-        elevation: 8,
+        shadowOpacity: p.scheme === 'dark' ? 0.42 : 0.14,
+        shadowOffset: { width: 0, height: 10 },
+        shadowRadius: 24,
+        elevation: 7,
       } as const;
     case 'floating':
       return {
         shadowColor: `rgb(${rgb})`,
-        shadowOpacity: p.scheme === 'dark' ? 0.5 : 0.26,
-        shadowOffset: { width: 0, height: 20 },
-        shadowRadius: 44,
-        elevation: 14,
+        shadowOpacity: p.scheme === 'dark' ? 0.5 : 0.22,
+        shadowOffset: { width: 0, height: 16 },
+        shadowRadius: 36,
+        elevation: 12,
       } as const;
     case 'subtle':
     default:
       return {
         shadowColor: `rgb(${rgb})`,
-        shadowOpacity: p.scheme === 'dark' ? 0.3 : 0.08,
-        shadowOffset: { width: 0, height: 4 },
-        shadowRadius: 14,
-        elevation: 3,
+        shadowOpacity: p.scheme === 'dark' ? 0.28 : 0.07,
+        shadowOffset: { width: 0, height: 3 },
+        shadowRadius: 12,
+        elevation: 2,
       } as const;
   }
 }
