@@ -11,17 +11,18 @@ import { ThemeProvider, useBrandFonts, useTheme } from './src/theme/ThemeProvide
 import { getThemePreference, setThemePreference, type ThemePreference } from './src/services/themePreference';
 import { ThemePreferenceContext } from './src/theme/ThemePreferenceContext';
 
-// Garde l'écran de démarrage natif affiché tant que les polices de marque ne
-// sont pas chargées (voir AppShell ci-dessous) : sans ça, Expo le referme dès
-// le premier rendu JS, exposant un bref flash (fond neutre système / police
-// de repli) avant que l'écran "vrai" fond de marque + polices ne s'affiche.
-SplashScreen.preventAutoHideAsync().catch(() => {});
+// Ne jamais faire échouer le démarrage si le module splash est absente.
+try {
+  SplashScreen.preventAutoHideAsync().catch(() => {});
+} catch {
+  // ignore
+}
 
 export default function App() {
   const [preference, setPreference] = useState<ThemePreference>('system');
 
   useEffect(() => {
-    getThemePreference().then(setPreference);
+    getThemePreference().then(setPreference).catch(() => {});
   }, []);
 
   const updatePreference = (next: ThemePreference) => {
@@ -30,9 +31,6 @@ export default function App() {
   };
 
   return (
-    // Englobe TOUT (y compris les providers) : une exception dans n'importe
-    // quel écran, ou même dans un provider, ne doit jamais figer l'app sur un
-    // rendu cassé sans recours pour l'utilisateur (voir ErrorBoundary.tsx).
     <ErrorBoundary>
       <SafeAreaProvider>
         <ThemePreferenceContext.Provider value={{ preference, setPreference: updatePreference }}>
@@ -45,34 +43,21 @@ export default function App() {
   );
 }
 
-/** Sépare le gate de chargement des polices de marque pour pouvoir lire `useTheme()` (nécessite le Provider au-dessus). */
 function AppShell() {
   const { scheme, colors } = useTheme();
-  const fontsLoaded = useBrandFonts();
+  // Lance le chargement des polices en arrière-plan (ne bloque plus l'UI).
+  useBrandFonts();
   const styles = useMemo(() => StyleSheet.create({ container: { flex: 1, backgroundColor: colors.bg } }), [colors]);
 
   useEffect(() => {
-    if (fontsLoaded) SplashScreen.hideAsync().catch(() => {});
-  }, [fontsLoaded]);
-
-  // Filet de sécurité : si les polices ne signalent jamais "ready", on force
-  // quand même l'UI après 5 s pour éviter un splash figé (= crash perçu).
-  useEffect(() => {
-    const timer = setTimeout(() => {
+    // Afficher l'UI immédiatement — le splash figé était perçu comme un crash.
+    const t = setTimeout(() => {
       SplashScreen.hideAsync().catch(() => {});
-    }, 5000);
-    return () => clearTimeout(timer);
+    }, 50);
+    return () => clearTimeout(t);
   }, []);
 
-  if (!fontsLoaded) {
-    return <View style={styles.container} />;
-  }
-
   return (
-    // Bord bas exclu ici : AppNavigator gère lui-même l'inset bas (voir
-    // useSafeAreaInsets dans son tabBarWrap) pour que la barre d'onglets
-    // reste visuellement pleine jusqu'au bord de l'écran, tout en gardant
-    // ses boutons au-dessus de la zone de geste système / barre Android.
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <I18nProvider>
