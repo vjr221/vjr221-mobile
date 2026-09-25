@@ -224,4 +224,39 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
     excerptWo: 'Ceremonie bu thé.',
     contentWo: `### Jëmmal\n\nAtaya : ñetti gallé, waxtaan, teranga.`,
   },
+  'lempire-du-djolof': {
+    titleWo: 'Empire bu Djolof',
+    excerptWo: 'Taariixu Djolof — njiit ak aada yu yàgg.',
+    contentWo: `### Jëmmal\n\nEmpire du Djolof mooy benn ci royaumes yu yàgg yu Senegaal. Taariix, njiit ak aada yu nord.`,
+  },
+  'le-royaume-du-cayor': {
+    titleWo: 'Royaume bu Cayor',
+    excerptWo: 'Taariixu Cayor — Damel yi ak aada.',
+    contentWo: `### Jëmmal\n\nRoyaume du Cayor am na solo ci taariixu Senegaal. Damel yi, aada ak diggante ak yeneen royaumes.`,
+  },
+  'hymne-national-senegal-lion-rouge': {
+    titleWo: 'Hymne nasyonaal — Lion Rouge',
+    excerptWo: 'Hymne bu Senegaal — paroles ak taariix.',
+    contentWo: `### Jëmmal\n\nHymne national du Sénégal (« Le Lion rouge ») mooy simbule bu réew mi. Paroles, musik ak taariixu indipendance.`,
+  },
+  'musee-mbiin-ndiogoye-joal': {
+    titleWo: 'Musée Mbiin Ndiogoye (Joal)',
+    excerptWo: 'Mémoire ak patrimoine ci Joal.',
+    contentWo: `### Jëmmal\n\nMusée Mbiin Ndiogoye de Joal dafay aar mémoire ak patrimoine bu Siin. Aada Sereer ak taariix local.`,
+  },
+  'ecomusee-commerce-fluvial-podor': {
+    titleWo: 'Écomusée bu Podor',
+    excerptWo: 'Commerce fluvial ak taariixu norte.',
+    contentWo: `### Jëmmal\n\nÉcomusée du commerce fluvial de Podor : dexu Senegaal, commerce ak taariixu norte.`,
+  },
+  'week-end-dakar-itineraire-culturel-patrimoine': {
+    titleWo: 'Week-end ci Dakar — itinéraire culturel',
+    excerptWo: 'Patrimoine, aada ak bérab yu Dakar.',
+    contentWo: `### Jëmmal\n\nItinéraire culturel ci Dakar : Gorée, Corniche, musées, marchés ak bérab yu aada.`,
+  },
+  'centre-culturel-regional-blaise-senghor-de-dakar': {
+    titleWo: 'Centre culturel Blaise Senghor',
+    excerptWo: 'Centre culturel régional ci Dakar.',
+    contentWo: `### Jëmmal\n\nCentre Culturel Régional Blaise Senghor ci Dakar : art, spectacles ak aada.`,
+  },
 };
