@@ -1,46 +1,38 @@
 # Checklist de tests sur appareil physique — VJR 221 Mobile
 
-**Aucune case de ce document n'a été cochée automatiquement.** Cet
-environnement de développement ne dispose d'aucun téléphone ni simulateur
-Android/iOS ; tout ce qui précède ce document (typecheck, lint, 45 tests
-Jest, `expo export`) est un test automatisé ou une vérification HTTP de
-l'API — jamais un test visuel réel sur écran. Cette checklist est à cocher
-manuellement par une personne disposant d'un appareil réel, après un build
-EAS installable (voir docs/STORE_RELEASE.md).
+**Aucune case n’est cochée automatiquement.** À valider manuellement après install APK (release GitHub ou workflow `android-release`).
 
-## Android
+Version cible : **1.5.0** (versionCode 17) puis **1.6.x**.
 
-- [ ] Installation de l'APK/AAB sur un téléphone Android réel
-- [ ] Lancement de l'application (démarrage, splash, accueil)
-- [ ] Navigation entre les 5 onglets (Accueil, Explorer, Recherche, Favoris, Plus)
-- [ ] Recherche : saisie, résultats, aucun résultat, retour
-- [ ] Ouverture d'une fiche (contenu, image, actions)
-- [ ] Annuaire : catégories, recherche, fiche, appel, localisation
-- [ ] Favoris : ajout, fermeture de l'écran, retour, présence confirmée, suppression
-- [ ] Partage d'une fiche (feuille de partage native)
-- [ ] Deep link : ouverture d'une URL `vjr221.sn` réelle depuis une autre app (WhatsApp, SMS, navigateur)
-- [ ] Comportement en réseau faible (3G simulé ou zone de faible couverture)
-- [ ] Comportement en données mobiles (hors Wi-Fi)
-- [ ] Reprise après fermeture complète de l'application (état conservé, pas de crash)
-- [ ] Test sur au moins 2 tailles d'écran différentes (petit et grand)
+## Matrice appareils (Phase A — bloquant)
 
-## iPhone / iOS
+| Appareil / OS | Install propre | MAJ depuis 1.4.x | Démarrage | Navigation | Offline | Notes |
+|---------------|----------------|------------------|-----------|------------|---------|-------|
+| Android 10/11 | [ ] | [ ] | [ ] | [ ] | [ ] | |
+| Android 12/13 | [ ] | [ ] | [ ] | [ ] | [ ] | |
+| Android 14/15/16 | [ ] | [ ] | [ ] | [ ] | [ ] | |
+| RAM ≤ 3 Go | [ ] | — | [ ] | [ ] | [ ] | |
+| 4G faible | — | — | [ ] | [ ] | [ ] | |
+| Wi‑Fi | — | — | [ ] | [ ] | — | |
+| Mode avion | — | — | [ ] | [ ] | [ ] | cache |
+| Rotation / veille | — | — | [ ] | [ ] | — | |
+| Retour arrière système | — | — | — | [ ] | — | |
 
-- [ ] Installation via TestFlight sur un iPhone réel
-- [ ] Lancement de l'application (démarrage, splash, accueil)
-- [ ] Navigation entre les 5 onglets
-- [ ] Recherche : saisie, résultats, aucun résultat, retour
-- [ ] Ouverture d'une fiche (contenu, image, actions)
-- [ ] Annuaire : catégories, recherche, fiche, appel, localisation
-- [ ] Favoris : ajout, fermeture de l'écran, retour, présence confirmée, suppression
-- [ ] Partage d'une fiche (feuille de partage native)
-- [ ] Deep link : ouverture d'une URL `vjr221.sn` réelle depuis une autre app
-- [ ] Comportement en réseau faible
-- [ ] Reprise après fermeture complète de l'application
-- [ ] Test sur au moins 2 tailles d'écran différentes (iPhone standard et Pro Max, ou iPad si pertinent)
+## Fonctionnel (tous appareils)
 
-## Après chaque case cochée
+- [ ] Splash puis accueil < 5 s, **sans écran noir bloqué**
+- [ ] 5 onglets : Accueil, Explorer, Recherche, Favoris, Plus
+- [ ] Région **hors Dakar** (ex. Kaffrine) s’ouvre avec contenu
+- [ ] Bouton **Site web** → navigateur / Custom Tabs (pas reload in-app)
+- [ ] Mode **Wolof** : titres régions (Diiwaanu …), labels UI
+- [ ] Annuaire : liste, fiche, appel / WhatsApp si présents
+- [ ] Favoris : ajout, kill app, toujours présents
+- [ ] Recherche unifiée (texte + territoires)
+- [ ] Deep link `https://vjr221.sn/region-de-dakar/` → fiche (app installée)
+- [ ] Même lien sans app → navigateur / page application
+- [ ] Plus : Annuaire in-app ; tarifs / contact → site
 
-Noter dans ce fichier : date, modèle d'appareil, version OS, résultat
-(✅ / ❌ + description du problème le cas échéant). Ne jamais marquer une
-ligne comme validée sans l'avoir réellement exécutée sur l'appareil.
+## Après chaque session
+
+Noter : **date · modèle · Android · build SHA · ✅/❌ + détail**.  
+Ne jamais cocher sans exécution réelle.

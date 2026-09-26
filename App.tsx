@@ -10,6 +10,7 @@ import { FavoritesProvider } from './src/stores/FavoritesProvider';
 import { ThemeProvider, useBrandFonts, useTheme } from './src/theme/ThemeProvider';
 import { getThemePreference, setThemePreference, type ThemePreference } from './src/services/themePreference';
 import { ThemePreferenceContext } from './src/theme/ThemePreferenceContext';
+import { initMonitoring } from './src/services/sentry';
 
 // Ne jamais faire échouer le démarrage si le module splash est absente.
 try {
@@ -53,6 +54,8 @@ function AppShell() {
     // Afficher l'UI immédiatement — le splash figé était perçu comme un crash.
     const t = setTimeout(() => {
       SplashScreen.hideAsync().catch(() => {});
+      // Observabilité uniquement après premier rendu (jamais au cold start).
+      initMonitoring();
     }, 50);
     return () => clearTimeout(t);
   }, []);
