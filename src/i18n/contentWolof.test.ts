@@ -15,6 +15,10 @@ describe('Wolof fiche translations', () => {
     'dionewar',
     'foundiougne-et-le-sine-saloum-porte-dentree-des-iles-et-des-mangroves',
     'keur-samba-gueye',
+    'niodior',
+    'djilor',
+    'soum',
+    'betenty',
   ];
 
   it('exposes the phase 1 fiche translations with all required fields', () => {
