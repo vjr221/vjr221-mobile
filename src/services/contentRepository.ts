@@ -54,6 +54,7 @@ export const stripHtml = (value: string): string =>
       .replace(/<script[\s\S]*?<\/script>/gi, ' ')
       .replace(/<style[\s\S]*?<\/style>/gi, ' ')
       .replace(/<[^>]+>/g, ' ')
+      .replace(/<[^>]+>/g, ' ')
       .replace(/\s+/g, ' ')
       .trim(),
   );
