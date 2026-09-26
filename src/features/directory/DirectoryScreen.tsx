@@ -91,10 +91,10 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
       return;
     }
     setLocating(true);
-    const result = await getUserLocation({ requestPermission: true });
+    const result = await getUserLocation();
     setLocating(false);
-    if (result.coordinates) {
-      setUserCoords(result.coordinates);
+    if (result.permission === 'granted') {
+      setUserCoords({ lat: result.latitude, lng: result.longitude });
       setNearMe(true);
     } else {
       setNearMe(false);
