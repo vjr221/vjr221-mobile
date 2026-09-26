@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { FlatList, Pressable, RefreshControl, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, FlatList, Pressable, RefreshControl, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ContentCard } from '../../components/ContentCard';
 import { DistanceLabel } from '../../components/DistanceLabel';
 import { EmptyState, ErrorState, LoadingState } from '../../components/ContentStates';
@@ -10,7 +10,7 @@ import { useLatestRequest } from '../../hooks/useLatestRequest';
 import { useTheme } from '../../theme/ThemeProvider';
 import { fonts, radii, spacing, type } from '../../theme/tokens';
 import { getDirectoryCategories, getDirectoryEntries, getDirectoryEntry, type DirectoryCategory } from '../../services/directoryRepository';
-import { getUserLocation } from '../../services/locationService';
+import { requestUserLocation } from '../../services/locationService';
 import { distanceKm, type Coordinates } from '../../services/mapService';
 import type { ContentItem } from '../../types/content';
 
@@ -91,13 +91,19 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
       return;
     }
     setLocating(true);
-    const result = await getUserLocation();
-    setLocating(false);
-    if (result.permission === 'granted') {
-      setUserCoords({ lat: result.latitude, lng: result.longitude });
-      setNearMe(true);
-    } else {
-      setNearMe(false);
+    try {
+      const result = await requestUserLocation();
+      if (result.permission === 'granted') {
+        setUserCoords({ lat: result.latitude, lng: result.longitude });
+        setNearMe(true);
+      } else {
+        setNearMe(false);
+        setUserCoords(null);
+        const message = result.permission === 'denied' ? t('locationDenied') : t('locationUnavailable');
+        Alert.alert(t('nearMe'), message);
+      }
+    } finally {
+      setLocating(false);
     }
   };
 
@@ -139,8 +145,9 @@ export function DirectoryScreen({ onOpen, initialCategory }: { onOpen: (item: Co
         </View>
         <Pressable
           accessibilityRole="button"
-          accessibilityState={{ selected: nearMe }}
+          accessibilityState={{ selected: nearMe, busy: locating }}
           accessibilityLabel={t('nearMe')}
+          disabled={locating}
           onPress={() => void toggleNearMe()}
           style={[styles.nearMe, nearMe && styles.nearMeActive]}
         >
