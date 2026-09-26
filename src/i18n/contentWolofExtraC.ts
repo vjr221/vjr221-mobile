@@ -225,4 +225,81 @@ Xooy dafay am ci guddi gu yagg. Saltigé yi di toppante, di wax seen seetlu, tam
 
 Waxtaanu Xooy man na jëm ci taw yi, feebar yi, jafe-jafe yi ak yoon yi askan wi di jëfandikoo ngir seet ay tontu. Xew-xew bi di wone dooleg cosaan ak bokkute.`,
   },
+
+  'patrimoine-culturel-immateriel-du-senegal-inventaire-expressions': {
+    titleWo: 'Patrimoine culturel bu Senegaal bu dul jëfandikoo ay jumtukaay',
+    excerptWo: 'Aada, xam-xam, ndaje, cosaan ak liggéeyu loxo yu askan yi di dundal.',
+    contentWo: `### Jëmmal
+
+Patrimoine culturel bu dul jëfandikoo ay jumtukaay dafay may ñu xam Senegaal ci aada yi, xam-xam yi ak jëf yi askan yi di jàppale te di jàngale ci seen diggante.
+
+### Ci biir dëkk yi
+
+Cosaan yi bokk nañu ci làkk yi, ndaje yi, xew-xew yi, fecc yi, woyu cosaan, xam-xamu nature ak liggéeyu loxo. Ci Senegaal, wuute gi ci fukki ak ñeent régions yi dafa feeñ it ci aada ak jëf yi.
+
+### Aar patrimoine bi
+
+Aar patrimoine bu dund du tekki rekk denc ay mbir. War na ñu dimbali askan yi ko yor, jàngale ko ci diggante maam ak sëy, bind ak wone ko, te may ñu kontine di ko jëfandikoo.
+
+### Ay misaal
+
+Kankourang, Xooy, Tuuru Maam Njaré, Xaxaar ak ay jëf yu bari bokk nañu ci expressions yi ñuy jàng ci patrimoine culturel bu Senegaal.`,
+  },
+  'patrimoine-architectural-saint-louis-senegal': {
+    titleWo: 'Tabax ak patrimoine bu Ndar',
+    excerptWo: 'Kër, mbedd, quai ak fàttaliku gu dëkk bu Ndar.',
+    contentWo: `### Dëkk bu ndox mi tabax
+
+Patrimoine bu Ndar dafa sukkandiku ci jokkoo gi am ci île bi, dexu Senegaal, quais yi ak dëkk bi. Kër yi, mbedd yi, cour yi, balcons yi ak tabax yu public yi bokk nañu ci melokaanu dëkk bi.
+
+### Ndar ak dex
+
+Ndar dafa yokk ci île bu nekk ci géej gi ak dexu Senegaal. Ndox mi, pont yi, quais yi ak melokaanu mbedd yi dañuy jëflante ci architecture bi. Am na it tabax yu XIXe ak XXe siècle.
+
+### Patrimoine bu dund
+
+Aar tabax yi war nañu toppatoo nit ñi ci dëkk bi, seen jëfandikoo, jumtukaay yi ak ay risk yu man a yàq bérab yi. Defar tabax du rekk rafetlu kanam; dafay sàmm melokaanu mbedd yi, cour yi ak jokkoo gi am ak dex mi.
+
+### Gis ak teral
+
+Ku bëgg a xam Ndar man na dox ci mbedd yi ak quais yi, te di teral barab yu private yi. Xamle ak ay guide yu dëkk bi man nañu dimbali ci xam taarixu dëkk bi bu gëna yaatu.`,
+  },
+  'le-delta-du-saloum-paysage-de-mangroves-et-de-bolongs-patrimoine-mondial-de-lunesco': {
+    titleWo: 'Delta Saalum — mangrove ak bolong, patrimoine mondial UNESCO',
+    excerptWo: 'Deltabu Saalum: dunu yli, bolong ak mangrove, patrimoine mondial.',
+    contentWo: `### Jëmmal
+
+Delta Saalum mooy barab bu ndox ak suuf bu yaatu, diggante Petite Côte ak diggante Gambi. Sine ak Saloum di daje ak Géej Atlantique, di sos dunu iles, bolong ak mangrove.
+
+### Iles ak bolong
+
+Delta bi am na lu ëpp 200 iles ak ilots yu bolong yi séddale. Bolong yi ay yoon yu ndox lañu, di jaar ci mangrove ak vasière yi. Ci biir ecosystem bi, ndox mu neex ak ndoxum géej di daje.
+
+### Patrimoine ak askan wi
+
+Askani pêcheurs yi dafa bokk ci dundug delta bi. Amas coquilliers yi di wone ne nit ñi nekk nañu foofu lu yàgg. Patrimoine bi boole nature, taarix ak dundug askan yi.
+
+### Xam-xam yu am solo
+
+Delta Saalum nekk na réserve de biosphère UNESCO ba ci 1980, te duggu na ci patrimoine mondial ci 2011 ni paysage culturel. Parc national bi sos nañu ko ci 1976 ngir aar ecosystem yi ak njàngum nature.`,
+  },
+  'le-parc-national-du-delta-du-saloum': {
+    titleWo: 'Parc national bu Delta Saalum',
+    excerptWo: 'Dunu mangrove, iles, bolong ak gëstu nature ci région Fatick.',
+    contentWo: `### Jëmmal
+
+Parc national bu Delta Saalum mooy benn ci bérab yu gëna am solo ci nature bu Senegaal. Mu nekk ci région Fatick, te am mangrove, iles, bolong, vasière ak forêt.
+
+### Ecosystem bu wuute
+
+Parc bi dafa nekk bérab bu ay xeet yu bari di dund. Mangrove yi, ndox mi ak suuf si dañuy boole ngir sos ab ecosystem bu am solo ci aar biodiversité.
+
+### Xew-xew ak économie
+
+Delta bi dafa am taarix, aada ak liggéey yu aju ci pêche ak écotourisme. Askani dëkk yi bokk nañu ci dund ak aar bérab yi.
+
+### Xam-xam
+
+Parc bi sos nañu ko ci 1976. Mu am lu tollu ci 76 000 hectares. Delta Saalum nekk na ci patrimoine mondial UNESCO, te reserve de biosphère bi di yokk njariñu conservation bi.`,
+  },
 };
