@@ -79,10 +79,56 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
 }
 
 /**
- * Force l'ouverture hors de notre app (évite les App Links Android).
- * Ordre : Custom Tabs → Chrome/Firefox via intent → (autres domaines) Linking.
+ * Construit une intent Android qui cible explicitement un navigateur
+ * (évite que App Links rouvre sn.vjr221.mobile).
+ */
+function chromeLikeIntent(url: string, browserPackage: string): string {
+  const stripped = url.replace(/^https:\/\//i, '');
+  return (
+    `intent://${stripped}#Intent;` +
+    `scheme=https;` +
+    `action=android.intent.action.VIEW;` +
+    `category=android.intent.category.BROWSABLE;` +
+    `package=${browserPackage};` +
+    `S.browser_fallback_url=${encodeURIComponent(url)};` +
+    `end`
+  );
+}
+
+/**
+ * Force l'ouverture hors de notre app (navigateur / Custom Tabs).
+ * Pour vjr221.sn : jamais Linking.openURL seul → App Links rouvrirait l'app.
  */
 async function openInSystemBrowser(url: string): Promise<boolean> {
+  // Android : d'abord un navigateur nommé, pour contourner App Links.
+  if (Platform.OS === 'android') {
+    const browserPackages = [
+      'com.android.chrome',
+      'com.chrome.beta',
+      'com.chrome.dev',
+      'com.google.android.apps.chrome',
+      'org.mozilla.firefox',
+      'com.opera.browser',
+      'com.sec.android.app.sbrowser',
+      'com.microsoft.emmx',
+    ];
+    for (const pkg of browserPackages) {
+      try {
+        await Linking.openURL(chromeLikeIntent(url, pkg));
+        return true;
+      } catch {
+        // essayer le suivant
+      }
+    }
+    try {
+      await Linking.openURL(`googlechrome://navigate?url=${encodeURIComponent(url)}`);
+      return true;
+    } catch {
+      // continue
+    }
+  }
+
+  // Custom Tabs / SFSafariViewController (reste hors de la WebView in-app).
   try {
     await WebBrowser.openBrowserAsync(url, {
       toolbarColor: '#1B4332',
@@ -90,32 +136,15 @@ async function openInSystemBrowser(url: string): Promise<boolean> {
       showTitle: true,
       enableDefaultShareMenuItem: true,
       showInRecents: true,
+      createTask: true,
     });
     return true;
   } catch {
-    // continue vers les fallbacks Android
+    // fallbacks ci-dessous
   }
 
-  if (Platform.OS === 'android') {
-    const stripped = url.replace(/^https:\/\//i, '');
-    const androidCandidates = [
-      `intent://${stripped}#Intent;scheme=https;package=com.android.chrome;end`,
-      `intent://${stripped}#Intent;scheme=https;package=com.chrome.beta;end`,
-      `intent://${stripped}#Intent;scheme=https;package=com.chrome.dev;end`,
-      `intent://${stripped}#Intent;scheme=https;package=org.mozilla.firefox;end`,
-      `intent://${stripped}#Intent;scheme=https;package=com.opera.browser;end`,
-      `googlechrome://navigate?url=${encodeURIComponent(url)}`,
-    ];
-    for (const candidate of androidCandidates) {
-      try {
-        await Linking.openURL(candidate);
-        return true;
-      } catch {
-        // essayer le suivant
-      }
-    }
-  }
-
+  // Dernier recours : Linking uniquement si CE N'EST PAS vjr221
+  // (sinon Android renvoie vers notre app via App Links).
   if (!isVjr221Host(url)) {
     try {
       await Linking.openURL(url);
@@ -139,7 +168,7 @@ async function openInSystemBrowser(url: string): Promise<boolean> {
 
 /**
  * Ouvre une URL externe.
- * Pour le site VJR 221, ne jamais laisser Android rouvrir l'app via App Links.
+ * Site VJR 221 → navigateur système, jamais de rebond App Links vers l'app.
  */
 export async function openExternalUrl(value: string | null | undefined, kind: ExternalLinkKind = 'web'): Promise<boolean> {
   const safeUrl = sanitizeExternalUrl(value, kind);
