@@ -149,4 +149,80 @@ export const CONTENT_WO_EXTRA_C: Record<string, WolofContent> = {
     excerptWo: 'Rivière frontalière bu penku.',
     contentWo: `### Jëmmal\n\nLa Falémé : rivière frontalière, vallée ak patrimoine de l est.`,
   },
+
+  'tourisme-communautaire-senegal': {
+    titleWo: 'Turismu bokkale ci Senegaal',
+    excerptWo: 'Jàngat Senegaal ci biir dëkk yi, ak askan wi, ak aada ak cosaan yi.',
+    contentWo: `### Jëmmal
+
+Turismu bokkale dafay may nit ñi ñu gis Senegaal ci lu gëna jege dëkk yi. Gannaaw loolu, ñu daldi dëkk ak askan wi, xam aada yi te dimbali ci taxawu cosaan ak patrimoine bu dëkk yi.
+
+### Yoon wu dëkk yi
+
+Ci turismu bokkale, askan wi bokk na ci dalal gan ñi, dalal leen ci kër yi, lekkal leen, wone leen liggéeyu loxo ak cosaan yi. Lii dafa jëm ci yokk doole dëkk yi, du rekk ci wone ab bérab.
+
+### Dëkk yu bari
+
+Ci Sine-Saalum ak Casamance, nit ñi man nañu gis mangrove yi, bolong yi ak dundug dëkk yi. Ci penku Senegaal, man nañu xam aada yi ak taarixu dëkk yi. Am na it ay yoon yu jëm ci ndox, mbay, liggéeyu loxo ak cosaan.`,
+  },
+  'tourisme-accessible-senegal': {
+    titleWo: 'Turismu bu jàppale ñépp ci Senegaal',
+    excerptWo: 'Yokk yombal gu gan ñi di soxla ngir man a gis Senegaal.',
+    contentWo: `### Lu tax yombal am solo?
+
+Yombal ci turismu dafay tekki yombal yoon yi, dugg ci tabax yi ak bérab yi, xamle bu leer, sanitaare yi, barab yu ñuy toog ak ndimbal gu nit ñi. Lii di yokk it seen njariñ ci dalal gan ñi.
+
+### Soxla yu wuute
+
+Am na ñi soxla yombal ngir dox, gis, dégg walla xam bu gëna yomb. Xamle ci tànk yi, suuf si, diggante yi, sanitaare yi ak yoonu dem ak dikk dafay may gan ñi waajal seen tukki.
+
+### Bérab yi ak nit ñi
+
+Gorée, Ndar, Sine-Saalum, Casamance, penku Senegaal ak dëkk yi man nañu yokk seen yombal. Lii dafay soxla ay jumtukaay yu baax ak xamle bu dëgg. Su xibaar bi wóorul, warul ñu jox ko ni dëgg la.`,
+  },
+  'tourisme-memoire-senegal': {
+    titleWo: 'Turismu taarix ak fàttaliku ci Senegaal',
+    excerptWo: 'Bérab yi, nettali yi ak yoon yi di tax ñu xam taarixu Senegaal.',
+    contentWo: `### Fàttaliku gu wuute
+
+Turismu taarix ak fàttaliku dafay may nit ñi xam Senegaal jaarale ko ci bérab yi, réew yi, muze yi ak tabax yi di fésal ay xew-xew yu mag. Fàttaliku Senegaal du benn nettali rekk.
+
+### Ay xew-xew ak ay bérab
+
+Nettali yi jëm nañu ci nguur yi, xeex yi ak taxawaayu askan wi, ci jaay-jaay ak jëfandikoo yoon yi, ci traite ak koloniyalism, ci yokkute dëkk yi, ci tukki nit ñi ak ci xeexu indépendance.
+
+### Jàng ak teral
+
+Gis bérab yu am taarix war nañu ànd ak xam-xam ak teral. Muze, monument, bérab yu am solo ak nettaliu waa dëkk yi man nañu yokk xam-xamu ñépp.`,
+  },
+  'kankourang-rite-dinitiation-mandingue-inscrit-au-patrimoine-de-lunesco': {
+    titleWo: 'Kankourang — xew-xewu njàngale Manding',
+    excerptWo: 'Kankourang mooy xew-xewu njàngale bu Manding, te UNESCO dafa ko xam ci patrimoine immatériel.',
+    contentWo: `### Jëmmal
+
+Kankourang mooy xew-xewu njàngale bu xeeti Manding ci Senegaal ak Gambie. Dafay am solo ci waxtaan ak njàngale yu jëm ci genç yi di jàpp ci sëmb ak cosaan.
+
+### Li mu jëm
+
+Kankourang dafa boole ci njàngale ak aar genç yi ci waxtu bi ñuy def ay ndaje yu cosaan. Xew-xew bi dafay yokk bokkute ak jàngale ci cosaan.
+
+### Xamle ko ci àdduna
+
+UNESCO dafa ko duggal ci Liste du patrimoine culturel immatériel de l'humanité ci 2005. Kankourang di wone ne cosaan yi man nañu nekk dund, te ñu war leen a jàngale ak aar ci jamono yu bees.`,
+  },
+  'xooy-ceremonie-divinatoire-patrimoine-serere-senegal': {
+    titleWo: 'Xooy — xew-xewu seetlu ak patrimoine Sereer',
+    excerptWo: 'Xooy mooy xew-xewu Sereer bu ñuy def ci diggante jamono ju taw.',
+    contentWo: `### Jëmmal
+
+Xooy mooy xew-xewu seetlu bu waa Sereer di def ci diggante jamono yu taw. Saltigé yi, ñuy xam ne ñooy boroom xam-xam bi, di wax ci li ñuy gis ak li man a ñëw.
+
+### Guddi gu fees ak waxtaan
+
+Xooy dafay am ci guddi gu yagg. Saltigé yi di toppante, di wax seen seetlu, tam-tam yi di dox, te askan wi di teew ci ndaje bi.
+
+### Li mu tekki ci askan wi
+
+Waxtaanu Xooy man na jëm ci taw yi, feebar yi, jafe-jafe yi ak yoon yi askan wi di jëfandikoo ngir seet ay tontu. Xew-xew bi di wone dooleg cosaan ak bokkute.`,
+  },
 };
