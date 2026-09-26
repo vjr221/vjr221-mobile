@@ -16,7 +16,8 @@
       ],
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "CFBundleAllowMixedLocalizations": true
+        "CFBundleAllowMixedLocalizations": true,
+        "NSLocationWhenInUseUsageDescription": "VJR 221 utilise votre position uniquement lorsque vous activez « Près de moi », pour classer les fiches de l’annuaire par proximité."
       },
       "config": {
         "usesNonExemptEncryption": false
@@ -41,6 +42,10 @@
         "backgroundColor": "#F4E9D6"
       },
       "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
       "intentFilters": [
         {
           "action": "VIEW",
@@ -97,6 +102,15 @@
             "image": "./assets/icon.png",
             "backgroundColor": "#11170F"
           }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "VJR 221 utilise votre position uniquement lorsque vous activez « Près de moi », pour classer les fiches de l’annuaire par proximité.",
+          "isAndroidForegroundServiceEnabled": false,
+          "isAndroidBackgroundLocationEnabled": false,
+          "isIosBackgroundLocationEnabled": false
         }
       ]
     ]
