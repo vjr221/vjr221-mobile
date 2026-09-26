@@ -1,33 +1,35 @@
 # État de production — VJR 221 Mobile
 
-Dernière mise à jour : **2026-09-26** · version app **1.5.0** (versionCode **17**) · pre-release.
+Dernière mise à jour : **2026-09-26** · version app **1.6.0** (versionCode **19**) · pre-release consolidation.
 
 Légende : ✅ opérationnel · ⏳ action humaine · 🕛 prévu · ⚠️ compromis assumé
 
-## ✅ Opérationnel
+## ✅ Opérationnel (1.6.0)
 
-- Accueil, recherche unifiée, favoris locaux, partage, FR/Wolof (pack local), thème.
+- Accueil, recherche unifiée, favoris locaux, partage, FR/Wolof (API + pack local), thème.
 - Territoires + annuaire + `lieu/{id}/contenus` via `vjr221/v1` + posts `wp/v2`.
-- Priorité Wolof API (vague 8) — repli pack local.
+- **Monitoring post-render** (contrat no-op, jamais au cold start).
+- **GPS défensif** : `expo-location` en `import()` dynamique uniquement au clic « Près de moi » — validé appareil (vc18).
+- **À découvrir ici** : types API + diversification ≤3/type.
 - Deep links schéma + permaliens ; Custom Tabs pour liens site.
 - Cache offline 15 min, retry, strip préfixe JSON parasite.
-- ErrorBoundary, splash non bloquant, polices timeout.
+- ErrorBoundary, splash non bloquant.
 - CI + workflow Android release.
-- **Plugin WP Wolof** dans le dépôt (`wordpress/vjr221-wolof/`) — à activer sur le serveur.
+- **Plugin WP Wolof** déployé en prod (14/14 régions).
 
-## ⚠️ Compromis 1.5.0 (stabilité)
+## ⚠️ Compromis assumés
 
-- Sentry **retiré** (no-op) — aucune télémétrie crash en prod.
-- `expo-location` **retiré** — « près de moi » = `unavailable` explicite.
-- Cause historique : imports natifs sans plugins Expo → crash avant ErrorBoundary.
+- Sentry = no-op (pas de crash reporting cloud tant que SDK non réintroduit post-render).
+- Phase E compte/JWT absente — favoris locaux uniquement (`favoritesSyncService` skeleton).
+- Matrice appareils multi-OS encore partielle (1 session vc18 OK).
 
-## ⏳ Action humaine (bloquant « release finale »)
+## ⏳ Action humaine (bloquant release GitHub **stable** + stores)
 
-1. Matrice appareils (voir `DEVICE_TESTING_CHECKLIST.md`).
-2. Installer/activer le plugin Wolof + seed 14 régions.
-3. Vérifier deep links réels Android.
-4. Décider passage pre-release → release GitHub stable.
+1. Élargir matrice (`DEVICE_TESTING_CHECKLIST.md`) : offline, deep links OS, MAJ 1.5→1.6.
+2. Décider retrait du flag `--prerelease` sur la release GitHub.
+3. Mettre à jour https://vjr221.sn/application/ avec le nouvel APK.
 
-## 🕛 1.6.0
+## 🕛 Suite
 
-Voir `ROADMAP.md` — phases A (fiabilité) → B (GPS) → C (annuaire) → D (explorer) → E (compte) → F (stores).
+- Phase E : si contrat JWT WP.
+- Phase F stores : Play / TestFlight (voir `STORE_RELEASE.md`, `IOS_DEPLOYMENT.md`).
