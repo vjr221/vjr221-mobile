@@ -41,6 +41,9 @@ interface GeoEntityBase {
   slug: string;
   title: string;
   excerpt: string | null;
+  /** Traductions Wolof fournies par l'API vjr221/v1 quand elles existent. */
+  titleWo?: string | null;
+  excerptWo?: string | null;
   permalink: string;
   image: RemoteImage | null;
   gps: GeoPoint | null;
@@ -54,7 +57,7 @@ export interface Region extends GeoEntityBase {
 export interface Department extends GeoEntityBase {
   kind: 'department';
   region: GeoRef | null;
-  departement: GeoRef | null; // toujours null pour un département, présent pour homogénéité de type
+  departement: GeoRef | null;
   arrondissement: string | null;
 }
 
@@ -82,6 +85,8 @@ export interface GeoCta {
 export interface GeoDetail<T extends GeoEntity> {
   entity: T;
   content: string | null;
+  /** Corps Wolof fourni par l'API quand le champ content_wo est renseigné côté WP. */
+  contentWo?: string | null;
   gallery: RemoteImage[];
   usefulLinks: UsefulLink[];
   /** Encart d'appel à l'action structuré fourni par l'API ([vjr_cta] côté WordPress) — jamais fabriqué côté app. */
@@ -98,6 +103,6 @@ export interface GeoListMeta {
 export interface GeoListResult<T> {
   items: T[];
   meta: GeoListMeta;
-  fromCache: boolean;
-  stale: boolean;
+  fromCache?: boolean;
+  stale?: boolean;
 }
