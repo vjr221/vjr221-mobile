@@ -1,18 +1,55 @@
 /**
- * Relais d'erreurs pour ErrorBoundary — sans SDK natif.
+ * Observabilité — contrat stable pour 1.6.0.
  *
- * Le SDK Sentry React Native a été retiré du build de production après 1.2.1
- * (crash démarrage Android). Ces fonctions restent sans dépendance native
- * pour ne jamais faire échouer le démarrage ; en __DEV__ les erreurs
- * remontent dans la console.
+ * Historique : @sentry/react-native en import statique a contribué aux crashs
+ * Android post-1.2.1 (module natif sans plugin Expo correctement prébuild).
+ * En 1.5.0 le SDK est retiré : tout est no-op.
+ *
+ * Règle stricte pour une future réintroduction :
+ * 1. Ne jamais importer le SDK au top-level de App.tsx / index.
+ * 2. initMonitoring() uniquement APRÈS le premier rendu réussi (post-splash).
+ * 3. Plugin Expo + test physique avant toute release CI.
+ * 4. reportError ne doit jamais throw.
  */
-export function initSentry() {
-  // No-op : pas de SDK natif embarqué en 1.5.0.
+
+export type MonitoringContext = Record<string, string | number | boolean | null | undefined>;
+
+let monitoringReady = false;
+
+/**
+ * À appeler une fois le premier frame affiché (ex. useEffect dans AppShell).
+ * Aujourd’hui : no-op. Demain : import() dynamique du SDK + Sentry.init.
+ */
+export function initMonitoring(): void {
+  if (monitoringReady) return;
+  monitoringReady = true;
+  // 1.6+ : dynamic import('@sentry/react-native') ici uniquement.
 }
 
-/** Relais ErrorBoundary — ne doit jamais lever d'exception. */
-export function reportError(error: Error, extra?: Record<string, unknown>) {
-  if (__DEV__) {
-    console.warn('[VJR221] ErrorBoundary', error, extra);
+/** @deprecated Prefer initMonitoring after first paint. */
+export function initSentry(): void {
+  initMonitoring();
+}
+
+export function reportError(error: unknown, context?: MonitoringContext): void {
+  try {
+    if (__DEV__) {
+      // eslint-disable-next-line no-console
+      console.warn('[monitoring]', error, context);
+    }
+    // 1.6+ : Sentry.captureException if monitoringReady && sdk loaded
+  } catch {
+    // never break the app
+  }
+}
+
+export function reportMessage(message: string, context?: MonitoringContext): void {
+  try {
+    if (__DEV__) {
+      // eslint-disable-next-line no-console
+      console.info('[monitoring]', message, context);
+    }
+  } catch {
+    // never break the app
   }
 }
