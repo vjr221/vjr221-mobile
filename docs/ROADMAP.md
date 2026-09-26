@@ -6,9 +6,9 @@
 
 - Accueil, recherche unifiée, favoris locaux, partage, FR/Wolof (pack local), thème.
 - Explorer territoires (région → village) + annuaire + contenus liés (`lieu/{id}/contenus`).
-- Stabilité démarrage : **aucun** module natif Sentry / expo-location (cause crash post-1.2.1).
+- Stabilité démarrage : **aucun** module natif Sentry / expo-location au cold start.
 - Custom Tabs, App Links restreints, cleanExcerpt, vague 8 priorité API `*_wo`.
-- Plugin WordPress **vjr221-wolof** (repo `wordpress/vjr221-wolof/`) prêt à déployer.
+- Plugin WordPress **vjr221-wolof** déployé (14/14 régions en prod).
 
 ## Décision produit
 
@@ -26,6 +26,7 @@ On ne réécrit pas l’app : on consolide. Les trois leviers qui changent l’e
 | Monitoring **post-premier rendu** (pas cold start) | Dev | ✅ Contrat livré |
 | Déployer plugin Wolof + seed 14 régions | WP | ✅ 14/14 en prod |
 | Corriger préfixe JSON `1{...}` côté serveur si possible | WP | Client strip déjà en place |
+| Pre-release vc18 : boot + GPS + À découvrir + Wolof | Humain | ✅ validé 2026-09-26 |
 
 ### Phase B — Géoloc défensive
 
@@ -35,7 +36,7 @@ On ne réécrit pas l’app : on consolide. Les trois leviers qui changent l’e
 | Permission uniquement au clic « Près de moi » | ✅ |
 | Timeout + fallback UI si refus / unavailable | ✅ |
 | Distance + ouverture itinéraire | ✅ |
-| Validation appareil GPS réel | ⏳ prochain APK pre-release |
+| Validation appareil GPS réel | ✅ vc18 |
 
 ### Phase C — Annuaire + proximité
 
@@ -73,5 +74,5 @@ On ne réécrit pas l’app : on consolide. Les trois leviers qui changent l’e
 
 1. Taux d’ouverture sans crash > 99 % sur matrice A.
 2. Mode Wolof : 14 régions depuis CMS ou pack local sans écran vide.
-3. « Autour de moi » utile sur ≥ 1 appareil GPS réel.
+3. « Autour de moi » utile sur ≥ 1 appareil GPS réel. ✅
 4. Une release GitHub **non** pre-release + notes claires.
