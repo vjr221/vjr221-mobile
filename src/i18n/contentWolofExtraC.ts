@@ -195,7 +195,7 @@ Nettali yi jëm nañu ci nguur yi, xeex yi ak taxawaayu askan wi, ci jaay-jaay a
 
 Gis bérab yu am taarix war nañu ànd ak xam-xam ak teral. Muze, monument, bérab yu am solo ak nettaliu waa dëkk yi man nañu yokk xam-xamu ñépp.`,
   },
-  'kankourang-rite-dinitiation-mandingue-inscrit-au-patrimoine-de-lunesco': {
+  'le-kankourang-rite-dinitiation-mandingue-inscrit-au-patrimoine-de-lunesco': {
     titleWo: 'Kankourang — xew-xewu njàngale Manding',
     excerptWo: 'Kankourang mooy xew-xewu njàngale bu Manding, te UNESCO dafa ko xam ci patrimoine immatériel.',
     contentWo: `### Jëmmal
@@ -301,5 +301,25 @@ Delta bi dafa am taarix, aada ak liggéey yu aju ci pêche ak écotourisme. Aska
 ### Xam-xam
 
 Parc bi sos nañu ko ci 1976. Mu am lu tollu ci 76 000 hectares. Delta Saalum nekk na ci patrimoine mondial UNESCO, te reserve de biosphère bi di yokk njariñu conservation bi.`,
+  },,
+  'toubacouta': {
+    titleWo: 'Toubacouta',
+    excerptWo: 'Dëkk ci départementu Foundiougne, bunt bu mag bu Delta Saalum ak écotourisme.',
+    contentWo: `### Jëmmal\n\nToubacouta mooy commune ci départementu Foundiougne, ci arrondissement bu tudd it Toubacouta. Mooy benn ci bunt yi gëna am solo ngir dugg ci Parc national bu Delta Saalum, patrimoine mondial UNESCO.\n\n### Géeographie\n\nToubacouta nekk na ci sudu départementu Foundiougne, ci xolum Réserve de biosphère bu Delta Saalum. Bandiala, mangrove yi, bolong yi ak duni yi bokk nañu ci paysage bi.\n\n### Économie\n\nÉcotourisme, pêche ak agriculture bokk nañu ci liggéey yi gëna am solo. Sorties ci pirogue, gis picc yi ak xam mangrove yi bokk nañu ci activités yu ñuy def.\n\n### Aada ak askan\n\nTerritoire bi may na ñu gis aada Sereer ak Mandingue, ak xam-xamu navigation, pêche ak jëfandikoo ressources yu delta bi. Aar mangrove yi ak bolong yi am na solo ngir dundug askan wi ak tourisme bu sax.\n\n### Toppatoo\n\nYokkute turismu war na ànd ak aar bérab yu yomb a yàq, wàññi mbalit ak jëfandikoo acteurs locaux.`,
+  },
+  'dionewar': {
+    titleWo: 'Dionewar',
+    excerptWo: 'Commune insulaire bu Foundiougne, ci duni Saalum, xam ne ko ci amas coquilliers ak pêche.',
+    contentWo: `### Jëmmal\n\nDionewar mooy commune insulaire ci départementu Foundiougne, ci duni Saalum. Dëkk bi xam nañu ko ci amas coquilliers yu yàgg ak dundug askan niominka.\n\n### Géeographie ak taarix\n\nDionewar nekk na ci benn île bu Delta Saalum. Dugg ci territoire bi ci ndox rekk. Amas coquilliers yi di wone ne nit ñi dëkk nañu foofu lu yàgg.\n\n### Aada ak dundin\n\nAskan niominka am nañu aada bu lëkkale ak géej, pêche ak dundug duni yi. Pêche artisanale, écotourisme ak dajale coquillages bokk nañu ci économie bi.\n\n### Enjeux\n\nEnclavement insulaire ak aar ressources halieutiques bokk nañu ci mbir yi territoire bi war a saytu. Aar environnement bi ak patrimoine bi am na solo ci jamono yu ñëw.`,
+  },
+  'foundiougne-et-le-sine-saloum-porte-dentree-des-iles-et-des-mangroves': {
+    titleWo: 'Foundiougne ak Sine-Saalum — bunt bu duni yi ak mangrove yi',
+    excerptWo: 'Foundiougne mooy benn ci yoon yi ñuy jaar ngir dugg ci Sine-Saalum, fleuve, bolong, mangrove ak duni yi.',
+    contentWo: `### Jëmmal\n\nFoundiougne mooy benn ci bérab yi ñuy jaar ngir dugg ci Sine-Saalum. Géeographie bi boole fleuve, bolong, mangrove, duni ak terroirs ruraux.\n\n### Ndox ak yoon yi\n\nMarée yi di soppi melokaanu ndox mi. Pirogue yi man nañu may nit ñi dem ci bolong yi ak ci ay bérab insulaires, sukkandiku ci xaalis ak xaal bu bérab bi.\n\n### Patrimoine bu dund\n\nXam-xam ci làkk yi, lekk, savoir-faire, cérémonie yi ak diggante askan yi ak seen environnement bokk nañu ci patrimoine bi.\n\n### Turismu bu toppatoo\n\nMangrove yi ak zones humides yi dañuy soxla aar. Excursions yi war nañu jëfandikoo opérateurs locaux, wàññi mbalit ak teral bérab yi ñuy saxal ak yooni dundug askan yi.`,
+  },
+  'keur-samba-gueye': {
+    titleWo: 'Keur Samba Gueye',
+    excerptWo: 'Commune bu Foundiougne ci arrondissementu Toubacouta, ci Delta Saalum.',
+    contentWo: `### Jëmmal\n\nKeur Samba Gueye mooy commune ci départementu Foundiougne, ci arrondissementu Toubacouta, ci Delta Saalum.\n\n### Taarix ak dundin\n\nDëkk bi, bu nekkoon communauté rurale, yokku na ni benn localité traditionnelle bu delta bi te nekk commune bu am sa bopp ci reformu territoriale bu 2013.\n\n### Économie\n\nPêche, agriculture ak petit commerce bokk nañu ci liggéey yi. Territoire bi dafa sukkandiku it ci ressources yu Delta Saalum.\n\n### Toppatoo\n\nYokkute ressources yi war na ànd ak aar environnement bu delta bi, ndax mangrove yi ak bolong yi am nañu solo ci dundug askan wi.`,
   },
 };
