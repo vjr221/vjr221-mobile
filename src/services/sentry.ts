@@ -34,7 +34,6 @@ export function initSentry(): void {
 export function reportError(error: unknown, context?: MonitoringContext): void {
   try {
     if (__DEV__) {
-      // eslint-disable-next-line no-console
       console.warn('[monitoring]', error, context);
     }
     // 1.6+ : Sentry.captureException if monitoringReady && sdk loaded
@@ -46,7 +45,6 @@ export function reportError(error: unknown, context?: MonitoringContext): void {
 export function reportMessage(message: string, context?: MonitoringContext): void {
   try {
     if (__DEV__) {
-      // eslint-disable-next-line no-console
       console.info('[monitoring]', message, context);
     }
   } catch {
