@@ -57,7 +57,7 @@ export interface Region extends GeoEntityBase {
 export interface Department extends GeoEntityBase {
   kind: 'department';
   region: GeoRef | null;
-  departement: GeoRef | null;
+  departement: GeoRef | null; // toujours null pour un département, présent pour homogénéité de type
   arrondissement: string | null;
 }
 
@@ -103,6 +103,6 @@ export interface GeoListMeta {
 export interface GeoListResult<T> {
   items: T[];
   meta: GeoListMeta;
-  fromCache?: boolean;
-  stale?: boolean;
+  fromCache: boolean;
+  stale: boolean;
 }
