@@ -23,31 +23,33 @@ On ne réécrit pas l’app : on consolide. Les trois leviers qui changent l’e
 |--------|-------|-----------------|
 | Matrice appareils Android 10→16, RAM faible, 4G, offline, MAJ 1.4→1.5 | Humain | Checklist `DEVICE_TESTING_CHECKLIST.md` cochée |
 | Validation deep links (installé / non installé) | Humain | Permalien → app ou page /application/ |
-| Monitoring **post-premier rendu** (pas cold start) | Dev | ✅ Contrat livré : `initMonitoring` après splash, `reportError` depuis ErrorBoundary + http (no-op SDK, jamais de crash au boot) |
-| Déployer plugin Wolof + seed 14 régions | WP | ✅ `title_wo` / `content_wo` 14/14 en prod |
-| Corriger préfixe JSON `1{...}` côté serveur si possible | WP | Client strip déjà en place (`http.parseJsonBody`) ; fix serveur optionnel |
+| Monitoring **post-premier rendu** (pas cold start) | Dev | ✅ Contrat livré |
+| Déployer plugin Wolof + seed 14 régions | WP | ✅ 14/14 en prod |
+| Corriger préfixe JSON `1{...}` côté serveur si possible | WP | Client strip déjà en place |
 
 ### Phase B — Géoloc défensive
 
 | Action | Statut |
 |--------|--------|
-| Module isolé, `import()` dynamique, **jamais** au démarrage | ✅ `locationService.requestUserLocation` |
-| Permission uniquement au clic « Près de moi » | ✅ Annuaire |
-| Timeout + fallback UI si refus / unavailable | ✅ Alert + permission denied/unavailable |
-| Distance + ouverture itinéraire (déjà via `mapService`) | ✅ déjà en place |
+| Module isolé, `import()` dynamique, **jamais** au démarrage | ✅ |
+| Permission uniquement au clic « Près de moi » | ✅ |
+| Timeout + fallback UI si refus / unavailable | ✅ |
+| Distance + ouverture itinéraire | ✅ |
 | Validation appareil GPS réel | ⏳ prochain APK pre-release |
 
 ### Phase C — Annuaire + proximité
 
-- Filtres catégories (API déjà là).
-- « Autour de moi » branché sur GPS B (✅ branché).
-- Fiches contact riches (déjà partiellement).
+- Filtres catégories + « Près de moi » branché sur GPS B ✅
 
 ### Phase D — Explorer découverte
 
-- Bloc « À découvrir ici » par territoire (API `lieu/{id}/contenus` déjà branchée).
-- Enrichissement fiche : patrimoine / tourisme / personnalités (données API only).
-- Carte interactive = **plus tard** (externe suffit en 1.6).
+| Action | Statut |
+|--------|--------|
+| Bloc « À découvrir ici » par territoire (`lieu/{id}/contenus`) | ✅ |
+| Types API réels (tourism/heritage/people/…) | ✅ |
+| Diversification ≤3/type, max 10, round-robin | ✅ |
+| Données API only (rien d’inventé) | ✅ |
+| Carte interactive | plus tard (externe suffit) |
 
 ### Phase E — Compte transversal
 
@@ -65,7 +67,7 @@ On ne réécrit pas l’app : on consolide. Les trois leviers qui changent l’e
 
 - Réécrire la navigation ou le design system.
 - Contenu inventé hors API.
-- Sentry / expo-location en import **statique** (interdit — leçon 1.2.1→1.5.0). L’import dynamique au clic est autorisé en Phase B.
+- Sentry / expo-location en import **statique** (interdit).
 
 ## Indicateurs de succès 1.6.0
 

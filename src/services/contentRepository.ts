@@ -49,20 +49,15 @@ export const decodeHtmlEntities = (value: string, options: { trim?: boolean } = 
 };
 
 export const stripHtml = (value: string): string => {
-  // 1) décoder les entités (y compris HTML doublement encodé : <p>…)
   let text = decodeHtmlEntities(value, { trim: false });
-  // 2) scripts / styles
   text = text
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '');
-  // 3) blocs → saut de ligne (pour extraits multi-paragraphes)
   text = text
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/<\/(p|div|h[1-6]|li|tr|blockquote|section|article|header|footer)>/gi, '\n')
     .replace(/<(p|div|h[1-6]|li|tr|blockquote|section|article|header|footer)(\s[^>]*)?>/gi, '\n');
-  // 4) retirer le reste des balises
   text = text.replace(/<[^>]+>/g, '');
-  // 5) collapser espaces ASCII seulement — conserver \n et \u00A0 (nbsp typographique)
   text = text
     .replace(/[ \t\f\v]+/g, ' ')
     .replace(/\n[ \t]+/g, '\n')
@@ -88,7 +83,6 @@ function pickThumbnail(media: WordPressFeaturedMedia | undefined): string | unde
   return normalizeMediaUrl(sizes?.medium?.source_url ?? sizes?.medium_large?.source_url ?? media.source_url);
 }
 
-/** Répare content_wo aplati côté CMS (ex. "### JëmmalnnTexte"). */
 function normalizeWolofBody(value: string | undefined): string | undefined {
   if (!value) return undefined;
   let text = value.replace(/\\r\\n|\\r|\\n/g, '\n');
@@ -99,7 +93,6 @@ function normalizeWolofBody(value: string | undefined): string | undefined {
 export const toContentItem = (post: WordPressPost): ContentItem => {
   const media = post._embedded?.['wp:featuredmedia']?.[0];
   const rawContent = post.content?.rendered;
-  // Décoder avant parse : gère le HTML doublement encodé (<h2>…) côté WP.
   const decodedContent = rawContent ? decodeHtmlEntities(rawContent, { trim: false }) : undefined;
   const contentBlocks = decodedContent ? parseRichContent(decodedContent) : undefined;
   const base: ContentItem = {
@@ -117,8 +110,6 @@ export const toContentItem = (post: WordPressPost): ContentItem => {
     imageUrl: normalizeMediaUrl(media?.source_url),
     thumbnailUrl: pickThumbnail(media),
   };
-  // Vague 8 : WordPress (title_wo / excerpt_wo / content_wo) prioritaire ;
-  // couche locale contentWolof* = repli si le champ API est absent.
   const local = getWolofContent(base);
   return {
     ...base,
@@ -152,31 +143,92 @@ export function getContentByType(type: ContentType, page = 1): Promise<Collectio
   return getPosts(`per_page=20&page=${page}`, `content:type:${type}:${page}`);
 }
 
+/** Types renvoyés par GET /vjr221/v1/lieu/{id}/contenus → ContentType app. */
+const LIEU_TYPE_MAP: Record<string, ContentType> = {
+  tourism: 'tourism',
+  heritage: 'heritage',
+  gastronomy: 'gastronomy',
+  people: 'people',
+  history: 'history',
+  nature: 'nature',
+  culture: 'culture',
+  events: 'events',
+  news: 'news',
+  directory: 'directory',
+};
+
+function mapLieuType(raw?: string | null): ContentType {
+  if (!raw) return 'news';
+  return LIEU_TYPE_MAP[raw] ?? 'news';
+}
+
 type RawLieuContentItem = {
   id: number;
   title: string;
   excerpt?: string | null;
   permalink: string;
-  image?: { url?: string; thumb?: string } | null;
-  type?: string;
+  image?: { url?: string; thumb?: string; alt?: string } | null;
+  type?: string | null;
   category?: { id: number; slug: string; name: string } | null;
+  title_wo?: string | null;
+  excerpt_wo?: string | null;
 };
 
 export async function getLieuContent(lieuId: number): Promise<CollectionResult> {
   const result = await withCacheFallback(`content:lieu:${lieuId}`, CACHE_TTL, async () => {
     const raw = await getJson<{ items: RawLieuContentItem[] }>(`/lieu/${lieuId}/contenus`, undefined, env.geoApiBaseUrl);
-    return (raw.items ?? []).map((item) => ({
-      id: item.id,
-      title: decodeHtmlEntities(item.title),
-      excerpt: item.excerpt ? decodeHtmlEntities(item.excerpt) : undefined,
-      type: 'news' as ContentType,
-      url: item.permalink,
-      imageUrl: item.image?.url,
-      thumbnailUrl: item.image?.thumb,
-      tags: item.category ? [item.category.name] : undefined,
-    }));
+    return (raw.items ?? []).map((item): ContentItem => {
+      const type = mapLieuType(item.type);
+      const base: ContentItem = {
+        id: item.id,
+        title: decodeHtmlEntities(item.title),
+        titleWo: item.title_wo ? decodeHtmlEntities(String(item.title_wo), { trim: true }) : undefined,
+        excerpt: item.excerpt ? decodeHtmlEntities(item.excerpt) : undefined,
+        excerptWo: item.excerpt_wo ? decodeHtmlEntities(String(item.excerpt_wo), { trim: true }) : undefined,
+        type,
+        url: item.permalink,
+        imageUrl: normalizeMediaUrl(item.image?.url),
+        thumbnailUrl: normalizeMediaUrl(item.image?.thumb ?? item.image?.url),
+        tags: item.category ? [item.category.name] : undefined,
+      };
+      const local = getWolofContent(base);
+      return {
+        ...base,
+        titleWo: base.titleWo?.trim() || local?.titleWo,
+        excerptWo: base.excerptWo?.trim() || local?.excerptWo,
+      };
+    });
   });
   return { items: result.value, fromCache: result.fromCache, stale: result.stale };
+}
+
+/**
+ * Diversifie une liste lieu/contenus : au plus maxPerType par univers,
+ * sélection en round-robin pour éviter 20 personnalités d’affilée.
+ * Aucun item inventé — uniquement le sous-ensemble API fourni.
+ */
+export function diversifyLieuContent(items: ContentItem[], limit = 10, maxPerType = 3): ContentItem[] {
+  if (!items.length || limit <= 0) return [];
+  const buckets = new Map<ContentType, ContentItem[]>();
+  for (const item of items) {
+    const list = buckets.get(item.type) ?? [];
+    if (list.length < maxPerType) list.push(item);
+    buckets.set(item.type, list);
+  }
+  const queues = Array.from(buckets.values()).map((list) => [...list]);
+  const picked: ContentItem[] = [];
+  let progress = true;
+  while (picked.length < limit && progress) {
+    progress = false;
+    for (const queue of queues) {
+      if (picked.length >= limit) break;
+      if (queue.length) {
+        picked.push(queue.shift()!);
+        progress = true;
+      }
+    }
+  }
+  return picked;
 }
 
 export async function getContentDetail(id: number): Promise<ContentItem> {
@@ -196,24 +248,16 @@ export function localizeContentFields(item: ContentItem, locale: Locale): { titl
   return { title: item.title, excerpt: item.excerpt };
 }
 
-
-/** Compatibilité avec les écrans et deep-links de l'application. */
 export const resolveContentBySlug = getContentBySlug;
 
-/** Localise les champs éditoriaux selon la langue active. */
 export function localizeContent(item: ContentItem, locale: Locale): { title: string; excerpt?: string } {
   return localizeContentFields(item, locale);
 }
 
-/** Contenu mis en avant de l'accueil. */
 export function getFeaturedContent(): Promise<CollectionResult> {
   return getPosts('per_page=6&orderby=date', 'content:featured');
 }
 
-/**
- * Taxonomie WordPress vérifiée lors de l'intégration des univers éditoriaux.
- * Les IDs correspondent aux catégories réelles utilisées par VJR 221.
- */
 export const CATEGORY_TAXONOMY: Partial<Record<ContentType, number[]>> = {
   tourism: [16, 108, 41, 106, 40, 17],
   heritage: [8, 103, 105, 102],

@@ -20,7 +20,7 @@ import {
   getVillage,
   getVillages,
 } from '../../services/geoRepository';
-import { getContentDetail, getLieuContent } from '../../services/contentRepository';
+import { diversifyLieuContent, getContentDetail, getLieuContent } from '../../services/contentRepository';
 import type { Commune, Department, GeoCta, Region, Village } from '../../types/geo';
 import type { ContentItem } from '../../types/content';
 
@@ -328,8 +328,19 @@ function RelatedContent({ lieuId, onOpenContent }: { lieuId: number; onOpenConte
 
   useEffect(() => {
     let active = true;
-    getLieuContent(lieuId).then((result) => { if (active) { setItems(result.items); setState('ready'); } }).catch(() => { if (active) setState('ready'); });
-    return () => { active = false; };
+    getLieuContent(lieuId)
+      .then((result) => {
+        if (active) {
+          setItems(diversifyLieuContent(result.items, 10, 3));
+          setState('ready');
+        }
+      })
+      .catch(() => {
+        if (active) setState('ready');
+      });
+    return () => {
+      active = false;
+    };
   }, [lieuId]);
 
   const openFull = (item: ContentItem) => {
@@ -341,7 +352,7 @@ function RelatedContent({ lieuId, onOpenContent }: { lieuId: number; onOpenConte
 
   return (
     <View style={styles.relatedSection}>
-      <Text style={styles.sectionTitle}>{t('relatedContent')}</Text>
+      <Text style={styles.sectionTitle}>{t('discoverHere')}</Text>
       {items.map((item) => (
         <ContentCard key={`${item.type}-${item.id}`} item={item} onPress={openFull} />
       ))}
@@ -381,8 +392,8 @@ function makeStyles(colors: ReturnType<typeof useTheme>['colors']) {
     sectionTitle: { color: colors.ink, fontFamily: fonts.displaySemiBold, fontSize: type.h2, marginTop: spacing.sm, marginBottom: spacing.sm },
     inputWrap: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, backgroundColor: colors.surface, borderRadius: radii.pill, height: 46, paddingHorizontal: spacing.md, marginBottom: spacing.md },
     input: { flex: 1, color: colors.ink, fontFamily: fonts.body, fontSize: 14 },
-    offline: { backgroundColor: colors.surfaceSoft, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.sm },
-    relatedSection: { marginTop: spacing.lg },
+    offline: { backgroundColor: colors.surfaceSoft, borderRadius: radii.sm, padding: spacing.sm, marginBottom: spacing.md },
     offlineText: { color: colors.terreStrong, fontFamily: fonts.bodySemiBold, fontSize: 12 },
+    relatedSection: { marginTop: spacing.lg },
   });
 }
