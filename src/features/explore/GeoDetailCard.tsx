@@ -154,7 +154,7 @@ export function GeoDetailCard({
           <View style={styles.ctaBox}>
             <Text style={styles.ctaTitle}>{cta.title}</Text>
             <Text style={styles.ctaText}>{cta.text}</Text>
-            <Button variant="secondary" size="sm" onPress={() => openExternalUrl(cta.buttonUrl)} style={styles.ctaButton}>
+            <Button variant="secondary" size="sm" onPress={() => { void openExternalUrl(cta.buttonUrl, 'web'); }} style={styles.ctaButton}>
               {cta.buttonLabel}
             </Button>
           </View>
