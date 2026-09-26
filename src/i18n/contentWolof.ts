@@ -6,7 +6,7 @@ import { CONTENT_WO_EXTRA_C } from './contentWolofExtraC';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 /**
- * Couche Wolof — régions, tourisme, patrimoine.
+ * Couche Wolof — régions, tourisme, patrimoine (vague 7 : qualité).
  * Compléments : Extra + ExtraB + ExtraC
  */
 const CONTENT_WO_CORE: Record<string, WolofContent> = {
@@ -23,7 +23,7 @@ const CONTENT_WO_CORE: Record<string, WolofContent> = {
   'region-de-thies': {
     titleWo: 'Diiwaanu Thiès',
     excerptWo: 'Bunt bu jëm ci littoral — industrie, Lac Rose, Petite Côte ak Bandia.',
-    contentWo: `### Jëmmal\n\nDiiwaanu Thiès nekk na ci penku Dakar. Mooy benn ci diiwaan yu am solo ci industrie, transport, agriculture ak tourisme.\n\n### Toppatoo\n\nDépartements : Thiès, Tivaouane ak Mbour.\n\n### Nature ak tourisme\n\nLac Rose (Lac Retba), Petite Côte (Saly, Somone, Popenguine), forêt de Bandia ak bérab yu aada yi.\n\n### Ekonom\n\nIndustrie, commerce, agriculture ak tourisme littoral.`,
+    contentWo: `### Jëmmal\n\nDiiwaanu Thiès nekk na ci penku Dakar. Mooy benn ci diiwaan yu am solo ci industrie, transport, agriculture ak tourisme littoral.\n\n### Toppatoo\n\nDépartements : Thiès, Tivaouane ak Mbour.\n\n### Nature ak tourisme\n\nLac Rose (Lac Retba), Petite Côte (Saly, Somone, Popenguine), forêt de Bandia, Tivaouane ak bérab yu aada yi.\n\n### Ekonom\n\nIndustrie, commerce, agriculture, tourisme littoral ak diggante ak Dakar.`,
   },
   'region-de-saint-louis': {
     titleWo: 'Diiwaanu Ndar (Saint-Louis)',
@@ -37,13 +37,13 @@ const CONTENT_WO_CORE: Record<string, WolofContent> = {
   },
   'region-de-kaolack': {
     titleWo: 'Diiwaanu Kaolack',
-    excerptWo: 'Carrefour bu bassin arachidier — Saalum, commerce ak sel.',
-    contentWo: `### Jëmmal\n\nKaolack mooy carrefour economique ci centre Senegaal, rawatina ci commerce arachide ak dexu Saalum.\n\n### Toppatoo\n\nDépartements : Kaolack, Guinguinéo ak Nioro du Rip.\n\n### Ekonom\n\nAgriculture, commerce, sel bu Kaolack ak transport. Marchés yu mag yi am nañu solo ci réew mi.`,
+    excerptWo: 'Carrefour bu bassin arachidier — Saalum, commerce, sel ak transport.',
+    contentWo: `### Jëmmal\n\nKaolack mooy carrefour economique ci centre Senegaal, rawatina ci commerce arachide ak dexu Saalum. Dëkk bu mag bi dafa jël solo ci transport, marchés yu mag yi ak sel.\n\n### Toppatoo\n\nDépartements : Kaolack, Guinguinéo ak Nioro du Rip.\n\n### Ekonom\n\nAgriculture (arachide, mil), commerce, sel bu Kaolack, transport ak yeneen services. Marchés yu mag yi bokk nañu ci dundinu réew mi.\n\n### Aada\n\nAada yu Saalum, diine ak dundin bu centre Senegaal.`,
   },
   'region-de-kaffrine': {
     titleWo: 'Diiwaanu Kaffrine',
-    excerptWo: 'Xolum agro-pastoral bu centre Senegaal (sosu na ci 2008).',
-    contentWo: `### Jëmmal\n\nDiiwaanu Kaffrine sosu na ci 2008. Mooy territoire agro-pastoral ci centre Senegaal, diggante Kaolack ak Tambacounda.\n\n### Toppatoo\n\nDépartements : Kaffrine, Birkelane, Koungheul ak Malem Hodar.\n\n### Ekonom\n\nAgriculture, sàmm ak commerce yu local. Arachide, mil ak niébé bokk nañu ci tool yi.`,
+    excerptWo: 'Xolum agro-pastoral bu centre (sosu na ci 2008) — arachide, mil ak sàmm.',
+    contentWo: `### Jëmmal\n\nDiiwaanu Kaffrine sosu na ci 2008, génne ci Kaolack. Mooy territoire agro-pastoral ci centre Senegaal, diggante Kaolack ak Tambacounda.\n\n### Toppatoo\n\nDépartements : Kaffrine, Birkelane, Koungheul ak Malem Hodar.\n\n### Ekonom\n\nAgriculture (arachide, mil, niébé), sàmm ak commerce yu local. Tool yi ak sàmm bokk nañu ci dundin bu diiwaan bi.\n\n### Nature\n\nPaysage bu sahel ak savane, diggante centre ak penku.`,
   },
   'region-de-fatick': {
     titleWo: 'Diiwaanu Fatick',
@@ -52,13 +52,13 @@ const CONTENT_WO_CORE: Record<string, WolofContent> = {
   },
   'region-de-louga': {
     titleWo: 'Diiwaanu Louga',
-    excerptWo: 'Bunt yu Sahel — Ndiambour, sàmm ak agriculture.',
-    contentWo: `### Jëmmal\n\nLouga nekk na ci norte Senegaal, diggante Saint-Louis ak Matam. Territoire pastoral ak agricole, xam ko ci Ndiambour.\n\n### Toppatoo\n\nDépartements : Louga, Kébémer ak Linguère.\n\n### Ekonom\n\nSàmm, agriculture (arachide, niébé) ak commerce. Ferlo jege na ci penku.`,
+    excerptWo: 'Bunt yu Sahel — Ndiambour, sàmm, agriculture ak Ferlo.',
+    contentWo: `### Jëmmal\n\nLouga nekk na ci norte Senegaal, diggante Saint-Louis ak Matam. Territoire pastoral ak agricole, xam ko ci Ndiambour ak diggante ak Ferlo.\n\n### Toppatoo\n\nDépartements : Louga, Kébémer ak Linguère.\n\n### Ekonom\n\nSàmm, agriculture (arachide, niébé), commerce ak transport. Linguère jege na ci Ferlo.\n\n### Aada\n\nAada yu norte, sàmm ak dundin bu Sahel.`,
   },
   'region-de-matam': {
     titleWo: 'Diiwaanu Matam',
-    excerptWo: 'Wàllu dexu Senegaal — Fouta-Toro, agriculture ak sàmm.',
-    contentWo: `### Jëmmal\n\nMatam nekk na ci nord-est, ci wetug dexu Senegaal. Zone agricole ak pastorale, xolum Fouta-Toro.\n\n### Toppatoo\n\nDépartements : Matam, Kanel ak Ranérou-Ferlo.\n\n### Ekonom ak aada\n\nAgriculture bu wàllu dex gi, sàmm, commerce ak Mauritanie. Aada Peul ak Haalpulaar am na solo.`,
+    excerptWo: 'Wàllu dexu Senegaal — Fouta-Toro, agriculture, sàmm ak aada Peul.',
+    contentWo: `### Jëmmal\n\nMatam nekk na ci nord-est, ci wetug dexu Senegaal. Zone agricole ak pastorale, xolum Fouta-Toro ak diggante ak Mauritanie.\n\n### Toppatoo\n\nDépartements : Matam, Kanel ak Ranérou-Ferlo.\n\n### Ekonom ak aada\n\nAgriculture bu wàllu dex gi, sàmm, commerce ak jokkoo ak Mauritanie. Aada Peul ak Haalpulaar am na solo ci diiwaan bi.\n\n### Nature\n\nDex gi, tool yu wàll ak paysage bu Fouta.`,
   },
   'region-de-tambacounda': {
     titleWo: 'Diiwaanu Tambacounda',
@@ -72,23 +72,23 @@ const CONTENT_WO_CORE: Record<string, WolofContent> = {
   },
   'region-de-kolda': {
     titleWo: 'Diiwaanu Kolda',
-    excerptWo: 'Fouladou — Haute Casamance, agriculture ak sàmm.',
-    contentWo: `### Jëmmal\n\nKolda nekk na ci Haute Casamance, territoire Fouladou. Zone bu fees ak agriculture ak sàmm.\n\n### Toppatoo\n\nDépartements : Kolda, Vélingara ak Médina Yoro Foulah.\n\n### Ekonom ak aada\n\nAgriculture (riz, arachide), sàmm ak commerce. Aada Peul, Mandingue ak askan yu Haute Casamance.`,
+    excerptWo: 'Fouladou — Haute Casamance, agriculture, sàmm ak aada yu wuute.',
+    contentWo: `### Jëmmal\n\nKolda nekk na ci Haute Casamance, territoire Fouladou. Zone bu fees ak agriculture, sàmm ak askan yu wuute.\n\n### Toppatoo\n\nDépartements : Kolda, Vélingara ak Médina Yoro Foulah.\n\n### Ekonom ak aada\n\nAgriculture (riz, arachide), sàmm ak commerce. Aada Peul, Mandingue ak askan yu Haute Casamance.\n\n### Nature\n\nÀll yi, tool yu riz ak paysage bu Casamance bu kaw.`,
   },
   'region-de-sedhiou': {
     titleWo: 'Diiwaanu Sédhiou',
-    excerptWo: 'Casamance — vallées, àll yi ak aada yu wuute.',
-    contentWo: `### Jëmmal\n\nSédhiou nekk na ci Casamance, diggante Ziguinchor ak Kolda. Vallées, àll yi ak dëkk yu aada.\n\n### Toppatoo\n\nDépartements : Sédhiou, Bounkiling ak Goudomp.\n\n### Ekonom\n\nAgriculture, pêche ci dex yi ak commerce local. Riz bu Casamance am na solo ci dundin.`,
+    excerptWo: 'Casamance — vallées, àll yi, aada yu wuute ak patrimoine.',
+    contentWo: `### Jëmmal\n\nSédhiou nekk na ci Casamance, diggante Ziguinchor ak Kolda. Vallées, àll yi, dëkk yu aada ak patrimoine bu local.\n\n### Toppatoo\n\nDépartements : Sédhiou, Bounkiling ak Goudomp.\n\n### Ekonom\n\nAgriculture (riz bu Casamance), pêche ci dex yi ak commerce local. Riz am na solo ci dundin.\n\n### Aada ak patrimoine\n\nAada yu wuute, Fort Pinet-Laprade, mosquées yu yàgg ak dundin bu Casamance.`,
   },
   'le-lac-rose': {
     titleWo: 'Lac Rose (Lac Retba)',
     excerptWo: 'Lac bu am melo rose — tourisme, sel ak patrimoine naturel ci wetug Dakar.',
-    contentWo: `### Jëmmal\n\nLac Rose walla Lac Retba nekk na ci wetug Dakar (diiwaanu Thiès). Melo rose bi mën na feeñ ci jamono yu tàng, rawatina ci njaarum sel.\n\n### Solo\n\nTourisme, extraction du sel, plage, chameaux ak photo yu rafet. Benn ci bérab yu gën a xam ci Senegaal.`,
+    contentWo: `### Jëmmal\n\nLac Rose walla Lac Retba nekk na ci wetug Dakar (diiwaanu Thiès). Melo rose bi mën na feeñ ci jamono yu tàng, rawatina ci njaarum sel bu am solo.\n\n### Solo\n\nTourisme, extraction du sel, plage, chameaux, photo yu rafet ak dundin bu local. Benn ci bérab yu gën a xam ci Senegaal, jege Dakar.\n\n### Xibaar\n\nMelo bi dafa aju ci micro-algues ak sel ; dañu koy seet ci waxtu yu tàng.`,
   },
   'l-ile-de-goree': {
     titleWo: 'Dunu Gorée',
     excerptWo: 'Patrimoine mondial UNESCO — mémoire de la traite négrière atlantique.',
-    contentWo: `### Jëmmal\n\nDunu Gorée nekk na ci géeju Dakar. Mooy bérab bu xelal nit ñi ci taariixu traite négrière atlantique.\n\n### Solo\n\nMaison des Esclaves, musées, architecture coloniale ak tourisme mémoriel. UNESCO World Heritage.`,
+    contentWo: `### Jëmmal\n\nDunu Gorée nekk na ci géeju Dakar. Mooy bérab bu xelal nit ñi ci taariixu traite négrière atlantique, te bokk na ci patrimoine mondial UNESCO.\n\n### Solo\n\nMaison des Esclaves, musées, architecture coloniale, tourisme mémoriel ak aada. Gorée dafa am solo ci xelal àdduna bi ak ci taariixu Afrique.\n\n### Seetaan\n\nPirogue walla ferry jële Dakar ; bérab bu ndaw waaye bu fees ak taariix.`,
   },
   'tourisme-saint-louis-patrimoine-fleuve': {
     titleWo: 'Tourisme ci Ndar (Saint-Louis)',
