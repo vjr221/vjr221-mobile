@@ -7,6 +7,10 @@ describe('Wolof fiche translations', () => {
     'tourisme-memoire-senegal',
     'kankourang-rite-dinitiation-mandingue-inscrit-au-patrimoine-de-lunesco',
     'xooy-ceremonie-divinatoire-patrimoine-serere-senegal',
+    'patrimoine-culturel-immateriel-du-senegal-inventaire-expressions',
+    'patrimoine-architectural-saint-louis-senegal',
+    'le-delta-du-saloum-paysage-de-mangroves-et-de-bolongs-patrimoine-mondial-de-lunesco',
+    'le-parc-national-du-delta-du-saloum',
   ];
 
   it('exposes the phase 1 fiche translations with all required fields', () => {
