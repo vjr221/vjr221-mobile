@@ -25,8 +25,8 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   },
   'thieboudiene-ceebu-jen': {
     titleWo: 'Ceebu jën (Thiéboudiène)',
-    excerptWo: 'Riz ak jën — mbuum bu nasyonaal.',
-    contentWo: `### Jëmmal\n\nCeebu jën mooy mbuum bu nasyonaal. Riz, jën (thiof), diwtiir, tomate. Am na bu xonq ak bu weex.`,
+    excerptWo: 'Riz ak jën — mbuum bu nasyonaal bu Senegaal.',
+    contentWo: `### Jëmmal\n\nCeebu jën (thiéboudiène) mooy mbuum bu nasyonaal bu Senegaal. Riz, jën (thiof walla yeneen), diwtiir, tomate ak wutus yu local.\n\n### Xibaar\n\nAm na ceebu jën bu xonq (rouge) ak bu weex (blanc). Dañu koy lekk ci njël walla ngoon, ak waxtu yu mag. Thiof mooy jën bu gën a xam ci ceebu jën.`,
   },
   'ceebu-yapp': {
     titleWo: 'Ceebu yàpp',
@@ -35,8 +35,8 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   },
   'mafe': {
     titleWo: 'Mafé',
-    excerptWo: 'Sauce bu arachide.',
-    contentWo: `### Jëmmal\n\nMafé : sauce bu tigadege, yàpp walla jën, lekk ak ceeb.`,
+    excerptWo: 'Sauce bu arachide ak yàpp walla jën.',
+    contentWo: `### Jëmmal\n\nMafé mooy sauce bu arachide (tigadege), dañu koy toxal ak yàpp, jën walla vegetables. Lekk nañu ko ak ceeb.\n\n### Xibaar\n\nMafé dafa am solo ci këri yu Senegaal ak Afrique de l'Ouest. Netetou ak xorom yi dañu koy yokk neex.`,
   },
   'domoda': {
     titleWo: 'Domoda',
@@ -56,12 +56,12 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   'cafe-touba': {
     titleWo: 'Kafe Touba',
     excerptWo: 'Kafe bu jar — aada Mouride.',
-    contentWo: `### Jëmmal\n\nKafe Touba dafa am djar. Aada Mouride, dëkk yépp.`,
+    contentWo: `### Jëmmal\n\nKafe Touba dafa am poivre jar (djar) ak kafe. Xam nañu ko ci aada Mouride ak ci dëkk yépp ci Senegaal.\n\n### Xibaar\n\nKafe Touba dañu koy naan tàng ; solo ci Touba ak diggante Mouride, waaye mu fees ci réew mi bépp.`,
   },
   'bissap': {
     titleWo: 'Bissap',
-    excerptWo: 'Jus bu hibiscus.',
-    contentWo: `### Jëmmal\n\nBissap : jus bu hibiscus, sedd walla tàng, sukkar.`,
+    excerptWo: 'Jus bu hibiscus — tàng walla sedd.',
+    contentWo: `### Jëmmal\n\nBissap mooy jus bu feuilles de hibiscus. Dañu koy naan sedd walla tàng, ak sukkar. Bissap bu xonq ak bu ñuul am na.\n\n### Xibaar\n\nBissap bokk na ci naan yu gën a xam ci marchés ak kër yi. Dañu koy boole ak gingembre walla mint.`,
   },
   'jus-de-bouye': {
     titleWo: 'Jus bu buy',
