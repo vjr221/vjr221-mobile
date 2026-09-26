@@ -49,15 +49,12 @@ export const decodeHtmlEntities = (value: string, options: { trim?: boolean } = 
 };
 
 export const stripHtml = (value: string): string =>
-  decodeHtmlEntities(
-    value
-      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim(),
-  );
+  decodeHtmlEntities(value)
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 
 function normalizeMediaUrl(value: string | undefined): string | undefined {
   if (!value?.trim()) return undefined;
