@@ -301,7 +301,7 @@ Delta bi dafa am taarix, aada ak liggéey yu aju ci pêche ak écotourisme. Aska
 ### Xam-xam
 
 Parc bi sos nañu ko ci 1976. Mu am lu tollu ci 76 000 hectares. Delta Saalum nekk na ci patrimoine mondial UNESCO, te reserve de biosphère bi di yokk njariñu conservation bi.`,
-  },,
+  },
   'toubacouta': {
     titleWo: 'Toubacouta',
     excerptWo: 'Dëkk ci départementu Foundiougne, bunt bu mag bu Delta Saalum ak écotourisme.',
