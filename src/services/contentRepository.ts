@@ -179,3 +179,62 @@ export function localizeContentFields(item: ContentItem, locale: Locale): { titl
   if (locale === 'wo') return { title: item.titleWo?.trim() || item.title, excerpt: item.excerptWo?.trim() || item.excerpt };
   return { title: item.title, excerpt: item.excerpt };
 }
+
+
+/** Compatibilité avec les écrans et deep-links de l'application. */
+export const resolveContentBySlug = getContentBySlug;
+
+/** Localise les champs éditoriaux selon la langue active. */
+export function localizeContent(item: ContentItem, locale: Locale): { title: string; excerpt?: string } {
+  return localizeContentFields(item, locale);
+}
+
+/** Contenu mis en avant de l'accueil. */
+export function getFeaturedContent(): Promise<CollectionResult> {
+  return getPosts('per_page=6&orderby=date', 'content:featured');
+}
+
+/**
+ * Taxonomie WordPress vérifiée lors de l'intégration des univers éditoriaux.
+ * Les IDs correspondent aux catégories réelles utilisées par VJR 221.
+ */
+export const CATEGORY_TAXONOMY: Partial<Record<ContentType, number[]>> = {
+  tourism: [16, 108, 41, 106, 40, 17],
+  heritage: [8, 103, 105, 102],
+  gastronomy: [6, 97, 209, 99],
+  history: [14],
+  nature: [10, 5, 120],
+  culture: [11, 130, 134],
+  events: [4],
+  people: [12, 34, 35, 33, 38, 39, 303, 302, 312, 360, 335],
+  news: [25],
+};
+
+const CATEGORY_PAGE_SIZE = 12;
+export type CategoryPageResult = CollectionResult & { hasMore: boolean };
+
+function toTypedContentItem(post: WordPressPost, type: ContentType): ContentItem {
+  return { ...toContentItem(post), type };
+}
+
+export async function getCategoryContent(
+  type: ContentType,
+  opts: { page?: number; q?: string } = {},
+): Promise<CategoryPageResult> {
+  const categoryIds = CATEGORY_TAXONOMY[type];
+  if (!categoryIds?.length) return { items: [], fromCache: false, stale: false, hasMore: false };
+  const page = opts.page ?? 1;
+  const search = opts.q?.trim();
+  const query = `categories=${categoryIds.join(',')}&per_page=${CATEGORY_PAGE_SIZE}&page=${page}${search ? `&search=${encodeURIComponent(search)}` : ''}`;
+  const cacheKey = `category:${type}:${page}:${search ?? ''}`;
+  const result = await withCacheFallback(cacheKey, CACHE_TTL, async () => {
+    const posts = await getJson<WordPressPost[]>(`/posts?${query}&_embed`);
+    return posts.map((post) => toTypedContentItem(post, type));
+  });
+  return {
+    items: result.value,
+    fromCache: result.fromCache,
+    stale: result.stale,
+    hasMore: result.value.length === CATEGORY_PAGE_SIZE,
+  };
+}
