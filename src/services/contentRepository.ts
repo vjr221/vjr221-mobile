@@ -48,13 +48,29 @@ export const decodeHtmlEntities = (value: string, options: { trim?: boolean } = 
   return result;
 };
 
-export const stripHtml = (value: string): string =>
-  decodeHtmlEntities(value)
-    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' ')
+export const stripHtml = (value: string): string => {
+  // 1) décoder les entités (y compris HTML doublement encodé : <p>…)
+  let text = decodeHtmlEntities(value, { trim: false });
+  // 2) scripts / styles
+  text = text
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '');
+  // 3) blocs → saut de ligne (pour extraits multi-paragraphes)
+  text = text
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/(p|div|h[1-6]|li|tr|blockquote|section|article|header|footer)>/gi, '\n')
+    .replace(/<(p|div|h[1-6]|li|tr|blockquote|section|article|header|footer)(\s[^>]*)?>/gi, '\n');
+  // 4) retirer le reste des balises
+  text = text.replace(/<[^>]+>/g, '');
+  // 5) collapser espaces ASCII seulement — conserver \n et \u00A0 (nbsp typographique)
+  text = text
+    .replace(/[ \t\f\v]+/g, ' ')
+    .replace(/\n[ \t]+/g, '\n')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n{2,}/g, '\n')
     .trim();
+  return text;
+};
 
 function normalizeMediaUrl(value: string | undefined): string | undefined {
   if (!value?.trim()) return undefined;
@@ -83,7 +99,9 @@ function normalizeWolofBody(value: string | undefined): string | undefined {
 export const toContentItem = (post: WordPressPost): ContentItem => {
   const media = post._embedded?.['wp:featuredmedia']?.[0];
   const rawContent = post.content?.rendered;
-  const contentBlocks = rawContent ? parseRichContent(rawContent) : undefined;
+  // Décoder avant parse : gère le HTML doublement encodé (<h2>…) côté WP.
+  const decodedContent = rawContent ? decodeHtmlEntities(rawContent, { trim: false }) : undefined;
+  const contentBlocks = decodedContent ? parseRichContent(decodedContent) : undefined;
   const base: ContentItem = {
     id: post.id,
     title: stripHtml(post.title.rendered),
