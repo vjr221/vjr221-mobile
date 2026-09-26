@@ -23,9 +23,9 @@ On ne réécrit pas l’app : on consolide. Les trois leviers qui changent l’e
 |--------|-------|-----------------|
 | Matrice appareils Android 10→16, RAM faible, 4G, offline, MAJ 1.4→1.5 | Humain | Checklist `DEVICE_TESTING_CHECKLIST.md` cochée |
 | Validation deep links (installé / non installé) | Humain | Permalien → app ou page /application/ |
-| Monitoring **post-premier rendu** (pas cold start) | Dev | Crash/API reportés sans casser le boot |
-| Déployer plugin Wolof + seed 14 régions | WP | `title_wo` visible sur `/regions/2153` |
-| Corriger préfixe JSON `1{...}` côté serveur si possible | WP | Réponse commence par `{` |
+| Monitoring **post-premier rendu** (pas cold start) | Dev | ✅ Contrat livré : `initMonitoring` après splash, `reportError` depuis ErrorBoundary + http (no-op SDK, jamais de crash au boot) |
+| Déployer plugin Wolof + seed 14 régions | WP | ✅ `title_wo` / `content_wo` 14/14 en prod |
+| Corriger préfixe JSON `1{...}` côté serveur si possible | WP | Client strip déjà en place (`http.parseJsonBody`) ; fix serveur optionnel |
 
 ### Phase B — Géoloc défensive
 

@@ -1,4 +1,5 @@
 import { env } from '../config/env';
+import { reportError } from './sentry';
 
 export class HttpError extends Error {
   constructor(message: string, public status?: number) {
@@ -9,6 +10,13 @@ export class HttpError extends Error {
 
 function isRetryableStatus(status?: number): boolean {
   return status === undefined || status >= 500;
+}
+
+function isAbortError(error: unknown): boolean {
+  return (
+    (error instanceof DOMException && error.name === 'AbortError') ||
+    (error instanceof Error && error.name === 'AbortError')
+  );
 }
 
 function joinUrl(baseUrl: string, path: string): string {
@@ -90,6 +98,9 @@ async function requestWithRetry<T>(baseUrl: string, path: string, controller: Ab
  * des appels identiques concurrents sans signal propre. Les erreurs 4xx ne
  * sont jamais rejouées. Le comportement reste déterministe pour les écrans et
  * les tests.
+ *
+ * Les échecs finaux (hors AbortError) sont signalés à l'observabilité
+ * post-render — never throw from reportError.
  */
 export async function getJson<T>(path: string, signal?: AbortSignal, baseUrl: string = env.apiBaseUrl): Promise<T> {
   const dedupeKey = signal ? null : `${baseUrl}|${path}`;
@@ -110,6 +121,17 @@ export async function getJson<T>(path: string, signal?: AbortSignal, baseUrl: st
 
     try {
       return await requestWithRetry<T>(baseUrl, path, controller);
+    } catch (error) {
+      if (!isAbortError(error)) {
+        const status = error instanceof HttpError ? error.status : undefined;
+        reportError(error, {
+          layer: 'http',
+          path,
+          status: status ?? null,
+          baseUrl,
+        });
+      }
+      throw error;
     } finally {
       clearTimeout(timer);
       signal?.removeEventListener('abort', onAbort);
