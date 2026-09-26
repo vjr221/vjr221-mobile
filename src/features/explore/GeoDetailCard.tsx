@@ -19,6 +19,9 @@ export function GeoDetailCard({
   slug,
   excerpt,
   content,
+  titleWo,
+  excerptWo,
+  contentWo,
   image,
   infos,
   breadcrumb,
@@ -31,6 +34,10 @@ export function GeoDetailCard({
   slug?: string;
   excerpt: string | null;
   content: string | null;
+  /** Wolof fourni par l'API (prioritaire sur contentWolof local). */
+  titleWo?: string | null;
+  excerptWo?: string | null;
+  contentWo?: string | null;
   image: RemoteImage | null;
   infos: KeyInfos;
   breadcrumb?: string | null;
@@ -42,10 +49,15 @@ export function GeoDetailCard({
   const { t, locale } = useI18n();
   const { colors, shadow } = useTheme();
   const styles = useMemo(() => makeStyles(colors, shadow), [colors, shadow]);
-  const wolof = useMemo(() => (locale === 'wo' && slug ? getWolofContentBySlug(slug) : undefined), [locale, slug]);
-  const localizedTitle = locale === 'wo' ? (wolof?.titleWo ?? title) : title;
-  const localizedExcerpt = locale === 'wo' ? (wolof?.excerptWo ?? excerpt) : excerpt;
-  const localizedContent = locale === 'wo' ? (wolof?.contentWo ?? content) : content;
+  // Vague 8 : API title_wo / excerpt_wo / content_wo prioritaire ;
+  // couche locale contentWolof* = repli si le champ API est absent.
+  const local = useMemo(() => (locale === 'wo' && slug ? getWolofContentBySlug(slug) : undefined), [locale, slug]);
+  const localizedTitle =
+    locale === 'wo' ? (titleWo?.trim() || local?.titleWo || title) : title;
+  const localizedExcerpt =
+    locale === 'wo' ? (excerptWo?.trim() || local?.excerptWo || excerpt) : excerpt;
+  const localizedContent =
+    locale === 'wo' ? (contentWo?.trim() || local?.contentWo || content) : content;
   const contentBlocks = useMemo(() => {
     if (!localizedContent) return [];
     try {
