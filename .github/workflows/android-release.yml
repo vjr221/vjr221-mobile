@@ -29,7 +29,7 @@ jobs:
         run: |
           node --version
           npm --version
-          java --version
+          java -version
           gh --version
       - name: Install dependencies
         run: npm install
@@ -88,13 +88,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="android-v${APP_VERSION}-${GITHUB_SHA::7}"
-          NOTES="APK Android pre-release VJR 221 — version ${APP_VERSION} (versionCode 18). Commit ${GITHUB_SHA}.
-
-Validation 1.6.0 Phase B/D :
-- Démarrage : monitoring post-render (pas de Sentry au cold start)
-- GPS défensif : expo-location en import dynamique uniquement au clic « Près de moi »
-- Explorer : bloc « À découvrir ici » (types API + diversification)
-- Wolof CMS (title_wo / content_wo)
-
-Checklist appareil : démarrage froid, Annuaire → Près de moi, Explorer région → À découvrir ici."
+          NOTES="APK Android pre-release VJR 221 — version ${APP_VERSION} (versionCode 18). Commit ${GITHUB_SHA}. Validation 1.6.0 Phase B/D : monitoring post-render ; GPS défensif (import dynamique au clic Près de moi) ; À découvrir ici ; Wolof CMS. Checklist appareil : démarrage froid, Annuaire → Près de moi, Explorer région → À découvrir ici."
           gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android ${APP_VERSION} (vc18)" --notes "$NOTES" --prerelease
