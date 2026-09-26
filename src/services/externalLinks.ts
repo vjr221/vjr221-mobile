@@ -79,56 +79,18 @@ export function sanitizeExternalUrl(value: string | null | undefined, kind: Exte
 }
 
 /**
- * Construit une intent Android qui cible explicitement un navigateur
- * (évite que App Links rouvre sn.vjr221.mobile).
- */
-function chromeLikeIntent(url: string, browserPackage: string): string {
-  const stripped = url.replace(/^https:\/\//i, '');
-  return (
-    `intent://${stripped}#Intent;` +
-    `scheme=https;` +
-    `action=android.intent.action.VIEW;` +
-    `category=android.intent.category.BROWSABLE;` +
-    `package=${browserPackage};` +
-    `S.browser_fallback_url=${encodeURIComponent(url)};` +
-    `end`
-  );
-}
-
-/**
- * Force l'ouverture hors de notre app (navigateur / Custom Tabs).
- * Pour vjr221.sn : jamais Linking.openURL seul → App Links rouvrirait l'app.
+ * Force l'ouverture hors de notre app avec l'URL réellement chargée.
+ *
+ * Ordre important :
+ * 1) expo-web-browser (Custom Tabs) — charge bien l'URL, hors WebView in-app
+ * 2) googlechrome://navigate?url= — force Chrome avec navigation
+ * 3) intent package navigateur (dernier recours)
+ *
+ * Jamais Linking.openURL(https://vjr221.sn/…) seul → App Links rouvre l'app.
+ * Les intent:// « vides » (onglet blanc) sont évités en ne les utilisant qu'en secours.
  */
 async function openInSystemBrowser(url: string): Promise<boolean> {
-  // Android : d'abord un navigateur nommé, pour contourner App Links.
-  if (Platform.OS === 'android') {
-    const browserPackages = [
-      'com.android.chrome',
-      'com.chrome.beta',
-      'com.chrome.dev',
-      'com.google.android.apps.chrome',
-      'org.mozilla.firefox',
-      'com.opera.browser',
-      'com.sec.android.app.sbrowser',
-      'com.microsoft.emmx',
-    ];
-    for (const pkg of browserPackages) {
-      try {
-        await Linking.openURL(chromeLikeIntent(url, pkg));
-        return true;
-      } catch {
-        // essayer le suivant
-      }
-    }
-    try {
-      await Linking.openURL(`googlechrome://navigate?url=${encodeURIComponent(url)}`);
-      return true;
-    } catch {
-      // continue
-    }
-  }
-
-  // Custom Tabs / SFSafariViewController (reste hors de la WebView in-app).
+  // 1) Custom Tabs / SFSafariViewController — méthode fiable pour charger l'URL.
   try {
     await WebBrowser.openBrowserAsync(url, {
       toolbarColor: '#1B4332',
@@ -143,8 +105,47 @@ async function openInSystemBrowser(url: string): Promise<boolean> {
     // fallbacks ci-dessous
   }
 
-  // Dernier recours : Linking uniquement si CE N'EST PAS vjr221
-  // (sinon Android renvoie vers notre app via App Links).
+  if (Platform.OS === 'android') {
+    // 2) Chrome avec navigation explicite (évite l'onglet vide des intent:// bruts).
+    const chromeNavigate = [
+      `googlechrome://navigate?url=${encodeURIComponent(url)}`,
+      `googlechrome://navigate?url=${url}`,
+    ];
+    for (const candidate of chromeNavigate) {
+      try {
+        const can = await Linking.canOpenURL(candidate);
+        if (!can) continue;
+        await Linking.openURL(candidate);
+        return true;
+      } catch {
+        // suivant
+      }
+    }
+
+    // 3) Intent ciblant un navigateur, avec l'URL en data complète.
+    const packages = [
+      'com.android.chrome',
+      'com.chrome.beta',
+      'org.mozilla.firefox',
+      'com.sec.android.app.sbrowser',
+      'com.opera.browser',
+      'com.microsoft.emmx',
+    ];
+    for (const pkg of packages) {
+      const intent =
+        `intent://${url.replace(/^https:\/\//i, '')}` +
+        `#Intent;scheme=https;action=android.intent.action.VIEW;` +
+        `package=${pkg};S.browser_fallback_url=${encodeURIComponent(url)};end`;
+      try {
+        await Linking.openURL(intent);
+        return true;
+      } catch {
+        // suivant
+      }
+    }
+  }
+
+  // 4) Dernier recours hors domaine VJR (évite rebond App Links).
   if (!isVjr221Host(url)) {
     try {
       await Linking.openURL(url);
@@ -168,7 +169,7 @@ async function openInSystemBrowser(url: string): Promise<boolean> {
 
 /**
  * Ouvre une URL externe.
- * Site VJR 221 → navigateur système, jamais de rebond App Links vers l'app.
+ * Site VJR 221 → navigateur / Custom Tabs avec page chargée, pas d'onglet vide ni rebond app.
  */
 export async function openExternalUrl(value: string | null | undefined, kind: ExternalLinkKind = 'web'): Promise<boolean> {
   const safeUrl = sanitizeExternalUrl(value, kind);
