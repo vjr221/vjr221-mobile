@@ -322,4 +322,80 @@ Parc bi sos nañu ko ci 1976. Mu am lu tollu ci 76 000 hectares. Delta Saalum ne
     excerptWo: 'Commune bu Foundiougne ci arrondissementu Toubacouta, ci Delta Saalum.',
     contentWo: `### Jëmmal\n\nKeur Samba Gueye mooy commune ci départementu Foundiougne, ci arrondissementu Toubacouta, ci Delta Saalum.\n\n### Taarix ak dundin\n\nDëkk bi, bu nekkoon communauté rurale, yokku na ni benn localité traditionnelle bu delta bi te nekk commune bu am sa bopp ci reformu territoriale bu 2013.\n\n### Économie\n\nPêche, agriculture ak petit commerce bokk nañu ci liggéey yi. Territoire bi dafa sukkandiku it ci ressources yu Delta Saalum.\n\n### Toppatoo\n\nYokkute ressources yi war na ànd ak aar environnement bu delta bi, ndax mangrove yi ak bolong yi am nañu solo ci dundug askan wi.`,
   },
+  'niodior': {
+    titleWo: 'Niodior',
+    excerptWo: 'Dëkk Sereer bu mag ci île Guior, ci Delta Saalum, xam ne ko ci pêche ak coquillages.',
+    contentWo: `### Jëmmal
+
+Niodior mooy dëkk Sereer bu mag ci île Guior, ci Delta Saalum. Mooy chef-lieuu arrondissementu Niodior te bokk na ci dëkk yu gëna mag ci duni Saalum.
+
+### Cosaan ak aada
+
+Ci nettaliu cosaan, Bandé Niambo, benn lëg bu jóge Kansala ci nguurum Gabou, moo war a sos Niodior. Niodorois yi bokk nañu ci xeetu Sereer, te am nañu jokkoo gu dëgër ak Dionewar ci aada ak parenté.
+
+### Pêche ak coquillages
+
+Pêche mooy liggéeyu mag ci dëkk bi. Nit ñi di dajale ak wow coques ak huîtres sauvages, te di leen jaay ci Dakar, Gambie, Kaolack ak Casamance. Dëkk bi dugg ci ndox rekk, ci pirogue bu motor.
+
+### Services ak dundin
+
+Niodior am na centre de santé ak maternité, ay écoles primaires, lycée ak ay établissementu njàngum arabe. Dëkk bi nekk na ci commune Dionewar, ci départementu Foundiougne, région Fatick.`,
+  },
+  'djilor': {
+    titleWo: 'Djilor',
+    excerptWo: 'Commune bu Foundiougne ci Delta Saalum, chef-lieuu arrondissementu Djilor.',
+    contentWo: `### Jëmmal
+
+Djilor mooy commune ci départementu Foundiougne, ci arrondissementu Djilor, ci Delta Saalum. Mooy chef-lieuu arrondissement bi te am solo ci mbirum administrasyon ci sudu département bi.
+
+### Géeographie ak taarix
+
+Djilor nekk na ci zone bu Delta Saalum. Dëkk bi, bu nekkoon communauté rurale, yokku na ba nekk commune bu am sa bopp ci reformu territoriale bu 2013.
+
+### Économie
+
+Pêche, agriculture ak petit commerce bokk nañu ci liggéey yi gëna am solo ci territoire bi.
+
+### Toppatoo
+
+Yokkute ressources yu Delta Saalum war na ànd ak aar environnement bi, ndax mangrove yi, bolong yi ak ressources yu ndox am nañu solo ci dundug askan wi.`,
+  },
+  'soum': {
+    titleWo: 'Soum',
+    excerptWo: 'Commune bu Foundiougne ci arrondissementu Toubacouta, ci Delta Saalum.',
+    contentWo: `### Jëmmal
+
+Soum mooy commune ci départementu Foundiougne, ci arrondissementu Toubacouta, ci Delta Saalum.
+
+### Taarix ak dundin
+
+Soum, bu nekkoon communauté rurale, yokku na ni benn localité traditionnelle bu delta bi te nekk commune bu am sa bopp ci reformu territoriale bu 2013.
+
+### Économie
+
+Pêche, agriculture ak petit commerce bokk nañu ci liggéey yi. Dëkk bi dafa sukkandiku ci ressources yu Delta Saalum.
+
+### Toppatoo
+
+Yokkute territoire bi war na ànd ak aar environnement bu delta bi, mangrove yi ak bolong yi.`,
+  },
+  'betenty': {
+    titleWo: 'Bétenty',
+    excerptWo: 'Dëkk bu yàgg ci Delta Saalum, xam ne ko ci pêche ak dajale huîtres ci mangrove yi.',
+    contentWo: `### Jëmmal
+
+Ci nettaliu dëkk bi, Bétenty sosu na lu ëpp juróom-ñetti téeméeri at ci kanam, te Sandy Coly Ndao moo ñuy jox ni ki ko sos. Sereer ak Mandingue bokk nañu ci askanu dëkk bi.
+
+### Pêche ak huîtres
+
+Pêche mooy liggéeyu mag. Nit ñi di dajale huîtres ci mangrove yi, te ay produits yu ñu defar, mel ni huîtres yu ñu saxal, di jaay leen. Bolong yi ak mangrove yi wër dëkk bi.
+
+### Xew-xew bu 2017
+
+Ci 24 awril 2017, benn pirogue dafa lëmbe, te ñu ñuul 21 nit, ci biir ñoom ñu bari ay jigéen. Xew-xew boobu am na solo ci fàttaliku dëkk bi ak ci xelal ci njàngum sécurité ci ndox.
+
+### Rattachement administratif
+
+Bétenty bokk na ci commune Toubacouta, départementu Foundiougne, région Fatick, ci xolum Delta Saalum.`,
+  },
 };
