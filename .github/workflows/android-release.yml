@@ -58,6 +58,42 @@ jobs:
           EXPO_PUBLIC_APP_ENV: production
           CI: "1"
         run: npx expo prebuild --platform android --no-install
+      - name: Configure release signing
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_RELEASE_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_RELEASE_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ]; then
+            echo "::warning::Aucun secret ANDROID_RELEASE_KEYSTORE_BASE64 — build signé avec le keystore debug (comportement actuel, Play Store le refusera)."
+            exit 0
+          fi
+          echo "$KEYSTORE_BASE64" | base64 -d > android/app/release.keystore
+          cat >> android/gradle.properties <<EOF
+          VJR221_RELEASE_STORE_FILE=release.keystore
+          VJR221_RELEASE_STORE_PASSWORD=$KEYSTORE_PASSWORD
+          VJR221_RELEASE_KEY_ALIAS=$KEY_ALIAS
+          VJR221_RELEASE_KEY_PASSWORD=$KEY_PASSWORD
+          EOF
+          python3 - <<'PYEOF'
+          import re
+          path = "android/app/build.gradle"
+          src = open(path).read()
+          src = src.replace(
+              "signingConfigs {\n        debug {",
+              "signingConfigs {\n        release {\n            if (project.hasProperty('VJR221_RELEASE_STORE_FILE')) {\n                storeFile file(VJR221_RELEASE_STORE_FILE)\n                storePassword VJR221_RELEASE_STORE_PASSWORD\n                keyAlias VJR221_RELEASE_KEY_ALIAS\n                keyPassword VJR221_RELEASE_KEY_PASSWORD\n            }\n        }\n        debug {",
+              1,
+          )
+          src = re.sub(
+              r"(release \{\n\s*// Caution!.*\n\s*signingConfig )signingConfigs\.debug",
+              r"\1signingConfigs.release",
+              src,
+          )
+          open(path, "w").write(src)
+          PYEOF
+          grep -n "signingConfig signingConfigs.release" android/app/build.gradle
+
       - name: Build production Android APK with embedded JS bundle
         env:
           EXPO_PUBLIC_APP_ENV: production
