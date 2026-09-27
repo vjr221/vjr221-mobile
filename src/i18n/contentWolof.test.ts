@@ -215,6 +215,16 @@ describe('Wolof fiche translations', () => {
     'cheikh-hamidou-kane-ecrivain-senegalais',
   ];
 
+  it('covers the verified heritage wave', () => {
+    for (const slug of ["parc-national-du-niokolo-koba","place-du-souvenir-africain-dakar","cafe-touba"]) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
