@@ -2,13 +2,14 @@
 
 **Aucune case n’est cochée automatiquement.** À valider manuellement après install APK (release GitHub ou workflow `android-release`).
 
-Version cible : **1.5.0** (versionCode 18) puis **1.6.x**.
+Version cible : **1.6.0** (versionCode 19).
 
 ## Sessions validées
 
 | Date | Build | Résultat |
 |------|-------|----------|
 | 2026-09-26 | android-v1.5.0-6bd475b (vc18) | ✅ démarrage froid · ✅ Près de moi (GPS) · ✅ À découvrir ici · ✅ Wolof |
+| 2026-09-27 | android-v1.6.0-c959ee6 (vc19) | ✅ validation humaine (install / smoke) |
 
 ## Matrice appareils (Phase A — bloquant stores)
 
@@ -26,7 +27,7 @@ Version cible : **1.5.0** (versionCode 18) puis **1.6.x**.
 
 ## Fonctionnel (tous appareils)
 
-- [x] Splash puis accueil < 5 s, **sans écran noir bloqué** *(vc18)*
+- [x] Splash puis accueil < 5 s, **sans écran noir bloqué** *(vc18/vc19)*
 - [ ] 5 onglets : Accueil, Explorer, Recherche, Favoris, Plus
 - [ ] Région **hors Dakar** (ex. Kaffrine) s’ouvre avec contenu
 - [ ] Bouton **Site web** → navigateur / Custom Tabs (pas reload in-app)
@@ -38,7 +39,7 @@ Version cible : **1.5.0** (versionCode 18) puis **1.6.x**.
 - [x] Explorer **À découvrir ici** : mix de types *(vc18)*
 - [ ] Deep link `https://vjr221.sn/region-de-dakar/` → fiche (app installée)
 - [ ] Même lien sans app → navigateur / page application
-- [ ] Plus : Annuaire in-app ; tarifs / contact → site
+- [ ] Plus : Annuaire in-app ; tarifs / contact → site · version affichée **1.6.0**
 
 ## Après chaque session
 
