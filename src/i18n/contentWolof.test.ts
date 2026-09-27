@@ -13,6 +13,8 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraF.ts',
   'contentWolofExtraG.ts',
   'contentWolofExtraH.ts',
+  'contentWolofExtraI.ts',
+  'contentWolofExtraJ.ts',
 ];
 
 /**
@@ -217,6 +219,16 @@ describe('Wolof fiche translations', () => {
 
   it('covers the verified heritage wave', () => {
     for (const slug of ["parc-national-du-niokolo-koba","place-du-souvenir-africain-dakar","cafe-touba"]) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified culture wave', () => {
+    for (const slug of ['musee-de-la-femme-henriette-bathily-dakar', 'douta-seck', 'grand-theatre-national-doudou-ndiaye-coumba-rose-dakar']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
