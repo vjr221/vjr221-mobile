@@ -144,6 +144,10 @@ describe('Wolof fiche translations', () => {
     'pape-faye',
     'omar-seck',
     'marieme-myriam-niang-icone-du-cinema-senegalais',
+    'orchestra-baobab-groupe-mythique-de-la-musique-senegalaise',
+    'positive-black-soul-pionnier-du-rap-senegalais',
+    'fode-camara-peintre-senegalais-contemporain',
+    'le-rap-galsen-scene-hip-hop-senegalaise',
   ];
 
   it('has no duplicate local keys', () => {
