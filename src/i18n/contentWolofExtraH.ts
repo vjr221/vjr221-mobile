@@ -49,4 +49,34 @@ Centre bi dafay jàppale ci rencontres, échanges, documentation culturelle ak c
 
 Maison bi dafay may solo ci njàngat ak jeunes, te dafa jàppale ci aar patrimoine culturel matériel ak immatériel. Mu nekk it ci réseauu établissements culturels bu réew mi.`,
   },
+  'leopold-sedar-senghor-poete-et-homme-detat': {
+    titleWo: 'Léopold Sédar Senghor — bindkat, poète ak nit ku bokk ci réew',
+    excerptWo: 'Poète, penseur ak premier président bu République du Sénégal, te am na solo ci littérature francophone ak Négritude.',
+    contentWo: `### Jëmmal
+
+Léopold Sédar Senghor nekk na poète, penseur ak homme d'État bu Senegaal. Mu doon premier président bu République du Sénégal, te bind na ci littérature francophone.
+
+### Négritude ak littérature
+
+Senghor bokk na ci gën a xam-xam ci mouvementu Négritude, ak Aimé Césaire ak Léon-Gontran Damas. Bindam dafa jëm ci identité africaine, mémoire, culture ak universalisme.
+
+### Héritage
+
+Téere yu mu bind ak liggéeyam ci mbirum aada ak politique am nañu solo ci histoire intellectuelle bu Senegaal ak Afrique.`,
+  },
+  'ken-bugul-ecrivaine-senegalaise': {
+    titleWo: 'Ken Bugul — bindkat bu Senegaal',
+    excerptWo: 'Aminata Sow Fall, Ken Bugul ak yeneen bindkat yi bokk nañu ci littérature bu Senegaal; Ken Bugul am na boppam ci roman.',
+    contentWo: `### Jëmmal
+
+Ken Bugul mooy turu plume bu Aminata-? ci littérature bu Senegaal. Bindam dafa jëm ci identité, solitude, société ak expérience personnelle.
+
+### Littérature
+
+Roman yi mu bind am nañu solo ci littérature africaine francophone. Style bi dafa jëfandikoo récit bu intime ak réflexion ci dundin.
+
+### Transmission
+
+Téere yi mu bind jàppale nañu ci xelal mbirum identité ak xaalis bu nit ki ci société.`,
+  },
 };
