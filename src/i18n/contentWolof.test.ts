@@ -17,6 +17,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraJ.ts',
   'contentWolofExtraK.ts',
   'contentWolofExtraL.ts',
+  'contentWolofExtraM.ts',
 ];
 
 /**
@@ -261,6 +262,16 @@ describe('Wolof fiche translations', () => {
 
   it('covers the verified nature heritage wave', () => {
     for (const slug of ['chutes-de-dindefelo', 'wanar-necropole-megalithique-patrimoine-mondial', 'la-reserve-naturelle-communautaire-de-palmarin']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified culture history wave', () => {
+    for (const slug of ['fode-kaba-doumbouya-resistant-a-la-colonisation-en-casamance', 'le-yeela-poesie-musicale-du-boundou-et-patrimoine-vivant-du-senegal-oriental', 'le-patrimoine-diola-langues-rites-et-culture-de-casamance']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
