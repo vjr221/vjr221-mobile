@@ -31,29 +31,6 @@ Musée bi dafay wone mbir yu aju ci dundug jigéen yu Senegaal ci milieu rural a
 
 MUFEM bokk na ci bérab yu jàppale xam-xam, transmission ak valorisationu patrimoine ak taariixu jigéen ñi ci Senegaal.`,
   },
-  'douta-seck': {
-    titleWo: 'Douta Seck — pionnier bu théâtre ak cinéma bu Senegaal',
-    excerptWo: 'Benn ci pionnier yu mag ci théâtre ak cinéma bu Senegaal, ak parcours bu yàgg ci réew mi ak bitim-réew.',
-    contentWo: `### Jëmmal
-
-Douta Seck doon na benn ci pionnier yu mag ci théâtre ak cinéma bu Senegaal. Parcoursam ci arts am na solo ci yeneen génération yu artistes.
-
-### Jëmmal ci arts
-
-Mu juddu Saint-Louis ci 1919, dee ci 1991. Da fa tambali ak métieru instituteur, gannaaw loolu mu jëm ci arts. Mu jàng architecture ci Beaux-Arts de Paris, waaye mu tànn théâtre, woy ak cinéma.
-
-### Théâtre
-
-Douta Seck nekk na ci interprètes yu mag yu La Tragédie du roi Christophe bu Aimé Césaire. Présenceem ci scène dimbali na ci wone arts dramatiques africains ci bitim-réew.
-
-### Cinéma
-
-Mu feeñ na ci ay film yu bari, mel ni Les Comédiens, Tamango, Xala ak Rue Cases-Nègres. Parcoursam lëkkale na théâtre, cinéma ak culture populaire.
-
-### Héritage
-
-Maison de la Culture Douta Seck ci Dakar moo tudd ci turam, te dafay yokk ci yeneen wàllu création ak transmission culturelle.`,
-  },
   'grand-theatre-national-doudou-ndiaye-coumba-rose-dakar': {
     titleWo: 'Grand Théâtre national Doudou Ndiaye Coumba Rose — scène bu mag bu Dakar',
     excerptWo: 'Benn ci scène yu mag yu arts ak spectacles ci Senegaal, te mu bokk ci réseau bu institutions culturelles nationales.',
