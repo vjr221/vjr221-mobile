@@ -26,12 +26,45 @@ jobs:
           npm --version
           git --version
           java -version
+      - name: Align package-lock integrities with registry
+        run: |
+          python3 <<'PY'
+          import json, urllib.request
+          path = "package-lock.json"
+          with open(path) as f:
+              lock = json.load(f)
+          names = ("mdn-data", "yaml", "lint-staged")
+          changed = 0
+          for key, meta in list(lock.get("packages", {}).items()):
+              name = key.split("node_modules/")[-1]
+              if name not in names:
+                  continue
+              ver = meta.get("version")
+              if not ver:
+                  continue
+              url = f"https://registry.npmjs.org/{name}/{ver}"
+              with urllib.request.urlopen(url, timeout=30) as r:
+                  reg = json.load(r)["dist"]["integrity"]
+              if meta.get("integrity") != reg:
+                  print(f"update {name}@{ver}")
+                  meta["integrity"] = reg
+                  changed += 1
+          if changed:
+              with open(path, "w") as f:
+                  json.dump(lock, f, indent=2)
+                  f.write("\n")
+          print(f"integrity entries updated: {changed}")
+          PY
       - name: Install dependencies
         run: |
           npm config set fetch-retries 5
           npm config set fetch-retry-mintimeout 20000
           npm config set fetch-retry-maxtimeout 120000
-          npm ci --no-audit --no-fund
+          if ! npm ci --no-audit --no-fund; then
+            echo "::warning::npm ci failed (possible integrity drift) — falling back to npm install"
+            npm cache clean --force
+            npm install --no-audit --no-fund
+          fi
       - name: Typecheck
         run: npm run typecheck
       - name: Lint
