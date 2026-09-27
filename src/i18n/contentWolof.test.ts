@@ -15,6 +15,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraH.ts',
   'contentWolofExtraI.ts',
   'contentWolofExtraJ.ts',
+  'contentWolofExtraK.ts',
 ];
 
 /**
@@ -239,6 +240,16 @@ describe('Wolof fiche translations', () => {
 
   it('covers the verified nature and territory wave', () => {
     for (const slug of ['mont-assirik-niokolo-koba', 'yoff-layene', 'le-point-culminant-du-senegal-les-collines-de-kedougou']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified nature and memory wave', () => {
+    for (const slug of ['ile-degueye-mangrove-bolongs-immersion-casamance', 'desert-de-lompoul', 'boubacar-joseph-ndiaye-gardien-de-la-memoire-de-goree']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
