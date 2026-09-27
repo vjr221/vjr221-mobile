@@ -10,14 +10,14 @@
 - Interface FR/Wolof : déjà opérationnelle.
 - Source prioritaire en ligne : WordPress, champs `title_wo`, `excerpt_wo`, `content_wo`.
 - Repli hors ligne : fichiers `src/i18n/contentWolof*.ts`.
-- Couverture locale existante : **379 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraAE.ts`.
-- Contrôle de couverture actuel : **379 clés uniques, 0 doublon**.
+- Couverture locale existante : **383 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraAF.ts`.
+- Contrôle de couverture actuel : **383 clés uniques, 0 doublon**.
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
 
 ## Contrôle QA — 27 septembre 2026
 
-- Corpus local : **379 fiches / 379 clés uniques / 0 doublon**.
+- Corpus local : **383 fiches / 383 clés uniques / 0 doublon**.
 - Régression apostrophe `d'année` : **0 occurrence**.
 - Apostrophe ASCII entre lettres : **0 occurrence** dans les titres, extraits et corps locaux.
 - Tests dédiés présents dans `src/i18n/contentWolof.test.ts`.
@@ -102,7 +102,8 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - **Vague 27 : 4 fiches nature/patrimoine vérifiées ajoutées ou enrichies** — Réserve spéciale de faune de Guembeul, Mangroves de Casamance, Case ronde sérère, Royaume du Jolof et Baobab d’Iwol.\n- **Vague 28 : 5 fiches patrimoine/culture vérifiées ajoutées** — Cases à étage de Mlomp, Cases à impluvium du royaume Bandial, Galerie nationale des Arts, École nationale des Arts et Marché Kermel.\n- **Vague 29 : 5 fiches patrimoine/culture/artisanat vérifiées ajoutées** — Gare de Thiès, Marché Sandaga, patrimoine industriel du Sénégal, artisanat traditionnel sénégalais et patrimoine fluvial de l’Est.\n- **Vague 30 : 2 fiches culture vérifiées ajoutées** — Mankanya et teinture traditionnelle à l’indigo.\n- **Vague 31 : 2 fiches patrimoine/culture vérifiées ajoutées** — patrimoine sérère et maisons à signares de Saint-Louis et Gorée.\n- **Vague 32 : 5 fiches culture/patrimoine/artisanat vérifiées ajoutées** — Gumbe, palmier à huile de Casamance, métiers de la forge à Kaffrine, Chambre de Commerce de Dakar et village d’Iwol.\n- **Vague 33 : 4 fiches nature/culture vérifiées ajoutées** — Réserve de Bandia, Camp de Simenti, Réserve spéciale de faune de Guéumbeul et Galerie nationale des Arts.\n- **Vague 34 : 6 fiches patrimoine religieux/éducatif et faune vérifiées ajoutées** — Daara El Hadji Djamil Ndao, Essaout, Cathédrale de Saint-Louis, Grande Mosquée de Dakar, Mosquée Massalikul Jinaan et Calao à bec rouge.\n- **Vague 35 : 6 fiches patrimoine religieux, nature et gastronomie vérifiées ajoutées** — Grande Mosquée de Tivaouane, Grande Mosquée de Touba, Pèlerinage marial de Popenguine, Parc national du Delta du Saloum, Tamarinier et Calao terrestre.\n- **Vague 36 : 4 fiches patrimoine, nature et institutions vérifiées ajoutées** — Grande Mosquée Omarienne, Phare des Mamelles, Crocodile du Nil et Palais de la République.\n- **Vague 37 : 4 fiches patrimoine/culture vérifiées ajoutées** — Les ethnies du Sénégal, Le conte au Sénégal, Le Palor et le réseau des musées et établissements culturels publics.\n- **Vague 38 : 4 fiches culture/patrimoine vérifiées ajoutées** — Festival du Sahel, Festival international de Sédhiou, théâtre au Sénégal et SOGEPA SN.
 - **Vague 39 : 4 fiches cinéma/arts visuels vérifiées ajoutées** — Cinéma sénégalais, arts visuels au Sénégal, Biennale de Dakar (Dak’Art) et festivals de cinéma au Sénégal.
 - **Vague 40 : 4 fiches artistes/musiciens vérifiées ajoutées** — Takeifa, Awa Ly, Yoro Ndiaye et Nuru Kane.
-- **Vague 41 : 4 fiches arts visuels/littérature vérifiées ajoutées** — Papa Ibra Tall, Moustapha Dimé, Mamadou Gomis et Faty Sow Kane.\n- **Point QA à traiter avant de certifier le corpus global** : la clé `reserve-speciale-faune-gueumbeul` existe dans le pack historique et dans ExtraW ; la version historique est conservée comme référence et la déduplication de la seconde occurrence reste à effectuer avec sauvegarde.\n- **État local : 371 fiches / 371 clés uniques / 0 doublon.**
+- **Vague 41 : 4 fiches arts visuels/littérature vérifiées ajoutées** — Papa Ibra Tall, Moustapha Dimé, Mamadou Gomis et Faty Sow Kane.
+- **Vague 42 : 4 fiches littérature/scène contemporaine vérifiées ajoutées** — Ibrahima Sall, Aminata Maïga Ka, Pape Amadou Seck et Mamadou Diaw.\n- **Point QA à traiter avant de certifier le corpus global** : la clé `reserve-speciale-faune-gueumbeul` existe dans le pack historique et dans ExtraW ; la version historique est conservée comme référence et la déduplication de la seconde occurrence reste à effectuer avec sauvegarde.\n- **État local : 371 fiches / 371 clés uniques / 0 doublon.**
 - Régression `d'année` : 0 occurrence.
 - Apostrophe ASCII entre lettres : 0 occurrence.
 - La fiche Douta Seck déjà présente dans le corpus a été détectée et non dupliquée lors de la vague 19.
