@@ -503,6 +503,16 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the verified cinema wave 51', () => {
+    for (const slug of ['marieme-myriam-niang', 'rohkaya-niang', 'mati-diop', 'djibril-diop-mambety']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
