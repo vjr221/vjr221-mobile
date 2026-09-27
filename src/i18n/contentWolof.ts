@@ -5,12 +5,13 @@ import { CONTENT_WO_EXTRA_C } from './contentWolofExtraC';
 import { CONTENT_WO_EXTRA_D } from './contentWolofExtraD';
 import { CONTENT_WO_EXTRA_E } from './contentWolofExtraE';
 import { CONTENT_WO_EXTRA_F } from './contentWolofExtraF';
+import { CONTENT_WO_EXTRA_G } from './contentWolofExtraG';
 
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 /**
  * Couche Wolof — régions, tourisme, patrimoine (vague 7 : qualité).
- * Compléments : Extra + ExtraB + ExtraC + ExtraD + ExtraE + ExtraF
+ * Compléments : Extra + ExtraB + ExtraC + ExtraD + ExtraE + ExtraF + ExtraG
  */
 const CONTENT_WO_CORE: Record<string, WolofContent> = {
   'region-de-dakar': {
@@ -198,6 +199,7 @@ const CONTENT_WO: Record<string, WolofContent> = {
   ...CONTENT_WO_EXTRA_D,
   ...CONTENT_WO_EXTRA_E,
   ...CONTENT_WO_EXTRA_F,
+  ...CONTENT_WO_EXTRA_G,
 };
 
 export function getWolofContentKeys(): string[] {
