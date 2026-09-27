@@ -35,6 +35,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraAB.ts',
   'contentWolofExtraAC.ts',
   'contentWolofExtraAD.ts',
+  'contentWolofExtraAE.ts',
 ];
 
 /**
@@ -390,6 +391,16 @@ describe('Wolof fiche translations', () => {
 
   it('covers the verified artists and musicians wave', () => {
     for (const slug of ['takeifa', 'awa-ly', 'yoro-ndiaye', 'nuru-kane']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified visual arts and literature wave', () => {
+    for (const slug of ['papa-ibra-tall', 'moustapha-dime', 'mamadou-gomis-photographe', 'faty-sow-kane']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
