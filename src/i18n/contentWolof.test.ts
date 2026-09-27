@@ -75,6 +75,22 @@ describe('Wolof fiche translations', () => {
     'fatou-diome',
     'felwine-sarr',
     'souleymane-bachir-diagne',
+    'awa-ly',
+    'yoro-ndiaye',
+    'nuru-kane',
+    'wasis-diop',
+    'el-hadj-ndiaye',
+    'laba-sosseh',
+    'titi-ndeye-fatou-tine',
+    'xuman',
+    'alioune-mbaye-nder',
+    'ablaye-cissoko',
+    'seckou-keita',
+    'mansour-seck',
+    'khar-mbaye-madiaga',
+    'yande-codou-sene',
+    'ndiaga-mbaye',
+    'kine-lam',
   ];
 
   it('has no duplicate local keys', () => {
