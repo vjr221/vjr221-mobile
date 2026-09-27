@@ -398,4 +398,40 @@ Ci 24 awril 2017, benn pirogue dafa lëmbe, te ñu ñuul 21 nit, ci biir ñoom �
 
 Bétenty bokk na ci commune Toubacouta, départementu Foundiougne, région Fatick, ci xolum Delta Saalum.`,
   },
+  'joal-fadiouth': {
+    titleWo: 'Joal-Fadiouth',
+    excerptWo: 'Dëkk ci Petite-Côte, ci région Thiès, ak île Fadiouth gu sos ci amas coquillages, te xam ne ko ci bokkute diine.',
+    contentWo: `### Jëmmal
+
+Joal-Fadiouth nekk na ci Petite-Côte ci région Thiès. Commune bi sédd na ci ñaari part: Joal ci suuf si ak Fadiouth ci île bu nit ñi tabax ci amas coquillages yu daan a dajale ay at yu bare. Benn pontu daanu boisé moo lëkkale île bi ak continent.
+
+### Île bu wuute
+
+Fadiouth dafa am mbedd yu weex yu coquillages sos, te île bi dafa gëna nekk piétonne. Gréniers à mil yi ci pilotis, ci wetu mangrove yi, bokk nañu ci melokaanu bérab bi.
+
+### Bokkute diine
+
+Fadiouth xam nañu ko it ci cimetière bu bokk, fa tombes chrétiennes ak musulmanes nekk ci benn bérab. Lii di misaal ci cohabitation ak bokkute diggante askan yi.
+
+### Senghor ak Joal
+
+Joal mooy bérab bu am solo ci taarixu Senegaal ndax mooy dëkk bu Léopold Sédar Senghor, président bu njëkk bu Senegaal, juddoo.`,
+  },
+  'gare-de-dakar-la-porte-dentree-historique-du-chemin-de-fer-dakar-niger': {
+    titleWo: 'Gare bu Dakar — bunt bu taarixu chemin de fer Dakar-Niger',
+    excerptWo: 'Gare bu Dakar, tabax colonial bu am solo, te bokk ci taarixu chemin de fer Dakar-Niger.',
+    contentWo: `### Jëmmal
+
+Gare bu Dakar nekk na ci bérabu gare bu Dakar-Niger, te ci 2004 lañu soppi turu place bi ba di Place du Tirailleur. Mooy benn ci tabax colonial yi gëna aar seen melokaan ci Dakar.
+
+### Taarixu rail
+
+Forme bu bees bu gare bi sosu na diggante 1913 ak 1914. Lu yàgg, mooy buntu départ bu chemin de fer Dakar-Niger, yoon wu am solo ci lëkkale Dakar ak Bamako.
+
+Gare bu njëkk bi tabaxu woon na ci 1885 ngir ligne Dakar-Saint-Louis, te inauguration bi amoon na 6 juillet 1885. Lii bokk na ci tàmbaliu chemin de fer ci Afrique de l'Ouest.
+
+### Patrimoine
+
+Gare bi di wone benn pàcc ci histoireu transport, architecture ak développementu Dakar. Aar tabax bi ak xam taarix bi am na solo ci patrimoine urbain bu dëkk bi.`,
+  },
 };
