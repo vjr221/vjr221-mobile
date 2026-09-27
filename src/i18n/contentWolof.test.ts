@@ -34,6 +34,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraAA.ts',
   'contentWolofExtraAB.ts',
   'contentWolofExtraAC.ts',
+  'contentWolofExtraAD.ts',
 ];
 
 /**
@@ -379,6 +380,16 @@ describe('Wolof fiche translations', () => {
       'biennale-dakar-dakart-art-contemporain',
       'les-festivals-de-cinema-au-senegal-creation-images-et-industrie-culturelle',
     ]) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified artists and musicians wave', () => {
+    for (const slug of ['takeifa', 'awa-ly', 'yoro-ndiaye', 'nuru-kane']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
