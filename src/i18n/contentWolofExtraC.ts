@@ -685,4 +685,65 @@ Senegaal am na diversité linguistique bu mag. Mandinka bokk na ci làkk yi di y
 
 Denc Mandinka soxla na jàngale, jëfandikoo làkk bi ci dundug bés-bés ak transmission ci xale yi. Yoonu numérique ak documentation man nañu it dimbali ci denc ak wone làkk bi.`,
   },
+  'departement-de-kedougou': {
+    titleWo: 'Départementu Kédougou',
+    excerptWo: 'Boppu administratif bu régionu Kédougou, ci penku-estu Senegaal, ci wetu frontière yu Mali ak Guinée.',
+    contentWo: `### Jëmmal
+
+Départementu Kédougou bokk na ci régionu Kédougou, ci penku-estu Senegaal. Mu nekk ci espace bu melokaan wu wuute, ak ay collines, savanes ak cours d'eau.
+
+### Terroir ak environnement
+
+Dëkk yi ci département bi dund nañu ci mbir yu lëkkale ak agriculture, élevage, commerce ak ressources naturelles. Environnement bi am na it solo ci patrimoine naturel ak tourisme.
+
+### Cosaan ak diversité
+
+Kédougou bokk na ci bérab yu diversité culturelle bu mag. Ay communautés ak cosaan yu wuute di bokk ci dundug territoire bi, ak làkk, rites ak savoir-faire yu wuute.
+
+### Développement ak patrimoine
+
+Département bi dafa am potentialités ci agriculture, élevage, tourisme ak économie locale. Denc patrimoine naturel ak culturel ak yokk services yu askan di soxla bokk na ci développementu territoire bi.`,
+  },
+  'la-colonisation-du-senegal-conquete-administration-et-transformations': {
+    titleWo: 'Colonisation bu Senegaal — conquête, administration ak soppi',
+    excerptWo: 'Nettali ci conquête coloniale, organisation administrative ak soppi yi période coloniale indi ci Senegaal.',
+    contentWo: `### Jëmmal
+
+Colonisation bu Senegaal mooy période bu am solo ci taariixu réew mi. Mu lëkkale expansionu pouvoir colonial français, résistances yu communities ak soppi ci organisationu territoire bi.
+
+### Conquête ak résistance
+
+Expansionu pouvoir colonial doxoon na ndànk-ndànk, ak ay résistance yu dëkk ak royaumes yi. Ay leaders ak populations yu wuute jàppoon nañu seen territoire ak seen pouvoir ci anam yu wuute.
+
+### Administration
+
+Ci jamono colonial, administration bi defaroon ay divisions territoriales, centres administratifs ak institutions yu ñuy jëfandikoo ngir toppatoo territoire bi. Dakar ak yeneen dëkk yu am solo yokku nañu seen rôle.
+
+### Soppi yu jamono bi
+
+Colonisation indi na soppi ci commerce, transport, école, justice ak organisationu dëkk. Waaye période bi boole na it contraintes, inégalités ak résistances.
+
+### Mémoire historique
+
+Xam colonisation soxla na jàng taariixu sources yu wuute ak bàyyi place ci résistance, expériencesu populations ak soppi yu am ci société sénégalaise.`,
+  },
+  'agriculture-et-elevage-dans-le-senegal-oriental-filieres-et-marches': {
+    titleWo: 'Agriculture ak élevage ci Senegaal oriental',
+    excerptWo: 'Filières, pratiques ak marchés yu lëkkale ak agriculture ak élevage ci penku-réew mi.',
+    contentWo: `### Jëmmal
+
+Agriculture ak élevage bokk nañu ci activités yu am solo ci économieu Senegaal oriental. Ay producteurs di jëfandikoo terroirs yu wuute ngir sàkk dund ak jaay.
+
+### Agriculture
+
+Filières yi mën nañu boole céréales ak yeneen cultures yu dëppoo ak terroir yi. Production bi aju na ci ndox, taw, sols ak accès aux marchés.
+
+### Élevage
+
+Élevage am na solo ci dundug askan yi. Bokk na ci revenus, alimentation ak échanges. Yoonu élevage ak mobilitéu jur di sukkandiku ci ressourcesu naturel ak saison.
+
+### Marchés ak filières
+
+Jokkoo diggante producteurs, commerçants ak consommateurs di tax production bi am valeur ci marché. Transport ak accès aux infrastructures bokk nañu ci mbir yi di mëna soppi njariñu filières yi.`,
+  },
 };
