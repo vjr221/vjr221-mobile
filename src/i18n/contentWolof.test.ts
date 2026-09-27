@@ -38,6 +38,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraAE.ts',
   'contentWolofExtraAF.ts',
   'contentWolofExtraAG.ts',
+  'contentWolofExtraAH.ts',
 ];
 
 /**
@@ -423,6 +424,16 @@ describe('Wolof fiche translations', () => {
 
   it('covers the verified stage and visual creation wave', () => {
     for (const slug of ['ousseynou-bissichi', 'ismael-thiam', 'joelle-le-bussy', 'aissa-dione']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified cinema and audiovisual wave', () => {
+    for (const slug of ['moussa-bathily-createur-audiovisuel', 'samba-felix-ndiaye', 'alassane-diago', 'sada-thioub']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
