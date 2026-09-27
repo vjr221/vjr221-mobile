@@ -124,6 +124,18 @@ describe('Wolof fiche translations', () => {
     'amy-mbacke-thiam',
     'oumy-diop',
     'henri-camara',
+    'colle-ardo-sow',
+    'diouma-dieng-diakhate',
+    'sarah-diouf',
+    'adama-paris',
+    'lamine-diasse',
+    'oumou-sy',
+    'nzinga-biegueng-mboup',
+    'ousmane-mbaye',
+    'tidiane-deme',
+    'pape-amadou-seck',
+    'mamadou-diaw',
+    'aminata-zaaria',
   ];
 
   it('has no duplicate local keys', () => {
