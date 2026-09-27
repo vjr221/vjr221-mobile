@@ -28,6 +28,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraU.ts',
   'contentWolofExtraV.ts',
   'contentWolofExtraW.ts',
+  'contentWolofExtraX.ts',
 ];
 
 /**
@@ -101,6 +102,12 @@ describe('Wolof fiche translations', () => {
     'camp-de-simenti-porte-dentree-du-parc-national-du-niokolo-koba',
     'reserve-speciale-faune-gueumbeul',
     'la-galerie-nationale-des-arts-du-senegal',
+    'daara-el-hadji-djamil-ndao-kaffrine',
+    'essaout-patrimoine-agroecologique-de-la-basse-casamance',
+    'cathedrale-de-saint-louis',
+    'grande-mosquee-de-dakar',
+    'mosquee-massalikul-jinaan',
+    'calao-a-bec-rouge-oiseau-emblematique-des-savanes-senegalaises',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
