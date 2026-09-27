@@ -29,6 +29,7 @@ import { CONTENT_WO_EXTRA_AA } from './contentWolofExtraAA';
 import { CONTENT_WO_EXTRA_AB } from './contentWolofExtraAB';
 import { CONTENT_WO_EXTRA_AC } from './contentWolofExtraAC';
 import { CONTENT_WO_EXTRA_AD } from './contentWolofExtraAD';
+import { CONTENT_WO_EXTRA_AE } from './contentWolofExtraAE';
 
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
@@ -246,6 +247,7 @@ const CONTENT_WO: Record<string, WolofContent> = {
   ...CONTENT_WO_EXTRA_AB,
   ...CONTENT_WO_EXTRA_AC,
   ...CONTENT_WO_EXTRA_AD,
+  ...CONTENT_WO_EXTRA_AE,
 };
 
 export function getWolofContentKeys(): string[] {
