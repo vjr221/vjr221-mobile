@@ -194,6 +194,10 @@ const CONTENT_WO: Record<string, WolofContent> = {
   ...CONTENT_WO_EXTRA_C,
 };
 
+export function getWolofContentKeys(): string[] {
+  return Object.keys(CONTENT_WO);
+}
+
 export function getWolofContentBySlug(slug: string): WolofContent | undefined {
   const clean = (slug.replace(/^\/+|\/+$/g, '').split('/').pop() ?? slug).toLowerCase();
   if (CONTENT_WO[clean]) return CONTENT_WO[clean];
