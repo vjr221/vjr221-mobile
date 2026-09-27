@@ -79,3 +79,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 ## Première livraison de cette branche
 
 Cette branche formalise le chantier et servira de base aux prochaines vagues de traduction. Les traductions déjà présentes ne sont pas réécrites dans cette phase de cadrage.
+## Vagues consolidées — 27 septembre 2026
+
+- Vagues 8 à 12 : intégrées dans les packs locaux, avec relectures ciblées.
+- Vagues 13 à 17 : consolidation QA, contrôle des clés, doublons et apostrophes ; aucune nouvelle fiche n'est ajoutée tant que la correspondance avec les fiches CMS n'est pas suffisamment vérifiable.
+- **État local : 300 fiches / 300 clés uniques / 0 doublon.**
+- Une régression connue d'apostrophe ASCII (d'année) est désormais couverte par un test dédié.
+- Aucun APK n'est requis pour ces contrôles de contenu : le chantier reste limité aux sources i18n, tests et documentation.
+
