@@ -23,6 +23,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraP.ts',
   'contentWolofExtraQ.ts',
   'contentWolofExtraR.ts',
+  'contentWolofExtraS.ts',
 ];
 
 /**
@@ -78,6 +79,11 @@ describe('Wolof fiche translations', () => {
     'galerie-nationale-des-arts-du-senegal',
     'ecole-nationale-des-arts-du-senegal-formation-arts-culture',
     'marche-kermel-le-joyau-colonial-du-plateau-de-dakar',
+    'gare-de-thies-patrimoine-ferroviaire-colonial',
+    'marche-sandaga-histoire-commerce-dakar',
+    'patrimoine-industriel-senegal',
+    'lartisanat-traditionnel-senegalais',
+    'patrimoine-fluvial-est-senegal',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
