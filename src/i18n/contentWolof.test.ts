@@ -20,6 +20,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraM.ts',
   'contentWolofExtraN.ts',
   'contentWolofExtraO.ts',
+  'contentWolofExtraP.ts',
 ];
 
 /**
@@ -62,6 +63,9 @@ function findUnsafeAsciiApostrophesInSource(filePath: string): string[] {
 
 describe('Wolof fiche translations', () => {
   const slugs = [
+    'parc-national-des-oiseaux-du-djoudj',
+    'reserve-de-fathala',
+    'parc-national-de-la-langue-de-barbarie',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
