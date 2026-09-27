@@ -15,6 +15,14 @@
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
 
+## Contrôle QA — 27 septembre 2026
+
+- Corpus local : **300 fiches / 300 clés uniques / 0 doublon**.
+- Régression apostrophe `d'année` : **0 occurrence**.
+- Test dédié présent dans `src/i18n/contentWolof.test.ts`.
+- Dernière correction de formatage du test : commit `54e60f5e`.
+- Aucun build APK requis pour cette étape éditoriale.
+
 ## Règle éditoriale
 
 Pour chaque fiche :
