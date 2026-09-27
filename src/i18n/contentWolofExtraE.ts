@@ -32,7 +32,7 @@ Mu am na ay rôles yu aju ci personnages historiques ak littéraires, ci biir r�
 
 ### Transmission ak création
 
-Pape Faye bokk na ci sos compagnie Zenith'Art ak Souleymane Ndiaye, ngir may jeunes artistes ab bérab bu ñuy jàng, bind ak wone seen talent. Mu bokk it ci poésie ak animationu cérémonies.`,
+Pape Faye bokk na ci sos compagnie Zenith’Art ak Souleymane Ndiaye, ngir may jeunes artistes ab bérab bu ñuy jàng, bind ak wone seen talent. Mu bokk it ci poésie ak animationu cérémonies.`,
   },
   'omar-seck': {
     titleWo: 'Omar Seck — kenn ci ay magu théâtre bu Senegaal',
