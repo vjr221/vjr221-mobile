@@ -628,4 +628,61 @@ Xam-xam bi du rekk nettali yu yàgg. Mu boole it yoonu dund, jëfandikoo savoir-
 
 Denc cosaanu Coniagui dafay soxla documentation, njàngale ak jàppale transmissionu xam-xam bi ci xale yi ak génération yu ñëw. Patrimoine bii yokk na diversité culturelle bu Senegaal.`,
   },
+  'le-fanal-de-saint-louis-la-parade-des-lanternes-de-fin-dannee': {
+    titleWo: 'Fanal bu Saint-Louis — paradeu lanternes bu fin d'année',
+    excerptWo: 'Tradition bu Saint-Louis bu lëkkale fête, musique, lanternes ak patrimoine culturel.',
+    contentWo: `### Jëmmal
+
+Fanal bu Saint-Louis mooy benn ci traditions yu am solo ci dundug dëkk bi. Mu lëkkale parade, lanternes, musique ak bokkuteu askan ci waxtu fêtes yu fin d'année.
+
+### Tradition ak taariix
+
+Fanal bi bokk na ci patrimoine culturel bu Saint-Louis. Mu wone melokaanu fête yu yàgg ak yoonu dëkk bi di jëfandikoo musique, lumière ak procession ngir defar xew-xew bu bokkute.
+
+### Patrimoine vivant
+
+Fanal du rekk spectacle. Mooy it yoonu transmettre cosaan, musique ak pratiques culturelles ci génération yi. Ñi ci bokk di yokk dundug patrimoine immatériel bu Saint-Louis.
+
+### Turismu ak bokkute
+
+Ci jamono yu fête, Fanal man na dalal gan ñi te wone leen benn pàcc ci identité culturelle bu Saint-Louis. Dafa yokk njariñu patrimoine ci dundug dëkk bi.`,
+  },
+  'les-regates-traditionnelles-au-senegal-sport-nautique-culture-et-transmission': {
+    titleWo: 'Régates traditionnelles ci Senegaal',
+    excerptWo: 'Course yu gaal yu lëkkale sport nautique, cosaan, compétition ak transmission ci communities yu wetu géej.',
+    contentWo: `### Jëmmal
+
+Régates traditionnelles ci Senegaal bokk nañu ci activités nautiques yu am solo ci communities yu dëkk ci wetu géej ak dex. Gaal yi di daje ci course yu ñuy def ci waxtu fêtes ak manifestations culturelles.
+
+### Sport ak cosaan
+
+Régate bi du rekk compétition. Mu lëkkale préparationu gaal, xam-xamu ndox, liggéeyu koox ak bokkuteu askan. Ay yoon yu ñuy defar gaal ak yoonu tàmbali course di jaar ci génération.
+
+### Transmission
+
+Ndaw yi di jàng ci mag ñi yoonu defar ak doxal gaal, discipline ak bokkute. Régates yi man nañu dimbali ci denc savoir-faire yu lëkkale ak dundug géej.
+
+### Patrimoine
+
+Régates traditionnelles di wone ne patrimoine culturel man na nekk ci sport, fête ak dundug communities. Denc ak jàppale pratiques yii dafay yokk diversité culturelle bu Senegaal.`,
+  },
+  'le-mandinka-langue-mandingue-de-lest-du-senegal': {
+    titleWo: 'Mandinka — làkk Manding bu penku Senegaal',
+    excerptWo: 'Làkk Mandinka ak cosaanu Manding ci penku Senegaal, bokk ci diversité linguistique bu réew mi.',
+    contentWo: `### Jëmmal
+
+Mandinka mooy benn ci làkk yi ñuy wax ci espace Manding, te am na ay communautés ci penku Senegaal. Làkk bi bokk na ci familleu langues mandées.
+
+### Làkk ak identité
+
+Làkk du rekk jumtukaay bu waxtaan. Mu bokk na ci identité, cosaan, nettali ak transmissionu xam-xam ci génération yi. Ci Mandinka, ay nettali ak expressions culturelles di jaar ci wax ak dundug askan.
+
+### Diversité linguistique
+
+Senegaal am na diversité linguistique bu mag. Mandinka bokk na ci làkk yi di yokk richesseu patrimoine culturel immatériel bu réew mi.
+
+### Transmission
+
+Denc Mandinka soxla na jàngale, jëfandikoo làkk bi ci dundug bés-bés ak transmission ci xale yi. Yoonu numérique ak documentation man nañu it dimbali ci denc ak wone làkk bi.`,
+  },
 };
