@@ -26,6 +26,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraS.ts',
   'contentWolofExtraT.ts',
   'contentWolofExtraU.ts',
+  'contentWolofExtraV.ts',
 ];
 
 /**
@@ -90,6 +91,11 @@ describe('Wolof fiche translations', () => {
     'la-teinture-a-lindigo-savoir-faire-textile-traditionnel-senegalais',
     'le-patrimoine-serere-langue-traditions-et-territoires',
     'les-maisons-a-signares-de-saint-louis-et-goree',
+    'le-gumbe-rythme-danse-et-memoire-musicale-de-lespace-senegambien',
+    'palmier-a-huile-de-casamance-arbre-economie-et-culture',
+    'les-metiers-de-la-forge-a-kaffrine-un-savoir-faire-artisanal-du-ndoucoumane',
+    'chambre-de-commerce-de-dakar-architecture-coloniale-place-de-lindependance',
+    'village-d-iwol-patrimoine-bedik-et-paysage-de-kedougou',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
