@@ -4,21 +4,6 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 /** Vague 12 — institutions et lieux culturels actuellement recensés sur VJR 221 */
 export const CONTENT_WO_EXTRA_H: Record<string, WolofContent> = {
-  'musee-des-civilisations-noires-actualite-et-vocation': {
-    titleWo: 'Réseauu muze yi ak établissements culturels publics ci Senegaal',
-    excerptWo: 'Réseauu institusyon yu public yu di aar, di bind, di jàngale ak di wone patrimoine ak création ci Senegaal.',
-    contentWo: `### Jëmmal
-
-Paysage culturel bu Senegaal am na muze, galeries, centres culturels ak yeneen établissements yu public. Ñoom dañuy aar, bind, di wone ak di yeggali patrimoine ak création artistique.
-
-### Institusyon yu wuute
-
-Musée des Civilisations noires, Musée Léopold Sédar Senghor, Musée Boribana, Galerie nationale des Arts, Maison de la Culture Douta Seck, Grand Théâtre national ak yeneen structures bokk nañu ci réseau bi. Seen liggéey mën na aju ci conservation, exposition, recherche, création, médiation ak diffusion.
-
-### Patrimoine ak culture
-
-Direction du Patrimoine culturel ak yeneen structures publiques dañuy jàppale ci inventaire, classement, restauration ak gestionu patrimoine. Réseau bi dafa jàppale ci wéy ak yeggali xam-xam ci génération yi.`,
-  },
   'musee-du-crds-de-saint-louis-musee-regional-saint-louis': {
     titleWo: 'Musée du CRDS bu Ndar — musée régional',
     excerptWo: 'Musée bu Centre de recherches et de documentation du Sénégal ci Ndar, te dafa jàppale ci taariix ak patrimoine.',
