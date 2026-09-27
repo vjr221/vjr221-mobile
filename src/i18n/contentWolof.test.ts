@@ -152,6 +152,9 @@ describe('Wolof fiche translations', () => {
     'djibril-diop-mambety',
     'safi-faye',
     'alain-gomis',
+    'musee-du-crds-de-saint-louis-musee-regional-saint-louis',
+    'musee-regional-de-thies-histoire-et-ethnographie-thies',
+    'maison-de-la-culture-douta-seck-medina-dakar',
   ];
 
   it('has no duplicate local keys', () => {
