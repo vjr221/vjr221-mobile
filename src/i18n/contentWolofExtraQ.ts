@@ -3,46 +3,6 @@ import type { ContentItem } from '../types/content';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 export const CONTENT_WO_EXTRA_Q: Record<string, WolofContent> = {
-  'reserve-speciale-faune-guembeul': {
-    titleWo: 'Réserve spéciale de faune de Guembeul',
-    excerptWo: 'Barab bu aarug faune sahélienne ci wetu Saint-Louis, ak liggéeyu conservation ak réintroduction.',
-    contentWo: `### Jëmmal
-
-Réserve spéciale de faune de Guembeul nekk na ci régionu Saint-Louis, ci wetu dëkk bi, diggante communes Ndiébène Gandiol ak Gandon. Ñu sos ko 30 mai 1983, te réserve bi am na 720 hectares. Mooy benn ci barab yu am solo ci conservationu faune sahélienne.
-
-### Zones humides ak milieu sahélien
-
-Guembeul dafa ëmb cuvette bu ndoxam safara, reliques de mangrove ak végétation sahélienne. Zones humides yi di dalal picc yu bare, te suuf su wër bi am na arbres, herbacées ak yeneen mbindeef.
-
-### Conservation ak réintroduction
-
-Réserve bi di jàppale conservation ak réacclimatationu xeetu mbindeef yu metti. Oryx algazelle, gazelle Dama ak gazelle Dorcas bokk nañu ci xeetu mbindeef yi ñuy sàmm ci programme yu conservation.
-
-### Gazelle Dama
-
-Gazelle Dama am na solo ci taariixu Guembeul. Ñu indi ko ci réserve bi ci 1984, te ci 2002 benn ci mbooloom yi dem ci Ferlo ngir jàppale programmeu réintroduction.
-
-### Picc ak yeneen mbindeef
-
-Cuvette bi mooy habitat bu am solo ci picc yu ndox. Ci suuf, am na singe patas, chacal ak phacochère, bokk ci faune bi ñuy aar.
-
-### Jàngat ak conservation
-
-Guembeul man na nekk barab bu chercheurs ak spécialistes di jàng ecology, zoologie, habitats ak conservationu xeetu mbindeef. Xam-xam boobu di jàppale yokkug doxalin yi ñuy def ngir aar nature.
-
-### Éducation ak sensibilisation
-
-Réserve bi di jàppale njàngat environnemental ci xale yi ak gan yi. Visites guidées ak sensibilisation di yokk xam-xam ci biodiversité sahélienne.
-
-### Njàngat ak tourisme naturel
-
-Ku bëgg gis faune ak paysagesu Sahel man na xool réserve bi ak guide. War na topp ndigal yi, bañ a sonal mbindeef yi te sàmm habitats yi.
-
-### Solo ci patrimoine naturel
-
-Guembeul wone na solo bu conservationu faune sahélienne am. Réserve bi di bokk ci patrimoine naturel bu Saint-Louis ak ci efforts yu ñuy def ngir denc biodiversité bi.`,
-  },
-
   'mangroves-casamance-ecosystemes-villages-savoir-faire': {
     titleWo: 'Mangrovesu Casamance : ecosystemes, dëkk ak xam-xam',
     excerptWo: 'Mangrove, bolong, biodiversité ak liggéeyu dëkkandoo yi ci wetu Casamance.',
@@ -77,6 +37,12 @@ Découverteu mangrove yi man na nekk ci excursion ci pirogue, seet paysage ak xa
 ### Territoire
 
 Mangrove yi am nañu ci régionsu Ziguinchor, Sédhiou ak Kolda. Ñu lëkkale fleuve, bolong, villages, agriculture, pêche ak patrimoine culturel bu Casamance.`,
+  },
+
+  'le-baobab-d-iwol-arbre-protecteur-et-memoire-des-bediks': {
+    titleWo: 'Baobab bu Iwol : garab gu aar ak mémoire bu Bédik',
+    excerptWo: 'Baobab bu am solo ci mémoire ak représentations culturelles yu Bédik ci Iwol.',
+    contentWo: `### Jëmmal\n\nBaobab bu Iwol nekk na ci buntu dëkk bi, te am na place bu am solo ci mémoire ak représentations culturelles yu Bédik. Mu bokk ci paysage culturel bu Iwol ak Pays Bassari.\n\n### Garab gu am solo\n\nBaobab bi mooy benn ci éléments yu feeñ ci paysageu Iwol. Tàmbali nañu ko jàppale ak mémoireu dëkk bi, te mu bokk ci xam-xam yi ñuy jàng ci environnement.\n\n### Iwol ak Pays Bédik\n\nIwol nekk na ci kawu colline ci Bandafassi, ci régionu Kédougou. Dëkk bi bokk na ci paysage culturel bu Pays Bassari, Bédik ak Peul, bi ñu bind ci patrimoine mondial UNESCO ci 2012.\n\n### Mémoire ak patrimoine\n\nBaobab bi di wone ni nature ak culture mën nañu lëkkale. Garab, colline, dëkk ak xam-xam yu aada yi bokk nañu ci benn patrimoine bu dëkk bi.\n\n### Tourisme culturel\n\nGan yi di dem Iwol mën nañu gis baobab bi ak paysageu colline yi. Découverte bi war na respectu dëkkandoo yi, sites yu am solo ak traditions yi.\n\n### Transmission\n\nDencug mémoire bu Iwol dafa aju ci transmissionu nettali, xam-xam ak jëf yi ci génération yi. Baobab bi di nekk benn repère bu naturel ci histoireu territoire bi.\n\n### Solo ci territoire\n\nBaobab bu Iwol di yokk valeur bu paysage culturel bu Kédougou. Mu lëkkale nature, mémoire, identité ak découverteu Pays Bédik.\n\n### Alalu Kédougou\n\nBaobab bi bokk na ci patrimoine naturel ak culturel bu Sénégal oriental, te di jàppale xam ni paysagesu Iwol ak dundug nit ñi lëkkale nañu.`,
   },
 
   'la-case-ronde-serere-architecture-traditionnelle-du-sine-saloum': {
