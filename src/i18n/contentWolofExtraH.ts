@@ -69,7 +69,7 @@ Téere yu mu bind ak liggéeyam ci mbirum aada ak politique am nañu solo ci his
     excerptWo: 'Aminata Sow Fall, Ken Bugul ak yeneen bindkat yi bokk nañu ci littérature bu Senegaal; Ken Bugul am na boppam ci roman.',
     contentWo: `### Jëmmal
 
-Ken Bugul mooy turu plume bu Aminata-? ci littérature bu Senegaal. Bindam dafa jëm ci identité, solitude, société ak expérience personnelle.
+Ken Bugul mooy nom de plume bu Mariètou Mbaye Biléoma, bindkat bu Senegaal. Bindam dafa jëm ci identité, solitude, société ak expérience personnelle.
 
 ### Littérature
 
