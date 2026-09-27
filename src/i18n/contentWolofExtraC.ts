@@ -974,4 +974,194 @@ Tabax yu tarihi di jox ay repères ci soppi yu dëkk bi ak ci dundug populations
 
 Aar tabax yi ak dokumente seen histoire di dimbali ci transmissionu mémoire. Patrimoine architectural bu Saint-Louis am na solo ci identitéu dëkk bi.`,
   },
+  'mame-woury-thioubou': {
+    titleWo: 'Mame Woury Thioubou',
+    excerptWo: 'Bindkat, journaliste ak réalisatrice bu Senegaal, mu liggéey ci mbind ak cinéma.',
+    contentWo: `### Jëmmal
+
+Mame Woury Thioubou mooy bindkat, journaliste ak réalisatrice bu Senegaal. Liggeyamu dafay lëkkale mbind, médias ak cinéma.
+
+### Mbind ak médias
+
+Mu bokk ci scène littéraire ak médiatique bu Senegaal, te liggéeyam di yokk xam-xamu nit ñi ci société ak culture.
+
+### Cinéma ak nettali
+
+Ci réalisations ak projets yu mel ni, mu jëfandikoo nettali ngir wone dund ak yëngu-yëngu yu société.
+
+### Gëstu ak transmission
+
+Liggeyamu di bokk ci wàllu création ak transmissionu xam-xam ci Senegaal.`,
+  },
+  'ibrahima-sall': {
+    titleWo: 'Ibrahima Sall',
+    excerptWo: 'Bindkat bu Senegaal, bokk ci scène littéraire ak culturelle bu réew mi.',
+    contentWo: `### Jëmmal
+
+Ibrahima Sall mooy bindkat bu Senegaal, te bokk na ci scène littéraire ak culturelle bu réew mi.
+
+### Mbind
+
+Liggeyam ci mbind di yokk diversitéu voix yi ci littérature bu Senegaal.
+
+### Culture ak nettali
+
+Mbind dafay joxe benn yoon ngir xalaat, nettali ak séddoo ay xalaat ci société.
+
+### Transmission
+
+Bindkat yi am nañu solo ci denc ak yóbbu baat ak xam-xam ci génération yi ñëw.`,
+  },
+  'faty-sow-kane': {
+    titleWo: 'Faty Sow Kane',
+    excerptWo: 'Bindkat ak universitaire bu Senegaal, bokk ci création ak transmission intellectuelle.',
+    contentWo: `### Jëmmal
+
+Faty Sow Kane mooy bindkat ak universitaire bu Senegaal. Mu bokk ci wàllu mbind ak transmissionu xam-xam.
+
+### Mbind ak gëstu
+
+Liggeyam di lëkkale littérature, gëstu ak xalaat universitaire. Mu bokk ci diversitéu production intellectuelle bu Senegaal.
+
+### Transmission
+
+Université ak littérature di nekk yoon yu am solo ngir séddoo xam-xam ak yokk xalaat bu jàppandi.
+
+### Héritage
+
+Liggeyu bindkat ak universitaire yi di bokk ci patrimoine intellectuel bu réew mi.`,
+  },
+  'aminata-maiga-ka': {
+    titleWo: 'Aminata Maïga Ka',
+    excerptWo: 'Bindkat bu Senegaal, figure bu littérature africaine francophone.',
+    contentWo: `### Jëmmal
+
+Aminata Maïga Ka mooy bindkat bu Senegaal, te bokk na ci littérature africaine francophone.
+
+### Mbind ak littérature
+
+Mbindam di yokk voixu littérature bu Senegaal ci espaceu francophone. Mu bokk ci productionu littéraire bu Aferik.
+
+### Culture
+
+Littérature di jox yoon ngir nettali dund, xalaat ak expérience yu nit ñi. Bindkat yi di yokk diversitéu baat yi.
+
+### Transmission
+
+Œuvres littéraires di wéy ci génération yi te di denc mémoire ak xalaat.`,
+  },
+  'mame-younousse-dieng': {
+    titleWo: 'Mame Younousse Dieng',
+    excerptWo: 'Bindkat bu Senegaal ak taxawkat bu làkk Wolof.',
+    contentWo: `### Jëmmal
+
+Mame Younousse Dieng mooy bindkat bu Senegaal, te liggeyam lëkkale mbind ak yëngu-yëngu ci làkk Wolof.
+
+### Làkk ak mbind
+
+Mu bokk ci ñi di jëfandikoo mbind ngir yokk solo ak feeñal làkk Wolof. Liggeyam di wone ne làkk mooy itam alal culturel.
+
+### Transmission
+
+Bind ak jàng di dimbali ci yóbbu làkk ak xam-xam ci génération yi ñëw.
+
+### Héritage
+
+Taxawu làkk yi di bokk ci aar diversitéu linguistique ak culturelle bu Senegaal.`,
+  },
+  'ndeye-coumba-mbengue-diakhate': {
+    titleWo: 'Ndeye Coumba Mbengue Diakhaté',
+    excerptWo: 'Benn ci pionnières yu littérature bu jigéen ci Senegaal.',
+    contentWo: `### Jëmmal
+
+Ndeye Coumba Mbengue Diakhaté bokk na ci pionnières yu littérature bu jigéen ci Senegaal, ci littérature bu ñu bind ci français.
+
+### Littérature ak société
+
+Mbindu jigéen yi di yokk feeñal expérience, xalaat ak nettali yu jigéen ci société.
+
+### Transmission
+
+Littérature di nekk yoonu transmissionu xalaat ak mémoire, te liggeyu pionnières yi di jox ay njàngale ci génération yi.
+
+### Héritage
+
+Place bi mu am ci histoireu littérature bu Senegaal di bokk ci patrimoine intellectuel ak culturel bu réew mi.`,
+  },
+  'cheikh-ndiaye': {
+    titleWo: 'Cheikh Ndiaye',
+    excerptWo: 'Artiste peintre bu Senegaal, bokk ci création visuelle bu contemporain.',
+    contentWo: `### Jëmmal
+
+Cheikh Ndiaye mooy artiste bu Senegaal, te liggeyam bokk na ci scène bu arts visuels contemporains.
+
+### Peinture ak création
+
+Peinture di nekk ci biir liggeyam, te création visuelle di jëfandikoo ay melokaan ngir séddoo xalaat ak gis-gis.
+
+### Scène artistique
+
+Mu bokk ci yëngu-yëngu bu arts visuels ci Senegaal, fu artistes di wone seen liggey ak seen gis-gis.
+
+### Transmission
+
+Arts visuels di dimbali ci denc mémoire, xalaat ak nettali yu jamono ji.`,
+  },
+  'papa-ibra-tall': {
+    titleWo: 'Papa Ibra Tall',
+    excerptWo: 'Peintre, dessinateur ak jàngalekat bu Senegaal, figure bu École de Dakar.',
+    contentWo: `### Jëmmal
+
+Papa Ibra Tall mooy peintre, dessinateur ak pédagogue bu Senegaal, te bokk na ci figures yu École de Dakar.
+
+### École de Dakar
+
+Mu bokk ci histoireu scèneu arts visuels bu Senegaal, ci jamono yi École de Dakar di yokk.
+
+### Peinture ak dessin
+
+Peinture ak dessin di nekk ci yoonu création ak expression artistique. Liggeyu artistes yi di yokk patrimoineu arts visuels.
+
+### Transmission
+
+Pédagogie ak création di jokkoo ngir jàngale ak yóbbu xam-xamu arts ci génération yi.`,
+  },
+  'moustapha-dime': {
+    titleWo: 'Moustapha Dimé',
+    excerptWo: 'Sculpteur bu Senegaal, figure bu am solo ci art contemporain africain.',
+    contentWo: `### Jëmmal
+
+Moustapha Dimé mooy sculpteur bu Senegaal, te am na benn place bu am solo ci art contemporain africain.
+
+### Sculpture
+
+Liggeyam di jëfandikoo matériaux yu wuute, ci biir yoonu création bu jëm ci sculpture. Œuvres yi di bokk ci histoireu arts visuels bu Senegaal.
+
+### Art contemporain
+
+Mu bokk ci artistes yi yokk seen gis-gis ci création contemporaine bu Afrik.
+
+### Héritage
+
+Liggeyu artistes yi di wéy ci œuvres yi ak ci mémoireu scène artistique bu Senegaal.`,
+  },
+  'mamadou-gomis': {
+    titleWo: 'Mamadou Gomis',
+    excerptWo: 'Photographe ak documentariste bu Senegaal, bokk ci photographie documentaire.',
+    contentWo: `### Jëmmal
+
+Mamadou Gomis mooy photographe ak documentariste bu Senegaal. Liggeyam bokk na ci photographie documentaire ak mémoire visuelle.
+
+### Photographie
+
+Photographie di jëfandikoo ngir tëral ay images yu dundug société, territoire ak nit ñi. Mu jox ay repères ci mémoire visuelle.
+
+### Documentation
+
+Documentaire di dimbali ci seet ak nettali ay réalité yu wuute. Images yi di am solo ci denc mémoire.
+
+### Héritage
+
+Photographie documentaire bu Senegaal di yokk patrimoine visuel bu réew mi ak yoon yi ngir jàng dund ak société.`,
+  },
 };
