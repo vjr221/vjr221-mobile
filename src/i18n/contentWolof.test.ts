@@ -91,6 +91,19 @@ describe('Wolof fiche translations', () => {
     'yande-codou-sene',
     'ndiaga-mbaye',
     'kine-lam',
+    'ousmane-william-mbaye',
+    'thierno-ndiaye-doss',
+    'awa-sene-sarr',
+    'douta-seck',
+    'alioune-badara-beye',
+    'oumar-ndao',
+    'isseu-niang',
+    'fatou-cisse',
+    'feral-benga',
+    'moussa-sene-absa',
+    'souleyemane-keita',
+    'mansour-ciss',
+    'zulu-mbaye',
   ];
 
   it('has no duplicate local keys', () => {
