@@ -10,17 +10,17 @@
 - Interface FR/Wolof : déjà opérationnelle.
 - Source prioritaire en ligne : WordPress, champs `title_wo`, `excerpt_wo`, `content_wo`.
 - Repli hors ligne : fichiers `src/i18n/contentWolof*.ts`.
-- Couverture locale existante : **300 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraH.ts`.
-- Contrôle de couverture actuel : **300 clés uniques, 0 doublon**.
+- Couverture locale existante : **302 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraI.ts`.
+- Contrôle de couverture actuel : **302 clés uniques, 0 doublon**.
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
 
 ## Contrôle QA — 27 septembre 2026
 
-- Corpus local : **300 fiches / 300 clés uniques / 0 doublon**.
+- Corpus local : **302 fiches / 302 clés uniques / 0 doublon**.
 - Régression apostrophe `d'année` : **0 occurrence**.
-- Test dédié présent dans `src/i18n/contentWolof.test.ts`.
-- Dernière correction de formatage du test : commit `54e60f5e`.
+- Apostrophe ASCII entre lettres : **0 occurrence** dans les titres, extraits et corps locaux.
+- Tests dédiés présents dans `src/i18n/contentWolof.test.ts`.
 - Aucun build APK requis pour cette étape éditoriale.
 
 ## Règle éditoriale
@@ -32,10 +32,11 @@ Pour chaque fiche :
 3. Ne pas inventer de coordonnées, chiffres ou informations absentes du français.
 4. Conserver la structure Markdown des fiches (`###`, paragraphes, listes).
 5. Employer un Wolof naturel et compréhensible, avec les termes français conservés lorsqu'ils sont les noms officiels ou les plus usuels.
-6. Faire une relecture de cohérence avant intégration.
-7. Publier d'abord dans WordPress lorsque la fiche existe côté CMS.
-8. Ajouter au pack local uniquement comme repli hors ligne / couverture immédiate.
-9. Ne jamais remplacer une traduction CMS existante sans vérification préalable.
+6. Éviter l'apostrophe ASCII `'` à l'intérieur des mots Wolof ; employer `’` ou des guillemets doubles lorsque la syntaxe TypeScript l'exige.
+7. Faire une relecture de cohérence avant intégration.
+8. Publier d'abord dans WordPress lorsque la fiche existe côté CMS.
+9. Ajouter au pack local uniquement comme repli hors ligne / couverture immédiate.
+10. Ne jamais remplacer une traduction CMS existante sans vérification préalable.
 
 ## Ordre de traitement
 
@@ -84,14 +85,13 @@ La résolution actuelle reste :
 
 Le chantier ne doit pas transformer les traductions éditoriales en textes UI codés en dur.
 
-## Première livraison de cette branche
-
-Cette branche formalise le chantier et servira de base aux prochaines vagues de traduction. Les traductions déjà présentes ne sont pas réécrites dans cette phase de cadrage.
 ## Vagues consolidées — 27 septembre 2026
 
 - Vagues 8 à 12 : intégrées dans les packs locaux, avec relectures ciblées.
-- Vagues 13 à 17 : consolidation QA, contrôle des clés, doublons et apostrophes ; aucune nouvelle fiche n'est ajoutée tant que la correspondance avec les fiches CMS n'est pas suffisamment vérifiable.
-- **État local : 300 fiches / 300 clés uniques / 0 doublon.**
-- Une régression connue d'apostrophe ASCII (d'année) est désormais couverte par un test dédié.
+- Vagues 13 à 17 : consolidation QA, contrôle des clés, doublons et apostrophes.
+- **Vague 18 : 2 fiches patrimoine vérifiées ajoutées** — Parc national du Niokolo-Koba et Place du Souvenir Africain de Dakar.
+- Une fiche candidate déjà présente dans le corpus (`cafe-touba`) a été détectée et n'a pas été dupliquée.
+- **État local : 302 fiches / 302 clés uniques / 0 doublon.**
+- Régression `d'année` : 0 occurrence.
+- Apostrophe ASCII entre lettres : 0 occurrence.
 - Aucun APK n'est requis pour ces contrôles de contenu : le chantier reste limité aux sources i18n, tests et documentation.
-
