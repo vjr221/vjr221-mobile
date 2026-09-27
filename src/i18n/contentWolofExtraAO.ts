@@ -62,5 +62,5 @@ Filmiam dañuy lëkkale imagination, critique sociale, poésie ak récits yu dun
 ### Héritage
 
 Liggéeyam am na solo ci cinéma d’auteur africain ak ci taariixu cinéma senegaaleer.`,
-  };
+  },
 };
