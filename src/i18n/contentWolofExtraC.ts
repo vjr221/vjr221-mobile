@@ -453,4 +453,61 @@ Diakhao am na solo ci taariixu royaume du Sine ak ci fàttaliku Sereer. Territoi
 
 Patrimoine bi war nañu ko denc ak jàngale ko ci diggante maam ak sëy. Écomusée bi man na lëkkale xam-xamu Diakhao ak fiches yi jëm ci Sine, personnalités historiques, cosaan Sereer, Fatick ak patrimoine culturel bu dul jëfandikoo ay jumtukaay.`,
   },
+  'musee-mbiin-ndiogoye-de-joal-memoire-et-patrimoine-de-joal-fadiouth': {
+    titleWo: 'Musée Mbiin Ndiogoye bu Joal — fàttaliku ak patrimoine',
+    excerptWo: 'Muze ci xolum Joal, di denc ak wone fàttaliku local ak patrimoine bu Joal-Fadiouth.',
+    contentWo: `### Jëmmal
+
+Musée Mbiin Ndiogoye bu Joal nekk na ci Joal-Fadiouth. Mu am solo ci denc ak wone fàttaliku local, taariix ak patrimoine bu dëkk bi.
+
+### Joal-Fadiouth ak patrimoine
+
+Joal-Fadiouth am na patrimoine bu wuute, lëkkale Joal ci continent ak Fadiouth ci île bu amas coquillages. Muze bi man na dimbali ci gëna xam territoire bi, cosaan yi ak dundug askan wi.
+
+### Fàttaliku local
+
+Muze yi ci dëkk yi am nañu solo ndax dañuy denc nettali yi ak mbir yi man a réer. Lii dafay may xale yi ak gan ñi xam taarixu Joal-Fadiouth ci benn bérab.
+
+### Transmission
+
+Denc patrimoine du rekk tekki denc ay mbir. War na ànd ak jàngale, waxtaan ak nit ñi ci dëkk bi, ak xam-xam yu ñuy jàngale ci diggante maam ak sëy.`,
+  },
+  'ecomusee-du-commerce-fluvial-de-podor-memoire-du-fleuve-senegal': {
+    titleWo: 'Écomusée bu jaay-jaayu ndox mu Podor — fàttaliku dexu Senegaal',
+    excerptWo: 'Écomusée bu Podor di wone dexu Senegaal ni yoonu jokkoo, jaay-jaay ak dundin.',
+    contentWo: `### Jëmmal
+
+Écomusée bu jaay-jaayu ndox mu Podor dafay ubbi bunt ci taariixu dexu Senegaal ni yoonu jokkoo diggante dëkk yi. Podor ak escales yu yàgg yi bokk nañu ci taariixu échanges ci dex gi.
+
+### Dexu Senegaal
+
+Dexu Senegaal doon na yoon wu am solo ci tukki, transport ak jaay-jaay. Dëkk yu nekk ci wetam dañuy jokkoo jaarale ko ci ndox, waxtaan ak produits yu wuute.
+
+### Podor ak escales yi
+
+Podor am na solo ci histoireu échanges ci wàllu dex gi. Écomusée bi dafay may ñu xam yoonu dund, liggéey ak jokkoo yi lëkkale dëkk yi ak dex mi.
+
+### Patrimoine fluvial
+
+Patrimoine bu dex gi boole taariix, environnement ak savoir-faire. Denc ko ak wone ko dafay dimbali ci xam solo bu dexu Senegaal ci dundug askan yi.`,
+  },
+  'musee-des-forces-armees-du-senegal-memoire-militaire-et-histoire-nationale': {
+    titleWo: 'Musée des Forces armées du Senegaal — fàttaliku militaire',
+    excerptWo: 'Bérab bu fàttaliku di denc histoireu forces armées ak pàcc yu taariixu réew mi.',
+    contentWo: `### Jëmmal
+
+Musée des Forces armées du Senegaal mooy bérab bu fàttaliku ci histoireu réew mi ak forces armées. Mu dafay dimbali ci xam ay pàcc yu am solo ci taariixu Senegaal.
+
+### Histoire ak collections
+
+Muze bi dafay jëm ci mbir yu lëkkale ak histoireu militaire, ay xew-xew, ay nit ak jumtukaay yu man a wone yoonu réew mi jaar ci ay jamono.
+
+### Bérab bu fàttaliku
+
+Muze bi du rekk bérab bu ñuy gis ay objets. Mu bokk na ci yoonu jàngale ci taariix, fàttaliku ak jokkoo diggante ay génération.
+
+### Denc ak jàngale
+
+Patrimoine militaire war nañu ko denc ci yoon wu dëgg, te xamle ko ak sources yu wóor. Muze bi man na dimbali xale yi, jàngkat yi ak gan ñi ci gëna xam taariixu réew mi.`,
+  },
 };
