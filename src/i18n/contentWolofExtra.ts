@@ -179,9 +179,43 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
     contentWo: `### Jëmmal\n\nCentre d\'interprétation : Pays Bassari, UNESCO.`,
   },
   'reserve-speciale-faune-guembeul': {
-    titleWo: 'Reserve bu Guembeul',
-    excerptWo: 'Sanctuaire bu rab yi.',
-    contentWo: `### Jëmmal\n\nGuembeul : zone humide, rab, conservation ci norte.`,
+    titleWo: 'Réserve spéciale de faune de Guembeul',
+    excerptWo: 'Barab bu aarug faune sahélienne ci wetu Saint-Louis, ak conservation ak réintroduction.',
+    contentWo: `### Jëmmal
+
+Réserve spéciale de faune de Guembeul nekk na ci régionu Saint-Louis, ci wetu dëkk bi, diggante communes Ndiébène Gandiol ak Gandon. Ñu sos ko 30 mai 1983, te réserve bi am na 720 hectares.
+
+### Zones humides ak Sahel
+
+Guembeul dafa ëmb cuvette bu ndoxam safara, reliques de mangrove ak végétation sahélienne. Zones humides yi di dalal picc yu bare, te suuf su wër bi am na arbres ak herbacées.
+
+### Conservation ak réintroduction
+
+Réserve bi di jàppale conservation ak réacclimatationu xeetu mbindeef yu metti. Oryx algazelle, gazelle Dama ak gazelle Dorcas bokk nañu ci xeetu mbindeef yi ñuy sàmm.
+
+### Gazelle Dama
+
+Gazelle Dama am na solo ci taariixu Guembeul. Ñu indi ko ci réserve bi ci 1984, te ci 2002 benn ci mbooloom yi dem ci Ferlo ngir jàppale programmeu réintroduction.
+
+### Picc ak faune
+
+Cuvette bi mooy habitat bu am solo ci picc yu ndox. Singe patas, chacal ak phacochère bokk nañu ci faune bi ñuy gis ci barab bi.
+
+### Jàngat ak conservation
+
+Guembeul man na nekk barab bu chercheurs di jàng ecology, zoologie, habitats ak conservationu xeetu mbindeef. Xam-xam boobu di jàppale yokkug doxalin yi ñuy def ngir aar nature.
+
+### Éducation ak sensibilisation
+
+Visites guidées ak jëf yu sensibilisation di dimbali xale yi ak gan yi xam solo bu biodiversité sahélienne am. Réserve bi di jàppale transmissionu xam-xam ci aarug nature.
+
+### Tourisme naturel
+
+Ku bëgg gis faune ak paysagesu Sahel man na xool réserve bi ak guide. War na topp ndigal yi, bañ a sonal mbindeef yi te sàmm habitats yi.
+
+### Solo ci patrimoine
+
+Guembeul wone na solo bu conservationu faune sahélienne am. Réserve bi bokk na ci patrimoine naturel bu Saint-Louis ak ci efforts yu ñuy def ngir denc biodiversité bi.`,
   },
   'nature-du-ferlo-paysages-saheliens-faune-et-ressources': {
     titleWo: 'Nature bu Ferlo',
