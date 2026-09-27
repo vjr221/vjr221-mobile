@@ -45,6 +45,10 @@ describe('Wolof fiche translations', () => {
     'village-des-arts-de-dakar',
     'maison-des-esclaves-de-goree',
     'maison-natale-de-leopold-sedar-senghor',
+    'musee-boribana',
+    'centre-dinterpretation-du-delta-du-saloum',
+    'mosquee-de-divinity',
+    'chateau-de-saint-louis',
   ];
 
   it('has no duplicate local keys', () => {
