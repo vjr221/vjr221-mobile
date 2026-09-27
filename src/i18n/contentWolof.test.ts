@@ -157,6 +157,9 @@ describe('Wolof fiche translations', () => {
     'maison-de-la-culture-douta-seck-medina-dakar',
     'leopold-sedar-senghor-poete-et-homme-detat',
     'ken-bugul-ecrivaine-senegalaise',
+    'mariama-ba-ecrivaine-senegalaise',
+    'birago-diop-poete-et-ecrivain-senegalais',
+    'cheikh-hamidou-kane-ecrivain-senegalais',
   ];
 
   it('has no duplicate local keys', () => {
