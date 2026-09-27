@@ -30,6 +30,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraW.ts',
   'contentWolofExtraX.ts',
   'contentWolofExtraY.ts',
+  'contentWolofExtraZ.ts',
 ];
 
 /**
@@ -115,6 +116,10 @@ describe('Wolof fiche translations', () => {
     'le-parc-national-du-delta-du-saloum',
     'le-tamarinier-arbre-d-ombrage-au-fruit-acidule-emblematique',
     'le-calao-terrestre-geant-social-des-savanes-senegalaises',
+    'grande-mosquee-omarienne-de-dakar',
+    'phare-des-mamelles-dakar',
+    'crocodile-du-nil-faune-des-zones-humides-du-senegal',
+    'palais-de-la-republique-du-senegal',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
