@@ -208,7 +208,7 @@ Kankourang dafa boole ci njàngale ak aar genç yi ci waxtu bi ñuy def ay ndaje
 
 ### Xamle ko ci àdduna
 
-UNESCO dafa ko duggal ci Liste du patrimoine culturel immatériel de l'humanité ci 2005. Kankourang di wone ne cosaan yi man nañu nekk dund, te ñu war leen a jàngale ak aar ci jamono yu bees.`,
+UNESCO dafa ko duggal ci Liste du patrimoine culturel immatériel de l’humanité ci 2005. Kankourang di wone ne cosaan yi man nañu nekk dund, te ñu war leen a jàngale ak aar ci jamono yu bees.`,
   },
   'xooy-ceremonie-divinatoire-patrimoine-serere-senegal': {
     titleWo: 'Xooy — xew-xewu seetlu ak patrimoine Sereer',
@@ -428,7 +428,7 @@ Gare bu Dakar nekk na ci bérabu gare bu Dakar-Niger, te ci 2004 lañu soppi tur
 
 Forme bu bees bu gare bi sosu na diggante 1913 ak 1914. Lu yàgg, mooy buntu départ bu chemin de fer Dakar-Niger, yoon wu am solo ci lëkkale Dakar ak Bamako.
 
-Gare bu njëkk bi tabaxu woon na ci 1885 ngir ligne Dakar-Saint-Louis, te inauguration bi amoon na 6 juillet 1885. Lii bokk na ci tàmbaliu chemin de fer ci Afrique de l'Ouest.
+Gare bu njëkk bi tabaxu woon na ci 1885 ngir ligne Dakar-Saint-Louis, te inauguration bi amoon na 6 juillet 1885. Lii bokk na ci tàmbaliu chemin de fer ci Afrique de l’Ouest.
 
 ### Patrimoine
 
@@ -557,11 +557,11 @@ Bérab bi di wone benn pàcc ci patrimoine religieux bu Dakar ak ci bokkute diin
     excerptWo: 'Muze bu Dakar bu denc, di gëstu ak di wone patrimoine artistique ak culturel bu Afrique.',
     contentWo: `### Jëmmal
 
-Musée Théodore Monod bu Art Africain nekk na ci Dakar te bokk na ci institutions muséales yu yàgg ci Afrique de l'Ouest. Mu jëm ci denc, gëstu ak wone arts traditionnels africains.
+Musée Théodore Monod bu Art Africain nekk na ci Dakar te bokk na ci institutions muséales yu yàgg ci Afrique de l’Ouest. Mu jëm ci denc, gëstu ak wone arts traditionnels africains.
 
 ### IFAN ak Théodore Monod
 
-Muze bi sosu na ci cadre bu Institut Fondamental d'Afrique Noire (IFAN). Turu Théodore Monod ñu jox ko ngir fàttaliku gëstu-kat ak explorateur bi liggéeyoon ci xam Afrique.
+Muze bi sosu na ci cadre bu Institut Fondamental d’Afrique Noire (IFAN). Turu Théodore Monod ñu jox ko ngir fàttaliku gëstu-kat ak explorateur bi liggéeyoon ci xam Afrique.
 
 ### Collections
 
@@ -690,7 +690,7 @@ Denc Mandinka soxla na jàngale, jëfandikoo làkk bi ci dundug bés-bés ak tra
     excerptWo: 'Boppu administratif bu régionu Kédougou, ci penku-estu Senegaal, ci wetu frontière yu Mali ak Guinée.',
     contentWo: `### Jëmmal
 
-Départementu Kédougou bokk na ci régionu Kédougou, ci penku-estu Senegaal. Mu nekk ci espace bu melokaan wu wuute, ak ay collines, savanes ak cours d'eau.
+Départementu Kédougou bokk na ci régionu Kédougou, ci penku-estu Senegaal. Mu nekk ci espace bu melokaan wu wuute, ak ay collines, savanes ak cours d’eau.
 
 ### Terroir ak environnement
 
