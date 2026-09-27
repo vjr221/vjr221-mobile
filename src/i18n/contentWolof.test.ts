@@ -237,6 +237,16 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the verified nature and territory wave', () => {
+    for (const slug of ['mont-assirik-niokolo-koba', 'yoff-layene', 'le-point-culminant-du-senegal-les-collines-de-kedougou']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
