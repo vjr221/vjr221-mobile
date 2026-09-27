@@ -10,14 +10,14 @@
 - Interface FR/Wolof : déjà opérationnelle.
 - Source prioritaire en ligne : WordPress, champs `title_wo`, `excerpt_wo`, `content_wo`.
 - Repli hors ligne : fichiers `src/i18n/contentWolof*.ts`.
-- Couverture locale existante : **371 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraQ.ts`.
-- Contrôle de couverture actuel : **351 clés uniques, 0 doublon**.
+- Couverture locale existante : **371 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraAC.ts`.
+- Contrôle de couverture actuel : **371 clés uniques, 0 doublon**.
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
 
 ## Contrôle QA — 27 septembre 2026
 
-- Corpus local : **367 fiches / 367 clés uniques / 0 doublon**.
+- Corpus local : **371 fiches / 371 clés uniques / 0 doublon**.
 - Régression apostrophe `d'année` : **0 occurrence**.
 - Apostrophe ASCII entre lettres : **0 occurrence** dans les titres, extraits et corps locaux.
 - Tests dédiés présents dans `src/i18n/contentWolof.test.ts`.
