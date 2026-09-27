@@ -37,6 +37,10 @@ describe('Wolof fiche translations', () => {
     'departement-de-kedougou',
     'la-colonisation-du-senegal-conquete-administration-et-transformations',
     'agriculture-et-elevage-dans-le-senegal-oriental-filieres-et-marches',
+    'musee-des-civilisations-noires',
+    'manufacture-senegalaise-des-arts-decoratifs-de-thies',
+    'musee-de-la-femme-henriette-bathily',
+    'maison-ousmane-sow',
   ];
 
   it('has no duplicate local keys', () => {
