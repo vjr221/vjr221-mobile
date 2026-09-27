@@ -34,6 +34,9 @@ describe('Wolof fiche translations', () => {
     'le-fanal-de-saint-louis-la-parade-des-lanternes-de-fin-dannee',
     'les-regates-traditionnelles-au-senegal-sport-nautique-culture-et-transmission',
     'le-mandinka-langue-mandingue-de-lest-du-senegal',
+    'departement-de-kedougou',
+    'la-colonisation-du-senegal-conquete-administration-et-transformations',
+    'agriculture-et-elevage-dans-le-senegal-oriental-filieres-et-marches',
   ];
 
   it('has no duplicate local keys', () => {
