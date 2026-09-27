@@ -33,6 +33,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraZ.ts',
   'contentWolofExtraAA.ts',
   'contentWolofExtraAB.ts',
+  'contentWolofExtraAC.ts',
 ];
 
 /**
@@ -363,6 +364,21 @@ describe('Wolof fiche translations', () => {
 
   it('covers the verified culture history wave', () => {
     for (const slug of ['fode-kaba-doumbouya-resistant-a-la-colonisation-en-casamance', 'le-yeela-poesie-musicale-du-boundou-et-patrimoine-vivant-du-senegal-oriental', 'le-patrimoine-diola-langues-rites-et-culture-de-casamance']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified cinema and visual arts wave', () => {
+    for (const slug of [
+      'cinema-senegalais-histoire-realisateurs-oeuvres-et-rayonnement',
+      'arts-visuels-au-senegal-peinture-sculpture-photographie-et-creation-contemporaine',
+      'biennale-dakar-dakart-art-contemporain',
+      'les-festivals-de-cinema-au-senegal-creation-images-et-industrie-culturelle',
+    ]) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
