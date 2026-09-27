@@ -29,6 +29,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraV.ts',
   'contentWolofExtraW.ts',
   'contentWolofExtraX.ts',
+  'contentWolofExtraY.ts',
 ];
 
 /**
@@ -108,6 +109,12 @@ describe('Wolof fiche translations', () => {
     'grande-mosquee-de-dakar',
     'mosquee-massalikul-jinaan',
     'calao-a-bec-rouge-oiseau-emblematique-des-savanes-senegalaises',
+    'grande-mosquee-de-tivaouane',
+    'grande-mosquee-de-touba',
+    'pelerinage-marial-de-popenguine-notre-dame-de-la-delivrande',
+    'le-parc-national-du-delta-du-saloum',
+    'le-tamarinier-arbre-d-ombrage-au-fruit-acidule-emblematique',
+    'le-calao-terrestre-geant-social-des-savanes-senegalaises',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
