@@ -1,4 +1,4 @@
-import { getWolofContentBySlug } from './contentWolof';
+import { getWolofContentBySlug, getWolofContentKeys } from './contentWolof';
 
 describe('Wolof fiche translations', () => {
   const slugs = [
@@ -22,6 +22,22 @@ describe('Wolof fiche translations', () => {
     'joal-fadiouth',
     'gare-de-dakar-la-porte-dentree-historique-du-chemin-de-fer-dakar-niger',
   ];
+
+  it('has no duplicate local keys', () => {
+    const keys = getWolofContentKeys();
+    expect(new Set(keys).size).toBe(keys.length);
+  });
+
+  it('validates every local Wolof fiche has all required fields', () => {
+    for (const slug of getWolofContentKeys()) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
 
   it('exposes the phase 1 fiche translations with all required fields', () => {
     for (const slug of slugs) {
