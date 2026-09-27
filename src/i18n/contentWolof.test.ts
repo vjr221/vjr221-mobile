@@ -21,6 +21,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraN.ts',
   'contentWolofExtraO.ts',
   'contentWolofExtraP.ts',
+  'contentWolofExtraQ.ts',
 ];
 
 /**
@@ -66,6 +67,10 @@ describe('Wolof fiche translations', () => {
     'parc-national-des-oiseaux-du-djoudj',
     'reserve-de-fathala',
     'parc-national-de-la-langue-de-barbarie',
+    'reserve-speciale-faune-guembeul',
+    'mangroves-casamance-ecosystemes-villages-savoir-faire',
+    'la-case-ronde-serere-architecture-traditionnelle-du-sine-saloum',
+    'le-royaume-du-jolof-formation-territoires-et-heritage-historique',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
