@@ -32,6 +32,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraY.ts',
   'contentWolofExtraZ.ts',
   'contentWolofExtraAA.ts',
+  'contentWolofExtraAB.ts',
 ];
 
 /**
@@ -125,6 +126,10 @@ describe('Wolof fiche translations', () => {
     'le-conte-au-senegal-oralite-transmission-et-patrimoine-vivant',
     'le-palor-langue-cangin-patrimoine-serere-pays-thiessois',
     'reseau-des-musees-et-etablissements-culturels-publics-du-senegal',
+    'le-festival-du-sahel',
+    'festival-international-de-sedhiou-diversite-culturelle-du-pakao',
+    'le-theatre-au-senegal-scenes-creation-et-patrimoine-culturel',
+    'sogepa-sn-patrimoine-bati-etat-senegal',
 
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
