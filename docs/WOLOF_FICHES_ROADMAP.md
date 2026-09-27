@@ -10,14 +10,14 @@
 - Interface FR/Wolof : déjà opérationnelle.
 - Source prioritaire en ligne : WordPress, champs `title_wo`, `excerpt_wo`, `content_wo`.
 - Repli hors ligne : fichiers `src/i18n/contentWolof*.ts`.
-- Couverture locale existante : **304 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraI.ts`.
-- Contrôle de couverture actuel : **304 clés uniques, 0 doublon**.
+- Couverture locale existante : **306 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraI.ts`.
+- Contrôle de couverture actuel : **306 clés uniques, 0 doublon**.
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
 
 ## Contrôle QA — 27 septembre 2026
 
-- Corpus local : **302 fiches / 304 clés uniques / 0 doublon**.
+- Corpus local : **302 fiches / 306 clés uniques / 0 doublon**.
 - Régression apostrophe `d'année` : **0 occurrence**.
 - Apostrophe ASCII entre lettres : **0 occurrence** dans les titres, extraits et corps locaux.
 - Tests dédiés présents dans `src/i18n/contentWolof.test.ts`.
@@ -91,8 +91,9 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Vagues 13 à 17 : consolidation QA, contrôle des clés, doublons et apostrophes.
 - **Vague 18 : 2 fiches patrimoine vérifiées ajoutées** — Parc national du Niokolo-Koba et Place du Souvenir Africain de Dakar.
 - **Vague 19 : 2 fiches culture/personnalité vérifiées ajoutées** — Musée de la Femme Henriette Bathily à Dakar et Grand Théâtre national Doudou Ndiaye Coumba Rose.
+- **Vague 20 : 3 fiches nature/territoire vérifiées ajoutées** — Mont Assirik, Yoff-Layène et les collines de Kédougou.
 - Une fiche candidate déjà présente dans le corpus (`cafe-touba`) a été détectée et n'a pas été dupliquée.
-- **État local : 302 fiches / 304 clés uniques / 0 doublon.**
+- **État local : 302 fiches / 306 clés uniques / 0 doublon.**
 - Régression `d'année` : 0 occurrence.
 - Apostrophe ASCII entre lettres : 0 occurrence.
 - La fiche Douta Seck déjà présente dans le corpus a été détectée et non dupliquée lors de la vague 19.
