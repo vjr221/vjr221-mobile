@@ -1468,4 +1468,308 @@ Liggeyu universitaire di dimbali ci jàngale ak transmissionu xam-xam ci génér
 
 Xalaat ak gëstu yi di yokk feeñal contributionsu xamkat yu Senegaal ci monde intellectuel.`,
   },
+  'awa-ly': {
+    titleWo: 'Awa Ly',
+    excerptWo: 'Chanteuse ak auteure-compositrice bu Senegaal, mu lëkkale soul, jazz, pop ak ay influence yu wuute.',
+    contentWo: `### Jëmmal
+
+Chanteuse ak auteure-compositrice bu Senegaal, mu lëkkale soul, jazz, pop ak ay influence yu wuute.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'yoro-ndiaye': {
+    titleWo: 'Yoro Ndiaye',
+    excerptWo: 'Chanteur ak musicien bu Senegaal, bokk ci scène musicale bu contemporain.',
+    contentWo: `### Jëmmal
+
+Chanteur ak musicien bu Senegaal, bokk ci scène musicale bu contemporain.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'nuru-kane': {
+    titleWo: 'Nuru Kane',
+    excerptWo: 'Musicien bu Senegaal, xam-xamkat bu ngoni, lëkkale traditions ouest-africaines ak influences contemporaines.',
+    contentWo: `### Jëmmal
+
+Musicien bu Senegaal, xam-xamkat bu ngoni, lëkkale traditions ouest-africaines ak influences contemporaines.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'wasis-diop': {
+    titleWo: 'Wasis Diop',
+    excerptWo: 'Musicien, compositeur ak cinéaste bu Senegaal, liggeyam lëkkale musique ak cinéma.',
+    contentWo: `### Jëmmal
+
+Musicien, compositeur ak cinéaste bu Senegaal, liggeyam lëkkale musique ak cinéma.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'el-hadj-ndiaye': {
+    titleWo: 'El Hadj N’Diaye',
+    excerptWo: 'Guitariste, chanteur ak poète bu Senegaal, figure bu afro-folk ak afro-blues.',
+    contentWo: `### Jëmmal
+
+Guitariste, chanteur ak poète bu Senegaal, figure bu afro-folk ak afro-blues.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'laba-sosseh': {
+    titleWo: 'Laba Sosseh',
+    excerptWo: 'Chanteur ak musicien sénégambien, figure bu salsa africaine.',
+    contentWo: `### Jëmmal
+
+Chanteur ak musicien sénégambien, figure bu salsa africaine.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'titi-ndeye-fatou-tine': {
+    titleWo: 'Titi (Ndeye Fatou Tine)',
+    excerptWo: 'Choriste bu jëm ci diva bu mbalax, ak benn ci ay voix yu jigéen yu am solo ci musique bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Choriste bu jëm ci diva bu mbalax, ak benn ci ay voix yu jigéen yu am solo ci musique bu Senegaal.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'xuman': {
+    titleWo: 'Xuman',
+    excerptWo: 'Rappeur bu Senegaal, cofondateur du Journal Rappé.',
+    contentWo: `### Jëmmal
+
+Rappeur bu Senegaal, cofondateur du Journal Rappé.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'alioune-mbaye-nder': {
+    titleWo: 'Alioune Mbaye Nder',
+    excerptWo: 'Chanteur bu Senegaal, figure bu mbalax.',
+    contentWo: `### Jëmmal
+
+Chanteur bu Senegaal, figure bu mbalax.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'ablaye-cissoko': {
+    titleWo: 'Ablaye Cissoko',
+    excerptWo: 'Griot ak joueuru kora bu Senegaal, lëkkale tradition musicale ak création contemporaine.',
+    contentWo: `### Jëmmal
+
+Griot ak joueuru kora bu Senegaal, lëkkale tradition musicale ak création contemporaine.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'seckou-keita': {
+    titleWo: 'Seckou Keita',
+    excerptWo: 'Joueuru kora ak musicien bu Senegaal, bokk ci rayonnementu traditions musicales ouest-africaines.',
+    contentWo: `### Jëmmal
+
+Joueuru kora ak musicien bu Senegaal, bokk ci rayonnementu traditions musicales ouest-africaines.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'mansour-seck': {
+    titleWo: 'Mansour Seck',
+    excerptWo: 'Guitariste, chanteur ak compositeur bu Senegaal, figure bu Yéla ak musique pulaar.',
+    contentWo: `### Jëmmal
+
+Guitariste, chanteur ak compositeur bu Senegaal, figure bu Yéla ak musique pulaar.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'khar-mbaye-madiaga': {
+    titleWo: 'Khar Mbaye Madiaga',
+    excerptWo: 'Cantatrice bu Senegaal, figure bu tradition musicale lébou.',
+    contentWo: `### Jëmmal
+
+Cantatrice bu Senegaal, figure bu tradition musicale lébou.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'yande-codou-sene': {
+    titleWo: 'Yandé Codou Sène',
+    excerptWo: 'Grande voix bu tradition musicale sérère, ak figure bu patrimoine musical bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Grande voix bu tradition musicale sérère, ak figure bu patrimoine musical bu Senegaal.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'ndiaga-mbaye': {
+    titleWo: 'Ndiaga Mbaye',
+    excerptWo: 'Griot, auteur-compositeur-interprète bu Senegaal, xam-xamkat ci baat ak parol yu musique.',
+    contentWo: `### Jëmmal
+
+Griot, auteur-compositeur-interprète bu Senegaal, xam-xamkat ci baat ak parol yu musique.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
+  'kine-lam': {
+    titleWo: 'Kiné Lam',
+    excerptWo: 'Chanteuse bu Senegaal, figure bu mbalax traditionnel.',
+    contentWo: `### Jëmmal
+
+Chanteuse bu Senegaal, figure bu mbalax traditionnel.
+
+### Musique ak création
+
+Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
+
+### Patrimoine culturel
+
+Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
+
+### Rayonnement
+
+Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
+  },
 };
