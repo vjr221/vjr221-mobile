@@ -59,6 +59,14 @@ describe('Wolof fiche translations', () => {
     'papa-ibra-tall',
     'moustapha-dime',
     'mamadou-gomis',
+    'sokhna-benga',
+    'khady-sylla',
+    'mamousse-diagne',
+    'amady-aly-dieng',
+    'abasse-ndione',
+    'amadou-lamine-sall',
+    'mohamed-mbougar-sarr',
+    'david-diop',
   ];
 
   it('has no duplicate local keys', () => {
