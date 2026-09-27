@@ -155,6 +155,8 @@ describe('Wolof fiche translations', () => {
     'musee-du-crds-de-saint-louis-musee-regional-saint-louis',
     'musee-regional-de-thies-histoire-et-ethnographie-thies',
     'maison-de-la-culture-douta-seck-medina-dakar',
+    'leopold-sedar-senghor-poete-et-homme-detat',
+    'ken-bugul-ecrivaine-senegalaise',
   ];
 
   it('has no duplicate local keys', () => {
