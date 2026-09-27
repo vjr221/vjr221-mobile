@@ -32,7 +32,7 @@ Thiès am na berab bu am solo ci taariixu transport, industrie, agriculture ak c
 
 ### Transmission
 
-Musées régionaux am nañu solo ci education, recherche ak transmission. Ils may nañu jeunes, chercheurs ak visiteurs ay outils ngir xam taariix ak patrimoine.`,
+Musées régionaux am nañu solo ci education, recherche ak transmission. Ñoom may nañu jeunes, chercheurs ak visiteurs ay outils ngir xam taariix ak patrimoine.`,
   },
   'maison-de-la-culture-douta-seck-medina-dakar': {
     titleWo: 'Maison de la Culture Douta Seck — pôle culturel bu Médina',
@@ -50,7 +50,7 @@ Centre bi dafay jàppale ci rencontres, échanges, documentation culturelle ak c
 Maison bi dafay may solo ci njàngat ak jeunes, te dafa jàppale ci aar patrimoine culturel matériel ak immatériel. Mu nekk it ci réseauu établissements culturels bu réew mi.`,
   },
   'leopold-sedar-senghor-poete-et-homme-detat': {
-    titleWo: 'Léopold Sédar Senghor — bindkat, poète ak nit ku bokk ci réew',
+    titleWo: 'Léopold Sédar Senghor — bindkat, poète ak homme d’État bu Senegaal',
     excerptWo: 'Poète, penseur ak premier président bu République du Sénégal, te am na solo ci littérature francophone ak Négritude.',
     contentWo: `### Jëmmal
 
@@ -66,7 +66,7 @@ Téere yu mu bind ak liggéeyam ci mbirum aada ak politique am nañu solo ci his
   },
   'ken-bugul-ecrivaine-senegalaise': {
     titleWo: 'Ken Bugul — bindkat bu Senegaal',
-    excerptWo: 'Aminata Sow Fall, Ken Bugul ak yeneen bindkat yi bokk nañu ci littérature bu Senegaal; Ken Bugul am na boppam ci roman.',
+    excerptWo: 'Ken Bugul bokk na ci bindkat yu am solo ci littérature bu Senegaal, te am na boppam ci roman.',
     contentWo: `### Jëmmal
 
 Ken Bugul mooy nom de plume bu Mariètou Mbaye Biléoma, bindkat bu Senegaal. Bindam dafa jëm ci identité, solitude, société ak expérience personnelle.
