@@ -571,4 +571,61 @@ Collections yi boole nañu ay objets ak savoir-faire yu wuute, mel ni textile, b
 
 Muze bi di dimbali ci recherche, njàngale ak transmission. Jàngkat, chercheurs, gan ñi ak nit ñi ci wàllu culture man nañu ko jëfandikoo ngir gëna xam patrimoine bu Afrique.`,
   },
+  'palais-du-gouverneur-de-saint-louis': {
+    titleWo: 'Palaisu Gouverneur bu Saint-Louis',
+    excerptWo: 'Tabax bu am solo ci taariixu Saint-Louis, te doonoon kër ak biro bu gouverneur colonial bi.',
+    contentWo: `### Jëmmal
+
+Palaisu Gouverneur bu Saint-Louis nekk na ci biir île bu Saint-Louis. Mu bokk na ci tabax yu am solo ci patrimoine architectural ak historique bu dëkk bi.
+
+### Taarix ak fonction
+
+Ci jamono colonial, palais bi doon na résidence officielle ak siège administratif bu gouverneur. Dafa doon benn ci bérab yi décisions yu am solo ci administrationu territoire bi di ame.
+
+### Architecture ak dëkk bi
+
+Tabax bi nekk na ci tissu urbain colonial bu île bu Saint-Louis. Jokkoo bi mu am ak yeneen tabax yu tarihi di yokk njariñam ci xam melokaanu dëkk bi.
+
+### Patrimoine
+
+Palaisu Gouverneur mooy benn ci màndargay fàttaliku ci période coloniale ak taariixu Saint-Louis. Aar ko ak denc nettaliam dafay dimbali ci xam taariixu dëkk bi.`,
+  },
+  'village-artisanal-de-soumbedioune-le-sanctuaire-de-lartisanat-senegalais-a-dakar': {
+    titleWo: 'Village artisanal bu Soumbédioune',
+    excerptWo: 'Bérab bu am solo ci Dakar, di wone ak di denc savoir-faire yu artisanat bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Village artisanal bu Soumbédioune nekk na ci Corniche Ouest bu Dakar, wetu géej gi, ci wetu Médina. Mooy benn ci vitrines yu mag yu artisanat bu Senegaal.
+
+### Nguuru ak sos
+
+Village bi sosu na ci njàngat yi ñu defoon ci début des années 1960, ci waxtu preparatifs Festival mondial des arts nègres. Mu yokk na ndaw yi ak artisans yi bérab ngir liggéey ak wone seen savoir-faire.
+
+### Savoir-faire
+
+Ci ateliers yi, artisans yi di liggéey ci maroquinerie, sculpture sur bois, bijouterie, poterie, vannerie ak yeneen métiers. Bérab bi di wone ne artisanat mooy patrimoine ak it secteur bu am solo ci économie.
+
+### Patrimoine ak tourisme
+
+Soumbédioune di jëme ci tourisme ak ci transmissionu savoir-faire. Gane yi man nañu gis liggéeyu artisans yi, seet objets yi ak gëna xam cosaanu artisanat bu Senegaal.`,
+  },
+  'coniagui-rites-et-savoir-faire-de-la-communaute-coniagui': {
+    titleWo: 'Coniagui — ay xew-xew ak savoir-faire',
+    excerptWo: 'Cosaan, pratiques sociales ak savoir-faire yu askanu Coniagui ci régionu Kédougou.',
+    contentWo: `### Jëmmal
+
+Cosaanu Coniagui boole na pratiques sociales, rites ak savoir-faire yu bokk ci patrimoine culturel immatériel bu Senegaal. Mu am solo ci régionu Kédougou.
+
+### Transmissionu cosaan
+
+Ay pratique yu Coniagui di jaar ci génération yi, jaarale ko ci waxtaan, njàng ak dundug askan. Rites ak savoir-faire yi di wone identité ak bokkute bu communauté bi.
+
+### Patrimoine culturel
+
+Xam-xam bi du rekk nettali yu yàgg. Mu boole it yoonu dund, jëfandikoo savoir-faire ak ay mbir yu am solo ci dundug communauté.
+
+### Denc ak transmission
+
+Denc cosaanu Coniagui dafay soxla documentation, njàngale ak jàppale transmissionu xam-xam bi ci xale yi ak génération yu ñëw. Patrimoine bii yokk na diversité culturelle bu Senegaal.`,
+  },
 };
