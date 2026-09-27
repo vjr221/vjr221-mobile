@@ -36,7 +36,7 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   'mafe': {
     titleWo: 'Mafé',
     excerptWo: 'Sauce bu arachide ak yàpp walla jën.',
-    contentWo: `### Jëmmal\n\nMafé mooy sauce bu arachide (tigadege), dañu koy toxal ak yàpp, jën walla vegetables. Lekk nañu ko ak ceeb.\n\n### Xibaar\n\nMafé dafa am solo ci këri yu Senegaal ak Afrique de l'Ouest. Netetou ak xorom yi dañu koy yokk neex.`,
+    contentWo: `### Jëmmal\n\nMafé mooy sauce bu arachide (tigadege), dañu koy toxal ak yàpp, jën walla vegetables. Lekk nañu ko ak ceeb.\n\n### Xibaar\n\nMafé dafa am solo ci këri yu Senegaal ak Afrique de l’Ouest. Netetou ak xorom yi dañu koy yokk neex.`,
   },
   'domoda': {
     titleWo: 'Domoda',
