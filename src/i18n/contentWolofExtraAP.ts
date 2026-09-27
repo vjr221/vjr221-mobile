@@ -3,21 +3,6 @@ import type { ContentItem } from '../types/content';
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 export const CONTENT_WO_EXTRA_AP: Record<string, WolofContent> = {
-  'festival-national-arts-cultures-fesnac': {
-    titleWo: 'Festival national des Arts et Cultures (FESNAC)',
-    excerptWo: 'Festivaal bu réew mi di wone aada ak arts yu wuute yu Senegaal.',
-    contentWo: `### Jëmmal
-
-FESNAC mooy manifestasyon bu ñuy def benn yoon ci ñaari at, ngir wone aada ak arts yu wuute yu Senegaal. Tambaliku na ci Thiès ci 1997.
-
-### Aada ak arts
-
-Festivaal bi dafa yokk xam-xam ak wone ci aada yu réew mi, arts yi ak liggéeyu artistes yi ci réew mi.
-
-### Développement local
-
-FESNAC dafa mën a yokk tourisme intérieur ak initiatives culturelles ci dëkk ak terroirs yu wuute.`,
-  },
   'le-ndepp': {
     titleWo: 'Ndëpp',
     excerptWo: 'Jébbalu Lébou bu yàgg, jëm ci wér-gu-yaramu ruu, setal ak jàmmu askan.',
