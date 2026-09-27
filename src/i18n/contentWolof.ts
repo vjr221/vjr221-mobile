@@ -143,7 +143,7 @@ const CONTENT_WO_CORE: Record<string, WolofContent> = {
   'fleuve-senegal-patrimoine-naturel': {
     titleWo: 'Dexu Senegaal',
     excerptWo: 'Patrimoine naturel ak axe historique bu norte.',
-    contentWo: `### Jëmmal\n\nDexu Senegaal mooy benn ci dex yu mag yu Afrique de l'Ouest. Ndar, Matam, Bakel ak tool yu wàllu dex gi.`,
+    contentWo: `### Jëmmal\n\nDexu Senegaal mooy benn ci dex yu mag yu Afrique de l’Ouest. Ndar, Matam, Bakel ak tool yu wàllu dex gi.`,
   },
   'lac-guiers-patrimoine-naturel': {
     titleWo: 'Lac de Guiers',
