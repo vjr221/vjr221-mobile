@@ -79,4 +79,49 @@ Roman yi mu bind am nañu solo ci littérature africaine francophone. Style bi d
 
 Téere yi mu bind jàppale nañu ci xelal mbirum identité ak xaalis bu nit ki ci société.`,
   },
+  'mariama-ba-ecrivaine-senegalaise': {
+    titleWo: 'Mariama Bâ — bindkat bu Senegaal',
+    excerptWo: 'Bindkat bu Senegaal bu am solo ci littérature africaine francophone, xam ko rawatina ci So Long a Letter.',
+    contentWo: `### Jëmmal
+
+Mariama Bâ nekk na bindkat bu Senegaal, te bindam dafa jëm ci dundinu jigéen, njaboot, société ak xew-xew yu askan.
+
+### Téere
+
+So Long a Letter (Une si longue lettre) mooy ci téere yi gën a xam ci bindkat bi. Téere bi dafa jëfandikoo bataaxal ngir wax ci amitié, mariage, perte ak xaalis bu jigéen ci société.
+
+### Héritage
+
+Liggéeyu Mariama Bâ bokk na ci littérature bu Senegaal ak ci yëgle mbirum njaboot ak xaalis bu jigéen.`,
+  },
+  'birago-diop-poete-et-ecrivain-senegalais': {
+    titleWo: 'Birago Diop — poète ak bindkat bu Senegaal',
+    excerptWo: 'Poète, conteur ak vétérinaire bu Senegaal, xam nañu ko ci Les Contes d’Amadou Koumba ak bindam ci oralité.',
+    contentWo: `### Jëmmal
+
+Birago Diop nekk na poète, écrivain ak conteur bu Senegaal. Mu jëfandikoo lu bari ci oralité ak cosaan yi ci bindam.
+
+### Contes ak poésie
+
+Les Contes d’Amadou Koumba bokk nañu ci téere yi gën a xam ci liggéeyam. Contes yi dañuy wone xam-xam, ndigal, mbind mi ak imagination bu oralité africaine.
+
+### Héritage
+
+Birago Diop am na solo ci bind ak aar patrimoine oral. Poésieem ak contesam jàppale nañu ci wéy ak yeggali cosaan yi.`,
+  },
+  'cheikh-hamidou-kane-ecrivain-senegalais': {
+    titleWo: 'Cheikh Hamidou Kane — bindkat bu Senegaal',
+    excerptWo: 'Bindkat bu Senegaal bu xam nekk ci littérature africaine francophone, rawatina ci L’Aventure ambiguë.',
+    contentWo: `### Jëmmal
+
+Cheikh Hamidou Kane nekk na bindkat bu Senegaal. Bindam dafa jëm ci jàng, identité, diine, modernité ak diggante cosaan ak yoon yu bees.
+
+### L’Aventure ambiguë
+
+L’Aventure ambiguë mooy téereem bu gën a xam. Roman bi dafa wone jafe-jafe yu nit ki di daje ci diggante njàng bu cosaan ak njàng bu occidental.
+
+### Solo ci littérature
+
+Téere bi bokk na ci classiques yu littérature africaine francophone, te dafay may xel ci mbirum identité ak modernité.`,
+  },
 };
