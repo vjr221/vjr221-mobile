@@ -31,6 +31,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraX.ts',
   'contentWolofExtraY.ts',
   'contentWolofExtraZ.ts',
+  'contentWolofExtraAA.ts',
 ];
 
 /**
@@ -120,6 +121,11 @@ describe('Wolof fiche translations', () => {
     'phare-des-mamelles-dakar',
     'crocodile-du-nil-faune-des-zones-humides-du-senegal',
     'palais-de-la-republique-du-senegal',
+    'les-ethnies-du-senegal',
+    'le-conte-au-senegal-oralite-transmission-et-patrimoine-vivant',
+    'le-palor-langue-cangin-patrimoine-serere-pays-thiessois',
+    'reseau-des-musees-et-etablissements-culturels-publics-du-senegal',
+
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
