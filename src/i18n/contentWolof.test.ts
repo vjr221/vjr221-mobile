@@ -473,6 +473,16 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the verified urban music wave 48', () => {
+    for (const slug of ['carlou-d', 'sister-fa', 'fou-malade', 'keyti', 'daara-j-family']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
