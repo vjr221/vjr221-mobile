@@ -898,4 +898,80 @@ Bérab bu juddug nit ku am solo ci histoire man na nekk espaceu mémoire. Denc k
 
 Gan ñi ak jàngkat yi man nañu jëfandikoo bérab bi ngir gëna xam dund, nettali ak patrimoine bi lëkkale ak Senghor.`,
   },
+  'musee-boribana': {
+    titleWo: 'Musée Boribana',
+    excerptWo: 'Bérab artistique bu Dakar bu lëkkale création, exposition ak wone arts contemporains.',
+    contentWo: `### Jëmmal
+
+Musée Boribana bokk na ci bérab yi di wone arts ak création ci Dakar. Mu jox artistes ak public benn espaceu exposition ak découverte.
+
+### Art ak création
+
+Muze bi di jëfandikoo expositions ngir wone œuvres yu artists yu wuute. Mu bokk na ci dundug scène artistique bu Dakar.
+
+### Transmission
+
+Expositions ak activitésu médiation man nañu dimbali public bi ci gëna xam œuvres ak démarches artistiques. Bérab yi mel nii di yokk jokkoo diggante artists ak gan ñi.
+
+### Patrimoine contemporain
+
+Denc lieuxu création ak mémoire artistique am na solo ci patrimoine contemporain bu Senegaal. Muze bi bokk na ci paysage culturel bu Dakar.`,
+  },
+  'centre-dinterpretation-du-delta-du-saloum': {
+    titleWo: 'Centre d’interprétation du Delta du Saloum',
+    excerptWo: 'Bérab bu jàngale ak wone patrimoine naturel ak culturel bu Delta du Saloum.',
+    contentWo: `### Jëmmal
+
+Centre d’interprétation du Delta du Saloum jëm na ci jàngale ak wone richesseu environnement ak patrimoine bu Delta du Saloum.
+
+### Nature ak territoire
+
+Delta bi boole na bolongs, mangroves, îles ak zonesu wetug ndox. Milieu bii am na solo ci dundug populations ak biodiversité.
+
+### Culture ak savoir-faire
+
+Centre bi man na dimbali ci xam cosaan, savoir-faire ak yoonu dund yu lëkkale ak territoire bu Delta du Saloum. Patrimoine naturel ak culturel di jokkoo ci dundug communities.
+
+### Jàngale ak sensibilisation
+
+Jàngale visiteurs ci valeur patrimoine bi bokk na ci missionu centre bi. Xam environnement ak cosaan di dimbali ci denc ak toppatoo territoire bi.`,
+  },
+  'mosquee-de-divinity': {
+    titleWo: 'Mosquée de Divinity',
+    excerptWo: 'Bérab bu religioŋ ak patrimoine bu Dakar, lëkkale ak dundug communauté musulmane.',
+    contentWo: `### Jëmmal
+
+Mosquée de Divinity bokk na ci patrimoine religieux bu Dakar. Mu nekk na ci bérab bu ñuy jëfandikoo ci julli ak dundug communauté.
+
+### Architecture ak espace religieux
+
+Mosquée bi di boole fonctionu julli ak melokaanu architectureu bérab bi. Tabax ak espace yi di bokk ci paysageu dëkk bi.
+
+### Patrimoine
+
+Bérab yi mel ni mosquée yi di wone bokkuteu diine ak histoireu communities. Denc patrimoine religieux dafay dimbali ci xam diversitéu culture ak dundug Dakar.
+
+### Dundug communauté
+
+Mosquée di nekk it espaceu rencontre, waxtaan ak bokkute. Mu bokk ci yoonu dundug nit ñi ci quartier bi.`,
+  },
+  'chateau-de-saint-louis': {
+    titleWo: 'Château bu Saint-Louis',
+    excerptWo: 'Tabax bu historique ci île bu Saint-Louis, bokk ci patrimoine architectural bu dëkk bi.',
+    contentWo: `### Jëmmal
+
+Château bu Saint-Louis bokk na ci tabax yu am solo ci patrimoine architectural bu île bu Saint-Louis. Mu bokk ci paysageu historique bu dëkk bi.
+
+### Architecture ak histoire
+
+Tabax bi di wone ay melokaan yu lëkkale ak architectureu Saint-Louis ak ay jamono yu dëkk bi jaar. Mu bokk ci tissu urbain bu île bi.
+
+### Mémoire
+
+Tabax yu tarihi di jox ay repères ci soppi yu dëkk bi ak ci dundug populations. Château bi bokk na ci nettaliu patrimoine bu Saint-Louis.
+
+### Denc patrimoine
+
+Aar tabax yi ak dokumente seen histoire di dimbali ci transmissionu mémoire. Patrimoine architectural bu Saint-Louis am na solo ci identitéu dëkk bi.`,
+  },
 };
