@@ -178,15 +178,15 @@ describe('Wolof fiche translations', () => {
     }
   });
 
-
-
   it('rejects the known ASCII apostrophe regression in Wolof copy', () => {
     for (const slug of getWolofContentKeys()) {
       const fiche = getWolofContentBySlug(slug);
       const text = [fiche?.titleWo, fiche?.excerptWo, fiche?.contentWo].filter(Boolean).join('\\n');
       expect(text).not.toContain("d'année");
     }
-  });\n  it('exposes the phase 1 fiche translations with all required fields', () => {
+  });
+
+  it('exposes the phase 1 fiche translations with all required fields', () => {
     for (const slug of slugs) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
