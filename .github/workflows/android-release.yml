@@ -161,5 +161,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="android-v${APP_VERSION}-${GITHUB_SHA::7}"
-          NOTES="APK Android VJR 221 ${APP_VERSION} (versionCode 19). Commit ${GITHUB_SHA}. Consolidation 1.6.0 : monitoring post-render, GPS défensif (Près de moi), À découvrir ici, Wolof CMS 14 régions. Pre-release jusqu’à matrice appareils complète."
-          gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android ${APP_VERSION}" --notes "$NOTES" --prerelease
+          NOTES="APK Android VJR 221 ${APP_VERSION} (versionCode 19). Commit ${GITHUB_SHA}. Monitoring post-render, GPS défensif (Près de moi), À découvrir ici, Wolof CMS + pack local. Release publique sideload."
+          gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android ${APP_VERSION}" --notes "$NOTES" --latest
