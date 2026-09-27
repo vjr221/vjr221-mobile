@@ -4,17 +4,14 @@
 
 Étendre progressivement la traduction Wolof des fiches affichées dans l'application mobile VJR 221, sans modifier le contenu français et sans casser le mode hors ligne.
 
-## État de départ — 26 septembre 2026
+## État actualisé — 27 septembre 2026
 
 - Application : ligne 1.5.0, architecture préparant la 1.6.0.
 - Interface FR/Wolof : déjà opérationnelle.
 - Source prioritaire en ligne : WordPress, champs `title_wo`, `excerpt_wo`, `content_wo`.
 - Repli hors ligne : fichiers `src/i18n/contentWolof*.ts`.
-- Couverture locale existante : **142 fiches** réparties dans :
-  - `contentWolof.ts` : 35
-  - `contentWolofExtra.ts` : 40
-  - `contentWolofExtraB.ts` : 38
-  - `contentWolofExtraC.ts` : 29
+- Couverture locale existante : **300 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraH.ts`.
+- Contrôle de couverture actuel : **300 clés uniques, 0 doublon**.
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
 
