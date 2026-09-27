@@ -40,6 +40,15 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraAG.ts',
   'contentWolofExtraAH.ts',
   'contentWolofExtraAI.ts',
+  'contentWolofExtraAJ.ts',
+  'contentWolofExtraAK.ts',
+  'contentWolofExtraAL.ts',
+  'contentWolofExtraAM.ts',
+  'contentWolofExtraAN.ts',
+  'contentWolofExtraAO.ts',
+  'contentWolofExtraAP.ts',
+  'contentWolofExtraAQ.ts',
+  'contentWolofExtraAR.ts',
 ];
 
 /**
@@ -505,6 +514,56 @@ describe('Wolof fiche translations', () => {
 
   it('covers the verified cinema wave 51', () => {
     for (const slug of ['marieme-myriam-niang', 'rohkaya-niang', 'mati-diop', 'djibril-diop-mambety']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+
+  it('covers the verified culture and institutions wave 52', () => {
+    for (const slug of [
+      'le-ndepp',
+      'centre-culturel-regional-de-sedhiou',
+      'direction-arts-senegal',
+    ]) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+    expect(getWolofContentBySlug('festival-national-arts-cultures-fesnac')).toBeDefined();
+  });
+
+  it('covers the verified regional culture wave 53', () => {
+    for (const slug of [
+      'fesnac-a-kaffrine-arts-et-cultures-du-senegal',
+      'festival-international-de-sedhiou-diversite-culturelle-du-pakao',
+      'federation-regionale-des-artistes-et-acteurs-culturels-de-sedhiou',
+      'ligue-matam-slam',
+      'federation-regionale-des-acteurs-culturels-de-kaffrine-ferack',
+      'festival-international-de-jazz-de-saint-louis-rendez-vous-musical-majeur-d-afrique-de-l-ouest',
+    ]) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified culture, territory and literature wave 54', () => {
+    for (const slug of [
+      'fatou-cisse-choregraphe',
+      'andreya-ouamba-choregraphe-fondateur-de-la-compagnie-1er-temps',
+      'mame-birame-diouf',
+      'kolibantang',
+      'lamine-konte-griot-virtuose-de-la-kora',
+      'nafissatou-dia-diouf',
+    ]) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
