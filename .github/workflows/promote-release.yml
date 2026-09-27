@@ -1,0 +1,27 @@
+name: Promote Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag de la release à promouvoir (ex. android-v1.6.0-1ea26db)
+        required: true
+        default: android-v1.6.0-1ea26db
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Promote to latest stable
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG="${{ github.event.inputs.tag }}"
+          echo "Promoting $TAG → latest (prerelease=false)"
+          gh release edit "$TAG" --repo "${GITHUB_REPOSITORY}" --prerelease=false --latest \
+            --notes "APK Android VJR 221 1.6.0 (versionCode 19). Commit 1ea26dbe0ef870772fc740170f73d0b2192e26b4. Monitoring post-render, GPS défensif (Près de moi), À découvrir ici, Wolof CMS + pack local. Release publique sideload — validée sur 2 appareils."
+          gh release view "$TAG" --repo "${GITHUB_REPOSITORY}" --json tagName,isPrerelease,isLatest,url
