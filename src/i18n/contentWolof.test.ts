@@ -21,6 +21,10 @@ describe('Wolof fiche translations', () => {
     'betenty',
     'joal-fadiouth',
     'gare-de-dakar-la-porte-dentree-historique-du-chemin-de-fer-dakar-niger',
+    'ecomusee-diakhao',
+    'musee-mbiin-ndiogoye-de-joal-memoire-et-patrimoine-de-joal-fadiouth',
+    'ecomusee-du-commerce-fluvial-de-podor-memoire-du-fleuve-senegal',
+    'musee-des-forces-armees-du-senegal-memoire-militaire-et-histoire-nationale',
   ];
 
   it('has no duplicate local keys', () => {
