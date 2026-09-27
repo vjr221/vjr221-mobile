@@ -54,7 +54,7 @@ Maison bi dafay may solo ci njàngat ak jeunes, te dafa jàppale ci aar patrimoi
     excerptWo: 'Poète, penseur ak premier président bu République du Sénégal, te am na solo ci littérature francophone ak Négritude.',
     contentWo: `### Jëmmal
 
-Léopold Sédar Senghor nekk na poète, penseur ak homme d'État bu Senegaal. Mu doon premier président bu République du Sénégal, te bind na ci littérature francophone.
+Léopold Sédar Senghor nekk na poète, penseur ak homme d’État bu Senegaal. Mu doon premier président bu République du Sénégal, te bind na ci littérature francophone.
 
 ### Négritude ak littérature
 
