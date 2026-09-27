@@ -140,6 +140,10 @@ describe('Wolof fiche translations', () => {
     'aminata-fall-chanteuse-senegalaise',
     'daara-j-family',
     'mamy-victory',
+    'baidy-ba',
+    'pape-faye',
+    'omar-seck',
+    'marieme-myriam-niang-icone-du-cinema-senegalais',
   ];
 
   it('has no duplicate local keys', () => {
