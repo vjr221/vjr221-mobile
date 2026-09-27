@@ -1316,4 +1316,156 @@ Poésieam bokk na ci histoireu littérature africaine ak ci yëngu-yëngu bu cr�
 
 Liggeyam di wéy ci jàngat ak xam littérature africaine ak nettaliu histoire.`,
   },
+  'ken-bugul': {
+    titleWo: 'Ken Bugul',
+    excerptWo: 'Bindkat bu Senegaal, benn ci ay voix yu wute ci littérature africaine.',
+    contentWo: `### Jëmmal
+
+Ken Bugul mooy benn ci ay bindkat yu Senegaal yi am solo ci littérature africaine contemporaine.
+
+### Mbind
+
+Œuvresam di wone ay expérience, xalaat ak dundug nit, te di bokk ci littérature bu Senegaal ci espaceu francophone.
+
+### Identité ak société
+
+Mbind di waxtaan ci identité, relation ak société ak ay expérience yu dund.
+
+### Héritage
+
+Liggeyam di yokk diversitéu voix yi ci littérature africaine.`,
+  },
+  'cheikh-aliou-ndao': {
+    titleWo: 'Cheikh Aliou Ndao',
+    excerptWo: 'Poète, romancier ak dramaturge bu Senegaal, bokk ci littérature bu français ak Wolof.',
+    contentWo: `### Jëmmal
+
+Cheikh Aliou Ndao mooy poète, romancier ak dramaturge bu Senegaal. Mu bokk ci littérature bu français ak Wolof.
+
+### Mbind ak théâtre
+
+Liggeyam boole na poésie, roman ak théâtre. Mu jëfandikoo ay forme yu wuute ngir nettali histoire ak dundug société.
+
+### Làkk Wolof
+
+Jëfandikoo Wolof ci littérature di yokk feeñal làkk ak patrimoine culturel bu Senegaal.
+
+### Héritage
+
+Liggeyam di bokk ci transmissionu littérature ak diversitéu baat yi ci réew mi.`,
+  },
+  'boubacar-boris-diop': {
+    titleWo: 'Boubacar Boris Diop',
+    excerptWo: 'Romancier, essayiste ak intellectuel bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Boubacar Boris Diop mooy romancier, essayiste ak intellectuel bu Senegaal, benn ci ay voix yu am solo ci littérature bu contemporain.
+
+### Roman ak xalaat
+
+Mbindam di lëkkale nettali, xalaat ak gëstu ci mbirum société, histoire ak mémoire.
+
+### Làkk ak patrimoine
+
+Liggeyu mbind ci français ak yëngu-yëngu ci Wolof di bokk ci waxtaanu làkk ak identité.
+
+### Transmission
+
+Œuvres ak xalaat yi di dimbali ci denc mémoire ak yokk xam-xamu littérature bu Senegaal.`,
+  },
+  'birago-diop': {
+    titleWo: 'Birago Diop',
+    excerptWo: 'Bindkat, poète ak vétérinaire bu Senegaal, xam-xamkat bu oralité africaine.',
+    contentWo: `### Jëmmal
+
+Birago Diop mooy vétérinaire, diplomate ak bindkat bu Senegaal. Mu am na solo ci mbind ak oralité africaine.
+
+### Contes ak oralité
+
+Mu bind ak yóbbu ay nettali yu lëkkale ak tradition orale. Contes yi di denc xam-xam ak xel mu ñu yóbbu ci wax.
+
+### Littérature
+
+Poésie ak contesam bokk nañu ci patrimoineu littérature africaine francophone.
+
+### Héritage
+
+Liggeyam di dimbali ci denc ak transmissionu patrimoine oral ak culturel bu Aferik.`,
+  },
+  'aminata-sow-fall': {
+    titleWo: 'Aminata Sow Fall',
+    excerptWo: 'Bindkat bu Senegaal, benn ci pionnières yu littérature africaine francophone.',
+    contentWo: `### Jëmmal
+
+Aminata Sow Fall mooy bindkat bu Senegaal ak benn ci ay voix yu am solo ci littérature africaine francophone.
+
+### Mbind ak société
+
+Roman yi di seet dundug société, relation yu diggante nit ñi ak ay soppi yu xew.
+
+### Littérature bu jigéen
+
+Liggeyam bokk na ci feeñal voixu jigéen ci littérature africaine.
+
+### Héritage
+
+Œuvres yi di bokk ci patrimoine littéraire bu Senegaal ak Aferik.`,
+  },
+  'fatou-diome': {
+    titleWo: 'Fatou Diome',
+    excerptWo: 'Romancière bu Senegaal, xam-xamkat ci mbirum migration ak identité.',
+    contentWo: `### Jëmmal
+
+Fatou Diome mooy romancière bu Senegaal. Mbindam di waxtaan ci migration, identité ak expérienceu diaspora.
+
+### Littérature ak migration
+
+Roman yi di nettali yoonu nit ñi diggante Senegaal ak bitim réew, ak ay mbir yu jëm ci identité.
+
+### Diaspora
+
+Liggeyam di jox benn baat ci expérienceu diaspora ak relationu diggante réew ak dëkk yi ñu dem.
+
+### Héritage
+
+Mbindam di bokk ci littérature bu Senegaal ci scène francophone internationale.`,
+  },
+  'felwine-sarr': {
+    titleWo: 'Felwine Sarr',
+    excerptWo: 'Économiste, écrivain ak intellectuel bu Senegaal, bokk ci xalaat ci Aferik.',
+    contentWo: `### Jëmmal
+
+Felwine Sarr mooy économiste, écrivain ak intellectuel bu Senegaal. Liggeyam lëkkale économie, xalaat ak culture.
+
+### Xalaat ci Aferik
+
+Mbind ak xalaatam di waxtaan ci yoonu Aferik, développement ak placeu savoir.
+
+### Littérature ak culture
+
+Ci mbind, mu di lëkkale xalaat ak nettali ngir seet identité ak aveniru sociétés africaines.
+
+### Transmission
+
+Liggeyu intellectuels yi di dimbali ci yokk waxtaanu xam-xam ak xalaat ci Aferik.`,
+  },
+  'souleymane-bachir-diagne': {
+    titleWo: 'Souleymane Bachir Diagne',
+    excerptWo: 'Philosophe ak universitaire bu Senegaal, figure bu xalaat intellectuel africain.',
+    contentWo: `### Jëmmal
+
+Souleymane Bachir Diagne mooy philosophe ak universitaire bu Senegaal, te liggeyam bokk na ci xalaat intellectuel africain.
+
+### Philosophie
+
+Gëstu ci philosophieam di lëkkale xalaat, savoir ak histoireu idées.
+
+### Université ak transmission
+
+Liggeyu universitaire di dimbali ci jàngale ak transmissionu xam-xam ci génération yi.
+
+### Rayonnement
+
+Xalaat ak gëstu yi di yokk feeñal contributionsu xamkat yu Senegaal ci monde intellectuel.`,
+  },
 };
