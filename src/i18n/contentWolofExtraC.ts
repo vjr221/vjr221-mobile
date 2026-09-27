@@ -510,4 +510,65 @@ Muze bi du rekk bérab bu ñuy gis ay objets. Mu bokk na ci yoonu jàngale ci ta
 
 Patrimoine militaire war nañu ko denc ci yoon wu dëgg, te xamle ko ak sources yu wóor. Muze bi man na dimbali xale yi, jàngkat yi ak gan ñi ci gëna xam taariixu réew mi.`,
   },
+  'fort-de-podor': {
+    titleWo: 'Fort bu Podor',
+    excerptWo: 'Monument historique ci wetug dexu Senegaal, témoinu commerce ak taariixu Fouta-Toro.',
+    contentWo: `### Jëmmal
+
+Fort bu Podor mooy benn ci monument yu am solo ci norte Senegaal. Mu nekk ci wetu dexu Senegaal, ci dëkk Podor, te dafay wone ay téeméeri at yu taariixu commerce, militaire ak politique ci vallée bi.
+
+### Podor ak dex gi
+
+Fort bi nekk na ci bérab bu am solo ngir toppatoo yooni ndox ak jokkoo yu lëkkale intérieuru réew mi ak géej gi. Dexu Senegaal doon na yoon wu mag ci transport, commerce ak jokkoo.
+
+### Fonction militaire ak commerce
+
+Ci jamono ju colonial, fort bi amoon na rôle ci seetlu dex gi, aar yoonu commerce ak toppatoo échanges. Produits yi ñuy jëfandikoo ci échanges bokk nañu ci gomme arabique, céréales, meew ak liggéeyu loxo.
+
+### Patrimoine
+
+Fort bu Podor mooy bérab bu fàttaliku ci histoireu Fouta-Toro, architecture militaire ak commerce fluvial. Aar tabax bi ak xam nettali bi man na dimbali ci jàngale taariixu vallée bi.
+
+### Turismu ak jàngale
+
+Gan ñi man nañu seet fort bi, gis dex gi ak xam yoonu commerce ak jokkoo yi doon dox ci Podor. Bérab bi man na it dimbali jàngkat yi ci histoireu commerce fluvial ak jamono colonial.`,
+  },
+  'cathedrale-du-souvenir-africain-dakar': {
+    titleWo: 'Cathédrale du Souvenir Africain bu Dakar',
+    excerptWo: 'Bérab bu mag ci Plateau, patrimoine religieux ak fàttaliku ci histoireu Dakar.',
+    contentWo: `### Jëmmal
+
+Cathédrale du Souvenir Africain, te ñuy woowe ko it Notre-Dame-des-Victoires, nekk na ci Plateau ci Dakar. Mooy benn ci bérab yu am solo ci dundug katolik bu Senegaal.
+
+### Taarixu tabax bi
+
+Projet bi tàmbalee na ci 1910. Benn ci xew-xew yi am solo mooy poseu première pierre ci 11 novembre 1922. Tabax bi ñu ko defar ak melokaan yu lëkkale architecture soudanaise ak byzantine, ak ay jumtukaay yu jóge Afrique ak Europe.
+
+### Fàttaliku
+
+Cathédrale bi am na solo ci fàttaliku réew mi. Ci 2001, obsequesu Léopold Sédar Senghor, présidentu njëkk bu Senegaal, amoon na fa. Cardinal Hyacinthe Thiandoum it nekk na fa ci tomb.
+
+### Bokkute ci dundug dëkk bi
+
+Bérab bi di wone benn pàcc ci patrimoine religieux bu Dakar ak ci bokkute diine. Mu nekk na ci wetu Grande Mosquée de Dakar, di wone jokkoo ak bokkute yu am ci réew mi.`,
+  },
+  'musee-theodore-monod-d-art-africain': {
+    titleWo: 'Musée Théodore Monod bu Art Africain',
+    excerptWo: 'Muze bu Dakar bu denc, di gëstu ak di wone patrimoine artistique ak culturel bu Afrique.',
+    contentWo: `### Jëmmal
+
+Musée Théodore Monod bu Art Africain nekk na ci Dakar te bokk na ci institutions muséales yu yàgg ci Afrique de l'Ouest. Mu jëm ci denc, gëstu ak wone arts traditionnels africains.
+
+### IFAN ak Théodore Monod
+
+Muze bi sosu na ci cadre bu Institut Fondamental d'Afrique Noire (IFAN). Turu Théodore Monod ñu jox ko ngir fàttaliku gëstu-kat ak explorateur bi liggéeyoon ci xam Afrique.
+
+### Collections
+
+Collections yi boole nañu ay objets ak savoir-faire yu wuute, mel ni textile, bois, métal ak vannerie. Muze bi may na ñu gëna xam expressions artistiques ak cosaan yu wuute ci kontinaŋ Afrique.
+
+### Jàng ak patrimoine
+
+Muze bi di dimbali ci recherche, njàngale ak transmission. Jàngkat, chercheurs, gan ñi ak nit ñi ci wàllu culture man nañu ko jëfandikoo ngir gëna xam patrimoine bu Afrique.`,
+  },
 };
