@@ -25,6 +25,9 @@ describe('Wolof fiche translations', () => {
     'musee-mbiin-ndiogoye-de-joal-memoire-et-patrimoine-de-joal-fadiouth',
     'ecomusee-du-commerce-fluvial-de-podor-memoire-du-fleuve-senegal',
     'musee-des-forces-armees-du-senegal-memoire-militaire-et-histoire-nationale',
+    'fort-de-podor',
+    'cathedrale-du-souvenir-africain-dakar',
+    'musee-theodore-monod-d-art-africain',
   ];
 
   it('has no duplicate local keys', () => {
