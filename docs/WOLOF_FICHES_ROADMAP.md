@@ -97,8 +97,9 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - **Vague 23 : 3 fiches culture/histoire vérifiées ajoutées** — Fodé Kaba Doumbouya, Yeela et patrimoine diola de Casamance.
 - **Vague 24 : 3 fiches nature/culture vérifiées ajoutées** — Musée Boribana, Parc national des Îles de la Madeleine et Réserve ornithologique de Kalissaye.
 - **Vague 25 : 3 fiches nature/territoire vérifiées ajoutées** — Réserve naturelle communautaire de Tocc-Tocc, Parc national de la Basse-Casamance et Île de Karabane.
+- **Vague 26 : 3 fiches nature vérifiées ajoutées** — Parc national des Oiseaux du Djoudj, Réserve de Fathala et Parc national de la Langue de Barbarie. Séléki et Camp de Simenti ont été vérifiés comme déjà disponibles/couverts séparément et n’ont pas été dupliqués.
 - Une fiche candidate déjà présente dans le corpus (`cafe-touba`) a été détectée et n'a pas été dupliquée.
-- **État local : 321 fiches / 321 clés uniques / 0 doublon.**
+- **État local : 324 fiches / 324 clés uniques / 0 doublon.**
 - Régression `d'année` : 0 occurrence.
 - Apostrophe ASCII entre lettres : 0 occurrence.
 - La fiche Douta Seck déjà présente dans le corpus a été détectée et non dupliquée lors de la vague 19.
