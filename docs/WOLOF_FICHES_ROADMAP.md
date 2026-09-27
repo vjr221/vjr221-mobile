@@ -10,7 +10,7 @@
 - Interface FR/Wolof : déjà opérationnelle.
 - Source prioritaire en ligne : WordPress, champs `title_wo`, `excerpt_wo`, `content_wo`.
 - Repli hors ligne : fichiers `src/i18n/contentWolof*.ts`.
-- Couverture locale existante : **315 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraM.ts`.
+- Couverture locale existante : **318 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraM.ts`.
 - Contrôle de couverture actuel : **315 clés uniques, 0 doublon**.
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
@@ -95,8 +95,9 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - **Vague 21 : 3 fiches nature/mémoire vérifiées ajoutées** — Île d’Egueye, Désert de Lompoul et Boubacar Joseph Ndiaye.
 - **Vague 22 : 3 fiches nature/patrimoine vérifiées ajoutées** — Chutes de Dindéfélo, Wanar et Réserve naturelle communautaire de Palmarin.
 - **Vague 23 : 3 fiches culture/histoire vérifiées ajoutées** — Fodé Kaba Doumbouya, Yeela et patrimoine diola de Casamance.
+- **Vague 24 : 3 fiches nature/culture vérifiées ajoutées** — Musée Boribana, Parc national des Îles de la Madeleine et Réserve ornithologique de Kalissaye.
 - Une fiche candidate déjà présente dans le corpus (`cafe-touba`) a été détectée et n'a pas été dupliquée.
-- **État local : 315 fiches / 315 clés uniques / 0 doublon.**
+- **État local : 318 fiches / 318 clés uniques / 0 doublon.**
 - Régression `d'année` : 0 occurrence.
 - Apostrophe ASCII entre lettres : 0 occurrence.
 - La fiche Douta Seck déjà présente dans le corpus a été détectée et non dupliquée lors de la vague 19.
