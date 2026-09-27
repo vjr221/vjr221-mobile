@@ -27,6 +27,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraT.ts',
   'contentWolofExtraU.ts',
   'contentWolofExtraV.ts',
+  'contentWolofExtraW.ts',
 ];
 
 /**
@@ -96,6 +97,10 @@ describe('Wolof fiche translations', () => {
     'les-metiers-de-la-forge-a-kaffrine-un-savoir-faire-artisanal-du-ndoucoumane',
     'chambre-de-commerce-de-dakar-architecture-coloniale-place-de-lindependance',
     'village-d-iwol-patrimoine-bedik-et-paysage-de-kedougou',
+    'reserve-de-bandia',
+    'camp-de-simenti-porte-dentree-du-parc-national-du-niokolo-koba',
+    'reserve-speciale-faune-gueumbeul',
+    'la-galerie-nationale-des-arts-du-senegal',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
