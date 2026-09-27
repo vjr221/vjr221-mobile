@@ -18,6 +18,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraK.ts',
   'contentWolofExtraL.ts',
   'contentWolofExtraM.ts',
+  'contentWolofExtraN.ts',
 ];
 
 /**
@@ -262,6 +263,16 @@ describe('Wolof fiche translations', () => {
 
   it('covers the verified nature heritage wave', () => {
     for (const slug of ['chutes-de-dindefelo', 'wanar-necropole-megalithique-patrimoine-mondial', 'la-reserve-naturelle-communautaire-de-palmarin']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified nature and culture wave N', () => {
+    for (const slug of ['musee-boribana-art-africain-ile-de-goree', 'parc-national-des-iles-de-la-madeleine', 'reserve-ornithologique-kalissaye']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
