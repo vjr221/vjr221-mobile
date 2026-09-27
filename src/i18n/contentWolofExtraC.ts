@@ -2019,4 +2019,384 @@ Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diver
 
 Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
   },
+  'ahmad-faye': {
+    titleWo: 'Ahmad Faye',
+    excerptWo: 'Athlète bu Senegaal, spécialiste saut en longueur, bokk ci compétitions internationales.',
+    contentWo: `### Jëmmal
+
+Athlète bu Senegaal, spécialiste saut en longueur, bokk ci compétitions internationales.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'amath-faye': {
+    titleWo: 'Amath Faye',
+    excerptWo: 'Athlète bu Senegaal, spécialiste triple saut ak saut en longueur.',
+    contentWo: `### Jëmmal
+
+Athlète bu Senegaal, spécialiste triple saut ak saut en longueur.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'combe-seck': {
+    titleWo: 'Combé Seck',
+    excerptWo: 'Céiste bu Senegaal, bokk ci canoë-kayak de course en ligne.',
+    contentWo: `### Jëmmal
+
+Céiste bu Senegaal, bokk ci canoë-kayak de course en ligne.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'edmond-sanka': {
+    titleWo: 'Edmond Sanka',
+    excerptWo: 'Para-kayakiste bu Senegaal, bokk ci développementu canoë ak para-canoë.',
+    contentWo: `### Jëmmal
+
+Para-kayakiste bu Senegaal, bokk ci développementu canoë ak para-canoë.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'brancou-badio': {
+    titleWo: 'Brancou Badio',
+    excerptWo: 'International bu Senegaal ci basketball, meneur ak capitaineu équipe nationale.',
+    contentWo: `### Jëmmal
+
+International bu Senegaal ci basketball, meneur ak capitaineu équipe nationale.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'louis-francois-mendy': {
+    titleWo: 'Louis-François Mendy',
+    excerptWo: 'Athlète bu Senegaal, spécialiste 110 mètres haies.',
+    contentWo: `### Jëmmal
+
+Athlète bu Senegaal, spécialiste 110 mètres haies.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'moussa-niakhate': {
+    titleWo: 'Moussa Niakhaté',
+    excerptWo: 'Défenseur international bu Senegaal, bokk ci équipe nationale.',
+    contentWo: `### Jëmmal
+
+Défenseur international bu Senegaal, bokk ci équipe nationale.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'pape-thiaw': {
+    titleWo: 'Pape Thiaw',
+    excerptWo: 'Joueur international bu Senegaal, bokk ci génération 2002, toppatoo équipe nationale.',
+    contentWo: `### Jëmmal
+
+Joueur international bu Senegaal, bokk ci génération 2002, toppatoo équipe nationale.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'habib-diallo': {
+    titleWo: 'Habib Diallo',
+    excerptWo: 'Attaquant international bu Senegaal, formé ci Génération Foot ak passé ci football européen.',
+    contentWo: `### Jëmmal
+
+Attaquant international bu Senegaal, formé ci Génération Foot ak passé ci football européen.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'saly-sarr': {
+    titleWo: 'Saly Sarr',
+    excerptWo: 'Triple-sauteuse bu Senegaal, recordwoman nationale ak médaillée mondiale.',
+    contentWo: `### Jëmmal
+
+Triple-sauteuse bu Senegaal, recordwoman nationale ak médaillée mondiale.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'aya-traore': {
+    titleWo: 'Aya Traoré',
+    excerptWo: 'Basketteuse bu Senegaal, internationale ak ancienne joueuse bu haut niveau.',
+    contentWo: `### Jëmmal
+
+Basketteuse bu Senegaal, internationale ak ancienne joueuse bu haut niveau.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'isabelle-sambou': {
+    titleWo: 'Isabelle Sambou',
+    excerptWo: 'Lutteuse bu Senegaal, figure bu lutte féminine africaine ak olympienne.',
+    contentWo: `### Jëmmal
+
+Lutteuse bu Senegaal, figure bu lutte féminine africaine ak olympienne.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'mame-maty-mbengue': {
+    titleWo: 'Mame Maty Mbengue',
+    excerptWo: 'Légende bu basketball féminin bu Senegaal, figure historiqueu équipe nationale.',
+    contentWo: `### Jëmmal
+
+Légende bu basketball féminin bu Senegaal, figure historiqueu équipe nationale.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'adama-diatta': {
+    titleWo: 'Adama Diatta',
+    excerptWo: 'Lutteur bu Senegaal, spécialiste lutte libre ak participant ci compétitions internationales.',
+    contentWo: `### Jëmmal
+
+Lutteur bu Senegaal, spécialiste lutte libre ak participant ci compétitions internationales.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'gorgui-dieng': {
+    titleWo: 'Gorgui Dieng',
+    excerptWo: 'Basketteur bu Senegaal, joueur bu NBA ak figure bu basketball sénégalais.',
+    contentWo: `### Jëmmal
+
+Basketteur bu Senegaal, joueur bu NBA ak figure bu basketball sénégalais.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'battling-siki': {
+    titleWo: 'Battling Siki',
+    excerptWo: 'Boxeur bu Sénégal, champion du monde ci 1922, figure historiqueu boxe africaine.',
+    contentWo: `### Jëmmal
+
+Boxeur bu Sénégal, champion du monde ci 1922, figure historiqueu boxe africaine.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'iba-mar-diop': {
+    titleWo: 'Iba Mar Diop',
+    excerptWo: 'Pionnier bu sport bu Senegaal, te stadeu Dakar tudd na ci turam.',
+    contentWo: `### Jëmmal
+
+Pionnier bu sport bu Senegaal, te stadeu Dakar tudd na ci turam.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'amy-mbacke-thiam': {
+    titleWo: 'Amy Mbacké Thiam',
+    excerptWo: 'Athlète bu Senegaal, championne du monde du 400 mètres ci 2001.',
+    contentWo: `### Jëmmal
+
+Athlète bu Senegaal, championne du monde du 400 mètres ci 2001.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'oumy-diop': {
+    titleWo: 'Oumy Diop',
+    excerptWo: 'Nageuse bu Senegaal, championne d’Afrique ak figure bu natation nationale.',
+    contentWo: `### Jëmmal
+
+Nageuse bu Senegaal, championne d’Afrique ak figure bu natation nationale.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
+  'henri-camara': {
+    titleWo: 'Henri Camara',
+    excerptWo: 'Footballeur international bu Senegaal, figure bu équipe nationale ci génération 2002.',
+    contentWo: `### Jëmmal
+
+Footballeur international bu Senegaal, figure bu équipe nationale ci génération 2002.
+
+### Sport
+
+Parcoursu sportif bi bokk na ci histoireu sport bu Senegaal, ci discipline bi ak compétitions yi.
+
+### Transmission
+
+Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérience ci génération yi.
+
+### Rayonnement
+
+Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
+  },
 };
