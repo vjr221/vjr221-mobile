@@ -10,14 +10,14 @@
 - Interface FR/Wolof : déjà opérationnelle.
 - Source prioritaire en ligne : WordPress, champs `title_wo`, `excerpt_wo`, `content_wo`.
 - Repli hors ligne : fichiers `src/i18n/contentWolof*.ts`.
-- Couverture locale existante : **328 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraQ.ts`.
-- Contrôle de couverture actuel : **328 clés uniques, 0 doublon**.
+- Couverture locale existante : **333 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraQ.ts`.
+- Contrôle de couverture actuel : **333 clés uniques, 0 doublon**.
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
 
 ## Contrôle QA — 27 septembre 2026
 
-- Corpus local : **328 fiches / 328 clés uniques / 0 doublon**.
+- Corpus local : **333 fiches / 333 clés uniques / 0 doublon**.
 - Régression apostrophe `d'année` : **0 occurrence**.
 - Apostrophe ASCII entre lettres : **0 occurrence** dans les titres, extraits et corps locaux.
 - Tests dédiés présents dans `src/i18n/contentWolof.test.ts`.
@@ -99,7 +99,7 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - **Vague 25 : 3 fiches nature/territoire vérifiées ajoutées** — Réserve naturelle communautaire de Tocc-Tocc, Parc national de la Basse-Casamance et Île de Karabane.
 - **Vague 26 : 3 fiches nature vérifiées ajoutées** — Parc national des Oiseaux du Djoudj, Réserve de Fathala et Parc national de la Langue de Barbarie. Séléki et Camp de Simenti ont été vérifiés comme déjà disponibles/couverts séparément et n’ont pas été dupliqués.
 - Une fiche candidate déjà présente dans le corpus (`cafe-touba`) a été détectée et n'a pas été dupliquée.
-- **Vague 27 : 4 fiches nature/patrimoine vérifiées ajoutées** — Réserve spéciale de faune de Guembeul, Mangroves de Casamance, Case ronde sérère et Royaume du Jolof.\n- **État local : 328 fiches / 328 clés uniques / 0 doublon.**
+- **Vague 27 : 4 fiches nature/patrimoine vérifiées ajoutées ou enrichies** — Réserve spéciale de faune de Guembeul, Mangroves de Casamance, Case ronde sérère, Royaume du Jolof et Baobab d’Iwol.\n- **Vague 28 : 5 fiches patrimoine/culture vérifiées ajoutées** — Cases à étage de Mlomp, Cases à impluvium du royaume Bandial, Galerie nationale des Arts, École nationale des Arts et Marché Kermel.\n- **État local : 328 fiches / 328 clés uniques / 0 doublon.**
 - Régression `d'année` : 0 occurrence.
 - Apostrophe ASCII entre lettres : 0 occurrence.
 - La fiche Douta Seck déjà présente dans le corpus a été détectée et non dupliquée lors de la vague 19.
