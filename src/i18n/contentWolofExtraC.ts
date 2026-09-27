@@ -1772,4 +1772,251 @@ Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi
 
 Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
   },
+  'ousmane-william-mbaye': {
+    titleWo: 'Ousmane William Mbaye',
+    excerptWo: 'Réalisateur ak documentariste bu Senegaal, liggeyam di contribuw ci mémoire audiovisuelle bu réew mi.',
+    contentWo: `### Jëmmal
+
+Réalisateur ak documentariste bu Senegaal, liggeyam di contribuw ci mémoire audiovisuelle bu réew mi.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'thierno-ndiaye-doss': {
+    titleWo: 'Thierno Ndiaye Doss',
+    excerptWo: 'Comédien bu Senegaal, figure bu cinéma ak théâtre bu réew mi.',
+    contentWo: `### Jëmmal
+
+Comédien bu Senegaal, figure bu cinéma ak théâtre bu réew mi.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'awa-sene-sarr': {
+    titleWo: 'Awa Sène Sarr',
+    excerptWo: 'Comédienne, actrice ak voix bu Senegaal, figure bu théâtre ak cinéma.',
+    contentWo: `### Jëmmal
+
+Comédienne, actrice ak voix bu Senegaal, figure bu théâtre ak cinéma.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'douta-seck': {
+    titleWo: 'Douta Seck',
+    excerptWo: 'Pionnier bu théâtre ak cinéma bu Senegaal, ak parcoursu international.',
+    contentWo: `### Jëmmal
+
+Pionnier bu théâtre ak cinéma bu Senegaal, ak parcoursu international.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'alioune-badara-beye': {
+    titleWo: 'Alioune Badara Bèye',
+    excerptWo: 'Bindkat, dramaturge ak acteur bu am solo ci culture bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Bindkat, dramaturge ak acteur bu am solo ci culture bu Senegaal.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'oumar-ndao': {
+    titleWo: 'Oumar Ndao',
+    excerptWo: 'Metteur en scène ak acteur bu Senegaal, liggeyam di yokk théâtre bu réew mi.',
+    contentWo: `### Jëmmal
+
+Metteur en scène ak acteur bu Senegaal, liggeyam di yokk théâtre bu réew mi.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'isseu-niang': {
+    titleWo: 'Isseu Niang',
+    excerptWo: 'Artiste multidisciplinaire bu Senegaal, bokk ci danse, chant, théâtre ak cinéma.',
+    contentWo: `### Jëmmal
+
+Artiste multidisciplinaire bu Senegaal, bokk ci danse, chant, théâtre ak cinéma.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'fatou-cisse': {
+    titleWo: 'Fatou Cissé',
+    excerptWo: 'Danseuse ak chorégraphe bu Senegaal, bokk ci création bu danse contemporaine.',
+    contentWo: `### Jëmmal
+
+Danseuse ak chorégraphe bu Senegaal, bokk ci création bu danse contemporaine.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'feral-benga': {
+    titleWo: 'Féral Benga',
+    excerptWo: 'Danseur bu Senegaal, xam-xamkat bu scèneu danse ak spectacle.',
+    contentWo: `### Jëmmal
+
+Danseur bu Senegaal, xam-xamkat bu scèneu danse ak spectacle.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'moussa-sene-absa': {
+    titleWo: 'Moussa Sène Absa',
+    excerptWo: 'Cinéaste, peintre ak hommeu théâtre bu Senegaal, artiste multidisciplinaire.',
+    contentWo: `### Jëmmal
+
+Cinéaste, peintre ak hommeu théâtre bu Senegaal, artiste multidisciplinaire.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'souleyemane-keita': {
+    titleWo: 'Souleymane Keïta',
+    excerptWo: 'Artiste peintre bu Senegaal, figure bu peinture abstraite bu réew mi.',
+    contentWo: `### Jëmmal
+
+Artiste peintre bu Senegaal, figure bu peinture abstraite bu réew mi.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'mansour-ciss': {
+    titleWo: 'Mansour Ciss',
+    excerptWo: 'Plasticien bu Senegaal, liggeyam di seet identité, panafricanisme ak création conceptuelle.',
+    contentWo: `### Jëmmal
+
+Plasticien bu Senegaal, liggeyam di seet identité, panafricanisme ak création conceptuelle.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
+  'zulu-mbaye': {
+    titleWo: 'Zulu Mbaye',
+    excerptWo: 'Artiste peintre bu Senegaal, bokk ci scèneu arts plastiques bu contemporain.',
+    contentWo: `### Jëmmal
+
+Artiste peintre bu Senegaal, bokk ci scèneu arts plastiques bu contemporain.
+
+### Création
+
+Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
+
+### Culture
+
+Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
+
+### Transmission
+
+Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
+  },
 };
