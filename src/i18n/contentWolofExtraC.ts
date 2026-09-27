@@ -1164,4 +1164,156 @@ Documentaire di dimbali ci seet ak nettali ay réalité yu wuute. Images yi di a
 
 Photographie documentaire bu Senegaal di yokk patrimoine visuel bu réew mi ak yoon yi ngir jàng dund ak société.`,
   },
+  'sokhna-benga': {
+    titleWo: 'Sokhna Benga',
+    excerptWo: 'Bindkat bu Senegaal, ci mbindum littérature bu contemporain.',
+    contentWo: `### Jëmmal
+
+Sokhna Benga mooy bindkat bu Senegaal, te liggeyam bokk na ci littérature bu contemporain.
+
+### Mbind
+
+Mbindam di yokk diversitéu voix ak nettali ci littérature bu Senegaal. Mu bokk ci yëngu-yëngu bu création littéraire.
+
+### Société ak culture
+
+Littérature di jox yoon ngir nettali dund, xalaat ak expérience yu nit ñi. Bindkat yi di bokk ci waxtaanu société.
+
+### Transmission
+
+Œuvres yi di dimbali ci denc mémoire ak yóbbu xalaat ci génération yi ñëw.`,
+  },
+  'khady-sylla': {
+    titleWo: 'Khady Sylla',
+    excerptWo: 'Bindkat ak cinéaste bu Senegaal, jëfandikoo mbind ak cinéma ci nettali.',
+    contentWo: `### Jëmmal
+
+Khady Sylla mooy bindkat ak cinéaste bu Senegaal. Liggeyam di lëkkale littérature ak cinéma.
+
+### Création
+
+Ci mbind ak image, mu di nettali ay expérience ak xalaat yu jëm ci dundug nit ñi ak société.
+
+### Cinéma documentaire
+
+Cinéma di jox yoon ngir seet ak nettali réalité yu wuute. Mu bokk ci création audiovisuelle bu Senegaal.
+
+### Héritage
+
+Liggey ci mbind ak cinéma di yokk patrimoine culturel ak visuel bu réew mi.`,
+  },
+  'mamousse-diagne': {
+    titleWo: 'Mamousse Diagne',
+    excerptWo: 'Xamkat bu Senegaal, philosophe ak spécialiste bu raison orale africaine.',
+    contentWo: `### Jëmmal
+
+Mamousse Diagne mooy philosophe bu Senegaal ak xamkat bu gëstu ci raison orale africaine.
+
+### Xalaat ak raison orale
+
+Gëstu ci oralité di jàngat yoonu waxtaan, nettali ak xam-xam yu ñuy yóbbu ci wax.
+
+### Saint-Louis ak formation
+
+Mu juddoo ci Saint-Louis, te parcoursu universitaire ak intellectuel bi lëkkale philosophie ak gëstu ci culture.
+
+### Transmission
+
+Xalaatam di bokk ci gëstu ak denc patrimoine intellectuel bu Aferik.`,
+  },
+  'amady-aly-dieng': {
+    titleWo: 'Amady Aly Dieng',
+    excerptWo: 'Économiste ak intellectuel bu Senegaal, figure bu xalaat critique.',
+    contentWo: `### Jëmmal
+
+Amady Aly Dieng mooy économiste ak intellectuel bu Senegaal, te am na benn place ci xalaat critique bu réew mi.
+
+### Économie ak xalaat
+
+Formationu économie bi jox na ko yoon ngir gëstu ak waxtaan ci mbirum société ak développement.
+
+### Intellectuel
+
+Liggeyam bokk na ci waxtaanu intellectuel ak xalaat ci jamono ak yoonu dëkk ak réew.
+
+### Héritage
+
+Mbind ak xalaat yu intellectuels yi di nekk ci patrimoineu xam-xam bu Senegaal.`,
+  },
+  'abasse-ndione': {
+    titleWo: 'Abasse Ndione',
+    excerptWo: 'Romancier bu Senegaal, benn ci ay voix yu am solo ci roman noir.',
+    contentWo: `### Jëmmal
+
+Abasse Ndione mooy romancier bu Senegaal. Mu am na benn place ci littérature bu réew mi, rawatina ci roman noir.
+
+### Parcours
+
+Ci parcoursu liggey bi mu ame ci wàllu santé, mu yokk mbindam ci littérature.
+
+### Roman ak société
+
+Roman yi di jëfandikoo nettali ngir seet ay mbir yu jëm ci société ak dundug nit ñi.
+
+### Héritage
+
+Liggeyu romanciers yi di yokk diversitéu littérature bu Senegaal ak Afrique.`,
+  },
+  'amadou-lamine-sall': {
+    titleWo: 'Amadou Lamine Sall',
+    excerptWo: 'Poète bu Senegaal, ak taxawkat bu Maison africaine de la poésie.',
+    contentWo: `### Jëmmal
+
+Amadou Lamine Sall mooy poète bu Senegaal ak benn ci acteurs yi ci wàllu poésie bu Aferik.
+
+### Poésie
+
+Mbindu poésie di lëkkale baat, xalaat ak émotion. Mu bokk ci yëngu-yëngu bu poésie bu Senegaal.
+
+### Maison africaine de la poésie
+
+Mu lëkkale itam ak yëngu-yëngu yu jëm ci yokk ak wone poésie ci Aferik.
+
+### Transmission
+
+Poésie di dimbali ci denc baat, mémoire ak xalaat ci génération yi.`,
+  },
+  'mohamed-mbougar-sarr': {
+    titleWo: 'Mohamed Mbougar Sarr',
+    excerptWo: 'Romancier bu Senegaal, lauréat du prix Goncourt.',
+    contentWo: `### Jëmmal
+
+Mohamed Mbougar Sarr mooy romancier bu Senegaal. Mu am na prix Goncourt te bokk ci littérature africaine contemporaine.
+
+### Littérature
+
+Mbindam di yokk feeñal littérature bu Senegaal ci scène francophone ak internationale.
+
+### Roman ak xalaat
+
+Roman di jëfandikoo nettali, xalaat ak expérience ngir waxtaan ci société ak conditionu nit.
+
+### Rayonnement
+
+Succèsu œuvres yi di yokk xam-xamu littérature bu Senegaal ci bitim réew mi.`,
+  },
+  'david-diop': {
+    titleWo: 'David Diop',
+    excerptWo: 'Poète bu Senegaal, baat bu am doole ci littérature anticoloniale.',
+    contentWo: `### Jëmmal
+
+David Diop mooy poète bu Senegaal, te poésieam bokk na ci baat yi di wax ci contexte anticolonial.
+
+### Poésie ak résistance
+
+Mbindam di jëfandikoo poésie ngir nettali xalaat, résistance ak dundug peuples ci jamono colonial.
+
+### Littérature africaine
+
+Poésieam bokk na ci histoireu littérature africaine ak ci yëngu-yëngu bu création anticoloniale.
+
+### Héritage
+
+Liggeyam di wéy ci jàngat ak xam littérature africaine ak nettaliu histoire.`,
+  },
 };
