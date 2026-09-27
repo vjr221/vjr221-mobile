@@ -28,6 +28,9 @@ describe('Wolof fiche translations', () => {
     'fort-de-podor',
     'cathedrale-du-souvenir-africain-dakar',
     'musee-theodore-monod-d-art-africain',
+    'palais-du-gouverneur-de-saint-louis',
+    'village-artisanal-de-soumbedioune-le-sanctuaire-de-lartisanat-senegalais-a-dakar',
+    'coniagui-rites-et-savoir-faire-de-la-communaute-coniagui',
   ];
 
   it('has no duplicate local keys', () => {
