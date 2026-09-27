@@ -136,6 +136,10 @@ describe('Wolof fiche translations', () => {
     'pape-amadou-seck',
     'mamadou-diaw',
     'aminata-zaaria',
+    'musee-des-civilisations-noires-actualite-et-vocation',
+    'aminata-fall-chanteuse-senegalaise',
+    'daara-j-family',
+    'mamy-victory',
   ];
 
   it('has no duplicate local keys', () => {
