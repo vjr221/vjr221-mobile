@@ -68,9 +68,9 @@ Liggeeyam bokk na ci taariixu cinéma documentaire africain. Mu jàppale na ci w
 
 Alain Gomis mooy réalisateur ak scénariste bu Senegaal. Filmam dafa seetaan identité, mémoire, dundug dëkk ak xaal yu nit ñi di jafe-jafe.
 
-### Tey ak Aujourd'hui
+### Tey ak Aujourd’hui
 
-Film bi Tey (Aujourd'hui) dafa topp nit ku dellu ci Dakar, te récit bi lëkkale na mémoire, dundug dëkk ak waxtu.
+Film bi Tey (Aujourd’hui) dafa topp nit ku dellu ci Dakar, te récit bi lëkkale na mémoire, dundug dëkk ak waxtu.
 
 ### Félicité
 
