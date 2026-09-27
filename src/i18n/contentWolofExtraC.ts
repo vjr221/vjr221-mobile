@@ -2399,4 +2399,232 @@ Athlètes yi di nekk ay exempleu travail, préparation ak transmissionu expérie
 
 Sport bu haut niveau di yokk feeñal Senegaal ci compétitions africaines ak internationales.`,
   },
+  'colle-ardo-sow': {
+    titleWo: 'Collé Ardo Sow',
+    excerptWo: 'Styliste bu Senegaal, pionnière bu pagne tissé ak mode bu réew mi.',
+    contentWo: `### Jëmmal
+
+Styliste bu Senegaal, pionnière bu pagne tissé ak mode bu réew mi.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'diouma-dieng-diakhate': {
+    titleWo: 'Diouma Dieng Diakhaté',
+    excerptWo: 'Styliste bu Senegaal, fondatrice bu Shalimar Couture.',
+    contentWo: `### Jëmmal
+
+Styliste bu Senegaal, fondatrice bu Shalimar Couture.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'sarah-diouf': {
+    titleWo: 'Sarah Diouf',
+    excerptWo: 'Entrepreneure ak créatrice de mode bu Senegaal, fondatrice bu Tongoro.',
+    contentWo: `### Jëmmal
+
+Entrepreneure ak créatrice de mode bu Senegaal, fondatrice bu Tongoro.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'adama-paris': {
+    titleWo: 'Adama Paris',
+    excerptWo: 'Styliste ak entrepreneure bu Senegaal, fondatrice bu Dakar Fashion Week.',
+    contentWo: `### Jëmmal
+
+Styliste ak entrepreneure bu Senegaal, fondatrice bu Dakar Fashion Week.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'lamine-diasse': {
+    titleWo: 'Lamine Diassé',
+    excerptWo: 'Couturier bu Senegaal, spécialisteu costume sur-mesure.',
+    contentWo: `### Jëmmal
+
+Couturier bu Senegaal, spécialisteu costume sur-mesure.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'oumou-sy': {
+    titleWo: 'Oumou Sy',
+    excerptWo: 'Styliste ak costumière bu Senegaal, figure bu couture ak création artistique.',
+    contentWo: `### Jëmmal
+
+Styliste ak costumière bu Senegaal, figure bu couture ak création artistique.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'nzinga-biegueng-mboup': {
+    titleWo: 'Nzinga Biegueng Mboup',
+    excerptWo: 'Architecte bu Senegaal ak cofondatrice bu Worofila.',
+    contentWo: `### Jëmmal
+
+Architecte bu Senegaal ak cofondatrice bu Worofila.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'ousmane-mbaye': {
+    titleWo: 'Ousmane Mbaye',
+    excerptWo: 'Designer ak sculpteur bu Senegaal, jëfandikoo métal recyclé ci création.',
+    contentWo: `### Jëmmal
+
+Designer ak sculpteur bu Senegaal, jëfandikoo métal recyclé ci création.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'tidiane-deme': {
+    titleWo: 'Tidiane Dème',
+    excerptWo: 'Entrepreneur ak acteur bu numérique bu Senegaal, bokk ci innovation technologique.',
+    contentWo: `### Jëmmal
+
+Entrepreneur ak acteur bu numérique bu Senegaal, bokk ci innovation technologique.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'pape-amadou-seck': {
+    titleWo: 'Pape Amadou Seck',
+    excerptWo: 'Acteur ak créateur bu Senegaal, bokk ci spectacle vivant.',
+    contentWo: `### Jëmmal
+
+Acteur ak créateur bu Senegaal, bokk ci spectacle vivant.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'mamadou-diaw': {
+    titleWo: 'Mamadou Diaw',
+    excerptWo: 'Artiste bu Senegaal, bokk ci création contemporaine ak scène culturelle.',
+    contentWo: `### Jëmmal
+
+Artiste bu Senegaal, bokk ci création contemporaine ak scène culturelle.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
+  'aminata-zaaria': {
+    titleWo: 'Aminata Zaaria',
+    excerptWo: 'Artiste ak créatrice bu Senegaal, bokk ci création contemporaine ak valorisationu patrimoine.',
+    contentWo: `### Jëmmal
+
+Artiste ak créatrice bu Senegaal, bokk ci création contemporaine ak valorisationu patrimoine.
+
+### Création
+
+Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+
+### Culture ak territoire
+
+Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+
+### Transmission
+
+Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+  },
 };
