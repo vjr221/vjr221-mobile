@@ -19,6 +19,8 @@ describe('Wolof fiche translations', () => {
     'djilor',
     'soum',
     'betenty',
+    'joal-fadiouth',
+    'gare-de-dakar-la-porte-dentree-historique-du-chemin-de-fer-dakar-niger',
   ];
 
   it('exposes the phase 1 fiche translations with all required fields', () => {
