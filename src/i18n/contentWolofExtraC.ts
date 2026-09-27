@@ -822,4 +822,80 @@ Kër gi man na jox gan ñi benn bérab ngir gëna xam artiste bi, yoonu liggéey
 
 Denc mémoireu artiste yi am solo ci transmissionu patrimoine contemporain. Kër Ousmane Sow man na dimbali ci jàngale arts ak wone liggéeyu artiste bu Senegaal.`,
   },
+  'musee-historique-du-senegal-fort-d-estrees': {
+    titleWo: 'Musée historique du Senegaal — Fort d’Estrées',
+    excerptWo: 'Muze bu Gorée bu nettali taariixu Senegaal ci ay collections ak témoignages yu wuute.',
+    contentWo: `### Jëmmal
+
+Musée historique du Senegaal, nekk ci Fort d’Estrées ci Gorée, bokk na ci bérab yu am solo ci patrimoine historique bu réew mi. Mu jëm ci nettali ay pàcc yu wuute ci taariixu Senegaal.
+
+### Gorée ak mémoire
+
+Fort bi nekk ci Gorée, dëkk bi am solo ci taariixu échanges atlantiques ak mémoire. Muze bi di jox bérab ngir jàng ay événements ak transformations yu amoon ci réew mi.
+
+### Collections ak témoignages
+
+Expositions yi man nañu boole objets, documents ak témoignages yu lëkkale ak histoireu Senegaal. Ñuy jëfandikoo leen ngir jàngale taariix ak fàttaliku.
+
+### Patrimoine
+
+Fort d’Estrées ak muze bi bokk nañu ci patrimoine bu Gorée. Denc ak wone bérab bi di dimbali ci transmissionu mémoire ci génération yi.`,
+  },
+  'village-des-arts-de-dakar': {
+    titleWo: 'Village des Arts bu Dakar',
+    excerptWo: 'Bérab bu Dakar bu dajale artistes ak créations, di wone diversitéu arts contemporains bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Village des Arts bu Dakar mooy espace bu artists di liggéey, di sos ak di wone seen créations. Mu bokk na ci bérab yu am solo ci scène artistique bu Dakar.
+
+### Création ak ateliers
+
+Village bi dafa dajale ateliers ak espacesu création. Artists yu wuute di jëfandikoo bérab bi ngir liggéey ci disciplines yu wuute.
+
+### Arts ak diversité
+
+Œuvres yi di wone melokaan yu wuute ci art contemporain, ak ay themes yu lëkkale ak société, identité ak dund. Bérab bi di tax artistes yi jokkoo ak public.
+
+### Transmission ak rayonnement
+
+Expositions, rencontres ak yeneen activités man nañu dimbali ci transmissionu xam-xamu arts. Village bi it di yokk visibilitéu artistes ak créationu Senegaal.`,
+  },
+  'maison-des-esclaves-de-goree': {
+    titleWo: 'Kër Esclaves bu Gorée',
+    excerptWo: 'Bérab bu mémoire bu Gorée, lié ci taariixu traite négrière ak mémoire des personnes réduites en esclavage.',
+    contentWo: `### Jëmmal
+
+Kër Esclaves bu Gorée bokk na ci bérab yu am solo ci mémoire historique bu Senegaal. Mu nekk ci île bu Gorée, te mu lëkkale ak nettali yu traite négrière transatlantique.
+
+### Mémoire
+
+Kër gi di jox bérab ngir waxtaan ci conditions yu personnes yu ñu jàppoon ak ñu joxoon ci esclavage. Mémoire bi dafa am solo ci xam ay conséquencesu traite négrière ci sociétés.
+
+### Architecture ak transmission
+
+Tabax bi ak espace yi ci biir di jox ay repères ngir jàng taariix. Bérab bi di jëfandikoo it ci transmissionu mémoire ci gan ñi ak génération yu ñëw.
+
+### Patrimoine
+
+Kër Esclaves bokk na ci patrimoine bu Gorée. Denc ko ak nettali bu sukkandiku ci sources yu wóor am na solo ngir jàng taariix ak fàttaliku ci anam bu dëgg.`,
+  },
+  'maison-natale-de-leopold-sedar-senghor': {
+    titleWo: 'Kër juddug Léopold Sédar Senghor',
+    excerptWo: 'Bérab bu fàttaliku ci Joal, lëkkale ak juddug ak mémoireu Léopold Sédar Senghor.',
+    contentWo: `### Jëmmal
+
+Kër juddug Léopold Sédar Senghor nekk na ci Joal. Mu bokk na ci bérab yu lëkkale ak mémoireu benn ci figures yu am solo ci histoireu Senegaal.
+
+### Senghor ak Joal
+
+Joal bokk na ci bérab yi am solo ci nettaliu dundug Senghor. Kër gi di jox repères ci environnement bi mu juddoo ak patrimoine bu dëkk bi.
+
+### Mémoire ak patrimoine
+
+Bérab bu juddug nit ku am solo ci histoire man na nekk espaceu mémoire. Denc ko ak nettaliam di dimbali ci jàng taariix ak xam bokkuteu Joal ci dundug Senghor.
+
+### Transmission
+
+Gan ñi ak jàngkat yi man nañu jëfandikoo bérab bi ngir gëna xam dund, nettali ak patrimoine bi lëkkale ak Senghor.`,
+  },
 };
