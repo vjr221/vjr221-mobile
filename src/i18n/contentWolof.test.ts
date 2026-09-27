@@ -148,6 +148,10 @@ describe('Wolof fiche translations', () => {
     'positive-black-soul-pionnier-du-rap-senegalais',
     'fode-camara-peintre-senegalais-contemporain',
     'le-rap-galsen-scene-hip-hop-senegalaise',
+    'ousmane-sembene',
+    'djibril-diop-mambety',
+    'safi-faye',
+    'alain-gomis',
   ];
 
   it('has no duplicate local keys', () => {
