@@ -629,11 +629,11 @@ Xam-xam bi du rekk nettali yu yàgg. Mu boole it yoonu dund, jëfandikoo savoir-
 Denc cosaanu Coniagui dafay soxla documentation, njàngale ak jàppale transmissionu xam-xam bi ci xale yi ak génération yu ñëw. Patrimoine bii yokk na diversité culturelle bu Senegaal.`,
   },
   'le-fanal-de-saint-louis-la-parade-des-lanternes-de-fin-dannee': {
-    titleWo: 'Fanal bu Saint-Louis — paradeu lanternes bu fin d'année',
+    titleWo: 'Fanal bu Saint-Louis — paradeu lanternes bu fin d’année',
     excerptWo: 'Tradition bu Saint-Louis bu lëkkale fête, musique, lanternes ak patrimoine culturel.',
     contentWo: `### Jëmmal
 
-Fanal bu Saint-Louis mooy benn ci traditions yu am solo ci dundug dëkk bi. Mu lëkkale parade, lanternes, musique ak bokkuteu askan ci waxtu fêtes yu fin d'année.
+Fanal bu Saint-Louis mooy benn ci traditions yu am solo ci dundug dëkk bi. Mu lëkkale parade, lanternes, musique ak bokkuteu askan ci waxtu fêtes yu fin d’année.
 
 ### Tradition ak taariix
 
