@@ -67,6 +67,14 @@ describe('Wolof fiche translations', () => {
     'amadou-lamine-sall',
     'mohamed-mbougar-sarr',
     'david-diop',
+    'ken-bugul',
+    'cheikh-aliou-ndao',
+    'boubacar-boris-diop',
+    'birago-diop',
+    'aminata-sow-fall',
+    'fatou-diome',
+    'felwine-sarr',
+    'souleymane-bachir-diagne',
   ];
 
   it('has no duplicate local keys', () => {
