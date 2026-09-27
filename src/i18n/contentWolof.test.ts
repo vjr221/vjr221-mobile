@@ -22,6 +22,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraO.ts',
   'contentWolofExtraP.ts',
   'contentWolofExtraQ.ts',
+  'contentWolofExtraR.ts',
 ];
 
 /**
@@ -71,6 +72,12 @@ describe('Wolof fiche translations', () => {
     'mangroves-casamance-ecosystemes-villages-savoir-faire',
     'la-case-ronde-serere-architecture-traditionnelle-du-sine-saloum',
     'le-royaume-du-jolof-formation-territoires-et-heritage-historique',
+    'le-baobab-d-iwol-arbre-protecteur-et-memoire-des-bediks',
+    'cases-a-etage-de-mlomp-architecture-traditionnelle-casamance',
+    'cases-a-impluvium-royaume-bandial',
+    'galerie-nationale-des-arts-du-senegal',
+    'ecole-nationale-des-arts-du-senegal-formation-arts-culture',
+    'marche-kermel-le-joyau-colonial-du-plateau-de-dakar',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
