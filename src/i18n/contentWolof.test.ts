@@ -31,6 +31,9 @@ describe('Wolof fiche translations', () => {
     'palais-du-gouverneur-de-saint-louis',
     'village-artisanal-de-soumbedioune-le-sanctuaire-de-lartisanat-senegalais-a-dakar',
     'coniagui-rites-et-savoir-faire-de-la-communaute-coniagui',
+    'le-fanal-de-saint-louis-la-parade-des-lanternes-de-fin-dannee',
+    'les-regates-traditionnelles-au-senegal-sport-nautique-culture-et-transmission',
+    'le-mandinka-langue-mandingue-de-lest-du-senegal',
   ];
 
   it('has no duplicate local keys', () => {
