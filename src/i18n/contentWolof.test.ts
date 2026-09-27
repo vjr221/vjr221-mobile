@@ -41,6 +41,10 @@ describe('Wolof fiche translations', () => {
     'manufacture-senegalaise-des-arts-decoratifs-de-thies',
     'musee-de-la-femme-henriette-bathily',
     'maison-ousmane-sow',
+    'musee-historique-du-senegal-fort-d-estrees',
+    'village-des-arts-de-dakar',
+    'maison-des-esclaves-de-goree',
+    'maison-natale-de-leopold-sedar-senghor',
   ];
 
   it('has no duplicate local keys', () => {
