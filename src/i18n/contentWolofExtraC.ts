@@ -434,4 +434,23 @@ Gare bu njëkk bi tabaxu woon na ci 1885 ngir ligne Dakar-Saint-Louis, te inaugu
 
 Gare bi di wone benn pàcc ci histoireu transport, architecture ak développementu Dakar. Aar tabax bi ak xam taarix bi am na solo ci patrimoine urbain bu dëkk bi.`,
   },
+  'ecomusee-diakhao': {
+    titleWo: 'Écomusée bu Diakhao — fàttaliku Sine ak patrimoine Sereer',
+    excerptWo: 'Buntu xam-xam bu Diakhao, ci taariixu Sine ak patrimoine culturel Sereer.',
+    contentWo: `### Jëmmal
+
+Écomusée bu Diakhao dafay ubbi bunt ci taariixu Sine ak fàttaliku Sereer. Diakhao lëkkale na taariixu nguurum Sine, cosaan yi, bérab yu fàttaliku ak patrimoine culturel.
+
+### Diakhao ak Sine
+
+Diakhao am na solo ci taariixu royaume du Sine ak ci fàttaliku Sereer. Territoire bi dafay lëkkale taariixu nguur, cosaan, bérab yu am solo ak patrimoine culturel.
+
+### Patrimoine ak xam-xam
+
+Écomusée bi bokk na ci bérab yu culture yu ñuy xamle ci Senegaal. Mu may ñu gëna xam patrimoine bu Sine, te du rekk ci grands circuits yu Dakar ak Petite-Côte.
+
+### Fàttaliku ak jàngale
+
+Patrimoine bi war nañu ko denc ak jàngale ko ci diggante maam ak sëy. Écomusée bi man na lëkkale xam-xamu Diakhao ak fiches yi jëm ci Sine, personnalités historiques, cosaan Sereer, Fatick ak patrimoine culturel bu dul jëfandikoo ay jumtukaay.`,
+  },
 };
