@@ -746,4 +746,80 @@ Filières yi mën nañu boole céréales ak yeneen cultures yu dëppoo ak terroi
 
 Jokkoo diggante producteurs, commerçants ak consommateurs di tax production bi am valeur ci marché. Transport ak accès aux infrastructures bokk nañu ci mbir yi di mëna soppi njariñu filières yi.`,
   },
+  'musee-des-civilisations-noires': {
+    titleWo: 'Musée des Civilisations Noires',
+    excerptWo: 'Muze bu Dakar bu wone ak di denc histoire, cultures ak contributions yu askanu ñu ñuy bokk ci peuples noirs.',
+    contentWo: `### Jëmmal
+
+Musée des Civilisations Noires nekk na ci Dakar. Mu jëm ci denc, wone ak transmissionu histoire ak cultures yu lëkkale ak peuples noirs ci Afrique ak ci diaspora.
+
+### Histoire ak identité
+
+Muze bi di jox bérab ci nettali yu lëkkale ak civilisations, savoir-faire, arts ak expressions culturelles. Mu may na it xool patrimoine Afrique ci perspective bu wuute.
+
+### Collections ak expositions
+
+Ay collections ak expositions man nañu wone objets, œuvres ak témoignages yu lëkkale ak jamono ak régions yu wuute. Muze bi di jokkoo patrimoine matériel ak immatériel.
+
+### Jàng ak transmission
+
+Muze bi am na solo ci recherche, njàngale ak transmissionu xam-xam. Dafa may gan ñi, jàngkat yi ak nit ñi ci wàllu culture yeneen yoon yu ñuy xam histoire ak diversité culturelle.`,
+  },
+  'manufacture-senegalaise-des-arts-decoratifs-de-thies': {
+    titleWo: 'Manufacture Sénégalaise des Arts Décoratifs bu Thiès',
+    excerptWo: 'Institusyon bu Thiès bu jëm ci création, transmission ak valorisationu arts décoratifs bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Manufacture Sénégalaise des Arts Décoratifs bu Thiès bokk na ci bérab yi am solo ci création ak transmissionu savoir-faire artistiques ci Senegaal.
+
+### Arts ak savoir-faire
+
+Institusyon bi jëfandikoo na arts décoratifs ngir yokk création ak liggéeyu artists. Savoir-faire yi man nañu lëkkale ak textile, dessin, peinture ak yeneen formesu création.
+
+### Thiès ak patrimoine
+
+Thiès am na bérab bu am solo ci histoireu arts ak artisanat bu Senegaal. Manufacture bi bokk na ci denc ak yokk xam-xamu création ci dëkk bi.
+
+### Transmission
+
+Njàngale ak transmissionu savoir-faire di am solo ci yoon wi. Jàppale artists ak ndaw yi man na tax xam-xam bi wéy ci génération yi.`,
+  },
+  'musee-de-la-femme-henriette-bathily': {
+    titleWo: 'Musée de la Femme Henriette-Bathily',
+    excerptWo: 'Muze bu Gorée bu jëm ci nettali, denc ak wone ay expériences ak contributions yu jigéen ñi ci société.',
+    contentWo: `### Jëmmal
+
+Musée de la Femme Henriette-Bathily nekk na ci Gorée. Mu jëm ci denc ak wone histoireu jigéen ñi, seen contributions ak ay expériences ci société.
+
+### Jigéen ak société
+
+Muze bi may na bérab ngir nettali ay parcours ak liggéeyu jigéen ñi ci wàllu social, culturel ak économique. Mu di wone diversitéu expériencesu jigéen ci jamono yu wuute.
+
+### Patrimoine ak mémoire
+
+Denc témoignages ak objets yu lëkkale ak dundug jigéen ñi dafay yokk mémoire sociale. Muze bi bokk na ci patrimoine culturel bu Gorée ak Senegaal.
+
+### Jàng ak transmission
+
+Expositions ak activitésu médiation man nañu dimbali ci xam solo bu contributionsu jigéen ñi ak ci transmissionu mémoire ci génération yi.`,
+  },
+  'maison-ousmane-sow': {
+    titleWo: 'Kër Ousmane Sow',
+    excerptWo: 'Bérab bu Dakar bu denc mémoire ak oeuvreu artiste Ousmane Sow, ak patrimoine artistique bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Kër Ousmane Sow bokk na ci bérab yi lëkkale ak patrimoine artistique bu Senegaal. Mu fàttaliku oeuvreu sculpteur Ousmane Sow ak yoonu créationam.
+
+### Ousmane Sow
+
+Ousmane Sow doon na artiste bu Senegaal bu amoon tur ci sculpture. Œuvresam di jëfandikoo forme, corps ak matière ngir nettali ay histoires ak figures humaines.
+
+### Mémoire ak création
+
+Kër gi man na jox gan ñi benn bérab ngir gëna xam artiste bi, yoonu liggéeyam ak pàcc bi mu def ci histoireu art bu Senegaal.
+
+### Transmissionu patrimoine
+
+Denc mémoireu artiste yi am solo ci transmissionu patrimoine contemporain. Kër Ousmane Sow man na dimbali ci jàngale arts ak wone liggéeyu artiste bu Senegaal.`,
+  },
 };
