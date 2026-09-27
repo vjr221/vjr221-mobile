@@ -493,6 +493,16 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the verified music wave 50', () => {
+    for (const slug of ['el-hadj-ndiaye', 'ngaaka-blinde', 'dip-doundou-guiss', 'youssou-ndour']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
