@@ -49,27 +49,4 @@ Place du Souvenir africain bokk na ci réseau bu établissements ak structures c
 - Jëf yi : mémoire, aada, rencontre ak transmission
 - Réseau : établissements culturels nationaux`,
   },
-  'cafe-touba': {
-    titleWo: 'Café Touba',
-    excerptWo: 'Ndoxum café bu xamle Senegaal, bu am saf-saf ci poivre de Guinée te lëkkale ak aada Mouride.',
-    contentWo: `### Jëmmal
-
-Café Touba mooy ndoxum café bu xamle Senegaal. Am na saf-saf bu am solo te ñu ko xam ci poivre de Guinée, te bokk na ci dundinu bés bu bëccëg ci réew mi.
-
-### Cosaan
-
-Café Touba jël na turam ci dëkkub Touba, centre spirituel bu mouridisme. Aada ak nettali yu dëkk bi lëkkale nañu ko ak Cheikh Ahmadou Bamba ak ay taalibeem.
-
-### Lu ko wuute
-
-Café bi dafa am café ak poivre de Guinée, te ñu mën a yokk tuuti girofle. Graine yi ñuy torréfier, ñu xotti leen ak poivre bi, ba mu am saf-saf bu am solo.
-
-### Njàngat ak dundin
-
-Café Touba ñu ko faral di jaay ci mbedd mi, ci ay chariot ak thermos. Léegi, boisson bi wàññiku na ci cercle bu cosaanam rekk: nit ñi ci réew mi, ci ay mbir yu wuute, dañuy ko naan.
-
-### Valeur culturelle
-
-Café Touba di won ni aada bu lëkkale ak diine mën a tas ci cosaanu réew mi te doon benn ci mbir yu ñuy bokk ci dundinu bés bu Senegaal.`,
-  },
 };
