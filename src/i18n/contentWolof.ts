@@ -9,6 +9,7 @@ import { CONTENT_WO_EXTRA_G } from './contentWolofExtraG';
 import { CONTENT_WO_EXTRA_H } from './contentWolofExtraH';
 import { CONTENT_WO_EXTRA_I } from './contentWolofExtraI';
 import { CONTENT_WO_EXTRA_J } from './contentWolofExtraJ';
+import { CONTENT_WO_EXTRA_J } from './contentWolofExtraJ';
 
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
