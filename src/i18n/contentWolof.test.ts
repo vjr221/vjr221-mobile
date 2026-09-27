@@ -483,6 +483,16 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the verified heritage music wave 49', () => {
+    for (const slug of ['ablaye-cissoko', 'seckou-keita', 'positive-black-soul', 'orchestre-baobab']) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
