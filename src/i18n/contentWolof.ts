@@ -2,12 +2,13 @@ import type { ContentItem } from '../types/content';
 import { CONTENT_WO_EXTRA } from './contentWolofExtra';
 import { CONTENT_WO_EXTRA_B } from './contentWolofExtraB';
 import { CONTENT_WO_EXTRA_C } from './contentWolofExtraC';
+import { CONTENT_WO_EXTRA_D } from './contentWolofExtraD';
 
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
 /**
  * Couche Wolof — régions, tourisme, patrimoine (vague 7 : qualité).
- * Compléments : Extra + ExtraB + ExtraC
+ * Compléments : Extra + ExtraB + ExtraC + ExtraD
  */
 const CONTENT_WO_CORE: Record<string, WolofContent> = {
   'region-de-dakar': {
@@ -192,6 +193,7 @@ const CONTENT_WO: Record<string, WolofContent> = {
   ...CONTENT_WO_EXTRA,
   ...CONTENT_WO_EXTRA_B,
   ...CONTENT_WO_EXTRA_C,
+  ...CONTENT_WO_EXTRA_D,
 };
 
 export function getWolofContentKeys(): string[] {
