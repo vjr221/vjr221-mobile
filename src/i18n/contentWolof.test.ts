@@ -49,6 +49,16 @@ describe('Wolof fiche translations', () => {
     'centre-dinterpretation-du-delta-du-saloum',
     'mosquee-de-divinity',
     'chateau-de-saint-louis',
+    'mame-woury-thioubou',
+    'ibrahima-sall',
+    'faty-sow-kane',
+    'aminata-maiga-ka',
+    'mame-younousse-dieng',
+    'ndeye-coumba-mbengue-diakhate',
+    'cheikh-ndiaye',
+    'papa-ibra-tall',
+    'moustapha-dime',
+    'mamadou-gomis',
   ];
 
   it('has no duplicate local keys', () => {
