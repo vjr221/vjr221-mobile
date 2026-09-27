@@ -13,7 +13,7 @@ Orchestra Baobab sosu na ci Dakar ci 1970. Mu nekk na benn ci groupes yu mag ci 
 
 ### Baobab Club
 
-Groupe bi tàmbali na ni orchestre bu Baobab Club, cabaret bu Dakar bu ñu daan faral di dem ci jamono yooyu. Ci années 1970, mu am na succès ci Afrique de l'Ouest ak ay baat yu mel ni Utrus Horas ak On Verra ça.
+Groupe bi tàmbali na ni orchestre bu Baobab Club, cabaret bu Dakar bu ñu daan faral di dem ci jamono yooyu. Ci années 1970, mu am na succès ci Afrique de l’Ouest ak ay baat yu mel ni Utrus Horas ak On Verra ça.
 
 ### Dellu ci scène internationale
 
