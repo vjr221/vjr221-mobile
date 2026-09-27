@@ -10,14 +10,14 @@
 - Interface FR/Wolof : déjà opérationnelle.
 - Source prioritaire en ligne : WordPress, champs `title_wo`, `excerpt_wo`, `content_wo`.
 - Repli hors ligne : fichiers `src/i18n/contentWolof*.ts`.
-- Couverture locale existante : **383 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraAF.ts`.
-- Contrôle de couverture actuel : **383 clés uniques, 0 doublon**.
+- Couverture locale existante : **387 fiches uniques** réparties dans les packs `contentWolof.ts` et `contentWolofExtra.ts` à `contentWolofExtraAG.ts`.
+- Contrôle de couverture actuel : **387 clés uniques, 0 doublon**.
 - Les 14 régions disposent déjà d'un contenu Wolof dans le pack local et d'un mécanisme d'import CMS.
 - Le plugin WordPress `vjr221-wolof` expose les trois champs Wolof à l'API REST et à `vjr221/v1`.
 
 ## Contrôle QA — 27 septembre 2026
 
-- Corpus local : **383 fiches / 383 clés uniques / 0 doublon**.
+- Corpus local : **387 fiches / 387 clés uniques / 0 doublon**.
 - Régression apostrophe `d'année` : **0 occurrence**.
 - Apostrophe ASCII entre lettres : **0 occurrence** dans les titres, extraits et corps locaux.
 - Tests dédiés présents dans `src/i18n/contentWolof.test.ts`.
@@ -103,7 +103,8 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - **Vague 39 : 4 fiches cinéma/arts visuels vérifiées ajoutées** — Cinéma sénégalais, arts visuels au Sénégal, Biennale de Dakar (Dak’Art) et festivals de cinéma au Sénégal.
 - **Vague 40 : 4 fiches artistes/musiciens vérifiées ajoutées** — Takeifa, Awa Ly, Yoro Ndiaye et Nuru Kane.
 - **Vague 41 : 4 fiches arts visuels/littérature vérifiées ajoutées** — Papa Ibra Tall, Moustapha Dimé, Mamadou Gomis et Faty Sow Kane.
-- **Vague 42 : 4 fiches littérature/scène contemporaine vérifiées ajoutées** — Ibrahima Sall, Aminata Maïga Ka, Pape Amadou Seck et Mamadou Diaw.\n- **Point QA à traiter avant de certifier le corpus global** : la clé `reserve-speciale-faune-gueumbeul` existe dans le pack historique et dans ExtraW ; la version historique est conservée comme référence et la déduplication de la seconde occurrence reste à effectuer avec sauvegarde.\n- **État local : 371 fiches / 371 clés uniques / 0 doublon.**
+- **Vague 42 : 4 fiches littérature/scène contemporaine vérifiées ajoutées** — Ibrahima Sall, Aminata Maïga Ka, Pape Amadou Seck et Mamadou Diaw.
+- **Vague 43 : 4 fiches spectacle/arts visuels vérifiées ajoutées** — Ousseynou Bissichi, Ismaël Thiam, Joëlle le Bussy et Aïssa Dione.\n- **Point QA à traiter avant de certifier le corpus global** : la clé `reserve-speciale-faune-gueumbeul` existe dans le pack historique et dans ExtraW ; la version historique est conservée comme référence et la déduplication de la seconde occurrence reste à effectuer avec sauvegarde.\n- **État local : 371 fiches / 371 clés uniques / 0 doublon.**
 - Régression `d'année` : 0 occurrence.
 - Apostrophe ASCII entre lettres : 0 occurrence.
 - La fiche Douta Seck déjà présente dans le corpus a été détectée et non dupliquée lors de la vague 19.
