@@ -25,6 +25,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraR.ts',
   'contentWolofExtraS.ts',
   'contentWolofExtraT.ts',
+  'contentWolofExtraU.ts',
 ];
 
 /**
@@ -87,6 +88,8 @@ describe('Wolof fiche translations', () => {
     'patrimoine-fluvial-est-senegal',
     'le-mankanya-langue-nationale-et-patrimoine-linguistique-de-casamance',
     'la-teinture-a-lindigo-savoir-faire-textile-traditionnel-senegalais',
+    'le-patrimoine-serere-langue-traditions-et-territoires',
+    'les-maisons-a-signares-de-saint-louis-et-goree',
     'tourisme-communautaire-senegal',
     'tourisme-accessible-senegal',
     'tourisme-memoire-senegal',
