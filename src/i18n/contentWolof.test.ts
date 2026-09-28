@@ -817,6 +817,21 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof nature heritage consolidation wave 72', () => {
+    const slugs = [
+      'le-parc-national-du-delta-du-saloum',
+      'le-tamarinier-arbre-d-ombrage-au-fruit-acidule-emblematique',
+      'le-calao-terrestre-geant-social-des-savanes-senegalaises',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(450);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
