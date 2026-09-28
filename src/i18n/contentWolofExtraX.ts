@@ -55,27 +55,27 @@ Essaout di may benn jubluwaay ngir xam ni patrimoine mën na nekk ci suuf, mbey,
   },
 
   'cathedrale-de-saint-louis': {
-    titleWo: 'Katedraalu Saint-Louis',
-    excerptWo: 'Jëmm ci architecture religieuse coloniale ci dëkk bi nekk ci îleu Saint-Louis.',
+    titleWo: 'Katedraalu Ndar',
+    excerptWo: 'Jëmm ci architecture religieuse bu Ndar, ci îleu Saint-Louis, ak patrimoine historique bu ville bi.',
     contentWo: `### Jëmmal
 
-Katedraalu Saint-Louis nekk na ci diggu îleu Saint-Louis. Mu boole ay influence yu architecture gothique ak romane, te di benn ci édifices religieux yu am solo ci patrimoine colonial bu Senegaal.
+Katedraalu Ndar nekk na ci diggu îleu Saint-Louis. Mu boole ay influence yu architecture gothique ak romane, te bokk na ci édifices religieux yu am solo ci patrimoine historique bu ville bi.
 
 ### Bérab ci dëkk
 
-Katedraal bi di feeñ ci panorama bu île bi, ci weti Palais du Gouverneur ak pont Faidherbe. Melokaanam di bokk ci identitéu paysage urbain bu Saint-Louis.
+Katedraal bi feeñ na ci paysageu île bi, te jege na ay repèresu centreu historique. Melokaanam bokk na ci identitéu paysage urbain bu Ndar.
 
 ### Architecture
 
-Bâtiment bi di wone adaptationu styles architecturaux yu Europe ci contexteu local. Structureu kër bi, bois, ouvertures ak placementu bâtiment bi bokk nañu ci jëmmal architecture bi.
+Bâtiment bi di wone ni styles architecturaux yu Europe mën nañu soppeeku ci contexteu local. Structure, bois, ouvertures ak tëralug bâtiment bi bokk nañu ci jëmmal architecture bi.
 
 ### Aarug patrimoine
 
-Katedraal bi bokk na ci secteur bu Saint-Louis bu ñu aar, bi ñu dugal ci patrimoine mondial UNESCO ci 2000. Mu di itam benn lieu de culte bu communauté catholique bi di jëfandikoo.
+Katedraal bi bokk na ci secteur bu Ndar bu ñu aar, bi UNESCO dugal ci patrimoine mondial ci 2000. Mu di itam lieu de culte bu communauté catholique bi di jëfandikoo.
 
 ### Héritage
 
-Katedraalu Saint-Louis di wone diggante patrimoine architectural, histoireu ville bi ak vie religieuse. Mu nekk benn repère ci paysageu culturel bu Saint-Louis.`,
+Katedraalu Ndar di lëkkale patrimoine architectural, histoireu ville bi ak vie religieuse. Mu nekk benn repère ci paysageu culturel bu Saint-Louis.`,
   },
 
   'grande-mosquee-de-dakar': {
@@ -83,11 +83,11 @@ Katedraalu Saint-Louis di wone diggante patrimoine architectural, histoireu vill
     excerptWo: 'Jàkka ju mag ci diggu Dakar, monumentu religieux ak repère architectural bu capitale bi.',
     contentWo: `### Jëmmal
 
-Jàkka ju mag ju Dakar nekk na ci diggu ville bi. Ñu ubbi ko ci 1964 ci kanamu roi Hassan II du Maroc ak président Léopold Sédar Senghor, te mu nekk benn ci lieuxu culte yu mag ci capitale bi.
+Jàkka ju mag ju Dakar nekk na ci diggu ville bi. Ñu ubbi ko ci 1964 ci kanamu roi Hassan II du Maroc ak président Léopold Sédar Senghor, te mu bokk ci lieuxu culte yu mag ci capitale bi.
 
 ### Architecture
 
-Minaret bi am na 67 mètres, te jàkka bi am na marbre blanc ak mosaïques marocaines. Styleu arabo-andalou ak décorationsu architecture di yokk solo ci melokaanu édifice bi.
+Minaret bi yegg 67 mètres. Jàkka bi am na marbre blanc ak mosaïques marocaines, ak ay nétalu style arabo-andalou ci décor bi.
 
 ### Histoireu construction
 
@@ -95,11 +95,11 @@ Projetu jàkka bi tambali na ci période coloniale, ngir wuutu ancienne mosquée
 
 ### Jàng ak diine
 
-Institut islamique nekk na ci biir ensemble bi, te mu lëkkale jàng, recherche ak vie religieuse. Jàkka bi di dalal ay jullit ci julli bés bu nekk ak rassemblementsu jumaa ak fêtes yi.
+Institut islamique nekk na ci biir ensemble bi, te mu lëkkale njàng, recherche ak vie religieuse. Jàkka bi di dalal jullit yi ci julli bés bu nekk, jumaa ak ay fêtes.
 
 ### Héritage
 
-Jàkka ju mag ju Dakar di nekk repère architectural ak religieux bu capitale bi, te mu wone itam diggante histoireu Senegaal ak Maroc.`,
+Jàkka ju mag ju Dakar di nekk repère architectural ak religieux bu capitale bi, te di wone itam diggante histoireu Senegaal ak Maroc.`,
   },
 
   'mosquee-massalikul-jinaan': {
@@ -115,7 +115,7 @@ Turu « Massalikul Jinaan » tekki na « yoonu aljana » ak mu jël ci benn tàn
 
 ### Dimensions ak architecture
 
-Jàkka bi am na juróom minarets, bi gën a kawe di yegg 78 mètres. Capacitéu dalal jullit yi di jëm ci 30 000 nit, ci biir ak esplanade. Marbre de Carrare ak dôme bu xob ndaw bokk nañu ci décoration bi.
+Jàkka bi am na juróom minarets, bi gën a kawe di yegg 78 mètres. Capacité bi di jëm ci 30 000 nit, ci biir ak esplanade. Marbre de Carrare ak dôme bokk nañu ci décoration bi.
 
 ### Histoire
 
@@ -127,11 +127,11 @@ Massalikul Jinaan di nekk benn repère ci patrimoine religieuxu Dakar, te mu yok
   },
 
   'calao-a-bec-rouge-oiseau-emblematique-des-savanes-senegalaises': {
-    titleWo: 'Calao bu gémmiñu xonq : picc bu feeñ ci savanesu Senegaal',
-    excerptWo: 'Picc bu am gémmiñu orange, di gis ci savanes ak zones boisées yu Senegaal.',
+    titleWo: 'Calao bu gémmiñu xonq',
+    excerptWo: 'Picc bu am gémmiñu orange, buy dund ci savanes ak zones boisées yu Senegaal.',
     contentWo: `### Jëmmal
 
-Calao bu gémmiñu xonq, walla Tockus erythrorhynchus, mooy picc bu digg-bari ci familleu Bucerotidae. Gémmiñam bu gudd te dafa courbé, te plumage bi boole noir ak blanc.
+Calao bu gémmiñu xonq, walla Tockus erythrorhynchus, mooy picc bu digg-bari ci familleu Bucerotidae. Gémmiñam dafa gudd te courbé, te plumage bi boole noir ak blanc.
 
 ### Barab yi mu nekk
 
@@ -139,7 +139,7 @@ Ci Senegaal, mën nañu ko gis ci parcs ak réserves, mel ni Parc national du Ni
 
 ### Doxalin ak lekk
 
-Calao bi di lekk insectes, yeneen petits reptiles ak yenn fruits. Volam dafa am ay vagues : battementsu lél yi di toppoo ak phasesu plané.
+Calao bi di lekk insectes, yeneen petits reptiles ak yenn fruits. Volam di wone battementsu lél yi ak ay waxtu yu mu di plané.
 
 ### Njàngum reproduction
 
@@ -147,6 +147,6 @@ Ci jamono joxug nday, jigéen ji di denc ci cavitéu garab, te di tëj bunt bi a
 
 ### Aarug biodiversité
 
-Calao bi di nekk benn élément ci biodiversitéu savanesu Senegaal. Xam barab yi mu nekk ak aarug habitats di jàppale conservationu espèces yi.`,
+Calao bi bokk na ci biodiversitéu savanesu Senegaal. Xam barab yi mu nekk ak aarug habitats di jàppale conservationu espèces yi.`,
   },
 };
