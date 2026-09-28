@@ -635,6 +635,25 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('has no duplicate source keys across Wolof packs', () => {
+    const seen = new Map<string, string>();
+    const duplicates: string[] = [];
+    for (const name of WOLOF_SOURCE_FILES) {
+      const filePath = path.join(__dirname, name);
+      if (!fs.existsSync(filePath)) continue;
+      const source = fs.readFileSync(filePath, 'utf8');
+      const keyPattern = /^\s{2}'([^']+)':\s*\{/gm;
+      let match: RegExpExecArray | null;
+      while ((match = keyPattern.exec(source)) !== null) {
+        const slug = match[1];
+        const previous = seen.get(slug);
+        if (previous) duplicates.push(slug + ' (' + previous + ' + ' + name + ')');
+        else seen.set(slug, name);
+      }
+    }
+    expect(duplicates).toEqual([]);
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
