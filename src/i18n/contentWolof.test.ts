@@ -676,6 +676,21 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof heritage museums consolidation wave 67', () => {
+    const slugs = [
+      'musee-du-crds-de-saint-louis-musee-regional-saint-louis',
+      'musee-regional-de-thies-histoire-et-ethnographie-thies',
+      'maison-de-la-culture-douta-seck-medina-dakar',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(450);
+    }
+  });
+
   it('covers the Wolof culture and design consolidation wave 66', () => {
     const slugs = ['ousseynou-bissichi', 'ismael-thiam', 'joelle-le-bussy', 'aissa-dione'];
     for (const slug of slugs) {
