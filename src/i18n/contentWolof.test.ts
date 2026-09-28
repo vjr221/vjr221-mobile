@@ -590,6 +590,21 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof literature consolidation wave 58', () => {
+    const slugs = [
+      'ibrahima-sall-ecrivain-senegalais',
+      'aminata-maiga-ka',
+      'mamadou-diaw-artiste',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect(fiche?.contentWo?.length).toBeGreaterThan(250);
+    }
+  });
+
   it('covers the Wolof heritage consolidation wave 57', () => {
     const slugs = [
       'musee-boribana-art-africain-ile-de-goree',
