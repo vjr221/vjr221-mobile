@@ -898,6 +898,18 @@ describe('Wolof fiche translations', () => {
 
 
 
+
+  it('covers the Wolof Boundou Casamance culture consolidation wave 89', () => {
+    const slugs = ['fode-kaba-doumbouya-resistant-a-la-colonisation-en-casamance', 'le-yeela-poesie-musicale-du-boundou-et-patrimoine-vivant-du-senegal-oriental', 'le-patrimoine-diola-langues-rites-et-culture-de-casamance'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof Casamance heritage consolidation wave 88', () => {
     const slugs = ['reserve-naturelle-communautaire-tocc-tocc', 'parc-national-basse-casamance-foret-biodiversite', 'ile-karabane-memoire-architecture-casamance'];
     for (const slug of slugs) {
