@@ -255,3 +255,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Les informations déjà présentes ont été conservées ; aucune biographie ou donnée nouvelle non établie n’a été ajoutée.
 - Test dédié ajouté avec contrôle des champs, de la structure et de la longueur.
 - Aucun APK intermédiaire.
+
+
+## Mise à jour — vague 72
+
+- **Vague 72 : consolidation de 3 fiches de nature et biodiversité existantes** — Parc national du Delta du Saloum, Tamarinier et Calao terrestre géant.
+- Réécriture Wolof pour améliorer fluidité, vocabulaire de biodiversité et articulation entre milieu, usages et conservation.
+- Aucun nouveau slug, aucun doublon et aucune donnée spéculative ajoutés.
+- Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
+- Aucun APK intermédiaire.
