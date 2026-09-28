@@ -48,25 +48,6 @@ Mu bokk ci diversitéu baatu jigéen ñi ci littérature bu Senegaal. Mbindiin y
 - Nit ñi ak mbirum société`,
   },
 
-  'pape-amadou-seck': {
-    titleWo: 'Pape Amadou Seck — acteur ak créateur bu Senegaal',
-    excerptWo: 'Acteur ak créateur bu Senegaal buy bokk ci dynamiqueu spectacle vivant ak audiovisuel.',
-    contentWo: `### Parcours artistique
-
-Pape Amadou Seck mooy acteur ak créateur bu Senegaal buy bokk ci scène artistique bu Senegaal bu jamono jii, fa théâtre, cinéma, télévision ak spectacle vivant di daje.
-
-### Création ak spectacle
-
-Liggéeyu comédiens di jàppale transmissionu nettali ak imaginaires. Scène bi di itam bérab bu rencontre ak public ak expressionu réalités sociales yu jamono jii.
-
-### Li war a fàttaliku
-
-- Acteur bu Senegaal
-- Spectacle vivant
-- Audiovisuel
-- Création contemporaine`,
-  },
-
   'mamadou-diaw-artiste': {
     titleWo: 'Mamadou Diaw — artiste bu Senegaal ci scène contemporaine',
     excerptWo: 'Artiste bu Senegaal bu lëkkale création contemporaine, xalaat ak expressionu scène culturelle.',
