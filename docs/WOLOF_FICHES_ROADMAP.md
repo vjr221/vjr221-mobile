@@ -291,3 +291,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucune donnée spéculative ajoutés.
 - Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
 - Aucun APK intermédiaire.
+
+## Mise à jour — vague 76
+
+- **Vague 76 : consolidation de 4 fiches musicales existantes** — Takeifa, Awa Ly, Yoro Ndiaye et Nuru Kane.
+- Réécriture Wolof pour renforcer le vocabulaire de création musicale, rythme, composition, scène, fusion et transmission, sans ajouter de faits non présents dans le corpus.
+- Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
+- Aucun APK intermédiaire : validation CI d’abord.
