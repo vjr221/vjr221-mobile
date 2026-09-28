@@ -676,6 +676,17 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof urban music consolidation wave 63', () => {
+    const slugs = ['carlou-d', 'sister-fa', 'fou-malade', 'keyti', 'daara-j-family'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(350);
+    }
+  });
+
   it('covers the Wolof music and dance consolidation wave 61', () => {
     const slugs = ['aminata-fall-chanteuse-senegalaise', 'mamy-victory', 'baidy-ba'];
     for (const slug of slugs) {
