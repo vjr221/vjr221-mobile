@@ -237,3 +237,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucun contenu français modifié.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale renforcée.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 70
+
+- **Vague 70 : consolidation de 5 fiches de patrimoine vivant et culturel existantes** — Gumbe, palmier à huile de Casamance, métiers de la forge à Kaffrine, Chambre de Commerce de Dakar et village d’Iwol.
+- Réécriture orientée fluidité Wolof, transmission, savoir-faire, territoire et patrimoine.
+- Aucun nouveau slug et aucune duplication ajoutés ; les faits déjà présents dans les fiches ont été conservés sans enrichissement spéculatif.
+- Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
+- Aucun APK intermédiaire.
