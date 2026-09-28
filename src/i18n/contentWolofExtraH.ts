@@ -5,49 +5,79 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 /** Vague 12 — institutions et lieux culturels actuellement recensés sur VJR 221 */
 export const CONTENT_WO_EXTRA_H: Record<string, WolofContent> = {
   'musee-du-crds-de-saint-louis-musee-regional-saint-louis': {
-    titleWo: 'Musée du CRDS bu Ndar — musée régional',
-    excerptWo: 'Musée bu Centre de recherches et de documentation du Sénégal ci Ndar, te dafa jàppale ci taariix ak patrimoine.',
+    titleWo: 'Musée du CRDS bu Ndar — musée régional ak patrimoine',
+    excerptWo: 'Musée bu Centre de recherches et de documentation du Sénégal ci Ndar, buy jàppale taariix, recherche ak dencug patrimoine.',
     contentWo: `### Jëmmal
 
-Musée du CRDS bu Ndar bokk na ci Centre de recherches et de documentation du Sénégal. Mu jàppale ci conservation, documentation ak transmissionu taariix ak patrimoine bu Saint-Louis ak norte Senegaal.
+Musée du CRDS bu Ndar bokk na ci Centre de recherches et de documentation du Sénégal. Mu jàppale ci dencug, documentation ak transmissionu taariix ak patrimoine bu Saint-Louis ak norte Senegaal.
 
-### Saint-Louis ak patrimoine
+### Ndar ak mémoire
 
-Ndar am na taariix bu yàgg, lëkkale dexu Senegaal, commerce, administration, aada ak architecture. Musée bi mën na may visiteurs ak chercheurs ay repères ci taariix bu dëkk bi ak diiwaan bi.
+Saint-Louis am na taariix bu yàgg bu lëkkale dexu Senegaal, commerce, administration, architecture ak aada. Musée bi di may ay repères ci mbir yi tax dëkk bi am solo ci taariixu réew mi.
 
-### Xam-xam ak transmission
+### Recherche ak collections
 
-CRDS dafa lëkkale recherche, documentation, collections ak médiation. Mu bokk ci réseauu bérab yu di jàppale ci xam-xam ci patrimoine bu Senegaal.`,
+CRDS di lëkkale recherche, documentation, collections ak médiation. Musée ak centreu documentation di jàppale chercheurs, étudiants ak visiteurs ci jokkoo ak xam-xam bu patrimoine.
+
+### Transmission
+
+Dencug patrimoine am na solo bu dul denc rekk : war na itam jox nit ñi yoon ngir xam, jàng ak fàttaliku. Musée bi bokk na ci liggéey boobu ci Ndar.
+
+### Li war a fàttaliku
+
+- Musée du CRDS bu Ndar
+- Taariix ak patrimoine bu Saint-Louis
+- Recherche, documentation ak transmission`,
   },
   'musee-regional-de-thies-histoire-et-ethnographie-thies': {
     titleWo: 'Musée régionalu Thiès — taariix ak ethnographie',
-    excerptWo: 'Musée bu Thiès bu wone taariix, ethnographie ak patrimoine bu diiwaan bi.',
+    excerptWo: 'Musée bu Thiès buy wone taariix, ethnographie, mémoire locale ak patrimoine bu diiwaan bi.',
     contentWo: `### Jëmmal
 
-Musée régionalu Thiès mooy bérab bu ñuy wone ak di yeggali taariix ak patrimoine bu diiwaan bi. Mu lëkkale collections, ethnographie ak mémoire locale.
+Musée régionalu Thiès mooy bérab bu ñuy denc ak wone mbirum taariix ak patrimoine bu diiwaan bi. Mu lëkkale collections, ethnographie ak mémoire locale.
 
 ### Diiwaanu Thiès
 
-Thiès am na berab bu am solo ci taariixu transport, industrie, agriculture ak culture. Musée bi mën na jàppale ci xam-xam ci dund ak cosaanu nit ñi ci diiwaan bi.
+Thiès am na bérab bu am solo ci taariixu transport, industrie, agriculture ak culture. Seetlu mbirum dundug nit ñi ci diiwaan bi di may xam-xam ci yoonu dëkk ak soppi-soppi yi ñu jaar.
+
+### Ethnographie ak patrimoine
+
+Ethnographie di jàppale xam ni nit ñi di dund, liggéey, def aada ak yokk seen askan. Collectionsu musée mën na doon ay repères ngir jàng cosaan ak mémoire bu diiwaan bi.
 
 ### Transmission
 
-Musées régionaux am nañu solo ci education, recherche ak transmission. Ñoom may nañu jeunes, chercheurs ak visiteurs ay outils ngir xam taariix ak patrimoine.`,
+Musée régional yi am nañu solo ci njàng, recherche ak transmission. Ñu may nañu jeunes, chercheurs ak visiteurs yoon ngir xam taariix ak patrimoine ci seen bérab.
+
+### Li war a fàttaliku
+
+- Musée régionalu Thiès
+- Taariix ak ethnographie
+- Mémoire locale ak transmission`,
   },
   'maison-de-la-culture-douta-seck-medina-dakar': {
-    titleWo: 'Maison de la Culture Douta Seck — pôle culturel bu Médina',
-    excerptWo: 'Centre culturel bu Médina bu Dakar, dédié ci création, diffusion ak transmissionu arts.',
+    titleWo: 'Maison de la Culture Douta Seck — bérab bu arts ci Médina',
+    excerptWo: 'Centre culturel bu Médina ci Dakar, buy jàppale création, diffusion, rencontres ak transmissionu arts.',
     contentWo: `### Jëmmal
 
-Maison de la Culture Douta Seck nekk na ci Médina ci Dakar. Mu nekk na centre bu création, diffusion ak transmissionu arts, te dafa bokk ci vie culturelle bu dëkk bi.
+Maison de la Culture Douta Seck nekk na ci Médina ci Dakar. Mu bokk ci bérab yi di doxal vie culturelle bu dëkk bi, ak activités yu jëm ci création, diffusion ak transmissionu arts.
 
-### Missions
+### Création ak rencontre
 
-Centre bi dafay jàppale ci rencontres, échanges, documentation culturelle ak création. Activités yi mën nañu aju ci arts scéniques, arts visuels ak multimédia.
+Maison bi mën na doon bérab bu artistes, acteurs culturels ak public di daje. Rencontres, échanges ak activités culturelles di jàppale jokkoo diggante création ak dëkkandoo.
 
-### Transmission
+### Arts ak transmission
 
-Maison bi dafay may solo ci njàngat ak jeunes, te dafa jàppale ci aar patrimoine culturel matériel ak immatériel. Mu nekk it ci réseauu établissements culturels bu réew mi.`,
+Arts scéniques, arts visuels ak yeneen formesu expression mën nañu am seen bérab ci centre bi. Transmission ak njàng di may jeunes ak public yi yoon ngir bokk ci dundug culture.
+
+### Patrimoine culturel
+
+Maisonu culture yi am nañu solo ci aar ak yégle patrimoine, di boole mémoire ak création bu jamono jii. Douta Seck bokk na ci paysageu établissements culturels bu Dakar.
+
+### Li war a fàttaliku
+
+- Maison de la Culture Douta Seck
+- Médina, Dakar
+- Création, arts ak transmission`,
   },
   'leopold-sedar-senghor-poete-et-homme-detat': {
     titleWo: 'Léopold Sédar Senghor — bindkat, poète ak homme d’État bu Senegaal',
