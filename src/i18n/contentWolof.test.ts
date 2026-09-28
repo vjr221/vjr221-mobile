@@ -899,6 +899,18 @@ describe('Wolof fiche translations', () => {
 
 
 
+
+  it('covers the Wolof Lompoul Goree heritage consolidation wave 90', () => {
+    const slugs = ['ile-degueye-mangrove-bolongs-immersion-casamance', 'desert-de-lompoul', 'boubacar-joseph-ndiaye-gardien-de-la-memoire-de-goree'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof Boundou Casamance culture consolidation wave 89', () => {
     const slugs = ['fode-kaba-doumbouya-resistant-a-la-colonisation-en-casamance', 'le-yeela-poesie-musicale-du-boundou-et-patrimoine-vivant-du-senegal-oriental', 'le-patrimoine-diola-langues-rites-et-culture-de-casamance'];
     for (const slug of slugs) {
