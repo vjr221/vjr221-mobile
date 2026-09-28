@@ -61,7 +61,7 @@ Simenti di nekk benn repère ci découverteu Niokolo-Koba ak Sénégal oriental,
 
   'reserve-speciale-faune-gueumbeul': {
     titleWo: 'Réserve spéciale de faune de Guéumbeul',
-    excerptWo: 'Réserve naturelle ci wetu Saint-Louis, di jàppale conservationu faune ak zones humides.',
+    excerptWo: 'Barab naturel ci wetu Saint-Louis, bu jàppale aarug faune ak dencug zones humides.',
     contentWo: `### Jëmmal
 
 Réserve spéciale de faune de Guéumbeul nekk na ci régionu Saint-Louis. Mu bokk ci zones naturelles yu am solo ci nordu Senegaal ngir aar faune ak habitats.
