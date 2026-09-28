@@ -895,6 +895,18 @@ describe('Wolof fiche translations', () => {
 
 
 
+
+  it('covers the Wolof heritage consolidation wave 86', () => {
+    const slugs = ['musee-de-la-femme-henriette-bathily-dakar', 'grand-theatre-national-doudou-ndiaye-coumba-rose-dakar', 'mont-assirik-niokolo-koba', 'yoff-layene', 'le-point-culminant-du-senegal-les-collines-de-kedougou'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof literature consolidation wave 85', () => {
     const slugs = ['leopold-sedar-senghor-poete-et-homme-detat', 'ken-bugul-ecrivaine-senegalaise', 'mariama-ba-ecrivaine-senegalaise', 'birago-diop-poete-et-ecrivain-senegalais', 'cheikh-hamidou-kane-ecrivain-senegalais'];
     for (const slug of slugs) {
