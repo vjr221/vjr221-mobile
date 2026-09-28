@@ -307,3 +307,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+## Mise à jour — vague 78
+
+- **Vague 78 : consolidation de 4 fiches cinéma documentaire et d’auteur existantes** — Ousmane William Mbaye, Safi Faye, Alain Gomis et Moussa Sène Absa.
+- Réécriture Wolof autour du documentaire, mémoire, aada, territoire, cinéma d’auteur, arts visuels et transmission.
+- Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
+- Aucun APK intermédiaire : validation CI d’abord.
