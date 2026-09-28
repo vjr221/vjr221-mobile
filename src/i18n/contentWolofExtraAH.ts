@@ -9,11 +9,15 @@ export const CONTENT_WO_EXTRA_AH: Record<string, WolofContent> = {
     excerptWo: 'Acteur ci création audiovisuelle bu Senegaal, ci ekosistem bi cinéma, télévision, production ak formesu numérique di bokk.',
     contentWo: `### Audiovisuel ak création
 
-Moussa Bathily mooy acteur ci création audiovisuelle bu Senegaal. Parcoursam bokk na ci secteur fa cinéma, télévision, production ak formesu numérique di jàppale yégle nettaliu Senegaal.
+Moussa Bathily mooy acteur ci création audiovisuelle bu Senegaal. Parcoursam bokk na ci secteur bi cinéma, télévision, production ak formesu numérique di jàppale yégle nettaliu Senegaal.
 
 ### Métiersu audiovisuel
 
-Secteur audiovisuel bu Senegaal boole réalisateurs, producteurs, scénaristes, techniciens, comédiens ak structuresu production. Chaîneu métiersu boobu am na solo ci sos ak yégle œuvres.
+Audiovisuel dafa boole réalisateurs, producteurs, scénaristes, techniciens, comédiens ak structuresu production. Chacun ci métier yi am na solo ci yoonu sos, production ak yégle œuvre.
+
+### Création ak transmission
+
+Liggéey ci audiovisuel di lëkkale savoir-faire yu wuute ak outils yu jamono jii. Loolu di jàppale sos ay contenus yu mën a jege public ci yeneen formu diffusion.
 
 ### Li war a fàttaliku
 
@@ -25,14 +29,18 @@ Secteur audiovisuel bu Senegaal boole réalisateurs, producteurs, scénaristes, 
 
   'samba-felix-ndiaye': {
     titleWo: 'Samba Félix Ndiaye — cinéaste ak documentariste bu Senegaal',
-    excerptWo: 'Cinéaste ak documentariste bu Senegaal, figure bu am solo ci cinéma documentaire africain.',
-    contentWo: `### Nettaliu société yu Afrik
+    excerptWo: 'Cinéaste ak documentariste bu Senegaal, figure bu cinéma documentaire africain.',
+    contentWo: `### Nettaliu société
 
-Samba Félix Ndiaye mooy cinéaste ak documentariste bu Senegaal. Œuvream di jox bérab bu mag métiers, savoir-faire, pratiquesu bés-bés ak réalités sociales, te di jàppale dencug mémoire audiovisuelle bu Senegaal.
+Samba Félix Ndiaye mooy cinéaste ak documentariste bu Senegaal. Œuvream di jox bérab bu mag métiers, savoir-faire, pratiquesu bés-bés ak réalités sociales.
 
-### Patrimoine ak cinéma
+### Patrimoine ak mémoire
 
-Filmam di wone ni documentaire mën na nekk outil ngir aar patrimoine immatériel ak valoriser savoir-faire yi.
+Filmam di wone ni documentaire mën na denc ay tracesu mémoire ak wone savoir-faire yi. Cinéma di nekk yoonu yégle expériencesu nit ñi ak patrimoine immatériel.
+
+### Regard documentaire
+
+Documentaire di jàppale xool dundin ak société ci gis-gis bu jege réalités. Liggéey bu mel ni bii di yokk dencug mémoire audiovisuelle bu Senegaal.
 
 ### Li war a fàttaliku
 
@@ -44,14 +52,18 @@ Filmam di wone ni documentaire mën na nekk outil ngir aar patrimoine immatérie
 
   'alassane-diago': {
     titleWo: 'Alassane Diago — réalisateur ak documentariste bu Senegaal',
-    excerptWo: 'Réalisateur ak documentariste bu Senegaal bu liggéeyam bokk ci cinéma documentaire africain bu jamono jii.',
+    excerptWo: 'Réalisateur ak documentariste bu Senegaal buy liggéey ci mémoire, migrations ak réalités sociales.',
     contentWo: `### Documentaire
 
-Alassane Diago mooy réalisateur ak documentariste bu Senegaal. Cinémaam di seet parcoursu nit ñi, mémoire, migrations ak réalités sociales, ak bérab bu am solo bu récitsu nit ñi.
+Alassane Diago mooy réalisateur ak documentariste bu Senegaal. Cinémaam di seet parcoursu nit ñi, mémoire, migrations ak réalités sociales.
 
-### Cinéma ak société
+### Nit ñi ak société
 
-Documentaire di nekk yoonu am solo ngir denc mémoireu expériences ak soppi-soppi yu société bu Senegaal.
+Récitsu nit ñi di am bérab bu mag ci liggéeyam. Documentaire di jox yoon ngir xool expériences, soppi-soppi ak xaal yu société.
+
+### Mémoire ak cinéma
+
+Cinéma di nekk yoonu denc mémoireu expériences ak wone ay réalités yu jamono jii. Liggéey bi di bokk ci cinéma documentaire africain bu contemporain.
 
 ### Li war a fàttaliku
 
@@ -63,18 +75,22 @@ Documentaire di nekk yoonu am solo ngir denc mémoireu expériences ak soppi-sop
 
   'sada-thioub': {
     titleWo: 'Sada Thioub — comédien ak acteur bu Senegaal',
-    excerptWo: 'Comédien bu Senegaal bu lëkkale ak théâtre ak création scénique.',
+    excerptWo: 'Comédien bu Senegaal bu lëkkale ak théâtre ak création scénique, ci vitalitéu spectacle vivant.',
     contentWo: `### Théâtre ak scène
 
-Sada Thioub mooy comédien bu Senegaal bu lëkkale ak théâtre ak création scénique. Parcoursam bokk na ci vitalitéu arts dramatiques ci Senegaal.
+Sada Thioub mooy comédien ak acteur bu Senegaal bu lëkkale ak théâtre ak création scénique. Parcoursam bokk na ci vitalitéu arts dramatiques ci Senegaal.
 
 ### Spectacle vivant
 
-Théâtre bu Senegaal am na tradition bu yàgg ci création, transmission orale, dramaturgie ak spectacle vivant. Comédiens yi di jàppale wéyal tradition boobu ci yégle textes ak créations ci kanamu public.
+Théâtre di boole texte, jeu, mise en scène ak waxtaan ak public. Comédiens yi di jàppale yégle nettali ak wéyal yoonu création scénique.
+
+### Création ak transmission
+
+Arts dramatiques di jàppale transmissionu idées ak expériences ci kanamu public. Spectacle vivant di nekk béréb bu création ak waxtaan ci diggante artistes ak nit ñi.
 
 ### Li war a fàttaliku
 
-- Comédien bu Senegaal
+- Comédien ak acteur bu Senegaal
 - Théâtre ak spectacle vivant
 - Création scénique`,
   },
