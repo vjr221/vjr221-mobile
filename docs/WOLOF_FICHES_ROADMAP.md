@@ -173,3 +173,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun fait biographique spéculatif et aucun contenu français modifié.
 - Test dédié ajouté avec contrôle de structure et longueur minimale ; CI requise avant la prochaine vague.
 - Aucun APK intermédiaire : il s'agit d'une consolidation éditoriale.
+
+
+## Mise à jour — vague 63
+
+- **Vague 63 : consolidation de 5 fiches de musique urbaine existantes** — Carlou-D, Sister Fa, Fou Malade, Keyti et Daara J Family.
+- Réécriture du Wolof pour améliorer la fluidité, la cohérence des formulations et la séparation entre création musicale, scène, culture urbaine et transmission.
+- Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; le contenu français reste inchangé.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
+- Aucun APK intermédiaire : validation CI d’abord.
