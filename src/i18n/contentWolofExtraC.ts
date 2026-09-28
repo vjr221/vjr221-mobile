@@ -69,11 +69,7 @@ export const CONTENT_WO_EXTRA_C: Record<string, WolofContent> = {
     excerptWo: 'Grande zone humide.',
     contentWo: `### Jëmmal\n\nRéserve spéciale de faune du Ndiaël : zone humide, picc ak conservation.`,
   },
-  'camp-de-simenti-porte-dentree-du-parc-national-du-niokolo-koba': {
-    titleWo: 'Camp bu Simenti',
-    excerptWo: 'Porte d entrée bu Niokolo-Koba.',
-    contentWo: `### Jëmmal\n\nCamp de Simenti : porte d entrée du Parc national du Niokolo-Koba.`,
-  },
+
   'saloum-fleuve-mangroves-iles-patrimoine-vivant': {
     titleWo: 'Dexu Saalum',
     excerptWo: 'Fleuve, mangrove, duni yi.',
@@ -283,25 +279,7 @@ Askani pêcheurs yi dafa bokk ci dundug delta bi. Amas coquilliers yi di wone ne
 
 Delta Saalum nekk na réserve de biosphère UNESCO ba ci 1980, te duggu na ci patrimoine mondial ci 2011 ni paysage culturel. Parc national bi sos nañu ko ci 1976 ngir aar ecosystem yi ak njàngum nature.`,
   },
-  'le-parc-national-du-delta-du-saloum': {
-    titleWo: 'Parc national bu Delta Saalum',
-    excerptWo: 'Dunu mangrove, iles, bolong ak gëstu nature ci région Fatick.',
-    contentWo: `### Jëmmal
 
-Parc national bu Delta Saalum mooy benn ci bérab yu gëna am solo ci nature bu Senegaal. Mu nekk ci région Fatick, te am mangrove, iles, bolong, vasière ak forêt.
-
-### Ecosystem bu wuute
-
-Parc bi dafa nekk bérab bu ay xeet yu bari di dund. Mangrove yi, ndox mi ak suuf si dañuy boole ngir sos ab ecosystem bu am solo ci aar biodiversité.
-
-### Xew-xew ak économie
-
-Delta bi dafa am taarix, aada ak liggéey yu aju ci pêche ak écotourisme. Askani dëkk yi bokk nañu ci dund ak aar bérab yi.
-
-### Xam-xam
-
-Parc bi sos nañu ko ci 1976. Mu am lu tollu ci 76 000 hectares. Delta Saalum nekk na ci patrimoine mondial UNESCO, te reserve de biosphère bi di yokk njariñu conservation bi.`,
-  },
   'toubacouta': {
     titleWo: 'Toubacouta',
     excerptWo: 'Dëkk ci départementu Foundiougne, bunt bu mag bu Delta Saalum ak écotourisme.',
@@ -1012,44 +990,8 @@ Mbind dafay joxe benn yoon ngir xalaat, nettali ak séddoo ay xalaat ci sociét�
 
 Bindkat yi am nañu solo ci denc ak yóbbu baat ak xam-xam ci génération yi ñëw.`,
   },
-  'faty-sow-kane': {
-    titleWo: 'Faty Sow Kane',
-    excerptWo: 'Bindkat ak universitaire bu Senegaal, bokk ci création ak transmission intellectuelle.',
-    contentWo: `### Jëmmal
 
-Faty Sow Kane mooy bindkat ak universitaire bu Senegaal. Mu bokk ci wàllu mbind ak transmissionu xam-xam.
 
-### Mbind ak gëstu
-
-Liggeyam di lëkkale littérature, gëstu ak xalaat universitaire. Mu bokk ci diversitéu production intellectuelle bu Senegaal.
-
-### Transmission
-
-Université ak littérature di nekk yoon yu am solo ngir séddoo xam-xam ak yokk xalaat bu jàppandi.
-
-### Héritage
-
-Liggeyu bindkat ak universitaire yi di bokk ci patrimoine intellectuel bu réew mi.`,
-  },
-  'aminata-maiga-ka': {
-    titleWo: 'Aminata Maïga Ka',
-    excerptWo: 'Bindkat bu Senegaal, figure bu littérature africaine francophone.',
-    contentWo: `### Jëmmal
-
-Aminata Maïga Ka mooy bindkat bu Senegaal, te bokk na ci littérature africaine francophone.
-
-### Mbind ak littérature
-
-Mbindam di yokk voixu littérature bu Senegaal ci espaceu francophone. Mu bokk ci productionu littéraire bu Aferik.
-
-### Culture
-
-Littérature di jox yoon ngir nettali dund, xalaat ak expérience yu nit ñi. Bindkat yi di yokk diversitéu baat yi.
-
-### Transmission
-
-Œuvres littéraires di wéy ci génération yi te di denc mémoire ak xalaat.`,
-  },
   'mame-younousse-dieng': {
     titleWo: 'Mame Younousse Dieng',
     excerptWo: 'Bindkat bu Senegaal ak taxawkat bu làkk Wolof.',
@@ -1107,44 +1049,8 @@ Mu bokk ci yëngu-yëngu bu arts visuels ci Senegaal, fu artistes di wone seen l
 
 Arts visuels di dimbali ci denc mémoire, xalaat ak nettali yu jamono ji.`,
   },
-  'papa-ibra-tall': {
-    titleWo: 'Papa Ibra Tall',
-    excerptWo: 'Peintre, dessinateur ak jàngalekat bu Senegaal, figure bu École de Dakar.',
-    contentWo: `### Jëmmal
 
-Papa Ibra Tall mooy peintre, dessinateur ak pédagogue bu Senegaal, te bokk na ci figures yu École de Dakar.
 
-### École de Dakar
-
-Mu bokk ci histoireu scèneu arts visuels bu Senegaal, ci jamono yi École de Dakar di yokk.
-
-### Peinture ak dessin
-
-Peinture ak dessin di nekk ci yoonu création ak expression artistique. Liggeyu artistes yi di yokk patrimoineu arts visuels.
-
-### Transmission
-
-Pédagogie ak création di jokkoo ngir jàngale ak yóbbu xam-xamu arts ci génération yi.`,
-  },
-  'moustapha-dime': {
-    titleWo: 'Moustapha Dimé',
-    excerptWo: 'Sculpteur bu Senegaal, figure bu am solo ci art contemporain africain.',
-    contentWo: `### Jëmmal
-
-Moustapha Dimé mooy sculpteur bu Senegaal, te am na benn place bu am solo ci art contemporain africain.
-
-### Sculpture
-
-Liggeyam di jëfandikoo matériaux yu wuute, ci biir yoonu création bu jëm ci sculpture. Œuvres yi di bokk ci histoireu arts visuels bu Senegaal.
-
-### Art contemporain
-
-Mu bokk ci artistes yi yokk seen gis-gis ci création contemporaine bu Afrik.
-
-### Héritage
-
-Liggeyu artistes yi di wéy ci œuvres yi ak ci mémoireu scène artistique bu Senegaal.`,
-  },
   'mamadou-gomis': {
     titleWo: 'Mamadou Gomis',
     excerptWo: 'Photographe ak documentariste bu Senegaal, bokk ci photographie documentaire.',
@@ -1468,63 +1374,9 @@ Liggeyu universitaire di dimbali ci jàngale ak transmissionu xam-xam ci génér
 
 Xalaat ak gëstu yi di yokk feeñal contributionsu xamkat yu Senegaal ci monde intellectuel.`,
   },
-  'awa-ly': {
-    titleWo: 'Awa Ly',
-    excerptWo: 'Chanteuse ak auteure-compositrice bu Senegaal, mu lëkkale soul, jazz, pop ak ay influence yu wuute.',
-    contentWo: `### Jëmmal
 
-Chanteuse ak auteure-compositrice bu Senegaal, mu lëkkale soul, jazz, pop ak ay influence yu wuute.
 
-### Musique ak création
 
-Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
-
-### Patrimoine culturel
-
-Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
-
-### Rayonnement
-
-Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
-  },
-  'yoro-ndiaye': {
-    titleWo: 'Yoro Ndiaye',
-    excerptWo: 'Chanteur ak musicien bu Senegaal, bokk ci scène musicale bu contemporain.',
-    contentWo: `### Jëmmal
-
-Chanteur ak musicien bu Senegaal, bokk ci scène musicale bu contemporain.
-
-### Musique ak création
-
-Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
-
-### Patrimoine culturel
-
-Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
-
-### Rayonnement
-
-Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
-  },
-  'nuru-kane': {
-    titleWo: 'Nuru Kane',
-    excerptWo: 'Musicien bu Senegaal, xam-xamkat bu ngoni, lëkkale traditions ouest-africaines ak influences contemporaines.',
-    contentWo: `### Jëmmal
-
-Musicien bu Senegaal, xam-xamkat bu ngoni, lëkkale traditions ouest-africaines ak influences contemporaines.
-
-### Musique ak création
-
-Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
-
-### Patrimoine culturel
-
-Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
-
-### Rayonnement
-
-Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
-  },
   'wasis-diop': {
     titleWo: 'Wasis Diop',
     excerptWo: 'Musicien, compositeur ak cinéaste bu Senegaal, liggeyam lëkkale musique ak cinéma.',
@@ -1544,25 +1396,7 @@ Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi
 
 Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
   },
-  'el-hadj-ndiaye': {
-    titleWo: 'El Hadj N’Diaye',
-    excerptWo: 'Guitariste, chanteur ak poète bu Senegaal, figure bu afro-folk ak afro-blues.',
-    contentWo: `### Jëmmal
 
-Guitariste, chanteur ak poète bu Senegaal, figure bu afro-folk ak afro-blues.
-
-### Musique ak création
-
-Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
-
-### Patrimoine culturel
-
-Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
-
-### Rayonnement
-
-Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
-  },
   'laba-sosseh': {
     titleWo: 'Laba Sosseh',
     excerptWo: 'Chanteur ak musicien sénégambien, figure bu salsa africaine.',
@@ -1639,44 +1473,8 @@ Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi
 
 Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
   },
-  'ablaye-cissoko': {
-    titleWo: 'Ablaye Cissoko',
-    excerptWo: 'Griot ak joueuru kora bu Senegaal, lëkkale tradition musicale ak création contemporaine.',
-    contentWo: `### Jëmmal
 
-Griot ak joueuru kora bu Senegaal, lëkkale tradition musicale ak création contemporaine.
 
-### Musique ak création
-
-Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
-
-### Patrimoine culturel
-
-Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
-
-### Rayonnement
-
-Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
-  },
-  'seckou-keita': {
-    titleWo: 'Seckou Keita',
-    excerptWo: 'Joueuru kora ak musicien bu Senegaal, bokk ci rayonnementu traditions musicales ouest-africaines.',
-    contentWo: `### Jëmmal
-
-Joueuru kora ak musicien bu Senegaal, bokk ci rayonnementu traditions musicales ouest-africaines.
-
-### Musique ak création
-
-Liggeyu artist bi bokk na ci dundug musique bu Senegaal, te di jokkoo ak ay traditions ak formes yu contemporain.
-
-### Patrimoine culturel
-
-Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi di dimbali ci transmissionu patrimoine bi.
-
-### Rayonnement
-
-Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
-  },
   'mansour-seck': {
     titleWo: 'Mansour Seck',
     excerptWo: 'Guitariste, chanteur ak compositeur bu Senegaal, figure bu Yéla ak musique pulaar.',
@@ -1772,25 +1570,7 @@ Musique di denc baat, mémoire ak xam-xam yu génération yi yóbbu. Artistes yi
 
 Liggeyu musique yi di yokk feeñal culture bu Senegaal ci réew mi ak bitim réew.`,
   },
-  'ousmane-william-mbaye': {
-    titleWo: 'Ousmane William Mbaye',
-    excerptWo: 'Réalisateur ak documentariste bu Senegaal, liggeyam di contribuw ci mémoire audiovisuelle bu réew mi.',
-    contentWo: `### Jëmmal
 
-Réalisateur ak documentariste bu Senegaal, liggeyam di contribuw ci mémoire audiovisuelle bu réew mi.
-
-### Création
-
-Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
-
-### Culture
-
-Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
-
-### Transmission
-
-Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
-  },
   'thierno-ndiaye-doss': {
     titleWo: 'Thierno Ndiaye Doss',
     excerptWo: 'Comédien bu Senegaal, figure bu cinéma ak théâtre bu réew mi.',
@@ -1943,25 +1723,7 @@ Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diver
 
 Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
   },
-  'moussa-sene-absa': {
-    titleWo: 'Moussa Sène Absa',
-    excerptWo: 'Cinéaste, peintre ak hommeu théâtre bu Senegaal, artiste multidisciplinaire.',
-    contentWo: `### Jëmmal
 
-Cinéaste, peintre ak hommeu théâtre bu Senegaal, artiste multidisciplinaire.
-
-### Création
-
-Liggeyu artist bi di bokk ci yëngu-yëngu bu création bu Senegaal, ak ay formes yu mel ni théâtre, cinéma, danse walla arts visuels.
-
-### Culture
-
-Art di jox yoon ngir nettali dund, xalaat ak mémoire. Artistes yi di yokk diversitéu patrimoine culturel.
-
-### Transmission
-
-Spectacle, image ak création di dimbali ci yóbbu xam-xam ak patrimoine ci génération yi ñëw.`,
-  },
   'souleyemane-keita': {
     titleWo: 'Souleymane Keïta',
     excerptWo: 'Artiste peintre bu Senegaal, figure bu peinture abstraite bu réew mi.',
