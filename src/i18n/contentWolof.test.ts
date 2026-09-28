@@ -894,6 +894,18 @@ describe('Wolof fiche translations', () => {
 
 
 
+
+  it('covers the Wolof literature consolidation wave 85', () => {
+    const slugs = ['leopold-sedar-senghor-poete-et-homme-detat', 'ken-bugul-ecrivaine-senegalaise', 'mariama-ba-ecrivaine-senegalaise', 'birago-diop-poete-et-ecrivain-senegalais', 'cheikh-hamidou-kane-ecrivain-senegalais'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof theatre cinema consolidation wave 84', () => {
     const slugs = ['baidy-ba', 'pape-faye', 'omar-seck', 'marieme-myriam-niang-icone-du-cinema-senegalais'];
     for (const slug of slugs) {
