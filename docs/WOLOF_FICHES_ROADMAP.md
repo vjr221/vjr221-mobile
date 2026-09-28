@@ -144,7 +144,7 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 
 ## Mise à jour — vague 59
 
-- **Vague 59 : consolidation d’une fiche doublonnée et renforcement du contrôle d’intégrité** — Pape Amadou Seck était présent dans deux packs locaux (contentWolofExtraC.ts et contentWolofExtraAF.ts). La fiche enrichie est désormais conservée dans une seule source et l’entrée redondante a été retirée de l’autre pack.
+- **Vague 59 : consolidation des doublons historiques et renforcement du contrôle d’intégrité** — l’audit source a révélé 20 clés présentes dans plusieurs packs locaux, dont Pape Amadou Seck. Les occurrences anciennes ont été retirées des packs précédents, en conservant les versions les plus récentes/enrichies. La couverture fusionnée reste sans doublon.
 - Ajout d’un test source qui détecte directement les clés dupliquées entre tous les packs Wolof, en plus du contrôle sur le corpus fusionné.
 - Aucun nouveau slug créé ; aucun contenu français modifié.
 - Aucun APK intermédiaire : la CI doit valider la consolidation avant la prochaine vague.
