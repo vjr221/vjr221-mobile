@@ -148,3 +148,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Ajout d’un test source qui détecte directement les clés dupliquées entre tous les packs Wolof, en plus du contrôle sur le corpus fusionné.
 - Aucun nouveau slug créé ; aucun contenu français modifié.
 - Aucun APK intermédiaire : la CI doit valider la consolidation avant la prochaine vague.
+
+
+## Mise à jour — vague 60
+
+- **Vague 60 : consolidation de 3 profils de création existants** — Oumou Sy, Adama Paris et Nzinga Biegueng Mboup.
+- Les formulations génériques ont été remplacées par des textes Wolof structurés autour des éléments déjà présents dans le corpus : couture/costume, mode/Dakar Fashion Week et architecture/Worofila.
+- Aucun nouveau slug créé et aucun fait biographique supplémentaire non établi ajouté.
+- Test dédié ajouté ; validation CI requise avant la prochaine vague. Aucun APK intermédiaire.
