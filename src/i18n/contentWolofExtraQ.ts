@@ -5,7 +5,7 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_Q: Record<string, WolofContent> = {
   'mangroves-casamance-ecosystemes-villages-savoir-faire': {
     titleWo: 'Mangrovesu Casamance : ecosystemes, dëkk ak xam-xam',
-    excerptWo: 'Mangrove, bolong, biodiversité ak liggéeyu dëkkandoo yi ci wetu Casamance.',
+    excerptWo: 'Mangrove, bolong, biodiversité ak liggéeyu dëkkandoo yi ci weti Casamance; mu lëkkale nature ak dundug dëkk yi.',
     contentWo: `### Jëmmal
 
 Mangrovesu Casamance mooy ecosystemes yu am solo ci paysage, biodiversité ak dundug communities littorales. Palétuviers, vasières, bolong ak zones humides bokk nañu ci patrimoine naturel ak culturel bu Casamance.
@@ -83,7 +83,7 @@ Kër bu rondu Sereer wone na xam-xam bu architecture traditionnelle ak dëppoo g
 
   'le-royaume-du-jolof-formation-territoires-et-heritage-historique': {
     titleWo: 'Nguurug Jolof : sos, territoires ak alalu taariix',
-    excerptWo: 'Benn ci nguur yu mag ci taariixu Senegaal ak Senegambie, ak commerce, pouvoir ak oralité.',
+    excerptWo: 'Benn ci nguur yu mag ci taariixu Senegaal ak Senegambie, bu lëkkale nguur, commerce, oralité ak territoires.',
     contentWo: `### Jëmmal
 
 Nguurug Jolof bokk na ci formations politiques yu mag ci taariixu Senegaal ak Senegambie. Taariixam lëkkale na ak organisationu pouvoir, réseaux commerciaux ak oralité bu am solo ci dencug xam-xam.
