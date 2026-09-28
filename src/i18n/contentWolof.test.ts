@@ -913,6 +913,18 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+
+  it('covers the Wolof musical heritage consolidation wave 79', () => {
+    const slugs = ['ablaye-cissoko', 'seckou-keita', 'positive-black-soul', 'orchestre-baobab'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(650);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
