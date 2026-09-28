@@ -346,3 +346,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement autour de la création audiovisuelle, du documentaire, de la mémoire, des migrations, du théâtre et du spectacle vivant.
 - Aucun nouveau slug et aucune donnée française modifiée.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+## Mise à jour — vague 83
+
+- **Vague 83 : consolidation de 5 fiches hip-hop existantes** — Carlou-D, Sister Fa, Fou Malade, Keyti et Daara J Family.
+- Renforcement du Wolof autour de la création musicale, du rap, de la culture urbaine, de la scène et de la transmission.
+- Aucun nouveau slug et aucune donnée française modifiée.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
