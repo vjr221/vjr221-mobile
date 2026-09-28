@@ -21,18 +21,24 @@ Politique bu patrimoine bi dafa jëm it ci recensement ak classementu sites ak m
   },
   'aminata-fall-chanteuse-senegalaise': {
     titleWo: 'Aminata Fall — chanteuse bu Senegaal',
-    excerptWo: 'Benn ci ay baat yu mag ci taariixu musik bu Senegaal.',
+    excerptWo: 'Benn ci ay baat yu mag ci taariixu musik ak scène culturelle bu Senegaal.',
     contentWo: `### Jëmmal
 
 Aminata Fall mooy chanteuse ak artiste bu Senegaal, te bokk na ci ay nit ñi am solo ci taariixu musik ak scène culturelle bu réew mi.
 
-### Parcours artistique
+### Baat ak présence scénique
 
-Baatam ak présence scénique bi bokk nañu ci taariixu ay baat yu jigéen yu mag ci musik bu Senegaal, te seen liggéey daldi jaar ci ay génération yu bari.
+Baatam ak présence scénique bi bokk nañu ci taariixu ay baat yu jigéen yu mag ci musik bu Senegaal. Liggéeyam wone na ni baat ak scène mën a nekk yoonu transmission ci diggante génération yi.
 
-### Patrimoine musical
+### Mémoire musicale
 
-Parcoursam dafay lëkkale musik populaire, traditions vocales, scène ak mémoire culturelle bu Senegaal.`,
+Parcoursam lëkkale musik populaire, traditions vocales ak mémoire culturelle bu Senegaal. Ci anam boobu, sa contribution bokk na ci patrimoine sonore bu réew mi.
+
+### Li war a fàttaliku
+
+- Chanteuse ak artiste bu Senegaal
+- Baat ak scène culturelle
+- Patrimoine musical`,
   },
 
   'mamy-victory': {
@@ -42,12 +48,18 @@ Parcoursam dafay lëkkale musik populaire, traditions vocales, scène ak mémoir
 
 Mamy Victory, turam wu dëkk Faye Ndeye Penda, mooy artiste ak rappeuse bu Senegaal. Ci liggéeyam, dafa jëfandikoo musik ngir wax ci égalité diggante jigéen ak góor ak leadershipu jigéen.
 
-### Création
+### Création ak waxtaan
 
-Liggéeyu Mamy Victory bokk na ci scène culturelle bu Senegaal, te dafay lëkkale création, waxtaan ak mbir yi aju ci dundug askan wi.
+Liggéeyu Mamy Victory lëkkale na rap, création ak waxtaan ci mbir yi aju ci dundug askan wi. Musik di ko may yoonu yégle xalaat ak wone ay suñu mbir yu am solo ci société.
 
-### Contribution
+### Jigéen ak leadership
 
-Parcoursam di bokk ci feeñal industries culturelles ak créatives bu Senegaal, ak jokkoo gi am ci création, transmission ak ubbeeku ci àdduna.`,
+Ci thème yi mu jëfandikoo, égalité diggante jigéen ak góor ak leadershipu jigéen am nañu bérab. Contribution bu mel ni bii di yokk visibilitéu voix yu jigéen ci scène musicale.
+
+### Li war a fàttaliku
+
+- Mamy Victory / Faye Ndeye Penda
+- Rap ak création
+- Égalité ak leadershipu jigéen`,
   },
 };
