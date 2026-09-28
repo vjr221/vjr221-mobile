@@ -402,3 +402,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour de la mangrove, de l’écotourisme, des paysages sahéliens, du patrimoine de Gorée et de la transmission de la mémoire.
 - Aucun nouveau slug ni suppression de fiche.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+## Mise à jour — vague 91
+
+- **Vague 91 : consolidation de 2 fiches patrimoine naturel et mémoire culturelle** — Parc national du Niokolo-Koba et Place du Souvenir africain.
+- Renforcement du Wolof autour de la conservation, biodiversité, recherche, mémoire, culture et transmission.
+- Aucun nouveau slug ni suppression de fiche.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
