@@ -2,95 +2,97 @@ import type { ContentItem } from '../types/content';
 
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
-/** Vague 40 — artistes et musiciens contemporains. */
+/** Vague 76 — consolidation d’artistes et de musiques contemporaines. */
 export const CONTENT_WO_EXTRA_AD: Record<string, WolofContent> = {
   'takeifa': {
-    titleWo: 'Takeifa — groupe bu Senegaal bu musique contemporaine',
-    excerptWo: 'Groupe musical bu Senegaal bu sos musique contemporaine, ak ay influences africaines ak internationales.',
+    titleWo: 'Takeifa — groupe bu Senegaal ak musique contemporaine',
+    excerptWo: 'Groupe musical bu Senegaal buy lëkkale rythmes, voix ak sonorités contemporaines ci diggante aada ak influences yu wuute.',
     contentWo: `### Jëmmal
 
-Takeifa mooy groupe musical bu Senegaal buy def musique contemporaine, te di jëfandikoo ay influences yu jóge ci Afrik ak yeneen horizons.
+Takeifa mooy groupe musical bu Senegaal buy seet yoon yu bees ci création musicale. Son bi di boole voix, rythmes ak sonorités contemporaines ak ay influences yu jóge ci patrimoine musical bu Afrik.
 
-### Création bu bokk
+### Création ak sonorités
 
-Groupe bi di wone dynamiqueu formations musicales yu Senegaal yu di seet yoon yu bees ci rythmes, voix ak sonorités contemporaines.
+Groupe bi di wone ni artistes mën nañu jëfandikoo cosaan ak sonorités yu jamono jii ci benn projet musical. Arrangement yi ak dynamiqueu groupe bi di jàppale ab expression bu am identité.
 
-### Scène musicale
+### Scène ak public
 
-Takeifa bokk na ci diversitéu scène musicale bu Senegaal ak ubbeeku bi ci publics yu jóge ci réew mi ak ci bitim-réew.
+Takeifa bokk na ci scène musicale bu Senegaal ak ci yégle création bu réew mi ci publics yu wuute. Parcoursu groupe bi di wone itam ubbeeku scène bu Senegaal ci yeneen horizons.
 
 ### Li war a fàttaliku
 
-- Groupe bu Senegaal
-- Musique contemporaine
-- Fusion ak création bu bokk`,
+- Groupe musical bu Senegaal
+- Création contemporaine
+- Rythmes ak sonorités
+- Dialogue diggante aada ak influences yu wuute`,
   },
 
   'awa-ly': {
     titleWo: 'Awa Ly — chanteuse ak auteure-compositrice bu Senegaal',
-    excerptWo: 'Chanteuse ak auteure-compositrice bu Senegaal, ci diggante soul, jazz, pop ak influences africaines.',
+    excerptWo: 'Chanteuse ak auteure-compositrice bu Senegaal buy lëkkale soul, jazz, pop ak influences africaines ci créationam.',
     contentWo: `### Jëmmal
 
 Awa Ly mooy chanteuse ak auteure-compositrice bu Senegaal. Univers musicalam nekk na ci diggante soul, jazz, pop ak influences africaines.
 
-### Univers musical
+### Baat ak composition
 
-Musikam di wone diggante aada yu Afrik ak scènes internationales, ak bérab bu am solo bu baat ak arrangements contemporains.
+Baatam ak compositionam di boole sensibilitéu soul ak jazz ak sonorités yu Afrik. Création bi di jox solo à la fois ci mélodie, texte ak ambiance musicale.
 
-### Rayonnement
+### Scène ak rayonnement
 
-Parcoursam di jàppale visibilité bu artistesu Senegaal ak création musicale bu jóge ci diaspora ci scènes internationales.
+Parcoursam di wone diggante création bu Senegaal ak scènes internationales. Liggéeyu artiste bi di jàppale visibilité bu musique bu Senegaal ci publics yu wuute.
 
 ### Li war a fàttaliku
 
-- Chanteuse bu Senegaal
-- Soul ak jazz
+- Chanteuse ak auteure-compositrice
+- Soul, jazz ak pop
 - Influences africaines
-- Scène internationale`,
+- Création ak scène internationale`,
   },
 
   'yoro-ndiaye': {
     titleWo: 'Yoro Ndiaye — chanteur ak musicien bu Senegaal',
-    excerptWo: 'Chanteur ak musicien bu Senegaal bu lëkkale ak scène musicale contemporaine ak expressions populaires.',
+    excerptWo: 'Chanteur ak musicien bu Senegaal buy lëkkale expressions populaires ak scène musicale contemporaine.',
     contentWo: `### Jëmmal
 
-Yoro Ndiaye mooy chanteur ak musicien bu Senegaal bu lëkkale ak scène musicale contemporaine ak expressions populaires yu réew mi.
+Yoro Ndiaye mooy chanteur ak musicien bu Senegaal. Parcoursam bokk na ci scène musicale contemporaine ak expressions populaires yu réew mi.
 
-### Parcours musical
+### Musik ak expression
 
-Universam nekk na ci scène bu artistes di boole rythmes ak instrumentsu Senegaal ak influences yu jóge ci yeneen horizons.
+Liggéeyam di boole rythmes ak instruments yu Senegaal ak influences yu jóge ci yeneen horizons. Baat ak musique di bokk ngir sos ab expression bu jege public.
 
-### Contribution
+### Contribution ci scène
 
-Parcoursam di yokk diversitéu musique bu Senegaal ci jamono jii ak visibilité bu générationsu artistes yu bees.
+Parcoursu Yoro Ndiaye di yokk diversitéu scène musicale bu Senegaal. Mu bokk ci dynamique bu artistes di bind ak di defar formesu musique yu wuute ci jamono jii.
 
 ### Li war a fàttaliku
 
-- Chanteur bu Senegaal
+- Chanteur ak musicien bu Senegaal
+- Expressions populaires
 - Musique contemporaine
 - Création musicale`,
   },
 
   'nuru-kane': {
-    titleWo: 'Nuru Kane — musicien bu Senegaal, jëfandikukat ngoni ak fusion musicale',
-    excerptWo: 'Musicien bu Senegaal buy boole instruments ak rythmesu Afrik occidentale, musique urbaine ak influences internationales.',
+    titleWo: 'Nuru Kane — musicien bu Senegaal ak créateur bu fusion musicale',
+    excerptWo: 'Musicien bu Senegaal buy lëkkale rythmesu Afrik occidentale, instruments ak influencesu musique urbaine ci créationam.',
     contentWo: `### Jëmmal
 
-Nuru Kane mooy musicien bu Senegaal buy boole instruments ak rythmesu Afrik occidentale, musique urbaine ak influences internationales.
+Nuru Kane mooy musicien bu Senegaal buy seet diggante traditions musicales ak formesu création bu jamono jii. Liggéeyam di jëfandikoo rythmesu Afrik occidentale ak influences yu wuute.
 
-### Cosaan ak création
+### Instruments ak rythme
 
-Liggéeyam di wone waxtaan diggante traditions musicales yu Senegaal ak formesu jamono jii. Instrumentsu cordes ak rythmesu Afrik occidentale am nañu bérab bu am solo.
+Instrumentsu cordes ak yeneen sonorités di bokk ci universam. Musique bi di wone waxtaan diggante patrimoine musical ak création contemporaine, te rythme am na bérab bu mag ci expression bi.
 
-### Rayonnement
+### Fusion ak ouverture
 
-Parcoursam di jàppale yégle musiquesu Senegaal ak Afrik ci publics internationaux.
+Liggéeyam di lëkkale traditions yu Senegaal ak influences internationales ak musique urbaine. Loolu di jox création bi ab dimensionu fusion te bañ a fàtte cosaan.
 
 ### Li war a fàttaliku
 
 - Musicien bu Senegaal
 - Fusion musicale
-- Traditions yu Afrik occidentale
-- Création contemporaine`,
+- Rythmesu Afrik occidentale
+- Traditions ak création contemporaine`,
   },
 };
