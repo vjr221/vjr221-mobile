@@ -49,6 +49,7 @@ const WOLOF_SOURCE_FILES = [
   'contentWolofExtraAP.ts',
   'contentWolofExtraAQ.ts',
   'contentWolofExtraAR.ts',
+  'contentWolofExtraAS.ts',
 ];
 
 /**
@@ -563,6 +564,23 @@ describe('Wolof fiche translations', () => {
       'kolibantang',
       'lamine-konte-griot-virtuose-de-la-kora',
       'nafissatou-dia-diouf',
+    ]) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche).toBeDefined();
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
+  it('covers the verified department territory wave 55', () => {
+    for (const slug of [
+      'departement-de-thies',
+      'departement-de-tivaouane',
+      'departement-de-bakel',
+      'departement-de-fatick',
+      'departement-de-rufisque',
+      'departement-de-sedhiou',
     ]) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
