@@ -164,3 +164,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Les trois fiches existantes ont été approfondies en Wolof avec des sections structurées et une formulation plus naturelle, sans ajouter de faits biographiques non établis dans le corpus.
 - Aucun nouveau slug et aucun doublon créé.
 - Test dédié ajouté ; CI requise avant la poursuite.
+
+
+## Mise à jour — vague 62
+
+- **Vague 62 : consolidation de 4 fiches musicales existantes** — Didier Awadi, Doudou Ndiaye Rose, Wasis Diop et Cheikh Lô.
+- Les textes Wolof ont été réécrits de façon plus naturelle et structurée autour des éléments déjà présents dans le corpus : rap et société, sabar et transmission, composition et audiovisuel, ainsi que voix/guitare et influences musicales.
+- Aucun nouveau slug, aucun fait biographique spéculatif et aucun contenu français modifié.
+- Test dédié ajouté avec contrôle de structure et longueur minimale ; CI requise avant la prochaine vague.
+- Aucun APK intermédiaire : il s'agit d'une consolidation éditoriale.
