@@ -156,3 +156,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Les formulations génériques ont été remplacées par des textes Wolof structurés autour des éléments déjà présents dans le corpus : couture/costume, mode/Dakar Fashion Week et architecture/Worofila.
 - Aucun nouveau slug créé et aucun fait biographique supplémentaire non établi ajouté.
 - Test dédié ajouté ; validation CI requise avant la prochaine vague. Aucun APK intermédiaire.
+
+
+## Mise à jour — vague 61
+
+- **Vague 61 : consolidation musique et danse** — Aminata Fall, Mamy Victory et Baïdy Ba.
+- Les trois fiches existantes ont été approfondies en Wolof avec des sections structurées et une formulation plus naturelle, sans ajouter de faits biographiques non établis dans le corpus.
+- Aucun nouveau slug et aucun doublon créé.
+- Test dédié ajouté ; CI requise avant la poursuite.
