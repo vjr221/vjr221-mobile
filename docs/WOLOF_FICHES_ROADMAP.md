@@ -191,3 +191,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; le contenu français reste inchangé.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 65
+
+- **Vague 65 : consolidation de 4 fiches musique et arts visuels existantes** — Orchestra Baobab, Positive Black Soul, Fodé Camara et la scène Rap Galsen.
+- Réécriture du Wolof pour renforcer la cohérence du vocabulaire autour de la musique, du hip-hop, de la création visuelle, de l’identité et de la transmission.
+- Les informations déjà présentes dans le corpus ont été conservées ; aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
+- Aucun APK intermédiaire : validation CI d’abord.
