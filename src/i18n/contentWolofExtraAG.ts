@@ -2,107 +2,102 @@ import type { ContentItem } from '../types/content';
 
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
-/** Vague 43 — spectacle, audiovisuel, design et artisanat d’art. */
 export const CONTENT_WO_EXTRA_AG: Record<string, WolofContent> = {
   'ousseynou-bissichi': {
     titleWo: 'Ousseynou Bissichi — comédien ak humoriste bu Senegaal',
-    excerptWo: 'Comédien ak humoriste bu Senegaal bu xam nekk ci paysage audiovisuel ak humoristique bu réew mi.',
-    contentWo: `### Parcours artistique
+    excerptWo: 'Comédien ak humoriste bu Senegaal, buy bokk ci scène, audiovisuel ak créationu humor.',
+    contentWo: `### Jëmmal
 
-Ousseynou Bissichi mooy comédien ak humoriste bu Senegaal bu nekk ci paysage audiovisuel ak humoristique bu réew mi.
+Ousseynou Bissichi mooy comédien ak humoriste bu Senegaal. Parcoursam bokk na ci scène, audiovisuel ak créationu humor.
 
-### Humour ak société
+### Jeu ak humour
 
-Mu bokk ci générationu artistes yu di yokkute humor ak jeu d’acteur ci Senegaal, rawatina ci productions audiovisuelles ak scènesu spectacle.
+Comédie di jëfandikoo jeu, parole ak rythme ngir tax public ree ak xalaat. Ci liggéeyu humoriste, scène mën na nekk bérab bu waxtaan ci dundug bés-bés ak diggante nit ñi.
 
-### Humour ak gis-gis ci dund
+### Audiovisuel ak spectacle
 
-Humour di nekk yoonu nettali réalitésu bés-bés, diggante nit ñi ak soppi-soppi yu société. Liggéeyam di bokk ci dynamiqueu création bu populaire.
+Humour ak jeu d’acteur di am seen bérab ci productions audiovisuelles ak spectacles. Liggéeyu artiste di bokk ci paysageu créationu populaire bu Senegaal.
 
 ### Li war a fàttaliku
 
-- Comédien ak humoriste bu Senegaal
-- Création audiovisuelle ak spectacle
-- Humour ak gis-gis ci société`,
+- Ousseynou Bissichi, comédien ak humoriste
+- Humour ak spectacle
+- Création audiovisuelle`,
   },
 
   'ismael-thiam': {
-    titleWo: 'Ismaël Thiam — acteur, réalisateur ak producteur bu Senegaal',
+    titleWo: 'Ismaël « Iso » Thiam — acteur, réalisateur ak producteur bu Senegaal',
     excerptWo: 'Artiste bu Senegaal bu parcoursam lëkkale théâtre, cinéma, scénario, réalisation ak production.',
     contentWo: `### Parcours
 
 Ismaël « Iso » Thiam mooy artiste bu Senegaal bu parcoursam lëkkale théâtre, cinéma, scénario, réalisation ak production. Mu juddu ci Senegaal ci 1978 te tàmbali wone ci adolescence.
 
-### Comédien
+### Jeu ak comédie
 
-Mu def na ay rôles ci courts ak longs métrages yu Senegaal ak internationaux. Expérience bu scène bi di yokk liggéeyam ci kanam ak gannaaw caméra.
+Mu def na ay rôles ci courts ak longs métrages yu Senegaal ak internationaux. Expérience bu scène ak jeu ci kanam kamera di bokk ci parcoursam.
 
-### Réalisation ak écriture
+### Bind ak réalisation
 
 Ci 2004, mu bind ak defar *Djaay Djap*, liggéey bu amoon distinction ci Festival international du film de quartier de Dakar. Gannaaw loolu, mu wéy ci réalisation ak productionu projets audiovisuels.
 
-### Arts audiovisuels
+### Yokkute métiersu audiovisuel
 
-Parcoursam di wone ni métiersu culture di gën a wuute ci Senegaal, fa comédiens, scénaristes, réalisateurs ak producteurs di boole ay compétences.
+Parcours bi di wone ni artiste mën a boole plusieurs compétences : jeu, écriture, réalisation ak production. Loolu di jàppale diversitéu création ci audiovisuel bu Senegaal.
 
 ### Li war a fàttaliku
 
-- Acteur bu Senegaal
-- Réalisation ak production
-- Théâtre ak cinéma`,
+- Ismaël « Iso » Thiam
+- Théâtre ak cinéma
+- Écriture, réalisation ak production`,
   },
 
   'joelle-le-bussy': {
-    titleWo: 'Joëlle le Bussy — galeriste, designer ak promotriceu art africain',
-    excerptWo: 'Fondatriceu Galerie ARTE ci Dakar ak acteur bu am solo ci promotionu art contemporain africain.',
+    titleWo: 'Joëlle le Bussy — galeriste ak promotriceu art africain',
+    excerptWo: 'Acteur bu scène artistique bu Dakar, lëkkale galerie, design, artisanat d’art ak art contemporain africain.',
     contentWo: `### Parcours
 
-Joëlle le Bussy mooy galeriste, designer ak artiste. Mu dëkk ci Senegaal li dale ci débutu 1980 yi. Parcoursam lëkkale création, design, artisanat d’art ak yégle création africaine.
+Joëlle le Bussy mooy galeriste ak designer bu lëkkale création, design, artisanat d’art ak yégle art africain. Mu dëkk ci Senegaal li dale ci débutu 1980 yi.
 
 ### Galerie ARTE
 
-Ci 1996, mu sos Galerie ARTE ci Dakar, ngir nekk bérab bu waxtaan diggante peinture, sculpture, objets, design, mobilier ak artisanat d’art africain.
-
-### Scene artistique
-
-Galerie bi wone na ay artistes yu bari yu Afrik gannaaw sosam, te di jàppale visibilité internationale bu ay créateurs. Joëlle le Bussy bokk na itam ci xalaat yi jëm ci Biennale bu Dakar ak yokkute artistique bu Ndar.
+Ci 1996, mu sos Galerie ARTE ci Dakar. Galerie bi di nekk bérab bu wone peintures, sculptures, objets, design ak artisanat d’art, te di jàppale jokkoo diggante artistes ak public.
 
 ### Design ak artisanat
 
-Liggéeyam ci design di jëfandikoo notamment bois yu Afrik te di lëkkale formesu jamono jii ak savoir-faire artisanaux.
+Liggéey ci design di lëkkale formesu jamono jii ak savoir-faire artisanaux. Jëfandikoo matériaux ak techniquesu local mën na yokk solo bu créationu art ak objet.
 
 ### Li war a fàttaliku
 
-- Galeriste ak designer
+- Joëlle le Bussy
 - Galerie ARTE ci Dakar
 - Art contemporain africain
 - Design ak artisanat d’art`,
   },
 
   'aissa-dione': {
-    titleWo: 'Aïssa Dione — artiste, designer textile ak fondatriceu Galerie Atiss',
-    excerptWo: 'Figureu création textile ak scène artistique contemporaine bu Senegaal, fondatriceu Galerie Atiss Dakar.',
+    titleWo: 'Aïssa Dione — artiste ak designer textile bu Senegaal',
+    excerptWo: 'Figureu création textile bu Senegaal, lëkkale art, design, pagne tissé ak savoir-faire artisanal.',
     contentWo: `### Parcours
 
-Aïssa Dione mooy figureu création textile ak scène artistique contemporaine bu Senegaal. Parcoursam lëkkale art, design ak textile, rawatina ci valorisationu pagne tissé bu Senegaal.
+Aïssa Dione mooy artiste ak designer textile bu Senegaal. Parcoursam lëkkale art, design ak textile, ak wàllu pagne tissé bu Senegaal.
 
 ### Galerie Atiss
 
-Mu sos Galerie Atiss Dakar ci 1996, ci jamono Biennale bu Dakar bi. Galerie bi di toppatoo artistes yu Senegaal ak Afrik ak bokk ci manifestations artistiques yu réew mi ak internationales.
+Mu sos Galerie Atiss ci Dakar ci 1996, ci jamono Biennale bu Dakar bi. Galerie bi di bokk ci scene artistique bu réew mi ak di wone ay créations ak artistes yu Afrik.
 
 ### Textile ak savoir-faire
 
-Ateliers Aïssa Dione ci Dakar di wéyal liggéey boobu, di boole production textile, artisanat, exposition ak création contemporaine.
+Ateliers Aïssa Dione di lëkkale production textile ak artisanat. Pagne tissé ak techniquesu liggéey di wone ni savoir-faire bu local mën a nekk sourceu création contemporaine.
 
-### Transmission
+### Transmission ak valorisation
 
-Parcoursam di wone solo bu acteursu culture yi ci aar savoir-faire yi te di leen ubbi ci yeneen yoonu expression ci jamono jii.
+Valorisationu savoir-faire di may artisans ak créateurs yoonu yokk seen liggéey ci yoon yu bees. Transmission di jàppale aar xam-xam ak techniquesu textile.
 
 ### Li war a fàttaliku
 
-- Artiste ak designer textile
-- Galerie Atiss Dakar
-- Pagne tissé ak savoir-faire
-- Création contemporaine`,
+- Aïssa Dione
+- Design textile ak art
+- Galerie Atiss
+- Pagne tissé ak savoir-faire artisanal`,
   },
 };
