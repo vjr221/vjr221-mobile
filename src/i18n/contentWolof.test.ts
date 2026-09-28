@@ -676,6 +676,17 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof culture and design consolidation wave 66', () => {
+    const slugs = ['ousseynou-bissichi', 'ismael-thiam', 'joelle-le-bussy', 'aissa-dione'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(350);
+    }
+  });
+
   it('covers the Wolof music heritage consolidation wave 65', () => {
     const slugs = [
       'orchestra-baobab-groupe-mythique-de-la-musique-senegalaise',
