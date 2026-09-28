@@ -85,6 +85,14 @@ La résolution actuelle reste :
 
 Le chantier ne doit pas transformer les traductions éditoriales en textes UI codés en dur.
 
+
+## Mise à jour — vague 55
+
+- **Vague 55 : 6 fiches territoriales vérifiées ajoutées** — Département de Thiès, Département de Tivaouane, Département de Bakel, Département de Fatick, Département de Rufisque et Département de Sédhiou. Les fiches correspondantes sont publiées sur VJR 221 et étaient absentes du pack Wolof local avant cette vague.
+- **État local visé après la vague 55 : 442 fiches uniques.**
+- La recherche du corpus a confirmé que `reserve-speciale-faune-gueumbeul` n'est pas dupliquée dans les packs locaux actuels ; l'ancienne alerte de déduplication est donc obsolète.
+- Aucun APK n'est requis pour cette vague : les changements sont éditoriaux et seront validés par la CI.
+
 ## Vagues consolidées — 27 septembre 2026
 
 - Vagues 8 à 12 : intégrées dans les packs locaux, avec relectures ciblées.
