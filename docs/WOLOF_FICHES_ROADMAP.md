@@ -200,3 +200,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Les informations déjà présentes dans le corpus ont été conservées ; aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 66
+
+- **Vague 66 : consolidation de 4 fiches culture, spectacle et design existantes** — Ousseynou Bissichi, Ismaël Thiam, Joëlle le Bussy et Aïssa Dione.
+- Réécriture du Wolof pour améliorer la fluidité et mieux structurer les notions de scène, audiovisuel, galerie, design, textile et transmission.
+- Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; le contenu français reste inchangé.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
+- Aucun APK intermédiaire : validation CI d’abord.
