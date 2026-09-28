@@ -877,6 +877,18 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+
+  it('covers the Wolof contemporary music consolidation wave 76', () => {
+    const slugs = ['takeifa', 'awa-ly', 'yoro-ndiaye', 'nuru-kane'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(650);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
