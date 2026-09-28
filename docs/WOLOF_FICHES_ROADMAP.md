@@ -133,3 +133,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Les trois fiches ont été **réécrites dans leur pack existant** afin d'améliorer le naturel du Wolof, la séparation des idées et la cohérence du vocabulaire de conservation ; aucune nouvelle clé ni aucun doublon n'a été créé.
 - Le contenu français n'est pas modifié et les informations propres aux fiches sont conservées sans ajout spéculatif.
 - Aucun APK n'est requis à ce stade : validation par CI avant toute prochaine release.
+
+## Mise à jour — vague 58
+
+- **Vague 58 : consolidation littérature et création contemporaine** — Ibrahima Sall, Aminata Maïga Ka et Mamadou Diaw.
+- Réécriture ciblée des textes Wolof existants : formulations plus naturelles, meilleure articulation entre parcours, création, société et transmission, sans ajouter de faits biographiques non établis.
+- Test dédié ajouté pour contrôler présence, structure Markdown et longueur minimale du contenu.
+- Validation CI requise avant poursuite de la chaîne ; aucun APK intermédiaire.
