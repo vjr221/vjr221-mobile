@@ -331,3 +331,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+## Mise à jour — vague 81
+
+- **Vague 81 : consolidation de 4 fiches cinéma existantes** — Mansour Sora Wade, Joseph Gaï Ramaka, Dyana Gaye et Moussa Toure.
+- Renforcement du Wolof autour du cinéma d’auteur, des récits sociaux, de la création, de la production, des territoires et de la mobilité.
+- Aucun nouveau slug et aucune donnée française modifiée.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
+- Halima Gadji est conservée pour une consolidation ultérieure afin de ne pas mélanger cinéma et audiovisuel avec cette vague.
