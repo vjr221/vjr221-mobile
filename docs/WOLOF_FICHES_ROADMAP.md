@@ -126,3 +126,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Apostrophe ASCII entre lettres : 0 occurrence.
 - La fiche Douta Seck déjà présente dans le corpus a été détectée et non dupliquée lors de la vague 19.
 - Aucun APK n'est requis pour ces contrôles de contenu : le chantier reste limité aux sources i18n, tests et documentation.
+
+## Mise à jour — vague 57
+
+- **Vague 57 : consolidation de 3 fiches patrimoine/nature existantes** — Musée Boribana de Gorée, Parc national des Îles de la Madeleine et Réserve ornithologique de Kalissaye.
+- Les trois fiches ont été **réécrites dans leur pack existant** afin d'améliorer le naturel du Wolof, la séparation des idées et la cohérence du vocabulaire de conservation ; aucune nouvelle clé ni aucun doublon n'a été créé.
+- Le contenu français n'est pas modifié et les informations propres aux fiches sont conservées sans ajout spéculatif.
+- Aucun APK n'est requis à ce stade : validation par CI avant toute prochaine release.
