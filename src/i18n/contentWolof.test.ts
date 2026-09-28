@@ -892,6 +892,18 @@ describe('Wolof fiche translations', () => {
 
 
 
+
+  it('covers the Wolof hip-hop consolidation wave 83', () => {
+    const slugs = ['carlou-d', 'sister-fa', 'fou-malade', 'keyti', 'daara-j-family'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof audiovisual consolidation wave 82', () => {
     const slugs = ['moussa-bathily-createur-audiovisuel', 'samba-felix-ndiaye', 'alassane-diago', 'sada-thioub'];
     for (const slug of slugs) {
