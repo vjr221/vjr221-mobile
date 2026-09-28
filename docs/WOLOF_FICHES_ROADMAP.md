@@ -218,3 +218,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; contenu français inchangé.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale renforcée.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 68
+
+- **Vague 68 : consolidation de 4 fiches littéraires existantes** — Ken Bugul, Mariama Bâ, Birago Diop et Cheikh Hamidou Kane.
+- Wolof approfondi autour du récit, de l’oralité, de la mémoire, de l’identité, de la condition sociale et des grands thèmes littéraires déjà présents dans les fiches.
+- Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; contenu français inchangé.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale renforcée.
+- Aucun APK intermédiaire : validation CI d’abord.
