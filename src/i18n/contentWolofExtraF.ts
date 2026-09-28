@@ -2,70 +2,96 @@ import type { ContentItem } from '../types/content';
 
 type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 
-/** Vague 10 — musique, rap et arts visuels */
 export const CONTENT_WO_EXTRA_F: Record<string, WolofContent> = {
   'orchestra-baobab-groupe-mythique-de-la-musique-senegalaise': {
-    titleWo: 'Orchestra Baobab — groupe bu mag bu musik Senegaal',
-    excerptWo: 'Groupe bu sosu Dakar ci 1970, lëkkale son cubain, rumba, mbalax ak sonorités mandingues ak wolof.',
+    titleWo: 'Orchestra Baobab — groupe bu mag bu musik bu Senegaal',
+    excerptWo: 'Groupe bu Dakar bu sosu ci 1970, buy lëkkale son cubain, rumba, mbalax ak sonorités mandingues ak wolof.',
     contentWo: `### Jëmmal
 
-Orchestra Baobab sosu na ci Dakar ci 1970. Mu nekk na benn ci groupes yu mag ci taariixu musik moderne bu Senegaal, te dafa boole son cubain, rumba, afro-cubain, mbalax ak sonorités mandingues ak wolof.
+Orchestra Baobab sosu na ci Dakar ci 1970, te mu bokk na ci ay groupes yu am solo ci taariixu musik moderne bu Senegaal. Son bi lëkkale influences afro-cubaines ak sonorités yu Senegaal.
 
-### Baobab Club
+### Baobab Club ak années 1970
 
-Groupe bi tàmbali na ni orchestre bu Baobab Club, cabaret bu Dakar bu ñu daan faral di dem ci jamono yooyu. Ci années 1970, mu am na succès ci Afrique de l’Ouest ak ay baat yu mel ni Utrus Horas ak On Verra ça.
+Groupe bi tàmbali na ni orchestre bu Baobab Club, bérab bu musique bu Dakar. Ci années 1970, mu yokku na seen feeñ ak yeneen productions ak tournées ci Afrique de l’Ouest.
 
-### Dellu ci scène internationale
+### Sonorités ak patrimoine
 
-Gannaaw montée bu mbalax ci début années 1980, groupe bi dellu na ci scène internationale ci 2001. Album Specialist in All Styles yokk na seen feeñ ci àdduna bi, te Orchestra Baobab des na benn ci piliers yu taariixu musik bu Senegaal.`,
+Cubain, rumba, rythmes mandingues, wolof ak yeneen influences di bokk ci universu groupe bi. Lëkkalekaayu sonorités yi di wone yoonu musique populaire bu Senegaal di jot ci sources yu wuute.
+
+### Li war a fàttaliku
+
+- Orchestra Baobab
+- Dakar ak Baobab Club
+- Musique afro-cubaine ak sonorités senegaaleer`,
   },
+
   'positive-black-soul-pionnier-du-rap-senegalais': {
     titleWo: 'Positive Black Soul — pionnier bu rapu Senegaal',
-    excerptWo: 'Duo bu Didier Awadi ak Duggy Tee, benn ci groupes yu sos rapu Senegaal ci finu années 1980.',
+    excerptWo: 'Duo bu Didier Awadi ak Duggy Tee, bokk ci ay groupes yu jëkk ci yokkute rapu Senegaal.',
     contentWo: `### Jëmmal
 
-Positive Black Soul (PBS) mooy duo bu Didier Awadi ak Amadou Barry, ñu xam ko ci turu Duggy Tee. Mu sosu na ci Dakar ci finu années 1980 ak tàmbali ci benn ci groupes yu mag yu hip-hop bu Senegaal.
+Positive Black Soul (PBS) mooy duo bu Didier Awadi ak Amadou Barry, ñu xam ko ci turu Duggy Tee. Groupe bi bokk na ci pionniers yu rapu Senegaal.
 
-### Rap ak làkk yi
+### Rap ak làkk
 
-PBS dafa lëkkale rap ak textes yu am xalaat ci mbirum askan wi, ak wolof, français ak sonorités traditionnelles yu Senegaal. Liggéey bi jàppale na ci feeñal rapu Senegaal ci Afrique ak ci àdduna.
+PBS lëkkale na rap ak bind ak làkk yu wuute, te wolof ak français bokk nañu ci moyensu expression. Tekst yi di jëfandikoo xalaat, identité ak mbirum société.
 
-### Héritage
+### Hip-hop ak rayonnement
 
-Groupe bi ubbi na bunt ci yeneen générations yu rappeurs. Parcoursu PBS bokk na ci taariixu cultures urbaines bu Senegaal ak yokkute rap galsen.`,
+Groupe bi jàppale na yokkute scene hip-hop bu Senegaal ak wone rapu réew mi ci yeneen espaces culture. Séddoo musique ak performance di tax PBS nekk benn ci ay références yu taariixu rap galsen.
+
+### Li war a fàttaliku
+
+- Positive Black Soul
+- Didier Awadi ak Duggy Tee
+- Rap ak culture urbaine bu Senegaal`,
   },
+
   'fode-camara-peintre-senegalais-contemporain': {
     titleWo: 'Fodé Camara — peintre bu Senegaal bu jamono jii',
-    excerptWo: 'Artiste bu Dakar, mu bokk ci génération bu artistes yu topp École de Dakar ak yokkute peinture contemporaine.',
+    excerptWo: 'Peintre bu Dakar buy bokk ci générationu artistes gannaaw École de Dakar ak ci yokkute peinture contemporaine.',
     contentWo: `### Jëmmal
 
-Fodé Camara, juddu ci Dakar ci 1958, mooy peintre bu Senegaal bu jamono jii. Mu bokk ci génération bu artistes yu feeñoon gannaaw École de Dakar.
+Fodé Camara, juddu ci Dakar ci 1958, mooy peintre bu Senegaal bu jamono jii. Mu bokk ci générationu artistes yu feeñ gannaaw École de Dakar.
 
-### Formation ak style
+### Formation ak expression picturale
 
-Mu jàng ci École nationale des Arts bu Dakar, te dafa sos ab langage pictural bu boppam. Abstraction, couleurs yu fees ak melo ak xelal ci symboles ak bind yu cosaanu Afrique bokk nañu ci liggéeyam.
+Mu jàng ci École nationale des Arts bu Dakar, te liggéeyam di wone ab manièreu expression picturale bu boppam. Couleurs, formes ak symboles bokk nañu ci yoon wi mu jëfandikoo ngir sos.
 
-### Feeñ ci àdduna
+### Exposition ak scène internationale
 
-Ay œuvresam wone nañu leen ci biennales ak galeries ci Afrique, Europe ak États-Unis. Parcoursam bokk na ci yokkute peinture contemporaine bu Senegaal ci scène internationale.`,
+Ay œuvresam feeñ nañu ci biennales ak galeries ci Afrique, Europe ak États-Unis. Liggéeyu artistes yi mën na tax ay idées ak formesu artu Senegaal di am bérab ci scènes yu wuute.
+
+### Li war a fàttaliku
+
+- Fodé Camara, peintre bu Senegaal
+- École nationale des Arts
+- Peinture contemporaine ak arts visuels`,
   },
+
   'le-rap-galsen-scene-hip-hop-senegalaise': {
     titleWo: 'Rap Galsen — scène hip-hop bu Senegaal',
-    excerptWo: 'Scene bu hip-hop bu Dakar ak yeneen territoires, lëkkale làkk yu réew mi ak waxtaan ci mbirum askan wi.',
+    excerptWo: 'Scene bu hip-hop bu Senegaal buy lëkkale làkk, musique ak waxtaan ci dundug société.',
     contentWo: `### Jëmmal
 
-Rap Galsen mooy turu scène hip-hop bu Senegaal. Scene bi tàmbali na ci Dakar ci début années 1980, te ci gannaaw mu yokku ak ay groupes ak artistes yu bari.
+Rap Galsen mooy turu scène hip-hop bu Senegaal. Scene bi tàmbali na ci Dakar ak yokkute ay groupes ak artistes, ba mu yaatu ci yeneen territoires.
 
-### Làkk ak cosaan
+### Làkk, rythme ak identité
 
-Wolof am na berab bu mag ci rapu Senegaal, waaye français ak yeneen làkk yu réew mi bokk nañu it ci bind ak performance. Artistes yi dafa boole influences internationales ak mbalax, percussions ak yeneen sonorités locales.
+Wolof am na bérab bu mag ci rapu Senegaal, waaye français ak yeneen làkk bokk nañu itam ci bind ak performance. Artistes yi di boole influences internationales ak sonorités locales ngir sësal seen style.
 
-### Expression sociale
+### Waxtaan ci société
 
-Rap bi di jëfandikoo ngir waxtaan ci dundug askan wi, jeunesse, xam-xam, liggéey, identité ak mbir yu jëm ci société. Ci yoon woowu, rapu Senegaal nekk na benn ci expressions culturelles yu am doole ci jamono jii.
+Rap bi mën na nekk yoonu wax ci jeunesse, identité, liggéey, xam-xam ak mbirum société. Tekst ak performance di may artistes yoonu jox seen gis-gis ak jokkoo ak public.
 
-### Yokkute
+### Jamono numérique
 
-Streaming, réseaux sociaux, studios indépendants ak événements yu hip-hop soppi nañu yoon wi musik bi di sos, di séddoo ak di jot ci public.`,
+Streaming, réseaux sociaux, studios indépendants ak événements yu hip-hop soppi nañu yoonu sos, séddoo ak jot ci musique. Scene bi di wéy yokk ak ay supports yu bees.
+
+### Li war a fàttaliku
+
+- Rap Galsen
+- Hip-hop bu Senegaal
+- Làkk, création ak expression sociale`,
   },
 };
