@@ -273,3 +273,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucune donnée spéculative ajoutés.
 - Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
 - Aucun APK intermédiaire.
+
+
+## Mise à jour — vague 74
+
+- **Vague 74 : consolidation de 2 fiches de culture scénique existantes** — Festival du Sahel et théâtre au Sénégal.
+- Réécriture Wolof pour améliorer la fluidité, le vocabulaire de scène, transmission, patrimoine et territoire.
+- Aucun nouveau slug, aucun doublon et aucune donnée spéculative ajoutés.
+- Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
+- Aucun APK intermédiaire.
