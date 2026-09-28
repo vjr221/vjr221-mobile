@@ -28,29 +28,6 @@ Jeunes yi mën nañu bokk ci activitésu festival bi, gis artistes yi ak jàng c
 Festivalu aada mën na itam yokk njariñu tourisme culturel. Dafa lëkkale gan ñi ak territoires yi, te di wone richesseu aada ak cosaan yu askan yi.`,
   },
 
-  'festival-international-de-sedhiou-diversite-culturelle-du-pakao': {
-    titleWo: 'Festival international bu Sédhiou',
-    excerptWo: 'Ndaje bu aada bu jëm ci expressionsu Pakao ak espace mandingue, musik, fecc ak arts.',
-    contentWo: `### Jëmmal
-
-Festival international bu Sédhiou mooy ndaje bu jëm ci xam ak jokkoo ci expressionsu culturel yu Pakao ak espace mandingue.
-
-### Musik, fecc ak arts
-
-Festival bi dafay wone musik, fecc ak arts, te di boole troupes ak bokk yi jóge ci réew yu wuute ci sous-région ak yeneen partenaires.
-
-### Jokkoo ak bokkute
-
-Ndaje bi di may artistes, communautés ak gan ñi yoonu daje, waxtaan ak séddoo seen xam-xam. Mu mën a jàppale bokkute ak jokkoo diggante nit ñi.
-
-### Sédhiou ak Pakao
-
-Festival bi di yokk gis-gis ci patrimoine culturel bu Sédhiou ak Pakao. Mu di itam may bérab bu artistes ak traditionsu sudu Senegaal di am seen bérab ci scène.
-
-### Transmission
-
-Ndaje yu mel ni festival bi di jàppale transmissionu musik, fecc, arts ak cosaan. Mu tax yeneen génération yi mën a xam ak jàng ci richesseu culturel bi.`,
-  },
 
   'le-theatre-au-senegal-scenes-creation-et-patrimoine-culturel': {
     titleWo: 'Théâtre ci Senegaal — scène, sos ak patrimoine culturel',
