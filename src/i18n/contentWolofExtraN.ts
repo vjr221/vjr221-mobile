@@ -8,62 +8,56 @@ export const CONTENT_WO_EXTRA_N: Record<string, WolofContent> = {
     excerptWo: 'Musée-galerie bu art africain traditionnel ak contemporain, ci Dunu Gorée.',
     contentWo: `### Jëmmal
 
-Musée Boribana mooy musée-galerie bu nekk ci Dunu Gorée. Mu wone collectionu art africain traditionnel ak contemporain, ci masques, statues ak yeneen objets rituels.
+Musée Boribana mooy musée-galerie bu nekk ci Dunu Gorée. Mu wone ay œuvres ak objets yu aju ci art africain, te visite bi mën na boole xam-xam ci patrimoine ak taariixu Gorée.
 
 ### Collection ak art
 
-Bérab bi dafa boole ay œuvres yu aju ci cosaan ak création contemporaine. Gis leen ci contexteu Gorée dafay yokk njàngum patrimoine ak art africain.
+Bérab bi dafa boole cosaan ak création contemporaine. Gis ay œuvres ci contexteu Gorée dafay yokk njàngum patrimoine ak xam-xamu art africain.
 
 ### Gorée ak patrimoine
 
-Musée bi mën na bokk ci parcoursu découverte bu Dunu Gorée, ci wetug Maison des Esclaves ak Fort d’Estrées. Dunu Gorée mooy bérab bu am solo ci mémoire ak patrimoineu Senegaal.
+Musée bi mën na bokk ci parcoursu découverte bu Dunu Gorée, ci wetug yeneen bérab yu am solo ci mémoire ak patrimoine. Toppatoo bérab yi ak teral seen solo am na solo ci visite bi.
 
 ### Jàng ak seet
 
-Musée-galerie bi may na opportunity ngir gis ay formesu art africain ak xam-xam ci seen contexte. Yoon wu baax mooy boole visite bi ak yeneen bérab yu patrimoineu Gorée.`,
+Musée-galerie bi may na nit ñi xam ay formesu art africain ak seen contexte. Ku koy seet mën na boole visite bi ak yeneen bérab yu patrimoineu Gorée.`,
   },
   'parc-national-des-iles-de-la-madeleine': {
     titleWo: 'Parc nationalu Îles de la Madeleine',
-    excerptWo: 'Archipel volcanique bu ñu dëkkul, ci kanamu Dakar, ak falaises, picc yi ak patrimoineu naturel ak spirituel.',
+    excerptWo: 'Archipel volcanique ci kanamu Dakar, ak falaises, picc yi ak patrimoine naturel ak spirituel.',
     contentWo: `### Jëmmal
 
-Parc nationalu Îles de la Madeleine nekk na ci diggante géej gi, ci kanamu Dakar, ak ay 4 kilomètres ci Dakar. Archipel bi am na ñaari îlots volcaniques : Île au Sarpan, walla Île aux Serpents, ak Île Loungue. Superficie bi mat na ci lu ëpp 45 hectares.
+Parc nationalu Îles de la Madeleine nekk na ci géej gi, ci kanamu Dakar. Archipel bi ëmb ay îlots volcaniques ak falaises, te am na picc yu géej ak yeneen xeet yu dëkk ci littoral.
 
-### Statut ak taariix
+### Taariix ak aarug site
 
-Archipel bi doon na réserve ornithologique ci 1949. Ci 17 juin 1964, loi dafa aar ko, te ci 16 janvier 1976 mu am statut parc national. Candidature bi ci patrimoine mondial UNESCO yóbbu nañu ko ci 2005 ngir richesseu géologique, écologique ak culturelle.
+Site bi am na statut parc national, te aarug géologie, végétation, picc ak patrimoine bi bokk na ci solo bi mu am. Fragilitéu îlots yi moo tax seetaan ak jëfandikoo site bi war a nekk ci toppatoo.
 
 ### Nature ak aada
 
-Falaises volcaniques yi mën nañu yéeg ba 35 mètres. Picc yu géej, baobabs yu ndaw ak yeneen végétation yu dëkk ci ngelaw géej gi nekk nañu fa. Îlots yi itam di wone bérab yu tortues marines di wër ci jamono hivernage.
-
-Bérab bi am na solo ci communauté lébou, ndax Leuk Daour, génie protecteuru Dakar, bokk na ci ay croyances yu lëkkale ak site bi.
+Falaises yi, baobab yi ak végétation bu dëkk ci ngelaw géej gi di boole paysage bi. Site bi am na it solo ci xalaatu askan wi, rawatina ci aada yu Lébou yu lëkkale ak bérab bi.
 
 ### Seetaan
 
-Dañuy dem ci pirogue jógé Soumbédioune, ak éco-gardes yu ñu agréé par Direction des parcs nationaux du Sénégal. Visite bi dafa am ay ndigal ngir aar fragilitéu site bi.`,
+Ñuy dem ci pirogue jógé Soumbédioune, ak éco-gardes yu ñu agréé. Seetaan bi war na topp ndigal yi ngir aar îlots yi, picc yi ak yeneen xeet yu dëkk fa.`,
   },
   'reserve-ornithologique-kalissaye': {
     titleWo: 'Réserve ornithologique de Kalissaye',
     excerptWo: 'Aire protégée ci littoralu Casamance, fu ñuy aar picc yu géej ak bérab yu tortues marines di génn.',
     contentWo: `### Jëmmal
 
-Réserve ornithologique de Kalissaye nekk na ci géeju Casamance, ci gémmiñu marigot Kalissaye, ci diiwaanu Ziguinchor. Sos nañu ko ci 1978 ngir aar coloniesu picc yu géej yi di denc seen tuxu ak bérab yu tortues marines di génn.
+Réserve ornithologique de Kalissaye nekk na ci géeju Casamance, ci gémmiñu marigot Kalissaye, ci diiwaanu Ziguinchor. Sos nañu ko ngir aar coloniesu picc yu géej yi di denc seen tuxu ak bérab yu tortues marines di génn.
 
-### Îlots ak ekosistem
+### Ecosystem ak picc
 
-Réserve bi boole ay îlots yu suuf, estuaires, mangrove ak géej. Diggante suuf, mangrove ak océan bi dafay def Kalissaye bérab bu am solo ci seetaan picc ak aar habitats yu littoral.
+Réserve bi boole ay îlots, estuaires, mangrove ak géej. Picc yu géej ak migrateurs yi dañuy jëfandikoo bérab yi ngir dëkk, wër walla génn ay doom. Kalissaye am na it solo ci aar tortue verte ak tortue caouanne.
 
-### Picc ak tortues
+### Aarug nature
 
-Kalissaye lëkkale nañu ko ak sternes, pélican blanc ak yeneen picc yu géej. Site bi itam am na solo ci aar tortue verte ak tortue caouanne.
+Aar Kalissaye du rekk aar ay xeet. Dafay aar it habitatsu littoral yu yomb a yàqu, mangrove yi ak biodiversité bu Basse-Casamance. Toppatoo site bi war na ànd ak respektu ekosistem bi.
 
-### Aar patrimoine naturel
+### Seetaan
 
-Protectionu Kalissaye du rekk aar espèces yi. Dafay dimbali ci aar habitatsu littoral yu yomb a yàqu ak biodiversité bu Basse-Casamance. Réserve bi itam am na recognition ci conventionu Ramsar ak ci conservationu picc.
-
-### Li ñuy seet
-
-Ñi koy seet mën nañu gis paysages littoraux yi, îlots yu gémmiñu Kalissaye, picc yu géej ak migrateurs, ak yeneen patrimoines naturelsu Casamance. Aar site bi ak respektu ekosistem bi am na solo.`,
+Ñi koy seet mën nañu gis paysages littoraux yi, îlots yi ak picc yu géej. Seetaan bi war na topp ndigal yi ngir aar bérab bi ak dundug xeet yi.`,
   },
 };
