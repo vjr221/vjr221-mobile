@@ -299,3 +299,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+## Mise à jour — vague 77
+
+- **Vague 77 : consolidation de 4 fiches arts visuels et littérature existantes** — Papa Ibra Tall, Moustapha Dimé, Mamadou Gomis et Faty Sow Kane.
+- Réécriture Wolof pour renforcer le vocabulaire d’art, matière, photographie documentaire, mémoire, littérature, réflexion et transmission, sans ajouter de faits non présents dans le corpus.
+- Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
+- Aucun APK intermédiaire : validation CI d’abord.
