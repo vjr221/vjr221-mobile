@@ -22,10 +22,11 @@ Fodé Kaba daan na daje ak puissances françaises ak britanniques yi di yokk see
 
 Ci mars 1901, coalition militaire franco-britannique dafa jëfandikoo attaque ci forteresseam ci Médina, ci ndaje ak Moussa Molo. Fodé Kaba fa la faatu walla ci wetu attaque bi, te yaramam kenn gisuko.
 
-### Héritage ak débats
+### Mémoire ak sources
 
 Mémoireu Fodé Kaba am na ay leer yu wuute. Yenn sources di ko wone ni benn ci figuresu résistance ci expansion coloniale; yeneen sources di wax ci méthodes yu metti ak ay raids. Xam-xamu histoire war na jàppale ay sources yu wuute ak contexte bi ngir comprendre parcoursam ci lu mat a yam.`,
   },
+
   'le-yeela-poesie-musicale-du-boundou-et-patrimoine-vivant-du-senegal-oriental': {
     titleWo: 'Yeela — poésie ak musique bu Boundou',
     excerptWo: 'Yeela, walla Yelaa, mooy expressionu poésie, woyu ak mémoire bu lëkkale ak populations haalpulaar ci Senegaal oriental.',
@@ -49,6 +50,7 @@ Nettaliu Yeela am na ay lëkkaloo ak récitsu guerriers ak jeunes initiés ci ja
 
 Yeela bokk na ci ay expressions culturelles yu ñuy bind ci inventaireu patrimoine culturel immatériel bu Senegaal. Denc répertoires oraux yi ak jàngale leen ci diggante générations am na solo ngir patrimoine bi am yoonu kanam.`,
   },
+
   'le-patrimoine-diola-langues-rites-et-culture-de-casamance': {
     titleWo: 'Patrimoine diola — làkk, rite ak cosaanu Casamance',
     excerptWo: 'Làkk, nettali, pratiques sociales, savoir-faire ak formes artistiques yu bokk ci patrimoine bu communautés diola ci Casamance.',
