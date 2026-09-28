@@ -182,3 +182,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; le contenu français reste inchangé.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 64
+
+- **Vague 64 : consolidation de 4 fiches cinéma/audiovisuel existantes** — Marième Myriam Niang, Rokhaya Niang, Mati Diop et Djibril Diop Mambéty.
+- Réécriture du Wolof pour renforcer la fluidité et mieux distinguer jeu d’acteur, création audiovisuelle, mémoire, identité, société et cinéma d’auteur.
+- Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; le contenu français reste inchangé.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
+- Aucun APK intermédiaire : validation CI d’abord.
