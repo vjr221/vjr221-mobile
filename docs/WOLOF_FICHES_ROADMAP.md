@@ -264,3 +264,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucune donnée spéculative ajoutés.
 - Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
 - Aucun APK intermédiaire.
+
+
+## Mise à jour — vague 73
+
+- **Vague 73 : consolidation de 3 fiches de patrimoine linguistique et oralité existantes** — communautés et diversité linguistique du Sénégal, conte et oralité, Palor.
+- Réécriture descriptive et non essentialisante, avec amélioration du vocabulaire de transmission, langue, territoire et patrimoine vivant.
+- Aucun nouveau slug, aucun doublon et aucune donnée spéculative ajoutés.
+- Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
+- Aucun APK intermédiaire.
