@@ -34,21 +34,7 @@ Baatam ak présence scénique bi bokk nañu ci taariixu ay baat yu jigéen yu ma
 
 Parcoursam dafay lëkkale musik populaire, traditions vocales, scène ak mémoire culturelle bu Senegaal.`,
   },
-  'daara-j-family': {
-    titleWo: 'Daara J Family — groupe bu hip-hop bu Senegaal',
-    excerptWo: 'Groupe bu scène hip-hop bu Dakar, lëkkale rap ak sonorités africaines.',
-    contentWo: `### Jëmmal
 
-Daara J Family mooy groupe bu Senegaal bu jóge ci scène hip-hop bu Dakar. Mu xam ne dafay boole rap, sonorités africaines ak ay influences musicales yu bawoo ci àdduna.
-
-### Parcours
-
-Groupe bi bokk na ci taariixu hip-hop bu Senegaal ci yoonu musik bu ubbeeku ak bind bu jëm ci dund ak mbirum askan wi.
-
-### Contribution
-
-Daara J Family di bokk ci feeñal rap bu Senegaal ci àdduna ak jokkoo gi am ci cosaanu musik africain ak expressions urbaines yu jamono jii.`,
-  },
   'mamy-victory': {
     titleWo: 'Mamy Victory — rappeuse bu Senegaal',
     excerptWo: 'Artiste ak rappeuse bu Senegaal, Faye Ndeye Penda ci turam wu dëkk.',
