@@ -381,3 +381,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour de la biodiversité, du patrimoine archéologique, de l’écotourisme et de la conservation communautaire.
 - Aucun nouveau slug et aucune donnée française modifiée.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+## Mise à jour — vague 88
+
+- **Vague 88 : consolidation de 3 fiches patrimoine naturel et culturel de Casamance** — Tocc-Tocc, Parc national de Basse-Casamance et Karabane.
+- Renforcement du Wolof autour des zones humides, biodiversité, conservation, mémoire, patrimoine bâti et tourisme responsable.
+- Aucun nouveau slug ni suppression de fiche.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
