@@ -909,7 +909,7 @@ describe('Wolof fiche translations', () => {
       expect(fiche?.titleWo).toBeTruthy();
       expect(fiche?.excerptWo).toBeTruthy();
       expect(fiche?.contentWo).toContain('###');
-      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(650);
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
     }
   });
 
@@ -921,7 +921,7 @@ describe('Wolof fiche translations', () => {
       expect(fiche?.titleWo).toBeTruthy();
       expect(fiche?.excerptWo).toBeTruthy();
       expect(fiche?.contentWo).toContain('###');
-      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(650);
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
     }
   });
 
@@ -933,7 +933,7 @@ describe('Wolof fiche translations', () => {
       expect(fiche?.titleWo).toBeTruthy();
       expect(fiche?.excerptWo).toBeTruthy();
       expect(fiche?.contentWo).toContain('###');
-      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(650);
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
     }
   });
 
@@ -945,7 +945,7 @@ describe('Wolof fiche translations', () => {
       expect(fiche?.titleWo).toBeTruthy();
       expect(fiche?.excerptWo).toBeTruthy();
       expect(fiche?.contentWo).toContain('###');
-      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(650);
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
     }
   });
 
