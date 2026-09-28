@@ -323,3 +323,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+## Mise à jour — vague 80
+
+- **Vague 80 : consolidation de 4 fiches musicales existantes** — El Hadj N’Diaye, Ngaaka Blindé, Dip Doundou Guiss et Youssou N’Dour.
+- Réécriture Wolof autour de la voix, percussion, mbalax, rap, performance, production, culture urbaine et circulation musicale.
+- Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
+- Aucun APK intermédiaire : validation CI d’abord.
