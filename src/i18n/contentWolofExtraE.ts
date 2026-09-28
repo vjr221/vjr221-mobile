@@ -17,7 +17,13 @@ Mu bawoo Kaolack, te parcoursam nekk na ci diggante techniques contemporaines, c
 
 ### Transmission
 
-Formation ak ateliers am nañu solo ci liggéeyam. Spectacles, rencontres ak transmission mën nañu jàppale jeunes artistes ak public yi.`,
+Formation ak ateliers am nañu solo ci liggéeyam. Spectacles, rencontres ak transmission mën nañu jàppale jeunes artistes ak public yi.
+
+### Li war a fàttaliku
+
+- Chorégraphe bu Senegaal
+- Kaolack
+- Danse, création ak transmission`,
   },
   'pape-faye': {
     titleWo: 'Pape Faye — comédien, dramaturge ak nit bu théâtre',
