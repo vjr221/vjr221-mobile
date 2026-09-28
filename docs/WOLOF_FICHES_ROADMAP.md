@@ -367,3 +367,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour de la littérature, de l’oralité, de l’identité, de la mémoire, de la transmission et des œuvres déjà recensées.
 - Aucun nouveau slug et aucune donnée française modifiée.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+## Mise à jour — vague 86
+
+- **Vague 86 : consolidation de 5 fiches patrimoine, culture et territoire** — Musée de la Femme Henriette Bathily, Grand Théâtre national Doudou Ndiaye Coumba Rose, Mont Assirik, Yoff-Layène et les collines de Kédougou.
+- Renforcement du Wolof autour du patrimoine, des arts, de la mémoire, du relief et de la conservation.
+- Aucun nouveau slug et aucune donnée française modifiée.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
