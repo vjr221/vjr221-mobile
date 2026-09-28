@@ -227,3 +227,13 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; contenu français inchangé.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale renforcée.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 69
+
+- **Vague 69 : consolidation de 5 fiches de patrimoine architectural et culturel existantes** — Cases à étage de Mlomp, Cases à impluvium du royaume Bandial, Galerie nationale des Arts, École nationale des Arts et Marché Kermel.
+- Réécriture du Wolof pour améliorer la fluidité, la cohérence des termes d’architecture, de patrimoine et de transmission, tout en conservant les informations déjà présentes dans les fiches françaises.
+- Les formulations ont été approfondies sans ajouter de fait biographique ou historique non établi dans le corpus.
+- Aucun nouveau slug, aucun doublon et aucun contenu français modifié.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale renforcée.
+- Aucun APK intermédiaire : validation CI d’abord.
