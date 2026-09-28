@@ -315,3 +315,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+## Mise à jour — vague 79
+
+- **Vague 79 : consolidation de 4 fiches de patrimoine musical existantes** — Ablaye Cissoko, Seckou Keita, Positive Black Soul et Orchestre Baobab.
+- Réécriture Wolof autour de la kora, du patrimoine mandingue, du rap, de la culture urbaine, des influences afro-cubaines et de la transmission musicale.
+- Aucun nouveau slug et aucun doublon ajoutés ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, de la structure Markdown et d’une longueur minimale renforcée.
+- Aucun APK intermédiaire : validation CI d’abord.
