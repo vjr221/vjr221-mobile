@@ -10,7 +10,7 @@ export const CONTENT_WO_EXTRA_O: Record<string, WolofContent> = {
 
 Réserve naturelle communautaire de Tocc-Tocc nekk na ci delta du fleuve Sénégal, ci diiwaanu Saint-Louis. Mooy zone humide bu ndox mu nekk, te bokk na ci Liste Ramsar bu zones humides yu am solo ci àdduna.
 
-### Lac ak ndox
+### Ndox ak ekosistem
 
 Réserve bi am lu tollu ci 273 hectares. Plan d’eau bi nekk na permanent, te dafay jàppale ekilibre hydrologique local. Mu may itam bérab yu jën di génn, di màgg ak di lekk.
 
@@ -20,14 +20,15 @@ Données Ramsar di jox lu ëpp 98 espècesu jën. Picc yu ndox, ci biir pélican
 
 ### Askàn wi ak conservation
 
-Réserve bi jàppale dundinu nit ñi dëkk ci wetu bi, rawatina ci pêche artisanale ak collecteu yeneen produits naturels. Gestion bi dafa soxla wàllu conservation ak jëfandikoo yu local.
+Réserve bi jàppale dundinu nit ñi dëkk ci wetu bi, rawatina ci pêche artisanale ak collecteu yeneen produits naturels. Gestion bi dafa soxla bokk-bokkug askan wi, conservation ak jëfandikoo yu local.
 
-### Pressions ak aar
+### Aarug site bi
 
-Surpêche ak jël ndox bu ñu dul saytu baax mën nañu metti site bi. Aar Tocc-Tocc soxla na suiviu ndox, jën, picc ak ay jëfandikoo yu askan wi.`,
+Surpêche ak jël ndox bu ñu dul saytu baax mën nañu metti site bi. Aar Tocc-Tocc soxla na suivi bu ndox, jën, picc ak ay jëfandikoo yu askan wi.`,
   },
+
   'parc-national-basse-casamance-foret-biodiversite': {
-    titleWo: 'Parc nationalu Basse-Casamance',
+    titleWo: 'Parc nationalu Basse-Casamance — àll ak biodiversité',
     excerptWo: 'Àll bu tooy, mangrove ak biodiversité ci Oussouye, ci suufu Casamance.',
     contentWo: `### Jëmmal
 
@@ -43,12 +44,13 @@ Fauna bi dafa wuute, ci céphalophes, phacochères ak singes, ci biir colobe bai
 
 ### Pressions ak patrimoine
 
-Parc bi amoon na ay metit ci fréquentation ak développementu écotourisme ndax xaalis ak xaalu sécurité ci Basse-Casamance ci jamono yu weesu. Tay, patrimoine naturel bi di dellu ci seetkat yi.
+Parc bi amoon na ay metit ci fréquentation ak développementu écotourisme ci jamono yu weesu. Aarug patrimoine bi war na boole sàmm forêt, mangrove ak biodiversité ak respectu contexteu territoire bi.
 
-### Aar
+### Aar ak seetaan
 
-Aar forêt yi, mangrove yi ak biodiversité bi dafa am solo ci Casamance. Seetaan site bi war na ànd ak respectu milieux naturels ak askan yi nekk ci territoire bi.`,
+Seetaan site bi war na ànd ak respectu milieux naturels ak askan yi nekk ci territoire bi. Conservationu àll yi ak mangrove yi am na solo ngir dundug espèces ak ekilibre écologique ci Casamance.`,
   },
+
   'ile-karabane-memoire-architecture-casamance': {
     titleWo: 'Dunu Karabane — mémoire, architecture ak paysageu Casamance',
     excerptWo: 'Dunu-village ci estuaireu Casamance, bolong, végétation littorale ak mémoireu territoire.',
@@ -56,9 +58,9 @@ Aar forêt yi, mangrove yi ak biodiversité bi dafa am solo ci Casamance. Seetaa
 
 Karabane, te ñuy woowe ko itam Carabane, mooy dunu-village bu nekk ci estuaireu Casamance. Bolong yi, végétation littorale ak dexu géej bi bokk nañu ci paysage bi.
 
-### Territoire
+### Territoire ak dund
 
-Dunu bi dafa nekk ci environnementu estuaire fu ndox di taxaw ci yoon, activité ak jamono yi. Xam Karabane warul tëdd rekk ci tourisme balnéaire ; soxla na itam xalaat ci dundinu askan wi, jëfandikoo yu local ak ekilibre écologique.
+Dunu bi dafa nekk ci environnementu estuaire fu ndox di taxaw ci yoon, activité ak jamono yi. Xam Karabane warul tëdd rekk ci tourisme balnéaire; soxla na itam xalaat ci dundinu askan wi, jëfandikoo yu local ak ekilibre écologique.
 
 ### Mémoire ak patrimoine
 
@@ -68,8 +70,8 @@ Karabane denc na ay tracesu patrimoine bâti ak ay mémoires yu lëkkale ak hist
 
 Conditionsu accès, hébergement ak navigation mën nañu soppeeku ak jamono ak opérateurs yi. Ku koy seet war na aar bérab yu ñu màggal, dëkk yi ak milieux naturels, te jëfandikoo services yu bokk ak communautés yi.
 
-### Repère
+### UNESCO
 
-Karabane nekk na ci liste indicative bu Senegaal ci UNESCO. Loolu tekkiwul ne site bi nekk na ci patrimoine mondial UNESCO.`,
+Karabane nekk na ci liste indicative bu Senegaal ci UNESCO. Loolu tekkiwul ne site bi nekk na ci patrimoine mondial UNESCO. Xibaar bi war nañu jàngale ci contexteu liste indicative ak patrimoine bi.`,
   },
 };
