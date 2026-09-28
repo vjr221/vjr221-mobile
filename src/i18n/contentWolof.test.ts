@@ -767,6 +767,23 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof architectural heritage consolidation wave 69', () => {
+    const slugs = [
+      'cases-a-etage-de-mlomp-architecture-traditionnelle-casamance',
+      'cases-a-impluvium-royaume-bandial',
+      'galerie-nationale-des-arts-du-senegal',
+      'ecole-nationale-des-arts-du-senegal-formation-arts-culture',
+      'marche-kermel-le-joyau-colonial-du-plateau-de-dakar',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
