@@ -861,6 +861,22 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof cinema heritage consolidation wave 75', () => {
+    const slugs = [
+      'cinema-senegalais-histoire-realisateurs-oeuvres-et-rayonnement',
+      'arts-visuels-au-senegal-peinture-sculpture-photographie-et-creation-contemporaine',
+      'biennale-dakar-dakart-art-contemporain',
+      'les-festivals-de-cinema-au-senegal-creation-images-et-industrie-culturelle',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(450);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
