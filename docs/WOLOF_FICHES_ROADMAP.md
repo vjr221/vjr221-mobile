@@ -140,3 +140,11 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Réécriture ciblée des textes Wolof existants : formulations plus naturelles, meilleure articulation entre parcours, création, société et transmission, sans ajouter de faits biographiques non établis.
 - Test dédié ajouté pour contrôler présence, structure Markdown et longueur minimale du contenu.
 - Validation CI requise avant poursuite de la chaîne ; aucun APK intermédiaire.
+
+
+## Mise à jour — vague 59
+
+- **Vague 59 : consolidation d’une fiche doublonnée et renforcement du contrôle d’intégrité** — Pape Amadou Seck était présent dans deux packs locaux (contentWolofExtraC.ts et contentWolofExtraAF.ts). La fiche enrichie est désormais conservée dans une seule source et l’entrée redondante a été retirée de l’autre pack.
+- Ajout d’un test source qui détecte directement les clés dupliquées entre tous les packs Wolof, en plus du contrôle sur le corpus fusionné.
+- Aucun nouveau slug créé ; aucun contenu français modifié.
+- Aucun APK intermédiaire : la CI doit valider la consolidation avant la prochaine vague.
