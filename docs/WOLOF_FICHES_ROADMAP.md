@@ -374,3 +374,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour du patrimoine, des arts, de la mémoire, du relief et de la conservation.
 - Aucun nouveau slug et aucune donnée française modifiée.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+## Mise à jour — vague 87
+
+- **Vague 87 : consolidation de 3 fiches patrimoine naturel et écotourisme** — Cascades de Dindéfélo, Wanar et Réserve naturelle communautaire de Palmarin.
+- Renforcement du Wolof autour de la biodiversité, du patrimoine archéologique, de l’écotourisme et de la conservation communautaire.
+- Aucun nouveau slug et aucune donnée française modifiée.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
