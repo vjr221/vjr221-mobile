@@ -5,66 +5,67 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_AL: Record<string, WolofContent> = {
   'carlou-d': {
     titleWo: 'Carlou-D — artiste ak musicien bu Senegaal',
-    excerptWo: 'Artiste ak musicien bu Senegaal buy lëkkale sonorités africaines ak influences contemporaines.',
+    excerptWo: 'Artiste ak musicien bu Senegaal buy lëkkale sonorités africaines ak influences contemporaines ci créationam.',
     contentWo: `### Jëmmal
 
-Carlou-D mooy artiste ak musicien bu Senegaal. Liggéeyam lëkkale sonorités africaines ak influences contemporaines, te di jéem a def ab son bu am boppam.
+Carlou-D mooy artiste ak musicien bu Senegaal. Liggéeyam lëkkale sonorités africaines ak influences contemporaines, te di sos ab univers musical bu am melokaanam.
 
-### Voix, guitare ak création
+### Voix ak guitare
 
-Voix, guitare ak rythmes yu wuute bokk nañu ci jumtukaayi créationam. Fusionu genres di may artiste bi yoon ngir boole ay melo ak ay influences yu wuute ci benn univers musical.
+Voix ak guitare bokk nañu ci jumtukaayi expressionam. Rythmes yu wuute ak sonorités yu cosaan di lëkkale ak influences yu bees ci création.
 
-### Sonorités ak scène
+### Fusion ak scène
 
-Musique bu jamono jii di denc itam xam-xam ci sonorités yu cosaan ak yeneen apports yu bees. Ci scène, performance ak expressionu artiste di yokk njariñu liggéey bi.
+Fusionu genres di may yoon ngir boole melo yu wuute ci benn son. Ci scène, performance ak expressionu artiste di yokk jokkoo ak public.
 
 ### Li war a fàttaliku
 
-- Carlou-D, artiste ak musicien bu Senegaal
-- Création musicale ak fusion
+- Artiste ak musicien bu Senegaal
+- Voix ak guitare
+- Fusionu genres
 - Sonorités africaines ak influences contemporaines`,
   },
 
   'sister-fa': {
     titleWo: 'Sister Fa — rappeuse bu Senegaal',
-    excerptWo: 'Rappeuse bu Senegaal buy jëfandikoo hip-hop ngir waxtaan ci société ak wone baatu jigéen yi.',
+    excerptWo: 'Rappeuse bu Senegaal buy jëfandikoo hip-hop ngir waxtaan ci société ak jox bérab baatu jigéen yi.',
     contentWo: `### Jëmmal
 
-Sister Fa mooy rappeuse bu Senegaal. Liggéeyam lëkkale hip-hop ak waxtaan ci mbirum société, te di may ab bérab baatu jigéen yi ci scène musicale.
+Sister Fa mooy rappeuse bu Senegaal. Liggéeyam lëkkale hip-hop ak waxtaan ci mbirum société, te di jox ab bérab baatu jigéen yi ci scène musicale.
 
 ### Rap ak wax
 
-Rapp bi di nekk yoonu wax xalaat, yeneen expérience ak mbir yu am solo ci dund. Tekst ak performance di jàppale yégle message ak jokkoo ak public.
+Rap di nekk yoonu wax xalaat, expérience ak mbir yu am solo ci dund. Tekst ak performance di jàppale yégle message ak jokkoo ak public.
 
-### Jigéen ak visibilité
+### Jigéen ak scène
 
-Ci scène hip-hop, présenceu artistes jigéen yi di yokk diversityu baat ak gis-gis. Liggéeyu Sister Fa bokk na ci wone ni rap mën na doon bérab bu expressionu jigéen.
+Présenceu artistes jigéen yi di yokk diversitéu baat ak gis-gis ci scène hip-hop. Liggéeyu Sister Fa di bokk ci expressionu jigéen ci musique.
 
 ### Li war a fàttaliku
 
-- Sister Fa, rappeuse bu Senegaal
+- Rappeuse bu Senegaal
 - Hip-hop ak waxtaan ci société
 - Baatu jigéen yi ci scène musicale`,
   },
 
   'fou-malade': {
     titleWo: 'Fou Malade — rappeur ak artiste bu Senegaal',
-    excerptWo: 'Rappeur ak artiste bu Senegaal, buy lëkkale musique ak waxtaan ci dundug société.',
+    excerptWo: 'Rappeur ak artiste bu Senegaal buy lëkkale musique ak waxtaan ci dundug société ak culture urbaine.',
     contentWo: `### Jëmmal
 
 Fou Malade mooy rappeur ak artiste bu scène hip-hop bu Senegaal. Liggéeyam lëkkale musique, expression ak mbirum société.
 
 ### Hip-hop ak waxtaan
 
-Rap mën na nekk yoonu wax ci jeunesse, dundin ak xaalis yi nit ñi di daje ak ñaari yoon yi société di jublu. Ci liggéeyu artiste bi, musique di may bérab ngir bind, déggle ak waxtaan.
+Rap di may bérab ngir wax ci jeunesse, dundin ak mbir yi nit ñi di daje. Bind ak performance di jàppale yégle xalaat ak waxtaan ak public.
 
 ### Culture urbaine
 
-Scene hip-hop di boole musique, performance, langage ak rencontres. Artistes yi di yokk yoonu sos ak séddoo culture urbaine ci dëkk yi.
+Scène hip-hop di boole musique, performance, langage ak rencontres. Artistes yi di yokk yoonu sos ak séddoo culture urbaine.
 
 ### Li war a fàttaliku
 
-- Fou Malade, rappeur bu Senegaal
+- Rappeur ak artiste bu Senegaal
 - Hip-hop ak culture urbaine
 - Musique ak waxtaan ci société`,
   },
@@ -80,13 +81,13 @@ Keyti mooy rappeur bu Senegaal, te bokk na ci pionniers yu hip-hop ci réew mi. 
 
 Bind ci rap di jëfandikoo làkk, rythme ak xalaat ngir nettali expérience ak wax ci société. Performance ci scène di may tekst yi doole ak yoonu jokkoo ak public.
 
-### Héritage ci hip-hop
+### Pionniers ak héritage
 
-Pionniers yi am nañu solo ci sosug scene hip-hop. Seen liggéey di tax génération yu ñëw mën a jële ci seen modèle ngir yokkute création ak culture urbaine.
+Pionniers yu hip-hop am nañu solo ci sosug scène urbaine. Seen liggéey di bokk ci li tax génération yu topp mën a yokk seen propre création.
 
 ### Li war a fàttaliku
 
-- Keyti, rappeur bu Senegaal
+- Rappeur bu Senegaal
 - Pionnier bu hip-hop
 - Bind, performance ak culture urbaine`,
   },
@@ -96,20 +97,21 @@ Pionniers yi am nañu solo ci sosug scene hip-hop. Seen liggéey di tax généra
     excerptWo: 'Groupe bu Senegaal buy lëkkale rap, reggae ak sonorités africaines ci création musicale.',
     contentWo: `### Jëmmal
 
-Daara J Family mooy groupe bu musique bu Senegaal, xam nekk ci hip-hop ak fusionu sonorités africaines. Groupe bi di boole rap ak yeneen genres ngir sos ab son bu wuute.
+Daara J Family mooy groupe musical bu Senegaal, xam nekk ci hip-hop ak fusionu sonorités africaines. Groupe bi di boole rap ak yeneen genres ngir sos ab son bu wuute.
 
-### Rap, reggae ak fusion
+### Rap ak reggae
 
-Rap ak reggae bokk nañu ci univers musical bu groupe bi, te influences africaines di yokk melokaanu son bi. Fusion bi di may yoon ngir lëkkale genres ak sonorités yu wuute.
+Rap ak reggae bokk nañu ci univers musical bu groupe bi. Influences africaines di yokk melokaanu son bi, te fusion bi di lëkkale genres yu wuute.
 
 ### Scène ak rayonnement
 
-Groupe bu mel ni bii mën na lëkkale scène locale ak yeneen publics ci bitim-réew. Séddoo musique ak performance di jàppale wone richesseu création bu Senegaal.
+Groupe bi di jàppale wone richesseu création bu Senegaal ci scène. Performance ak séddoo musique di may yoon ngir jege publics yu wuute.
 
 ### Li war a fàttaliku
 
-- Daara J Family, groupe bu Senegaal
-- Hip-hop, reggae ak fusion
-- Sonorités africaines ak création musicale`,
+- Groupe musical bu Senegaal
+- Hip-hop ak reggae
+- Fusionu sonorités africaines
+- Création musicale`,
   },
 };
