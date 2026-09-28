@@ -2571,23 +2571,26 @@ Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
 Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
   },
   'pape-amadou-seck': {
-    titleWo: 'Pape Amadou Seck',
-    excerptWo: 'Acteur ak créateur bu Senegaal, bokk ci spectacle vivant.',
+    titleWo: 'Pape Amadou Seck — acteur ak créateur bu Senegaal',
+    excerptWo: 'Acteur ak créateur bu Senegaal buy bokk ci spectacle vivant ak audiovisuel.',
     contentWo: `### Jëmmal
 
-Acteur ak créateur bu Senegaal, bokk ci spectacle vivant.
+Pape Amadou Seck mooy acteur ak créateur bu Senegaal buy bokk ci scène artistique bu Senegaal, ci spectacle vivant ak audiovisuel.
 
-### Création
+### Création ak spectacle
 
-Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+Liggéeyu comédien di jàppale nettali ak expressionu xalaat ci scène. Spectacle bi di itam bérab bu rencontre diggante artistes ak public.
 
-### Culture ak territoire
+### Théâtre, cinéma ak télévision
 
-Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+Spectacle vivant, théâtre, cinéma ak télévision mën nañu boole ay yoonu création yu wuute. Ci anam boobu, acteur yi di jàppale wone ay nettali ak réalités yu société.
 
-### Transmission
+### Li war a fàttaliku
 
-Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+- Acteur ak créateur bu Senegaal
+- Spectacle vivant
+- Audiovisuel
+- Création contemporaine`,
   },
   'mamadou-diaw': {
     titleWo: 'Mamadou Diaw',
