@@ -5,7 +5,7 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_P: Record<string, WolofContent> = {
   'parc-national-des-oiseaux-du-djoudj': {
     titleWo: 'Parc nationalu picci Djoudj',
-    excerptWo: 'Réserve bu mag bu picc yu tukki ak patrimoine naturel bu delta du fleuve Sénégal.',
+    excerptWo: 'Barab bu mag bu picc yu tukki, te mu bokk ci patrimoine naturel bu delta du fleuve Sénégal.',
     contentWo: `### Jëmmal
 
 Parc nationalu picci Djoudj mooy benn ci barab yu gën a am solo ci àdduna ci mbirum picc ak wetland. Mu nekk ci delta du fleuve Sénégal, ci noru réew mi, te mooy barab bu am solo lool ci picc yu tukki diggante Europ, Asi ak Afrig. Ñu sos parc bi ci 1971, te UNESCO dafa ko bind ci patrimoine mondial ci 1981.
@@ -57,7 +57,7 @@ Parc nationalu picci Djoudj mooy benn ci alal yu gën a am solo ci nature bu Sen
 
   'reserve-de-fathala': {
     titleWo: 'Réserve de Fathala',
-    excerptWo: 'Barab bu écotourisme ci Sine-Saloum, wuute ci faune, flore ak safari.',
+    excerptWo: 'Barab bu écotourisme ci Sine-Saloum, fu ñuy gis faune, flore ak safari ci biir nature.',
     contentWo: `### Jëmmal
 
 Réserve de Fathala mooy benn ci barab yu mag ci écotourisme ci Senegaal. Mu nekk ci diiwaanu Fatick, ci départementu Foundiougne, jege Delta du Saloum. Réserve bu privé bi dafa wone faune ak flore bu réew mi, te conservationu biodiversité bokk na ci ay jëfëm.
