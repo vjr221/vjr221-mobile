@@ -6,46 +6,46 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_AF: Record<string, WolofContent> = {
   'ibrahima-sall-ecrivain-senegalais': {
     titleWo: 'Ibrahima Sall — bindkat bu Senegaal',
-    excerptWo: 'Bindkat bu Senegaal bu lëkkale ak scène littéraire bu réew mi ak nettaliu aada.',
+    excerptWo: 'Bindkat bu Senegaal bu bokk ci mbindiin ak waxtaanu littérature, te lëkkale nettali ak aada.',
     contentWo: `### Parcours
 
-Ibrahima Sall mooy bindkat bu Senegaal bu lëkkale ak scène littéraire bu Senegaal.
+Ibrahima Sall mooy bindkat bu Senegaal. Parcoursam bokk na ci mbindiin ak scène littéraire bu réew mi.
 
-### Contribution
+### Mbindiin ak aada
 
-Parcoursam bokk na ci diversitéu mbindiin yu Senegaal ak transmissionu littérature ak aada.
+Bindam di jëfandikoo nettali ak xalaat ngir wone ay jikko, ay xew-xew ak ay mbir yu aju ci dund ak aada. Loolu di yokk jokkoo diggante bind ak xam-xamu askan wi.
 
-### Héritage littéraire
+### Bérab ci littérature
 
-Liggéeyu bindkat yi di jàppale sosug patrimoine littéraire bu jamono jii te di may générations yu bees yoonu jot ci xam-xamu aada.
+Liggéeyu bindkat yi di yokk diversitéu littérature bu Senegaal. Ci seen mbindiin, ñuy denc ay nettali ak xalaat te di leen jox yeneen mbooloo ak générations.
 
 ### Li war a fàttaliku
 
 - Bindkat bu Senegaal
-- Littérature bu Senegaal
-- Transmissionu aada`,
+- Littérature ak mbindiin
+- Aada ak transmission`,
   },
 
   'aminata-maiga-ka': {
     titleWo: 'Aminata Maïga Ka — bindkat bu Senegaal',
-    excerptWo: 'Bindkat bu Senegaal bu œuvream bokk ci littérature africaine francophone ak nettaliu réalités sociales yu Senegaal.',
+    excerptWo: 'Bindkat bu Senegaal bu bokk ci littérature africaine francophone, di seet nit ñi ak mbirum société.',
     contentWo: `### Œuvre
 
-Aminata Maïga Ka mooy bindkat bu Senegaal bu œuvream bokk ci littérature africaine francophone ak expressionu réalités sociales yu Senegaal.
+Aminata Maïga Ka mooy bindkat bu Senegaal. Œuvream bokk na ci littérature africaine francophone ak nettaliu réalités sociales.
 
-### Xalaat ak société
+### Nit ñi ak société
 
-Bindam di seet notamment diggante nit ñi, société ak expériencesu dund ci contexteu Senegaal buy soppi.
+Bindam di seet diggante nit ñi, dund ak société. Nettali yi di may gis-gis ci expériencesu nit ñi ak soppi-soppi yu am ci dundug jamono.
 
 ### Bérab ci littérature bu Senegaal
 
-Mu bokk ci diversitéu baatu jigéen ñi ñu jàppale ci yokkute littérature bu Senegaal ci jamono jii.
+Mu bokk ci diversitéu baatu jigéen ñi ci littérature bu Senegaal. Mbindiin yi di yokk seen feeñ ak seen baat ci espaceu littérature.
 
 ### Li war a fàttaliku
 
 - Bindkat bu Senegaal
 - Littérature africaine francophone
-- Bind ak mbirum société`,
+- Nit ñi ak mbirum société`,
   },
 
   'pape-amadou-seck': {
@@ -69,23 +69,23 @@ Liggéeyu comédiens di jàppale transmissionu nettali ak imaginaires. Scène bi
 
   'mamadou-diaw-artiste': {
     titleWo: 'Mamadou Diaw — artiste bu Senegaal ci scène contemporaine',
-    excerptWo: 'Artiste bu Senegaal bu lëkkale ak création contemporaine ak expressionsu scène culturelle bu réew mi.',
+    excerptWo: 'Artiste bu Senegaal bu lëkkale création contemporaine, xalaat ak expressionu scène culturelle.',
     contentWo: `### Parcours artistique
 
-Mamadou Diaw mooy artiste bu Senegaal bu lëkkale ak création contemporaine ak expressionsu scène culturelle bu réew mi.
+Mamadou Diaw mooy artiste bu Senegaal bu bokk ci scène contemporaine. Liggéeyam lëkkale ak création ak expressionu culturelle bu jamono jii.
 
-### Création ak transmission
+### Création ak aada
 
-Scène artistique bu Senegaal am na disciplines, influences ak générations yu wuute. Artistes contemporains di delloo xalaat ci héritagesu aada yi te di jàng mbirum Senegaal bu tey.
+Scène artistique bu Senegaal am na disciplines ak influences yu wuute. Artistes yi di jëfandikoo seen liggéey ngir wone xalaat, expérience ak ay jëfandikoo yu cosaan ak yu bees.
 
-### Dialogue ak innovation
+### Dialogue ak société
 
-Création di nekk yoonu waxtaan diggante mémoire, société ak innovation. Loolu di may arts yi wone soppi-soppi yu société ak dundug jamono jii.
+Création di nekk it yoonu waxtaan diggante mémoire, société ak jamono jii. Loolu di may nit ñi gis ni art mën a wone soppi-soppi ak xalaatu askan wi.
 
 ### Li war a fàttaliku
 
 - Artiste bu Senegaal
 - Création contemporaine
-- Aada ak transmission`,
+- Aada ak expression culturelle`,
   },
 };
