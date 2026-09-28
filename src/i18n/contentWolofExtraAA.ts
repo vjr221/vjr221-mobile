@@ -5,30 +5,30 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_AA: Record<string, WolofContent> = {
   'les-ethnies-du-senegal': {
     titleWo: 'Xeetu askan yi ci Senegaal',
-    excerptWo: 'Jëmm ci wàllu askan, làkk ak aada yu wuute yi bokk ci mbindug Senegaal.',
+    excerptWo: 'Jëmm ci askan, làkk ak aada yu wuute yi bokk ci mbindug Senegaal.',
     contentWo: `### Jëmmal
 
-Senegaal réew la bu am askan yu wuute ak diversité linguistique ak culturelle bu réy. VJR 221 di jàngal ci mbir mi ci anam bu deskriptif, te di wone ni communautés yu wuute yi bokk nañu ci benn espace national.
+Senegaal réew la bu am communautés yu wuute ak diversité linguistique ak culturelle bu réy. Fiche bii di jàngal mbir mi ci anam bu deskriptif, te di wone ni communautés yu wuute yi bokk nañu ci benn espace national.
 
-### Xeetu askan yi
+### Communautés ak territoires
 
-Wolof, Peul, Toucouleur, Sérère, Diola, Mandingue, Soninké, Bassari, Bédik, Coniagui ak yeneen communautés bokk nañu ci diversitéu askan yi ci Senegaal. Distribution bi dafa wuute ci territoire yi, te am na itam dëkkandoo ak jokkoo diggante communautés yi.
+Wolof, Peul, Toucouleur, Sérère, Diola, Mandingue, Soninké, Bassari, Bédik, Coniagui ak yeneen communautés bokk nañu ci diversitéu askan yi ci Senegaal. Distribution bi wuute na ci territoires yi, te am na itam dëkkandoo ak jokkoo diggante communautés yi.
 
 ### Làkk ak aada
 
-Làkk yi, cosaan yi, xeetu lekk, cosaanu liggéey, musik, fecc ak cérémonies bokk nañu ci patrimoinu askan yi. Bokkug nit ñi ci yeneen territoires ak mariage yi di yokk jokkoo diggante communautés.
+Làkk yi, cosaan yi, xeetu lekk, cosaanu liggéey, musique, fecc ak cérémonies bokk nañu ci patrimoinu communities yi. Bokkug nit ñi ci yeneen territoires ak njaboot yi di yokk jokkoo diggante communautés.
 
 ### Cousinage à plaisanterie
 
-Cousinage à plaisanterie, walla kal, bokk na ci pratiquesu socioculturelles yu ñuy jëfandikoo ngir dëgëral jàmm ak jokkoo diggante ay groupes. Mu mën a nekk yoonu nangu wuute ak yokkug solidarité.
+Cousinage à plaisanterie, walla kal, bokk na ci pratiquesu socioculturelles yu ñuy jëfandikoo ci yenn communautés ngir dëgëral jàmm ak jokkoo. Forme ak jëfandikoo bi mën na wuute ci contexte.
 
-### Patrimoine bu vivant
+### Patrimoine bu dund
 
-Diversitéu askan yi du woon rekk benn listu groupes. Mu ëmb làkk, xam-xam, cosaan, récits ak pratiques yu ñuy jële ci génération yi. Transmissionu patrimoine boobu am na solo ci xamante ak identitéu réew mi.`,
+Diversitéu askan yi du woon benn listu groupes rekk. Mu ëmb làkk, xam-xam, cosaan, récits ak pratiques yu ñuy jële ci génération yi. Transmissionu patrimoine boobu am na solo ci xamante ak compréhensionu diversitéu réew mi.`,
   },
 
   'le-conte-au-senegal-oralite-transmission-et-patrimoine-vivant': {
-    titleWo: 'Le conte ci Senegaal — wax ak jottali cosaan',
+    titleWo: 'Conte ci Senegaal — nettali ak jottali cosaan',
     excerptWo: 'Fàttaliku, léeb ak xam-xam yu ñuy jottali ci génération yi jaar ci wax ak déglu.',
     contentWo: `### Benn artu wax
 
@@ -36,9 +36,9 @@ Conte ci Senegaal bokk na ci traditionsu oralité. Ñuy nettali ko ci ndaje yu k
 
 ### Yoonu transmission
 
-Conte bi du woon rekk ngistal. Mu mën a jottali ay xelal ci dund, diggante nit ñi, worma ak yoon. Selon communautés ak contexte, formeu nettali bi mën na wuute.
+Conte du woon ngistal rekk. Mu mën a jottali ay xelal ci dund, diggante nit ñi, worma ak yoon. Selon communautés ak contexte, formu nettali bi mën na wuute.
 
-### Wax, musik ak gestuelle
+### Wax, musique ak gestuelle
 
 Nettali mën na boole wax, xalaat, rythme, way ak gestuelle. Làkk bu ñu jëfandikoo ak manièreu nettali bi di aju ci askan, territoire ak cosaan.
 
@@ -53,10 +53,10 @@ Dencug conte yi di jàppale aarug patrimoine culturel immatériel. Denc nettali 
 
   'le-palor-langue-cangin-patrimoine-serere-pays-thiessois': {
     titleWo: 'Palor — làkk cangin ak patrimoine sérère ci wàllu Thiès',
-    excerptWo: 'Làkk cangin bu Palor yi di wone diversitéu làkk ak patrimoine bu communautés sérère ci centre-west Senegaal.',
+    excerptWo: 'Làkk cangin bu Palor yi di wone diversitéu làkk ak patrimoine bu communautés sérère ci wàllu Thiès.',
     contentWo: `### Jëmmal
 
-Palor, walla sili-sili, mooy làkk cangin bu ñuy wax ci Senegaal. Mu bokk ci mbooloom làkk yu cangin te mu bokk itam ci làkk yu atlantiques.
+Palor, walla sili-sili, mooy làkk cangin bu ñuy wax ci Senegaal. Mu bokk ci mbooloom làkk yu cangin ak làkk yu atlantiques.
 
 ### Askan ak territoire
 
@@ -66,9 +66,9 @@ Communautés palor, yu ñuy woowe itam Waro ci seen làkk, dëkk nañu ci centre
 
 Palor bokk na ci familleu cangin ak yeneen làkk yu ñuy wax ci communautés sérère. Wuute yi ci làkk yi di wone richesseu patrimoine linguistique bu Senegaal.
 
-### Patrimoine bu vivant
+### Patrimoine bu dund
 
-Làkk mooy yoonu jottali xam-xam, nettali, cosaan ak ay pratiquesu dund. Aarug Palor ak yeneen làkk yu ndaw di jàppale dencug diversitéu culturelle ak linguistique.
+Làkk mooy yoonu jottali xam-xam, nettali, cosaan ak ay pratiquesu dund. Aarug Palor ak yeneen làkk yu ñu néewal di jàppale dencug diversitéu culturelle ak linguistique.
 
 ### Solo ci territoire
 
