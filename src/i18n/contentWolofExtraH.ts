@@ -96,62 +96,102 @@ Téere yu mu bind ak liggéeyam ci mbirum aada ak politique am nañu solo ci his
   },
   'ken-bugul-ecrivaine-senegalaise': {
     titleWo: 'Ken Bugul — bindkat bu Senegaal',
-    excerptWo: 'Ken Bugul bokk na ci bindkat yu am solo ci littérature bu Senegaal, te am na boppam ci roman.',
+    excerptWo: 'Ken Bugul, turu mbindum Mariètou Mbaye Biléoma, bokk na ci bindkat yu am solo ci littérature africaine francophone.',
     contentWo: `### Jëmmal
 
-Ken Bugul mooy nom de plume bu Mariètou Mbaye Biléoma, bindkat bu Senegaal. Bindam dafa jëm ci identité, solitude, société ak expérience personnelle.
+Ken Bugul mooy nom de plume bu Mariètou Mbaye Biléoma, bindkat bu Senegaal. Bindam dafa bokk ci littérature africaine francophone, ak récit yu jëm ci identité, solitude, société ak expérience personnelle.
 
-### Littérature
+### Récit ak identité
 
-Roman yi mu bind am nañu solo ci littérature africaine francophone. Style bi dafa jëfandikoo récit bu intime ak réflexion ci dundin.
+Ci ay romanam, expérienceu nit ki di nekk bérab bu am solo. Récit bi di ubbi waxtaan ci identité, diggante nit ak société, ak yoonu xam seen bopp.
 
-### Transmission
+### Littérature ak gis-gis
 
-Téere yi mu bind jàppale nañu ci xelal mbirum identité ak xaalis bu nit ki ci société.`,
+Styleu récit di boole expérience personnelle ak réflexion ci dundin. Loolu di may lecteur yoon ngir seet mbir yi ci biir nit ki ak ci société.
+
+### Héritage
+
+Bindam bokk na ci paysageu littérature bu Senegaal ak bu Afrik francophone. Téere yi di jàppale ci wéyal waxtaan ci identité, société ak expérienceu nit.
+
+### Li war a fàttaliku
+
+- Ken Bugul / Mariètou Mbaye Biléoma
+- Littérature africaine francophone
+- Identité, société ak expérience personnelle`,
   },
   'mariama-ba-ecrivaine-senegalaise': {
     titleWo: 'Mariama Bâ — bindkat bu Senegaal',
-    excerptWo: 'Bindkat bu Senegaal bu am solo ci littérature africaine francophone, xam ko rawatina ci So Long a Letter.',
+    excerptWo: 'Bindkat bu Senegaal bu am solo ci littérature africaine francophone, ak récit yu jëm ci njaboot ak dundinu jigéen.',
     contentWo: `### Jëmmal
 
 Mariama Bâ nekk na bindkat bu Senegaal, te bindam dafa jëm ci dundinu jigéen, njaboot, société ak xew-xew yu askan.
 
-### Téere
+### So Long a Letter
 
-So Long a Letter (Une si longue lettre) mooy ci téere yi gën a xam ci bindkat bi. Téere bi dafa jëfandikoo bataaxal ngir wax ci amitié, mariage, perte ak xaalis bu jigéen ci société.
+So Long a Letter, walla *Une si longue lettre*, mooy ci téere yi gën a xam ci liggéeyam. Récit bi jëfandikoo bataaxal ngir wax ci amitié, mariage, perte ak xaalisu jigéen ci société.
 
-### Héritage
+### Jigéen ak société
 
-Liggéeyu Mariama Bâ bokk na ci littérature bu Senegaal ak ci yëgle mbirum njaboot ak xaalis bu jigéen.`,
+Bindkat bi di wone ay expérience yu jëm ci njaboot ak diggante nit ñi. Récit bi di ubbi waxtaan ci placeu jigéen, choix, responsabilité ak soppi-soppi yu société.
+
+### Héritage littéraire
+
+Liggéeyu Mariama Bâ bokk na ci littérature bu Senegaal ak bu Afrik francophone. Téereem di wéyal waxtaan ci njaboot, dundinu jigéen ak xew-xew yu société.
+
+### Li war a fàttaliku
+
+- Mariama Bâ
+- *Une si longue lettre*
+- Jigéen, njaboot ak société`,
   },
   'birago-diop-poete-et-ecrivain-senegalais': {
-    titleWo: 'Birago Diop — poète ak bindkat bu Senegaal',
-    excerptWo: 'Poète, conteur ak vétérinaire bu Senegaal, xam nañu ko ci Les Contes d’Amadou Koumba ak bindam ci oralité.',
+    titleWo: 'Birago Diop — poète, conteur ak bindkat bu Senegaal',
+    excerptWo: 'Poète ak conteur bu Senegaal, ku bokk ci bind yi di denc ak yégle patrimoine oral.',
     contentWo: `### Jëmmal
 
-Birago Diop nekk na poète, écrivain ak conteur bu Senegaal. Mu jëfandikoo lu bari ci oralité ak cosaan yi ci bindam.
+Birago Diop nekk na poète, écrivain ak conteur bu Senegaal. Mu jëfandikoo oralité ak cosaan yi ci bindam, te liggéeyam bokk na ci dencug patrimoine oral.
 
-### Contes ak poésie
+### Contes ak oralité
 
-Les Contes d’Amadou Koumba bokk nañu ci téere yi gën a xam ci liggéeyam. Contes yi dañuy wone xam-xam, ndigal, mbind mi ak imagination bu oralité africaine.
+*Les Contes d’Amadou Koumba* bokk nañu ci téere yi gën a xam ci liggéeyam. Contes yi di jëfandikoo nettali, xam-xam, ndigal ak imagination ngir wéyal cosaanu waxtaan.
 
-### Héritage
+### Poésie ak mémoire
 
-Birago Diop am na solo ci bind ak aar patrimoine oral. Poésieem ak contesam jàppale nañu ci wéy ak yeggali cosaan yi.`,
+Poésie ak contes di boole baat, rythme ak mémoire. Ci yoon woowu, bind mën na doon yoonu denc mbir yi ñu daan jottali ci oralité.
+
+### Patrimoine ak transmission
+
+Birago Diop am na solo ci yokkute littérature bu Senegaal ak aarug patrimoine oral. Bindam di may générations yu bees yoon ngir dégg ak xam cosaan yi.
+
+### Li war a fàttaliku
+
+- Birago Diop
+- *Les Contes d’Amadou Koumba*
+- Oralité, poésie ak patrimoine`,
   },
   'cheikh-hamidou-kane-ecrivain-senegalais': {
     titleWo: 'Cheikh Hamidou Kane — bindkat bu Senegaal',
-    excerptWo: 'Bindkat bu Senegaal bu xam nekk ci littérature africaine francophone, rawatina ci L’Aventure ambiguë.',
+    excerptWo: 'Bindkat bu Senegaal bu am solo ci littérature africaine francophone, rawatina ci *L’Aventure ambiguë*.',
     contentWo: `### Jëmmal
 
-Cheikh Hamidou Kane nekk na bindkat bu Senegaal. Bindam dafa jëm ci jàng, identité, diine, modernité ak diggante cosaan ak yoon yu bees.
+Cheikh Hamidou Kane nekk na bindkat bu Senegaal. Bindam dafa jëm ci njàng, identité, diine, modernité ak diggante cosaan ak yoon yu bees.
 
 ### L’Aventure ambiguë
 
-L’Aventure ambiguë mooy téereem bu gën a xam. Roman bi dafa wone jafe-jafe yu nit ki di daje ci diggante njàng bu cosaan ak njàng bu occidental.
+*L’Aventure ambiguë* mooy téereem bu gën a xam. Roman bi dafa wone jafe-jafe yu nit ki di daje ci diggante njàng bu cosaan ak njàng bu occidental.
+
+### Cosaan ak modernité
+
+Ci récit bi, xam-xamu cosaan ak yeneen formesu njàng di daje ak modernité. Waxtaan boobu di ubbi laaj ci identité, choix ak yoonu nit ki ci àdduna buy soppi.
 
 ### Solo ci littérature
 
-Téere bi bokk na ci classiques yu littérature africaine francophone, te dafay may xel ci mbirum identité ak modernité.`,
+Téere bi bokk na ci classiques yu littérature africaine francophone. Liggéey bi di may xel ci diggante aada, njàng, diine ak modernité.
+
+### Li war a fàttaliku
+
+- Cheikh Hamidou Kane
+- *L’Aventure ambiguë*
+- Njàng, identité ak modernité`,
   },
 };
