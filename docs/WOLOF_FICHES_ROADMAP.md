@@ -360,3 +360,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour de la scène, de la chorégraphie, de la transmission, du cinéma et du parcours artistique.
 - Aucun nouveau slug et aucune donnée française modifiée.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+## Mise à jour — vague 85
+
+- **Vague 85 : consolidation de 5 fiches de littérature sénégalaise** — Léopold Sédar Senghor, Ken Bugul, Mariama Bâ, Birago Diop et Cheikh Hamidou Kane.
+- Renforcement du Wolof autour de la littérature, de l’oralité, de l’identité, de la mémoire, de la transmission et des œuvres déjà recensées.
+- Aucun nouveau slug et aucune donnée française modifiée.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
