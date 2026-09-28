@@ -784,6 +784,23 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof living heritage consolidation wave 70', () => {
+    const slugs = [
+      'le-gumbe-rythme-danse-et-memoire-musicale-de-lespace-senegambien',
+      'palmier-a-huile-de-casamance-arbre-economie-et-culture',
+      'les-metiers-de-la-forge-a-kaffrine-un-savoir-faire-artisanal-du-ndoucoumane',
+      'chambre-de-commerce-de-dakar-architecture-coloniale-place-de-lindependance',
+      'village-d-iwol-patrimoine-bedik-et-paysage-de-kedougou',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
