@@ -339,3 +339,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug et aucune donnée française modifiée.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
 - Halima Gadji est conservée pour une consolidation ultérieure afin de ne pas mélanger cinéma et audiovisuel avec cette vague.
+
+## Mise à jour — vague 82
+
+- **Vague 82 : consolidation de 4 fiches audiovisuel et scène existantes** — Moussa Bathily, Samba Félix Ndiaye, Alassane Diago et Sada Thioub.
+- Renforcement autour de la création audiovisuelle, du documentaire, de la mémoire, des migrations, du théâtre et du spectacle vivant.
+- Aucun nouveau slug et aucune donnée française modifiée.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
