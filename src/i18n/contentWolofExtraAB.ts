@@ -6,43 +6,43 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_AB: Record<string, WolofContent> = {
   'le-festival-du-sahel': {
     titleWo: 'Festivalu Sahel',
-    excerptWo: 'Mbooloo bu aada ak cosaan yu Sahel, di wone musik, art, patrimoine ak dundin yu askan yi.',
+    excerptWo: 'Ndaje bu aada ak cosaan yu Sahel, di wone musique, arts, patrimoine ak dundin yu askan yi.',
     contentWo: `### Jëmmal
 
-Festivalu Sahel mooy benn ci ndaje yu aada yu di wone alalug culturel, artistique ak patrimonial bu diiwaan yi nekk ci Sahel ci Senegaal.
+Festivalu Sahel mooy benn ci ndaje yu aada yu di wone alalug culturel, artistique ak patrimonial bu territoiresu Sahel ci Senegaal.
 
 ### Aada ak patrimoine
 
-Festival bi dafay may nit ñi gis ak dégg ay formesu musique, fecc, nettali, arts ak cosaan yu wuute. Mu jàppale itam wone patrimoine bu dund ak xam-xam yu ñuy jottali ci génération yi.
+Festival bi di may nit ñi gis ak dégg formesu musique, fecc, nettali, arts ak cosaan yu wuute. Mu jàppale itam wone patrimoine bu dund ak xam-xam yu ñuy jottali ci génération yi.
 
 ### Expositions ak waxtaan
 
-Ndaje yi mën nañu boole expositions, conférences, débats ak yeneen activitésu culture. Loolu di may ñi bokk yoonu xam aada yi ak waxtaan ci seen solo ci jamono jii.
+Ndaje yi mën nañu boole expositions, conférences, débats ak yeneen activitésu culture. Loolu di may ñi bokk yoonu xam aada yi ak waxtaan ci seen solo ci jamono ji.
 
 ### Jeunesse ak transmission
 
-Jeunes yi mën nañu bokk ci activitésu festival bi, gis artistes yi ak jàng ci ay pratiquesu culture. Transmission bi di yokk xam-xam ak taxawu patrimoine bu dund.
+Jeunes yi mën nañu bokk ci activitésu festival bi, gis artistes yi ak jàng ci pratiquesu culture. Transmission bi di yokk xam-xam ak taxawu patrimoine bu dund.
 
 ### Turismu ak territoire
 
-Festivalu aada mën na itam yokk njariñu tourisme culturel. Dafa lëkkale gan ñi ak territoires yi, te di wone richesseu aada ak cosaan yu askan yi.`,
+Festivalu aada mën na jàppale tourisme culturel. Dafa lëkkale gan ñi ak territoires yi, te di wone richesseu aada ak cosaan yu askan yi.`,
   },
 
 
   'le-theatre-au-senegal-scenes-creation-et-patrimoine-culturel': {
     titleWo: 'Théâtre ci Senegaal — scène, sos ak patrimoine culturel',
-    excerptWo: 'Théâtre bi di boole nettali, parole, musique, fecc ak formesu création ci Senegaal.',
+    excerptWo: 'Théâtre bi di boole nettali, wax, musique, fecc ak formesu création ci Senegaal.',
     contentWo: `### Jëmmal
 
-Théâtre ci Senegaal mooy bérab bu mag bu création, critique sociale ak transmission. Mu mën a boole formesu scène yu bees, nettali yu askan, cosaanu oralité, musik ak fecc.
+Théâtre ci Senegaal mooy bérab bu création, waxtaan ak transmission. Mu mën a boole scène yu bees, nettali yu askan, oralité, musique ak fecc.
 
 ### Cosaanu wax ak nettali
 
-Wax ci kanam nit ñi, conte, jëfandikoo paroleu griot ak yeneen formesu représentation bokk nañu ci cosaan yi tax théâtre bi yokku. Gannaaw loolu, théâtre contemporain yokku na ci écoles, troupes, centres culturels ak scènes professionnelles.
+Wax ci kanam nit ñi, conte, paroleu griot ak yeneen formesu représentation bokk nañu ci cosaan yi tax théâtre bi yokku. Théâtre contemporain yokku na itam ci écoles, troupes, centres culturels ak scènes professionnelles.
 
 ### Théâtre ak société
 
-Dramaturges ak metteurs en scène di jëfandikoo ay sujets yu jëm ci kër, jeunesse, diggante nit ñi, taariix, politique, migrations ak soppi-soppi yu société. Théâtre mën na nekk divertissement, waxtaan ak jumtukaay bu njàngale.
+Dramaturges ak metteurs en scène di jëfandikoo ay sujet yu jëm ci njaboot, jeunesse, diggante nit ñi, taariix, migrations ak soppeeku société. Théâtre mën na nekk divertissement, waxtaan ak jumtukaay bu njàngale.
 
 ### Jàng ak sos
 
@@ -50,7 +50,7 @@ Formationu comédiens, amug bérab yu ñuy def spectacle ak accèsu xale yi ci s
 
 ### Patrimoine bu dund
 
-Théâtre bi di jàppale dencug parole, nettali ak expressionsu culturel. Transmission bi di tax formesu création yu cosaan ak yu bees di bokk ci patrimoine culturel bu Senegaal.`,
+Théâtre bi di jàppale dencug parole, nettali ak expressionsu culture. Transmission bi di tax formesu création yu cosaan ak yu bees di bokk ci patrimoine culturel bu Senegaal.`,
   },
 
   'sogepa-sn-patrimoine-bati-etat-senegal': {
