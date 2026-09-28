@@ -6,22 +6,22 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_AC: Record<string, WolofContent> = {
   'cinema-senegalais-histoire-realisateurs-oeuvres-et-rayonnement': {
     titleWo: 'Cinéma bu Senegaal — taariix, réalisateurs, liggéey ak wone ci àdduna',
-    excerptWo: 'Cinéma bu Senegaal am na bérab bu am solo ci aada bu Afrik, ak nettali yu jëm ci société, fàttaliku, làkk ak soppi-soppi yu réew mi.',
+    excerptWo: 'Cinéma bu Senegaal am na solo ci aada bu Afrik, ak nettali yu jëm ci société, mémoire, làkk ak soppeeku réew mi.',
     contentWo: `### Jëmmal
 
-Cinéma bu Senegaal bokk na ci taariixu aada bu Afrik. Mu boole réalisateurs, acteurs, techniciens, producteurs, critiques ak public, ci nettali yu jëm ci société, fàttaliku, làkk ak soppi-soppi yu réew mi.
+Cinéma bu Senegaal bokk na ci taariixu aada bu Afrik. Mu boole réalisateurs, acteurs, techniciens, producteurs, critiques ak public, ci nettali yu jëm ci société, mémoire, làkk ak soppeeku réew mi.
 
 ### Liggéey ak gis-gis
 
-Cinéma duñu ko mëna wàññi ci turu réalisateurs yu mag rekk. Film bu nekk am na choix ci scénario, làkk, nataal, son ak yoonu wone. Fictions, documentaires, courts métrages ak créations expérimentales bokk nañu ci cinéma bu wuute.
+Cinéma duñu ko wàññi ci turu réalisateurs yu mag rekk. Film bu nekk am na choix ci scénario, làkk, nataal, son ak yoonu wone. Fiction, documentaire, court métrage ak création expérimentale bokk nañu ci wuute gu cinéma bi.
 
 ### Sos, production ak wone
 
-Gannaaw bind ak defar film, liggéey bi soxla ay métiers yu wuute : formation, technique, financement, production, distribution ak denc. Salles, festivals, ciné-clubs, télévisions ak plateformes am nañu ay rôles yu wuute ci yoonu gis film yi.
+Gannaaw bind ak defar film, liggéey bi soxla métiers yu wuute : formation, technique, financement, production, distribution ak denc. Salles, festivals, ciné-clubs, télévisions ak plateformes am nañu ay rôles yu wuute ci yoonu gis film yi.
 
 ### Denc mémoireu cinéma
 
-Denc film, affiches, archives ak témoignages di jàppale transmissionu taariixu cinéma. Film yi mën nañu nekk œuvres artistiques, waaye itam ay témoins yu jamono yi ak waxtaan yi ci société.`,
+Denc film, affiches, archives ak témoignages di jàppale transmissionu taariixu cinéma. Film yi mën nañu nekk œuvres artistiques, waaye itam témoins yu jamono yi ak waxtaan yi ci société.`,
   },
 
   'arts-visuels-au-senegal-peinture-sculpture-photographie-et-creation-contemporaine': {
@@ -29,7 +29,7 @@ Denc film, affiches, archives ak témoignages di jàppale transmissionu taariixu
     excerptWo: 'Arts visuels bu Senegaal boole peinture, sculpture, photographie, installation, design ak yeneen formu création bu jamono jii.',
     contentWo: `### Jëmmal
 
-Arts visuels bu Senegaal boole peinture, sculpture, photographie, installation, design ak yeneen formu création contemporaine. Artistes ak bérab yu création, formation, exposition ak diffusion nekk nañu ci ay territoire yu wuute.
+Arts visuels bu Senegaal boole peinture, sculpture, photographie, installation, design ak yeneen formu création contemporaine. Artistes ak bérab yu création, formation, exposition ak diffusion nekk nañu ci territoires yu wuute.
 
 ### Scène artistique bu wuute
 
@@ -41,7 +41,7 @@ Artistes yi di jële seen inspiration ci cosaan, dundug société contemporaine 
 
 ### Création contemporaine
 
-Artistes yi di seet mbirum taariix, identité, territoire, soppi-soppi yu société ak diggante héritage ak modernité. Arts visuels di wone diversitéu gis-gis ak yoonu sos ci Senegaal.`,
+Artistes yi di seet mbirum taariix, identité, territoire, soppeeku société ak diggante héritage ak modernité. Arts visuels di wone diversitéu gis-gis ak yoonu sos ci Senegaal.`,
   },
 
   'biennale-dakar-dakart-art-contemporain': {
@@ -69,7 +69,7 @@ Dak’Art di tax Dakar nekk benn ci bérab yu mag yu échanges ci arts contempor
     excerptWo: 'Festivalsu cinéma di wone film yi, réalisateurs, acteurs, techniciens ak producteurs, te di ubbi bérab bu rencontre ak public.',
     contentWo: `### Jëmmal
 
-Cinéma bu Senegaal am na taariix bu am solo ci cinémas yu Afrik. Festivals yi di jàppale wone réalisateurs, acteurs, techniciens ak producteurs, te di sos bérab bu rencontre ak public.
+Cinéma bu Senegaal am na taariix bu am solo ci cinémas yu Afrik. Festivals yi di jàppale wone réalisateurs, acteurs, techniciens ak producteurs, te di ubbi bérab bu rencontre ak public.
 
 ### Secteur culturel
 
