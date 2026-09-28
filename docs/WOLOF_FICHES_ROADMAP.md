@@ -388,3 +388,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour des zones humides, biodiversité, conservation, mémoire, patrimoine bâti et tourisme responsable.
 - Aucun nouveau slug ni suppression de fiche.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+## Mise à jour — vague 89
+
+- **Vague 89 : consolidation de 3 fiches de patrimoine et transmission culturelle** — Fodé Kaba Doumbouya, Yeela et patrimoine diola.
+- Renforcement du Wolof autour de l'histoire, de la transmission orale, des langues, rites, pratiques culturelles et mémoire de Casamance et du Sénégal oriental.
+- Aucun nouveau slug ni suppression de fiche.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
