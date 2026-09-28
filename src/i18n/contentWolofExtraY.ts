@@ -89,22 +89,22 @@ Sanctuaire bi di nekk benn repère ci patrimoine religieux bu Senegaal ak ci dia
 
   'le-parc-national-du-delta-du-saloum': {
     titleWo: 'Parc nationalu Delta du Saloum',
-    excerptWo: 'Réserve naturelle bu mag ak mangroves, îles, bolongs ak biodiversité ci régionu Fatick.',
+    excerptWo: 'Réserve naturelle bu mag ak mangroves, îles, bolongs ak biodiversité ci diiwaanu Fatick.',
     contentWo: `### Jëmmal
 
-Parc nationalu Delta du Saloum nekk na ci côteu westu Senegaal, ci régionu Fatick. Mu feeñ ci paysagesu mangrove, îles, bolongs, vasières ak forêts.
+Parc nationalu Delta du Saloum nekk na ci wetu géeju Senegaal, ci diiwaanu Fatick. Mu feeñ ci paysagesu mangrove, îles, bolongs, vasières ak forêts.
 
 ### Géographie
 
-Parc bi nekk na diggante embouchureu fleuve Saloum ak Océan Atlantique. Étendue bi boole na ay milieu yu ndox ak yu suuf, te loolu di jàppale biodiversité bu riche.
+Parc bi nekk na diggante embouchureu Saloum ak Océan Atlantique. Étendue bi boole na ay milieu yu ndox ak yu suuf, te loolu di jàppale biodiversité bu riche.
 
 ### Biodiversité
 
-Delta bi di dalal ay xeetu picc, poissons, reptiles ak yeneen mbindeef. Mangroves yi di am solo ci aarug zones humides ak ci reproductionu ay espèces.
+Delta bi di dalal ay xeetu picc, jën, reptiles ak yeneen mbindeef. Mangroves yi am nañu solo ci aarug zones humides ak ci bérab yu espèces di génn ak di màgg.
 
 ### Nit ñi ak activités
 
-Territoire bi am na histoire ak traditions yu lëkkale ak pêche ak jëfandikoo ressourcesu ndox. Écotourisme mën na jàppale découverteu paysage bi ak valorisationu patrimoine bi.
+Territoire bi am na histoire ak traditions yu lëkkale ak pêche ak jëfandikoo ressourcesu ndox. Écotourisme mën na jàppale gis paysage bi ak valorisationu patrimoine bi, bu ñu ko defee ci respectu milieu bi ak communities yi.
 
 ### Aarug environnement
 
@@ -112,11 +112,11 @@ Conservationu delta bi aju na ci aarug mangroves, bolongs, îles ak habitats yi.
 
 ### Solo ci Senegaal
 
-Delta du Saloum di boole patrimoine naturel, biodiversité, culture ak économie locale. Mu nekk benn ci espaces naturels yu gën a am solo ci Senegaal.`,
+Delta du Saloum di boole patrimoine naturel, biodiversité, culture ak ekonom local. Mu bokk ci espaces naturels yu am solo ci Senegaal.`,
   },
 
   'le-tamarinier-arbre-d-ombrage-au-fruit-acidule-emblematique': {
-    titleWo: 'Tamarinier : garab gu di may ker ak meññum acidulé',
+    titleWo: 'Tamarinier — garab gu di may ker ak meññum acidulé',
     excerptWo: 'Garab bu am cër ak gousses yu ñuy jëfandikoo ci jus, lekk ak ay pratiquesu aada.',
     contentWo: `### Jëmmal
 
@@ -124,39 +124,39 @@ Tamarinier mooy garab bu ñu gis ci yeneen zones yu Senegaal. Mu di may ker bu a
 
 ### Meññum tamarin
 
-Pulpeu gousses yi mën nañu ko jëfandikoo ngir def jusu tamarin. Ñuy dëppale ko ak ndox ak suukar ngir am benn boisson bu neex te rafet ci jamono yu tàng.
+Pulpeu gousses yi mën nañu ko jëfandikoo ngir def jusu tamarin. Ñuy boole ko ak ndox ak suukar ngir am benn boisson bu neex ci jamono yu tàng.
 
 ### Lekk
 
-Tamarin mën na itam nekk condiment ci ay sauces ak yeneen préparationsu lekk. Goûtam acidulé di yokk xawma ci recettes yu wuute.
+Tamarin mën na itam nekk condiment ci sauces ak yeneen préparationsu lekk. Goûtam acidulé di yokk xawma ci recettes yu wuute.
 
 ### Xam-xam yu aada
 
-Tamarin bokk na ci ay pratiquesu lekk ak remèdes traditionnels. VJR 221 di wone itam ni ñu ko jëfandikoo ci ay boisson yu cosaan.
+Tamarin bokk na ci ay pratiquesu lekk ak yeneen usagesu aada. Jëfandikoo yi di wuute ci territoires ak njaboot, te war nañu leen jàng ci seen contexte.
 
 ### Solo
 
-Tamarinier di lëkkale nature, lekk ak patrimoineu gastronomie. Mu di itam benn garab bu am solo ci paysage ak ci dundug nit ñi.`,
+Tamarinier di lëkkale nature, lekk ak patrimoineu gastronomie. Mu di itam garab gu am solo ci paysage ak ci dundug nit ñi.`,
   },
 
   'le-calao-terrestre-geant-social-des-savanes-senegalaises': {
-    titleWo: 'Calao bu suuf : picc bu mag bu dëkk ci savanesu Senegaal',
-    excerptWo: 'Picc bu mag bu savane, di feeñ ci groupe ak di jëfandikoo suuf ngir lekk ak dund.',
+    titleWo: 'Calao bu suuf — picc bu mag bu dëkk ci savanesu Senegaal',
+    excerptWo: 'Picc bu mag bu savane, buy dox ci suuf ngir wut lekk ak di dëkk ci groupe.',
     contentWo: `### Jëmmal
 
-Calao bu suuf bokk na ci ay picc yu mag ci Afrique. Mu am plumage bu ñu mën a xam, ak gémmiñ bu feeñ, te mu gën a dëkk ci savanes yu ubbeeku.
+Calao bu suuf bokk na ci ay picc yu mag ci Afrique. Mu am plumage bu ñu mën a xam ak gémmiñ bu feeñ, te mu gën a dëkk ci savanes yu ubbeeku.
 
 ### Barab
 
-Ci Senegaal, picc bi mën nañu ko gis ci savanes ak zones yu am garab. Dëkkam di aju ci qualitéu habitat, ndox ak disponibilitéu lekk.
+Ci Senegaal, picc bi mën nañu ko gis ci savanes ak zones yu am ay garab. Dëkkam aju na ci xaalisu habitat, ndox ak disponibilitéu lekk.
 
-### Doxalin
+### Doxalin ak lekk
 
 Calao bu suuf di dox ci suuf ngir wut lekk. Mu mën a lekk insectes, petits animaux ak yeneen ressources yu am ci environnement bi.
 
 ### Vie ci groupe
 
-Picc yi mën nañu nekk ci groupe, te lëkkalekaay gi mën a jàppale aar, wut lekk ak xam barab bi.
+Picc yi mën nañu nekk ci groupe, te lëkkalekaay gi mën nañu jàppale aar, wut lekk ak xam barab bi. Doxalin gu mbooloo di wone itam ni espèces yi di adapte ci seen milieu.
 
 ### Aarug biodiversité
 
