@@ -282,3 +282,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucune donnée spéculative ajoutés.
 - Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
 - Aucun APK intermédiaire.
+
+
+## Mise à jour — vague 75
+
+- **Vague 75 : consolidation de 4 fiches cinéma et arts visuels existantes** — cinéma sénégalais, arts visuels, Biennale de Dakar et festivals de cinéma.
+- Réécriture Wolof pour renforcer la fluidité, le vocabulaire de création, production, exposition, transmission et mémoire audiovisuelle.
+- Aucun nouveau slug, aucun doublon et aucune donnée spéculative ajoutés.
+- Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
+- Aucun APK intermédiaire.
