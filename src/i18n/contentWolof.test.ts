@@ -890,6 +890,18 @@ describe('Wolof fiche translations', () => {
   });
 
 
+
+  it('covers the Wolof cinema consolidation wave 81', () => {
+    const slugs = ['mansour-sora-wade', 'joseph-gai-ramaka', 'dyana-gaye', 'moussa-toure'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof visual arts consolidation wave 77', () => {
     const slugs = ['papa-ibra-tall', 'moustapha-dime', 'mamadou-gomis-photographe', 'faty-sow-kane'];
     for (const slug of slugs) {
