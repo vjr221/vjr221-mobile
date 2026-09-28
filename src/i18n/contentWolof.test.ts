@@ -901,6 +901,18 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+
+  it('covers the Wolof documentary cinema consolidation wave 78', () => {
+    const slugs = ['ousmane-william-mbaye', 'safi-faye', 'alain-gomis', 'moussa-sene-absa'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(650);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
