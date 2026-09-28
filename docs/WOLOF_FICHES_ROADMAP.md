@@ -209,3 +209,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; le contenu français reste inchangé.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 67
+
+- **Vague 67 : consolidation de 3 fiches patrimoine culturel existantes** — Musée du CRDS de Saint-Louis, Musée régional de Thiès et Maison de la Culture Douta Seck.
+- Wolof approfondi autour de la mémoire, des collections, de la recherche, de l’ethnographie, de la création et de la transmission culturelle.
+- Aucun nouveau slug, aucun doublon et aucun fait biographique spéculatif ajouté ; contenu français inchangé.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale renforcée.
+- Aucun APK intermédiaire : validation CI d’abord.
