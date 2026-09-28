@@ -590,6 +590,22 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof terminology consolidation wave 56', () => {
+    const slugs = [
+      'parc-national-des-oiseaux-du-djoudj',
+      'reserve-de-fathala',
+      'mangroves-casamance-ecosystemes-villages-savoir-faire',
+      'le-royaume-du-jolof-formation-territoires-et-heritage-historique',
+      'reserve-speciale-faune-gueumbeul',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
