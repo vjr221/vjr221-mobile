@@ -897,6 +897,18 @@ describe('Wolof fiche translations', () => {
 
 
 
+
+  it('covers the Wolof Casamance heritage consolidation wave 88', () => {
+    const slugs = ['reserve-naturelle-communautaire-tocc-tocc', 'parc-national-basse-casamance-foret-biodiversite', 'ile-karabane-memoire-architecture-casamance'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof natural heritage consolidation wave 87', () => {
     const slugs = ['chutes-de-dindefelo', 'wanar-necropole-megalithique-patrimoine-mondial', 'la-reserve-naturelle-communautaire-de-palmarin'];
     for (const slug of slugs) {
