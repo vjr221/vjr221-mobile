@@ -2457,23 +2457,25 @@ Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
 Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
   },
   'adama-paris': {
-    titleWo: 'Adama Paris',
+    titleWo: 'Adama Paris — styliste ak entrepreneure bu Senegaal',
     excerptWo: 'Styliste ak entrepreneure bu Senegaal, fondatrice bu Dakar Fashion Week.',
     contentWo: `### Jëmmal
 
-Styliste ak entrepreneure bu Senegaal, fondatrice bu Dakar Fashion Week.
+Adama Paris mooy styliste ak entrepreneure bu Senegaal, te turam lëkkale na ak création ci mode ak organisationu Dakar Fashion Week.
 
-### Création
+### Mode ak entrepreneuriat
 
-Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+Liggéeyu styliste di boole création, identité ak savoir-faire. Wàllu entrepreneuriat di jàppale it yokkute projet yi ak feeñug mode bu Senegaal.
 
-### Culture ak territoire
+### Dakar Fashion Week
 
-Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+Dakar Fashion Week di nekk ci espaceu rencontre diggante créateurs, professionnels ak public. Ndaje bu mel ni bii di jàppale visibilitéu scène mode ak jokkoo ci secteur bi.
 
-### Transmission
+### Li war a fàttaliku
 
-Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+- Styliste bu Senegaal
+- Entrepreneuriat
+- Fondatrice bu Dakar Fashion Week`,
   },
   'lamine-diasse': {
     titleWo: 'Lamine Diassé',
@@ -2495,42 +2497,46 @@ Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
 Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
   },
   'oumou-sy': {
-    titleWo: 'Oumou Sy',
+    titleWo: 'Oumou Sy — styliste ak costumière bu Senegaal',
     excerptWo: 'Styliste ak costumière bu Senegaal, figure bu couture ak création artistique.',
     contentWo: `### Jëmmal
 
-Styliste ak costumière bu Senegaal, figure bu couture ak création artistique.
+Oumou Sy mooy styliste ak costumière bu Senegaal, te liggéeyam lëkkale couture, costume ak création artistique.
 
-### Création
+### Couture ak costume
 
-Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+Liggéeyu costumière di boole xalaat, matière ak savoir-faire ngir sos ay costumes yu jàppale scène ak expression artistique. Ci couture, création bi di jëfandikoo identité ak imagination.
 
-### Culture ak territoire
+### Création artistique
 
-Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+Oumou Sy bokk na ci scène bu création artistique bu Senegaal. Liggéeyu créateur yi di yokk feeñug savoir-faire ak diversitéu expression culturelle.
 
-### Transmission
+### Li war a fàttaliku
 
-Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+- Styliste ak costumière bu Senegaal
+- Couture ak création artistique
+- Costume ak savoir-faire`,
   },
   'nzinga-biegueng-mboup': {
-    titleWo: 'Nzinga Biegueng Mboup',
+    titleWo: 'Nzinga Biegueng Mboup — architecte bu Senegaal',
     excerptWo: 'Architecte bu Senegaal ak cofondatrice bu Worofila.',
     contentWo: `### Jëmmal
 
-Architecte bu Senegaal ak cofondatrice bu Worofila.
+Nzinga Biegueng Mboup mooy architecte bu Senegaal ak cofondatrice bu Worofila.
 
-### Création
+### Architecture ak territoire
 
-Liggeyu personnalité bi di bokk ci création bu Senegaal, ci mode, design, spectacle walla arts.
+Architecture di lëkkale espace, usage ak environnement. Ci wàllu création bu territoire, choixu matériaux ak xalaat ci bérab di am solo ci melokaan ak dundug dëkk.
 
-### Culture ak territoire
+### Worofila
 
-Création di lëkkale xalaat, savoir-faire ak identitéu culturel bu réew mi.
+Worofila di lëkkale liggéeyu architecture ak xalaat ci création bu territoire. Jëf yi di wone solo bu savoir-faire ak adaptationu projet yi ci contexte local.
 
-### Transmission
+### Li war a fàttaliku
 
-Liggeyu créateurs yi di dimbali ci yokk savoir-faire ak feeñal créativitéu Senegaal.`,
+- Architecte bu Senegaal
+- Cofondatrice bu Worofila
+- Architecture ak territoire`,
   },
   'ousmane-mbaye': {
     titleWo: 'Ousmane Mbaye',
