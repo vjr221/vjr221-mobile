@@ -246,3 +246,12 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug et aucune duplication ajoutés ; les faits déjà présents dans les fiches ont été conservés sans enrichissement spéculatif.
 - Test dédié ajouté avec validation des champs, de la structure Markdown et d’une longueur minimale.
 - Aucun APK intermédiaire.
+
+
+## Mise à jour — vague 71
+
+- **Vague 71 : consolidation de 4 fiches existantes** — Cathédrale de Saint-Louis, Grande Mosquée de Dakar, Mosquée Massalikul Jinaan et Calao à bec rouge.
+- Réécriture Wolof orientée patrimoine religieux, architecture, transmission et biodiversité, sans créer de nouveaux slugs.
+- Les informations déjà présentes ont été conservées ; aucune biographie ou donnée nouvelle non établie n’a été ajoutée.
+- Test dédié ajouté avec contrôle des champs, de la structure et de la longueur.
+- Aucun APK intermédiaire.
