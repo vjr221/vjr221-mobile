@@ -395,3 +395,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour de l'histoire, de la transmission orale, des langues, rites, pratiques culturelles et mémoire de Casamance et du Sénégal oriental.
 - Aucun nouveau slug ni suppression de fiche.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+## Mise à jour — vague 90
+
+- **Vague 90 : consolidation de 3 fiches patrimoine, nature et mémoire** — Île d’Egueye, Désert de Lompoul et Boubacar Joseph Ndiaye.
+- Renforcement du Wolof autour de la mangrove, de l’écotourisme, des paysages sahéliens, du patrimoine de Gorée et de la transmission de la mémoire.
+- Aucun nouveau slug ni suppression de fiche.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
