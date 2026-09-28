@@ -889,6 +889,18 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+
+  it('covers the Wolof visual arts consolidation wave 77', () => {
+    const slugs = ['papa-ibra-tall', 'moustapha-dime', 'mamadou-gomis-photographe', 'faty-sow-kane'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(650);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
