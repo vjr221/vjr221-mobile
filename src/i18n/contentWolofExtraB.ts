@@ -271,18 +271,72 @@ Transmission mooy jàngale xam-xam ci bérab bi, architecture ak pratiques yi ko
   },
   'mosquee-de-baghere-patrimoine-religieux-de-sedhiou': {
     titleWo: 'Mosquée bu Baghère',
-    excerptWo: 'Patrimoine religieux bu Sédhiou.',
-    contentWo: `### Jëmmal\n\nMosquée de Baghère : diine ak architecture ci Sédhiou.`,
+    excerptWo: 'Bérab bu patrimoine religieux bu Sédhiou, ak mémoire ak pratiques yu communauté.',
+    contentWo: `### Jëmmal
+
+Mosquée bu Baghère bokk na ci patrimoine religieux bu Sédhiou. Bérab bi mën nañu ko xool ci wàllu diine, architecture ak mémoire bu communauté.
+
+### Diine ak communauté
+
+Mosquée dafay nekk bérab bu njulli, ndaje ak jàngale. Pratiques yi ñuy def ci bérab bi mën nañu bokk ci dundug communauté ak ci patrimoine vivant.
+
+### Architecture ak mémoire
+
+Tabaxu mosquée bi mën na joxe xibaar ci savoir-faire ak melokaan bu bérab bi. Architecture ak environnement bi mën nañu jàppale ci xam mémoire bu Baghère.
+
+### Sédhiou ak patrimoine
+
+Sédhiou am na ay bérab yu patrimoine bu aju ci diine, aada ak histoire. Mosquée bu Baghère mën na bokk ci ensemble bu bérab yi ñuy aar ak xam.
+
+### Transmission
+
+Aar patrimoine mooy jàngale xam-xam ci architecture, pratiques ak mémoire. Waxtaan, njàng ak dundug communauté mën nañu tax patrimoine bi wéy ci ñi ñëw gannaaw.`,
   },
   'mosquee-de-karantaba-patrimoine-religieux-de-sedhiou': {
     titleWo: 'Mosquée bu Karantaba',
-    excerptWo: 'Patrimoine religieux bu Sédhiou.',
-    contentWo: `### Jëmmal\n\nMosquée de Karantaba : patrimoine religieux ci Sédhiou.`,
+    excerptWo: 'Bérab bu patrimoine religieux bu Sédhiou, te boole diine, mémoire ak architecture.',
+    contentWo: `### Jëmmal
+
+Mosquée bu Karantaba bokk na ci patrimoine religieux bu Sédhiou. Bérab bi mën nañu ko xool ci contexte bu diine ak ci mémoire bu dëkk bi.
+
+### Njulli ak dundug communauté
+
+Mosquée dafay jàppale ci njulli, ndaje ak jàngale. Loolu dafay tax bérab bu diine mën a nekk it bérab bu transmission ak lëkkaloo ci communauté.
+
+### Architecture
+
+Melokaan, tabax ak environnement bu mosquée bi mën nañu joxe xibaar ci patrimoine matériel. Xool yoonu tabax bi dafay yokk xam-xam ci savoir-faire bu bérab bi.
+
+### Mémoire bu Karantaba
+
+Patrimoine du rekk ay mbir yu ñu gis; dafay ëmb it mémoire ak xam-xam. Mosquée bi mën na bokk ci repères yi ñuy jëfandikoo ngir xam identité ak histoire bu bérab bi.
+
+### Transmission ak aar
+
+Xam-xam bu bérab bi mën na jaar ci waxtaan, njàng ak gis-gis. Aar mosquée bi dafay jàppale ci wéyal mémoire ak valeur yi ko àndal.`,
   },
   'chateau-de-sedhiou-memoire-architecturale-de-la-casamance': {
     titleWo: 'Château bu Sédhiou',
-    excerptWo: 'Mémoire architecturale bu Casamance.',
-    contentWo: `### Jëmmal\n\nChâteau de Sédhiou : architecture, taariix ak mémoire bu Casamance.`,
+    excerptWo: 'Bérab bu mémoire architecturale bu Sédhiou ak Casamance, te bokk ci patrimoine bu territoire.',
+    contentWo: `### Jëmmal
+
+Château bu Sédhiou bokk na ci mémoire architecturale bu territoire. Bérab bu ni mel mën nañu ko xool ngir xam yoonu tabax, histoire ak transformations yu bérab bi.
+
+### Architecture ak territoire
+
+Tabax bi dafay wone ay choix architecturaux ak savoir-faire yu aju ci contexte bu jamono bi. Environnement bu Sédhiou dafay yokk gis-gis ci patrimoine matériel bu bérab bi.
+
+### Mémoire
+
+Bérab bu patrimoine mën nañu denc ay traces yu histoire. Château bi mën na nekk benn ci repères yi ñuy jëfandikoo ngir xam mémoire bu Sédhiou ak yoonu territoire bi di soppi.
+
+### Casamance ak patrimoine
+
+Casamance am na patrimoine bu bari ci architecture, culture ak mémoire. Château bu Sédhiou mën na bokk ci ensemble bu bérab yi ñuy xool ngir xam ak aar histoire bu territoire.
+
+### Transmission ak conservation
+
+Jàngale ci architecture ak mémoire mën na tax ñi ñëw gannaaw xam valeur bu bérab bi. Conservation dafay jàppale ci denc traces, xam histoire ak wéyal patrimoine bu Sédhiou.`,
   },
   'falaise-de-toundeup-riya-site-geologique-de-yoff': {
     titleWo: 'Falaise bu Toundeup Riya',
@@ -296,8 +350,26 @@ Transmission mooy jàngale xam-xam ci bérab bi, architecture ak pratiques yi ko
   },
   'femme-kagnalene-thionk-tradition-rituelle-de-casamance': {
     titleWo: 'Femme Kagnalene Thionk',
-    excerptWo: 'Tradition rituelle bu Casamance.',
-    contentWo: `### Jëmmal\n\nKagnalene Thionk : rite, aada ak transmission ci Casamance.`,
+    excerptWo: 'Tradition rituelle bu Casamance, te di wone aada, pratiques ak transmission.',
+    contentWo: `### Jëmmal
+
+Kagnalene Thionk bokk na ci patrimoine culturel bu Casamance. Fiche bi dafay xool tradition rituelle bi ci yoonu aada, pratiques ak transmission, te du jox ay généralités ci nit ñi.
+
+### Aada ak pratique
+
+Rituels yi mën nañu bokk ci yoonu dund ak di séddale xam-xam ci communauté. Ñu koy xool ci contexte bu patrimoine, te ñu war a aar contexte ak sens bu pratique bi.
+
+### Transmission
+
+Xam-xam bu tradition mën na jaar ci waxtaan, jàngale ak gis-gis ci ay génération. Transmission du rekk jox xibaar; dafay boole mémoire, pratiques ak yoonu denc aada.
+
+### Casamance ak diversité
+
+Casamance am na diversité bu patrimoine culturel. Pratiques rituelles yu ni mel mën nañu jàppale ci xam yoonu dund, aada ak mémoire bu territoire, te ñu war a wax leen ak respect.
+
+### Aar patrimoine
+
+Aar patrimoine culturel mooy denc xam-xam, contexte ak sens bu pratique yi. Kagnalene Thionk mën na nekk benn ci bérab yi ñuy jàng, denc ak jox ci ñi ñëw gannaaw.`,
   },
   'goungoudongho-rite-traditionnel-de-circoncision': {
     titleWo: 'Goungoudongho',
