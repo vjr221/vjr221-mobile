@@ -96,24 +96,96 @@ Pratiques alimentaires ak sociales yi mën nañu denc ay habitudes ak mémoire. 
 Xam yoonu waajal ak séddale ataya mën na jaar ci gis-gis ak transmission ci génération yi. Denc pratique bi dafay boole documentation ak respect bu contexte bu social.`,
   },
   'lempire-du-djolof': {
-    titleWo: 'Empire bu Djolof',
-    excerptWo: 'Taariixu Djolof — njiit ak aada yu yàgg.',
-    contentWo: `### Jëmmal\n\nEmpire du Djolof mooy benn ci royaumes yu yàgg yu Senegaal. Taariix, njiit ak aada yu nord.`,
+    titleWo: 'Empire bu Jolof',
+    excerptWo: 'Taariixu Empire bu Jolof, ak njiit, territoire ak lëkkaloo ci histoire bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Empire bu Jolof bokk na ci ay systèmes politiques yu am solo ci taariixu Senegaal. Wax ci Jolof dafay jàppale ci xam yoonu njiit, territoire ak lëkkaloo yu amoon ci jamono yi weesu.
+
+### Njiit ak organisation
+
+Jolof amoon na ay yoon yu njiit ak ay formes yu ñuy tëral pouvoir. Ngir xam histoire bi, war nañu xool ci contexte bu jamono bi ak ci diggante bérab yi ak njiit yi.
+
+### Jolof ci taariixu Senegaal
+
+Histoire bu Jolof bokk na ci histoire bu territoire bi gën a yaatu. Xool lëkkaloo ak changements ci diggante royaumes mën na jàppale ci xam ni structures politiques dañuy soppi ci jamono.
+
+### Mémoire ak patrimoine
+
+Taariix du rekk ay événements yu weesu. Dafay denc ay xam-xam ci bérab, njiit ak yoonu dund. Jolof mën na nekk benn ci mbir yi ñuy jàng ngir xam mémoire historique bu Senegaal.
+
+### Transmission
+
+Jàngale ci Jolof war na boole sources, contexte ak xam-xam yu aju ci jamono bi. Documentation ak transmission bu baax mën na tax histoire bi wéy ci njàngum ñi ñëw gannaaw.`,
   },
   'le-royaume-du-cayor': {
     titleWo: 'Royaume bu Cayor',
-    excerptWo: 'Taariixu Cayor — Damel yi ak aada.',
-    contentWo: `### Jëmmal\n\nRoyaume du Cayor am na solo ci taariixu Senegaal. Damel yi, aada ak diggante ak yeneen royaumes.`,
+    excerptWo: 'Taariixu Cayor, ak Damel yi, njiit ak diggante bu royaume bi ak yeneen bérab.',
+    contentWo: `### Jëmmal
+
+Royaume bu Cayor bokk na ci taariixu royaumes yu Senegaal. Histoire bu Cayor lëkkale na ak njiit, territoire, Damel yi ak diggante bu royaume bi ak yeneen espaces politiques.
+
+### Damel ak njiit
+
+Damel mooy tur wi ñuy jëfandikoo ngir njiit bu Cayor. Xool rôle bu Damel yi dafay jàppale ci xam yoonu organisation ak pouvoir ci contexte bu jamono bi.
+
+### Cayor ak territoire
+
+Cayor amoon na ay diggante ak yeneen royaumes ak communautés. Taariix bu territoire bi dafay wone ni espace yi mën nañu lëkkaloo, soppi ak jëfandikoo ay yoon yu wuute ci jamono.
+
+### Mémoire historique
+
+Mémoire bu Cayor bokk na ci patrimoine historique bu Senegaal. Sources ak transmission ci njàng mën nañu jàppale ci xam ay mbir yu am solo ci histoire bu royaume bi.
+
+### Transmission ak patrimoine
+
+Jàngale ci Cayor mooy denc taariix bi ak contexte bi. Documentation, patrimoine local ak njàng mën nañu tax xam-xam ci royaume bi wéy ci ñi ñëw gannaaw.`,
   },
   'hymne-national-senegal-lion-rouge': {
-    titleWo: 'Hymne nasyonaal — Lion Rouge',
-    excerptWo: 'Hymne bu Senegaal — paroles ak taariix.',
-    contentWo: `### Jëmmal\n\nHymne national du Sénégal (« Le Lion rouge ») mooy simbule bu réew mi. Paroles, musik ak taariixu indipendance.`,
+    titleWo: 'Hymne nasyonaal bu Senegaal — Le Lion rouge',
+    excerptWo: 'Hymne nasyonaal bu Senegaal, simból bu réew mi te lëkkale ak histoire ak identité nationale.',
+    contentWo: `### Jëmmal
+
+Hymne nasyonaal bu Senegaal, “Le Lion rouge”, bokk na ci simból yi ñuy lëkkale ak réew mi. Hymne mën na nekk yoonu xam identité nationale ak mémoire bu réew mi.
+
+### Paroles ak musique
+
+Hymne bi boole na baat ak musique. Ci ay cérémonie ak waxtu yu réew mi di jëfandikoo ay simból, hymne bi mën na jàppale ci denc xam-xam ci histoire ak identité nationale.
+
+### Indépendance ak mémoire
+
+Hymne nasyonaal lëkkale na ak contexte bu Sénégal bu jamono bu indépendance ak gannaawam. Ngir xam rôle bu hymne bi, war nañu ko xool ci histoire bu simból yu réew mi.
+
+### Simból bu réew mi
+
+Hymne, drapeau ak yeneen simból yi mën nañu bokk ci patrimoine bu réew. Ñuy leen jëfandikoo ci ay cérémonie, te ñu mën a leen xool ci yoonu représentation bu nation.
+
+### Transmission
+
+Xam hymne bi ak contexte bi mën na jaar ci école, cérémonie, waxtaan ak njàng. Transmission dafay jàppale ci denc mémoire ak compréhension bu simból yu Senegaal.`,
   },
   'musee-mbiin-ndiogoye-joal': {
-    titleWo: 'Musée Mbiin Ndiogoye (Joal)',
-    excerptWo: 'Mémoire ak patrimoine ci Joal.',
-    contentWo: `### Jëmmal\n\nMusée Mbiin Ndiogoye de Joal dafay aar mémoire ak patrimoine bu Siin. Aada Sereer ak taariix local.`,
+    titleWo: 'Musée Mbiin Ndiogoye ci Joal',
+    excerptWo: 'Bérab bu mémoire ak patrimoine ci Joal, te lëkkale histoire locale ak aada.',
+    contentWo: `### Jëmmal
+
+Musée Mbiin Ndiogoye ci Joal bokk na ci bérab yi mën a jàppale ci denc mémoire ak patrimoine bu territoire. Musée mën na nekk yoon bu ñuy jàngal ci histoire locale ak xam-xam ci aada.
+
+### Joal ak patrimoine
+
+Joal bokk na ci espace bu patrimoine bu am ay formes yu wuute. Xool musée bi ci contexte bu dëkk bi dafay jàppale ci xam lëkkaloo bi am diggante bérab, nit ñi ak mémoire.
+
+### Mémoire ak objets
+
+Musée mën na denc ay objets, xibaar ak traces yu jàppale ci compréhension bu histoire. Jàng ci ay éléments yu ni mel dafay yokk xam-xam ci yoonu dund ak savoir-faire yu weesu.
+
+### Aada ak transmission
+
+Patrimoine culturel mën na jaar ci objects, waxtaan, pratiques ak njàng. Musée mën na jàppale ci transmission bu xam-xam bi, te tax ñi ñëw gannaaw mën a xam li patrimoine bi di tekki.
+
+### Aar patrimoine
+
+Aar musée ak patrimoine bi mooy denc mémoire ak documentation. Jàng, exposition ak transmission mën nañu jàppale ci wéyal xam-xam ci Joal ak ci patrimoine bu Senegaal.`,
   },
   'ecomusee-commerce-fluvial-podor': {
     titleWo: 'Écomusée bu Podor',
@@ -320,8 +392,26 @@ Denc patrimoine religieux mooy denc tabax, mémoire ak xam-xam. Documentation, n
   },
   'thiere-boulettes-couscous-mil-sauce-boulettes': {
     titleWo: 'Thiéré boulettes',
-    excerptWo: 'Couscous de mil ak sauce boulettes.',
-    contentWo: `### Jëmmal\n\nThiéré boulettes : mil, sauce, boulettes — patrimoine céréalier.`,
+    excerptWo: 'Thiéré buñu def ak mil ak boulettes, benn ci lekk yu bokk ci patrimoine culinaire bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Thiéré boulettes mooy benn lekk buñu def ak thiéré, te mil mooy benn ci ay céréales yu am solo ci cuisine bu Senegaal. Sauce ak boulettes yi di ànd ak ko dafay yokk goût ak texture bu lekk bi.
+
+### Mil ak thiéré
+
+Mil bokk na ci xam-xamu lekk bu réew mi. Jëfandikoo ko ci thiéré dafay wone ni céréales yi mën nañu nekk base bu ay recettes yu wuute. Thiéré boulettes dafay lëkkale yoonu defar mil ak ay ingrédients yu ñu boole ngir am benn lekk bu am solo.
+
+### Sauce ak boulettes
+
+Boulettes yi ak sauce bi di ànd ak thiéré. Yoonu waajal mën na wuute ci kër yi, waaye lëkkaloo bi mooy jëfandikoo ay produits yu mën a yokk goût ak nourrissage bu lekk bi.
+
+### Lekk ak aada
+
+Lekk yu mel ni thiéré boulettes mën nañu bokk ci repas ak ndaje. Xam-xamu waajal, yoonu séddale lekk ak xam-xam bu ingrédients yi mën nañu jaar ci kër ak ci waxtaan diggante mbokk yi.
+
+### Aar patrimoine culinaire
+
+Patrimoine culinaire duñu ko denc rekk ci turu recette. Dafay boole xam-xam, yoonu defar ak produits yi ñuy jëfandikoo. Thiéré boulettes mën na nekk benn ci recettes yi ñuy jàng, denc ak jox ci ñi ñëw gannaaw.`,
   },
   'mosquee-de-baghere-patrimoine-religieux-de-sedhiou': {
     titleWo: 'Mosquée bu Baghère',
