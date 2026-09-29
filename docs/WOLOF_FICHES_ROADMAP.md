@@ -436,3 +436,9 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Formulations descriptives et contextualisées, sans généralisation sur les communautés.
 - Aucun nouveau slug ni suppression.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+## Mise à jour — vague 96
+
+- **Vague 96 : consolidation de 3 fiches de patrimoine religieux et de pratique sociale** — Médina Baye, patrimoine religieux du Sénégal et cérémonie de l’Ataya.
+- Renforcement du Wolof autour de la mémoire, l’architecture, les pratiques sociales, la transmission et la conservation.
+- Aucun nouveau slug ni suppression.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
