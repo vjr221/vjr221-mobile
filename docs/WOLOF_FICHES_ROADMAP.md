@@ -462,3 +462,14 @@ Consolidation Wolof : contenus structurés, substantiels et vérifiés par test 
 - `tourisme-kaffrine-saloum-interieur`
 
 Consolidation Wolof : contenus structurés, substantiels et contrôlés par test.
+
+
+## Vague 99 — Tourisme régional
+- `tourisme-matam-vallee-fleuve`
+- `tourisme-tambacounda-senegal-oriental`
+- `tourisme-ziguinchor`
+- `tourisme-kolda`
+- `tourisme-sedhiou`
+- `tourisme-kedougou`
+
+Consolidation Wolof : contenus régionaux structurés, contextualisés et contrôlés par test.
