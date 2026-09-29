@@ -496,3 +496,10 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - **Vague 102 : 5 fiches architecture/patrimoine urbain consolidées** — architecture traditionnelle du Sine-Saloum, architecture traditionnelle de Casamance, Place Faidherbe, Quai Roume et maisons à étages de Saint-Louis.
 - Contenus Wolof structurés et enrichis sans création de nouveaux slugs.
 - Validation CI requise avant la prochaine vague.
+
+
+## Mise à jour — vague 103
+
+- **Vague 103 : 6 fiches nature, patrimoine et territoire consolidées** — Mosquée de Divinity, AMP Bamboung, Réserve du Ndiaël, Dexu Saalum, Mar Lodj et Eloubaline.
+- Contenus Wolof structurés et enrichis ; aucun nouveau slug créé.
+- Validation CI requise avant poursuite.
