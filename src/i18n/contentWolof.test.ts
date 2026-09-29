@@ -989,4 +989,22 @@ test('covers the Wolof cultural heritage consolidation wave 97', () => {
     expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
   }
 });
+
+
+test('covers the Wolof tourism and cultural venues consolidation wave 98', () => {
+  const slugs = [
+    'ecomusee-commerce-fluvial-podor',
+    'week-end-dakar-itineraire-culturel-patrimoine',
+    'centre-culturel-regional-blaise-senghor-de-dakar',
+    'tourisme-louga-terroirs-nord',
+    'tourisme-kaffrine-saloum-interieur',
+  ];
+  for (const slug of slugs) {
+    const fiche = getWolofContentBySlug(slug);
+    expect(fiche?.titleWo).toBeTruthy();
+    expect(fiche?.excerptWo).toBeTruthy();
+    expect(fiche?.contentWo).toContain('###');
+    expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+  }
+});
 });
