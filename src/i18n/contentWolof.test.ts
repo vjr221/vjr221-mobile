@@ -1007,4 +1007,23 @@ test('covers the Wolof tourism and cultural venues consolidation wave 98', () =>
     expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
   }
 });
+
+
+test('covers the Wolof regional tourism consolidation wave 99', () => {
+  const slugs = [
+    'tourisme-matam-vallee-fleuve',
+    'tourisme-tambacounda-senegal-oriental',
+    'tourisme-ziguinchor',
+    'tourisme-kolda',
+    'tourisme-sedhiou',
+    'tourisme-kedougou',
+  ];
+  for (const slug of slugs) {
+    const fiche = getWolofContentBySlug(slug);
+    expect(fiche?.titleWo).toBeTruthy();
+    expect(fiche?.excerptWo).toBeTruthy();
+    expect(fiche?.contentWo).toContain('###');
+    expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+  }
+});
 });
