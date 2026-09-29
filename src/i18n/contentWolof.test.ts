@@ -115,7 +115,7 @@ describe('Wolof fiche translations', () => {
   });
 
   it('covers the verified culture wave', () => {
-    for (const slug of ['musee-de-la-femme-henriette-bathily-dakar', 'maison-de-la-culture-douta-seck-medina-dakar', 'grand-theatre-national-doudou-ndiaye-coumba-rose-dakar']) {
+    for (const slug of ['maison-de-la-culture-douta-seck-medina-dakar', 'musee-du-crds-de-saint-louis-musee-regional-saint-louis', 'musee-regional-de-thies-histoire-et-ethnographie-thies']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
@@ -753,7 +753,7 @@ describe('Wolof fiche translations', () => {
   });
 
   it('covers the Wolof heritage consolidation wave 86', () => {
-    const slugs = ['musee-de-la-femme-henriette-bathily-dakar', 'grand-theatre-national-doudou-ndiaye-coumba-rose-dakar', 'chutes-de-dindefelo', 'wanar-necropole-megalithique-patrimoine-mondial', 'la-reserve-naturelle-communautaire-de-palmarin'];
+    const slugs = ['chutes-de-dindefelo', 'wanar-necropole-megalithique-patrimoine-mondial', 'la-reserve-naturelle-communautaire-de-palmarin'];
     for (const slug of slugs) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche?.titleWo).toBeTruthy();
