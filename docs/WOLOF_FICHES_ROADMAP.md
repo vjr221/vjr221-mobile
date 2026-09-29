@@ -481,3 +481,11 @@ Consolidation Wolof : contenus régionaux structurés, contextualisés et contr�
 - `cimetiere-de-bel-air-patrimoine-historique-de-dakar`
 
 Consolidation Wolof : contenus structurés, contextualisés et contrôlés par test.
+
+
+## Mise à jour — vague 101
+
+- **Vague 101 : 5 fiches UNESCO/patrimoine consolidées** — Île de Saint-Louis, patrimoine mondial du Sénégal, cercles mégalithiques de Sine Ngayène, Pays Bassari et Delta du Saloum.
+- Les cinq fiches ont été réécrites avec un contenu Wolof structuré, sans création de nouveaux slugs.
+- Le reliquat `carabane` présent dans ExtraB reste à traiter séparément : la fiche canonique plus riche existe déjà dans ExtraO, donc aucune nouvelle traduction ne sera créée sur cette clé.
+- Aucun APK requis : validation éditoriale par la CI avant poursuite.
