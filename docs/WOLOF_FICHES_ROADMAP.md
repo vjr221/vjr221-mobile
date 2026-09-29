@@ -473,3 +473,11 @@ Consolidation Wolof : contenus structurés, substantiels et contrôlés par test
 - `tourisme-kedougou`
 
 Consolidation Wolof : contenus régionaux structurés, contextualisés et contrôlés par test.
+
+
+## Vague 100 — Patrimoine géologique et mémoire de Dakar
+- `falaise-de-toundeup-riya-site-geologique-de-yoff`
+- `cap-manuel-site-prehistorique-et-geologique-de-dakar`
+- `cimetiere-de-bel-air-patrimoine-historique-de-dakar`
+
+Consolidation Wolof : contenus structurés, contextualisés et contrôlés par test.
