@@ -441,9 +441,27 @@ Chutes de Dindéfélo bokk nañu ci bérab yu ñuy seet ci Kédougou. Conservati
 Tourisme culturel mën na jàppale ci transmission bu xam-xam, su documentation ak respect bu patrimoine ak communautés nekk ci diggante bi.`,
   },
   'cimetiere-de-bel-air-patrimoine-historique-de-dakar': {
-    titleWo: 'Cimetière bu Bel-Air',
-    excerptWo: 'Patrimoine historique bu Dakar.',
-    contentWo: `### Jëmmal\n\nCimetière de Bel-Air : mémoire ak taariixu Dakar.`,
+    titleWo: 'Cimetière bu Bel-Air — patrimoine historique bu Dakar',
+    excerptWo: 'Cimetière bu Bel-Air bokk na ci patrimoine historique bu Dakar, ak ay traces yu lëkkale ak mémoire bu dëkk bi.',
+    contentWo: `### Jëmmal
+
+Cimetière bu Bel-Air bokk na ci bérab yu mémoire bu Dakar. Cimetière mën na denc ay traces ci histoire bu dëkk bi ak ay nit ñu bokk ci jamono yu weesu.
+
+### Mémoire ak histoire
+
+Bérab yu ni mel mën nañu jàppale ci xam histoire bu territoire. Tombes, inscriptions ak architecture mën nañu nekk sources yu ñuy jàng ci mémoire.
+
+### Dakar ak patrimoine
+
+Cimetière bi bokk na ci paysage historique bu Dakar. Xool ko ci contexte bu dëkk bi mën na jàppale ci xam yoonu espace bi di soppi te denc ay traces.
+
+### Aar patrimoine
+
+Aar cimetière bi mooy aar mémoire ak patrimoine. Documentation ak respect bu bérab bi mën nañu jàppale ci conservation.
+
+### Transmission
+
+Jàngale ci patrimoine historique mën na boole visites, archives ak waxtaan. Transmission bu xam-xam bi mën na tax ñi ñëw gannaaw xam valeur bu bérab bi.`,
   },
   'mosquee-el-hadji-omar-patrimoine-religieux-du-senegal': {
     titleWo: 'Mosquée El Hadji Omar',
@@ -681,14 +699,50 @@ Casamance am na patrimoine bu bari ci architecture, culture ak mémoire. Châtea
 Jàngale ci architecture ak mémoire mën na tax ñi ñëw gannaaw xam valeur bu bérab bi. Conservation dafay jàppale ci denc traces, xam histoire ak wéyal patrimoine bu Sédhiou.`,
   },
   'falaise-de-toundeup-riya-site-geologique-de-yoff': {
-    titleWo: 'Falaise bu Toundeup Riya',
-    excerptWo: 'Site géologique ci Yoff.',
-    contentWo: `### Jëmmal\n\nFalaise de Toundeup Riya : site géologique ci Yoff, Dakar.`,
+    titleWo: 'Falaise bu Toundeup Riya ci Yoff',
+    excerptWo: 'Site géologique bu Yoff, te dafay wone ay traces ci formation bu suuf ak paysage bu Dakar.',
+    contentWo: `### Jëmmal
+
+Falaise bu Toundeup Riya bokk na ci patrimoine géologique bu Yoff. Bérab bi mën na jàppale ci xam ay formes ak traces yu aju ci histoire bu suuf.
+
+### Géologie ak paysage
+
+Falaise dafay wone melokaan bu suuf ak ay couches yu mën a jàppale ci compréhension bu territoire. Xool ko ci contexte bu Yoff dafay lëkkale géologie ak paysage.
+
+### Mémoire bu bérab
+
+Bérab yu géologiques mën nañu am solo ci mémoire bu territoire. Documentation ak transmission mën na tax ñu xam ni paysage bi soppi ci jamono.
+
+### Yoff ak environnement
+
+Falaise bi bokk na ci environnement bu Yoff. Aar bérab bi dafay boole respect bu paysage ak prévention bu dégradation.
+
+### Transmission
+
+Jàngale ci géologie mën na jaar ci école, visites ak documentation. Falaise bu Toundeup Riya mën na nekk yoon bu ñuy xam patrimoine naturel bu Dakar.`,
   },
   'cap-manuel-site-prehistorique-et-geologique-de-dakar': {
-    titleWo: 'Cap Manuel',
-    excerptWo: 'Site préhistorique ak géologique bu Dakar.',
-    contentWo: `### Jëmmal\n\nCap Manuel : préhistoire, géologie ak panorama ci Dakar.`,
+    titleWo: 'Cap Manuel — patrimoine préhistorique ak géologique',
+    excerptWo: 'Cap Manuel bokk na ci patrimoine bu Dakar, ak traces yu aju ci préhistoire, géologie ak paysage bu bérab bi.',
+    contentWo: `### Jëmmal
+
+Cap Manuel bokk na ci bérab yu patrimoine naturel ak historique bu Dakar. Site bi lëkkale na géologie, paysage ak traces yu aju ci préhistoire.
+
+### Préhistoire ak territoire
+
+Traces préhistoriques mën nañu jàppale ci xam yoonu nit ñi di dund ci jamono yu weesu. Xool ay traces yi ci contexte bu territoire mën na yokk compréhension bu histoire bu Dakar.
+
+### Géologie ak paysage
+
+Cap Manuel dafay boole bérab bu géologique ak panorama bu réew mi. Géologie dafay jàppale ci xam melokaan bu suuf ak yoonu paysage bi di nekk.
+
+### Patrimoine ak conservation
+
+Site bu ni mel war nañu ko aar ngir denc traces ak caractéristiques bu bérab bi. Documentation, signalisation ak sensibilisation mën nañu jàppale ci conservation.
+
+### Transmission
+
+Jàngale ci Cap Manuel mën na boole préhistoire, géologie ak histoire bu territoire. Yoonu transmission war nañu teg solo ci xam-xam ak respect bu site bi.`,
   },
   'femme-kagnalene-thionk-tradition-rituelle-de-casamance': {
     titleWo: 'Femme Kagnalene Thionk',
