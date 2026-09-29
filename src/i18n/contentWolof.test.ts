@@ -1091,6 +1091,17 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof Sedhiou heritage consolidation wave 94', () => {
+    const slugs = ['mosquee-de-baghere-patrimoine-religieux-de-sedhiou', 'mosquee-de-karantaba-patrimoine-religieux-de-sedhiou', 'chateau-de-sedhiou-memoire-architecturale-de-la-casamance', 'femme-kagnalene-thionk-tradition-rituelle-de-casamance'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
