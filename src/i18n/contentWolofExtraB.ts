@@ -373,22 +373,94 @@ Aar patrimoine culturel mooy denc xam-xam, contexte ak sens bu pratique yi. Kagn
   },
   'goungoudongho-rite-traditionnel-de-circoncision': {
     titleWo: 'Goungoudongho',
-    excerptWo: 'Rite traditionnel de circoncision.',
-    contentWo: `### Jëmmal\n\nGoungoudongho : rite, aada ak transmission yu yàgg.`,
+    excerptWo: 'Rite traditionnel de circoncision, ci contexte bu patrimoine culturel ak transmission.',
+    contentWo: `### Jëmmal
+
+Goungoudongho mooy benn rite traditionnel bu ñu mën a xool ci wàllu patrimoine culturel. Fiche bi dafay teg lëkkaloo ci aada, pratique ak transmission ci contexte bu bérab bi.
+
+### Rite ak contexte
+
+Rite yi am nañu ay sens yu aju ci histoire ak dundug communauté. Ngir xam Goungoudongho, war nañu ko xool ci contexte bu culturel bi, te bañ a généraliser ay pratique ci ñépp.
+
+### Transmission
+
+Xam-xam bu rite mën na jaar ci waxtaan, jàngale ak yoonu transmission ci génération yi. Mémoire bu pratique bi dafay bokk ci patrimoine vivant.
+
+### Respect ak compréhension
+
+Jàng ci rite culturel war na boole respect bu contexte ak nit ñi. Wax ci patrimoine mooy itam denc ay xam-xam ci yoonu déggal aada yu wuute.
+
+### Aar patrimoine
+
+Aar patrimoine culturel mooy denc mémoire, contexte ak xam-xam. Transmission bu baax mën na tax pratique bi am bérab ci xam-xam bu patrimoine bu Senegaal.`,
   },
   'caayde-patrimoine-culturel-peul-du-matam': {
     titleWo: 'Caaydé',
-    excerptWo: 'Patrimoine culturel peul bu Matam.',
-    contentWo: `### Jëmmal\n\nCaaydé : aada Peul, patrimoine culturel ci Matam.`,
+    excerptWo: 'Patrimoine culturel bu Matam, lëkkale ak aada, savoir-faire ak transmission ci contexte Peul.',
+    contentWo: `### Jëmmal
+
+Caaydé bokk na ci patrimoine culturel bu Matam. Fiche bi dafay xool pratique bi ci contexte bu territoire, aada ak transmission, te dafay séddale patrimoine ci ay yoonu dund.
+
+### Aada ak savoir-faire
+
+Pratique culturelle yi mën nañu denc xam-xam ci yoonu dund, baat, savoir-faire ak relations ci communauté. Caaydé mën nañu ko xam ci lëkkaloo bi mu am ak patrimoine bu Matam.
+
+### Transmission
+
+Xam-xam mën na jaar ci waxtaan, jàngale ak gis-gis. Ci génération yi, transmission dafay jàppale ci denc mémoire ak wéyal patrimoine culturel.
+
+### Matam ak diversité culturelle
+
+Matam bokk na ci espace bu patrimoine bu wuute. Pratiques yu aju ci territoire mën nañu wone diversité bu aada, te war nañu leen a wax ak respect ak contexte.
+
+### Aar patrimoine
+
+Aar Caaydé mooy jàppale ci denc xam-xam ak mémoire. Jàng, documentation ak transmission mën nañu tax patrimoine bi wéy ci jamono yi ñëw.`,
   },
   'diokaa-pratique-culturelle-traditionnelle-du-senegal-oriental': {
     titleWo: 'Diokaa',
-    excerptWo: 'Pratique culturelle bu penku.',
-    contentWo: `### Jëmmal\n\nDiokaa : aada yu penku Senegaal, transmission.`,
+    excerptWo: 'Pratique culturelle bu Senegaal oriental, te aju ci aada, mémoire ak transmission.',
+    contentWo: `### Jëmmal
+
+Diokaa bokk na ci pratiques culturelles yu Senegaal oriental. Fiche bi dafay xool yoonu pratique bi ci contexte bu patrimoine vivant, mémoire ak transmission.
+
+### Pratique ak territoire
+
+Pratiques culturelles yi mën nañu lëkkale nit ñi ak territoire. Diokaa mën nañu ko xool ci yoonu denc xam-xam, sens ak mémoire bu bérab bi.
+
+### Transmission
+
+Transmission mën na jaar ci waxtaan, jàngale ak gis-gis ci génération yi. Loolu dafay jàppale ci wéyal xam-xam ak compréhension bu patrimoine culturel.
+
+### Diversité bu Senegaal oriental
+
+Senegaal oriental am na diversité bu aada ak patrimoine. Pratiques yu wuute mën nañu wone ay yoonu dund ak mémoire yu aju ci territoire.
+
+### Aar ak respect
+
+Denc patrimoine mooy denc itam contexte bu pratique bi. Documentation, njàng ak waxtaan ak nit ñi ci bérab bi mën nañu jàppale ci transmission bu respectueuse.`,
   },
   'fifiree-ceremonie-traditionnelle-du-matam': {
     titleWo: 'Fifiree',
-    excerptWo: 'Cérémonie traditionnelle bu Matam.',
-    contentWo: `### Jëmmal\n\nFifiree : cérémonie, aada ak askanu Matam.`,
+    excerptWo: 'Cérémonie traditionnelle bu Matam, te lëkkale aada, mémoire ak transmission.',
+    contentWo: `### Jëmmal
+
+Fifiree mooy cérémonie traditionnelle bu Matam. Fiche bi dafay teg cérémonie bi ci wàllu patrimoine culturel, te dafay xool sens bu transmission ak mémoire.
+
+### Cérémonie ak aada
+
+Cérémonies traditionnelles yi mën nañu am solo ci dundug communauté. Sens ak yoonu pratique bi war nañu leen a xool ci contexte bu territoire ak histoire.
+
+### Transmission
+
+Fifiree mën nañu nekk yoonu transmission bu xam-xam ak mémoire. Waxtaan, jàngale ak gis-gis ci génération yi mën nañu jàppale ci denc aada.
+
+### Matam ak patrimoine
+
+Matam am na patrimoine culturel bu wuute. Cérémonie yi mën nañu bokk ci patrimoine vivant, te documentation bu baax mën na jàppale ci xam yoonu pratique yi.
+
+### Respect ak aar
+
+Jàng ci cérémonie war nañu boole respect bu contexte ak nit ñi. Aar patrimoine mooy denc sens, mémoire ak xam-xam, te jox ko ci ñi ñëw gannaaw.`,
   },
 };
