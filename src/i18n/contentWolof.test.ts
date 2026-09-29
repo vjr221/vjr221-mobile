@@ -865,6 +865,23 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof Saint-Louis and Casamance architecture consolidation wave 102', () => {
+    const slugs = [
+      'architecture-traditionnelle-sine-saloum',
+      'architecture-traditionnelle-casamance',
+      'place-faidherbe-coeur-historique-de-saint-louis',
+      'quai-roume-memoire-portuaire-et-urbaine-de-dakar',
+      'maison-a-etages-de-saint-louis-architecture-urbaine-historique',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof UNESCO heritage consolidation wave 101', () => {
     const slugs = [
       'ile-de-saint-louis-patrimoine-mondial-de-lunesco',
