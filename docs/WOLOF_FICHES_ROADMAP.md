@@ -422,3 +422,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour de la mémoire, l’architecture, la vie communautaire, la transmission et la conservation du patrimoine religieux.
 - Aucun nouveau slug ni suppression de fiche.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+## Mise à jour — vague 94
+
+- **Vague 94 : consolidation de 4 fiches de patrimoine de Sédhiou et Casamance** — Mosquée de Baghère, Mosquée de Karantaba, Château de Sédhiou et Femme Kagnalene Thionk.
+- Renforcement du Wolof autour de l’architecture, la mémoire territoriale, les pratiques rituelles, la transmission et la conservation du patrimoine.
+- Traitement descriptif et contextualisé de la tradition rituelle, sans généralisation sur les communautés.
+- Aucun nouveau slug ni suppression de fiche.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
