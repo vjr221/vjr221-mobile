@@ -74,8 +74,26 @@ Xam-xamu defar naan yi mën na jaar ci kër, ci waxtaan ak ci jàngale. Jus bu d
   },
   'les-salons-de-the-et-la-ceremonie-de-lataya-au-senegal': {
     titleWo: 'Ataya',
-    excerptWo: 'Ceremonie bu thé.',
-    contentWo: `### Jëmmal\n\nAtaya : ñetti gallé, waxtaan, teranga.`,
+    excerptWo: 'Ataya mooy cérémonie bu thé, waxtaan ak teranga ci dundug nit ñi ci Senegaal.',
+    contentWo: `### Jëmmal
+
+Ataya mooy cérémonie bu thé bu bokk ci ay pratiques sociales ci Senegaal. Ñu koy lëkkale ak waxtaan, ndaje ak teranga.
+
+### Yoonu cérémonie
+
+Cérémonie bi mën na jaar ci ay waxtu yu ñuy waajal ak séddale thé. Ay étapes yi mën nañu boole waxtaan, xaar ak partage ci diggante nit ñi.
+
+### Waxtaan ak teranga
+
+Ataya du rekk boissons; mën na nekk yoonu ndaje ak waxtaan. Teranga ak lëkkaloo ci diggante nit ñi mën nañu bokk ci sens bu pratique bi.
+
+### Mémoire culturelle
+
+Pratiques alimentaires ak sociales yi mën nañu denc ay habitudes ak mémoire. Ataya mën na nekk benn ci pratiques yi ñuy jàng ci wàllu patrimoine culturel immatériel.
+
+### Transmission
+
+Xam yoonu waajal ak séddale ataya mën na jaar ci gis-gis ak transmission ci génération yi. Denc pratique bi dafay boole documentation ak respect bu contexte bu social.`,
   },
   'lempire-du-djolof': {
     titleWo: 'Empire bu Djolof',
@@ -251,13 +269,49 @@ Transmission mooy jàngale xam-xam ci bérab bi, architecture ak pratiques yi ko
   },
   'medina-baye': {
     titleWo: 'Médina Baye',
-    excerptWo: 'Centre spirituel bu Kaolack.',
-    contentWo: `### Jëmmal\n\nMédina Baye : centre spirituel, aada Tidjane ci Kaolack.`,
+    excerptWo: 'Bérab bu am solo ci Kaolack, ci wàllu diine, njulli, jàngale ak patrimoine bu dund.',
+    contentWo: `### Jëmmal
+
+Médina Baye bokk na ci bérab yu am solo ci patrimoine religieux bu Kaolack. Bérab bi lëkkale na diine, njulli, jàngale ak dundug communauté.
+
+### Diine ak jàngale
+
+Bérab yu diine yi mën nañu nekk yoonu njulli, jàngale ak transmission. Médina Baye mën nañu ko xool ci contexte bu patrimoine religieux ak ci rôle bu jàngale ak ndaje.
+
+### Mémoire ak communauté
+
+Patrimoine du rekk tabax la; dafay boole mémoire, pratiques ak nit ñi. Ndaje yi, waxtaan ak xam-xam yi ñuy jox ci génération yi mën nañu jàppale ci denc mémoire.
+
+### Kaolack ak patrimoine
+
+Kaolack am na patrimoine bu aju ci diine, aada ak histoire. Médina Baye mën na bokk ci ensemble bu bérab yi di wone richesse bu patrimoine bu réew mi.
+
+### Transmission ak aar
+
+Aar patrimoine religieux mooy denc bérab, mémoire ak xam-xam. Jàngale ci histoire ak pratiques yi mën na tax patrimoine bi wéy ci jamono yi ñëw.`,
   },
   'patrimoine-religieux-du-senegal': {
     titleWo: 'Patrimoine religieux bu Senegaal',
-    excerptWo: 'Mosquées, églises ak bérab yu diine.',
-    contentWo: `### Jëmmal\n\nPatrimoine religieux : mosquées, églises, mausolées ak aada yu réew mi.`,
+    excerptWo: 'Mosquées, églises, mausolées ak yeneen bérab yu diine yi bokk ci patrimoine bu réew mi.',
+    contentWo: `### Jëmmal
+
+Patrimoine religieux bu Senegaal ëmb na ay mosquée, église, mausolée ak yeneen bérab yu lëkkale ak diine ak histoire. Bérab yi am nañu ay formes ak histoires yu wuute.
+
+### Architecture ak histoire
+
+Tabaxu bérab yu diine yi mën na wone savoir-faire, matériaux ak choix architecturaux yu jamono yi. Xool architecture bi dafay jàppale ci xam yoonu patrimoine bi di dund ci territoire.
+
+### Pratiques ak mémoire
+
+Patrimoine religieux boole na itam pratiques, njulli, ndaje ak mémoire. Xam-xam bi mën na jaar ci waxtaan, jàngale ak dundug communauté.
+
+### Diversité bu réew mi
+
+Senegaal am na ay traditions religieuses yu wuute ak ay bérab yu aju ci contexte bu dëkk yi. Wax ci patrimoine bi war nañu boole respect bu histories ak pratiques yu wuute.
+
+### Transmission ak conservation
+
+Denc patrimoine religieux mooy denc tabax, mémoire ak xam-xam. Documentation, njàng ak conservation mën nañu jàppale ci jox valeur bu bérab yi ci ñi ñëw gannaaw.`,
   },
   'carabane': {
     titleWo: 'Carabane',
