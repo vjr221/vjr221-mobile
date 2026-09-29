@@ -429,3 +429,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Traitement descriptif et contextualisé de la tradition rituelle, sans généralisation sur les communautés.
 - Aucun nouveau slug ni suppression de fiche.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+## Mise à jour — vague 95
+
+- **Vague 95 : consolidation de 4 pratiques culturelles traditionnelles** — Goungoudongho, Caaydé, Diokaa et Fifiree.
+- Renforcement du Wolof autour du contexte culturel, de la transmission, de la mémoire et de la conservation.
+- Formulations descriptives et contextualisées, sans généralisation sur les communautés.
+- Aucun nouveau slug ni suppression.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
