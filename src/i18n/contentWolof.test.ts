@@ -865,6 +865,24 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof Bamboung Ndiael and Saloum consolidation wave 103', () => {
+    const slugs = [
+      'mosquee-de-divinity-patrimoine-religieux-de-dakar',
+      'aire-marine-protegee-bamboung',
+      'reserve-speciale-faune-ndiael',
+      'saloum-fleuve-mangroves-iles-patrimoine-vivant',
+      'ile-de-mar-lodj',
+      'ile-deloubaline-village-insulaire-patrimoine-diola-casamance',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof Saint-Louis and Casamance architecture consolidation wave 102', () => {
     const slugs = [
       'architecture-traditionnelle-sine-saloum',
