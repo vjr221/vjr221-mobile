@@ -489,3 +489,10 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Les cinq fiches ont été réécrites avec un contenu Wolof structuré, sans création de nouveaux slugs.
 - Le reliquat `carabane` présent dans ExtraB reste à traiter séparément : la fiche canonique plus riche existe déjà dans ExtraO, donc aucune nouvelle traduction ne sera créée sur cette clé.
 - Aucun APK requis : validation éditoriale par la CI avant poursuite.
+
+
+## Mise à jour — vague 102
+
+- **Vague 102 : 5 fiches architecture/patrimoine urbain consolidées** — architecture traditionnelle du Sine-Saloum, architecture traditionnelle de Casamance, Place Faidherbe, Quai Roume et maisons à étages de Saint-Louis.
+- Contenus Wolof structurés et enrichis sans création de nouveaux slugs.
+- Validation CI requise avant la prochaine vague.
