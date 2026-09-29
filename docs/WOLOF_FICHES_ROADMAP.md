@@ -452,3 +452,13 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - `musee-mbiin-ndiogoye-joal`
 
 Consolidation Wolof : contenus structurés, substantiels et vérifiés par test de longueur/sections.
+
+
+## Vague 98 — Tourisme, culture et patrimoine fluvial
+- `ecomusee-commerce-fluvial-podor`
+- `week-end-dakar-itineraire-culturel-patrimoine`
+- `centre-culturel-regional-blaise-senghor-de-dakar`
+- `tourisme-louga-terroirs-nord`
+- `tourisme-kaffrine-saloum-interieur`
+
+Consolidation Wolof : contenus structurés, substantiels et contrôlés par test.
