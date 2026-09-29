@@ -409,3 +409,10 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour de la conservation, biodiversité, recherche, mémoire, culture et transmission.
 - Aucun nouveau slug ni suppression de fiche.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+## Mise à jour — vague 92
+
+- **Vague 92 : consolidation de 3 fiches de patrimoine culinaire** — Thiéré mboum, jus de tamarin et jus de ditakh.
+- Renforcement du Wolof autour des céréales, fruits locaux, préparation des boissons, savoir-faire culinaires, transmission et diversité de la table sénégalaise.
+- Aucun nouveau slug ni suppression de fiche.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
+- Aucun APK intermédiaire : validation CI d’abord.
