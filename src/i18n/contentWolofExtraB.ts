@@ -188,29 +188,119 @@ Patrimoine culturel mën na jaar ci objects, waxtaan, pratiques ak njàng. Musé
 Aar musée ak patrimoine bi mooy denc mémoire ak documentation. Jàng, exposition ak transmission mën nañu jàppale ci wéyal xam-xam ci Joal ak ci patrimoine bu Senegaal.`,
   },
   'ecomusee-commerce-fluvial-podor': {
-    titleWo: 'Écomusée bu Podor',
-    excerptWo: 'Commerce fluvial ak taariixu norte.',
-    contentWo: `### Jëmmal\n\nÉcomusée du commerce fluvial de Podor : dexu Senegaal, commerce ak taariixu norte.`,
+    titleWo: 'Écomusée bu commerce fluvial ci Podor',
+    excerptWo: 'Bérab bu mémoire ak patrimoine ci commerce fluvial, dexu Senegaal ak histoire bu Podor.',
+    contentWo: `### Jëmmal
+
+Écomusée bu commerce fluvial ci Podor bokk na ci bérab yi mën a jàppale ci denc mémoire ak patrimoine bu dexu Senegaal. Musée bi mën na tax ñu xam yoonu commerce ak dund yu lëkkale ak fleuve.
+
+### Dexu Senegaal ak commerce
+
+Dexu Senegaal am na solo ci histoire bu territoire yi mu jaar. Commerce fluvial mën nañu ko xool ci yoonu lëkkaloo diggante dëkk yi, nit ñi ak produits yi ci jamono yi weesu.
+
+### Podor ak mémoire
+
+Podor bokk na ci espace bu patrimoine bu am histoire bu yàgg. Écomusée mën na jàppale ci xam mémoire bu commerce, voyage ak yoonu dund ci wàllu fleuve.
+
+### Patrimoine ak transmission
+
+Patrimoine fluvial duñu ko denc rekk ci objets. Dafay boole xam-xam ci yoonu jëfandikoo fleuve, commerce ak relations ci territoire. Exposition ak njàng mën nañu jàppale ci transmission.
+
+### Aar patrimoine
+
+Aar écomusée ak documentation bi mooy jàppale ci denc mémoire. Jàng, exposition ak waxtaan mën na tax xam-xam ci commerce fluvial wéy ci ñi ñëw gannaaw.`,
   },
   'week-end-dakar-itineraire-culturel-patrimoine': {
-    titleWo: 'Week-end ci Dakar — itinéraire culturel',
-    excerptWo: 'Patrimoine, aada ak bérab yu Dakar.',
-    contentWo: `### Jëmmal\n\nItinéraire culturel ci Dakar : Gorée, Corniche, musées, marchés ak bérab yu aada.`,
+    titleWo: 'Week-end ci Dakar — yoonu patrimoine ak aada',
+    excerptWo: 'Yoonu découverte bu Dakar boole patrimoine, musées, bérab yu am solo ak mémoire bu dëkk bi.',
+    contentWo: `### Jëmmal
+
+Week-end ci Dakar mën na nekk yoon wu ñuy jàng ci patrimoine ak aada bu dëkk bi. Itinéraire bu mel ni bii mën na boole musées, bérab yu am solo, architecture ak espace yu mémoire.
+
+### Bérab ak patrimoine
+
+Dakar am na bérab yu wuute ci patrimoine matériel ak culturel. Yoonu découverte mën na boole bérab yu am histoire, marchés, musées ak yeneen espace yu jàppale ci xam dëkk bi.
+
+### Mémoire ak architecture
+
+Architecture bu Dakar dafay wone ay traces yu jamono yu wuute. Xool tabax, rues ak bérab yi mën na jàppale ci xam yoonu dëkk bi di soppi te denc ay traces yu weesu.
+
+### Musées ak culture
+
+Musées ak centres culturels mën nañu jox xibaar ci histoire, art ak société. Ci itinéraire, waxtu bu ñu jël ci bérab yi mën na tax njàng mi gën a am solo.
+
+### Yoonu jàng
+
+Itinéraire culturel du rekk yoon wu ñuy seet bérab yi la; mën na nekk it yoon wu ñuy déggal mémoire ak xam-xam. Waxtaan, documentation ak respect bu bérab yi mën nañu jàppale ci tourisme bu am xam-xam.`,
   },
   'centre-culturel-regional-blaise-senghor-de-dakar': {
-    titleWo: 'Centre culturel Blaise Senghor',
-    excerptWo: 'Centre culturel régional ci Dakar.',
-    contentWo: `### Jëmmal\n\nCentre Culturel Régional Blaise Senghor ci Dakar : art, spectacles ak aada.`,
+    titleWo: 'Centre culturel régional Blaise Senghor ci Dakar',
+    excerptWo: 'Bérab bu art, spectacle ak transmission culturelle ci Dakar.',
+    contentWo: `### Jëmmal
+
+Centre culturel régional Blaise Senghor ci Dakar bokk na ci bérab yi mën a jàppale ci art ak transmission culturelle. Centre culturel mën na nekk espace bu ñuy dajale artistes, public ak yeneen acteurs culturels.
+
+### Art ak spectacle
+
+Spectacles, création ak activités culturelles mën nañu am bérab ci centre culturel. Loolu dafay jàppale ci wone ay formes yu wuute yu art ak création.
+
+### Jàngale ak transmission
+
+Centre culturel mën na bokk ci yoonu transmission ci ateliers, rencontres ak activités. Transmission culturelle dafay boole pratique ak gis-gis, te mën na jàppale ci yégle xam-xam ci ñi ñëw gannaaw.
+
+### Dakar ak culture
+
+Dakar mooy espace bu activité culturelle bu bari. Centre yi ñuy dajale public ak artistes mën nañu jàppale ci yokk lëkkaloo ci diggante création ak nit ñi.
+
+### Aar patrimoine culturel
+
+Activités culturelles mën nañu jàppale ci denc mémoire ak yoonu création. Documentation, programmation ak transmission mën nañu tax patrimoine culturel bi wéy di dund ci jamono yi.`,
   },
   'tourisme-louga-terroirs-nord': {
-    titleWo: 'Tourisme ci Louga',
-    excerptWo: 'Terroirs ak patrimoine bu norte.',
-    contentWo: `### Jëmmal\n\nLouga : terroirs, Ndiambour, sàmm ak aada yu norte.`,
+    titleWo: 'Tourisme ci Louga ak terroirs yu norte',
+    excerptWo: 'Louga ak terroir yi mu bokk mën nañu jox yoonu découverte bu patrimoine, paysage ak aada.',
+    contentWo: `### Jëmmal
+
+Tourisme ci Louga mën na boole découverte bu terroir, patrimoine ak paysages yu norte. Réew mi am na ay bérab yu wuute, te yoonu tourisme war nañu teg solo ci contexte bu bérab bi.
+
+### Terroir ak patrimoine
+
+Louga bokk na ci espace bu patrimoine culturel ak historique. Terroir yi mën nañu wone yoonu dund, activité ak savoir-faire yu aju ci territoire.
+
+### Paysage ak découverte
+
+Paysage bu norte am na ay melokaan yu wuute. Seet bérab yi ak xam environnement bi mën na nekk benn ci yoonu tourisme bu respectueux.
+
+### Aada ak savoir-faire
+
+Patrimoine culturel mën na boole pratiques, artisanat, gastronomie ak waxtaan. Jàng ci savoir-faire yi mën na jàppale ci xam richesse bu terroir.
+
+### Tourisme ak aar
+
+Tourisme bu baax war na boole découverte ak aar bérab yi. Respect bu environnement, patrimoine ak nit ñi mën na jàppale ci wéyal valeur bu terroir yi.`,
   },
   'tourisme-kaffrine-saloum-interieur': {
-    titleWo: 'Tourisme ci Kaffrine',
-    excerptWo: 'Saloum intérieur ak agro-pastoral.',
-    contentWo: `### Jëmmal\n\nKaffrine : découverte du Saloum intérieur, agriculture ak sàmm.`,
+    titleWo: 'Tourisme ci Kaffrine ak Saloum intérieur',
+    excerptWo: 'Kaffrine mën na jox yoonu découverte bu terroir, paysage ak patrimoine bu Saloum intérieur.',
+    contentWo: `### Jëmmal
+
+Tourisme ci Kaffrine mën na teg solo ci découverte bu terroirs, paysages ak patrimoine bu Saloum intérieur. Yoonu découverte war nañu ko xool ci contexte bu territoire ak environnement.
+
+### Terroir ak dund
+
+Terroir yi mën nañu wone activité yu aju ci agriculture ak dundug askan. Xam yoonu dund ci bérab bi mën na jàppale ci compréhension bu patrimoine local.
+
+### Paysage
+
+Saloum intérieur am na paysages yu wuute. Seet bérab yi ak xool environnement bi mën na nekk yoonu découverte bu lëkkale tourisme ak xam-xam.
+
+### Culture ak savoir-faire
+
+Patrimoine culturel mën na boole gastronomie, artisanat, waxtaan ak pratiques yu aju ci territoire. Transmission bu xam-xam yi mën nañu jàppale ci wéyal mémoire bu terroir.
+
+### Aar ak tourisme
+
+Tourisme war nañu boole plaisir bu découverte ak respect bu bérab yi. Aar environnement, patrimoine ak ressources locales mën na jàppale ci tourisme bu am yàgg.`,
   },
   'tourisme-matam-vallee-fleuve': {
     titleWo: 'Tourisme ci Matam',
