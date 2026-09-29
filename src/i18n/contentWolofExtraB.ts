@@ -159,23 +159,95 @@ Xam-xamu defar naan yi mën na jaar ci kër, ci waxtaan ak ci jàngale. Jus bu d
   },
   'mosquee-el-hadji-omar-patrimoine-religieux-du-senegal': {
     titleWo: 'Mosquée El Hadji Omar',
-    excerptWo: 'Patrimoine religieux.',
-    contentWo: `### Jëmmal\n\nMosquée El Hadji Omar : patrimoine religieux bu Senegaal.`,
+    excerptWo: 'Benn bérab bu patrimoine religieux, te bokk ci xam-xamu diine ak aada ci Senegaal.',
+    contentWo: `### Jëmmal
+
+Mosquée El Hadji Omar bokk na ci patrimoine religieux bu Senegaal. Bérab yu ni mel mën nañu jàppale ci xam-xam bu ñu am ci diine, aada ak dundug nit ñi.
+
+### Diine ak aada
+
+Mosquée du rekk bérab bu ñuy defar njulli. Mën na it nekk bérab bu ñuy dajale, jàngale ak séddale xam-xam. Loolu dafay tax patrimoine religieux bi bokk ci dundug communauté.
+
+### Architecture ak mémoire
+
+Tabaxu mosquée bi, ak bérab bi mu nekk, mën nañu joxe xibaar ci yoonu tabax ak mémoire bu communauté. Xool architecture bi ak environnement bi dafay jàppale ci xam bérab bi.
+
+### Transmission
+
+Xam-xam ak mémoire yu aju ci bérab yu ni mel mën nañu jaar ci waxtaan, jàngale ak njàng mi. Transmission bi dafay aar patrimoine bi te tax ñi ñëw gannaaw xam li mu di tekki.
+
+### Patrimoine vivant
+
+Patrimoine religieux duñu ko gis rekk ci tabax. Dafay dund ci pratiques, ndaje, mémoire ak xam-xam. Mosquée El Hadji Omar mën na bokk ci patrimoine buñu wara aar ak jox ci générations yu ñëw.`,
   },
   'mosquee-de-camberene-patrimoine-religieux-de-dakar': {
     titleWo: 'Mosquée bu Cambérène',
-    excerptWo: 'Patrimoine religieux bu Dakar.',
-    contentWo: `### Jëmmal\n\nMosquée de Cambérène : aada ak diine ci Dakar.`,
+    excerptWo: 'Bérab bu patrimoine religieux bu Dakar, boole diine, aada, mémoire ak dundug communauté.',
+    contentWo: `### Jëmmal
+
+Mosquée bu Cambérène bokk na ci patrimoine religieux bu Dakar. Bérab bi mën nañu ko xool ci seen contexte bu diine ak ci mémoire bu communauté bi mu bokk.
+
+### Diine ak communauté
+
+Mosquée dafay am solo ci dundug nit ñi, ndaxte dafay jàppale ci njulli, ndaje ak jàngale. Ci Cambérène, patrimoine religieux mën na nekk benn ci yoon yi ñuy tëral mémoire ak identité bu bérab bi.
+
+### Mémoire ak patrimoine
+
+Bérab bu patrimoine mën na ëmb ay xam-xam yu aju ci aada, pratiques ak histoire. Xool mosquée ak environnement bi dafay jàppale ci xam ni bérab bi bokk ci ndawtal ak mémoire bu Dakar.
+
+### Architecture
+
+Tabax bi mën nañu ko xool ci melokaan, matériaux ak yoon wi ñu ko tabax. Loolu du rekk mbirum esthétique; dafay joxe it xibaar ci savoir-faire ak patrimoine bu bérab bi.
+
+### Transmission ak aar
+
+Aar patrimoine religieux mooy aar tabax, mémoire ak xam-xam yi ko àndal. Transmission bi ci njàng, waxtaan ak gis-gis mën na tax bérab bi nekk patrimoine bu dund.`,
   },
   'eglise-saint-louis-patrimoine-religieux-de-saint-louis': {
     titleWo: 'Église Saint-Louis',
-    excerptWo: 'Patrimoine religieux bu Ndar.',
-    contentWo: `### Jëmmal\n\nÉglise Saint-Louis : patrimoine religieux ak architecture ci Ndar.`,
+    excerptWo: 'Patrimoine religieux bu Ndar, ak architecture ak mémoire ci dëkk bi.',
+    contentWo: `### Jëmmal
+
+Église Saint-Louis bokk na ci patrimoine religieux bu Ndar. Ci contexte bu Saint-Louis, bérab yu ni mel mën nañu jàppale ci xam mémoire, architecture ak diversité bu patrimoine bi.
+
+### Architecture ak histoire
+
+Architecture bu église bi dafay bokk ci gis-gis bu bérab bi. Melokaan, tabax ak environnement mën nañu joxe xibaar ci yoonu tabax ak ci histoire bu patrimoine.
+
+### Diine ak dundug dëkk
+
+Bérab bu diine mën na am solo ci dundug communauté. Église mën na nekk bérab bu njulli, ndaje ak transmission, te loolu dafay boole pratiques ak patrimoine matériel.
+
+### Saint-Louis ak patrimoine
+
+Saint-Louis am na patrimoine bu bari ci architecture, mémoire ak culture. Église bi mën na bokk ci ensemble bu bérab yi ñuy xool ngir xam ak aar patrimoine bu dëkk bi.
+
+### Transmission
+
+Aar patrimoine mooy it jàngale ñi ñëw gannaaw ci valeur bu bérab bi. Mémoire bu église bi, architecture ak pratiques yi ko àndal mën nañu nekk yoon bu transmission culturelle.`,
   },
   'mosquee-de-la-pointe-patrimoine-religieux-de-dakar': {
     titleWo: 'Mosquée de la Pointe',
-    excerptWo: 'Patrimoine religieux bu Dakar.',
-    contentWo: `### Jëmmal\n\nMosquée de la Pointe : diine ak architecture ci Dakar.`,
+    excerptWo: 'Bérab bu patrimoine religieux bu Dakar, boole architecture, diine ak mémoire.',
+    contentWo: `### Jëmmal
+
+Mosquée de la Pointe bokk na ci patrimoine religieux bu Dakar. Bérab bi mën nañu ko xool ci wàllu architecture, diine ak mémoire bu dëkk bi.
+
+### Architecture
+
+Melokaan ak tabaxu mosquée bi mën nañu joxe xibaar ci savoir-faire ak contexte bu bérab bi. Architecture dafay yokk xam-xam ci patrimoine matériel bu Dakar.
+
+### Diine ak communauté
+
+Mosquée dafay nekk bérab bu njulli ak ndaje. Pratiques yi ñuy def ci bérab bi mën nañu bokk ci patrimoine vivant, ndaxte ñu ngi leen di dundal ci jamono ju nekk.
+
+### Mémoire bu Dakar
+
+Bérab yu patrimoine religieux mën nañu jàppale ci xam mémoire bu dëkk bi. Mosquée de la Pointe mën na nekk benn ci repères yi ñuy jëfandikoo ngir xam patrimoine bu Dakar.
+
+### Transmission ak aar
+
+Transmission mooy jàngale xam-xam ci bérab bi, architecture ak pratiques yi ko àndal. Aar patrimoine bi dafay tax mémoire ak valeur yi ci bérab bi mën a wéy ci ñi ñëw gannaaw.`,
   },
   'medina-baye': {
     titleWo: 'Médina Baye',
