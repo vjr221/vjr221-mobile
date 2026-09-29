@@ -416,3 +416,9 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Aucun nouveau slug ni suppression de fiche.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
 - Aucun APK intermédiaire : validation CI d’abord.
+## Mise à jour — vague 93
+
+- **Vague 93 : consolidation de 4 fiches de patrimoine religieux** — Mosquée El Hadji Omar, Mosquée de Cambérène, Église Saint-Louis et Mosquée de la Pointe.
+- Renforcement du Wolof autour de la mémoire, l’architecture, la vie communautaire, la transmission et la conservation du patrimoine religieux.
+- Aucun nouveau slug ni suppression de fiche.
+- Test dédié ajouté avec contrôle de structure et longueur minimale.
