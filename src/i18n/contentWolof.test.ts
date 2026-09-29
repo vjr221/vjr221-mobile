@@ -1102,6 +1102,17 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof cultural practices consolidation wave 95', () => {
+    const slugs = ['goungoudongho-rite-traditionnel-de-circoncision', 'caayde-patrimoine-culturel-peul-du-matam', 'diokaa-pratique-culturelle-traditionnelle-du-senegal-oriental', 'fifiree-ceremonie-traditionnelle-du-matam'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('has no duplicate local keys', () => {
     const keys = getWolofContentKeys();
     expect(new Set(keys).size).toBe(keys.length);
