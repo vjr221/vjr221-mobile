@@ -319,7 +319,7 @@ describe('Wolof fiche translations', () => {
   });
 
   it('covers the verified culture wave', () => {
-    for (const slug of ['musee-de-la-femme-henriette-bathily-dakar', 'douta-seck', 'grand-theatre-national-doudou-ndiaye-coumba-rose-dakar']) {
+    for (const slug of ['musee-de-la-femme-henriette-bathily-dakar', 'maison-de-la-culture-douta-seck-medina-dakar', 'grand-theatre-national-doudou-ndiaye-coumba-rose-dakar']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
@@ -329,7 +329,7 @@ describe('Wolof fiche translations', () => {
   });
 
   it('covers the verified nature and territory wave', () => {
-    for (const slug of ['mont-assirik-niokolo-koba', 'yoff-layene', 'le-point-culminant-du-senegal-les-collines-de-kedougou']) {
+    for (const slug of ['chutes-de-dindefelo', 'wanar-necropole-megalithique-patrimoine-mondial', 'la-reserve-naturelle-communautaire-de-palmarin']) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche).toBeDefined();
       expect(fiche?.titleWo).toBeTruthy();
@@ -924,7 +924,7 @@ describe('Wolof fiche translations', () => {
   });
 
   it('covers the Wolof Boundou Casamance culture consolidation wave 89', () => {
-    const slugs = ['fode-kaba-doumbouya-resistant-a-la-colonisation-en-casamance', 'le-yeela-poesie-musicale-du-boundou-et-patrimoine-vivant-du-senegal-oriental', 'le-patrimoine-diola-langues-rites-et-culture-de-casamance'];
+    const slugs = ['region-de-dakar', 'region-de-ziguinchor', 'region-de-thies', 'region-de-saint-louis', 'musee-des-civilisations-noires-actualite-et-vocation', 'musee-du-crds-de-saint-louis-musee-regional-saint-louis', 'parc-national-du-niokolo-koba', 'place-du-souvenir-africain-dakar', 'thiere-mboum-une-specialite-cerealiere-du-patrimoine-culinaire-senegalais', 'mosquee-el-hadji-omar-patrimoine-religieux-du-senegal'];
     for (const slug of slugs) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche?.titleWo).toBeTruthy();
@@ -968,7 +968,7 @@ describe('Wolof fiche translations', () => {
   });
 
   it('covers the Wolof literature consolidation wave 85', () => {
-    const slugs = ['leopold-sedar-senghor-poete-et-homme-detat', 'ken-bugul-ecrivaine-senegalaise', 'mariama-ba-ecrivaine-senegalaise', 'birago-diop-poete-et-ecrivain-senegalais', 'cheikh-hamidou-kane-ecrivain-senegalais'];
+    const slugs = ['leopold-sedar-senghor-poete-et-homme-detat', 'cinema-senegalais-histoire-realisateurs-oeuvres-et-rayonnement', 'arts-visuels-au-senegal-peinture-sculpture-photographie-et-creation-contemporaine', 'biennale-dakar-dakart-art-contemporain'];
     for (const slug of slugs) {
       const fiche = getWolofContentBySlug(slug);
       expect(fiche?.titleWo).toBeTruthy();
