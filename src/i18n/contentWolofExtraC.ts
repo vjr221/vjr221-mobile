@@ -121,28 +121,98 @@ Aar mangrove, bolong ak îles war nañu ànd ak conservation bu environnement ak
   },
   'architecture-traditionnelle-sine-saloum': {
     titleWo: 'Architecture bu Siin-Saalum',
-    excerptWo: 'Architecture traditionnelle.',
-    contentWo: `### Jëmmal\n\nArchitecture traditionnelle du Sine-Saloum : cases, aada ak materials yu local.`,
+    excerptWo: 'Architecture traditionnelle bu Siin-Saalum, tabax, aada ak matéeriyel yu dëkk yi.',
+    contentWo: `### Jëmmal
+
+Architecture bu Siin-Saalum dafay jàppale ci xam yoonu tabax ak dundug dëkk yi. Tabax yi, forme yu kër yi ak matéeriyel yu ñu jëfandikoo mën nañu wone lëkkaloo bi am diggante nit ñi, territoire ak environnement.
+
+### Kër ak yoonu tabax
+
+Kër yu cosaan ak espace yu ñu tabax mën nañu mel ci anam yu wuute, topp yoon yi ak soxla yu dëkk bi. Xool architecture bi ci contexte mooy yoon bu baax ngir xam li tabax yi di wone.
+
+### Aada ak xam-xam
+
+Architecture du woon rekk ci tabax. Dafay boole xam-xam ci matéeriyel, yoonu liggéey ak yoonu defar espace bi. Xam-xam yooyu mën nañu nekk ci patrimoine bu dund.
+
+### Aar ak transmission
+
+Denc architecture bu cosaan war nañu teg solo ci aar tabax yi ak xam-xam yi leen àndal. Documentation ak transmission mën nañu jàppale ci wéyal valeur bu patrimoine bi.`,
   },
   'architecture-traditionnelle-casamance': {
     titleWo: 'Architecture bu Casamance',
-    excerptWo: 'Architecture traditionnelle.',
-    contentWo: `### Jëmmal\n\nArchitecture traditionnelle de Casamance : cases, aada Diola ak Mandingue.`,
+    excerptWo: 'Architecture traditionnelle bu Casamance, tabax yu cosaan, aada ak xam-xam ci territoire.',
+    contentWo: `### Jëmmal
+
+Architecture bu Casamance dafay wone yoonu tabax yu lëkkale dëkk yi, environnement ak pratiques locales. Tabax yu cosaan mën nañu joxe xibaar ci yoonu dund ak yoonu jëfandikoo espace bi.
+
+### Tabax ak environnement
+
+Formes bu kër yi ak matéeriyel yi ñu jëfandikoo mën nañu lëkkale ak melokaanu territoire. Xool tabax yi ci seen contexte dafay jàppale ci xam yoonu dund bu dëkk yi.
+
+### Aada ak savoir-faire
+
+Architecture boole na xam-xam ci liggéeyu loxo, tabax ak yoonu defar espace. Savoir-faire yi mën nañu nekk ci patrimoine bu ñuy jox ci ñi ñëw gannaaw.
+
+### Aar ak transmission
+
+Aar tabax yu cosaan war nañu ànd ak documentation ak respect bu contexte bi. Transmission bu xam-xam yi mën nañu jàppale ci denc patrimoine bu Casamance.`,
   },
   'place-faidherbe-coeur-historique-de-saint-louis': {
-    titleWo: 'Place Faidherbe',
-    excerptWo: 'Xolum historique bu Ndar.',
-    contentWo: `### Jëmmal\n\nPlace Faidherbe : cœur historique de Saint-Louis, patrimoine urbain.`,
+    titleWo: 'Place Faidherbe — xolum Ndar',
+    excerptWo: 'Place Faidherbe bokk na ci patrimoine urbain bu Ndar ak mémoire bu dëkk bi.',
+    contentWo: `### Jëmmal
+
+Place Faidherbe nekk na ci xolum historique bu Saint-Louis. Bérab bi mën nañu ko xool ci yoonu organisation bu dëkk bi, architecture bu wetu bi ak mémoire bu ville bi.
+
+### Espace urbain
+
+Place bi bokk na ci espace public bu dëkk bi. Yoonu tëral espace yi, tabax yi ko wër ak mbedd yi mën nañu jàppale ci xam melokaanu centre historique bu Ndar.
+
+### Patrimoine ak mémoire
+
+Patrimoine urbain boole na tabax, espace public ak xibaar yu ñuy jàng ci taariix. Place Faidherbe mën na nekk benn ci bérab yi ñuy jàng ci évolution bu Saint-Louis.
+
+### Aar ak transmission
+
+Denc bérab bi war nañu ànd ak aar patrimoine urbain ak xamle bu leer. Documentation, visites ak njàng mën nañu jàppale ci transmission bu mémoire bu ville bi.`,
   },
   'quai-roume-memoire-portuaire-et-urbaine-de-dakar': {
-    titleWo: 'Quai Roume',
-    excerptWo: 'Mémoire portuaire bu Dakar.',
-    contentWo: `### Jëmmal\n\nQuai Roume : mémoire portuaire ak urbaine de Dakar.`,
+    titleWo: 'Quai Roume — mémoire portuaire bu Dakar',
+    excerptWo: 'Quai Roume lëkkale na mémoire portuaire ak patrimoine urbain bu Dakar.',
+    contentWo: `### Jëmmal
+
+Quai Roume bokk na ci mémoire portuaire ak urbaine bu Dakar. Xool bérab bi ci contexte bu port ak ville dafay jàppale ci xam yoonu jokkoo ak évolution bu espace urbain.
+
+### Port ak ville
+
+Espace portuaire yi am nañu solo ci dundug dëkk yu wetu géej. Quai yi mën nañu nekk ay bérab yu ñuy jàng ci yoonu jokkoo, liggéey ak circulation.
+
+### Mémoire urbaine
+
+Mémoire bu bérab bi boole na espace, tabax ak nettali yu ñuy jox ci taariix bu Dakar. Documentation mën nañu jàppale ci denc xibaar yi ci patrimoine portuaire.
+
+### Transmission ak aar
+
+Aar mémoire portuaire war nañu ànd ak xamle bu leer ci contexte bu bérab bi. Jàngale ak visites mën nañu jàppale ci transmission bu patrimoine urbain.`,
   },
   'maison-a-etages-de-saint-louis-architecture-urbaine-historique': {
-    titleWo: 'Maisons à étages bu Ndar',
-    excerptWo: 'Architecture urbaine historique.',
-    contentWo: `### Jëmmal\n\nMaisons à étages de Saint-Louis : architecture urbaine, taariix.`,
+    titleWo: 'Kër yu étage yu Ndar',
+    excerptWo: 'Kër yu étage yu Saint-Louis bokk nañu ci architecture urbaine historique bu ville bi.',
+    contentWo: `### Jëmmal
+
+Kër yu étage yu Ndar bokk nañu ci patrimoine urbain bu Saint-Louis. Tabax yu mel noonu mën nañu jàppale ci xam évolution bu architecture ak yoonu organisation bu dëkk bi.
+
+### Architecture urbaine
+
+Kër yu étage yi di wone ay formes bu tabax yu am étage, espace intérieur ak façade. Xool leen ci contexte bu mbedd yi ak place yi dafay jàppale ci xam melokaanu ville bi.
+
+### Taariix ak mémoire
+
+Tabax yu yàgg mën nañu nekk ay traces yu taariix bu dëkk. Seen valeur mën nañu boole architecture, mémoire bu espace ak xibaar yu ñuy jàng ci patrimoine urbain.
+
+### Aar ak transmission
+
+Denc tabax yi war nañu teg solo ci conservation bu architecture ak documentation. Transmission mën nañu jàppale ci tax ñi ñëw gannaaw xam patrimoine urbain bu Ndar.`,
   },
   'mosquee-de-divinity-patrimoine-religieux-de-dakar': {
     titleWo: 'Mosquée de Divinity',
