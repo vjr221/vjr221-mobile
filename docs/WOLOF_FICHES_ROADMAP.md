@@ -442,3 +442,13 @@ Le chantier ne doit pas transformer les traductions éditoriales en textes UI co
 - Renforcement du Wolof autour de la mémoire, l’architecture, les pratiques sociales, la transmission et la conservation.
 - Aucun nouveau slug ni suppression.
 - Test dédié ajouté avec contrôle de structure et longueur minimale.
+
+
+## Vague 97 — Patrimoine culturel, histoire et gastronomie
+- `thiere-boulettes-couscous-mil-sauce-boulettes`
+- `lempire-du-djolof`
+- `le-royaume-du-cayor`
+- `hymne-national-senegal-lion-rouge`
+- `musee-mbiin-ndiogoye-joal`
+
+Consolidation Wolof : contenus structurés, substantiels et vérifiés par test de longueur/sections.
