@@ -1026,4 +1026,20 @@ test('covers the Wolof regional tourism consolidation wave 99', () => {
     expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
   }
 });
+
+
+test('covers the Wolof Dakar geological heritage consolidation wave 100', () => {
+  const slugs = [
+    'falaise-de-toundeup-riya-site-geologique-de-yoff',
+    'cap-manuel-site-prehistorique-et-geologique-de-dakar',
+    'cimetiere-de-bel-air-patrimoine-historique-de-dakar',
+  ];
+  for (const slug of slugs) {
+    const fiche = getWolofContentBySlug(slug);
+    expect(fiche?.titleWo).toBeTruthy();
+    expect(fiche?.excerptWo).toBeTruthy();
+    expect(fiche?.contentWo).toContain('###');
+    expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+  }
+});
 });
