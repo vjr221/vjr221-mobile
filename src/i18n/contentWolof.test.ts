@@ -971,4 +971,22 @@ describe('Wolof fiche translations', () => {
       expect(fiche?.contentWo).toContain('###');
     }
   });
+
+
+test('covers the Wolof cultural heritage consolidation wave 97', () => {
+  const slugs = [
+    'thiere-boulettes-couscous-mil-sauce-boulettes',
+    'lempire-du-djolof',
+    'le-royaume-du-cayor',
+    'hymne-national-senegal-lion-rouge',
+    'musee-mbiin-ndiogoye-joal',
+  ];
+  for (const slug of slugs) {
+    const fiche = getWolofContentBySlug(slug);
+    expect(fiche?.titleWo).toBeTruthy();
+    expect(fiche?.excerptWo).toBeTruthy();
+    expect(fiche?.contentWo).toContain('###');
+    expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+  }
+});
 });
