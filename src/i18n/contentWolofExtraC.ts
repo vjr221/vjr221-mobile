@@ -215,35 +215,119 @@ Tabax yu yàgg mën nañu nekk ay traces yu taariix bu dëkk. Seen valeur mën n
 Denc tabax yi war nañu teg solo ci conservation bu architecture ak documentation. Transmission mën nañu jàppale ci tax ñi ñëw gannaaw xam patrimoine urbain bu Ndar.`,
   },
   'mosquee-de-divinity-patrimoine-religieux-de-dakar': {
-    titleWo: 'Mosquée de Divinity',
-    excerptWo: 'Patrimoine religieux bu Dakar.',
-    contentWo: `### Jëmmal\n\nMosquée de Divinity : patrimoine religieux ci Dakar.`,
+    titleWo: 'Mosquée de Divinity — patrimoine religieux',
+    excerptWo: 'Mosquée de Divinity, bérab bu patrimoine religieux ci Dakar ak mémoire bu communauté.',
+    contentWo: `### Jëmmal
+
+Mosquée de Divinity mën nañu ko xool ci patrimoine religieux bu Dakar. Bérab bu diine boole na architecture, pratique ak mémoire bu nit ñi.
+
+### Architecture ak espace
+
+Tabaxu jëm ci diine dafay jox espace bu ñuy jàng, julli ak daje. Forme ak organisation bu bérab bi mën nañu jàppale ci xam yoonu dund bu communauté.
+
+### Mémoire ak communauté
+
+Bérab bu diine mën nañu nekk benn ci bérab yi ñuy denc ay souvenir ak pratiques. Xool contexte bu dëkk bi mooy yoon bu baax ngir xam valeur bu patrimoine bi.
+
+### Aar ak transmission
+
+Denc bérab bi war nañu teg solo ci conservation ak respect bu nit ñi. Documentation ak transmission mën nañu jàppale ci wéyal mémoire bu patrimoine religieux.`,
   },
   'aire-marine-protegee-bamboung': {
-    titleWo: 'AMP Bamboung',
-    excerptWo: 'Aire marine protégée.',
-    contentWo: `### Jëmmal\n\nAire marine protégée de Bamboung : conservation, jën ak mangrove.`,
+    titleWo: 'Aire marine protégée bu Bamboung',
+    excerptWo: 'Bamboung mooy aire marine protégée bu lëkkale conservation, mangrove, bolong ak dundug ndox.',
+    contentWo: `### Jëmmal
+
+Aire marine protégée bu Bamboung dafay wone solo bu conservation ci espace bu géej, bolong ak mangrove. Bérab bi lëkkale environnement ak yoonu dund yu jëm ci ressources yu ndox.
+
+### Mangrove ak biodiversité
+
+Mangrove yi am nañu solo ci ecosysteme bi. Ñu ngi bokk ci paysage bu ndox mi ak ay bérab yu man a jàppale ci dundug ay espèces.
+
+### Ressources yu ndox
+
+Pêche ak yeneen activités yu ndox mën nañu lëkkale nit ñi ak territoire. Gestion bu toppatoo dafay soxla xam environment ak respect bu ressources.
+
+### Aar ak participation
+
+Conservation bu Bamboung war nañu ànd ak xamle, jàngale ak participation bu acteurs yu dëkk yi. Transmission bu xam-xam mën nañu jàppale ci denc valeur bu bérab bi.`,
   },
   'reserve-speciale-faune-ndiael': {
-    titleWo: 'Reserve bu Ndiaël',
-    excerptWo: 'Grande zone humide.',
-    contentWo: `### Jëmmal\n\nRéserve spéciale de faune du Ndiaël : zone humide, picc ak conservation.`,
+    titleWo: 'Réserve bu faune bu Ndiaël',
+    excerptWo: 'Ndiaël mooy zone humide ak patrimoine naturel bu am solo ci aar biodiversité.',
+    contentWo: `### Jëmmal
+
+Réserve spéciale bu faune bu Ndiaël nekk na ci patrimoine naturel bu Senegaal. Zone humide bi am na solo ci dundug picc ak yeneen espèces, ak ci équilibre bu environnement.
+
+### Zone humide
+
+Wet bi ak ndox yi di jàppale ci yoonu dund bu ay espèces. Xam melokaanu zone humide bi mën na jàppale ci xam valeur bu ecosysteme bi.
+
+### Biodiversité
+
+Picc yi ak yeneen espèces bokk nañu ci dundug réserve bi. Conservation war nañu teg solo ci aar bérab yi, ndox ak espace yu espèces yi soxla.
+
+### Aar ak transmission
+
+Denc Ndiaël war nañu boole conservation, suivi ak xamle. Jàngale ak documentation mën nañu jàppale ci yégle valeur bu zone humide bi.`,
   },
 
   'saloum-fleuve-mangroves-iles-patrimoine-vivant': {
-    titleWo: 'Dexu Saalum',
-    excerptWo: 'Fleuve, mangrove, duni yi.',
-    contentWo: `### Jëmmal\n\nLe Saloum : fleuve, mangroves, îles et patrimoine vivant.`,
+    titleWo: 'Dexu Saalum — mangrove ak duni yi',
+    excerptWo: 'Dexu Saalum lëkkale fleuve, mangrove, duni yi ak patrimoine bu dund.',
+    contentWo: `### Jëmmal
+
+Dexu Saalum mooy espace bu ndox, suuf, mangrove ak duni yu lëkkale nature ak dundug nit ñi. Fleuve bi bokk na ci melokaanu territoire bi.
+
+### Mangrove ak bolong
+
+Mangrove yi ak bolong yi mën nañu jàppale ci biodiversité ak stabilité bu environnement. Ñu ngi it di joxe xibaar ci yoonu dund bu territoire.
+
+### Duni yi ak activités
+
+Duni yi boole nañu ay dëkk ak espace yu nit ñi di jëfandikoo. Pêche ak yeneen activités mën nañu lëkkale nit ñi ak ressources yu ndox.
+
+### Patrimoine bu dund
+
+Patrimoine bi boole nature, xam-xam ak pratiques. Conservation war nañu ànd ak respect bu environnement ak transmission bu xam-xam yi.`,
   },
   'ile-de-mar-lodj': {
-    titleWo: 'Dunu Mar Lodj',
-    excerptWo: 'Île bu Saalum.',
-    contentWo: `### Jëmmal\n\nÎle de Mar Lodj : tourisme, mangrove ak aada yu Saalum.`,
+    titleWo: 'Dunu Mar Lodj — patrimoine bu Saalum',
+    excerptWo: 'Dunu Mar Lodj bokk na ci territoire bu Saalum, ak paysage, mangrove ak pratiques culturelles.',
+    contentWo: `### Jëmmal
+
+Dunu Mar Lodj nekk na ci espace bu Saalum bu am duni, bolong ak paysage. Bérab bi mën nañu ko xool ci yoonu lëkkaloo bu territoire ak dundug nit ñi.
+
+### Paysage ak mangrove
+
+Mangrove ak ndox yi bokk nañu ci melokaanu dunu bi. Xam ecosysteme bi mën nañu jàppale ci xam solo bu aar environment.
+
+### Patrimoine ak pratiques
+
+Pratiques yu dëkk yi, xam-xam ak mémoire mën nañu bokk ci patrimoine bu dund. Xool leen ci seen contexte dafay wone diversité bu territoire.
+
+### Tourisme ak aar
+
+Visites war nañu ànd ak respect bu bérab bi ak environnement. Tourisme bu toppatoo mën nañu jàppale ci transmission ak conservation.`,
   },
   'ile-deloubaline-village-insulaire-patrimoine-diola-casamance': {
-    titleWo: 'Dunu Eloubaline',
-    excerptWo: 'Village insulaire Diola.',
-    contentWo: `### Jëmmal\n\nÎle d Eloubaline : village insulaire, patrimoine Diola, Casamance.`,
+    titleWo: 'Dunu Eloubaline — village insulaire',
+    excerptWo: 'Dunu Eloubaline mooy village insulaire ci Casamance, ak patrimoine, paysage ak mémoire bu dëkk.',
+    contentWo: `### Jëmmal
+
+Dunu Eloubaline nekk na ci paysage insulaire bu Casamance. Village bi mën nañu ko xool ci lëkkaloo bu ndox, territoire ak dundug nit ñi.
+
+### Village ak territoire
+
+Vie insulaire dafay lëkkale nit ñi ak bolong yi ak yeneen espaces yu ndox. Yoonu dund bu dëkk bi mën nañu wone solo bu territoire ci patrimoine.
+
+### Patrimoine ak mémoire
+
+Architecture, pratiques ak xam-xam mën nañu nekk ci mémoire bu village. Documentation war nañu wone contexte bu bérab bi te bañ a yàggal généralisation ci communauté.
+
+### Transmission ak aar
+
+Denc patrimoine bi war nañu boole conservation bu paysage ak transmission bu xam-xam yi. Visites bu toppatoo mën nañu jàppale ci respect bu bérab bi.`,
   },
   'ile-ehidj-casamance': {
     titleWo: 'Dunu Ehidj',
