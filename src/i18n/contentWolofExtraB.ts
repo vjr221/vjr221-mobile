@@ -5,18 +5,72 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_B: Record<string, WolofContent> = {
   'thiere-mboum-une-specialite-cerealiere-du-patrimoine-culinaire-senegalais': {
     titleWo: 'Thiéré mboum',
-    excerptWo: 'Spécialité céréalière.',
-    contentWo: `### Jëmmal\n\nThiéré mboum : mil, sauce, patrimoine culinaire.`,
+    excerptWo: 'Mburu mil ak mboum, lekk bu bokk ci patrimoine culinaire bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Thiéré mboum mooy lekk buñu def ak mil, bu jëfandikoo mboum ci sosu ak añ yi. Lekk bii bokk ci patrimoine culinaire bu Senegaal, te dafay wone ni céréales yi ak xob yu réew mi mën a daje ci benn lekk bu am solo.
+
+### Mil ak mboum
+
+Mil mooy benn ci céréales yi ñu gën a jëfandikoo ci lekk yu Senegaal. Mboum bi di joxe tur wi, dafay yokk xam-xam ak toftal ci sosu. Ci préparations yu ni mel, jëfandikoo produits locaux dafay yokk doxalin bu lekk bi.
+
+### Lekk ak aada
+
+Thiéré mboum du rekk benn recette; dafay bokk ci xam-xam bu ñu di jàngale ci kër gi ak ci mbokk yi. Yoon wi ñu wara defare mil, sosu ak mboum dafay wone patrimoine bu nekk ci pratiques quotidiennes.
+
+### Transmission
+
+Xam-xam bu lekk bi mën na jaar ci waxtaan, gis-gis ak jàngale ci biir kër. Li ñu di aar mooy not only turu lekk bi, waaye it xam-xam ci ingrédients ak yoon wi ñu leen di boole.
+
+### Valeur culturelle
+
+Thiéré mboum dafay yokk gis-gis ci diversité bu cuisine sénégalaise. Mil, produits locaux ak savoir-faire ñuy boole ci lekk bi, di wone patrimoine culinaire buñu mën a jàng, aare ak jox ci ñi ñëw gannaaw.`,
   },
   'jus-de-tamarin': {
     titleWo: 'Jus bu tamarin',
-    excerptWo: 'Naan bu tamarin.',
-    contentWo: `### Jëmmal\n\nJus bu tamarin : sedd, fruits locaux.`,
+    excerptWo: 'Naan bu tamarin, bu sedd te bokk ci xam-xamu lekk ak naan yu Senegaal.',
+    contentWo: `### Jëmmal
+
+Jus bu tamarin mooy naan buñu def ak fruitu tamarin. Tamarin am na goût bu acidulé, te jus bi mën a nekk naan bu sedd ci ay waxtu yu tàng. Dafay bokk ci diversité bu naan yuñu def ak produits locaux.
+
+### Tamarin
+
+Tamarin mooy fruit bu am goût bu am solo ci préparation bi. Bi ñu koy jëfandikoo ci jus, ñu mën a defar ko ngir génn naan bu neex te am caractéristique bu ñu xam. Xam-xamu defar jus yi bokk ci savoir-faire culinaire.
+
+### Yoonu defar
+
+Ci defar jus bu tamarin, fruit bi dañu koy jëfandikoo ngir joxe goût ak texture bu naan bi. Yoonu préparation mën na wuute ci kër yi, waaye lëkkaloo bi mooy jëfandikoo fruit bi ci benn naan bu sedd.
+
+### Naan ak aada
+
+Jus bu tamarin dafay bokk ci naan yuñu mën a jox ci lekk, ci waxtu yu ñuy dajale ak ci ay ndaje. Naan yu mel ni bii dafay yokk diversity bu table sénégalaise te dafay boole produits locaux ak xam-xam bu kër.
+
+### Patrimoine culinaire
+
+Jus bu tamarin dafay wone ni patrimoine culinaire du rekk lekk yu ñu lekk; naan yi it mën nañu bokk ci identité alimentaire. Xam-xam bu jëfandikoo fruitu tamarin ci préparation dafay tax recette bi mën a jaar ci génération yi.`,
   },
   'jus-de-ditakh': {
     titleWo: 'Jus bu ditakh',
-    excerptWo: 'Naan bu ditakh.',
-    contentWo: `### Jëmmal\n\nJus bu ditakh : fruit bu local.`,
+    excerptWo: 'Naan bu ditakh, benn ci naan yuñu def ak fruits yu réew mi.',
+    contentWo: `### Jëmmal
+
+Jus bu ditakh mooy naan buñu def ak fruitu ditakh. Fruit bi am na caractéristique bu ñu xam, te préparation bi mën a joxe naan bu sedd ak goût bu nekk ci patrimoine alimentaire bu Senegaal.
+
+### Ditakh ak produit local
+
+Ditakh bokk na ci fruits yi mën a jëfandikoo ci recettes ak boissons. Jëfandikoo fruitu local dafay wone valeur bu ressources yi nekk ci environnement ak xam-xam bu ñu di jëfandikoo ci cuisine.
+
+### Yoonu préparation
+
+Ci defar jus bi, ditakh bi ñu jëfandikoo ngir génn naan bu am goût ak texture. Yoonu defar mën na wuute ci pratiques yi, waaye lël bi mooy aar caractéristique bu fruit bi ci benn boisson.
+
+### Naan ci table
+
+Jus bu ditakh mën na bokk ci repas, ndaje ak waxtu yu ñuy séddale lekk ak naan. Naan yuñu def ak fruits locaux dafay yokk diversité bu table ak jëfandikoo produits yu am solo ci patrimoine culinaire.
+
+### Transmission ak patrimoine
+
+Xam-xamu defar naan yi mën na jaar ci kër, ci waxtaan ak ci jàngale. Jus bu ditakh dafay wone benn yoon buñu mën a aar ci patrimoine alimentaire: jëfandikoo fruit, xam-xam ak pratiques yu ñuy jox ci ñi ñëw gannaaw.`,
   },
   'les-salons-de-the-et-la-ceremonie-de-lataya-au-senegal': {
     titleWo: 'Ataya',
