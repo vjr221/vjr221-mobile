@@ -5,29 +5,119 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 /** Vague 6 — UNESCO, îles, nature, langues, artisanat */
 export const CONTENT_WO_EXTRA_C: Record<string, WolofContent> = {
   'ile-de-saint-louis-patrimoine-mondial-de-lunesco': {
-    titleWo: 'Dunu Ndar (UNESCO)',
-    excerptWo: 'Patrimoine mondial — Île de Saint-Louis.',
-    contentWo: `### Jëmmal\n\nÎle de Saint-Louis : patrimoine mondial UNESCO, architecture, dex ak taariix.`,
+    titleWo: 'Dunu Ndar — patrimoine mondial UNESCO',
+    excerptWo: 'Dunu Ndar mooy bérab bu patrimoine mondial, te mu boole architecture, dexu Senegaal ak taariix.',
+    contentWo: `### Jëmmal
+
+Dunu Ndar, walla Île de Saint-Louis, bokk na ci patrimoine mondial UNESCO. Dëkk bi nekk na ci wetu dexu Senegaal, te architecture, ndox ak yoonu dëkk bi bokk nañu ci melokaanam.
+
+### Architecture ak taariix
+
+Bérab bi am na tabax yu yàgg, mbedd yu tëral ak ay bérab yu jàppale ci xam taariix bu Saint-Louis. Île bi dafay wone ni dëkk ak dex mën nañu lëkkaloo ci yoonu tabax ak dund.
+
+### Dexu Senegaal ak territoire
+
+Dexu Senegaal bokk na ci gis-gisu bérab bi. Pont yi, quais yi ak ndox mi mën nañu jàppale ci xam yoonu jokkoo bu dëkk bi ak territoire bi.
+
+### Patrimoine bu dund
+
+Patrimoine bi du rekk ay tabax. Dafay boole mémoire, dundug dëkk, pratiques ak xam-xam yu ñuy jox ci ñi ñëw gannaaw. Aar bérab bi war na ànd ak respect bu nit ñi di ko dundal.
+
+### Transmission
+
+Jàng ci Dunu Ndar mën na boole architecture, histoire ak environnement. Documentation, visites ak transmission mën nañu jàppale ci denc valeur bu bérab bi.`,
   },
   'le-senegal-et-le-patrimoine-mondial-de-lunesco': {
     titleWo: 'Patrimoine mondial bu Senegaal',
-    excerptWo: 'Sites UNESCO yu Senegaal.',
-    contentWo: `### Jëmmal\n\nSenegaal am na sites UNESCO : Gorée, Ndar, Bassari, Delta Saalum, mégalithes.`,
+    excerptWo: 'Ay sites yu Senegaal nekk ci patrimoine mondial, ak patrimoine naturel, culturel ak historique.',
+    contentWo: `### Jëmmal
+
+Senegaal am na ay bérab yu nekk ci patrimoine mondial UNESCO. Goorée, Dunu Ndar, Pays Bassari, Delta Saalum ak cercles mégalithiques bokk nañu ci bérab yi ñuy jàng ci patrimoine bu réew mi.
+
+### Patrimoine naturel ak culturel
+
+Bérab yi wuute nañu ci seen mel. Am nañu paysages, zones humides, îles, architecture, pratiques culturelles ak traces historiques. Loolu dafay wone diversité bu patrimoine bu Senegaal.
+
+### Territoires ak mémoire
+
+Patrimoine mondial bi lëkkale na ay territoires yu wuute: norte, centre, penku ak sowwu réew mi. Ci bérab bu nekk, contexte bu territoire ak mémoire mën na joxe yeneen gis-gis ci histoire ak dund.
+
+### Aar ak gestion
+
+Denc patrimoine mondial mooy aar bérab, environnement ak xam-xam yi ko àndal. Conservation war nañu ko boole ak participation bu nit ñi ak respect bu valeur bu bérab yi.
+
+### Transmission
+
+Jàngale ci patrimoine mondial mën na jàppale ci xam histoire, nature ak aada yu wuute. Documentation, njàng ak transmission mën nañu tax patrimoine bi wéy ci ñi ñëw gannaaw.`,
   },
   'cercles-megalithiques-de-sine-ngayene': {
-    titleWo: 'Cercles bu Sine Ngayène',
-    excerptWo: 'Mégalithes bu Siin.',
-    contentWo: `### Jëmmal\n\nSine Ngayène : cercles mégalithiques, patrimoine mondial, doj yu yàgg.`,
+    titleWo: 'Cercles mégalithiques bu Sine Ngayène',
+    excerptWo: 'Bérab bu mégalithes bu Siin, te bokk na ci patrimoine archéologique bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Cercles mégalithiques bu Sine Ngayène bokk nañu ci patrimoine archéologique bu Senegaal. Bérab bi ëmb na ay doj yu ñu tëral ci formes yu mel ni ay cercles, te dafay jàppale ci xam traces yu jamono yu weesu.
+
+### Mégalithes ak territoire
+
+Doj yi ak yoonu tëral leen dafay wone ay formes yu am solo ci paysage. Xool bérab bi ci contexte bu Siin mën na jàppale ci xam lëkkaloo bi am diggante patrimoine, territoire ak mémoire.
+
+### Patrimoine archéologique
+
+Mégalithes yi war nañu leen a xool ak respect, ndaxte ñooy traces yu am solo ci histoire bu nit ñi. Documentation ak recherche mën nañu jàppale ci gën a xam li bérab bi di wone.
+
+### Aar bérab bi
+
+Conservation war na teg solo ci aar doj yi, environnement bi ak intégrité bu bérab bi. Xamle ak jàngale mën nañu jàppale ci wàññi yàqute bu patrimoine.
+
+### Transmission
+
+Sine Ngayène mën na nekk yoon bu ñuy jàng ci patrimoine archéologique bu Senegaal. Njàng, documentation ak visites bu toppatoo mën nañu tax xam-xam bi wéy ci ñi ñëw gannaaw.`,
   },
   'pays-bassari-patrimoine-culturel-paysages': {
-    titleWo: 'Pays Bassari — paysages',
-    excerptWo: 'Patrimoine culturel ak paysages.',
-    contentWo: `### Jëmmal\n\nPays Bassari : paysages culturels UNESCO, aada Bassari, Peul ak Bédik.`,
+    titleWo: 'Pays Bassari — paysages ak patrimoine',
+    excerptWo: 'Paysage culturel bu Kédougou, te boole territoire, aada ak xam-xam yu communautés yu wuute.',
+    contentWo: `### Jëmmal
+
+Pays Bassari bokk na ci patrimoine mondial ci yoonu paysage culturel. Territoire bi nekk na ci Kédougou, te paysages, bérab yi nit ñi di dundal ak pratiques culturelles bokk nañu ci valeur bu bérab bi.
+
+### Paysage ak territoire
+
+Paysage bi boole relief, àll, dëkk ak espace yu ñuy jëfandikoo. Xam territoire bi dafay lëkkale environnement ak yoonu dund, ci contexte bu am ay formes yu wuute.
+
+### Aada ak diversité
+
+Pays Bassari lëkkale na ay communautés ak patrimoines yu wuute. Fiche bi war nañu ko xool ci anam bu deskriptif, te teg solo ci diversité bu pratiques, langues ak savoir-faire.
+
+### Patrimoine bu dund
+
+Patrimoine bi du rekk paysage. Dafay boole pratiques, architecture, xam-xam ci environnement ak yoonu transmission. Loolu dafay tax territoire bi nekk patrimoine bu dund.
+
+### Aar ak transmission
+
+Aar Pays Bassari war nañu boole conservation bu paysage ak respect bu nit ñi di dundal bérab yi. Documentation, njàng ak transmission mën nañu jàppale ci wéyal xam-xam bi.`,
   },
   'delta-saloum-ecosystemes-iles-mangroves': {
-    titleWo: 'Delta Saalum — écosystèmes',
-    excerptWo: 'Îles, mangrove ak bolong.',
-    contentWo: `### Jëmmal\n\nDelta du Saloum : écosystèmes, duni yi, mangrove ak patrimoine vivant.`,
+    titleWo: 'Delta Saalum — îles, mangrove ak bolong',
+    excerptWo: 'Delta bu mangrove, bolong ak duni yu boole nature, patrimoine ak dundug dëkk.',
+    contentWo: `### Jëmmal
+
+Delta Saalum mooy espace bu ndox ak suuf bu lëkkale fleuve, bolong, mangrove ak îles. Ecosystème yi am nañu solo ci paysage ak biodiversité bu territoire.
+
+### Mangrove ak bolong
+
+Mangrove yi di nekk ci weti ndox mi, te bolong yi di yoon yu ndox yi jaar. Lëkkaloo bi am diggante ndox, suuf ak végétation dafay tax delta bi am melokaan bu wuute.
+
+### Îles ak dundug nit ñi
+
+Duni yi bokk nañu ci territoire bu Delta Saalum. Pêche, activités locales ak yoonu dund mën nañu lëkkale nit ñi ak ressources yu delta bi.
+
+### Patrimoine naturel ak culturel
+
+Delta bi boole nature ak patrimoine bu dund. Xam-xam ci navigation, pêche, environnement ak pratiques culturelles mën nañu bokk ci mémoire bu territoire.
+
+### Aar ak transmission
+
+Aar mangrove, bolong ak îles war nañu ànd ak conservation bu environnement ak respect bu dundug nit ñi. Jàngale, documentation ak tourisme bu toppatoo mën nañu jàppale ci transmission ak aar patrimoine bi.`,
   },
   'architecture-traditionnelle-sine-saloum': {
     titleWo: 'Architecture bu Siin-Saalum',
