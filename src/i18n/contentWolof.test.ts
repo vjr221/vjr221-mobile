@@ -865,6 +865,23 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof UNESCO heritage consolidation wave 101', () => {
+    const slugs = [
+      'ile-de-saint-louis-patrimoine-mondial-de-lunesco',
+      'le-senegal-et-le-patrimoine-mondial-de-lunesco',
+      'cercles-megalithiques-de-sine-ngayene',
+      'pays-bassari-patrimoine-culturel-paysages',
+      'delta-saloum-ecosystemes-iles-mangroves',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+  });
+
   it('covers the Wolof culinary heritage consolidation wave 92', () => {
     const slugs = ['thiere-mboum-une-specialite-cerealiere-du-patrimoine-culinaire-senegalais', 'jus-de-tamarin', 'jus-de-ditakh'];
     for (const slug of slugs) {
