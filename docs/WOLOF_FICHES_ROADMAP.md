@@ -529,3 +529,13 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Le contenu français n’est pas modifié et aucun fait précis non présent dans les fiches n’a été ajouté.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
 - Aucun APK intermédiaire : validation CI avant la poursuite du chantier.
+
+
+## Mise à jour — vague 107
+
+- **Vague 107 : consolidation linguistique de 8 fiches de patrimoine culturel existantes** — Mosquée de Baghère, Mosquée de Karantaba, Château de Sédhiou, Kagnalene Thionk, Goungoudongho, Caaydé, Diokaa et Fifiree.
+- Relecture du Wolof pour améliorer naturel, précision des enchaînements et contextualisation autour du patrimoine religieux, de la mémoire architecturale, des pratiques culturelles et de la transmission.
+- Les clés existantes sont conservées : **aucun nouveau slug, aucune suppression et aucun doublon**.
+- Le contenu français et les données de référence ne sont pas modifiés.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
+- Aucun APK intermédiaire : validation CI d’abord.
