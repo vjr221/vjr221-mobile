@@ -8,7 +8,7 @@ export const CONTENT_WO_EXTRA_AS: Record<string, WolofContent> = {
     excerptWo: "Benn ci département yu am solo ci régionu Thiès, diggante Dakar, biir réew mi ak Petite Côte.",
     contentWo: `### Jëmmal
 
-Départementu Thiès mooy benn ci département yu am solo ci régionu Thiès. Mu nekk na ci wetug penku Dakar, te am na solo ci transport, industrie, njàng, commerce ak services. Thiès mooy it benn ci carrefour yu mag yu Senegaal.
+Départementu Thiès mooy benn ci département yu am solo ci régionu Thiès. Mu nekk ci penku Dakar, te transport, industrie, njàng, commerce ak services am nañu solo ci dundinu territoire bi. Thiès mooy it benn ci carrefour yu mag yu Senegaal.
 
 ### Géeographie
 
@@ -55,7 +55,7 @@ Tivaouane am na solo bu mag ci taariixu Tidjaniya ci Senegaal. Grande Mosquée, 
 
 ### Ekonom
 
-Agriculture, commerce, artisanat ak yeneen services bokk nañu ci ekonomu département bi. Mékhé xam nañu ko it ci artisanat ak ay produits décoratifs.
+Agriculture, commerce, artisanat ak yeneen services bokk nañu ci doole ekonomu département bi. Mékhé xam nañu ko it ci artisanat ak ay produits décoratifs.
 
 ### Agriculture ak sàmm
 
@@ -67,7 +67,7 @@ Parc éolienu Taïba Ndiaye bokk na ci infrastructures yu mag yu énergie renouv
 
 ### Njàng ak aada
 
-Département bi am na ay établissements scolaires, centres de formation ak patrimoine culturel bu lëkkale diine, njàng ak aada.
+Département bi am na ay établissements scolaires ak centres de formation. Patrimoine culturel bi lëkkale na diine, njàng ak aada.
 
 ### Tourisme
 
@@ -78,7 +78,7 @@ Grande Mosquée de Tivaouane, mausolées, Pire ak patrimoine religieux yi bokk n
     excerptWo: "Buntu penku Senegaal ci fleuve Sénégal, territoire Soninké ak carrefour historique bu commerce.",
     contentWo: `### Jëmmal
 
-Départementu Bakel nekk na ci régionu Tambacounda, ci penku-gànnaaru Senegaal. Mu nekk na ci frontière ak Mali ak Mauritanie, te am na solo ci taariixu commerce, patrimoine ak jokkoo diggante réew yi.
+Départementu Bakel nekk ci régionu Tambacounda, ci penku-gànnaaru Senegaal. Mu jege frontièresu Mali ak Mauritanie, te taariixu commerce, patrimoine ak jokkoo diggante réew yi am nañu solo ci territoire bi.
 
 ### Géeographie
 
@@ -94,7 +94,7 @@ Communes yi bokk nañu ci Bakel, Diawara, Kidira, Gathiary, Madina Foulbe, Sadat
 
 ### Askana ak aada
 
-Askanu département bi fees na ak Soninké, Peul, Wolof, Maure ak Mandingue. Diaspora ak tradition migratoire am nañu solo ci dundin bu askan wi.
+Askanu département bi wuute na: Soninké, Peul, Wolof, Maure ak Mandingue. Diaspora ak tradition migratoire it am nañu solo ci dundin ak jokkoo yu askan wi.
 
 ### Ndox ak agriculture
 
@@ -113,7 +113,7 @@ Fort de Bakel, patrimoine Soninké, paysagesu fleuve Sénégal ak Falémé bokk 
     excerptWo: "Xolum taariixu Sine, aada Sereer, agriculture ak bolong yi ci régionu Fatick.",
     contentWo: `### Jëmmal
 
-Départementu Fatick nekk na ci régionu Fatick, ci diggante penku ak sowwu Senegaal. Mu nekk na benn ci xolum taariix, aada ak patrimoine Sereer. Fatick mooy chef-lieu.
+Départementu Fatick nekk ci régionu Fatick, ci diggante penku ak sowwu Senegaal. Mu bokk ci bérab yu taariixu Sereer, aada ak patrimoine am solo lool. Fatick mooy chef-lieu.
 
 ### Géeographie
 
@@ -133,7 +133,7 @@ Agriculture, élevage, pêche ci bolong yi ak commerce bokk nañu ci pilier yu e
 
 ### Aada ak patrimoine
 
-Aada Sereer, taariixu Diakhao, sites sacrés, patrimoine oral, musique, danse, xam-xam yu askan wi ak cérémonies traditionnelles am nañu solo bu mag.
+Aada Sereer, taariixu Diakhao, sites sacrés, patrimoine oral, musique, danse, xam-xam yu askan wi ak cérémonies traditionnelles ñépp bokk nañu ci alal bu culturel bi.
 
 ### Nature ak environnement
 
@@ -148,7 +148,7 @@ Diakhao, dëkk yu aada Sereer ak paysagesu Sine mën nañu dooleel tourisme cult
     excerptWo: "Territoireu régionu Dakar bu am projets yu mag, industrie, logistique ak patrimoine historique.",
     contentWo: `### Jëmmal
 
-Départementu Rufisque nekk na ci penku régionu Dakar. Mu nekk na benn ci territoires yu am solo ci développement économique, industriel, logistique ak urbainu Senegaal. Rufisque mooy chef-lieu.
+Départementu Rufisque nekk ci penku régionu Dakar. Mu bokk ci territoires yu am solo ci mbirum économie, industrie, logistique ak développement urbain. Rufisque mooy chef-lieu.
 
 ### Géeographie
 
@@ -183,7 +183,7 @@ Moderniser infrastructures, dooleel industrie ak logistique, yokk emplois ak top
     excerptWo: "Xolum Moyenne-Casamance, fleuve Casamance, agriculture ak aada yu wuute.",
     contentWo: `### Jëmmal
 
-Départementu Sédhiou nekk na ci régionu Sédhiou, ci xolum Moyenne-Casamance. Sédhiou mooy chef-lieu, te département bi am na solo ci mbirum administration, ekonom ak aada.
+Départementu Sédhiou nekk ci régionu Sédhiou, ci xolum Moyenne-Casamance. Sédhiou mooy chef-lieu; administration, ekonom ak aada am nañu solo ci territoire bi.
 
 ### Géeographie
 
@@ -207,7 +207,7 @@ Fleuve Casamance am na solo ci agriculture, pêche ak transport fluvial. Mu nekk
 
 ### Culture ak gastronomie
 
-Aada yu Casamance, musik, danse, traditions ak lekk yu local bokk nañu ci patrimoine bi. Diversité culturelle bi mooy benn ci njariñ yu mag yu territoire bi.
+Aada yu Casamance, musik, danse, traditions ak lekk yu local bokk nañu ci patrimoine bi. Wuute gu aada yi mooy benn ci njariñ yu mag yu territoire bi.
 
 ### Nature ak tourisme
 
