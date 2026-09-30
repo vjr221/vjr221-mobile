@@ -631,14 +631,14 @@ Patrimoine culinaire duñu ko denc rekk ci turu recette. Dafay boole xam-xam, yo
   },
   'mosquee-de-baghere-patrimoine-religieux-de-sedhiou': {
     titleWo: 'Mosquée bu Baghère',
-    excerptWo: 'Bérab bu patrimoine religieux bu Sédhiou, ak mémoire ak pratiques yu communauté.',
+    excerptWo: 'Bérab bu patrimoine religieux bu Sédhiou, te lëkkale njulli, architecture ak mémoire bu communauté.',
     contentWo: `### Jëmmal
 
 Mosquée bu Baghère bokk na ci patrimoine religieux bu Sédhiou. Bérab bi mën nañu ko xool ci wàllu diine, architecture ak mémoire bu communauté.
 
-### Diine ak communauté
+### Njulli ak communauté
 
-Mosquée dafay nekk bérab bu njulli, ndaje ak jàngale. Pratiques yi ñuy def ci bérab bi mën nañu bokk ci dundug communauté ak ci patrimoine vivant.
+Mosquée dafay nekk bérab bu njulli, ndaje ak jàngale. Pratiques yi ñuy def ci bérab bi bokk nañu ci dundug communauté ak ci patrimoine bu wéy di dund.
 
 ### Architecture ak mémoire
 
@@ -646,15 +646,15 @@ Tabaxu mosquée bi mën na joxe xibaar ci savoir-faire ak melokaan bu bérab bi.
 
 ### Sédhiou ak patrimoine
 
-Sédhiou am na ay bérab yu patrimoine bu aju ci diine, aada ak histoire. Mosquée bu Baghère mën na bokk ci ensemble bu bérab yi ñuy aar ak xam.
+Sédhiou am na ay bérab yu patrimoine bu aju ci diine, aada ak histoire. Mosquée bu Baghère mën na bokk ci bérab yi ñuy aar, xam ak denc.
 
 ### Transmission
 
-Aar patrimoine mooy jàngale xam-xam ci architecture, pratiques ak mémoire. Waxtaan, njàng ak dundug communauté mën nañu tax patrimoine bi wéy ci ñi ñëw gannaaw.`,
+Aar patrimoine mooy denc xam-xam ci architecture, pratiques ak mémoire. Waxtaan, njàng ak dundug communauté mën nañu jàppale ci wéyal patrimoine bi ci jamono yi ñëw gannaaw.`,
   },
   'mosquee-de-karantaba-patrimoine-religieux-de-sedhiou': {
     titleWo: 'Mosquée bu Karantaba',
-    excerptWo: 'Bérab bu patrimoine religieux bu Sédhiou, te boole diine, mémoire ak architecture.',
+    excerptWo: 'Bérab bu patrimoine religieux bu Sédhiou, te boole njulli, mémoire ak architecture.',
     contentWo: `### Jëmmal
 
 Mosquée bu Karantaba bokk na ci patrimoine religieux bu Sédhiou. Bérab bi mën nañu ko xool ci contexte bu diine ak ci mémoire bu dëkk bi.
@@ -680,7 +680,7 @@ Xam-xam bu bérab bi mën na jaar ci waxtaan, njàng ak gis-gis. Aar mosquée bi
     excerptWo: 'Bérab bu mémoire architecturale bu Sédhiou ak Casamance, te bokk ci patrimoine bu territoire.',
     contentWo: `### Jëmmal
 
-Château bu Sédhiou bokk na ci mémoire architecturale bu territoire. Bérab bu ni mel mën nañu ko xool ngir xam yoonu tabax, histoire ak transformations yu bérab bi.
+Château bu Sédhiou bokk na ci mémoire architecturale bu territoire. Bérab bu ni mel mën nañu ko xool ngir xam yoonu tabax, histoire ak soppi-soppi yu bérab bi.
 
 ### Architecture ak territoire
 
@@ -688,11 +688,11 @@ Tabax bi dafay wone ay choix architecturaux ak savoir-faire yu aju ci contexte b
 
 ### Mémoire
 
-Bérab bu patrimoine mën nañu denc ay traces yu histoire. Château bi mën na nekk benn ci repères yi ñuy jëfandikoo ngir xam mémoire bu Sédhiou ak yoonu territoire bi di soppi.
+Bérab bu patrimoine mën na denc ay traces yu histoire. Château bi mën na nekk benn ci repères yi ñuy jëfandikoo ngir xam mémoire bu Sédhiou ak yoonu territoire bi di soppi.
 
 ### Casamance ak patrimoine
 
-Casamance am na patrimoine bu bari ci architecture, culture ak mémoire. Château bu Sédhiou mën na bokk ci ensemble bu bérab yi ñuy xool ngir xam ak aar histoire bu territoire.
+Casamance am na patrimoine bu bari ci architecture, culture ak mémoire. Château bu Sédhiou mën na bokk ci bérab yi ñuy xool ngir xam ak aar histoire bu territoire.
 
 ### Transmission ak conservation
 
@@ -749,15 +749,15 @@ Jàngale ci Cap Manuel mën na boole préhistoire, géologie ak histoire bu terr
     excerptWo: 'Tradition rituelle bu Casamance, te di wone aada, pratiques ak transmission.',
     contentWo: `### Jëmmal
 
-Kagnalene Thionk bokk na ci patrimoine culturel bu Casamance. Fiche bi dafay xool tradition rituelle bi ci yoonu aada, pratiques ak transmission, te du jox ay généralités ci nit ñi.
+Kagnalene Thionk bokk na ci patrimoine culturel bu Casamance. Fiche bi dafay xool tradition rituelle bi ci yoonu aada, pratiques ak transmission, te war nañu ko xool ci contexte bu bérab bi.
 
 ### Aada ak pratique
 
-Rituels yi mën nañu bokk ci yoonu dund ak di séddale xam-xam ci communauté. Ñu koy xool ci contexte bu patrimoine, te ñu war a aar contexte ak sens bu pratique bi.
+Rituels yi mën nañu bokk ci yoonu dund ak di séddale xam-xam ci communauté. Ñu koy xool ci contexte bu patrimoine, te war nañu aar sens ak yoonu pratique bi.
 
 ### Transmission
 
-Xam-xam bu tradition mën na jaar ci waxtaan, jàngale ak gis-gis ci ay génération. Transmission du rekk jox xibaar; dafay boole mémoire, pratiques ak yoonu denc aada.
+Xam-xam bu tradition mën na jaar ci waxtaan, jàngale ak gis-gis ci ay génération. Transmission dafay boole mémoire, pratiques ak yoonu denc aada.
 
 ### Casamance ak diversité
 
@@ -780,7 +780,7 @@ Rite yi am nañu ay sens yu aju ci histoire ak dundug communauté. Ngir xam Goun
 
 ### Transmission
 
-Xam-xam bu rite mën na jaar ci waxtaan, jàngale ak yoonu transmission ci génération yi. Mémoire bu pratique bi dafay bokk ci patrimoine vivant.
+Xam-xam bu rite mën na jaar ci waxtaan, jàngale ak yoonu transmission ci génération yi. Mémoire bu pratique bi dafay bokk ci patrimoine bu wéy di dund.
 
 ### Respect ak compréhension
 
