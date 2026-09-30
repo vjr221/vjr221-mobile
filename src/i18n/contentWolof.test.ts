@@ -1184,4 +1184,15 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+
+  it('covers the Wolof Carabane corpus cleanup wave 108', () => {
+    const canonical = getWolofContentBySlug('ile-karabane-memoire-architecture-casamance');
+    expect(getWolofContentBySlug('carabane')).toBeUndefined();
+    expect(canonical?.titleWo).toBeTruthy();
+    expect(canonical?.excerptWo).toBeTruthy();
+    expect(canonical?.contentWo).toContain('###');
+    expect((canonical?.contentWo ?? '').length).toBeGreaterThan(500);
+  });
+
+
 });
