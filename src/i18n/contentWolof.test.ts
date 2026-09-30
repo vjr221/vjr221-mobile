@@ -1124,4 +1124,22 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof culture and creators consolidation wave 105', () => {
+    const slugs = [
+      'fatou-cisse-choregraphe',
+      'andreya-ouamba-choregraphe-fondateur-de-la-compagnie-1er-temps',
+      'mame-birame-diouf',
+      'kolibantang',
+      'lamine-konte-griot-virtuose-de-la-kora',
+      'nafissatou-dia-diouf',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(250);
+    }
+  });
+
 });
