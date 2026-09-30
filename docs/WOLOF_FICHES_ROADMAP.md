@@ -511,3 +511,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+## Mise à jour — vague 105
+
+- **Vague 105 : consolidation linguistique culture, danse, création et littérature** — Fatou Cissé, Andréya Ouamba, Mame Birame Diouf, Kolibantang, Lamine Konté et Nafissatou Dia Diouf.
+- Relecture du Wolof pour améliorer naturel, précision des formulations et enchaînements, sans modifier les clés ni les données françaises.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
+- Aucun APK intermédiaire : validation CI d’abord.
