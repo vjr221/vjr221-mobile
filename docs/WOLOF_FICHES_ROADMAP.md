@@ -539,3 +539,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Le contenu français et les données de référence ne sont pas modifiés.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+## Mise à jour — vague 108
+
+- **Vague 108 : nettoyage d’intégrité du corpus autour de Carabane** — suppression du reliquat `carabane` très court présent dans `contentWolofExtraB.ts`, sans créer de nouvelle fiche concurrente.
+- La fiche canonique conservée est `ile-karabane-memoire-architecture-casamance`, déjà plus riche et structurée dans `contentWolofExtraO.ts`.
+- Aucun contenu français modifié et aucune nouvelle clé créée.
+- Test dédié ajouté pour vérifier l’absence de `carabane` dans le corpus fusionné et la présence de la fiche canonique.
+- Aucun APK intermédiaire : validation CI d’abord.
