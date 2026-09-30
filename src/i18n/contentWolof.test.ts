@@ -1163,4 +1163,25 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof cultural heritage consolidation wave 107', () => {
+    const slugs = [
+      'mosquee-de-baghere-patrimoine-religieux-de-sedhiou',
+      'mosquee-de-karantaba-patrimoine-religieux-de-sedhiou',
+      'chateau-de-sedhiou-memoire-architecturale-de-la-casamance',
+      'femme-kagnalene-thionk-tradition-rituelle-de-casamance',
+      'goungoudongho-rite-traditionnel-de-circoncision',
+      'caayde-patrimoine-culturel-peul-du-matam',
+      'diokaa-pratique-culturelle-traditionnelle-du-senegal-oriental',
+      'fifiree-ceremonie-traditionnelle-du-matam',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
 });
