@@ -519,3 +519,13 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé.
 - Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 106
+
+- **Vague 106 : consolidation linguistique de 8 fiches de tourisme régional existantes** — Louga, Kaffrine, Matam, Tambacounda, Ziguinchor, Kolda, Sédhiou et Kédougou.
+- Relecture et réécriture ciblées du Wolof pour réduire les formulations génériques, améliorer les enchaînements et mieux distinguer territoire, environnement, patrimoine, aada et tourisme responsable.
+- Les clés existantes ont été conservées : **aucun nouveau slug, aucune suppression et aucun doublon**.
+- Le contenu français n’est pas modifié et aucun fait précis non présent dans les fiches n’a été ajouté.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
+- Aucun APK intermédiaire : validation CI avant la poursuite du chantier.
