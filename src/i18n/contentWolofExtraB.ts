@@ -257,188 +257,188 @@ Dakar mooy espace bu activité culturelle bu bari. Centre yi ñuy dajale public 
 Activités culturelles mën nañu jàppale ci denc mémoire ak yoonu création. Documentation, programmation ak transmission mën nañu tax patrimoine culturel bi wéy di dund ci jamono yi.`,
   },
   'tourisme-louga-terroirs-nord': {
-    titleWo: 'Tourisme ci Louga ak terroirs yu norte',
-    excerptWo: 'Louga ak terroir yi mu bokk mën nañu jox yoonu découverte bu patrimoine, paysage ak aada.',
+    titleWo: 'Tourisme ci Louga ak terroir yu bëj-gànnaar',
+    excerptWo: 'Louga ak ay terroiram mën nañu jox yoonu gis patrimoine, melokaan, aada ak savoir-faire yu bëj-gànnaar.',
     contentWo: `### Jëmmal
 
-Tourisme ci Louga mën na boole découverte bu terroir, patrimoine ak paysages yu norte. Réew mi am na ay bérab yu wuute, te yoonu tourisme war nañu teg solo ci contexte bu bérab bi.
+Tourisme ci Louga mën na boole gis dëkk yi, terroir yi, patrimoine ak melokaan yu bëj-gànnaar. Yoonu découverte bi mën na yokk xam-xam ci dund, aada ak savoir-faire yu bokk ci territoire bi.
 
 ### Terroir ak patrimoine
 
-Louga bokk na ci espace bu patrimoine culturel ak historique. Terroir yi mën nañu wone yoonu dund, activité ak savoir-faire yu aju ci territoire.
+Louga nekk na ci benn espace bu am aada ak patrimoine yu wuute. Terroir yi mën nañu wone yoonu dund, liggéey, artisanat ak xam-xam yu ñu di jàppale ci diggante générations.
 
-### Paysage ak découverte
+### Melokaan ak découverte
 
-Paysage bu norte am na ay melokaan yu wuute. Seet bérab yi ak xam environnement bi mën na nekk benn ci yoonu tourisme bu respectueux.
+Melokaan yu bëj-gànnaar yi mën nañu tax nit ñi gën a xam territoire bi. Seet bérab yi ak dégg waxtaanu waa dëkk yi mën na yokk njàng ci yoonu découverte bi.
 
 ### Aada ak savoir-faire
 
-Patrimoine culturel mën na boole pratiques, artisanat, gastronomie ak waxtaan. Jàng ci savoir-faire yi mën na jàppale ci xam richesse bu terroir.
+Artisanat, gastronomie, waxtaan ak yeneen pratiques culturelles bokk nañu ci alalu terroir yi. Wone leen ci yoonu tourisme war nañu boole respect ak denc xam-xam bi.
 
-### Tourisme ak aar
+### Aar ak tourisme
 
-Tourisme bu baax war na boole découverte ak aar bérab yi. Respect bu environnement, patrimoine ak nit ñi mën na jàppale ci wéyal valeur bu terroir yi.`,
+Tourisme bu am yàgg war nañu boole découverte ak aar. Respectu environnement, patrimoine ak waa dëkk yi mën na jàppale ci yokk njariñu tourisme ci territoire bi.`,
   },
   'tourisme-kaffrine-saloum-interieur': {
-    titleWo: 'Tourisme ci Kaffrine ak Saloum intérieur',
-    excerptWo: 'Kaffrine mën na jox yoonu découverte bu terroir, paysage ak patrimoine bu Saloum intérieur.',
+    titleWo: 'Tourisme ci Kaffrine ak biir Saloum',
+    excerptWo: 'Kaffrine ak biir Saloum mën nañu jox yoonu gis terroir, melokaan, aada ak patrimoine bu dëkk yi.',
     contentWo: `### Jëmmal
 
-Tourisme ci Kaffrine mën na teg solo ci découverte bu terroirs, paysages ak patrimoine bu Saloum intérieur. Yoonu découverte war nañu ko xool ci contexte bu territoire ak environnement.
+Tourisme ci Kaffrine mën na boole découverte bu terroir yi ak patrimoine bu biir Saloum. Yoonu gis territoire bi mën nañu ko lëkkale ak xam-xam ci dundug waa dëkk yi ak environnement.
 
 ### Terroir ak dund
 
-Terroir yi mën nañu wone activité yu aju ci agriculture ak dundug askan. Xam yoonu dund ci bérab bi mën na jàppale ci compréhension bu patrimoine local.
+Agriculture ak yeneen liggéey yu aju ci suuf bokk nañu ci dundug terroir yi. Gis yoonu dund ak savoir-faire yi mën na jàppale ci xam ni askan wi di doxale dundam.
 
-### Paysage
+### Melokaan ak environnement
 
-Saloum intérieur am na paysages yu wuute. Seet bérab yi ak xool environnement bi mën na nekk yoonu découverte bu lëkkale tourisme ak xam-xam.
-
-### Culture ak savoir-faire
-
-Patrimoine culturel mën na boole gastronomie, artisanat, waxtaan ak pratiques yu aju ci territoire. Transmission bu xam-xam yi mën nañu jàppale ci wéyal mémoire bu terroir.
-
-### Aar ak tourisme
-
-Tourisme war nañu boole plaisir bu découverte ak respect bu bérab yi. Aar environnement, patrimoine ak ressources locales mën na jàppale ci tourisme bu am yàgg.`,
-  },
-  'tourisme-matam-vallee-fleuve': {
-    titleWo: 'Tourisme ci Matam ak wàllu dexu Senegaal',
-    excerptWo: 'Matam ak vallée bu dexu Senegaal mën nañu jox yoonu découverte bu paysage, patrimoine ak dund bu Fouta-Toro.',
-    contentWo: `### Jëmmal
-
-Tourisme ci Matam mën na teg solo ci découverte bu vallée bu dexu Senegaal, paysages ak patrimoine bu wàllu Fouta-Toro. Yoonu découverte war nañu boole xam-xam ci territoire ak respect bu environnement.
-
-### Dexu Senegaal ak territoire
-
-Dexu Senegaal am na solo ci dund ak histoire bu bérab yi mu jaar. Vallée bi lëkkale na ak agriculture, pêche ak yeneen activités yu aju ci ndox ak suuf.
-
-### Aada ak patrimoine
-
-Patrimoine bu Matam mën na boole aada, architecture, waxtaan ak savoir-faire. Xam yoonu dund bu territoire bi mën na jàppale ci compréhension bu richesse bu wàllu dex bi.
-
-### Paysage ak découverte
-
-Seet paysages yi ak xam environnement bi mën na nekk benn ci yoonu tourisme. Yoonu découverte war nañu teg solo ci respect bu bérab yi ak nit ñi ci seen dund.
-
-### Tourisme bu am yàgg
-
-Tourisme bu am yàgg dafay boole découverte ak aar. Respect bu ressources, patrimoine ak environnement mën na jàppale ci wéyal valeur bu vallée bi.`,
-  },
-  'tourisme-tambacounda-senegal-oriental': {
-    titleWo: 'Tourisme ci Tambacounda ak Senegaal oriental',
-    excerptWo: 'Tambacounda ak Senegaal oriental mën nañu jox yoonu découverte bu nature, patrimoine ak paysages yu wuute.',
-    contentWo: `### Jëmmal
-
-Tourisme ci Tambacounda mën na boole découverte bu nature, patrimoine ak paysages bu Senegaal oriental. Territoire bi am na ay bérab yu wuute, te yoonu découverte war nañu teg solo ci environnement.
-
-### Nature ak Niokolo-Koba
-
-Senegaal oriental bokk na ci espace yu am biodiversité. Parc national du Niokolo-Koba mën na nekk benn ci bérab yu ñuy jàng ci nature ak aar environnement.
-
-### Paysage ak territoire
-
-Tambacounda ak yeneen bérab yi ci penku réew mi am nañu paysages yu wuute. Seet territoire bi mën na tax ñu xam lëkkaloo bi am diggante environnement ak dund.
-
-### Culture ak patrimoine
-
-Patrimoine culturel mën na boole savoir-faire, aada ak waxtaan. Yoonu tourisme mën na jàppale ci transmission bu xam-xam ci territoire bi.
-
-### Aar ak découverte
-
-Tourisme war nañu boole découverte ak conservation. Respect bu biodiversité, patrimoine ak nit ñi mën na jàppale ci tourism bu am yàgg.`,
-  },
-  'tourisme-ziguinchor': {
-    titleWo: 'Tourisme ci Ziguinchor ak Casamance',
-    excerptWo: 'Ziguinchor ak Casamance mën nañu jox yoonu découverte bu mangrove, paysage, patrimoine ak aada.',
-    contentWo: `### Jëmmal
-
-Tourisme ci Ziguinchor mën na teg solo ci découverte bu Casamance, paysages, mangrove ak patrimoine culturel. Bérab yi am nañu ay formes yu wuute, te contexte bu territoire war nañu ko tegtal.
-
-### Mangrove ak environnement
-
-Mangrove bokk na ci paysages yu Casamance. Ecosystème bi lëkkale na ak ndox, biodiversité ak activités yu aju ci territoire. Aar ko mooy benn ci mbir yu am solo.
-
-### Patrimoine ak mémoire
-
-Patrimoine bu Casamance mën na boole architecture, waxtaan, savoir-faire ak bérab yu mémoire. Xam-xam ci bérab yi mën nañu jàppale ci découverte bu am njàng.
+Biir Saloum am na ay melokaan yu wuute. Seet bérab yi, xam suuf si ak toppatoo environnement bi mën nañu boole tourisme ak njàng.
 
 ### Aada ak savoir-faire
 
-Activités culturelles mën nañu wone ay pratiques ak savoir-faire yu aju ci territoire. Tourisme war nañu teg solo ci contexte ak respect bu ñi di denc xam-xam bi.
+Gastronomie, artisanat, waxtaan ak pratiques yu aada bokk nañu ci patrimoine bi. Denc ak jàngale xam-xam yi mën nañu yokk solo bu terroir yi.
 
-### Tourisme bu am yàgg
+### Aar ak yàgg
 
-Découverte bu Casamance war nañu boole respect bu environnement ak patrimoine. Aar mangrove ak yeneen ressources mën nañu jàppale ci wéyal valeur bu territoire.`,
+Tourisme war nañu wone territoire bi te aar ko. Toppatoo environnement, patrimoine ak ressources locales mën na jàppale ci tourisme bu am yàgg ak njariñ.`,
   },
-  'tourisme-kolda': {
-    titleWo: 'Tourisme ci Kolda ak Haute Casamance',
-    excerptWo: 'Kolda ak Haute Casamance mën nañu jox yoonu découverte bu Fouladou, paysage, aada ak patrimoine.',
+  'tourisme-matam-vallee-fleuve': {
+    titleWo: 'Tourisme ci Matam ak waalo dexu Senegaal',
+    excerptWo: 'Matam ak waalo dexu Senegaal mën nañu jox yoonu gis melokaan, patrimoine ak dundug Fouta-Toro.',
     contentWo: `### Jëmmal
 
-Tourisme ci Kolda mën na teg solo ci découverte bu Haute Casamance ak Fouladou. Paysage, patrimoine ak savoir-faire yi bokk nañu ci mbir yi mën a tax ñu xam territoire bi.
+Tourisme ci Matam mën na boole gis waalo dexu Senegaal, melokaan ak patrimoine bu Fouta-Toro. Yoonu découverte bi mën nañu ko yokk ak xam-xam ci dundug waa dëkk yi ak suuf si.
 
-### Paysage ak environnement
+### Dexu Senegaal ak dund
 
-Haute Casamance am na paysages yu wuute ak espaces yu am nature. Xool environnement bi dafay jàppale ci xam yoonu dund ak activité yu aju ci territoire.
+Dexu Senegaal am na solo ci dund ak histoire bu waa dëkk yi. Ndamli ndox mi lëkkale na ak agriculture, pêche ak yeneen activités yu aju ci waalo bi.
 
 ### Aada ak patrimoine
 
-Patrimoine culturel mën na boole waxtaan, artisanat, gastronomie ak yeneen pratiques. Jàng ci aada ak savoir-faire yi mën na jàppale ci transmission bu xam-xam.
+Patrimoine bu Matam mën na boole aada, architecture, waxtaan ak savoir-faire. Xam yoonu dund yi mën na jàppale ci gën a xam richesse bu territoire bi.
 
-### Fouladou ak mémoire
+### Melokaan ak découverte
 
-Fouladou bokk na ci mémoire bu territoire bi. Documentation ak waxtaan mën nañu jàppale ci denc xam-xam ci histoire ak dund.
+Melokaanu waalo bi ak dëkk yi ci wetug dex bi mën nañu jox ay yoon yu découverte. Gis bérab yi war nañu boole respectu waa dëkk yi ak seen dund.
 
-### Aar ak tourisme
+### Tourisme bu am yàgg
 
-Tourisme bu am yàgg war nañu boole découverte ak respect bu bérab yi. Aar environnement, patrimoine ak ressources locales mën na jàppale ci wéyal tourisme bi.`,
+Tourisme bu am yàgg dafay boole gis bérab yi ak aar ressources yi. Toppatoo ndox, patrimoine ak environnement mën na jàppale ci denc alalu waalo bi.`,
   },
-  'tourisme-sedhiou': {
-    titleWo: 'Tourisme ci Sédhiou ak Casamance',
-    excerptWo: 'Sédhiou mën na jox yoonu découverte bu paysages, vallées, patrimoine ak aada bu Casamance.',
+  'tourisme-tambacounda-senegal-oriental': {
+    titleWo: 'Tourisme ci Tambacounda ak Senegaal oriental',
+    excerptWo: 'Tambacounda ak Senegaal oriental mën nañu jox yoonu gis nature, patrimoine ak melokaan yu wuute.',
     contentWo: `### Jëmmal
 
-Tourisme ci Sédhiou mën na boole découverte bu vallées, forêts, patrimoine ak aada bu Casamance. Yoonu découverte war nañu teg solo ci contexte bu territoire.
+Tourisme ci Tambacounda mën na boole découverte bu nature, patrimoine ak melokaan yu Senegaal oriental. Yoonu gis territoire bi mën na yokk xam-xam ci environnement ak aada yi.
 
-### Paysage ak biodiversité
+### Nature ak Niokolo-Koba
 
-Forêts, vallées ak yeneen espaces naturels bokk nañu ci melokaan bu bérab bi. Aar biodiversité dafay bokk ci mbir yu am solo ci tourisme bu am yàgg.
+Senegaal oriental am na ay bérab yu am biodiversité. Parc national du Niokolo-Koba bokk na ci bérab yu am solo ci aar nature ak jàng ci njàngum environnement.
+
+### Melokaan ak territoire
+
+Tambacounda ak yeneen terroir yu penku réew mi am nañu melokaan yu wuute. Gis seen suuf, àll ak dëkk yi mën na tax ñu gën a xam lëkkaloo bi am diggante nature ak dund.
+
+### Culture ak patrimoine
+
+Patrimoine culturel bi mën nañu ko gis ci aada, savoir-faire ak waxtaan yu waa dëkk yi. Tourisme mën na jàppale ci wone xam-xam yi, su ñu denc leen ak respect.
+
+### Aar ak découverte
+
+Découverte war nañu ànd ak conservation. Aar biodiversité, patrimoine ak environnement mën na jàppale ci tourism bu am yàgg te waa dëkk yi bokk ci njariñam.`,
+  },
+  'tourisme-ziguinchor': {
+    titleWo: 'Tourisme ci Ziguinchor ak Casamance',
+    excerptWo: 'Ziguinchor ak Casamance mën nañu jox yoonu gis mangrove, melokaan, patrimoine ak aada yu wuute.',
+    contentWo: `### Jëmmal
+
+Tourisme ci Ziguinchor mën na boole découverte bu Casamance, mangrove, melokaan ak patrimoine culturel. Yoonu gis territoire bi war nañu ko def ci respectu waa dëkk yi ak environnement.
+
+### Mangrove ak ndox
+
+Mangrove bokk na ci melokaan yu Casamance. Ecosystème bi lëkkale na ak ndox, biodiversité ak ay liggéey yu aju ci territoire. Aar mangrove bi am na solo ngir denc ressources yi.
 
 ### Patrimoine ak mémoire
 
-Patrimoine bu Sédhiou mën na boole architecture, histoire, waxtaan ak savoir-faire. Xam bérab yi mën na tax ñu gën a xam mémoire bu territoire.
+Patrimoine bu Casamance mën na boole architecture, waxtaan, savoir-faire ak bérab yu am mémoire. Gis bérab yi ak dégg waxtaan yi mën na yokk njàng ci histoire bu territoire bi.
+
+### Aada ak savoir-faire
+
+Pratiques culturelles, artisanat ak yeneen savoir-faire mën nañu wone diversité bu Casamance. Tourisme war nañu leen wone ci seen contexte te respect denckat yi.
+
+### Tourisme bu am yàgg
+
+Découverte bu Casamance war nañu ànd ak aar environnement ak patrimoine. Toppatoo mangrove ak yeneen ressources locales mën na jàppale ci yàggal njariñu tourisme bi.`,
+  },
+  'tourisme-kolda': {
+    titleWo: 'Tourisme ci Kolda ak Haute-Casamance',
+    excerptWo: 'Kolda ak Haute-Casamance mën nañu jox yoonu gis Fouladou, melokaan, aada ak patrimoine.',
+    contentWo: `### Jëmmal
+
+Tourisme ci Kolda mën na boole découverte bu Haute-Casamance ak Fouladou. Melokaan, patrimoine ak savoir-faire yi mën nañu tax nit ñi gën a xam territoire bi.
+
+### Melokaan ak environnement
+
+Haute-Casamance am na ay espace yu nature ak melokaan yu wuute. Gis environnement bi mën na jàppale ci xam yoonu dund ak liggéey yu aju ci territoire.
+
+### Aada ak patrimoine
+
+Patrimoine culturel bi mën na boole waxtaan, artisanat, gastronomie ak yeneen pratiques. Jàng ci aada yi ak savoir-faire yi mën na jàppale ci denc ak wéyal xam-xam bi.
+
+### Fouladou ak mémoire
+
+Fouladou bokk na ci mémoire bu territoire bi. Waxtaan ak denc xibaar yi mën nañu jàppale ci yokk xam-xam ci histoire ak dundug waa dëkk yi.
+
+### Aar ak tourisme
+
+Tourisme bu am yàgg war nañu boole découverte ak respectu bérab yi. Aar environnement, patrimoine ak ressources locales mën na jàppale ci wéyal tourisme bi.`,
+  },
+  'tourisme-sedhiou': {
+    titleWo: 'Tourisme ci Sédhiou ak Casamance',
+    excerptWo: 'Sédhiou mën na jox yoonu gis waalo, àll, patrimoine ak aada yu Casamance.',
+    contentWo: `### Jëmmal
+
+Tourisme ci Sédhiou mën na boole découverte bu waalo, àll, patrimoine ak aada yu Casamance. Yoonu gis territoire bi mën na yokk xam-xam ci environnement ak dundug waa dëkk yi.
+
+### Melokaan ak biodiversité
+
+Àll, waalo ak yeneen espaces naturels bokk nañu ci melokaanu bérab bi. Aar biodiversité dafay bokk ci mbir yu am solo ngir tourism bu am yàgg.
+
+### Patrimoine ak mémoire
+
+Patrimoine bu Sédhiou mën na boole architecture, histoire, waxtaan ak savoir-faire. Gis bérab yi ak dégg waxtaan yi mën na tax ñu gën a xam mémoire bu territoire bi.
 
 ### Culture ak transmission
 
-Pratiques culturelles ak savoir-faire mën nañu jaar ci transmission diggante générations. Tourisme mën na jàppale ci wone richesse bu patrimoine, su ñu teggee solo ci respect.
+Pratiques culturelles ak savoir-faire yi mën nañu jaar ci transmission diggante maam ak sëy. Tourisme mën na jàppale ci wone richesse bu patrimoine bi, su ñu teggee solo ci respect.
 
 ### Aar territoire
 
-Découverte bu Sédhiou war nañu boole plaisir ak responsabilité. Aar environnement ak patrimoine mën na jàppale ci wéyal valeur bu Casamance.`,
+Découverte bu Sédhiou war nañu ànd ak responsabilité. Aar environnement ak patrimoine mën na jàppale ci denc alalu Casamance ak yokk njariñu tourisme bi.`,
   },
   'tourisme-kedougou': {
-    titleWo: 'Tourisme ci Kédougou ak pays Bassari',
-    excerptWo: 'Kédougou mën na jox yoonu découverte bu paysages, chutes, patrimoine ak aada yu Senegaal oriental.',
+    titleWo: 'Tourisme ci Kédougou ak réewum Bassari',
+    excerptWo: 'Kédougou mën na jox yoonu gis melokaan, tóo, patrimoine ak aada yu Senegaal oriental.',
     contentWo: `### Jëmmal
 
-Tourisme ci Kédougou mën na boole découverte bu paysages, chutes ak patrimoine bu Senegaal oriental. Pays Bassari bokk na ci espaces yi ñuy jàng ci culture ak environnement.
+Tourisme ci Kédougou mën na boole découverte bu melokaan, tóo ak patrimoine bu Senegaal oriental. Réewum Bassari bokk na ci bérab yu am solo ci culture ak environnement.
 
-### Nature ak paysages
+### Nature ak melokaan
 
-Kédougou am na relief ak paysages yu wuute. Chutes, collines ak yeneen bérab yu nature mën na jox yoonu découverte bu lëkkale tourisme ak xam-xam.
+Kédougou am na relief ak melokaan yu wuute. Tóo, tunduwaay ak yeneen bérab yu nature mën na jox ay yoon yu découverte ak njàng ci environnement.
 
-### Pays Bassari ak patrimoine
+### Réewum Bassari ak patrimoine
 
-Patrimoine culturel mën na boole savoir-faire, waxtaan, pratiques ak mémoire. Xam contexte bu communautés ak bérab yi war nañu nekk ci bépp yoonu présentation bu patrimoine.
+Patrimoine culturel bi mën na boole savoir-faire, waxtaan, pratiques ak mémoire. Xam contexte bu communautés yi ak bérab yi war nañu nekk ci yoonu wone patrimoine bi.
 
-### Dindéfélo ak conservation
+### Dindéfélo ak aar
 
-Chutes de Dindéfélo bokk nañu ci bérab yu ñuy seet ci Kédougou. Conservation bu environnement ak respect bu territoire mën nañu jàppale ci tourisme bu am yàgg.
+Chutes de Dindéfélo bokk nañu ci bérab yu ñuy seet ci Kédougou. Aar environnement ak respectu territoire bi mën nañu jàppale ci tourisme bu am yàgg.
 
 ### Transmission
 
-Tourisme culturel mën na jàppale ci transmission bu xam-xam, su documentation ak respect bu patrimoine ak communautés nekk ci diggante bi.`,
+Tourisme culturel mën na jàppale ci transmission bu xam-xam, su documentation ak respectu patrimoine ak communautés yi nekk ci bérab yi.`,
   },
   'cimetiere-de-bel-air-patrimoine-historique-de-dakar': {
     titleWo: 'Cimetière bu Bel-Air — patrimoine historique bu Dakar',
