@@ -5,18 +5,18 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA_AR: Record<string, WolofContent> = {
   'fatou-cisse-choregraphe': {
     titleWo: 'Fatou Cissé — danseuse ak chorégraphe senegaaleer',
-    excerptWo: 'Danseuse ak chorégraphe, ci xolum danse contemporaine bu Afrique de l’Ouest.',
+    excerptWo: 'Danseuse ak chorégraphe, bokk na ci scène danse contemporaine bu Afrique de l’Ouest.',
     contentWo: `### Jëmmal
 
-Fatou Cissé mooy danseuse ak chorégraphe senegaaleer. Née na ci Dakar, te xam nañu ko ci danse contemporaine bu Afrique de l’Ouest.
+Fatou Cissé mooy danseuse ak chorégraphe senegaaleer. Juddu na ci Dakar, te xam nañu ko ci liggéeyu danse contemporaine ci Afrique de l’Ouest.
 
 ### Jàng ak début
 
-Tambali na danse ci Manhattan Dance School ci Dakar, gannaaw mu xam formes contemporaines ak liggéey ak Compagnie 1er Temps.
+Tambali na jàng danse ci Manhattan Dance School ci Dakar. Gannaaw loolu, xam na formes contemporaines te liggéey na ak Compagnie 1er Temps.
 
-### Création
+### Jëf yi ak création
 
-Ci 2012, sos na solo « Regarde-moi encore », di seet ci place bu jigéen ci société senegaaleer. Ci « Le Bal du Cercle », dafa jëfandikoo tradition bu tanebeer ci langage chorégraphique bu jamono jii.
+Ci 2012, sos na solo « Regarde-moi encore », mu di xool ci tolluwaayu jigéen ci société senegaaleer. Ci « Le Bal du Cercle », dafa jëfandikoo tradition bu tanebeer ci langage chorégraphique bu jamono jii.
 
 ### Rattachement
 
@@ -31,11 +31,11 @@ Andréya Ouamba mooy danseur ak chorégraphe bu juddu ci Pointe-Noire, Congo-Bra
 
 ### Compagnie 1er Temps
 
-Ci 2000, bi mu dëkk Dakar, sos na Compagnie 1er Temps te mooy directeur artistique bu compagnie bi.
+Ci 2000, bi mu dëkk Dakar, sos na Compagnie 1er Temps, te mu nekk directeur artistique bu compagnie bi.
 
 ### Création
 
-Première création bi, « Pluriel », wone nañu ko ci festival Kaay Fecc ci 2001. Ci 2006, duo « Impro-Visé_2 » jële na premier prix ci Rencontres chorégraphiques de l’Afrique ak de l’océan Indien.
+Créationam bu njëkk, « Pluriel », wone nañu ko ci festival Kaay Fecc ci 2001. Ci 2006, duo « Impro-Visé_2 » jële na premier prix ci Rencontres chorégraphiques de l’Afrique ak de l’océan Indien.
 
 ### Jokkoo
 
@@ -46,7 +46,7 @@ Andréya Ouamba liggéey na ak artistes ak compagnies yu bitim-réew, te di yokk
     excerptWo: 'Ministër bu aada ak patrimoine historique classé ci nguurug Abdoulaye Wade.',
     contentWo: `### Jëmmal
 
-Mame Birame Diouf doon na ministre bu Senegaal ci wàllu Culture ak Patrimoine historique classé, ci nguurug Abdoulaye Wade.
+Mame Birame Diouf doon na ministre bu Senegaal bu wàllu Culture ak Patrimoine historique classé, ci nguurug Abdoulaye Wade.
 
 ### Aada ak làkk yu réew mi
 
@@ -61,7 +61,7 @@ Selon APS, Mame Birame Diouf bokk na ci pilotage bu Festival mondial des arts n�
     excerptWo: 'Komun bu agriculture ci département Goudomp, région Sédhiou, ci Casamance.',
     contentWo: `### Jëmmal
 
-Kolibantang mooy commune bu agriculture ci département Goudomp, région Sédhiou. Bokk na ci arrondissement Karantaba, ci zone bu Pakao.
+Kolibantang mooy commune bu agriculture ci département Goudomp, ci région Sédhiou. Bokk na ci arrondissement Karantaba, ci zone bu Pakao.
 
 ### Géeographie ak histoire
 
@@ -80,7 +80,7 @@ Kolibantang bokk na ci organisation bu Festival international du Pakao ak Karant
     excerptWo: 'Griot ak virtuose bu kora, figure bu musique mandingue senegaaleer.',
     contentWo: `### Jëmmal
 
-Lamine Konté doon na griot ak koraïste mandingue senegaaleer, te bokk na ci artistes yi am solo ci histoire bu musique bu kora.
+Lamine Konté doon na griot ak koraïste mandingue senegaaleer, te bokk na ci artistes yu am solo ci taariixu musique bu kora.
 
 ### Kora ak formation
 
@@ -95,7 +95,7 @@ Lamine Konté des na ci mémoire bu musique mandingue ak ci rayonnement bu kora 
     excerptWo: 'Écrivaine ak chroniqueuse senegaaleer, ci littérature francophone.',
     contentWo: `### Jëmmal
 
-Nafissatou Dia Diouf mooy écrivaine ak chroniqueuse senegaaleer, bind ci français. Bokk na ci voix yu bees yu littérature francophone bu Senegaal.
+Nafissatou Dia Diouf mooy bindkat ak chroniqueuse senegaaleer, te bind ci français. Bokk na ci voix yu bees yu littérature francophone bu Senegaal.
 
 ### Bind ak littérature
 
