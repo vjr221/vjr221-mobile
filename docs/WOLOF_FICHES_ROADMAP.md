@@ -503,3 +503,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - **Vague 103 : 6 fiches nature, patrimoine et territoire consolidées** — Mosquée de Divinity, AMP Bamboung, Réserve du Ndiaël, Dexu Saalum, Mar Lodj et Eloubaline.
 - Contenus Wolof structurés et enrichis ; aucun nouveau slug créé.
 - Validation CI requise avant poursuite.
+
+## Mise à jour — vague 104
+
+- **Vague 104 : consolidation linguistique du pack territorial des départements** — Thiès, Tivaouane, Bakel, Fatick, Rufisque et Sédhiou.
+- Relecture du Wolof pour réduire les répétitions, améliorer les enchaînements et rendre les formulations territoriales plus naturelles, sans modifier les faits déjà présents.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé.
+- Test dédié ajouté avec contrôle de présence, structure Markdown et longueur minimale.
+- Aucun APK intermédiaire : validation CI d’abord.
