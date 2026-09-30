@@ -601,11 +601,7 @@ Senegaal am na ay traditions religieuses yu wuute ak ay bérab yu aju ci context
 
 Denc patrimoine religieux mooy denc tabax, mémoire ak xam-xam. Documentation, njàng ak conservation mën nañu jàppale ci jox valeur bu bérab yi ci ñi ñëw gannaaw.`,
   },
-  'carabane': {
-    titleWo: 'Carabane',
-    excerptWo: 'Dunu ak aada ci Casamance.',
-    contentWo: `### Jëmmal\n\nCarabane : île, histoire, aada ak tourisme ci Casamance.`,
-  },
+
   'thiere-boulettes-couscous-mil-sauce-boulettes': {
     titleWo: 'Thiéré boulettes',
     excerptWo: 'Thiéré buñu def ak mil ak boulettes, benn ci lekk yu bokk ci patrimoine culinaire bu Senegaal.',
