@@ -1094,4 +1094,34 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
   }
 });
+  it('covers the Wolof department consolidation wave 104', () => {
+    const slugs = [
+      'departement-de-thies',
+      'departement-de-tivaouane',
+      'departement-de-bakel',
+      'departement-de-fatick',
+      'departement-de-rufisque',
+      'departement-de-sedhiou',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(450);
+    }
+  });
+
+  it('keeps wave 104 department keys unique', () => {
+    const slugs = [
+      'departement-de-thies',
+      'departement-de-tivaouane',
+      'departement-de-bakel',
+      'departement-de-fatick',
+      'departement-de-rufisque',
+      'departement-de-sedhiou',
+    ];
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
 });
