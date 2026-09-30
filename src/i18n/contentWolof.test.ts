@@ -1142,4 +1142,25 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     }
   });
 
+  it('covers the Wolof regional tourism consolidation wave 106', () => {
+    const slugs = [
+      'tourisme-louga-terroirs-nord',
+      'tourisme-kaffrine-saloum-interieur',
+      'tourisme-matam-vallee-fleuve',
+      'tourisme-tambacounda-senegal-oriental',
+      'tourisme-ziguinchor',
+      'tourisme-kolda',
+      'tourisme-sedhiou',
+      'tourisme-kedougou',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
 });
