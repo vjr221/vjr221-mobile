@@ -795,7 +795,7 @@ Aar patrimoine culturel mooy denc mémoire, contexte ak xam-xam. Transmission bu
     excerptWo: 'Patrimoine culturel bu Matam, lëkkale ak aada, savoir-faire ak transmission ci contexte Peul.',
     contentWo: `### Jëmmal
 
-Caaydé bokk na ci patrimoine culturel bu Matam. Fiche bi dafay xool pratique bi ci contexte bu territoire, aada ak transmission, te dafay séddale patrimoine ci ay yoonu dund.
+Caaydé bokk na ci patrimoine culturel bu Matam. Fiche bi dafay xool pratique bi ci contexte bu territoire, aada ak transmission, te dafay teg solo ci yoonu dund.
 
 ### Aada ak savoir-faire
 
@@ -811,7 +811,7 @@ Matam bokk na ci espace bu patrimoine bu wuute. Pratiques yu aju ci territoire m
 
 ### Aar patrimoine
 
-Aar Caaydé mooy jàppale ci denc xam-xam ak mémoire. Jàng, documentation ak transmission mën nañu tax patrimoine bi wéy ci jamono yi ñëw.`,
+Aar Caaydé mooy jàppale ci denc xam-xam ak mémoire. Jàng, documentation ak transmission mën nañu tax patrimoine bi wéy ci jamono yi ñëw gannaaw.`,
   },
   'diokaa-pratique-culturelle-traditionnelle-du-senegal-oriental': {
     titleWo: 'Diokaa',
