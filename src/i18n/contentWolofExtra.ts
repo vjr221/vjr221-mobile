@@ -5,28 +5,78 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   'ile-de-fadiouth': {
     titleWo: 'Dunu Fadiouth',
-    excerptWo: 'Dunu coquillages ci Siin — aada Sereer ak patrimoine.',
-    contentWo: `### Jëmmal\n\nÎle de Fadiouth nekk na ci wetug Joal. Dunu bi dafa tabax ci coquillages ; aada Sereer ak cimetière chrétien-musulman.`,
+    excerptWo: 'Dunu coquillages ci Siin, bu lëkkale aada Sereer, patrimoine ak tourisme.',
+    contentWo: `### Jëmmal
+
+Dunu Fadiouth nekk na ci wetug Joal-Fadiouth, ci diiwaanu Fatick. Dunu bi ak coquillages yi di bokk ci melokaanu bérab bi, te aada Sereer ak patrimoine culturel di yokk soloam.
+
+### Aada ak patrimoine
+
+Fadiouth di wone digganteu nit ak géej. Coquillages yi, kër yi, bérab yu ñuy denc mémoire ak cimetière bi di bokk ci patrimoineu dunu bi. Dëkk bi di am it histoire ak pratiques culturelles yu ñuy jàppale ci transmissionu identitéu Sereer.
+
+### Tourisme ak conservation
+
+Dunu Fadiouth mën na nekk bérab bu jàng ci nature, culture ak histoire. Tourisme bu topp respectu environnement ak communauté di mën a jàppale économie locale, te conservationu patrimoine di am solo ngir dunu bi des ci yoon.`,
   },
   'cap-skirring': {
     titleWo: 'Cap Skirring',
-    excerptWo: 'Plage yu rafet ci Casamance — tourisme ak géej.',
-    contentWo: `### Jëmmal\n\nCap Skirring nekk na ci diiwaanu Ziguinchor. Plage, hotels ak nature — bérab bu tourisme bu Casamance.`,
+    excerptWo: 'Bérab bu tourisme ci Casamance, ak plages, nature ak vie locale.',
+    contentWo: `### Jëmmal
+
+Cap Skirring nekk na ci diiwaanu Ziguinchor, ci wetug géej bu Casamance. Bérab bi xam nañu ko ci plages, paysage naturel ak activité yu tourisme. Mu bokk ci destinations yi ñuy seet ci Casamance.
+
+### Géej ak nature
+
+Plages yi di bokk ci identitéu Cap Skirring. Géej, palmiers ak paysageu littoral di may bérab bi melokaan bu wuute. Nature bi mën a jàppale activité yu tourisme ak découverteu territoire.
+
+### Vie locale ak tourisme
+
+Hôtels, restaurants ak services yu tourisme di lëkkale visiteurs ak économie locale. Tourisme bu jàppale communauté yi, respectu environnement ak valorisationu culture di mën a yokk njariñu bérab bi ci yoon bu yàgg.`,
   },
   'pointe-des-almadies-dakar': {
     titleWo: 'Pointe des Almadies',
-    excerptWo: 'Sowwu bu gën a sowwu ci Cap-Vert.',
-    contentWo: `### Jëmmal\n\nPointe des Almadies mooy extrémité occidentale bu Cap-Vert. Restaurants, surf ak vista yu géej.`,
+    excerptWo: 'Sowwu gu bëgg a sowwu ci Cap-Vert, bérab bu am géej ak vie urbaine.',
+    contentWo: `### Jëmmal
+
+Pointe des Almadies mooy sowwu bu nekk ci péninsule du Cap-Vert, ci wetug Dakar. Bérab bi lëkkale géej, paysage littoral ak activité yu ville. Mu bokk ci bérab yi am solo ci géographie touristique Dakar.
+
+### Géej ak paysage
+
+Vista bu géej ak proximitéu océan di jox bérab bi melokaan bu wuute. Littoral bi di am solo ci loisirs, promenade ak yeneen activité yu jëmm ci géej, ci digganteu environnement ak vie urbaine.
+
+### Tourisme ak économie locale
+
+Restaurants, services ak activité yu loisirs di jàppale vie touristique bu Almadies. Valorisationu littoral ak gestionu environnement di am solo ngir tourisme ak dundug quartier yi mën a wéyandoo.`,
   },
   'plage-de-ngor': {
-    titleWo: 'Plage bu N\'Gor',
-    excerptWo: 'Plage ak dunu N\'Gor ci Dakar.',
-    contentWo: `### Jëmmal\n\nPlage de N\'Gor : dunu, surf, restaurants ak aada Lébou.`,
+    titleWo: 'Plage bu N’Gor',
+    excerptWo: 'Plage ak dunu N’Gor, ci digganteu géej, surf ak aada Lébou.',
+    contentWo: `### Jëmmal
+
+Plage bu N’Gor nekk na ci Dakar, ci wetug dunu N’Gor. Bérab bi lëkkale géej, activité yu loisirs ak vie locale. Aada Lébou di bokk ci identitéu territoire.
+
+### Géej ak loisirs
+
+Surf, baignade ak yeneen activité yu géej di bokk ci dundug plage bi. Dunu N’Gor di yokk melokaanu bérab bi, te proximitéu océan di may visiteurs ak wa dëkk yi espaceu détente ak découverte.
+
+### Aada ak tourisme
+
+N’Gor am na histoire ak culture bu lëkkale ak populationu Lébou. Tourisme bu jàppale respectu aada, environnement ak communauté di mën a yokk njariñu plage bi te aar patrimoineu littoral.`,
   },
   'thieboudiene-ceebu-jen': {
     titleWo: 'Ceebu jën (Thiéboudiène)',
-    excerptWo: 'Riz ak jën — mbuum bu nasyonaal bu Senegaal.',
-    contentWo: `### Jëmmal\n\nCeebu jën (thiéboudiène) mooy mbuum bu nasyonaal bu Senegaal. Riz, jën (thiof walla yeneen), diwtiir, tomate ak wutus yu local.\n\n### Xibaar\n\nAm na ceebu jën bu xonq (rouge) ak bu weex (blanc). Dañu koy lekk ci njël walla ngoon, ak waxtu yu mag. Thiof mooy jën bu gën a xam ci ceebu jën.`,
+    excerptWo: 'Ceebu jën mooy mbuum bu nasyonaal bu Senegaal, ak riz, jën ak légumes.',
+    contentWo: `### Jëmmal
+
+Ceebu jën, walla thiéboudiène, mooy mbuum bu am solo ci gastronomie bu Senegaal. Dañu koy def ak riz, jën, légumes ak sauce bu ñu defar ak ingrédients yu local. Mbuum bi bokk na ci dundug kër ak waxtu yu ñuy bokk lekk.
+
+### Ceebu jën bu xonq ak bu weex
+
+Am na melokaan yu wuute ci ceebu jën. Ceebu jën bu xonq di jëfandikoo tomate ci sauce bi, te bu weex di am sauce bu leer. Jën mën a wuute ci li waxtu ak li ñu am, te thiof bokk na ci jën yi ñuy jëfandikoo.
+
+### Aada ak transmission
+
+Ceebu jën du doon rekk recette; mu bokk ci patrimoineu culinaire. Xam-xamu defar, séddale mbuum ak lekkandoo di lëkkale génération yi. Gastronomie bi di wone solo bu jën, riz, légumes ak savoir-faireu cuisine ci identitéu Senegaal.`,
   },
   'ceebu-yapp': {
     titleWo: 'Ceebu yàpp',
