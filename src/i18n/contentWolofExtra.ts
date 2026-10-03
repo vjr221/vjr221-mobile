@@ -30,8 +30,8 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   },
   'ceebu-yapp': {
     titleWo: 'Ceebu yàpp',
-    excerptWo: 'Riz ak yàpp.',
-    contentWo: `### Jëmmal\n\nCeebu yàpp : riz ak yàpp (nag walla bëy), diwtiir ak wutus.`,
+    excerptWo: 'Lekk bu riz ak yàpp, bu bokk ci mbuum yu Senegaal.',
+    contentWo: `### Jëmmal\n\nCeebu yàpp mooy lekk buñu def ak riz ak yàpp, te mu bokk ci mbuum yu am solo ci Senegaal. Yàpp bi mën na doon nag, bëy walla yeneen yàpp yu ñu jëfandikoo ci lekk bi.\n\n### Def ak lekk\n\nRiz bi ñu dajale ak yàpp, diwtiir ak wutus yi ngir am xeeñ ak neex. Ceebu yàpp mën nañu ko lekk ci kër yi ak ci ay bérab yu ñuy jaay lekk, te jëfandikoo yi mën nañu wuute.\n\n### Aada ak patrimoine\n\nCeebu yàpp bokk na ci diversitéu lekk yu Senegaal. Melokaanam di wone solo bu riz, yàpp ak savoir-faireu cuisine am ci dundug bés-bés ak ci waxtu yu ñuy dajale.`,
   },
   'mafe': {
     titleWo: 'Mafé',
@@ -40,18 +40,18 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   },
   'domoda': {
     titleWo: 'Domoda',
-    excerptWo: 'Sauce bu tigadege ak vegetables.',
-    contentWo: `### Jëmmal\n\nDomoda nirook mafé, vegetables ak style bu local.`,
+    excerptWo: 'Lekk bu sauceu tomate ak tigadege, ak yàpp walla légumes.',
+    contentWo: `### Jëmmal\n\nDomoda mooy lekk bu ñu def ak sauceu tomate ak tigadege, te mën nañu ko boole ak yàpp walla légumes. Mu bokk ci lekk yu ñu xam ci cuisineu Senegaal.\n\n### Def ak xeeñ\n\nSauce bi di jëfandikoo tomate, tigadege ak yeneen ingrédients ngir joxe xeeñ ak neex. Yàpp bi mën na wuute, te lekk bi di ñu koy boole ak riz.\n\n### Aada ak transmission\n\nDomoda di wone ni arachide, tomate ak yeneen produits yu local mën a daje ci benn lekk. Savoir-faireu domoda di jaar ci kër yi ak ci transmissionu recettes ci génération yi.`,
   },
   'soupou-kandia': {
     titleWo: 'Suppu kandja',
-    excerptWo: 'Sauce bu gombo.',
-    contentWo: `### Jëmmal\n\nSuppu kandja : gombo, jën walla yàpp, lekk ak ceeb.`,
+    excerptWo: 'Sauce bu gombo, bu ñu mën a def ak jën walla yàpp ak ceeb.',
+    contentWo: `### Jëmmal\n\nSuppu kandja mooy lekk bu sauceu gombo. Ñu mën nañu ko def ak jën walla yàpp, te ñu koy lekk ak ceeb. Mu bokk ci mbuum yu sauce yi am solo ci cuisineu Senegaal.\n\n### Gombo ak préparation\n\nGombo bi di joxe texture bu leer ci sauce bi. Jën walla yàpp bi di yokk xeeñ ak protéines, te ceeb bi di boole lekk bi. Préparation bi mën na wuute ci kër yi ak ci terroir yi.\n\n### Patrimoine culinaire\n\nSuppu kandja di wone solo bu légumes, jën, yàpp ak céréales am ci diversitéu lekk. Recette bi di jaar ci xam-xam ak savoir-faireu cuisine, te transmission bi di aar patrimoine culinaire bi.`,
   },
   'thiakry': {
     titleWo: 'Thiakry',
-    excerptWo: 'Dessert bu mil ak meew.',
-    contentWo: `### Jëmmal\n\nThiakry : couscous de mil, meew, sukkar — dessert bu fêtes.`,
+    excerptWo: 'Dessert bu couscousu mil ak meew, bu ñu xam ci lekk yu Senegaal.',
+    contentWo: `### Jëmmal\n\nThiakry mooy dessert bu ñu def ak couscousu mil ak meew, te sukkar mën nañu ko yokk ngir neex. Mu bokk ci lekk yu ñu xam ci Senegaal, rawatina ci waxtu yu ñuy dajale.\n\n### Mil ak meew\n\nMil bi di joxe base bu dessert bi, meew bi di may ko texture ak neex. Ñu mën nañu yokk yeneen ingrédients ci recette bi, waaye base bi di des couscousu mil ak meew.\n\n### Aada ak waxtu yu ñuy dajale\n\nThiakry di bokk ci lekk yu ñuy waññi ci kër yi ak ci ay occasions yu ñuy dajale. Recette bi di wone solo bu mil am ci alimentation ak patrimoine culinaire bu Senegaal.`,
   },
   'cafe-touba': {
     titleWo: 'Kafe Touba',
@@ -65,8 +65,8 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   },
   'jus-de-bouye': {
     titleWo: 'Jus bu buy',
-    excerptWo: 'Jus bu baobab.',
-    contentWo: `### Jëmmal\n\nJus bu buy (bouye) : doom yu baobab, santé ak aada.`,
+    excerptWo: 'Naan bu ñu def ak buy, mburu baobab bu bokk ci patrimoine culinaire.',
+    contentWo: `### Jëmmal\n\nJus bu buy, walla bouye, mooy naan bu ñu def ak pulpeu fruitu baobab. Mu bokk ci naan yu ñu xam ci Senegaal, te ñu mën nañu ko naan sedd ci waxtu yu tàng.\n\n### Préparation\n\nPulpe bi di ñu dajale ak ndox, ba noppi ñu mën nañu ko filtre ngir am naan bu lëj. Sukkar mën nañu ko yokk ci melokaanu recette bi.\n\n### Aada ak patrimoine\n\nJus bu buy di bokk ci diversitéu naan yu local. Baobab am na it solo ci paysages ak patrimoine naturel bu Senegaal, te jëfandikoo fruit bi ci cuisine di wone xam-xamu terroir yi.`,
   },
   'jus-de-gingembre': {
     titleWo: 'Jus bu gingembre',
