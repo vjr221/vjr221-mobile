@@ -614,3 +614,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
 - Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
+
+## Mise à jour — vague 117
+
+- **Vague 117 : enrichissement de 2 fiches gastronomie/boissons** — Kafe Touba et Bissap.
+- Contenus Wolof développés autour de la préparation, des usages sociaux, de la gastronomie et de la valorisation économique.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+- Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
