@@ -574,3 +574,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 112
+
+- **Vague 112 : enrichissement de 3 fiches de gastronomie/culture alimentaire existantes** — Mafé, Baïla et Mbakhalou Saalum.
+- Contenus Wolof développés autour du contexte culinaire, de la préparation, du terroir et de la transmission.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
