@@ -654,3 +654,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
 - Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
+
+## Mise a jour - vague 122
+
+- Vague 122 : enrichissement de 4 fiches gastronomie - Thiere bassi salte, Lakk jen, Ndambe et Thiou.
+- Contenus Wolof developpes autour de la preparation, des produits locaux, des usages quotidiens, du patrimoine culinaire et de la transmission.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
