@@ -1304,6 +1304,18 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof destinations and food enrichment wave 119', () => {
+    const slugs = ['cap-skirring', 'pointe-des-almadies-dakar', 'ceebu-yapp'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('covers the Wolof food and heritage enrichment wave 118', () => {
     const slugs = ['plage-de-ngor', 'ceebu-yapp', 'baila', 'mbakhalou-saloum'];
     for (const slug of slugs) {
