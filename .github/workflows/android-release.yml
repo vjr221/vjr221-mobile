@@ -161,5 +161,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="android-v${APP_VERSION}-${GITHUB_SHA::7}"
-          NOTES="APK Android VJR 221 ${APP_VERSION} (versionCode 19). Commit ${GITHUB_SHA}. Monitoring post-render, GPS défensif (Près de moi), À découvrir ici, Wolof CMS + pack local. Release publique sideload."
+          VERSION_CODE="$(node -p 'require("./app.json").expo.android.versionCode')"
+          NOTES="APK Android VJR 221 ${APP_VERSION} (versionCode ${VERSION_CODE}). Commit ${GITHUB_SHA}. Monitoring post-render, GPS défensif (Près de moi), À découvrir ici, Wolof CMS + pack local Wolof consolidé. Release publique sideload."
           gh release create "$TAG" release/VJR221.apk release/VJR221.apk.sha256 --repo "${GITHUB_REPOSITORY}" --title "VJR 221 Android ${APP_VERSION}" --notes "$NOTES" --latest
