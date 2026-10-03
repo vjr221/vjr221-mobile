@@ -231,63 +231,79 @@ Jus bu gingembre bokk na ci naan yu ñuy def ci kër ak ci petite activité yu t
   },
   'thiere-bassi-salte': {
     titleWo: 'Thiéré bassi salté',
-    excerptWo: 'Lekk bu couscousu mil ak bassi salté, bu bokk ci patrimoine céréalier.',
+    excerptWo: 'Lekk bu couscousu mil ak bassi salté, bu bokk ci patrimoine céréalier ak aada lekk.',
     contentWo: `### Jëmmal
 
-Thiéré bassi salté mooy lekk buñu def ak couscousu mil ak bassi salté. Mu bokk ci patrimoine céréalier bu Senegaal, te di wone solo bu mil ak savoir-faireu cuisine am ci alimentation.
+Thiéré bassi salté mooy lekk bu ñu def ak couscousu mil ak bassi salté. Mu bokk ci patrimoine céréalier bu Senegaal, te di wone solo bu mil am ci mbay ak alimentation. Recette bi mën a wuute ci kër yi, waaye base bi di dëppoo ci jëfandikoo mil ak bassi salté.
 
 ### Mil ak préparation
 
-Thiéré bi di jëfandikoo mil, céréale bu am solo ci mbay ak lekk ci réew mi. Bassi salté bi di yokk melokaan ak neex ci recette bi, te préparation bi mën na wuute ci kër yi ak terroir yi.
+Mil mooy céréale bu am solo ci lekk yu Senegaal. Ñuy defar ko ci couscous, ba noppi ñu ko togg ak ndox. Bassi salté bi di yokk goût ak melokaan ci lekk bi. Waxtu togg ak quantitéu ndox di mën a soppi textureu thiéré bi.
 
-### Transmission
+### Aada ak terroir
 
-Lekk yi ñuy def ak mil di jaar ci transmissionu xam-xam ci njaboot yi. Thiéré bassi salté di bokk ci diversitéu patrimoine culinaire bu Senegaal.`,
+Thiéré di lëkkale mbay, cuisine ak dundug kër. Xam-xamu defar mil di jaar ci njaboot yi, te recettes yu mel ni bii di wone ni produits yu local mën a nekk ci xolum gastronomie. Ci ay terroir, ñuy soppi ingrédients yi ci li ñu am.
+
+### Transmission ak patrimoine
+
+Lekk bu mil di bokk ci transmissionu savoir-faireu cuisine. Mag ñi di jàngale ndaw ñi yoonu setal, defar ak togg mil. Denc recettes yu mel ni thiéré bassi salté di jàppale aar patrimoine culinaire ak diversitéu lekk yu Senegaal.`,
   },
   'poisson-braise-lakk-dieune': {
     titleWo: 'Lakk jën',
-    excerptWo: 'Jën bu ñu lakk ci taal, lekk bu lëkkale pêche ak cuisine.',
+    excerptWo: 'Jën bu ñu lakk ci taal, lekk bu lëkkale pêche, géej ak savoir-faireu cuisine.',
     contentWo: `### Jëmmal
 
-Lakk jën mooy jën bu ñu lakk ci taal, te mu bokk ci lekk yu lëkkale pêche ak cuisine. Ñu mën nañu ko gis ci plages, marchés ak bérab yu ñuy defar lekk ci wetu géej.
+Lakk jën mooy jën bu ñu lakk ci taal. Mu bokk ci lekk yu lëkkale pêche ak cuisine, rawatina ci dëkk yu wetu géej. Xeeñu taal bi ak goûtu jën bi di may lekk bi melokaan bu ñu xam ci cuisineu littoral.
 
-### Pêche ak préparation
+### Pêche ak choixu jën
 
-Jën bi di nekk ci xolum recette bi, te cuisson ci taal di joxe xeeñ bu ñu xam. Préparation bi mën na wuute ci xeetu jën ak façonu ñu koy defar.
+Jën bi di nekk ci xolum recette bi. Xeetu jën bi mën a wuute ci li pêcheur yi jële ci géej ak li marché bi di am. Jëfandikoo jën bu frais di am solo ngir qualitéu lekk bi, te toppatoo ressourcesu géej di bokk ci responsabilitéu acteurs yi.
+
+### Préparation ak cuisson
+
+Ñuy setal jën bi, toggal ko ak xorom walla yeneen ingrédients, ba noppi ñu koy lakk ci taal. Cuisson bu baax di soxla toppatoo safara ngir jën bi bañ a lakk ba mu metti. Yoonu defar di mën a wuute ci kër ak terroir.
 
 ### Patrimoine littoral
 
-Lakk jën di wone solo bu pêche am ci dundug dëkk yu wetu géej. Mu bokk ci savoir-faireu cuisine ak patrimoine culinaire bu lëkkale nit ñi ak ressourcesu géej.`,
+Lakk jën di wone digganteu nit ñi, pêche ak géej. Mu bokk ci savoir-faireu cuisine bu ñuy séddale ci njaboot ak communauté. Denc yoonu defar ak aar ressourcesu géej di jàppale patrimoineu gastronomie bu littoral.`,
   },
   'ndambe-ragout-de-niebe-petit-dejeuner-populaire-senegalais': {
     titleWo: 'Ndambé',
-    excerptWo: 'Ragout bu niébé, bu ñuy lekk ak mburu, rawatina ci njël.',
+    excerptWo: 'Ragout bu niébé, bu ñuy lekk ak mburu, rawatina ci njël, ci kër ak ci marchés.',
     contentWo: `### Jëmmal
 
-Ndambé mooy ragout bu ñu def ak niébé. Ñu xam nañu ko ci lekk yu ñuy lekk ci njël, te ñu mën nañu ko boole ak mburu. Mu bokk ci lekk yu ñuy gis ci marchés ak kër yi, rawatina ci Dakar.
+Ndambé mooy ragout bu ñu def ak niébé. Mu bokk ci lekk yu ñuy lekk ci njël ci Senegaal, te ñu koy boole ak mburu. Ci Dakar ak yeneen dëkk, ndambé mën na nekk lekk bu yomb te doy, bu ñuy jaay ci petites gargotes, marchés ak bérab yu ñuy lekk.
 
-### Niébé ak mburu
+### Niébé ak préparation
 
-Niébé bi di joxe base bu ragout bi, te sauce bi di yokk xeeñ ak neex. Mburu bi di boole lekk bi, te ndambé mën na nekk lekk bu yomb ci waxtu njël.
+Niébé bi ñuy setal, suuxal walla togg ba mu sedd. Ñu koy boole ak sauce bu am tomate, oignon, piment walla yeneen ingrédients ci li recetteu kër gi di jëfandikoo. Sauce bi di jàppale neex ak xeeñu ragout bi.
 
-### Vie quotidienne ak patrimoine
+### Ndambé ak mburu
 
-Ndambé di wone solo bu niébé am ci alimentation ak cuisineu Senegaal. Lekk bi di bokk ci vie quotidienne ak savoir-faireu préparationu lekk yu ñuy séddoo.`,
+Mburu bi di bokk ci séddale ndambé. Nit ñi mën nañu ko lekk ci waxtu njël walla ci yeneen waxtu. Lekk bi di may énergie ak saté, te yombug préparation bi di jàppale ndaw yi ak travailleurs yi ci dundug bis bu nekk.
+
+### Vie quotidienne ak économie
+
+Ndambé di wone digganteu gastronomie ak dundug dëkk. Jaaykat yi di jëfandikoo niébé, mburu ak ingrédients yu local, te activité bi mën a jox ay revenu. Recette bi di it bokk ci savoir-faireu cuisine populaire bu ñuy séddale ci générations yi.`,
   },
   'thiou': {
     titleWo: 'Thiou',
-    excerptWo: 'Sauce bu tomate bu ñu mën a def ak jën walla yàpp, te ñuy lekk ak ceeb.',
+    excerptWo: 'Sauce bu tomate bu ñu mën a def ak jën walla yàpp, te ñuy lekk ak ceeb ak légumes.',
     contentWo: `### Jëmmal
 
-Thiou mooy sauce bu tomate bu ñu mën a def ak jën walla yàpp, te ñuy lekk ak ceeb. Mu bokk ci lekk yu sauce yi di boole riz, protéines ak légumes ci benn plat.
+Thiou mooy sauce bu tomate bu ñu mën a def ak jën walla yàpp, te ñuy lekk ak ceeb. Mu bokk ci lekk yu sauce yi di boole riz, protéines ak légumes ci benn plat. Recette bi mën a am ay melokaan yu wuute ci kër yi ak terroir yi.
 
 ### Tomate ak préparation
 
-Tomate bi di joxe baseu sauce bi. Jën walla yàpp bi di yokk xeeñ ak doole ci lekk bi, te ingrédients yi mën nañu wuute ci recette ak terroir.
+Tomate bi di joxe baseu sauce bi. Ñuy togg ko ak oignon ak yeneen ingrédients, ba mu am xeeñ ak texture bu ñu bëgg. Jën walla yàpp bi di yokk doole ci lekk bi, te légumes di may ay goûts ak couleurs yu wuute.
+
+### Ceeb ak séddale
+
+Thiou mën na nekk ak riz bu ñu togg ci ndox walla ci sauce, ci li yoon wi kër gi di jëfandikoo. Séddaleu mbuum bi di boole sauce, riz ak jën walla yàpp. Ci repasu njaboot, ñuy mën a séddale ci benn plat ngir lekkandoo.
 
 ### Aada ak transmission
 
-Thiou di bokk ci patrimoine culinaire bu Senegaal, te recettes yu ni mel di jaar ci njaboot yi. Xam-xam bu préparation di jàppale denc diversitéu lekk yi.`,
+Thiou di bokk ci patrimoine culinaire bu Senegaal. Xam-xamu defar sauce, waxtu togg ak séddale mbuum di jaar ci njaboot yi. Recettes yu mel ni bii di jàppale denc diversitéu lekk ak savoir-faireu cuisine.`,
   },
   'caldou': {
     titleWo: 'Caldou',
