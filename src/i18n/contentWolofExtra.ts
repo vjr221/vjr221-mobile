@@ -50,7 +50,7 @@ Restaurants, services ak activité yu loisirs di jàppale vie touristique bu Alm
   },
   'plage-de-ngor': {
     titleWo: 'Plage bu N’Gor',
-    excerptWo: 'Plage ak dunu N’Gor, ci digganteu géej, surf ak aada Lébou.',
+    excerptWo: 'Plage ak dunu N’Gor ci Dakar, bérab bu lëkkale géej, surf ak aada Lébou.',
     contentWo: `### Jëmmal
 
 Plage bu N’Gor nekk na ci Dakar, ci wetug dunu N’Gor. Bérab bi lëkkale géej, activité yu loisirs ak vie locale. Aada Lébou di bokk ci identitéu territoire.
@@ -61,7 +61,11 @@ Surf, baignade ak yeneen activité yu géej di bokk ci dundug plage bi. Dunu N�
 
 ### Aada ak tourisme
 
-N’Gor am na histoire ak culture bu lëkkale ak populationu Lébou. Tourisme bu jàppale respectu aada, environnement ak communauté di mën a yokk njariñu plage bi te aar patrimoineu littoral.`,
+N’Gor am na histoire ak culture bu lëkkale ak populationu Lébou. Tourisme bu jàppale respectu aada, environnement ak communauté di mën a yokk njariñu plage bi te aar patrimoineu littoral.
+
+### Vie locale
+
+Plage bi di it bérab bu ñuy daje, waxtaan ak séddale ay activité. Restaurants, services ak petites activités di bokk ci économie locale bu quartier bi.`,
   },
   'thieboudiene-ceebu-jen': {
     titleWo: 'Ceebu jën (Thiéboudiène)',
@@ -79,9 +83,19 @@ Am na melokaan yu wuute ci ceebu jën. Ceebu jën bu xonq di jëfandikoo tomate 
 Ceebu jën du doon rekk recette; mu bokk ci patrimoineu culinaire. Xam-xamu defar, séddale mbuum ak lekkandoo di lëkkale génération yi. Gastronomie bi di wone solo bu jën, riz, légumes ak savoir-faireu cuisine ci identitéu Senegaal.`,
   },
   'ceebu-yapp': {
-    titleWo: 'Ceebu yàpp',
-    excerptWo: 'Lekk bu riz ak yàpp, bu bokk ci mbuum yu Senegaal.',
-    contentWo: `### Jëmmal\n\nCeebu yàpp mooy lekk buñu def ak riz ak yàpp, te mu bokk ci mbuum yu am solo ci Senegaal. Yàpp bi mën na doon nag, bëy walla yeneen yàpp yu ñu jëfandikoo ci lekk bi.\n\n### Def ak lekk\n\nRiz bi ñu dajale ak yàpp, diwtiir ak wutus yi ngir am xeeñ ak neex. Ceebu yàpp mën nañu ko lekk ci kër yi ak ci ay bérab yu ñuy jaay lekk, te jëfandikoo yi mën nañu wuute.\n\n### Aada ak patrimoine\n\nCeebu yàpp bokk na ci diversitéu lekk yu Senegaal. Melokaanam di wone solo bu riz, yàpp ak savoir-faireu cuisine am ci dundug bés-bés ak ci waxtu yu ñuy dajale.`,
+    titleWo: 'Ceebu yapp',
+    excerptWo: 'Mbuum bu riz ak yapp, bu bokk ci lekk yu ñuy def ci kër yu Senegaal.',
+    contentWo: `### Jëmmal
+
+Ceebu yapp mooy mbuum bu ñuy def ak riz ak yapp, ak légumes ak ay épices. Mu bokk ci lekk yu ñuy def ci kër yu Senegaal, te recette bi mën a wuute ci kër ak ci disponibilitéu ingrédients.
+
+### Préparation
+
+Dañu koy defar ak yapp bu ñu togg ba mu sedd, walla ñu xawaare ko ci sauce bi, topp ci riz ak légumes. Épices yi di jàppale goûtu mbuum bi, te nit ku nekk mën na am yoonam ci préparation.
+
+### Aada ak lekkandoo
+
+Ceebu yapp di bokk ci repas yu ñuy séddale ak waa kër. Riz, yapp ak légumes di daje ci benn plat, te lekkandoo di yokk solo bu mbuum bi ci dundug bis bu nekk.`,
   },
   'mafe': {
     titleWo: 'Mafé',
@@ -548,33 +562,33 @@ Gomme arabique di génère ci arbres yu mën a dund ci conditionsu Sahel. Collec
 Valorisationu gomme arabique mën a yokk valeur bu produit bi boo ko boolee ak transformation, qualité ak commerce bu organisé. Aar arbres ak gestionu ressources di am solo ngir production bi mën a wéy ci jamono yu yàgg.`,
   }
   'baila': {
-    titleWo: 'Baïla',
-    excerptWo: 'Lekk bu aada bu bokk ci patrimoine culinaire.',
+    titleWo: 'Baila',
+    excerptWo: 'Aada ak melokaanu patrimoine bu bokk ci diversitéu culture bu Senegaal.',
     contentWo: `### Jëmmal
 
-Baïla mooy lekk bu aada bu bokk ci patrimoine culinaire. Mu lëkkale ingrédients yu local, savoir-faire ak waxtu yu ñuy dajale.
-
-### Préparation ak terroir
-
-Préparationu Baïla di jaar ci xam-xam bu ñu jële ci njaboot yi. Ingrédients yi ak melokaanu recette bi mën nañu wuute ci terroir yi.
-
-### Transmission
-
-Lekk yu aada ni Baïla di jàppale denc xam-xam ci cuisine. Transmissionu recettes ci njaboot yi di aar patrimoine culinaire ak diversitéu aada yi.`,
-  },
-  'mbakhalou-saloum': {
-    titleWo: 'Mbakhalou Saalum',
-    excerptWo: 'Spécialité bu Saalum, lëkkale riz, jën ak aada yu terroir.',
-    contentWo: `### Jëmmal
-
-Mbakhalou Saalum mooy spécialité bu bokk ci patrimoine culinaire bu Saalum. Mu lëkkale ingrédients yu local ak savoir-faireu cuisineu terroir.
-
-### Saalum ak ressources
-
-Lekk bi di wone solo bu ressourcesu terroir am ci alimentation. Jën, riz ak yeneen ingrédients mën nañu bokk ci préparation, ci melokaan yu wuute.
+Baila bokk na ci ay melokaanu patrimoine culturel yi ñuy wone ci Senegaal. Xam-xam, aada ak pratiques yu ñuy jëfandikoo di jàppale transmissionu mémoire ci diggante génération yi.
 
 ### Aada ak transmission
 
-Mbakhalou Saalum di bokk ci diversitéu recettes yu Senegaal. Xam-xam bu préparation di jaar ci njaboot yi ak ci waxtu yu ñuy dajale, te di jàppale denc patrimoineu Saalum.`,
+Aada yi mën a nekk ci musique, danse, cérémonies, waxtaan walla yeneen formes yu expression. Li ëpp solo mooy ñuy wéy ci yoonu transmission ngir xam-xam bi bañ a réer ak changementu jamono.
+
+### Patrimoine
+
+Valorisationu patrimoine bi di may nit ñi xam seen histoire ak diversitéu culture. Documentation, jàngale ak participationu communauté di mën a jàppale aar ak yokk njariñu aada yi.`,
+  },
+  'mbakhalou-saloum': {
+    titleWo: 'Mbakhalou Saloum',
+    excerptWo: 'Mbuum bu lëkkale riz, poisson walla yapp ak aada lekk yu Saloum.',
+    contentWo: `### Jëmmal
+
+Mbakhalou Saloum bokk na ci lekk yu Saloum ak patrimoineu gastronomie bu Senegaal. Mbuum bi mën a jëfandikoo riz ak poisson walla yapp, ak légumes ak ingrédients yu ñu am ci territoire.
+
+### Préparation ak goût
+
+Préparation bi di aju ci ingrédients yi ak yoon wi kër gi di jëfandikoo. Épices ak légumes di jàppale goûtu mbuum bi, te xam-xamu defar di jaar ci diggante génération yi.
+
+### Aada ak territoire
+
+Mbakhalou Saloum di wone digganteu lekk ak territoire. Lekk yu mel ni mbuum bii di bokk ci identitéu Saloum, te séddale recette yi di jàppale conservationu patrimoineu culinaire.`,
   },
 };
