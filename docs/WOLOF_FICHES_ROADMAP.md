@@ -565,3 +565,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 111
+
+- **Vague 111 : enrichissement de 5 fiches de gastronomie et patrimoine alimentaire** — Caldоу, Thiof, riz de Casamance, Lakhou bissap et épices de la cuisine sénégalaise.
+- Réécriture Wolof structurée autour de la préparation, du terroir, de la pêche/agriculture et de la transmission culinaire, sans ajouter de données précises non présentes dans les fiches.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
+- Aucun APK intermédiaire : validation CI d’abord.
