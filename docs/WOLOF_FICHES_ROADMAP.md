@@ -598,3 +598,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
 - Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
+
+## Mise à jour — vague 115
+
+- **Vague 115 : enrichissement de 5 fiches patrimoine, environnement et ressources** — Fort Pinet-Laprade, Centre d’interprétation de Toubacouta, Centre d’interprétation de Bandafassi, Nature du Ferlo et Gomme arabique.
+- Contenus Wolof développés autour de la mémoire historique, de la transmission patrimoniale, des écosystèmes sahéliens et de la valorisation des ressources.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+- Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
