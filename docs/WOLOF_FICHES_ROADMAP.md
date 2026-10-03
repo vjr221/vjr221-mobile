@@ -679,3 +679,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale et unicite des cles.
 - Correction de separateurs manquants entre plusieurs blocs existants de contentWolofExtra.ts.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+## Mise a jour - vague 125
+
+- Vague 125 : enrichissement de 5 fiches patrimoine et Sahel - Centre de Toubacouta, Centre de Bandafassi, Nature du Ferlo, Gomme arabique et Fort Pinet-Laprade.
+- Contenus Wolof developpes autour du patrimoine naturel et bati, de la conservation, de la transmission, des ressources sahéliennes et de la valorisation locale.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
