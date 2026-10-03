@@ -670,3 +670,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+## Mise a jour - vague 124
+
+- Vague 124 : enrichissement de 5 fiches culture et patrimoine - Aada Sereer, Aada Mandingue, Sebbe Koliyabe, Intronisation Beuleup et Super Diamono.
+- Contenus Wolof developpes autour de la transmission culturelle, des pratiques communautaires, du patrimoine immateriel et de la memoire musicale.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale et unicite des cles.
+- Correction de separateurs manquants entre plusieurs blocs existants de contentWolofExtra.ts.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
