@@ -1415,5 +1415,23 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect((canonical?.contentWo ?? '').length).toBeGreaterThan(500);
   });
 
+  it('covers the Wolof culture and heritage enrichment wave 124', () => {
+    const slugs = [
+      'culture-serere-traditions-patrimoine',
+      'culture-mandingue-senegal-traditions',
+      'sebbe-koliyabe-tradition-culturelle-du-fouta',
+      'intronisation-beuleup-tradition-royale-du-senegal',
+      'super-diamono',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
 
 });
