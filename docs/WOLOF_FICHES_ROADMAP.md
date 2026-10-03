@@ -590,3 +590,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Contenus Wolof développés autour des pratiques culturelles, de la transmission, des communautés et du patrimoine.
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+
+## Mise à jour — vague 114
+
+- **Vague 114 : enrichissement de 5 fiches musique, sport culturel et patrimoine bâti** — Super Diamono, Xalam 2, UCAS Band, Fodé Doussouba et Tata de Kédougou.
+- Contenus Wolof développés autour de la création musicale, de la fusion, de la mémoire culturelle, de la lutte traditionnelle et du patrimoine architectural.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+- Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
