@@ -556,3 +556,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; le contenu français reste inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
 - Aucun APK intermédiaire : validation CI d’abord avant la préparation de la prochaine release.
+
+
+## Mise à jour — vague 110
+
+- **Vague 110 : enrichissement de 5 fiches de gastronomie existantes** — jus bu gingembre, Thiéré bassi salté, Lakk jën, Ndambé et Thiou.
+- Réécriture Wolof structurée pour remplacer les contenus trop courts par des textes plus utiles, avec préparation, contexte culinaire et transmission lorsque cohérents avec les fiches.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
+- Aucun APK intermédiaire : validation CI d’abord.
