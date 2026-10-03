@@ -365,18 +365,48 @@ Denc tata yi di jàppale aar mémoireu Sénégal oriental. Patrimoine bâti bi m
   },
   'fort-pinet-laprade-memoire-historique-de-sedhiou': {
     titleWo: 'Fort Pinet-Laprade',
-    excerptWo: 'Mémoire bu Sédhiou.',
-    contentWo: `### Jëmmal\n\nFort Pinet-Laprade : taariix ak mémoire bu Casamance.`,
+    excerptWo: 'Bérab bu mémoire historique bu Sédhiou ak Casamance.',
+    contentWo: `### Jëmmal
+
+Fort Pinet-Laprade bokk na ci patrimoine historique bu Sédhiou. Fiche bi di fésal solo bu bérab yi am ci mémoireu territoire ak ci compréhensionu taariixu Casamance.
+
+### Taariix ak territoire
+
+Fort yi di bokk ci architecture ak organisationu territoire ci jamono yu weesu. Seen présence mën a joxe xibaar ci digganteu dëkk, circulation ak enjeux yu melni protection. Sédhiou, ci digganteu Fleuve Casamance ak yeneen bérab yu Casamance, am na patrimoine historique bu wuute.
+
+### Mémoire ak conservation
+
+Denc bérab bu mel ni Fort Pinet-Laprade di jàppale transmissionu mémoire. Xam-xam, archives, récit ak patrimoine bâti di mën a boole ngir génération yi xam taariixu seen territoire.`,
   },
   'centre-dinterpretation-de-toubacouta-patrimoine-du-delta-du-saloum': {
     titleWo: 'Centre bu Toubacouta',
-    excerptWo: 'Patrimoine Delta Saalum.',
-    contentWo: `### Jëmmal\n\nCentre d\'interprétation : Delta du Saloum, UNESCO.`,
+    excerptWo: 'Bérab bu di jàppale xam ak denc patrimoineu Delta Saalum.',
+    contentWo: `### Jëmmal
+
+Centre d’interprétation bu Toubacouta di jàppale xam patrimoineu Delta Saalum. Bérab bu mel ni mooy may ndaw ak mag ñu gën a xam environnement, culture ak histoireu territoire.
+
+### Delta Saalum
+
+Delta Saalum am na combinaison bu wuute bu géej, dex, mangrove ak dëkk yi. Nature ak dundug nit ñoo bokk ci identitéu bérab bi. Xam-xamu territoire di jàppale nàmm ak aar ressources.
+
+### Transmission
+
+Centre d’interprétation yi di may espace ngir jàng, waxtaan ak wone patrimoine. Transmissionu xibaar ci nature, aada ak histoire di yokk xam-xam ak responsabilité ci conservationu Delta.`,
   },
   'centre-dinterpretation-de-bandafassi-patrimoine-du-pays-bassari': {
     titleWo: 'Centre bu Bandafassi',
-    excerptWo: 'Patrimoine Pays Bassari.',
-    contentWo: `### Jëmmal\n\nCentre d\'interprétation : Pays Bassari, UNESCO.`,
+    excerptWo: 'Bérab bu di jàppale xam patrimoineu Pays Bassari.',
+    contentWo: `### Jëmmal
+
+Centre d’interprétation bu Bandafassi di bokk ci valorisationu patrimoineu Pays Bassari. Fiche bi di fésal solo bu transmissionu xibaar ci culture, territoire ak environnement.
+
+### Pays Bassari
+
+Pays Bassari am na patrimoine culturel ak naturel bu riche. Aada, savoir-faire, paysage ak pratiquesu communauté yi di bokk ci identitéu territoire. Jàng xibaar ci éléments yooyu di may nit ñu gën a xam seen solo.
+
+### Patrimoine ak transmission
+
+Centre bi di mën a jàppale transmissionu patrimoine ci waxtaan, exposition ak activitésu jàng. Aar patrimoine du doon rekk denc bérab; mu ëmb it xam-xam, récit ak participationu communauté yi.`,
   },
   'reserve-speciale-faune-guembeul': {
     titleWo: 'Réserve spéciale de faune de Guembeul',
@@ -419,14 +449,34 @@ Guembeul wone na solo bu conservationu faune sahélienne am. Réserve bi bokk na
   },
   'nature-du-ferlo-paysages-saheliens-faune-et-ressources': {
     titleWo: 'Nature bu Ferlo',
-    excerptWo: 'Paysages sahéliens.',
-    contentWo: `### Jëmmal\n\nFerlo : sahel, faune, sàmm, ressources.`,
+    excerptWo: 'Paysages sahéliens, faune ak ressources yu bokk ci identitéu Ferlo.',
+    contentWo: `### Jëmmal
+
+Ferlo mooy territoire bu paysages sahéliens yu wuute, fu nit ak nature di dundandoo. Fiche bi di fésal solo bu faune, ressources ak savoir-faire yi ñuy jëfandikoo ci environnementu bu sedd ak sec.
+
+### Paysage ak ressources
+
+Ferlo am na espace yu yaatu, végétation bu topp saison yi ak ressources yu dépend ci ndox. Nit ñi dañuy soppi seen pratiques ci li saison di may. Pastoralism ak dundug rurale bokk nañu ci dynamiqueu territoire.
+
+### Aar nature
+
+Xam ni écosystème bi di dox di am solo ngir aar biodiversité ak ressources. Gestion bu baax, transmissionu savoir-faire ak jëfandikoo bu wér di mën a jàppale wéyantu dundug communauté yi ak aar environnement.`,
   },
   'la-gomme-arabique-au-senegal-ressource-du-sahel-et-valorisation': {
     titleWo: 'Gomme arabique',
-    excerptWo: 'Ressource bu Sahel.',
-    contentWo: `### Jëmmal\n\nGomme arabique : production, commerce ci norte.`,
-  },
+    excerptWo: 'Ressource bu Sahel bu bokk ci économie rurale ak valorisationu produits naturels.',
+    contentWo: `### Jëmmal
+
+Gomme arabique mooy produit bu naturel bu bokk ci ressourcesu Sahel. Ci Senegaal, production ak commerce bi di lëkkale environnement, activité rurale ak opportunitésu valorisation.
+
+### Production
+
+Gomme arabique di génère ci arbres yu mën a dund ci conditionsu Sahel. Collecte bi di soxla xam-xamu arbres, saison ak pratiques yu topp environnement. Activité bi mën a bokk ci revenu ak économieu communauté yi.
+
+### Valorisation ak environnement
+
+Valorisationu gomme arabique mën a yokk valeur bu produit bi boo ko boolee ak transformation, qualité ak commerce bu organisé. Aar arbres ak gestionu ressources di am solo ngir production bi mën a wéy ci jamono yu yàgg.`,
+  }
   'baila': {
     titleWo: 'Baïla',
     excerptWo: 'Lekk bu aada bu bokk ci patrimoine culinaire.',
