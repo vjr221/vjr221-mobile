@@ -115,14 +115,34 @@ Mafé di wone solo bu arachide am ci cuisine. Recette bi di jaar ci njaboot yi, 
   },
   'cafe-touba': {
     titleWo: 'Kafe Touba',
-    excerptWo: 'Kafe bu jar — aada Mouride.',
-    contentWo: `### Jëmmal\n\nKafe Touba dafa am poivre jar (djar) ak kafe. Xam nañu ko ci aada Mouride ak ci dëkk yépp ci Senegaal.\n\n### Xibaar\n\nKafe Touba dañu koy naan tàng ; solo ci Touba ak diggante Mouride, waaye mu fees ci réew mi bépp.`,
+    excerptWo: 'Kafe bu am djar, bu bokk ci aada ak dundug kër ci Senegaal.',
+    contentWo: `### Jëmmal
+
+Kafe Touba mooy kafe bu ñu boole ak djar, te mu am bérab bu mag ci dundug Senegaal. Dañu koy xawaare ak waxtu yu ñuy dal, waxtu yu ñuy waxtaan ak jamono yu ñuy bokk.
+
+### Aada ak préparation
+
+Dañu koy togg ci ndox, kafe ak djar, ba mu am xew-xew bu mel ni ñu ko xamle. Nit ñi mën a defar ko ci kër walla ci bérab yu ñuy jaay kafe. Kafe Touba di wone it xam-xamu defar ak séddale naan.
+
+### Place ci société
+
+Kafe bi bokk na ci aada bu am solo ci Senegaal, te ñu koy gis ci kër, marchés ak bérab yu ñuy daje. Mu di boole nit ñi ci waxtaan, dal ak dundug bis bu nekk.`,
   },
   'bissap': {
     titleWo: 'Bissap',
-    excerptWo: 'Jus bu hibiscus — tàng walla sedd.',
-    contentWo: `### Jëmmal\n\nBissap mooy jus bu feuilles de hibiscus. Dañu koy naan sedd walla tàng, ak sukkar. Bissap bu xonq ak bu ñuul am na.\n\n### Xibaar\n\nBissap bokk na ci naan yu gën a xam ci marchés ak kër yi. Dañu koy boole ak gingembre walla mint.`,
-  },
+    excerptWo: 'Naan bu ñu defar ak hibiscus, bu ñuy naan sedd walla tàng.',
+    contentWo: `### Jëmmal
+
+Bissap mooy naan bu ñu defar ak hibiscus. Dañu koy togg, teg sukkar ci, ba noppi mu sedd walla ñu naan ko tàng. Bissap bu xonq mooy melokaan bu ñu gën a xam, waaye ñu mën a defar ko ak yeneen melokaan.
+
+### Naan ak préparation
+
+Dañu mën a boole bissap ak gingembre, mint walla yeneen ingrédients ngir yokk xew-xewam. Ci kër ak ci cérémonies, ñu koy defar ci quantité bu doy nit ñi te ñu koy séddale ci verre.
+
+### Gastronomie ak économie
+
+Bissap bokk na ci naan yu am solo ci gastronomie bu Senegaal. Hibiscus di it mbay mi ñuy jëfandikoo, te transformationu ko ci naan mën a jàppale producteurs ak petites activités commerciales.`,
+  }
   'jus-de-bouye': {
     titleWo: 'Jus bu buy',
     excerptWo: 'Naan bu ñu def ak buy, mburu baobab bu bokk ci patrimoine culinaire.',
