@@ -111,28 +111,48 @@ Yoonu defar ceebu yapp di jaar ci xam-xamu cuisine bu ñuy jàngale ci diggante 
   },
   'mafe': {
     titleWo: 'Mafé',
-    excerptWo: 'Sauce bu tigadege ak yàpp, jën walla légumes, bu ñuy lekk ak ceeb.',
+    excerptWo: 'Mbuum bu sauce arachide, bu bokk ci lekk yu am solo ci Senegaal.',
     contentWo: `### Jëmmal
 
-Mafé mooy lekk bu sauceu tigadege am ci xol. Ñu mën nañu ko def ak yàpp, jën walla légumes, te ñuy lekk ko ak ceeb. Mu bokk ci lekk yu ñu xam ci Senegaal ak Afrique de l’Ouest.
+Mafé mooy mbuum bu ñuy def ak sauce arachide, ak yapp walla poisson, légumes ak ay épices. Mu bokk ci lekk yu ñuy def ci kër yu Senegaal, te recette bi mën a am ay melokaan yu wuute ci région ak ci kër.
 
-### Tigadege ak préparation
+### Préparation
 
-Tigadege bi di joxe sauce bi texture ak xeeñ bu am solo. Yàpp walla yeneen ingrédients di yokk melokaanu lekk bi, te recette bi mën na wuute ci kër yi ak terroir yi.
+Arachide bi di jëfandikoo ngir defar sauce bi, te ñu mën a boole ko ak tomate, légumes ak ingrédients yu ñu am. Yapp walla poisson di togg ci sauce bi ba mu jël goûtu mbuum.
 
-### Aada ak transmission
+### Aada ak lekkandoo
 
-Mafé di wone solo bu arachide am ci cuisine. Recette bi di jaar ci njaboot yi, te savoir-faireu préparation di jàppale denc patrimoine culinaire bu Senegaal.`,
+Mafé di bokk ci repas yu ñuy séddale ak waa kër. Xam-xamu defar sauce bi ak séddale mbuum di jaar ci diggante génération yi. Mu di it wone solo bu arachide ci gastronomie bu Senegaal.`,
   },
   'domoda': {
     titleWo: 'Domoda',
-    excerptWo: 'Lekk bu sauceu tomate ak tigadege, ak yàpp walla légumes.',
-    contentWo: `### Jëmmal\n\nDomoda mooy lekk bu ñu def ak sauceu tomate ak tigadege, te mën nañu ko boole ak yàpp walla légumes. Mu bokk ci lekk yu ñu xam ci cuisineu Senegaal.\n\n### Def ak xeeñ\n\nSauce bi di jëfandikoo tomate, tigadege ak yeneen ingrédients ngir joxe xeeñ ak neex. Yàpp bi mën na wuute, te lekk bi di ñu koy boole ak riz.\n\n### Aada ak transmission\n\nDomoda di wone ni arachide, tomate ak yeneen produits yu local mën a daje ci benn lekk. Savoir-faireu domoda di jaar ci kër yi ak ci transmissionu recettes ci génération yi.`,
+    excerptWo: 'Mbuum bu sauce tomate ak farine, ak yapp walla poisson ak légumes.',
+    contentWo: `### Jëmmal
+
+Domoda mooy mbuum bu ñuy def ak sauce bu tomate, farine ak yapp walla poisson, ak légumes. Mu bokk ci gastronomie bu Senegaal, te recette bi mën a wuute ci yoonu defar ak ingrédients yi ñu am.
+
+### Préparation
+
+Dañu koy defar ak sauce bu ñu togg ba mu am texture bu dëgër, topp ci yapp walla poisson ak légumes. Riz di mën a bokk ci séddale mbuum bi. Épices di jàppale goûtu sauce bi.
+
+### Aada ak gastronomie
+
+Domoda di bokk ci lekk yu ñuy séddale ci kër. Recette bi di wone savoir-faireu cuisine bu ñuy jàngale ci diggante génération yi, te mu bokk ci diversitéu gastronomie bu Senegaal.`,
   },
   'soupou-kandia': {
-    titleWo: 'Suppu kandja',
-    excerptWo: 'Sauce bu gombo, bu ñu mën a def ak jën walla yàpp ak ceeb.',
-    contentWo: `### Jëmmal\n\nSuppu kandja mooy lekk bu sauceu gombo. Ñu mën nañu ko def ak jën walla yàpp, te ñu koy lekk ak ceeb. Mu bokk ci mbuum yu sauce yi am solo ci cuisineu Senegaal.\n\n### Gombo ak préparation\n\nGombo bi di joxe texture bu leer ci sauce bi. Jën walla yàpp bi di yokk xeeñ ak protéines, te ceeb bi di boole lekk bi. Préparation bi mën na wuute ci kër yi ak ci terroir yi.\n\n### Patrimoine culinaire\n\nSuppu kandja di wone solo bu légumes, jën, yàpp ak céréales am ci diversitéu lekk. Recette bi di jaar ci xam-xam ak savoir-faireu cuisine, te transmission bi di aar patrimoine culinaire bi.`,
+    titleWo: 'Soupou kandia',
+    excerptWo: 'Sauce gombo bu ñuy def ak huile de palme, poisson walla yapp ak riz.',
+    contentWo: `### Jëmmal
+
+Soupou kandia mooy mbuum bu sauce gombo, bu ñuy def ak poisson walla yapp, légumes ak huile de palme. Mu bokk ci lekk yu Senegaal, te mu am place bu mag ci gastronomie bu réew mi.
+
+### Préparation
+
+Gombo bi di jox sauce bi texture bu ñu ko xamle. Ñu mën a boole ko ak poisson, yapp, tomate ak yeneen ingrédients. Riz di bokk ci lekkandoo ak sauce bi.
+
+### Aada ak territoire
+
+Soupou kandia di wone solo bu légumes, huile ak produits yu local ci cuisine. Yoonu defar bi di jaar ci savoir-faireu kër, te recette bi mën a wuute ci territoire ak préférenceu waa kër.`,
   },
   'thiakry': {
     titleWo: 'Thiakry',
