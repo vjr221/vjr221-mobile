@@ -662,3 +662,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+## Mise a jour - vague 123
+
+- Vague 123 : enrichissement de 5 fiches gastronomie - Caldou, Thiof, Riz de Casamance, Lakhou bissap et epices de la cuisine senegalaise.
+- Contenus Wolof developpes autour des produits locaux, de la preparation, de la peche, du patrimoine agricole et de la transmission culinaire.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
