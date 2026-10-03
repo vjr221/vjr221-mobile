@@ -307,48 +307,60 @@ Thiou di bokk ci patrimoine culinaire bu Senegaal. Xam-xamu defar sauce, waxtu t
   },
   'caldou': {
     titleWo: 'Caldou',
-    excerptWo: 'Mbuum bu jën bu Casamance, bu ñu lekk ak riz ak sauce.',
+    excerptWo: 'Caldou mooy lekk bu jën ak légumes, bu lëkkale pêche, riz ak aada lekk yu littoral.',
     contentWo: `### Jëmmal
 
-Caldou mooy lekk bu jën bu bokk ci cuisineu Casamance. Ñu koy def ak jën ak riz, te sauce bi di boole ingrédients yi ci benn lekk bu am xeeñ.
+Caldou mooy lekk bu ñu def ak jën ak légumes, te ñuy ko boole ak riz. Mu bokk ci lekk yu lëkkale dundug pêche ak cuisine, rawatina ci terroirs yu wetu géej. Jën bi, légumes yi ak sauce bi di bokk ci melokaanu plat bi.
 
-### Jën ak préparation
+### Jën ak pêche
 
-Jën bi di nekk ci xolum caldou. Préparation bi di jëfandikoo ingrédients yu ñu xam ci cuisineu Casamance, te melokaanu sauce bi di jàppale jën bi ak riz bi.
+Jën mooy élément bu am solo ci caldou. Xeetu jën bi mën a wuute ci saison, bérab ak li pêcheur yi jële ci géej. Jëfandikoo jën bu frais di yokk qualitéu lekk, te toppatoo ressourcesu pêche di am solo ngir dundug communautés yu littoral.
 
-### Casamance ak patrimoine
+### Préparation ak légumes
 
-Caldou di wone richesseu patrimoine culinaire bu Casamance. Recette bi di bokk ci savoir-faireu terroir yi, te transmissionu lekk yi di jàppale denc aada ak xam-xam.`,
+Ñuy setal jën bi, def ko ci sauce ak légumes, ba noppi ñu togg ko ndànk. Légumes yi mën a bokk ci recette bi ci li ñu am ci terroir. Sauce bi di jàppale jën bi ak légumes yi ñu neexal.
+
+### Patrimoine ak transmission
+
+Caldou di wone ni produitsu géej ak mbay mën a bokk ci benn repas. Xam-xamu defar lekk bi di jaar ci njaboot yi, te recette bi mën a wuute ci kër ak communauté. Denc savoir-faire bi di jàppale patrimoine culinaireu littoral.`,
   },
   'le-thiof-au-senegal-poisson-emblematique-peche-et-gastronomie': {
-    titleWo: 'Thiof',
-    excerptWo: 'Jën bu am solo ci cuisine ak pêche bu Senegaal.',
+    titleWo: 'Thiof ci Senegaal',
+    excerptWo: 'Thiof mooy jën bu ñu xam ci gastronomie ak pêcheu Senegaal, te mu am solo ci patrimoineu littoral.',
     contentWo: `### Jëmmal
 
-Thiof mooy jën bu ñu xam lool ci cuisineu Senegaal. Mu bokk ci patrimoineu pêche ak gastronomie, te am na bérab bu am solo ci ay lekk yu ñuy def ak jën.
+Thiof mooy jën bu am solo ci gastronomieu Senegaal. Ñu koy jëfandikoo ci ay recettes yu bari, te mu lëkkale cuisine, pêche ak dundug communautés yu wetu géej. Goûtu jën bi ak qualitéu viande bi di tax mu am place bu am solo ci lekk yu ñuy séddale.
 
-### Pêche ak cuisine
+### Pêche ak ressources
 
-Thiof di bokk ci ressourcesu géej yi ñuy jëfandikoo ci cuisine. Ñu mën nañu ko def ci ay recettes yu wuute, te ñu koy boole ak riz walla yeneen accompagnements.
+Thiof di bokk ci ressourcesu géej yi. Pêcheur yi di ko jële ci mer, te disponibilité bi mën a soppi ci saison ak pressionu pêche. Toppatoo stocks ak jëfandikoo yoon yu wér di am solo ngir denc ressources yi ak dundug pêcheur yi.
 
-### Solo ci patrimoine
+### Préparation ci cuisine
 
-Thiof di lëkkale dundug pêche, marchés ak savoir-faireu cuisine. Xam-xam ci jëfandikoo jën bi ak transmissionu recettes di bokk ci patrimoine culinaire bu Senegaal.`,
+Thiof mën na nekk ci ceeb, sauce walla yeneen recettes. Ñuy ko setal, togg ko ak ingrédients yu ñu xam ci cuisineu Senegaal, ba goût ak textureu jën bi des. Yoonu defar mën na wuute ci kër yi, restaurants ak terroir yi.
+
+### Patrimoine gastronomique
+
+Thiof di lëkkale mer ak mbedd mi, pêche ak repasu njaboot. Xam-xamu defar jën bi di jaar ci générations yi. Denc patrimoine bi di soxla yokk xam-xam ci ressourcesu géej ak valorisationu produitsu local.`,
   },
   'riz-de-casamance': {
-    titleWo: 'Ceebu Casamance',
-    excerptWo: 'Riz bu local bu Casamance, lëkkale mbay, terroir ak aada.',
+    titleWo: 'Rizu Casamance',
+    excerptWo: 'Riz bu ñuy mbay ci Casamance, bu lëkkale terroir, ndox, mbay ak patrimoine alimentaire.',
     contentWo: `### Jëmmal
 
-Riz de Casamance mooy riz bu ñuy tabax ci terroir yi ci Casamance. Mu bokk ci agriculture ak alimentationu diiwaan bi, te di wone solo bu riz am ci dundug askan wi.
+Rizu Casamance mooy céréale bu am solo ci mbay ak alimentationu région bi. Mbay riz di bokk ci dundug ay village, te mu lëkkale nit ñi ak suuf, ndox ak saison. Riz bi di nekk ci ay repas ak ci économie locale.
 
-### Mbay ak environnement
+### Mbay ak terroir
 
-Tool yu riz bokk nañu ci paysageu Casamance, ak zones yu ndox ak mangrove yu lëkkale mbay ak environnement. Mbayu riz di soxla toppatoo bu baax ci suuf ak ndox.
+Mbaykat yi di jëfandikoo xam-xam yu ñu doon jàngale ci générations ngir defar suuf ak gérer ndox. Terroir yi mën a wuute ci Casamance, te yoonu mbay mën a sukkandiku ci conditionsu saison. Liggéey bi soxla doole, waxtu ak toppatoo.
 
-### Aada ak patrimoine
+### Riz ci alimentation
 
-Riz di bokk ci patrimoine culinaire ak agriculturel bu Casamance. Xam-xam ci mbay, préparation ak lekk di jaar ci njaboot yi, te di jàppale denc terroir ak aada yi.`,
+Riz di bokk ci lekk yu bari ci Senegaal. Ci Casamance, riz local mën a nekk ci repasu njaboot ak ci yeneen cérémonies. Jëfandikoo produit local di jàppale lien bi diggante mbay ak alimentation.
+
+### Patrimoine ak valorisation
+
+Denc rizu Casamance di denc it xam-xamu mbay. Valorisationu riz local mën a jàppale revenu mbook yi, te di yokk intérêt ci patrimoine agricole. Aar suuf, ndox ak diversitéu semences di bokk ci yoonu dundal mbay bi.`,
   },
   'lakhou-bissap': {
     titleWo: 'Lakhou bissap',
