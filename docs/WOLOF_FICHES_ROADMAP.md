@@ -547,3 +547,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun contenu français modifié et aucune nouvelle clé créée.
 - Test dédié ajouté pour vérifier l’absence de `carabane` dans le corpus fusionné et la présence de la fiche canonique.
 - Aucun APK intermédiaire : validation CI d’abord.
+
+
+## Mise à jour — vague 109
+
+- **Vague 109 : enrichissement de 5 fiches de gastronomie existantes** — Ceebu yàpp, Domoda, Suppu kandja, Thiakry et jus bu buy.
+- Les contenus Wolof très courts ont été réécrits avec une structure plus substantielle : préparation, ingrédients, contexte culinaire, transmission et patrimoine lorsque ces éléments étaient déjà compatibles avec la fiche.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; le contenu français reste inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés de la vague.
+- Aucun APK intermédiaire : validation CI d’abord avant la préparation de la prochaine release.
