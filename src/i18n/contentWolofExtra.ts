@@ -156,8 +156,18 @@ Soupou kandia di wone solo bu légumes, huile ak produits yu local ci cuisine. Y
   },
   'thiakry': {
     titleWo: 'Thiakry',
-    excerptWo: 'Dessert bu couscousu mil ak meew, bu ñu xam ci lekk yu Senegaal.',
-    contentWo: `### Jëmmal\n\nThiakry mooy dessert bu ñu def ak couscousu mil ak meew, te sukkar mën nañu ko yokk ngir neex. Mu bokk ci lekk yu ñu xam ci Senegaal, rawatina ci waxtu yu ñuy dajale.\n\n### Mil ak meew\n\nMil bi di joxe base bu dessert bi, meew bi di may ko texture ak neex. Ñu mën nañu yokk yeneen ingrédients ci recette bi, waaye base bi di des couscousu mil ak meew.\n\n### Aada ak waxtu yu ñuy dajale\n\nThiakry di bokk ci lekk yu ñuy waññi ci kër yi ak ci ay occasions yu ñuy dajale. Recette bi di wone solo bu mil am ci alimentation ak patrimoine culinaire bu Senegaal.`,
+    excerptWo: 'Dessert bu ñuy def ak couscous de mil, lait caillé ak sukkar.',
+    contentWo: `### Jëmmal
+
+Thiakry mooy dessert bu ñuy def ak couscous de mil ak lait caillé. Dañu koy boole ak sukkar, te ñu mën a yokk vanille, muscade walla yeneen parfum. Mu bokk ci lekk yu ñuy def ci kër yu Senegaal.
+
+### Préparation
+
+Mil bi ñuy defar ci couscous di togg, ba noppi ñu ko boole ak lait caillé. Sukkar ak parfum yi di yokk goût. Thiakry mën na nekk bu sedd, te préparation bi di aju ci yoonu kër gi.
+
+### Aada ak gastronomie
+
+Thiakry di bokk ci repas, cérémonies ak waxtu yu ñuy dal. Mu wone solo bu mil ci alimentation ak gastronomie bu Senegaal, te recette bi di jaar ci diggante génération yi.`,
   },
   'cafe-touba': {
     titleWo: 'Kafe Touba',
@@ -190,24 +200,34 @@ Dañu mën a boole bissap ak gingembre, mint walla yeneen ingrédients ngir yokk
 Bissap bokk na ci naan yu am solo ci gastronomie bu Senegaal. Hibiscus di it mbay mi ñuy jëfandikoo, te transformationu ko ci naan mën a jàppale producteurs ak petites activités commerciales.`,
   }
   'jus-de-bouye': {
-    titleWo: 'Jus bu buy',
-    excerptWo: 'Naan bu ñu def ak buy, mburu baobab bu bokk ci patrimoine culinaire.',
-    contentWo: `### Jëmmal\n\nJus bu buy, walla bouye, mooy naan bu ñu def ak pulpeu fruitu baobab. Mu bokk ci naan yu ñu xam ci Senegaal, te ñu mën nañu ko naan sedd ci waxtu yu tàng.\n\n### Préparation\n\nPulpe bi di ñu dajale ak ndox, ba noppi ñu mën nañu ko filtre ngir am naan bu lëj. Sukkar mën nañu ko yokk ci melokaanu recette bi.\n\n### Aada ak patrimoine\n\nJus bu buy di bokk ci diversitéu naan yu local. Baobab am na it solo ci paysages ak patrimoine naturel bu Senegaal, te jëfandikoo fruit bi ci cuisine di wone xam-xamu terroir yi.`,
-  },
-  'jus-de-gingembre': {
-    titleWo: 'Jus bu gingembre',
-    excerptWo: 'Naan bu ñu def ak gingembre, bu mën a boole ak citron walla bissap.',
+    titleWo: 'Jus bu bouye',
+    excerptWo: 'Naan bu ñuy def ak fruitu bouye, bu am goût bu wuute ak xel.',
     contentWo: `### Jëmmal
 
-Jus bu gingembre mooy naan bu ñu def ak gingembre, te ñu mën nañu ko boole ak citron walla bissap. Mu bokk ci naan yu ñuy gis ci kër yi, marchés ak restaurants.
+Jus bu bouye mooy naan bu ñuy def ak fruitu baobab. Fruit bi ñuy dajale, setal, te ñu koy boole ak ndox ak sukkar ngir defar naan bi. Mu bokk ci naan yu ñuy xam ci Senegaal.
 
 ### Préparation
 
-Gingembre bi di ñu dajale ak ndox, ba noppi ñu filtre ko. Sukkar mën nañu ko yokk ngir neex, te citron mën na joxe ko xeeñ ak acidité.
+Pulpeu bouye bi mën na am texture bu ñu ko xamle ak goût bu wuute. Dañu koy boole ak ndox, ba noppi ñu ko setal bu baax. Sukkar di aju ci li nit ñi bëgg ci goûtu naan bi.
 
-### Aada ak diversité
+### Patrimoine ak valorisation
 
-Jus bu gingembre di bokk ci diversitéu naan yu local. Recette bi di wone ni ingrédients yu am solo ci cuisineu Senegaal mën a boole ngir sos naan bu ñu mën a naan ci waxtu yu wuute.`,
+Bouye bokk na ci ressources naturelles yu Senegaal. Jëfandikoo fruit bi ci naan di jàppale valorisationu produit local, te mën na bokk ci activitéu transformation ak commerce.`,
+  },
+  'jus-de-gingembre': {
+    titleWo: 'Jus bu gingembre',
+    excerptWo: 'Naan bu ñuy def ak gingembre, ndox ak sukkar, bu ñuy naan sedd.',
+    contentWo: `### Jëmmal
+
+Jus bu gingembre mooy naan bu ñuy def ak gingembre, ndox ak sukkar. Gingembre bi ñuy setal, tàllal walla nghiền, ba noppi ñu ko boole ak ndox. Naan bi mën na am goût bu dëgër te ñu koy naan sedd.
+
+### Préparation
+
+Dañu mën a yokk citron, mint walla yeneen ingrédients ngir soppi goût. Quantitéu gingembre ak sukkar di aju ci recetteu kër gi. Naan bi di bokk ci repas, cérémonies ak waxtu yu ñuy dal.
+
+### Gastronomie ak économie
+
+Jus bu gingembre bokk na ci naan yu ñuy def ci kër ak ci petite activité yu transformation. Jëfandikoo ingrédients yu local di jàppale savoir-faireu gastronomie ak valorisationu produit yi.`,
   },
   'thiere-bassi-salte': {
     titleWo: 'Thiéré bassi salté',
