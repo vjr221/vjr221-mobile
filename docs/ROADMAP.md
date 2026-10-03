@@ -1,6 +1,6 @@
 # Roadmap — VJR 221 Mobile
 
-> Chef de projet · 2026-09-27 · **1.6.0 publique** (A–D livrés · validé 2 appareils · tag `android-v1.6.0-1ea26db`).
+> Chef de projet · 2026-10-03 · **préparation 1.7.0** (versionCode 20) · base `main` à 184 commits au-delà de 1.6.0.
 
 ## Livré — 1.6.0
 
@@ -27,6 +27,14 @@
 2. Wolof 14 régions CMS + pack local — ✅.
 3. « Près de moi » GPS réel — ✅.
 4. Release GitHub non pre-release — ⏳ décocher sur le tag `1ea26db` + page `/application/`.
+
+## Préparation — 1.7.0
+
+- Vagues Wolof 105–108 consolidées, avec tests dédiés et nettoyage d’intégrité du corpus.
+- Version `1.7.0` alignée dans `app.json` et `package.json`.
+- `versionCode` Android / `buildNumber` iOS : **20**.
+- Workflow de release corrigé pour reprendre automatiquement le `versionCode` courant dans les notes.
+- **Étape suivante : CI complète → build APK production → vérification bundle/signature → test sur appareils → publication GitHub Release.**
 
 ## Hors scope
 
