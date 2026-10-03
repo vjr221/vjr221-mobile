@@ -1304,6 +1304,18 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof food and heritage enrichment wave 118', () => {
+    const slugs = ['plage-de-ngor', 'ceebu-yapp', 'baila', 'mbakhalou-saloum'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('covers the Wolof beverages enrichment wave 117', () => {
     const slugs = ['cafe-touba', 'bissap'];
     for (const slug of slugs) {
