@@ -630,3 +630,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
 - Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
+
+## Mise à jour — vague 119
+
+- **Vague 119 : enrichissement de 3 fiches** — Cap Skirring, Pointe des Almadies et Ceebu yapp.
+- Contenus Wolof développés autour du tourisme littoral, de la vie locale, de l’environnement et de la gastronomie.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+- Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
