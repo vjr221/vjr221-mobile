@@ -290,28 +290,78 @@ Intronisation bi di bokk ci mémoire culturelle ak historique. Denc récits ak p
   },
   'super-diamono': {
     titleWo: 'Super Diamono',
-    excerptWo: 'Groupe bu musik moderne.',
-    contentWo: `### Jëmmal\n\nSuper Diamono : mbalax, fusion, taariixu musik.`,
+    excerptWo: 'Groupe bu musik bu Senegaal, lëkkale mbalax, fusion ak aada yu local.',
+    contentWo: `### Jëmmal
+
+Super Diamono mooy groupe bu musik bu Senegaal bu bokk ci histoireu musik moderne. Fiche bi di ko jox ci contexteu création ak évolutionu musik, te di wone ni artistes mën a lëkkale influences yu wuute ci benn identité musicale.
+
+### Musik ak fusion
+
+Mbalax ak yeneen influences di bokk ci xel mi ñuy jëfandikoo ngir defar musik. Fusion bi di may groupe yi mën a jëfandikoo rythme, instruments ak melokaan yu wuute, te di yokk diversitéu scène musicale.
+
+### Mémoire ak transmission
+
+Taariixu groupe bu mel ni Super Diamono bokk na ci mémoireu musiqueu Senegaal. Denc répertoire, waxtaan ak génération yi di jàppale xam ni scène musicale di soppi, di yokk ak di wër ci aada yi.`,
   },
   'xalam-2': {
     titleWo: 'Xalam 2',
-    excerptWo: 'Groupe bu fusion.',
-    contentWo: `### Jëmmal\n\nXalam 2 : jazz, rock ak aada yu local.`,
+    excerptWo: 'Groupe bu fusion bu lëkkale jazz, rock ak aada yu local.',
+    contentWo: `### Jëmmal
+
+Xalam 2 mooy formation musicale bu bokk ci scèneu musique bu Senegaal. Fiche bi di ko jox ci contexteu fusion, ak ci ni musik mën a boole influences yu modern ak éléments yu bokk ci patrimoine musical.
+
+### Jazz, rock ak aada
+
+Jazz ak rock di bokk ci influences yi ñuy jëfandikoo ci fusion. Aada yu local yi di yokk identité ak melokaan, te lëkkale instruments, rythme ak xam-xamu musique ci benn projet.
+
+### Création ak transmission
+
+Xalam 2 di wone ni artistes mën a sos benn espace bu musik yi mën a daje. Transmissionu xam-xam, expérienceu scène ak dégg-dëgg ci influences yi di jàppale yokk diversitéu création musicale ci Senegaal.`,
   },
   'ucas-band-formation-musicale-historique-de-sedhiou': {
     titleWo: 'UCAS Band',
-    excerptWo: 'Musik bu Sédhiou.',
-    contentWo: `### Jëmmal\n\nUCAS Band : formation musicale historique ci Sédhiou.`,
+    excerptWo: 'Formation musicale historique bu Sédhiou, bokk ci mémoireu scèneu Casamance.',
+    contentWo: `### Jëmmal
+
+UCAS Band mooy formation musicale bu lëkkale Sédhiou ak histoireu scène musicale. Fiche bi di fésal solo bu formation yi am ci dundug culturel ci dëkk ak ci transmissionu savoir-faireu musique.
+
+### Sédhiou ak musique
+
+Sédhiou am na patrimoine culturel bu riche, te musique bokk na ci melokaan yi ñuy wone identitéu territoire. UCAS Band di bokk ci mémoire bi, ci digganteu création, performance ak vie culturelle.
+
+### Mémoire ak transmission
+
+Histoireu formation musicale di jàppale xam ni artistes ak musiciens mën a bokk ci denc patrimoineu dëkk. Waxtaan, répertoire ak transmissionu xam-xam di jàppale lëkkale générations yi ak scène musicale bu Sédhiou.`,
   },
   'fode-doussouba': {
     titleWo: 'Fodé Doussouba',
-    excerptWo: 'Champion bu làmb.',
-    contentWo: `### Jëmmal\n\nFodé Doussouba : champion bu lutte traditionnelle.`,
+    excerptWo: 'Champion bu làmb, bokk ci patrimoineu lutte traditionnelle bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Fodé Doussouba mooy champion bu làmb bu fiche bi di bokk ci patrimoineu sport ak aada bu Senegaal. Lutte traditionnelle am na bérab bu am solo ci animations, rassemblements ak dundug culturel ci réew mi.
+
+### Làmb ak spectacle
+
+Làmb du doon rekk combat. Mu ëmb it préparation, discipline, public, musique ak aada yi ñuy boole ak ay rassemblements. Njariñu champion yi di wone solo bu sport ak savoir-faireu performance am ci communauté yi.
+
+### Mémoire ak transmission
+
+Parcoursu champion di bokk ci mémoireu lutte. Transmissionu règles, gestes, discipline ak respectu adversaire di jàppale denc patrimoineu sport, te di may ndaw yi xam valeuru entraînement ak engagement.`,
   },
   'tata-de-kedougou-architecture-defensive-et-patrimoine-du-senegal-oriental': {
     titleWo: 'Tata bu Kédougou',
-    excerptWo: 'Architecture défensive.',
-    contentWo: `### Jëmmal\n\nTata de Kédougou : architecture yu yàgg, penku.`,
+    excerptWo: 'Architecture défensive bu yàgg, bokk ci patrimoineu Sénégal oriental.',
+    contentWo: `### Jëmmal
+
+Tata bu Kédougou mooy exempleu architecture défensive bu yàgg ci Sénégal oriental. Fiche bi di fésal solo bu patrimoine bâti am ci mémoireu territoire ak ci compréhensionu formesu protection ak organisationu dëkk yi.
+
+### Architecture ak territoire
+
+Tata bi di lëkkale construction ak contexteu territoire. Muraay, espace ak organisationu bérab bi di wone ni architecture mën a toppatoo besoinu protection ak dundug communauté. Xam-xamu tabax di bokk ci patrimoine bi.
+
+### Mémoire ak conservation
+
+Denc tata yi di jàppale aar mémoireu Sénégal oriental. Patrimoine bâti bi mën a joxe xibaar ci taariixu territoire, savoir-faireu tabax ak manière yu ñuy defar bérab yi. Conservation ak transmission di am solo ngir générations yi xam seen patrimoine.`,
   },
   'fort-pinet-laprade-memoire-historique-de-sedhiou': {
     titleWo: 'Fort Pinet-Laprade',
