@@ -198,7 +198,7 @@ Dañu mën a boole bissap ak gingembre, mint walla yeneen ingrédients ngir yokk
 ### Gastronomie ak économie
 
 Bissap bokk na ci naan yu am solo ci gastronomie bu Senegaal. Hibiscus di it mbay mi ñuy jëfandikoo, te transformationu ko ci naan mën a jàppale producteurs ak petites activités commerciales.`,
-  }
+  },
   'jus-de-bouye': {
     titleWo: 'Jus bu bouye',
     excerptWo: 'Naan bu ñuy def ak fruitu bouye, bu am goût bu wuute ak xel.',
