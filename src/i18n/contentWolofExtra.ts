@@ -20,33 +20,41 @@ Dunu Fadiouth mën na nekk bérab bu jàng ci nature, culture ak histoire. Touri
   },
   'cap-skirring': {
     titleWo: 'Cap Skirring',
-    excerptWo: 'Bérab bu tourisme ci Casamance, ak plages, nature ak vie locale.',
+    excerptWo: 'Bérab bu tourisme ci Casamance, ak plages, nature, culture ak vie locale.',
     contentWo: `### Jëmmal
 
 Cap Skirring nekk na ci diiwaanu Ziguinchor, ci wetug géej bu Casamance. Bérab bi xam nañu ko ci plages, paysage naturel ak activité yu tourisme. Mu bokk ci destinations yi ñuy seet ci Casamance.
 
 ### Géej ak nature
 
-Plages yi di bokk ci identitéu Cap Skirring. Géej, palmiers ak paysageu littoral di may bérab bi melokaan bu wuute. Nature bi mën a jàppale activité yu tourisme ak découverteu territoire.
+Plages yi di bokk ci identitéu Cap Skirring. Géej, palmiers ak paysageu littoral di may bérab bi melokaan bu wuute. Nature bi mën a jàppale activité yu tourisme, promenade ak découverteu territoire.
 
-### Vie locale ak tourisme
+### Culture ak vie locale
 
-Hôtels, restaurants ak services yu tourisme di lëkkale visiteurs ak économie locale. Tourisme bu jàppale communauté yi, respectu environnement ak valorisationu culture di mën a yokk njariñu bérab bi ci yoon bu yàgg.`,
+Tourisme bi di daje ak dundug communautés yi ci Casamance. Aada, lekk, musique ak savoir-faire yu local di mën a yokk expérienceu visiteurs. Respectu populations ak environnement di am solo ci développementu tourisme bu yàgg.
+
+### Économie locale
+
+Hôtels, restaurants, artisans ak yeneen services di bokk ci activitéu bérab bi. Valorisationu ressources locales ak participationu acteurs yi di mën a jàppale économieu Cap Skirring.`,
   },
   'pointe-des-almadies-dakar': {
     titleWo: 'Pointe des Almadies',
-    excerptWo: 'Sowwu gu bëgg a sowwu ci Cap-Vert, bérab bu am géej ak vie urbaine.',
+    excerptWo: 'Sowwu gu nekk ci Cap-Vert, ak géej, paysage littoral ak activité yu Dakar.',
     contentWo: `### Jëmmal
 
-Pointe des Almadies mooy sowwu bu nekk ci péninsule du Cap-Vert, ci wetug Dakar. Bérab bi lëkkale géej, paysage littoral ak activité yu ville. Mu bokk ci bérab yi am solo ci géographie touristique Dakar.
+Pointe des Almadies mooy sowwu bu nekk ci péninsule du Cap-Vert, ci wetug Dakar. Bérab bi lëkkale géej, paysage littoral ak activité yu ville. Mu bokk ci bérab yi am solo ci géographie ak tourismeu Dakar.
 
 ### Géej ak paysage
 
-Vista bu géej ak proximitéu océan di jox bérab bi melokaan bu wuute. Littoral bi di am solo ci loisirs, promenade ak yeneen activité yu jëmm ci géej, ci digganteu environnement ak vie urbaine.
+Vista bu géej ak proximitéu océan di jox bérab bi melokaan bu wuute. Littoral bi di am solo ci promenade, loisirs ak yeneen activité yu jëme ci géej, ci digganteu environnement ak vie urbaine.
 
-### Tourisme ak économie locale
+### Vie urbaine
 
-Restaurants, services ak activité yu loisirs di jàppale vie touristique bu Almadies. Valorisationu littoral ak gestionu environnement di am solo ngir tourisme ak dundug quartier yi mën a wéyandoo.`,
+Almadies di boole quartiers, restaurants, services ak activité yu loisirs. Bérab bi di nekk it ci digganteu dundug dëkk ak tourisme, te proximitéu géej di yokk njariñu territoire bi.
+
+### Environnement ak développement
+
+Aar littoral, gestionu déchets ak respectu environnement di am solo ngir bérab bi des bu neex. Développementu activité yu tourisme ak économie locale mën a doxandoo ak conservationu géej.`,
   },
   'plage-de-ngor': {
     titleWo: 'Plage bu N’Gor',
@@ -84,18 +92,22 @@ Ceebu jën du doon rekk recette; mu bokk ci patrimoineu culinaire. Xam-xamu defa
   },
   'ceebu-yapp': {
     titleWo: 'Ceebu yapp',
-    excerptWo: 'Mbuum bu riz ak yapp, bu bokk ci lekk yu ñuy def ci kër yu Senegaal.',
+    excerptWo: 'Mbuum bu riz ak yapp, légumes ak épices, bu bokk ci lekk yu Senegaal.',
     contentWo: `### Jëmmal
 
 Ceebu yapp mooy mbuum bu ñuy def ak riz ak yapp, ak légumes ak ay épices. Mu bokk ci lekk yu ñuy def ci kër yu Senegaal, te recette bi mën a wuute ci kër ak ci disponibilitéu ingrédients.
 
 ### Préparation
 
-Dañu koy defar ak yapp bu ñu togg ba mu sedd, walla ñu xawaare ko ci sauce bi, topp ci riz ak légumes. Épices yi di jàppale goûtu mbuum bi, te nit ku nekk mën na am yoonam ci préparation.
+Dañu koy defar ak yapp bu ñu togg ba mu sedd, walla ñu xawaare ko ci sauce bi. Riz bi di togg ci sauce bi ngir mu jël goûtu ingrédients yi. Légumes ak épices di yokk xew-xewu mbuum bi.
 
-### Aada ak lekkandoo
+### Lekkandoo ak aada
 
-Ceebu yapp di bokk ci repas yu ñuy séddale ak waa kër. Riz, yapp ak légumes di daje ci benn plat, te lekkandoo di yokk solo bu mbuum bi ci dundug bis bu nekk.`,
+Ceebu yapp di bokk ci repas yu ñuy séddale ak waa kër. Benn plat mën na boole riz, yapp ak légumes, te lekkandoo di yokk solo bu mbuum bi ci dundug bis bu nekk.
+
+### Savoir-faire
+
+Yoonu defar ceebu yapp di jaar ci xam-xamu cuisine bu ñuy jàngale ci diggante génération yi. Choixu yapp, waxtu togg ak melo sauce di mën a wuute, te loolu di may recette bi ay melokaan yu bari.`,
   },
   'mafe': {
     titleWo: 'Mafé',
