@@ -1268,6 +1268,24 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof music and heritage enrichment wave 114', () => {
+    const slugs = [
+      'super-diamono',
+      'xalam-2',
+      'ucas-band-formation-musicale-historique-de-sedhiou',
+      'fode-doussouba',
+      'tata-de-kedougou-architecture-defensive-et-patrimoine-du-senegal-oriental',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('covers the Wolof Carabane corpus cleanup wave 108', () => {
     const canonical = getWolofContentBySlug('ile-karabane-memoire-architecture-casamance');
     expect(getWolofContentBySlug('carabane')).toBeUndefined();
