@@ -622,3 +622,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
 - Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
+
+## Mise à jour — vague 118
+
+- **Vague 118 : enrichissement de 4 fiches** — Plage de N’Gor, Ceebu yapp, Baila et Mbakhalou Saloum.
+- Contenus Wolof développés autour du littoral, de la gastronomie, du patrimoine culturel et de la transmission des savoir-faire.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+- Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
