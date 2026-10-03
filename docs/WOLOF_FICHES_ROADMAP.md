@@ -582,3 +582,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Contenus Wolof développés autour du contexte culinaire, de la préparation, du terroir et de la transmission.
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+
+
+## Mise à jour — vague 113
+
+- **Vague 113 : enrichissement culturel** — Aada Sereer, Aada Mandingue, Sebbe Koliyabe et Intronisation Beuleup.
+- Contenus Wolof développés autour des pratiques culturelles, de la transmission, des communautés et du patrimoine.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
