@@ -1,6 +1,6 @@
 # État de production — VJR 221 Mobile
 
-Dernière mise à jour : **2026-09-27** · version app **1.6.0** (versionCode **19**) · **release publique** `android-v1.6.0-1ea26db`.
+Dernière mise à jour : **2026-10-03** · préparation **1.7.0** (versionCode **20**) · base `main` après les vagues Wolof 105–108.
 
 Légende : ✅ opérationnel · ⏳ action humaine · 🕛 prévu · ⚠️ compromis assumé
 
@@ -24,6 +24,14 @@ Légende : ✅ opérationnel · ⏳ action humaine · 🕛 prévu · ⚠️ comp
 - Taille : ~87 Mo
 - SHA-256 : `27ebc0661e010437ef12a9097fb84e769776f2c11e7e1aa40bb4b5e015aee4b1`
 - Page site : https://vjr221.sn/application/
+
+## 🧪 Préparation de la release 1.7.0
+
+- Version Expo/package alignée sur **1.7.0**.
+- Android `versionCode` et iOS `buildNumber` alignés sur **20**.
+- Le workflow Android dérive désormais automatiquement le `versionCode` des notes de release.
+- La branche `main` est **184 commits devant** le tag `android-v1.6.0-1ea26db` ; ces changements incluent principalement les consolidations Wolof et leur couverture de tests.
+- **Aucun APK 1.7.0 publié à ce stade** : la release attend les contrôles CI et un build Android production réussi.
 
 ## ⚠️ Compromis assumés
 
