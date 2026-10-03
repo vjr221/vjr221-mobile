@@ -230,23 +230,63 @@ Xam-xam ci jëfandikoo xorom yi di jaar ci njaboot yi ak ci savoir-faireu cuisin
   },
   'culture-serere-traditions-patrimoine': {
     titleWo: 'Aada Sereer',
-    excerptWo: 'Traditions ci Siin-Saalum.',
-    contentWo: `### Jëmmal\n\nAada Sereer : ndut, saltigues, patrimoine yu Fatick.`,
+    excerptWo: 'Aada, xam-xam ak patrimoine bu Sereer ci Siin-Saalum.',
+    contentWo: `### Jëmmal
+
+Aada Sereer ëmb aada, xam-xam ak jëf yu jaar ci njaboot yi ci Siin-Saalum ak yeneen terroir. Mu bokk ci diversitéu patrimoine culturel bu Senegaal.
+
+### Aada ak jëf
+
+Ndut, saltigues, cérémonies ak yeneen pratiques di bokk ci dundug aada. Ñuy wone solo bu njaboot, dëkk ak transmissionu xam-xam am.
+
+### Patrimoine ak transmission
+
+Aada Sereer di jaar ci làkk, lekk, musique, cérémonie ak xam-xamu terroir. Transmissionu xam-xam ci générations yi di jàppale denc identité ak patrimoine.`,
   },
   'culture-mandingue-senegal-traditions': {
     titleWo: 'Aada Mandingue',
-    excerptWo: 'Traditions mandingue.',
-    contentWo: `### Jëmmal\n\nAada Mandingue : kora, musik, taariixu Mande.`,
+    excerptWo: 'Aada Mandingue, musique, xam-xam ak patrimoine ci Senegaal.',
+    contentWo: `### Jëmmal
+
+Aada Mandingue bokk na ci patrimoine culturel bu Senegaal, rawatina ci diiwaan yi amoon ak am solo ci histoireu Mande. Mu ëmb musique, récits, cérémonies ak savoir-faire.
+
+### Kora ak musique
+
+Kora ak yeneen instruments di bokk ci patrimoine musical. Musique di jàppale waxtaan, transmissionu récits ak denc xam-xam ci njaboot yi.
+
+### Patrimoine ak transmission
+
+Aada Mandingue di jaar ci làkk, récits, cérémonie ak jëf yu aada. Transmissionu xam-xam ci générations yi di jàppale denc diversitéu patrimoineu Senegaal.`,
   },
   'sebbe-koliyabe-tradition-culturelle-du-fouta': {
     titleWo: 'Sebbe Koliyabe',
-    excerptWo: 'Tradition bu Fouta.',
-    contentWo: `### Jëmmal\n\nSebbe Koliyabe : aada bu Fouta-Toro, Haalpulaar.`,
+    excerptWo: 'Pratique culturelle bu Fouta-Toro, bokk ci patrimoine Haalpulaar.',
+    contentWo: `### Jëmmal
+
+Sebbe Koliyabe mooy pratique culturelle bu Fouta-Toro bu bokk ci patrimoine Haalpulaar. Mu lëkkale aada, cérémonies ak transmissionu xam-xam.
+
+### Aada ak communauté
+
+Pratique bi di bokk ci waxtu yu ñuy dajale askan wi. Cérémonies ak jëf yi di wone solo bu communauté ak njaboot am ci dundug aada.
+
+### Transmission
+
+Xam-xam ci Sebbe Koliyabe di jaar ci générations yi. Transmissionu làkk, gestes ak récits di jàppale denc patrimoine culturel bu Fouta-Toro.`,
   },
   'intronisation-beuleup-tradition-royale-du-senegal': {
     titleWo: 'Intronisation Beuleup',
-    excerptWo: 'Tradition royale.',
-    contentWo: `### Jëmmal\n\nBeuleup : tradition royale, njiit ak patrimoine.`,
+    excerptWo: 'Cérémonie ak tradition royale bu bokk ci patrimoine historique bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Intronisation Beuleup mooy cérémonie bu lëkkale tradition royale, njiit ak patrimoine. Mu bokk ci pratiques historiques yi di wone organisationu société ak solo bu autorité traditionnelle am.
+
+### Cérémonie ak symboles
+
+Cérémonie bi di ëmb jëf yu aada ak symboles yu ñuy jëfandikoo ngir wone changementu njiit. Melokaanu cérémonie bi di jaar ci contexte ak traditionu terroir bi.
+
+### Patrimoine
+
+Intronisation bi di bokk ci mémoire culturelle ak historique. Denc récits ak pratiques yi di jàppale xam taariix ak patrimoineu communautés yi.`,
   },
   'super-diamono': {
     titleWo: 'Super Diamono',
