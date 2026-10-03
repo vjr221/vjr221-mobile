@@ -638,3 +638,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
 - Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
+
+## Mise à jour — vague 120
+
+- **Vague 120 : enrichissement de 3 fiches gastronomiques** — Mafé, Domoda et Soupou kandia.
+- Contenus Wolof développés autour des ingrédients, de la préparation, du savoir-faire culinaire et des usages familiaux.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+- Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
