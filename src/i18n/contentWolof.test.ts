@@ -1203,6 +1203,24 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof gastronomy enrichment wave 110', () => {
+    const slugs = [
+      'jus-de-gingembre',
+      'thiere-bassi-salte',
+      'poisson-braise-lakk-dieune',
+      'ndambe-ragout-de-niebe-petit-dejeuner-populaire-senegalais',
+      'thiou',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('covers the Wolof Carabane corpus cleanup wave 108', () => {
     const canonical = getWolofContentBySlug('ile-karabane-memoire-architecture-casamance');
     expect(getWolofContentBySlug('carabane')).toBeUndefined();
