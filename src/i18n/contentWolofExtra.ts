@@ -364,33 +364,41 @@ Denc rizu Casamance di denc it xam-xamu mbay. Valorisationu riz local mën a jà
   },
   'lakhou-bissap': {
     titleWo: 'Lakhou bissap',
-    excerptWo: 'Lekk bu mil ak bissap, bu bokk ci diversitéu cuisineu Senegaal.',
+    excerptWo: 'Lakh bu ñu def ak millet ak bissap, lekk bu lëkkale céréale, boisson traditionnelle ak terroir.',
     contentWo: `### Jëmmal
 
-Lakhou bissap mooy lekk bu ñu def ak mil ak bissap. Mu bokk ci lekk yu aada, te di boole céréale ak ingrédient bu am solo ci cuisineu Senegaal.
+Lakhou bissap mooy lekk bu ñu def ak mil ak bissap. Mu lëkkale céréale ak goût bu bissap di joxe. Lakh di bokk ci lekk yu ñuy def ci kër, te ñu mën a ko lekk ci ay waxtu yu wuute ci dundug njaboot.
 
 ### Mil ak bissap
 
-Mil bi di joxe baseu lekk bi, bissap bi di yokk melokaan ak xeeñ. Préparation bi mën na wuute ci kër yi ak terroir yi, te savoir-faireu cuisine di defar melokaanu lekk bi.
+Mil mooy baseu lakh bi, te mu am solo ci patrimoine céréalier bu Senegaal. Bissap bi di yokk xeeñ, goût ak melokaan. Ñuy jëfandikoo ndoxu bissap ci yoonu defar bi, ci li recetteu kër gi di soxla.
 
-### Transmission ak patrimoine
+### Préparation ak partage
 
-Lakhou bissap di wone diversitéu recettes yu ñu sos ak produits yu local. Transmissionu recettes ci njaboot yi di jàppale denc patrimoine culinaire bu Senegaal.`,
+Ñuy togg mil bi ba mu am texture bu ñu bëgg, ba noppi ñu yokk bissap ak yeneen ingrédients. Yoonu préparation mën na wuute ci kër yi. Lakh di mën a nekk ci benn bol, te ñuy ko séddale ci njaboot ak gan yi.
+
+### Patrimoine culinaire
+
+Lakhou bissap di wone ni produitsu local mën a bokk ci lekk bu am identité. Mil ak bissap ñoo lëkkale mbay ak cuisine. Denc recette bi di jàppale transmissionu savoir-faire ak valorisationu produitsu Senegaal.`,
   },
   'les-epices-dans-la-cuisine-senegalaise': {
-    titleWo: 'Xorom yi ci cuisineu Senegaal',
-    excerptWo: 'Netetou, jàngara, gingembre, piment ak yeneen ingrédients yu jëfandikoo ci lekk.',
+    titleWo: 'Xeer yi ci cuisineu Senegaal',
+    excerptWo: 'Xeer yi di joxe xeeñ, goût ak melokaan ci lekk yu Senegaal, te ñuy jëfandikoo ay xeet yu wuute.',
     contentWo: `### Jëmmal
 
-Xorom yi am nañu solo ci cuisineu Senegaal. Netetou, gingembre, piment ak yeneen ingrédients di jàppale joxe xeeñ, neex ak melokaan ci ay lekk yu wuute.
+Xeer yi am solo ci cuisineu Senegaal ndax ñuy joxe xeeñ, goût ak melokaan. Ñuy ko jëfandikoo ci sauce, jën, yàpp, riz ak yeneen lekk. Yoonu jëfandikoo xeer yi di wuute ci recette, terroir ak goûtu kër.
 
-### Xorom ak recettes
+### Xeer ak produits yu local
 
-Jëfandikoo xorom yi di wuute ci recette yi. Ñu mën nañu leen boole ak sauce, riz, jën, yàpp walla légumes ngir yokk xeeñ ak melokaanu lekk bi.
+Xeer yi mën a jóge ci mbay, marché walla réseauxu commerce. Piment, poivre ak yeneen aromates di yokk caractéristiqueu lekk. Jëfandikoo produits yu local di bokk ci valorisationu savoir-faire ak économieu producteurs yi.
 
-### Xam-xam ak transmission
+### Jëfandikoo ci préparation
 
-Xam-xam ci jëfandikoo xorom yi di jaar ci njaboot yi ak ci savoir-faireu cuisine. Mu bokk ci patrimoine culinaire bu Senegaal, te di wone diversitéu terroir ak ingrédients yu local.`,
+Quantitéu xeer di am solo. Bu ñu ko yokkee lool, goût bi mën a ëpp; bu ñu ko yéexee, xeeñ bi mën a néew. Cuisinier yi di jàngale ay techniques ngir boole xeer ak ingrédients ci waxtu wu jub.
+
+### Patrimoine ak transmission
+
+Xeer yi di bokk ci mémoireu cuisine. Njaboot yi di séddale yoonu boole aromates, te ay recettes mën a am ay secrets yu ñuy denc. Xam-xamu jëfandikoo xeer yi di jàppale diversitéu gastronomie ak identitéu lekk yu Senegaal.`,
   },
   'culture-serere-traditions-patrimoine': {
     titleWo: 'Aada Sereer',
