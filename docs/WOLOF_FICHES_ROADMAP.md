@@ -606,3 +606,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
 - Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
 - Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
+
+## Mise à jour — vague 116
+
+- **Vague 116 : enrichissement de 5 fiches destinations et gastronomie** — Dunu Fadiouth, Cap Skirring, Pointe des Almadies, Plage de N’Gor et Ceebu jën.
+- Contenus Wolof développés autour du patrimoine, du littoral, du tourisme, des cultures locales et de la gastronomie sénégalaise.
+- Aucun nouveau slug, aucune suppression et aucun doublon créé ; contenu français inchangé.
+- Test dédié ajouté avec contrôle des champs, structure Markdown, longueur minimale et unicité des clés.
+- Aucun APK intermédiaire : validation CI d’abord avant préparation de la prochaine release.
