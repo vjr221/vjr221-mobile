@@ -1433,5 +1433,23 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof heritage and Sahel enrichment wave 125', () => {
+    const slugs = [
+      'centre-dinterpretation-de-toubacouta-patrimoine-du-delta-du-saloum',
+      'centre-dinterpretation-de-bandafassi-patrimoine-du-pays-bassari',
+      'nature-du-ferlo-paysages-saheliens-faune-et-ressources',
+      'la-gomme-arabique-au-senegal-ressource-du-sahel-et-valorisation',
+      'fort-pinet-laprade-memoire-historique-de-sedhiou',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
 
 });
