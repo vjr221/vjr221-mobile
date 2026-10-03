@@ -145,28 +145,78 @@ Thiou di bokk ci patrimoine culinaire bu Senegaal, te recettes yu ni mel di jaar
   },
   'caldou': {
     titleWo: 'Caldou',
-    excerptWo: 'Mbuum bu jën bu Casamance.',
-    contentWo: `### Jëmmal\n\nCaldou : riz, jën ak sauce bu Casamance.`,
+    excerptWo: 'Mbuum bu jën bu Casamance, bu ñu lekk ak riz ak sauce.',
+    contentWo: `### Jëmmal
+
+Caldou mooy lekk bu jën bu bokk ci cuisineu Casamance. Ñu koy def ak jën ak riz, te sauce bi di boole ingrédients yi ci benn lekk bu am xeeñ.
+
+### Jën ak préparation
+
+Jën bi di nekk ci xolum caldou. Préparation bi di jëfandikoo ingrédients yu ñu xam ci cuisineu Casamance, te melokaanu sauce bi di jàppale jën bi ak riz bi.
+
+### Casamance ak patrimoine
+
+Caldou di wone richesseu patrimoine culinaire bu Casamance. Recette bi di bokk ci savoir-faireu terroir yi, te transmissionu lekk yi di jàppale denc aada ak xam-xam.`,
   },
   'le-thiof-au-senegal-poisson-emblematique-peche-et-gastronomie': {
     titleWo: 'Thiof',
-    excerptWo: 'Jën bu emblématique.',
-    contentWo: `### Jëmmal\n\nThiof : jën bu gën a xam ci ceebu jën ak napp.`,
+    excerptWo: 'Jën bu am solo ci cuisine ak pêche bu Senegaal.',
+    contentWo: `### Jëmmal
+
+Thiof mooy jën bu ñu xam lool ci cuisineu Senegaal. Mu bokk ci patrimoineu pêche ak gastronomie, te am na bérab bu am solo ci ay lekk yu ñuy def ak jën.
+
+### Pêche ak cuisine
+
+Thiof di bokk ci ressourcesu géej yi ñuy jëfandikoo ci cuisine. Ñu mën nañu ko def ci ay recettes yu wuute, te ñu koy boole ak riz walla yeneen accompagnements.
+
+### Solo ci patrimoine
+
+Thiof di lëkkale dundug pêche, marchés ak savoir-faireu cuisine. Xam-xam ci jëfandikoo jën bi ak transmissionu recettes di bokk ci patrimoine culinaire bu Senegaal.`,
   },
   'riz-de-casamance': {
     titleWo: 'Ceebu Casamance',
-    excerptWo: 'Riz bu local bu Casamance.',
-    contentWo: `### Jëmmal\n\nRiz de Casamance : tool yu riz, mangrove, aada.`,
+    excerptWo: 'Riz bu local bu Casamance, lëkkale mbay, terroir ak aada.',
+    contentWo: `### Jëmmal
+
+Riz de Casamance mooy riz bu ñuy tabax ci terroir yi ci Casamance. Mu bokk ci agriculture ak alimentationu diiwaan bi, te di wone solo bu riz am ci dundug askan wi.
+
+### Mbay ak environnement
+
+Tool yu riz bokk nañu ci paysageu Casamance, ak zones yu ndox ak mangrove yu lëkkale mbay ak environnement. Mbayu riz di soxla toppatoo bu baax ci suuf ak ndox.
+
+### Aada ak patrimoine
+
+Riz di bokk ci patrimoine culinaire ak agriculturel bu Casamance. Xam-xam ci mbay, préparation ak lekk di jaar ci njaboot yi, te di jàppale denc terroir ak aada yi.`,
   },
   'lakhou-bissap': {
     titleWo: 'Lakhou bissap',
-    excerptWo: 'Mil ak bissap.',
-    contentWo: `### Jëmmal\n\nLakhou bissap : mil ak bissap, mbuum bu aada.`,
+    excerptWo: 'Lekk bu mil ak bissap, bu bokk ci diversitéu cuisineu Senegaal.',
+    contentWo: `### Jëmmal
+
+Lakhou bissap mooy lekk bu ñu def ak mil ak bissap. Mu bokk ci lekk yu aada, te di boole céréale ak ingrédient bu am solo ci cuisineu Senegaal.
+
+### Mil ak bissap
+
+Mil bi di joxe baseu lekk bi, bissap bi di yokk melokaan ak xeeñ. Préparation bi mën na wuute ci kër yi ak terroir yi, te savoir-faireu cuisine di defar melokaanu lekk bi.
+
+### Transmission ak patrimoine
+
+Lakhou bissap di wone diversitéu recettes yu ñu sos ak produits yu local. Transmissionu recettes ci njaboot yi di jàppale denc patrimoine culinaire bu Senegaal.`,
   },
   'les-epices-dans-la-cuisine-senegalaise': {
-    titleWo: 'Xorom yi ci këri',
-    excerptWo: 'Netetou, jar, piment.',
-    contentWo: `### Jëmmal\n\nXorom : netetou, djar, gingembre, piment.`,
+    titleWo: 'Xorom yi ci cuisineu Senegaal',
+    excerptWo: 'Netetou, jàngara, gingembre, piment ak yeneen ingrédients yu jëfandikoo ci lekk.',
+    contentWo: `### Jëmmal
+
+Xorom yi am nañu solo ci cuisineu Senegaal. Netetou, gingembre, piment ak yeneen ingrédients di jàppale joxe xeeñ, neex ak melokaan ci ay lekk yu wuute.
+
+### Xorom ak recettes
+
+Jëfandikoo xorom yi di wuute ci recette yi. Ñu mën nañu leen boole ak sauce, riz, jën, yàpp walla légumes ngir yokk xeeñ ak melokaanu lekk bi.
+
+### Xam-xam ak transmission
+
+Xam-xam ci jëfandikoo xorom yi di jaar ci njaboot yi ak ci savoir-faireu cuisine. Mu bokk ci patrimoine culinaire bu Senegaal, te di wone diversitéu terroir ak ingrédients yu local.`,
   },
   'culture-serere-traditions-patrimoine': {
     titleWo: 'Aada Sereer',
