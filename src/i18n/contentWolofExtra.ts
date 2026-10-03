@@ -35,8 +35,18 @@ export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   },
   'mafe': {
     titleWo: 'Mafé',
-    excerptWo: 'Sauce bu arachide ak yàpp walla jën.',
-    contentWo: `### Jëmmal\n\nMafé mooy sauce bu arachide (tigadege), dañu koy toxal ak yàpp, jën walla vegetables. Lekk nañu ko ak ceeb.\n\n### Xibaar\n\nMafé dafa am solo ci këri yu Senegaal ak Afrique de l’Ouest. Netetou ak xorom yi dañu koy yokk neex.`,
+    excerptWo: 'Sauce bu tigadege ak yàpp, jën walla légumes, bu ñuy lekk ak ceeb.',
+    contentWo: `### Jëmmal
+
+Mafé mooy lekk bu sauceu tigadege am ci xol. Ñu mën nañu ko def ak yàpp, jën walla légumes, te ñuy lekk ko ak ceeb. Mu bokk ci lekk yu ñu xam ci Senegaal ak Afrique de l’Ouest.
+
+### Tigadege ak préparation
+
+Tigadege bi di joxe sauce bi texture ak xeeñ bu am solo. Yàpp walla yeneen ingrédients di yokk melokaanu lekk bi, te recette bi mën na wuute ci kër yi ak terroir yi.
+
+### Aada ak transmission
+
+Mafé di wone solo bu arachide am ci cuisine. Recette bi di jaar ci njaboot yi, te savoir-faireu préparation di jàppale denc patrimoine culinaire bu Senegaal.`,
   },
   'domoda': {
     titleWo: 'Domoda',
@@ -329,12 +339,32 @@ Guembeul wone na solo bu conservationu faune sahélienne am. Réserve bi bokk na
   },
   'baila': {
     titleWo: 'Baïla',
-    excerptWo: 'Mbuum bu aada.',
-    contentWo: `### Jëmmal\n\nBaïla : mbuum bu aada, fêtes.`,
+    excerptWo: 'Lekk bu aada bu bokk ci patrimoine culinaire.',
+    contentWo: `### Jëmmal
+
+Baïla mooy lekk bu aada bu bokk ci patrimoine culinaire. Mu lëkkale ingrédients yu local, savoir-faire ak waxtu yu ñuy dajale.
+
+### Préparation ak terroir
+
+Préparationu Baïla di jaar ci xam-xam bu ñu jële ci njaboot yi. Ingrédients yi ak melokaanu recette bi mën nañu wuute ci terroir yi.
+
+### Transmission
+
+Lekk yu aada ni Baïla di jàppale denc xam-xam ci cuisine. Transmissionu recettes ci njaboot yi di aar patrimoine culinaire ak diversitéu aada yi.`,
   },
   'mbakhalou-saloum': {
     titleWo: 'Mbakhalou Saalum',
-    excerptWo: 'Spécialité bu Saalum.',
-    contentWo: `### Jëmmal\n\nMbakhalou Saloum : riz, jën, aada yu Saalum.`,
+    excerptWo: 'Spécialité bu Saalum, lëkkale riz, jën ak aada yu terroir.',
+    contentWo: `### Jëmmal
+
+Mbakhalou Saalum mooy spécialité bu bokk ci patrimoine culinaire bu Saalum. Mu lëkkale ingrédients yu local ak savoir-faireu cuisineu terroir.
+
+### Saalum ak ressources
+
+Lekk bi di wone solo bu ressourcesu terroir am ci alimentation. Jën, riz ak yeneen ingrédients mën nañu bokk ci préparation, ci melokaan yu wuute.
+
+### Aada ak transmission
+
+Mbakhalou Saalum di bokk ci diversitéu recettes yu Senegaal. Xam-xam bu préparation di jaar ci njaboot yi ak ci waxtu yu ñuy dajale, te di jàppale denc patrimoineu Saalum.`,
   },
 };
