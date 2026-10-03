@@ -1185,6 +1185,24 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
   });
 
 
+  it('covers the Wolof gastronomy enrichment wave 109', () => {
+    const slugs = [
+      'ceebu-yapp',
+      'domoda',
+      'soupou-kandia',
+      'thiakry',
+      'jus-de-bouye',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(500);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('covers the Wolof Carabane corpus cleanup wave 108', () => {
     const canonical = getWolofContentBySlug('ile-karabane-memoire-architecture-casamance');
     expect(getWolofContentBySlug('carabane')).toBeUndefined();
