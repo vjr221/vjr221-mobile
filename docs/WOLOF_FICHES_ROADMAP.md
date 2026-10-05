@@ -736,7 +736,7 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 
 ## Mise a jour - vague 130
 
-- Vague 130 : enrichissement de 3 fiches cuisine et peche - Thiou, Caldоу et Lakk dieune.
+- Vague 130 : enrichissement de 3 fiches cuisine et peche - Thiou, Caldou et Lakk dieune.
 - Contenus Wolof developpes autour de la preparation, des produits de la mer, du terroir, du lekkandoo et de la transmission.
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
