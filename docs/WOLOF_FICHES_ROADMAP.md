@@ -795,3 +795,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 137
+
+- Vague 137 : enrichissement des fiches Epices dans la cuisine senegalaise, Tanne Beuleup et Plageu Ngor.
+- Contenus Wolof developpes autour des savoir-faire culinaires, de la memoire culturelle, du littoral, du tourisme et de la protection environnementale.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
