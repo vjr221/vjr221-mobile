@@ -750,3 +750,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 132
+
+- Vague 132 : enrichissement de 3 fiches patrimoine culturel - Aada Manding, Sebbe Koliyabe et Tanne Beuleup.
+- Contenus Wolof developpes autour de la transmission, des ceremonies, de la memoire, des symboles et de la valorisation du patrimoine immateriel.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
