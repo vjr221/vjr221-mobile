@@ -80,19 +80,23 @@ N’Gor am na histoire ak culture bu lëkkale ak populationu Lébou. Tourisme bu
 Plage bi di it bérab bu ñuy daje, waxtaan ak séddale ay activité. Restaurants, services ak petites activités di bokk ci économie locale bu quartier bi.`,
   },
   'thieboudiene-ceebu-jen': {
-    titleWo: 'Ceebu jën (Thiéboudiène)',
-    excerptWo: 'Ceebu jën mooy mbuum bu nasyonaal bu Senegaal, ak riz, jën ak légumes.',
+    titleWo: 'Ceebu jën',
+    excerptWo: 'Ceebu jën mooy benn ci lekk yu mag ci Senegaal, bu lëkkale riz, jën, légumes ak sauce, te mu bokk ci patrimoine culinaire.',
     contentWo: `### Jëmmal
 
-Ceebu jën, walla thiéboudiène, mooy mbuum bu am solo ci gastronomie bu Senegaal. Dañu koy def ak riz, jën, légumes ak sauce bu ñu defar ak ingrédients yu local. Mbuum bi bokk na ci dundug kër ak waxtu yu ñuy bokk lekk.
+Ceebu jën mooy lekk bu am solo ci gastronomie bu Senegaal. Ñuy ko defar ak riz, jën, légumes ak sauce, te yoonu togg bi di lëkkale produitsu géej, mbay ak savoir-faireu cuisine. Lekk bi di am bérab bu mag ci repasu njaboot ak lekkandoo.
 
-### Ceebu jën bu xonq ak bu weex
+### Jën, riz ak légumes
 
-Am na melokaan yu wuute ci ceebu jën. Ceebu jën bu xonq di jëfandikoo tomate ci sauce bi, te bu weex di am sauce bu leer. Jën mën a wuute ci li waxtu ak li ñu am, te thiof bokk na ci jën yi ñuy jëfandikoo.
+Jën bi di nekk benn élémentu bu mag ci ceebu jën, te riz di jàppale baseu repas bi. Légumes yi di yokk goût ak melokaan, te sauce bi di lëkkale ingrédients yi. Yoonu defar di mën a wuute ci kër yi, waaye toppatoo waxtu togg ak ordreu ingrédients di am solo.
 
-### Aada ak transmission
+### Lekkandoo ak aada
 
-Ceebu jën du doon rekk recette; mu bokk ci patrimoineu culinaire. Xam-xamu defar, séddale mbuum ak lekkandoo di lëkkale génération yi. Gastronomie bi di wone solo bu jën, riz, légumes ak savoir-faireu cuisine ci identitéu Senegaal.`,
+Ceebu jën di mën a nekk ci benn plat bu ñuy séddale. Njaboot yi mën a daje ci benn bol, ñu séddale riz, jën ak légumes, te lekkandoo bi di jàppale digganteu nit ñi. Lekk bi di bokk ci waxtu yu ñuy dal, ndaje ak cérémonies.
+
+### Patrimoine ak transmission
+
+Xam-xamu defar ceebu jën di jaar ci génération yi. Jàngale yoonu togg, yoonu taqal, séddaleu ingrédients ak toppatoo goût di jàppale denc patrimoine culinaire. Lekk bi di wone solo bu pêche, agriculture ak transformationu produits ci identitéu gastronomie bu Senegaal.`,
   },
   'ceebu-yapp': {
     titleWo: 'Ceebu yapp',
@@ -115,18 +119,22 @@ Yoonu defar ceebu yapp di jaar ci xam-xamu cuisine bu ñuy jàngale ci diggante 
   },
   'mafe': {
     titleWo: 'Mafé',
-    excerptWo: 'Mbuum bu sauce arachide, bu bokk ci lekk yu am solo ci Senegaal.',
+    excerptWo: 'Mafé mooy mbuum bu sauceu cacahuète ak yàpp walla jën, légumes ak riz, bu bokk ci lekk yu am solo ci Senegaal.',
     contentWo: `### Jëmmal
 
-Mafé mooy mbuum bu ñuy def ak sauce arachide, ak yapp walla poisson, légumes ak ay épices. Mu bokk ci lekk yu ñuy def ci kër yu Senegaal, te recette bi mën a am ay melokaan yu wuute ci région ak ci kër.
+Mafé mooy mbuum bu ñu xam ak sauceu cacahuète. Ñuy ko defar ak yàpp walla jën, légumes ak yeneen ingrédients, te riz di mën a bokk ci lekkandoo. Sauceu cacahuète bi di joxe texture ak goûtu bu am solo ci identitéu mbuum bi.
 
-### Préparation
+### Sauceu cacahuète
 
-Arachide bi di jëfandikoo ngir defar sauce bi, te ñu mën a boole ko ak tomate, légumes ak ingrédients yu ñu am. Yapp walla poisson di togg ci sauce bi ba mu jël goûtu mbuum.
+Cacahuète bi ñuy jëfandikoo ci sauce bi di lëkkale mbuum bi ak agriculture ak produitsu local. Ñuy ko boole ak tomate, oignon walla yeneen ingrédients ci li recetteu kër gi di jëfandikoo. Yàpp walla jën bi di togg ci sauce bi ngir jël goût ak texture.
 
-### Aada ak lekkandoo
+### Repas ak lekkandoo
 
-Mafé di bokk ci repas yu ñuy séddale ak waa kër. Xam-xamu defar sauce bi ak séddale mbuum di jaar ci diggante génération yi. Mu di it wone solo bu arachide ci gastronomie bu Senegaal.`,
+Mafé di mën a nekk ci repasu njaboot, ci ndaje walla ci waxtu yu ñuy dal. Riz ak sauce di boole ay éléments ci benn plat, te légumes yi di yokk diversitéu repas bi. Séddaleu mbuum bi di jàppale lekkandoo ak waxtaan ci kër.
+
+### Transmission ak produits local
+
+Xam-xamu defar mafé di jaar ci njaboot yi, te recette bi mën a am ay variations ci yoonu defar. Cacahuète, légumes ak céréales di wone solo bu produitsu local ci cuisine. Denc savoir-faire bi di jàppale patrimoine culinaire ak transmissionu xam-xam ci génération yi.`,
   },
 
   'domoda': {
@@ -170,18 +178,22 @@ Suppu kandja di wone solo bu produitsu local ci cuisine. Jën, gombo, légumes a
   },
   'thiakry': {
     titleWo: 'Thiakry',
-    excerptWo: 'Dessert bu ñuy def ak couscous de mil, lait caillé ak sukkar.',
+    excerptWo: 'Thiakry mooy dessert bu ñuy def ak mil, lait caillé walla lait, sukkar ak parfum, bu bokk ci lekk yu ñuy séddale ci Senegaal.',
     contentWo: `### Jëmmal
 
-Thiakry mooy dessert bu ñuy def ak couscous de mil ak lait caillé. Dañu koy boole ak sukkar, te ñu mën a yokk vanille, muscade walla yeneen parfum. Mu bokk ci lekk yu ñuy def ci kër yu Senegaal.
+Thiakry mooy lekk bu ñuy def ak mil, lait caillé walla lait, sukkar ak yeneen ingrédients yu ñuy jëfandikoo ngir joxe goût ak parfum. Mu bokk ci desserts yu am solo ci gastronomie bu Senegaal. Textureu grains yi ak douceuru lait di boole ay éléments yu ñuy xamle ci lekk bi.
 
 ### Préparation
 
-Mil bi ñuy defar ci couscous di togg, ba noppi ñu ko boole ak lait caillé. Sukkar ak parfum yi di yokk goût. Thiakry mën na nekk bu sedd, te préparation bi di aju ci yoonu kër gi.
+Mil bi ñuy defar ci grains yu ñuy togg ba mu sedd. Gannaaw loolu ñuy ko boole ak lait caillé walla lait ak sukkar. Ñu mën a yokk vanille, muscade walla yeneen parfum ci recetteu kër gi. Waxtu repos bi di may ingredients yi di lëkkale ngir am texture bu neex.
 
-### Aada ak gastronomie
+### Lekkandoo ak aada
 
-Thiakry di bokk ci repas, cérémonies ak waxtu yu ñuy dal. Mu wone solo bu mil ci alimentation ak gastronomie bu Senegaal, te recette bi di jaar ci diggante génération yi.`,
+Thiakry di mën a nekk ci repas njaboot, ndaje ak waxtu yu ñuy dal. Ñuy ko séddale ci bol walla récipient, te lekk bi mën a bokk ci waxtu yu ñuy waxtaan ak lekkandoo. Yoonu defar bi mën a wuute ci kër yi, waaye baseu recette bi des bu jàppale identitéu lekk bi.
+
+### Transmission
+
+Xam-xamu defar thiakry di jaar ci njaboot yi. Mag ñi di jàngale ndaw ñi yoonu togg mil, boole lait ak régulariser goûtu sukkar. Denc recette bi di jàppale patrimoine culinaire ak diversitéu desserts yu ñuy defar ak produitsu céréaliers.`,
   },
 
   'cafe-touba': {
@@ -243,19 +255,23 @@ Bouye di bokk ci paysage ak patrimoine naturelu Senegaal. Jëfandikoo fruit bi c
 Jus bu buy di mën a nekk ci kër, ci cérémonies ak ci petites activités yu transformation. Préparation bi di may ay opportunités ngir valoriser produitu bouye ak savoir-faireu njaboot. Jàngale yoonu setal, defar ak séddale naan bi di jàppale transmissionu patrimoine culinaire ak naturel.`,
   },
   'jus-de-gingembre': {
-    titleWo: 'Jus bu gingembre',
-    excerptWo: 'Naan bu ñuy def ak gingembre, ndox ak sukkar, bu ñuy naan sedd.',
+    titleWo: 'Jus bu ginger',
+    excerptWo: 'Jus bu ginger mooy naan bu ñuy defar ak gingembre, ndox ak sukkar, bu am goût bu doole te bokk ci boissonsu Senegaal.',
     contentWo: `### Jëmmal
 
-Jus bu gingembre mooy naan bu ñuy def ak gingembre, ndox ak sukkar. Gingembre bi ñuy setal, tàllal walla nghiền, ba noppi ñu ko boole ak ndox. Naan bi mën na am goût bu dëgër te ñu koy naan sedd.
+Jus bu ginger mooy naan bu ñuy defar ak racineu gingembre, ndox ak sukkar. Gingembre bi di joxe parfum ak goût bu doole, te recette bi mën a am ay variations ci quantitéu sukkar ak yeneen ingrédients. Mu bokk ci boissons yu ñuy defar ci kër ak ci ndaje.
 
 ### Préparation
 
-Dañu mën a yokk citron, mint walla yeneen ingrédients ngir soppi goût. Quantitéu gingembre ak sukkar di aju ci recetteu kër gi. Naan bi di bokk ci repas, cérémonies ak waxtu yu ñuy dal.
+Ñuy setal gingembre bi, rëy ko walla ñu ko dajale ci yoonu recetteu kër gi. Ñuy boole ko ak ndox, ba noppi ñu setal jus bi ngir bàyyi fibres yi. Sukkar di mën a yokk ci li nit ki bëgg. Ñu mën a boole citron walla yeneen parfum ngir soppi goûtu naan bi.
 
-### Gastronomie ak économie
+### Usages
 
-Jus bu gingembre bokk na ci naan yu ñuy def ci kër ak ci petite activité yu transformation. Jëfandikoo ingrédients yu local di jàppale savoir-faireu gastronomie ak valorisationu produit yi.`,
+Jus bu ginger di mën a nekk ci repas, ndaje ak waxtu yu ñuy dal. Ñuy ko séddale bu sedd, te goûtu gingembre bi di may naan bi benn caractère bu wuute. Préparation bu kër di may nit ñi mënees a jàppale recette bi ak ingrédients yi ñu am.
+
+### Transmission ak valorisation
+
+Defar jusu ginger di bokk ci savoir-faireu boissonsu kër. Xam-xamu setal, dajale, séddale ak toppatoo goût di mën a jaar ci génération yi. Jëfandikoo gingembre ak yeneen ingrédients di yokk valeur bu produitsu transformation ak diversitéu gastronomie bu Senegaal.`,
   },
   'thiere-bassi-salte': {
     titleWo: 'Thiéré bassi salté',
@@ -770,19 +786,23 @@ Valorisationu gomme arabique mën a yokk valeuru produit bi boo ko boolee ak tra
 Aar arbres ak gestionu ressources di am solo ngir production bi mën a wéy ci jamono yu yàgg. Jëfandikoo bu wér, régénérationu arbres ak respectu environnement di lëkkale économie ak conservationu Sahel.`,
   },
   'baila': {
-    titleWo: 'Baila',
-    excerptWo: 'Aada ak melokaanu patrimoine bu bokk ci diversitéu culture bu Senegaal.',
+    titleWo: 'Baïla',
+    excerptWo: 'Baïla mooy lekk bu tradisionnel bu lëkkale céréales, sauce ak ingrédients yu local, te mu bokk ci savoir-faireu cuisine.',
     contentWo: `### Jëmmal
 
-Baila bokk na ci ay melokaanu patrimoine culturel yi ñuy wone ci Senegaal. Xam-xam, aada ak pratiques yu ñuy jëfandikoo di jàppale transmissionu mémoire ci diggante génération yi.
+Baïla mooy lekk bu ñuy defar ak produitsu céréaliers ak sauce, ak yeneen ingrédients yu aju ci recetteu kër gi. Mu bokk ci lekk yu ñuy xam ci patrimoine culinaireu Senegaal. Yoonu defar bi di wone ni ay produits yu simple mën a daje ngir am benn repas bu nourrissant.
 
-### Aada ak transmission
+### Produits ak préparation
 
-Aada yi mën a nekk ci musique, danse, cérémonies, waxtaan walla yeneen formes yu expression. Li ëpp solo mooy ñuy wéy ci yoonu transmission ngir xam-xam bi bañ a réer ak changementu jamono.
+Céréale bi di nekk benn baseu lekk bi, te sauce di joxe goût ak texture. Ñuy togg ingrédients yi ci waxtu bu doy, ba ñu méngoo ci texture ak goût. Nit ki koy defar mën na topp yoonu recetteu njaboot gi, ak li marché bi di may ci saison bi.
 
-### Patrimoine
+### Lekkandoo
 
-Valorisationu patrimoine bi di may nit ñi xam seen histoire ak diversitéu culture. Documentation, jàngale ak participationu communauté di mën a jàppale aar ak yokk njariñu aada yi.`,
+Baïla di mën a nekk ci repasu njaboot walla ci ndaje. Séddaleu lekk bi di jàppale lekkandoo ak waxtaan. Ci kër yi, yoonu defar ak séddale mën a nekk benn partieu xam-xamu togg bu ñuy jàngale ci génération yi.
+
+### Patrimoine culinaire
+
+Recette yu mel ni Baïla di wone solo bu céréales ak produitsu local ci alimentation. Transmissionu xam-xam bi di jàppale denc yoonu defar ak mémoireu lekk. Loolu di yokk diversitéu gastronomie bu Senegaal ak valeur bu savoir-faireu njaboot yi.`,
   },
 
   'mbakhalou-saloum': {
