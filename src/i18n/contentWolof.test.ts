@@ -1625,4 +1625,19 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+
+  it('covers the Wolof nature and local heritage enrichment wave 139', () => {
+    const slugs = [
+      'le-parc-national-du-delta-du-saloum',
+      'le-tamarinier-arbre-d-ombrage-au-fruit-acidule-emblematique',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
 });
