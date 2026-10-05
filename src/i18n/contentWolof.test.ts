@@ -431,6 +431,18 @@ describe('Wolof fiche translations', () => {
     }
   });
 
+  it('covers the Wolof gastronomy and drinks enrichment wave 126', () => {
+    const slugs = ['soupou-kandia', 'cafe-touba', 'jus-de-bouye', 'mbakhalou-saloum', 'domoda'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('has no duplicate source keys across Wolof packs', () => {
     const seen = new Map<string, string>();
     const duplicates: string[] = [];
