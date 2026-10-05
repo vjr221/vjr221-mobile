@@ -503,6 +503,18 @@ describe('Wolof fiche translations', () => {
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof fishing and cuisine enrichment wave 131', () => {
+    const slugs = ['le-thiof-au-senegal-poisson-emblematique-peche-et-gastronomie', 'ndambe-ragout-de-niebe-petit-dejeuner-populaire-senegalais', 'thiere-bassi-salte'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('has no duplicate source keys across Wolof packs', () => {
     const seen = new Map<string, string>();
     const duplicates: string[] = [];
