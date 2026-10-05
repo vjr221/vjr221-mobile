@@ -24,22 +24,22 @@ Dunu Fadiouth di am solo ci tourismeu culturel. Visite yi mën a may nit ñi yoo
   },
   'cap-skirring': {
     titleWo: 'Cap Skirring',
-    excerptWo: 'Cap Skirring mooy benn ci bérab yu turist yu xam nekk ci Casamance, ak plage, géej, nature ak aada yu dëkk bi.',
+    excerptWo: 'Cap Skirring di destinationu Casamance bu xam ne am plages, paysages, accueil ak patrimoineu naturel ak culturel.',
     contentWo: `### Jëmmal
 
-Cap Skirring mooy bérab bu turist bu nekk ci Casamance. Plage yi, géej mi, vegetations bi ak proximité ak dëkk yi di amal ab cadre bu neex ngir tourisme. Bérab bi di bokk ci patrimoine naturel ak touristique bu Casamance.
+Cap Skirring di nekk ci Casamance, ci wetti géej, te mu bokk ci destinations touristiques yu xam ne am solo ci Senegaal. Bérab bi di boole plage, végétation, villages ak activités yu aju ci accueilu visiteurs.
 
-### Plage ak nature
+### Littoral ak paysages
 
-Plage yi di am espace yu gudd ak ndoxu géej. Vegetationu Casamance ak climat bi di yokk melokaanu paysage bi. Activités yu aju ci baignade, promenade ak découverteu nature mën a nekk ci programmeu visiteurs.
+Plages yi ak végétationu Casamance di may Cap Skirring paysage bu wuute. Promenade ci wetti géej ak découverteu environnement mën na jàppale nit ñi xam patrimoineu naturel. Protectionu côte ak propreté di am solo ci dundug site bi.
 
-### Aada ak accueil
+### Tourisme ak activités
 
-Cap Skirring di bokk ci territoire bu am aada yu bari. Accueilu visiteurs di mën a boole hébergement, restauration, artisanat ak découverteu culture locale. Liggéeyu acteurs locaux di am solo ci yoonu tourisme bi di yokk économieu territoire.
+Tourisme ci Cap Skirring mën na boole détente, découverteu culture, gastronomie ak yeneen activités yu aju ci territoire. Hébergement ak services di jàppale accueilu visiteurs. Collaboration diggante acteurs locaux di mën a yokk qualitéu expérience.
 
-### Tourisme responsable
+### Développement responsable
 
-Développementu tourisme war na aar plage, mangrove ak yeneen ressources naturelles. Gestionu déchets, respectu communautés ak valorisationu produits locaux di jàppale tourisme bu mën a yàgg. Cap Skirring mën na nekk benn porte d'entrée ci découverteu Casamance.`,
+Valorisationu Cap Skirring di soxla équilibre diggante tourisme ak protectionu environnement. Gestionu déchets, respectu espaces naturels ak valorisationu communautés locales di mën a jàppale développement durable. Patrimoine naturel ak culturel di nekk benn ressource bu am solo ngir territoire.`,
   },
   'pointe-des-almadies-dakar': {
     titleWo: 'Pointe des Almadies ci Dakar',
@@ -274,23 +274,23 @@ Jus bu ginger di mën a nekk ci repas, ndaje ak waxtu yu ñuy dal. Ñuy ko sédd
 Defar jusu ginger di bokk ci savoir-faireu boissonsu kër. Xam-xamu setal, dajale, séddale ak toppatoo goût di mën a jaar ci génération yi. Jëfandikoo gingembre ak yeneen ingrédients di yokk valeur bu produitsu transformation ak diversitéu gastronomie bu Senegaal.`,
   },
   'thiere-bassi-salte': {
-    titleWo: 'Thiéré bu salte',
-    excerptWo: 'Thiéré bu salte mooy préparation bu ñuy defar ak mil, sauce ak yeneen ingrédients, bu bokk ci lekk yu céréales.',
+    titleWo: 'Thiéré Bassi Salté',
+    excerptWo: 'Thiéré Bassi Salté di benn plat bu aju ci thiéré ak légumes, te ñu koy defar ci yoonu cuisineu Senegaal.',
     contentWo: `### Jëmmal
 
-Thiéré bu salte mooy lekk bu aju ci mil, bu ñuy lëkkale ak sauce ak yàpp walla légumes ci li recette bi di jëfandikoo. Mil di nekk benn céréale bu am solo ci lekk yu ñuy defar ci Senegaal. Plat bi di wone ni céréales mën nañu nekk baseu repas.
+Thiéré Bassi Salté di bokk ci plats yu aju ci thiéré, bu nekk benn céréale bu am solo ci ay repas yu Senegaal. Ñu koy boole ak légumes ak ay ingrédients yu am ci saison. Plat bi di wone diversitéu yoonu lekk ak savoir-faireu njaboot.
 
-### Préparation
+### Thiéré ak préparation
 
-Ñuy waajal mil bi, gannaaw ñu togg ko ngir am texture bu baax. Sauce bi mën nañu ko defar ak oignon, tomate, légumes ak yàpp walla yeneen ingrédients. Ñuy boole mil ak sauce bi ci waxtu bu ñu war ngir ingrédients yi méngoo ci goût.
+Thiéré di ñu defar ngir mu nekk baseu repas bi. Préparation bi di soxla cuisson ak dosage bu baax ngir grains yi am texture bu neex. Légumes ak assaisonnement di mën a yokk goût ak valeuru nutrition.
 
-### Lekkandoo
+### Variantes ak repas
 
-Thiéré bu salte di mën a nekk ci déjeuner walla dîner. Ñuy ko séddale ci njaboot ak ci ndaje, te lekkandoo bi di jàppale waxtaan ak partage. Recetteu kër gi di mën a am ay variations ci yoonu defar ak ingrédients.
+Recette bi mën na soppeeku ci famille ak territoire. Ay njaboot mën nañu yokk légumes, sauce walla yeneen ingrédients. Thiéré Bassi Salté mën na nekk repas bu bokk ci tableu famille, ci bés bu ordinaire walla ci ndaje.
 
-### Céréales ak patrimoine
+### Patrimoine culinaire
 
-Mil di bokk ci ressourcesu agriculture ak alimentationu Sahel. Jëfandikoo ko ci lekk di jàppale diversitéu céréales ak valorisationu produitsu local. Transmissionu yoonu defar thiéré di denc savoir-faireu njaboot ak patrimoine culinaire.`,
+Thiéré di bokk ci patrimoineu céréales ak cuisineu Senegaal. Transmissionu yoonu préparation di jaar ci njaboot ak génération yi. Denc recettes ak variantes locales di jàppale xam-xamu gastronomie ak valorisationu produits alimentaires.`,
   },
   'poisson-braise-lakk-dieune': {
     titleWo: 'Lakk Dieune ak Poisson Braisé',
@@ -370,22 +370,22 @@ Caldou di wone solo bu poisson ci cuisineu Sénégal ak digganteu gastronomie ak
   },
   'le-thiof-au-senegal-poisson-emblematique-peche-et-gastronomie': {
     titleWo: 'Thiof ci Senegaal',
-    excerptWo: 'Thiof mooy jën bu am solo ci pêche ak gastronomie bu Senegaal, te ñuy ko defar ci yoonu togg yu bari.',
+    excerptWo: 'Thiof di poisson bu am solo ci gastronomie ak pêcheu Senegaal, te mu lëkkale ressourcesu géej, savoir-faire ak cuisine.',
     contentWo: `### Jëmmal
 
-Thiof mooy benn ci jën yi ñuy xam ci Senegaal. Mu bokk ci dundug géej ak activitéu pêche, te mu am bérab bu mag ci gastronomie. Goûtu jën bi ak texture bi di tax ñu koy jëfandikoo ci ay recettes yu wuute.
+Thiof di nekk ci poisson yi am solo ci gastronomieu Senegaal. Mu bokk ci yoonu lekk ak traditionsu pêche, te ay famille di ko jëfandikoo ci recettes yu wuute. Thiof di lëkkale patrimoineu géej ak patrimoineu culinaire.
 
-### Pêche ak ressource
+### Pêche ak ressourcesu géej
 
-Thiof di lëkkale lekk ak liggéeyu pêche. Pêcheurs yi di jëfandikoo xam-xamu géej, saison ak yoonu waajal jën bi. Gestionu ressourcesu mer ak respectu ay périodesu reproduction di am solo ngir dundal ressource bi.
+Pêcheu thiof di bokk ci activitéu pêche artisanale ak ci yeneen circuitsu filière. Gestionu ressourcesu géej di am solo ngir denc biodiversité ak aveniru pêche. Respectu saison ak yoonu gestionu pêche di mën a jàppale durabilité.
 
-### Préparation ak gastronomie
+### Cuisine ak préparation
 
-Jën bi mën nañu ko defar ci braise, cuisson walla yeneen yoonu togg. Ñuy ko boole ak légumes, sauce walla riz ci li recette bi di jëfandikoo. Yoonu waajal di mën a wuute ci région ak njaboot, te loolu di yokk diversitéu gastronomie.
+Thiof mën nañu ko defar ci yoonu braise, cuisson walla yeneen recettes. Assaisonnement, accompagnement ak sauce di soppeeku ci famille. Yoonu defar bi di may poisson bi ay saveurs yu lëkkale produitu géej ak savoir-faireu cuisine.
 
-### Valorisation
+### Patrimoine ak valorisation
 
-Thiof di mën a yokk valeur bu produitsu pêche ci restauration ak alimentation. Valorisationu jën war na boole qualitéu conservation, respectu ressource ak soutienu pêcheurs. Denc xam-xamu préparation ak gestionu géej di jàppale patrimoine culinaire ak économie locale.`,
+Thiof di am place ci identitéu gastronomieu Senegaal, waaye valorisation bi war na boole protectionu ressources. Transmissionu recettes, informationu consommateurs ak soutienu filière responsable mën nañu jàppale patrimoineu culinaire ak économieu pêche.`,
   },
   'riz-de-casamance': {
     titleWo: 'Rizu Casamance',
