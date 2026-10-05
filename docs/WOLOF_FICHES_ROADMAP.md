@@ -696,3 +696,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 127
+
+- Vague 127 : enrichissement de 5 fiches culture, musique, patrimoine et gastronomie - Bissap, Xalam 2, UCAS Band, Fode Doussouba et Dunu Fadiouth.
+- Contenus Wolof developpes autour des produits locaux, de la creation musicale, de la memoire culturelle, du patrimoine littoral et de la transmission.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
