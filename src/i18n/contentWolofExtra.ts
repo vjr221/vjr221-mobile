@@ -61,23 +61,23 @@ Almadies di am restaurants, cafés, hôtels ak yeneen services yu jëfandikoo ci
 Tourisme ci côte di soxla respectu environnementu littoral. Denc propreté, gestionu déchets ak protectionu espaceu géej di jàppale qualitéu site bi. Valorisationu Almadies di mën a boole patrimoineu paysage ak activitéu tourisme bu responsable.`,
   },
   'plage-de-ngor': {
-    titleWo: 'Saliou Ngor',
-    excerptWo: 'Saliou Ngor mooy benn ci bérab yu neex ci wetu Dakar, te géej, suuf ak dundug dëkk bi di daje foofu.',
+    titleWo: 'Plageu Ngor',
+    excerptWo: 'Plageu Ngor di benn siteu littoral ci Dakar bu am solo ci loisirs, tourisme, paysage ak dundug communauté.',
     contentWo: `### Jëmmal
 
-Saliou Ngor mooy bérab bu turist ak bu dëkk bu ñu xam ci wetu Dakar. Géej bi, ndox mi ak wetu dëkk bi di amal ab melokaan bu aju ci dundug géej ak activités yu ñuy def ci côte. Bérab bi di bokk ci patrimoine naturel ak touristique bu Dakar.
+Plageu Ngor di nekk ci Dakar, ci wetti géej, te mu bokk ci bérab yi nit ñi di dem ngir détente ak découverte. Site bi di boole plage, mer, activité ak vie locale. Mu am place ci tourismeu littoral ci Dakar.
 
-### Géej ak activités
+### Paysage ak loisirs
 
-Wetu géej bi di may nit ñi yoon ngir noppalu, dem ci ndox walla gis melokaanu côte. Ay activités yu aju ci tourisme, pêche ak loisirs mën a am ci wet wi. Ndam li ak waxtu bi di soppi melokaanu ndox ak xaalisu plage bi.
+Plage bi di may nit ñi espace ngir promenade, détente ak activités ci wetti géej. Melokaanu mer ak lumière di soppeeku ci waxtu. Respectu sécurité ak yoonu jëfandikoo espace bi di am solo ngir visiteurs ak communautés.
 
-### Dëkk ak patrimoine
+### Tourisme ak économie locale
 
-Ngor di bokk ci dëkk yu am histoire ak identité bu mag ci Dakar. Dëkk bi ak géej bi di lëkkale dundug nit ñi, liggéeyu pêche ak accueilu visiteurs. Denc environnement bi ak respectu dëkk yi di am solo ci jëfandikoo bérab bi.
+Plageu Ngor di jàppale activitéu restauration, services ak commerce ci environnement bi. Accueilu visiteurs di mën a yokk demande ci acteurs locaux. Développementu tourisme war na boole intérêtu économie ak protectionu littoral.
 
-### Tourisme ak toppatoo
+### Environnement ak patrimoine
 
-Développementu tourisme war na aju ci setal, sécurité ak protectionu géej. Visitors yi di mën a gis patrimoine bi te jàppale économie locale bu jëm ci services ak activités. Yëngu-yëngu yu toppatoo environnement di tax bérab bi des bu neex ci jamono yu nekk.`,
+Propretéu plage, gestionu déchets ak protectionu géej di jàppale qualitéu site bi. Sensibilisationu visiteurs ak acteurs locaux di mën a jàppale responsabilité. Valorisationu Plageu Ngor di soxla équilibre diggante tourisme, dundug communauté ak environnement.`,
   },
   'thieboudiene-ceebu-jen': {
     titleWo: 'Ceebu jën',
@@ -426,23 +426,23 @@ Lakh bu bissap di mën a nekk ci repas walla ci dessert, te ñuy ko séddale bu 
 Recette yu mel ni lakh bu bissap di jaar ci njaboot yi. Mag ñi di jàngale ndaw ñi yoonu togg, toppatoo texture ak équilibreu goût. Denc savoir-faire bi di jàppale patrimoine culinaire ak valorisationu céréales ak bissap.`,
   },
   'les-epices-dans-la-cuisine-senegalaise': {
-    titleWo: 'Épices ci cuisineu Senegaal',
-    excerptWo: 'Épices di may cuisineu Senegaal parfum, goût ak caractère, te ñuy jëfandikoo leen ci recettes yu bari.',
+    titleWo: 'Épices ci Cuisineu Senegaal',
+    excerptWo: 'Épices di am solo ci cuisineu Senegaal, ndax ñuy yokk goût, parfum ak melokaan ci plats yu wuute.',
     contentWo: `### Jëmmal
 
-Épices di am bérab bu am solo ci cuisineu Senegaal. Ñuy jëfandikoo ay graines, feuilles, racines ak préparations yu ñuy yokk ci plat ngir soppi goût ak parfum. Jëfandikoo épices di wuute ci région, recette ak préférenceu njaboot.
+Épices di bokk ci savoir-faireu cuisineu Senegaal. Ñu koy jëfandikoo ngir yokk goût, parfum ak couleur ci plats yu aju ci riz, poisson, yapp walla légumes. Yoonu jëfandikoo épices di soppeeku ci famille ak territoire.
 
-### Yoonu jëfandikoo
+### Épices ak préparation
 
-Épices yi mën nañu nekk ci débutu préparation, ci sauce walla ci finu togg. Poivre, piment, nététou ak yeneen produits di mën a joxe ay caractères yu wuute. Équilibreu quantité ak combinaisonu ingrédients di am solo ngir bañ a ëpp solo ci goûtu plat bi.
+Oignons, poivre, piment, ail ak yeneen aromates mën nañu bokk ci préparation. Ay épices di ñu jëfandikoo ci marinade, beneen ci sauce walla ci finu cuisson. Dosage di am solo ngir saveurs yi di nekk ci équilibre.
 
-### Aada ak transmission
+### Transmission ak territoire
 
-Xam-xamu jëfandikoo épices di jaar ci njaboot yi. Mag ñi di jàngale ndaw ñi yoonu taqal, yoonu séddale ak yoonu boole ingrédients. Loolu di bokk ci mémoireu cuisine ak identitéu lekk bu Senegaal.
+Xam-xamu épices di jaar ci génération yi, te njaboot yi di denc ay yoon yu ñu defar recettes. Marchés locaux di bokk ci yoonu jënd ak séddoo produits. Loolu di lëkkale cuisine ak activitéu commerce ci territoire.
 
-### Produits ak économie
+### Patrimoine ak valorisation
 
-Ay épices di aju ci produitsu local ak transformationu matières premières. Séchage, broyage ak conservation di mën a yokk valeuru produits yi. Valorisationu savoir-faireu producteurs ak transformateurs di jàppale diversitéu gastronomie ak économie locale.`,
+Épices di jàppale diversitéu gastronomieu Senegaal. Documentationu recettes ak transmissionu savoir-faire di mën a denc patrimoine culinaire. Valorisationu produits locaux ak qualitéu préparation di itam mën a jàppale économie créative ak artisanale.`,
   },
   'culture-serere-traditions-patrimoine': {
     titleWo: 'Aada Sereer',
@@ -507,22 +507,22 @@ Denc tradition bi war na jàppale communauté yi, te documentation di mën a nek
   },
   'intronisation-beuleup-tradition-royale-du-senegal': {
     titleWo: 'Tànne Beuleup',
-    excerptWo: 'Tànne Beuleup di jëme ci benn tradition royale bu Senegaal, bu lëkkale pouvoir, cérémonie, mémoire ak identitéu territoire.',
+    excerptWo: 'Tànne Beuleup di bokk ci tradition royale, bu lëkkale cérémonie, mémoire, symboles ak identitéu territoire.',
     contentWo: `### Jëmmal
 
-Tànne Beuleup di jëme ci traditionu tànne bu am solo ci histoireu ay royaume yu Senegaal. Cérémonie bi di lëkkale pouvoir, légitimité, symboles ak mémoireu communauté. Mu bokk ci patrimoine immatériel bu am solo ci compréhensionu histoire.
+Tànne Beuleup di jëme ci traditionu tànne bu aju ci histoireu ay royaume yu Senegaal. Cérémonie bi di boole symboles, paroles, gestes ak mémoireu communauté. Mu bokk ci patrimoine immatériel bu am solo ngir xam histoireu territoire.
 
 ### Cérémonie ak symboles
 
-Cérémoniesu tànne di mën a am ay paroles, gestes, objets ak séquences yu am sens. Yoonu defar bi di aju ci cosaan ak yoonu communauté. Symboles yi di mën a wone continuité, responsabilité ak digganteu boroom bérab ak nit ñi.
+Ay séquencesu cérémonie di mën a am yoonu ndaje, paroles ak gestes yu am sens. Symboles yi di mën a wone légitimité, responsabilité ak continuité. Yoonu defar bi di aju ci cosaan ak règles yu communauté di denc.
 
-### Histoire ak mémoire
+### Mémoire historique
 
-Tànne bi di may yoon ngir xam ni pouvoir ak société daan dox ci contexteu royaume. Mémoireu événement yi di jaar ci récits ak transmissionu njaboot. Jàng ci patrimoine bi di soxla toppatoo sources ak contexteu historique.
+Tradition bi di may yoon ngir xam digganteu pouvoir, société ak territoire ci contexteu histoire. Récits ak témoignages di jàppale transmissionu mémoire. Rechercheu patrimoine di soxla topp sources ak contexte ngir éviteru confusion.
 
-### Valorisation
+### Denc patrimoine
 
-Denc patrimoineu tànne di soxla documentation, recherche ak respectu communauté. Archives, témoignages ak travailu chercheurs mën nañu jàppale xamle histoire bi. Valorisationu patrimoine immatériel di mën a yokk xam-xam ci diversitéu histoireu Senegaal.`,
+Documentation, archives ak transmission di mën a jàppale denc tradition bi. Respectu communauté ak voixu nit ñi koy dund di am solo ci valorisation. Patrimoineu cérémonie bi di mën a yokk xam-xamu diversitéu histoireu Senegaal.`,
   },
   'super-diamono': {
     titleWo: 'Super Diamono',
