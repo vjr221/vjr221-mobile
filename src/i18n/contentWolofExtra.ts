@@ -5,18 +5,22 @@ type WolofContent = Pick<ContentItem, 'titleWo' | 'excerptWo' | 'contentWo'>;
 export const CONTENT_WO_EXTRA: Record<string, WolofContent> = {
   'ile-de-fadiouth': {
     titleWo: 'Dunu Fadiouth',
-    excerptWo: 'Dunu coquillages ci Siin, bu lëkkale aada Sereer, patrimoine ak tourisme.',
+    excerptWo: 'Dunu Fadiouth mooy dëkk bu nekk ci aw géej, bu ñu xam ak coquillages, patrimoine, tourisme ak dundug communauté.',
     contentWo: `### Jëmmal
 
-Dunu Fadiouth nekk na ci wetug Joal-Fadiouth, ci diiwaanu Fatick. Dunu bi ak coquillages yi di bokk ci melokaanu bérab bi, te aada Sereer ak patrimoine culturel di yokk soloam.
+Dunu Fadiouth mooy bérab bu ñu xam ci Sénégal ndax yoon wi ñu defar ak coquillages, environnementu géej ak patrimoineu dëkk bi. Dunu bi ak ay bérab yu ko jege di may visiteurs yoonu gis paysage, architecture ak dundug communauté ci aw géej.
 
-### Aada ak patrimoine
+### Environnement ak coquillages
 
-Fadiouth di wone digganteu nit ak géej. Coquillages yi, kër yi, bérab yu ñuy denc mémoire ak cimetière bi di bokk ci patrimoineu dunu bi. Dëkk bi di am it histoire ak pratiques culturelles yu ñuy jàppale ci transmissionu identitéu Sereer.
+Coquillages di bokk ci identitéu bérab bi. Ñu jëfandikoo leen ci ay chemins, construction walla melokaanu bérab, te loolu di wone digganteu nit ñi ak ressourcesu géej. Toppatoo environnement bi am solo ngir denc richesseu naturel ak cadreu dundug dëkk bi.
 
-### Tourisme ak conservation
+### Patrimoine ak vie locale
 
-Dunu Fadiouth mën na nekk bérab bu jàng ci nature, culture ak histoire. Tourisme bu topp respectu environnement ak communauté di mën a jàppale économie locale, te conservationu patrimoine di am solo ngir dunu bi des ci yoon.`,
+Fadiouth am ay pratiques ak savoir-faire yu lëkkale géej, pêche, agriculture ak artisanat. Architecture ak organisationu espace di jàppale xam-xamu histoireu communauté. Patrimoine bi du nekk rekk ci ay bâtiments; mu nekk itam ci yoonu dund, waxtaan ak transmissionu savoir-faire.
+
+### Tourisme ak transmission
+
+Dunu Fadiouth di am solo ci tourismeu culturel. Visite yi mën a may nit ñi yoonu gis patrimoine ak comprendre contexteu territoire, waaye tourisme responsable di soxla respektu bérab bi, environnement ak dundug waa dëkk. Transmissionu histoire ak savoir-faire di jàppale denc identitéu Fadiouth.`,
   },
   'cap-skirring': {
     titleWo: 'Cap Skirring',
@@ -201,18 +205,22 @@ Jaay kafe Touba di bokk ci petites activités commerciales. Kafe, djar, ndox ak 
   },
   'bissap': {
     titleWo: 'Bissap',
-    excerptWo: 'Naan bu ñu defar ak hibiscus, bu ñuy naan sedd walla tàng.',
+    excerptWo: 'Bissap mooy naan bu ñuy def ak xob yu bissap, ndox ak sukkar, bu am bérab bu mag ci lekkandoo ak gastronomie bu Senegaal.',
     contentWo: `### Jëmmal
 
-Bissap mooy naan bu ñu defar ak hibiscus. Dañu koy togg, teg sukkar ci, ba noppi mu sedd walla ñu naan ko tàng. Bissap bu xonq mooy melokaan bu ñu gën a xam, waaye ñu mën a defar ko ak yeneen melokaan.
+Bissap mooy naan bu ñuy def ak xob yu bissap. Ñuy ko togg walla xawaare ak ndox, ba noppi ñu ko setal ak sukkar ngir am naan bu neex. Mu bokk ci naan yu ñuy xam ci Senegaal, ci kër, ci ndaje ak ci ay bérab yu ñuy lekkandoo.
 
-### Naan ak préparation
+### Préparation ak goût
 
-Dañu mën a boole bissap ak gingembre, mint walla yeneen ingrédients ngir yokk xew-xewam. Ci kër ak ci cérémonies, ñu koy defar ci quantité bu doy nit ñi te ñu koy séddale ci verre.
+Xob yu bissap yi di jox naan bi melokaan ak goût bu ñu ko xamle. Ñuy ko setal bu baax, boole ko ak ndox, te ñu defar ko ci yoonu kër gi. Sukkar di mën a soppi neex-nexu naan bi, te ñu mën a yokk yeneen ingrédients ci li recette bi di bëgg. Naan bi mën a nekk bu sedd walla ci melokaan yu wuute.
 
-### Gastronomie ak économie
+### Aada ak lekkandoo
 
-Bissap bokk na ci naan yu am solo ci gastronomie bu Senegaal. Hibiscus di it mbay mi ñuy jëfandikoo, te transformationu ko ci naan mën a jàppale producteurs ak petites activités commerciales.`,
+Bissap di bokk ci repasu njaboot ak ci ndaje. Séddaleu naan bi di jàppale dal ak lekkandoo, te ñu mën a ko jox gan yi ci waxtu yu am solo. Mu di itam benn ci naan yu ñuy jëfandikoo ngir wone richesseu produits ak savoir-faireu cuisineu Senegaal.
+
+### Produit local ak valorisation
+
+Bissap di lëkkale agriculture, transformation ak commerce. Jëfandikoo xob yi ngir defar naan di may valeur ci produit local. Xam-xamu setal, préparation ak séddale naan bi di jaar ci njaboot yi, te activité bi mën a jàppale petites activités commerciales ak valorisationu savoir-faire.`,
   },
 
   'jus-de-bouye': {
@@ -537,48 +545,60 @@ Musique am na solo ci identitéu Senegaal. Denc histoireu formations yi, répert
   },
   'xalam-2': {
     titleWo: 'Xalam 2',
-    excerptWo: 'Groupe bu fusion bu lëkkale jazz, rock ak aada yu local.',
+    excerptWo: 'Xalam 2 mooy groupeu musique bu Senegaal bu lëkkale tradition ak création moderne, te mu bokk ci histoireu musiqueu réew mi.',
     contentWo: `### Jëmmal
 
-Xalam 2 mooy formation musicale bu bokk ci scèneu musique bu Senegaal. Fiche bi di ko jox ci contexteu fusion, ak ci ni musik mën a boole influences yu modern ak éléments yu bokk ci patrimoine musical.
+Xalam 2 mooy benn groupeu musique bu Senegaal bu lëkkale sonorités traditionnelles ak formes modernes. Mu bokk ci histoireu création musicaleu réew mi, ci contexte bu artistes di seet yoonu boole aada ak influences yu bees. Groupe bi di wone ni musique mën a soppi te sax denc ay racines.
 
-### Jazz, rock ak aada
+### Création ak instruments
 
-Jazz ak rock di bokk ci influences yi ñuy jëfandikoo ci fusion. Aada yu local yi di yokk identité ak melokaan, te lëkkale instruments, rythme ak xam-xamu musique ci benn projet.
+Musiqueu Xalam 2 di jëfandikoo instruments ak sonorités yu bokk ci patrimoine musicalu Senegaal, te ñu mën a boole leen ak arrangements yu modernes. Xalam, percussion ak yeneen instruments mën a bokk ci textureu musique bi. Loolu di may artistes yi yoonu defar musique bu am identité te mën a dégg ci scène contemporaine.
 
-### Création ak transmission
+### Mémoire ak rayonnement
 
-Xalam 2 di wone ni artistes mën a sos benn espace bu musik yi mën a daje. Transmissionu xam-xam, expérienceu scène ak dégg-dëgg ci influences yi di jàppale yokk diversitéu création musicale ci Senegaal.`,
+Xalam 2 di bokk ci mémoireu musiqueu Senegaal, ndax création bi di wone waxtu bu artistes di jëfe ak patrimoine ngir defar expression bu bees. Musique bi mën a nekk ci concerts, enregistrements ak ndaje yu ñuy séddale création. Rayonnement bi di jàppale xam-xamu public ci richesseu patrimoine musical.
+
+### Transmission
+
+Denc xam-xamu musique ak instruments di am solo ngir génération yi ci topp. Groupes ak artistes yu mel ni Xalam 2 di may exempleu yoonu lëkkale tradition ak modernité. Transmission bi di jaar ci écoute, performance, apprentissage ak pratiqueu musique, te di jàppale denc identitéu culturelle.`,
   },
   'ucas-band-formation-musicale-historique-de-sedhiou': {
     titleWo: 'UCAS Band',
-    excerptWo: 'Formation musicale historique bu Sédhiou, bokk ci mémoireu scèneu Casamance.',
+    excerptWo: 'UCAS Band mooy formation musicale bu Sedhiou bu bokk ci mémoireu musique ak vie culturelleu Casamance.',
     contentWo: `### Jëmmal
 
-UCAS Band mooy formation musicale bu lëkkale Sédhiou ak histoireu scène musicale. Fiche bi di fésal solo bu formation yi am ci dundug culturel ci dëkk ak ci transmissionu savoir-faireu musique.
+UCAS Band mooy formation musicale bu Sedhiou bu bokk ci histoireu vie culturelleu Casamance. Benn formation bu mel ni moom di lëkkale artistes, instruments ak public ci waxtu yu am solo ci dundug dëkk. Mu di itam benn pàcc ci mémoireu musique bu Sedhiou.
 
-### Sédhiou ak musique
+### Musique ak territoire
 
-Sédhiou am na patrimoine culturel bu riche, te musique bokk na ci melokaan yi ñuy wone identitéu territoire. UCAS Band di bokk ci mémoire bi, ci digganteu création, performance ak vie culturelle.
+Sedhiou am patrimoine culturel bu riche, te musique di bokk ci yoonu séddale identitéu territoire. UCAS Band di jëfandikoo scène musicale ngir boole création, animation ak rencontre. Performance yi mën a bokk ci ay ndaje, fêtes walla événements yu ñuy daje ci dëkk bi.
 
-### Mémoire ak transmission
+### Mémoire culturelle
 
-Histoireu formation musicale di jàppale xam ni artistes ak musiciens mën a bokk ci denc patrimoineu dëkk. Waxtaan, répertoire ak transmissionu xam-xam di jàppale lëkkale générations yi ak scène musicale bu Sédhiou.`,
+Denc histoireu formation bi di denc benn pàcc ci mémoireu vie culturelleu Sedhiou. Instruments, répertoire, répétitions ak prestations di wone travailu artistes ak yoonu formation musicale. Témoignageu formation bi di jàppale xam-xamu génération yu bees ci li artistes yu jiitu defoon.
+
+### Transmission ak rayonnement
+
+Transmissionu musique di aju ci jàng, répétition ak pratique. Formation musicale di may ndaw ñi yoonu dégg, jëfandikoo instruments ak jëfandikoo scène. Denc patrimoineu UCAS Band di jàppale rayonnementu Sedhiou ak valorisationu acteurs culturels yu dëkk bi.`,
   },
   'fode-doussouba': {
     titleWo: 'Fodé Doussouba',
-    excerptWo: 'Champion bu làmb, bokk ci patrimoineu lutte traditionnelle bu Senegaal.',
+    excerptWo: 'Fodé Doussouba di bokk ci patrimoineu musique ak créationu Sédhiou, te mu lëkkale talent, mémoire ak transmission.',
     contentWo: `### Jëmmal
 
-Fodé Doussouba mooy champion bu làmb bu fiche bi di bokk ci patrimoineu sport ak aada bu Senegaal. Lutte traditionnelle am na bérab bu am solo ci animations, rassemblements ak dundug culturel ci réew mi.
+Fodé Doussouba di bokk ci paysageu culturel ak musicalu Sédhiou. Benn artiste walla figureu création bu mën a nekk ci mémoireu territoire bi, ci digganteu musique, performance ak vie culturelle. Son histoire di jàppale xam-xamu yoonu artistes di bokk ci dundug dëkk.
 
-### Làmb ak spectacle
+### Création ak territoire
 
-Làmb du doon rekk combat. Mu ëmb it préparation, discipline, public, musique ak aada yi ñuy boole ak ay rassemblements. Njariñu champion yi di wone solo bu sport ak savoir-faireu performance am ci communauté yi.
+Créationu artiste di lëkkale personnalité, influences ak contexteu territoire. Sédhiou ak Casamance am ay aada ak sonorités yu bari, te artistes di mën a jëfandikoo leen ci expressionu bees. Jëfandikoo scène ak musique di may yoonu séddale xalaat, émotion ak mémoire.
 
-### Mémoire ak transmission
+### Mémoire ak patrimoine
 
-Parcoursu champion di bokk ci mémoireu lutte. Transmissionu règles, gestes, discipline ak respectu adversaire di jàppale denc patrimoineu sport, te di may ndaw yi xam valeuru entraînement ak engagement.`,
+Denc ay noms ak ay parcoursu artistes di am solo ngir denc histoireu culture. Fodé Doussouba di bokk ci mémoire bi ci biir contexteu Sédhiou, te fiche bi di jàppale xam-xamu public ci acteurs culturels yu dëkk bi. Patrimoine immatériel di sax ci musique, récits ak transmission.
+
+### Transmission
+
+Jàngale musique, dégg performance ak waxtaan ci parcoursu artistes di jàppale génération yu bees. Denc mémoireu créationu Sédhiou di soxla archives, témoignages ak valorisationu acteurs culturels. Loolu di jàppale patrimoine culturel bi des ci dundug réew mi.`,
   },
   'tata-de-kedougou-architecture-defensive-et-patrimoine-du-senegal-oriental': {
     titleWo: 'Tata bu Kédougou',
