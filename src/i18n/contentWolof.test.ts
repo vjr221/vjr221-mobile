@@ -1640,4 +1640,16 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     }
     expect(new Set(slugs).size).toBe(slugs.length);
   });
+
+  it('covers the Wolof women heritage enrichment wave 140', () => {
+    const slugs = ['musee-de-la-femme-henriette-bathily-dakar'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
 });
