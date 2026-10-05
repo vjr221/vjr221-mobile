@@ -768,3 +768,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 134
+
+- Vague 134 : enrichissement de Ceebu Yapp, Poisson braise et Pointe des Almadies.
+- Contenus Wolof developpes autour de la preparation culinaire, du partage, du littoral, des services et du tourisme responsable.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
