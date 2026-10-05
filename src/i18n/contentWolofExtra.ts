@@ -99,23 +99,23 @@ Ceebu jën di mën a nekk ci benn plat bu ñuy séddale. Njaboot yi mën a daje 
 Xam-xamu defar ceebu jën di jaar ci génération yi. Jàngale yoonu togg, yoonu taqal, séddaleu ingrédients ak toppatoo goût di jàppale denc patrimoine culinaire. Lekk bi di wone solo bu pêche, agriculture ak transformationu produits ci identitéu gastronomie bu Senegaal.`,
   },
   'ceebu-yapp': {
-    titleWo: 'Ceebu yàpp',
-    excerptWo: 'Ceebu yàpp mooy lekk bu ñuy defar ak riz, yàpp, légumes ak sauce, bu bokk ci lekkandoo ak patrimoine culinaire.',
+    titleWo: 'Ceebu Yapp',
+    excerptWo: 'Ceebu Yapp di plat bu Senegaal bu boole riz ak yapp ci sauce bu am légumes, oignons ak épices.',
     contentWo: `### Jëmmal
 
-Ceebu yàpp mooy plat bu ñuy xam ci lekk yu ñuy defar ak riz ak yàpp. Yàpp bi di mën a nekk beef, mouton walla yeneen xeetu yàpp, te légumes ak sauce di yokk goût ak texture. Mu bokk ci repas yu ñuy séddale ci njaboot.
+Ceebu Yapp di bokk ci plats yu xam nekk ci cuisineu Senegaal. Mu boole riz ak yapp, te ñuy yokk légumes, oignons, tomate ak épices ci préparation bi. Plat bi mën a nekk repasu kër, ndaje walla occasion spéciale.
 
 ### Préparation
 
-Ñuy defar sauce bi ak yàpp ak oignon, tomate walla yeneen ingrédients, gannaaw ñu togg riz bi ci sauce bi walla ci ndoxu togg. Yoonu defar di mën a wuute ci kër yi, te waxtu togg ak ordreu ingrédients di am solo ngir joxe goût bu dëgër.
+Yapp bi di mën a nekk bœuf, mouton walla beneen viande, te yoonu cuisson di aju ci recetteu famille. Sauce bi di soxla base bu neex ak oignons, tomate ak épices. Riz bi di ñu defar ci sauce ngir mu jël saveur ak parfum.
 
-### Lekkandoo
+### Lekk ak partage
 
-Ceebu yàpp di mën a nekk ci déjeuner walla dîner, ci kër walla ci ndaje. Séddaleu plat bi di may nit ñi ab waxtu ngir daje ak lekkandoo. Riz, yàpp ak légumes di boole ay éléments yu ñuy séddale ci benn bol.
+Ceebu Yapp di am solo ci repasu bokk. Plat bu mag mën a nekk ci milieu table, nit ñi di lekk ci benn plat ak jàppale partage. Yoonu lekk boobu di lëkkale gastronomie ak convivialitéu famille.
 
 ### Transmission
 
-Xam-xamu defar ceebu yàpp di jaar ci njaboot yi. Recette bi di mën a am variations ci ingrédients ak yoonu togg, te loolu di wone diversitéu cuisineu Senegaal. Denc savoir-faire bi di jàppale patrimoine culinaire ak valorisationu produits local.`,
+Recetteu Ceebu Yapp di jaar ci génération yi, te ay détails mën a soppeeku ci njaboot ak territoire. Denc recettes locales ak yoonu préparation di jàppale patrimoine gastronomique ak diversitéu cuisineu Senegaal.`,
   },
   'mafe': {
     titleWo: 'Mafé',
@@ -197,23 +197,23 @@ Xam-xamu defar thiakry di jaar ci njaboot yi. Mag ñi di jàngale ndaw ñi yoonu
   },
 
   'cafe-touba': {
-    titleWo: 'Kafe Touba',
-    excerptWo: 'Kafe Touba mooy naan bu ñu boole ak djar, bu am solo ci aada, waxtaan ak dundug bis ci Senegaal.',
+    titleWo: 'Café Touba',
+    excerptWo: 'Café Touba di boissons bu am solo ci Senegaal, bu lëkkale café, poivre de Guinée ak traditionu partage.',
     contentWo: `### Jëmmal
 
-Kafe Touba mooy kafe bu ñu boole ak djar. Mu am bérab bu mag ci dundug Senegaal, ci kër, marchés ak bérab yu ñuy daje. Naan bi di lëkkale goûtu kafe ak parfum bu djar, te ñuy ko séddale ci waxtu yu ñuy waxtaan ak dal.
+Café Touba di nekk boissons bu xam ne am solo ci dundug nit ñu bari ci Senegaal. Ñu koy defar ak café ak poivre de Guinée, te parfumu boisson bi di am melokaan bu wuute. Mu mën a nekk ci kër, ci liggéey walla ci ndaje.
 
-### Préparation
+### Yoonu defar
 
-Dañu koy defar ak kafe, djar ak ndox. Djar bi di jox naan bi parfum ak xew-xew bu wuute. Yoonu togg di mën a wuute ci nit ki koy defar ak ci matériel bi mu am, waaye toppatoo waxtu ak quantitéu ingrédients di am solo ngir goûtu naan bi des bu baax.
+Café bi di ñu defar ak grains yu ñu torréfie, te poivre de Guinée mën a yokk ci mélange bi. Dosage ak degréu torréfaction di mën a soppeeku ci préférence. Préparationu bu baax di jàppale balanceu goût ak parfum.
 
-### Aada ak waxtaan
+### Partage ak dundug dëkk
 
-Kafe Touba du doon rekk naan; mu bokk ci pratiquesu dundug bis. Nit ñi mën a naan ko ci kër, ci bérab bu ñuy jaay kafe walla ci ndaje yu ñuy daje. Séddaleu kafe di jàppale waxtaan, dal ak digganteu nit ñi.
+Café Touba di bokk ci waxtu yi nit ñi di jàppoo. Ci kër ak ci espaceu commerce, tasseu café di mën a nekk prétexte ngir waxtaan ak accueil. Boisson bi di am itam benn place ci identitéu gastronomie contemporaine.
 
-### Économie ak savoir-faire
+### Patrimoine ak économie
 
-Jaay kafe Touba di bokk ci petites activités commerciales. Kafe, djar, ndox ak matériel di lëkkale producteurs, jaaykat ak consommateurs. Xam-xamu defar ak séddale naan bi di nekk savoir-faire bu ñuy jàngale ci dundug bis.`,
+Café Touba di lëkkale savoir-faire, commerce ak consommationu locale. Denc yoonu torréfaction ak préparation di jàppale patrimoine gastronomique, te filièreu café ak épices mën a bokk ci activité économique bu am solo.`,
   },
   'bissap': {
     titleWo: 'Bissap',
@@ -332,22 +332,22 @@ Jëfandikoo niebe di jàppale valorisationu produitsu agriculture. Transformatio
   },
   'thiou': {
     titleWo: 'Thiou',
-    excerptWo: 'Thiou mooy mbuum bu ñuy defar ak sauce, légumes ak yàpp walla jën, bu bokk ci lekk yu kër.',
+    excerptWo: 'Thiou di benn plat bu Senegaal bu aju ci sauce, légumes ak poisson walla yapp, te ñu koy bokk ak riz.',
     contentWo: `### Jëmmal
 
-Thiou mooy benn xeetu mbuum bu ñuy defar ak sauce ak ingrédients yu aju ci recetteu kër gi. Yàpp walla jën mën na bokk ci plat bi, ak légumes yu ñuy boole ngir yokk goût ak valeuru repas. Mu bokk ci lekk yu ñuy defar ci njaboot.
+Thiou di bokk ci plats yu am solo ci cuisineu Senegaal. Mu aju ci sauce bu ñu defar ak oignons, tomate, légumes ak épices, te mën nañu ko defar ak poisson walla yapp. Ñu koy lekk ak riz, ci repasu kër walla ndaje.
 
-### Préparation
+### Ingrédients ak préparation
 
-Ñuy tàmbalee ak sauce bi, ñu boole oignon, tomate walla yeneen ingrédients ci li recette bi di jëfandikoo. Yàpp walla jën di togg ci sauce bi, gannaaw ñu yokk légumes yi ci waxtu wu ñu war. Yoonu togg di may ingrédients yi texture ak goût bu méngoo.
+Base bi mën na am oignons, tomate, carotte, chou, aubergine walla yeneen légumes yu saison. Sauce bi di soxla cuisson bu baax ngir saveur yi di boole. Poisson walla yapp di yokk protéine ak melokaanu plat bi.
 
-### Lekkandoo
+### Yoonu lekk
 
-Thiou di mën a nekk ci déjeuner walla dîner, te ñuy ko séddale ak riz walla yeneen céréales. Plat bi di mën a bokk ci repas njaboot ak ndaje. Séddaleu lekk bi di jàppale lekkandoo ak waxtaan.
+Thiou mën na soppeeku ci ay famille ak territoire. Benn version mën a nekk bu neex te léger, beneen di gëna am sauce ak légumes. Lekk ak riz di may équilibre ci repas bi ak mën a bokk ci tableu famille.
 
-### Transmission
+### Patrimoine culinaire
 
-Recetteu thiou di mën a wuute ci kër yi, te variations yi di wone diversitéu cuisineu Senegaal. Mag ñi di jàngale ndaw ñi yoonu togg ak équilibreu goût. Denc xam-xam bi di jàppale patrimoine culinaire ak valorisationu produits local.`,
+Thiou di wone ni cuisineu Senegaal di boole simplicité, diversitéu produits ak transmissionu recettes. Denc yoonu defar bi di jàppale patrimoine culinaire, te documentationu versions locales di mën a yokk xam-xamu diversitéu gastronomie.`,
   },
   'caldou': {
     titleWo: 'Caldou',
