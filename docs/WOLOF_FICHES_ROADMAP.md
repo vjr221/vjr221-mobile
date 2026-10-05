@@ -723,3 +723,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 129
+
+- Vague 129 : enrichissement de 4 fiches gastronomie et agriculture - Ceebu yapp, Lakh bu bissap, Rizu Casamance et Epices ci cuisineu Senegaal.
+- Contenus Wolof developpes autour de la preparation, du terroir, des usages alimentaires, de la transmission et de la valorisation des produits locaux.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
