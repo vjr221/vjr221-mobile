@@ -687,3 +687,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 126
+
+- Vague 126 : enrichissement de 5 fiches gastronomie et boissons - Soupou Kandia, Cafe Touba, Jus de bouye, Mbakhalou Saloum et Domoda.
+- Contenus Wolof developpes autour des ingredients, de la preparation, des usages sociaux, du terroir, de la transmission et de la valorisation des produits locaux.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
