@@ -24,60 +24,60 @@ Dunu Fadiouth di am solo ci tourismeu culturel. Visite yi mën a may nit ñi yoo
   },
   'cap-skirring': {
     titleWo: 'Cap Skirring',
-    excerptWo: 'Bérab bu tourisme ci Casamance, ak plages, nature, culture ak vie locale.',
+    excerptWo: 'Cap Skirring mooy benn ci bérab yu turist yu xam nekk ci Casamance, ak plage, géej, nature ak aada yu dëkk bi.',
     contentWo: `### Jëmmal
 
-Cap Skirring nekk na ci diiwaanu Ziguinchor, ci wetug géej bu Casamance. Bérab bi xam nañu ko ci plages, paysage naturel ak activité yu tourisme. Mu bokk ci destinations yi ñuy seet ci Casamance.
+Cap Skirring mooy bérab bu turist bu nekk ci Casamance. Plage yi, géej mi, vegetations bi ak proximité ak dëkk yi di amal ab cadre bu neex ngir tourisme. Bérab bi di bokk ci patrimoine naturel ak touristique bu Casamance.
 
-### Géej ak nature
+### Plage ak nature
 
-Plages yi di bokk ci identitéu Cap Skirring. Géej, palmiers ak paysageu littoral di may bérab bi melokaan bu wuute. Nature bi mën a jàppale activité yu tourisme, promenade ak découverteu territoire.
+Plage yi di am espace yu gudd ak ndoxu géej. Vegetationu Casamance ak climat bi di yokk melokaanu paysage bi. Activités yu aju ci baignade, promenade ak découverteu nature mën a nekk ci programmeu visiteurs.
 
-### Culture ak vie locale
+### Aada ak accueil
 
-Tourisme bi di daje ak dundug communautés yi ci Casamance. Aada, lekk, musique ak savoir-faire yu local di mën a yokk expérienceu visiteurs. Respectu populations ak environnement di am solo ci développementu tourisme bu yàgg.
+Cap Skirring di bokk ci territoire bu am aada yu bari. Accueilu visiteurs di mën a boole hébergement, restauration, artisanat ak découverteu culture locale. Liggéeyu acteurs locaux di am solo ci yoonu tourisme bi di yokk économieu territoire.
 
-### Économie locale
+### Tourisme responsable
 
-Hôtels, restaurants, artisans ak yeneen services di bokk ci activitéu bérab bi. Valorisationu ressources locales ak participationu acteurs yi di mën a jàppale économieu Cap Skirring.`,
+Développementu tourisme war na aar plage, mangrove ak yeneen ressources naturelles. Gestionu déchets, respectu communautés ak valorisationu produits locaux di jàppale tourisme bu mën a yàgg. Cap Skirring mën na nekk benn porte d'entrée ci découverteu Casamance.`,
   },
   'pointe-des-almadies-dakar': {
     titleWo: 'Pointe des Almadies',
-    excerptWo: 'Sowwu gu nekk ci Cap-Vert, ak géej, paysage littoral ak activité yu Dakar.',
+    excerptWo: 'Pointe des Almadies mooy benn ci bérab yu mag ci côteu Dakar, bu ñuy xam ak géej, tourisme ak activitésu littoral.',
     contentWo: `### Jëmmal
 
-Pointe des Almadies mooy sowwu bu nekk ci péninsule du Cap-Vert, ci wetug Dakar. Bérab bi lëkkale géej, paysage littoral ak activité yu ville. Mu bokk ci bérab yi am solo ci géographie ak tourismeu Dakar.
+Pointe des Almadies mooy bérab bu nekk ci penku Dakar, bu am solo ci géographie ak tourismeu ville bi. Côte bi, géej mi ak melokaanu horizon di amal bérab bi ab identité bu leer. Mu bokk ci lieux yu ñuy seet ci Dakar.
 
-### Géej ak paysage
+### Côte ak dundug géej
 
-Vista bu géej ak proximitéu océan di jox bérab bi melokaan bu wuute. Littoral bi di am solo ci promenade, loisirs ak yeneen activité yu jëme ci géej, ci digganteu environnement ak vie urbaine.
+Littoral bi di amal espace ngir noppalu, tourisme ak yeneen activités. Géej mi di nekk itam ci dundug pêche ak liggéey yu aju ci côte. Xaalisu météo, marée ak étatug environnement di soppi xaalis bu bérab bi.
 
-### Vie urbaine
+### Tourisme ak ville
 
-Almadies di boole quartiers, restaurants, services ak activité yu loisirs. Bérab bi di nekk it ci digganteu dundug dëkk ak tourisme, te proximitéu géej di yokk njariñu territoire bi.
+Almadies di bokk ci zones yu am activitésu accueil, restauration ak services. Visiteurs yi di mën a jàng ci melokaanu côte, gis dundug ville ak seet yeneen bérab yu jege. Développementu tourisme war na toppatoo environnement ak sécurité.
 
-### Environnement ak développement
+### Patrimoine naturel
 
-Aar littoral, gestionu déchets ak respectu environnement di am solo ngir bérab bi des bu neex. Développementu activité yu tourisme ak économie locale mën a doxandoo ak conservationu géej.`,
+Toppatoo littoral bi am solo ndax pressionu construction, déchets ak erosion mën a yokk ay risques. Setal, protectionu géej ak gestionu espace bi di jàppale denc bérab bi. Pointe des Almadies di wone ni tourisme ak conservation mën a doxandoo.`,
   },
   'plage-de-ngor': {
-    titleWo: 'Plage bu N’Gor',
-    excerptWo: 'Plage ak dunu N’Gor ci Dakar, bérab bu lëkkale géej, surf ak aada Lébou.',
+    titleWo: 'Saliou Ngor',
+    excerptWo: 'Saliou Ngor mooy benn ci bérab yu neex ci wetu Dakar, te géej, suuf ak dundug dëkk bi di daje foofu.',
     contentWo: `### Jëmmal
 
-Plage bu N’Gor nekk na ci Dakar, ci wetug dunu N’Gor. Bérab bi lëkkale géej, activité yu loisirs ak vie locale. Aada Lébou di bokk ci identitéu territoire.
+Saliou Ngor mooy bérab bu turist ak bu dëkk bu ñu xam ci wetu Dakar. Géej bi, ndox mi ak wetu dëkk bi di amal ab melokaan bu aju ci dundug géej ak activités yu ñuy def ci côte. Bérab bi di bokk ci patrimoine naturel ak touristique bu Dakar.
 
-### Géej ak loisirs
+### Géej ak activités
 
-Surf, baignade ak yeneen activité yu géej di bokk ci dundug plage bi. Dunu N’Gor di yokk melokaanu bérab bi, te proximitéu océan di may visiteurs ak wa dëkk yi espaceu détente ak découverte.
+Wetu géej bi di may nit ñi yoon ngir noppalu, dem ci ndox walla gis melokaanu côte. Ay activités yu aju ci tourisme, pêche ak loisirs mën a am ci wet wi. Ndam li ak waxtu bi di soppi melokaanu ndox ak xaalisu plage bi.
 
-### Aada ak tourisme
+### Dëkk ak patrimoine
 
-N’Gor am na histoire ak culture bu lëkkale ak populationu Lébou. Tourisme bu jàppale respectu aada, environnement ak communauté di mën a yokk njariñu plage bi te aar patrimoineu littoral.
+Ngor di bokk ci dëkk yu am histoire ak identité bu mag ci Dakar. Dëkk bi ak géej bi di lëkkale dundug nit ñi, liggéeyu pêche ak accueilu visiteurs. Denc environnement bi ak respectu dëkk yi di am solo ci jëfandikoo bérab bi.
 
-### Vie locale
+### Tourisme ak toppatoo
 
-Plage bi di it bérab bu ñuy daje, waxtaan ak séddale ay activité. Restaurants, services ak petites activités di bokk ci économie locale bu quartier bi.`,
+Développementu tourisme war na aju ci setal, sécurité ak protectionu géej. Visitors yi di mën a gis patrimoine bi te jàppale économie locale bu jëm ci services ak activités. Yëngu-yëngu yu toppatoo environnement di tax bérab bi des bu neex ci jamono yu nekk.`,
   },
   'thieboudiene-ceebu-jen': {
     titleWo: 'Ceebu jën',
@@ -618,18 +618,22 @@ Jàngale musique, dégg performance ak waxtaan ci parcoursu artistes di jàppale
   },
   'tata-de-kedougou-architecture-defensive-et-patrimoine-du-senegal-oriental': {
     titleWo: 'Tata bu Kédougou',
-    excerptWo: 'Architecture défensive bu yàgg, bokk ci patrimoineu Sénégal oriental.',
+    excerptWo: 'Tata bu Kédougou di wone benn xeetu architecture bu aar nit ñi, ak patrimoine bu jëkk ci Senegaal penku.',
     contentWo: `### Jëmmal
 
-Tata bu Kédougou mooy exempleu architecture défensive bu yàgg ci Sénégal oriental. Fiche bi di fésal solo bu patrimoine bâti am ci mémoireu territoire ak ci compréhensionu formesu protection ak organisationu dëkk yi.
+Tata bu Kédougou di wone benn xeetu architecture bu aju ci aar ak denc dëkk. Melokaanu tata, yoonu tabax ak organisationu espace bi di jàppale xam ni nit ñi daan aar seen bérab ci jamono yu jiitu. Mu bokk ci patrimoine bâti bu Senegaal penku.
 
-### Architecture ak territoire
+### Architecture ak sécurité
 
-Tata bi di lëkkale construction ak contexteu territoire. Muraay, espace ak organisationu bérab bi di wone ni architecture mën a toppatoo besoinu protection ak dundug communauté. Xam-xamu tabax di bokk ci patrimoine bi.
+Tabaxu tata di mën a am mur yu am doole, ay accès yu ñu mën a kontrolle ak espace yu aju ci protection. Architecture bi di topp xaalis ak terrainu bérab bi. Jàngat ci tata yi di may xam-xam ci yoonu tabax, dundug nit ñi ak yoonu defar ab communauté.
 
-### Mémoire ak conservation
+### Mémoire culturelle
 
-Denc tata yi di jàppale aar mémoireu Sénégal oriental. Patrimoine bâti bi mën a joxe xibaar ci taariixu territoire, savoir-faireu tabax ak manière yu ñuy defar bérab yi. Conservation ak transmission di am solo ngir générations yi xam seen patrimoine.`,
+Tata di bokk ci mémoireu territoire bi. Jàngale ay jeunes ci histoireu bérab bi, yoonu tabax ak usageu tata di jàppale transmissionu patrimoine. Ñu mën a gis ci tata bi digganteu environnement, organisation sociale ak besoinu sécurité.
+
+### Valorisation
+
+Toppatoo tata bi war na boole conservationu matériaux ak respectu architecture originale. Bérab bi mën a bokk ci parcoursu tourisme culturel bu Kédougou, te visite yi war nañu jàppale communauté locale. Denc patrimoine bi di yokk xam-xamu histoireu Senegaal penku.`,
   },
   'fort-pinet-laprade-memoire-historique-de-sedhiou': {
     titleWo: 'Fort Pinet-Laprade',
