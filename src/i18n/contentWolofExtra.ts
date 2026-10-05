@@ -42,23 +42,23 @@ Cap Skirring di bokk ci territoire bu am aada yu bari. Accueilu visiteurs di më
 Développementu tourisme war na aar plage, mangrove ak yeneen ressources naturelles. Gestionu déchets, respectu communautés ak valorisationu produits locaux di jàppale tourisme bu mën a yàgg. Cap Skirring mën na nekk benn porte d'entrée ci découverteu Casamance.`,
   },
   'pointe-des-almadies-dakar': {
-    titleWo: 'Pointe des Almadies',
-    excerptWo: 'Pointe des Almadies mooy benn ci bérab yu mag ci côteu Dakar, bu ñuy xam ak géej, tourisme ak activitésu littoral.',
+    titleWo: 'Pointe des Almadies ci Dakar',
+    excerptWo: 'Pointe des Almadies di benn bérab bu Dakar bu xam ne am côte, activités, restauration ak paysageu géej.',
     contentWo: `### Jëmmal
 
-Pointe des Almadies mooy bérab bu nekk ci penku Dakar, bu am solo ci géographie ak tourismeu ville bi. Côte bi, géej mi ak melokaanu horizon di amal bérab bi ab identité bu leer. Mu bokk ci lieux yu ñuy seet ci Dakar.
+Pointe des Almadies di nekk ci Dakar, ci penkuwalu presqu’île bi. Bérab bi di boole côte, vue ci géej ak espace yu am activités. Mu bokk ci bérab yi am solo ci géographie ak tourismeu Dakar.
 
-### Côte ak dundug géej
+### Côte ak paysage
 
-Littoral bi di amal espace ngir noppalu, tourisme ak yeneen activités. Géej mi di nekk itam ci dundug pêche ak liggéey yu aju ci côte. Xaalisu météo, marée ak étatug environnement di soppi xaalis bu bérab bi.
+Côte bi di may nit ñi ay vues yu wuute ci géej ak horizon. Waxtu, météo ak lumière di soppi melokaanu paysage. Promenade ci wetti géej mën a nekk yoonu gis bérab bi ak xam environnementu littoral.
 
-### Tourisme ak ville
+### Vie locale ak services
 
-Almadies di bokk ci zones yu am activitésu accueil, restauration ak services. Visiteurs yi di mën a jàng ci melokaanu côte, gis dundug ville ak seet yeneen bérab yu jege. Développementu tourisme war na toppatoo environnement ak sécurité.
+Almadies di am restaurants, cafés, hôtels ak yeneen services yu jëfandikoo ci dundug dëkk ak accueilu visiteurs. Activités yi di mën a aju ci restauration, loisirs walla rencontre. Bérab bi di lëkkale dundug Dakar ak économieu services.
 
-### Patrimoine naturel
+### Tourisme ak environnement
 
-Toppatoo littoral bi am solo ndax pressionu construction, déchets ak erosion mën a yokk ay risques. Setal, protectionu géej ak gestionu espace bi di jàppale denc bérab bi. Pointe des Almadies di wone ni tourisme ak conservation mën a doxandoo.`,
+Tourisme ci côte di soxla respectu environnementu littoral. Denc propreté, gestionu déchets ak protectionu espaceu géej di jàppale qualitéu site bi. Valorisationu Almadies di mën a boole patrimoineu paysage ak activitéu tourisme bu responsable.`,
   },
   'plage-de-ngor': {
     titleWo: 'Saliou Ngor',
@@ -100,22 +100,22 @@ Xam-xamu defar ceebu jën di jaar ci génération yi. Jàngale yoonu togg, yoonu
   },
   'ceebu-yapp': {
     titleWo: 'Ceebu Yapp',
-    excerptWo: 'Ceebu Yapp di plat bu Senegaal bu boole riz ak yapp ci sauce bu am légumes, oignons ak épices.',
+    excerptWo: 'Ceebu Yapp di plat bu Senegaal bu boole riz ak yapp, légumes ak sauce bu am parfum.',
     contentWo: `### Jëmmal
 
-Ceebu Yapp di bokk ci plats yu xam nekk ci cuisineu Senegaal. Mu boole riz ak yapp, te ñuy yokk légumes, oignons, tomate ak épices ci préparation bi. Plat bi mën a nekk repasu kër, ndaje walla occasion spéciale.
+Ceebu Yapp di bokk ci plats yu xam nekk ci cuisineu Senegaal. Mu boole riz ak yapp, te légumes, oignons, tomate ak épices di yokk goût ak parfum. Plat bi mën a nekk ci repasu kër, ndaje walla occasion bu spéciale.
 
-### Préparation
+### Yapp ak sauce
 
-Yapp bi di mën a nekk bœuf, mouton walla beneen viande, te yoonu cuisson di aju ci recetteu famille. Sauce bi di soxla base bu neex ak oignons, tomate ak épices. Riz bi di ñu defar ci sauce ngir mu jël saveur ak parfum.
+Yapp bi mën a nekk bœuf, mouton walla beneen viande, te yoonu cuisson di aju ci recetteu njaboot. Sauce bi di soxla cuisson bu baax ngir saveur yi di boole. Oignons, tomate ak épices di mën a jàppale baseu sauce bi.
 
-### Lekk ak partage
+### Riz ak légumes
 
-Ceebu Yapp di am solo ci repasu bokk. Plat bu mag mën a nekk ci milieu table, nit ñi di lekk ci benn plat ak jàppale partage. Yoonu lekk boobu di lëkkale gastronomie ak convivialitéu famille.
+Riz bi di ñu defar ci sauce ngir mu jël couleur ak saveur. Légumes yi di mën a bokk ci compositionu plat bi te di yokk diversitéu texture ak goût. Yoonu defar mën na soppeeku ci territoire ak préférenceu famille.
 
-### Transmission
+### Partage ak transmission
 
-Recetteu Ceebu Yapp di jaar ci génération yi, te ay détails mën a soppeeku ci njaboot ak territoire. Denc recettes locales ak yoonu préparation di jàppale patrimoine gastronomique ak diversitéu cuisineu Senegaal.`,
+Ceebu Yapp di am solo ci lekk bu bokk. Plat bu mag ci milieu table di mën a jàppale convivialité ak partage. Recette yi di jaar ci génération yi, te denc yoonu préparation di jàppale patrimoine gastronomique bu Senegaal.`,
   },
   'mafe': {
     titleWo: 'Mafé',
@@ -293,23 +293,23 @@ Thiéré bu salte di mën a nekk ci déjeuner walla dîner. Ñuy ko séddale ci 
 Mil di bokk ci ressourcesu agriculture ak alimentationu Sahel. Jëfandikoo ko ci lekk di jàppale diversitéu céréales ak valorisationu produitsu local. Transmissionu yoonu defar thiéré di denc savoir-faireu njaboot ak patrimoine culinaire.`,
   },
   'poisson-braise-lakk-dieune': {
-    titleWo: 'Lakk diëne',
-    excerptWo: 'Lakk diëne mooy jën bu ñuy waajal ak braisage, bu lëkkale produitsu géej, savoir-faireu pêche ak gastronomie.',
+    titleWo: 'Lakk Dieune ak Poisson Braisé',
+    excerptWo: 'Poisson braisé di jëfandikoo poisson, chaleur ak assaisonnement ngir defar benn plat bu am goût ak parfum.',
     contentWo: `### Jëmmal
 
-Lakk diëne mooy jën bu ñuy braiser ci yoonu préparation bu may ko goût bu wuute. Jën di nekk ci dundug géej ak pêche, te braisage di jëfandikoo chaleur ngir waajal ko. Mu bokk ci lekk yu aju ci produitsu géej.
+Poisson braisé di bokk ci yoonu lekk ak yoonu defar poisson ci Senegaal. Poisson bi di ñu assaisonner te def ko ci chaleuru braise walla grill. Méthode bi di may poisson parfum bu neex ak texture bu wuute ak cuissonu sauce.
 
 ### Préparation
 
-Ñuy setal jën bi, ñu waajal ko ak sel, épices walla yeneen ingrédients ci recetteu kër gi. Gannaaw ñu koy teg ci braise walla chaleuru grill, ñu ko soppi ci waxtu yi ngir mu togg bu baax. Yoonu braiser di jàppale am goût ak texture bu wuute.
+Poisson bu set di soxla nettoyage ak assaisonnement bu baax. Ñu mën a jëfandikoo oignons, ail, piment, citron walla yeneen épices ci marinade. Waxtu cuisson di aju ci tailleu poisson ak intensitéu chaleur.
 
-### Pêche ak territoire
+### Partage ak accompagnement
 
-Lakk diëne di lëkkale lekk ak liggéeyu pêche. Produitsu géej di nekk benn élémentu alimentationu dëkk yu jege côte, te préparationu jën di jaar ci xam-xamu njaboot. Lekk bi di wone solo bu produitsu mer ci gastronomie.
+Poisson braisé mën nañu ko lekk ak salade, légumes walla riz. Ci ndaje walla repasu famille, plat bi di mën a bokk ci tableu partage. Yoonu service di mën a soppeeku ci quartier, famille ak contexteu repas.
 
-### Valorisation
+### Patrimoine culinaire
 
-Jëfandikoo jën ci recettes yu local di mën a yokk valeur bu produitsu pêche. Conservationu ressourcesu géej, respectu saison ak soutienu acteurs locaux di am solo ngir dundal chaîneu valeur. Xam-xamu braisage di bokk ci patrimoine culinaire.`,
+Cuisson ci braise di lëkkale produit, savoir-faire ak méthodeu cuisine. Denc yoonu préparation di jàppale transmissionu xam-xam ci génération yi. Poisson braisé di wone itam digganteu gastronomie ak ressourcesu géej ci Senegaal.`,
   },
   'ndambe-ragout-de-niebe-petit-dejeuner-populaire-senegalais': {
     titleWo: 'Ndambé',
