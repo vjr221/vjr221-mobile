@@ -293,23 +293,23 @@ Thiéré di lëkkale mbay, cuisine ak dundug kër. Xam-xamu defar mil di jaar ci
 Lekk bu mil di bokk ci transmissionu savoir-faireu cuisine. Mag ñi di jàngale ndaw ñi yoonu setal, defar ak togg mil. Denc recettes yu mel ni thiéré bassi salté di jàppale aar patrimoine culinaire ak diversitéu lekk yu Senegaal.`,
   },
   'poisson-braise-lakk-dieune': {
-    titleWo: 'Lakk jën',
-    excerptWo: 'Jën bu ñu lakk ci taal, lekk bu lëkkale pêche, géej ak savoir-faireu cuisine.',
+    titleWo: 'Lakk diëne',
+    excerptWo: 'Lakk diëne mooy jën bu ñuy waajal ak braisage, bu lëkkale produitsu géej, savoir-faireu pêche ak gastronomie.',
     contentWo: `### Jëmmal
 
-Lakk jën mooy jën bu ñu lakk ci taal. Mu bokk ci lekk yu lëkkale pêche ak cuisine, rawatina ci dëkk yu wetu géej. Xeeñu taal bi ak goûtu jën bi di may lekk bi melokaan bu ñu xam ci cuisineu littoral.
+Lakk diëne mooy jën bu ñuy braiser ci yoonu préparation bu may ko goût bu wuute. Jën di nekk ci dundug géej ak pêche, te braisage di jëfandikoo chaleur ngir waajal ko. Mu bokk ci lekk yu aju ci produitsu géej.
 
-### Pêche ak choixu jën
+### Préparation
 
-Jën bi di nekk ci xolum recette bi. Xeetu jën bi mën a wuute ci li pêcheur yi jële ci géej ak li marché bi di am. Jëfandikoo jën bu frais di am solo ngir qualitéu lekk bi, te toppatoo ressourcesu géej di bokk ci responsabilitéu acteurs yi.
+Ñuy setal jën bi, ñu waajal ko ak sel, épices walla yeneen ingrédients ci recetteu kër gi. Gannaaw ñu koy teg ci braise walla chaleuru grill, ñu ko soppi ci waxtu yi ngir mu togg bu baax. Yoonu braiser di jàppale am goût ak texture bu wuute.
 
-### Préparation ak cuisson
+### Pêche ak territoire
 
-Ñuy setal jën bi, toggal ko ak xorom walla yeneen ingrédients, ba noppi ñu koy lakk ci taal. Cuisson bu baax di soxla toppatoo safara ngir jën bi bañ a lakk ba mu metti. Yoonu defar di mën a wuute ci kër ak terroir.
+Lakk diëne di lëkkale lekk ak liggéeyu pêche. Produitsu géej di nekk benn élémentu alimentationu dëkk yu jege côte, te préparationu jën di jaar ci xam-xamu njaboot. Lekk bi di wone solo bu produitsu mer ci gastronomie.
 
-### Patrimoine littoral
+### Valorisation
 
-Lakk jën di wone digganteu nit ñi, pêche ak géej. Mu bokk ci savoir-faireu cuisine bu ñuy séddale ci njaboot ak communauté. Denc yoonu defar ak aar ressourcesu géej di jàppale patrimoineu gastronomie bu littoral.`,
+Jëfandikoo jën ci recettes yu local di mën a yokk valeur bu produitsu pêche. Conservationu ressourcesu géej, respectu saison ak soutienu acteurs locaux di am solo ngir dundal chaîneu valeur. Xam-xamu braisage di bokk ci patrimoine culinaire.`,
   },
   'ndambe-ragout-de-niebe-petit-dejeuner-populaire-senegalais': {
     titleWo: 'Ndambé',
@@ -332,41 +332,41 @@ Ndambé di wone digganteu gastronomie ak dundug dëkk. Jaaykat yi di jëfandikoo
   },
   'thiou': {
     titleWo: 'Thiou',
-    excerptWo: 'Sauce bu tomate bu ñu mën a def ak jën walla yàpp, te ñuy lekk ak ceeb ak légumes.',
+    excerptWo: 'Thiou mooy mbuum bu ñuy defar ak sauce, légumes ak yàpp walla jën, bu bokk ci lekk yu kër.',
     contentWo: `### Jëmmal
 
-Thiou mooy sauce bu tomate bu ñu mën a def ak jën walla yàpp, te ñuy lekk ak ceeb. Mu bokk ci lekk yu sauce yi di boole riz, protéines ak légumes ci benn plat. Recette bi mën a am ay melokaan yu wuute ci kër yi ak terroir yi.
+Thiou mooy benn xeetu mbuum bu ñuy defar ak sauce ak ingrédients yu aju ci recetteu kër gi. Yàpp walla jën mën na bokk ci plat bi, ak légumes yu ñuy boole ngir yokk goût ak valeuru repas. Mu bokk ci lekk yu ñuy defar ci njaboot.
 
-### Tomate ak préparation
+### Préparation
 
-Tomate bi di joxe baseu sauce bi. Ñuy togg ko ak oignon ak yeneen ingrédients, ba mu am xeeñ ak texture bu ñu bëgg. Jën walla yàpp bi di yokk doole ci lekk bi, te légumes di may ay goûts ak couleurs yu wuute.
+Ñuy tàmbalee ak sauce bi, ñu boole oignon, tomate walla yeneen ingrédients ci li recette bi di jëfandikoo. Yàpp walla jën di togg ci sauce bi, gannaaw ñu yokk légumes yi ci waxtu wu ñu war. Yoonu togg di may ingrédients yi texture ak goût bu méngoo.
 
-### Ceeb ak séddale
+### Lekkandoo
 
-Thiou mën na nekk ak riz bu ñu togg ci ndox walla ci sauce, ci li yoon wi kër gi di jëfandikoo. Séddaleu mbuum bi di boole sauce, riz ak jën walla yàpp. Ci repasu njaboot, ñuy mën a séddale ci benn plat ngir lekkandoo.
+Thiou di mën a nekk ci déjeuner walla dîner, te ñuy ko séddale ak riz walla yeneen céréales. Plat bi di mën a bokk ci repas njaboot ak ndaje. Séddaleu lekk bi di jàppale lekkandoo ak waxtaan.
 
-### Aada ak transmission
+### Transmission
 
-Thiou di bokk ci patrimoine culinaire bu Senegaal. Xam-xamu defar sauce, waxtu togg ak séddale mbuum di jaar ci njaboot yi. Recettes yu mel ni bii di jàppale denc diversitéu lekk ak savoir-faireu cuisine.`,
+Recetteu thiou di mën a wuute ci kër yi, te variations yi di wone diversitéu cuisineu Senegaal. Mag ñi di jàngale ndaw ñi yoonu togg ak équilibreu goût. Denc xam-xam bi di jàppale patrimoine culinaire ak valorisationu produits local.`,
   },
   'caldou': {
     titleWo: 'Caldou',
-    excerptWo: 'Caldou mooy lekk bu jën ak légumes, bu lëkkale pêche, riz ak aada lekk yu littoral.',
+    excerptWo: 'Caldou mooy lekk bu Casamance bu ñuy defar ak jën, riz, légumes ak ingrédients yu local, bu lëkkale géej ak mbay.',
     contentWo: `### Jëmmal
 
-Caldou mooy lekk bu ñu def ak jën ak légumes, te ñuy ko boole ak riz. Mu bokk ci lekk yu lëkkale dundug pêche ak cuisine, rawatina ci terroirs yu wetu géej. Jën bi, légumes yi ak sauce bi di bokk ci melokaanu plat bi.
+Caldou mooy benn lekk bu ñuy lëkkale ak Casamance, te jën di nekk benn ci éléments yi am solo ci recette bi. Riz, légumes ak yeneen ingrédients di boole ak jën ngir defar plat bu aju ci produitsu territoire. Mu bokk ci patrimoine culinaireu région bi.
 
-### Jën ak pêche
+### Préparation ak jën
 
-Jën mooy élément bu am solo ci caldou. Xeetu jën bi mën a wuute ci saison, bérab ak li pêcheur yi jële ci géej. Jëfandikoo jën bu frais di yokk qualitéu lekk, te toppatoo ressourcesu pêche di am solo ngir dundug communautés yu littoral.
+Jën bi ñuy waajal ak setal, gannaaw ñu togg ko ak ingrédients yu recette bi di jëfandikoo. Sauce bi mën a am oignon, citron walla yeneen éléments yu joxe goût. Waxtu togg ak toppatoo jën di am solo ngir denc texture bi.
 
-### Préparation ak légumes
+### Casamance ak lekk
 
-Ñuy setal jën bi, def ko ci sauce ak légumes, ba noppi ñu togg ko ndànk. Légumes yi mën a bokk ci recette bi ci li ñu am ci terroir. Sauce bi di jàppale jën bi ak légumes yi ñu neexal.
+Caldou di wone digganteu pêche, mbay ak alimentation ci Casamance. Riz ak légumes di bokk ci produitsu territoire, te yoonu defar plat bi di jaar ci xam-xamu njaboot. Lekk bi di mën a nekk ci repas ak ndaje.
 
 ### Patrimoine ak transmission
 
-Caldou di wone ni produitsu géej ak mbay mën a bokk ci benn repas. Xam-xamu defar lekk bi di jaar ci njaboot yi, te recette bi mën a wuute ci kër ak communauté. Denc savoir-faire bi di jàppale patrimoine culinaireu littoral.`,
+Transmissionu recette bi di jàppale denc xam-xamu cuisineu Casamance. Jàngale yoonu setal jën, boole ingrédients ak séddale plat bi di jaar ci génération. Valorisationu produits local di yokk valeur bu patrimoineu gastronomie.`,
   },
   'le-thiof-au-senegal-poisson-emblematique-peche-et-gastronomie': {
     titleWo: 'Thiof ci Senegaal',
