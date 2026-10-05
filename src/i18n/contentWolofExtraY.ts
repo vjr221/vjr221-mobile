@@ -89,54 +89,42 @@ Sanctuaire bi di nekk benn repère ci patrimoine religieux bu Senegaal ak ci dia
 
   'le-parc-national-du-delta-du-saloum': {
     titleWo: 'Parc nationalu Delta du Saloum',
-    excerptWo: 'Réserve naturelle bu mag ak mangroves, îles, bolongs ak biodiversité ci diiwaanu Fatick.',
+    excerptWo: 'Parc bu boole mangrove, bolong, îles ak biodiversité, te mu am solo ci aarug nature ak dundug communautés.',
     contentWo: `### Jëmmal
 
-Parc nationalu Delta du Saloum nekk na ci wetu géeju Senegaal, ci diiwaanu Fatick. Mu feeñ ci paysagesu mangrove, îles, bolongs, vasières ak forêts.
+Parc nationalu Delta du Saloum di ab patrimoine naturel bu am solo ci Senegaal. Mu boole paysagesu mangrove, bolong, îles, vasières ak yeneen milieu yu ndox. Bérab bi di wone lëkkalekaayu géej, suuf ak dundug nit ñi ci diiwaanu Saloum.
 
-### Géographie
+### Biodiversité ak mangrove
 
-Parc bi nekk na diggante embouchureu Saloum ak Océan Atlantique. Étendue bi boole na ay milieu yu ndox ak yu suuf, te loolu di jàppale biodiversité bu riche.
+Mangrove yi di am solo ci aarug zones humides ak ci dundug ay xeetu picc, jën ak yeneen mbindeef. Bolong yi ak îles yi di joxe ay habitat yu wuute. Aarug milieu yi di tax biodiversité bi mën a wéy ak ressourcesu territoire yi mën a nekk ci njariñu communautés.
 
-### Biodiversité
+### Pêche ak dundug communautés
 
-Delta bi di dalal ay xeetu picc, jën, reptiles ak yeneen mbindeef. Mangroves yi am nañu solo ci aarug zones humides ak ci bérab yu espèces di génn ak di màgg.
+Pêche ak yeneen jëfandikoo ressourcesu ndox bokk nañu ci dundug nit ñi ci delta bi. Xam-xam yu aada ak pratiquesu territoire di lëkkale nit ñi ak milieu. Conservation war na boole sàmmug ressources ak toppatoo yoonu dundug communautés.
 
-### Nit ñi ak activités
+### Tourisme ak aarug patrimoine
 
-Territoire bi am na histoire ak traditions yu lëkkale ak pêche ak jëfandikoo ressourcesu ndox. Écotourisme mën na jàppale gis paysage bi ak valorisationu patrimoine bi, bu ñu ko defee ci respectu milieu bi ak communities yi.
-
-### Aarug environnement
-
-Conservationu delta bi aju na ci aarug mangroves, bolongs, îles ak habitats yi. Jëfandikoo ressources yi ak activitésu tourisme war nañu topp ndigal yu aarug environnement.
-
-### Solo ci Senegaal
-
-Delta du Saloum di boole patrimoine naturel, biodiversité, culture ak ekonom local. Mu bokk ci espaces naturels yu am solo ci Senegaal.`,
+Écotourisme mën na jàppale découverteu paysage ak patrimoine, waaye war na topp ndigal yu aarug environnement. Bañ a yàq mangrove, denc propreté, respectu espèces ak bokk ak acteurs locaux di jàppale conservation. Delta du Saloum di wone ni nature, culture ak économie locale mën a doxandoo.`,
   },
 
   'le-tamarinier-arbre-d-ombrage-au-fruit-acidule-emblematique': {
-    titleWo: 'Tamarinier — garab gu di may ker ak meññum acidulé',
-    excerptWo: 'Garab bu am cër ak gousses yu ñuy jëfandikoo ci jus, lekk ak ay pratiquesu aada.',
+    titleWo: 'Tamarinier — garab gu am solo ci lekk ak environnement',
+    excerptWo: 'Tamarinier di ab garab bu ñu jëfandikoo ci ker, lekk ak ay pratiquesu aada, te meññam di may pulpe bu am goût acidulé.',
     contentWo: `### Jëmmal
 
-Tamarinier mooy garab bu ñu gis ci yeneen zones yu Senegaal. Mu di may ker bu am solo, te meññam di nekk ci gousses yu pulpe bi am goût acidulé.
+Tamarinier mooy garab bu am solo ci yeneen territoiresu Senegaal. Garab gi di may ker ak meññum gousses yu ëmb pulpe bu am goût acidulé. Mu bokk ci garab yi ñuy xam ci environnement ak ci pratiquesu lekk.
 
-### Meññum tamarin
+### Lekk ak boisson
 
-Pulpeu gousses yi mën nañu ko jëfandikoo ngir def jusu tamarin. Ñuy boole ko ak ndox ak suukar ngir am benn boisson bu neex ci jamono yu tàng.
+Pulpeu tamarin mën nañu ko jëfandikoo ngir def jus, ak itam ci sauces ak yeneen préparationsu lekk. Goûtu acidulé bi di joxe ab melokaan bu wuute ci recettes. Jëfandikoo tamarin di wone digganteu ressourcesu naturel ak xam-xamu lekk.
 
-### Lekk
+### Garab ak ker
 
-Tamarin mën na itam nekk condiment ci sauces ak yeneen préparationsu lekk. Goûtam acidulé di yokk xawma ci recettes yu wuute.
+Tamarinier di mën a joxe ker ci jamono yu tàng, te présenceem ci paysage di bokk ci melokaanu territoire. Garab yi di itam bokk ci richesseu végétation ak dundug environnement. Dencug garab yi di soxla toppatoo suuf, ndox ak bérab yi ñu koy jëfandikoo.
 
-### Xam-xam yu aada
+### Transmission ak valorisation
 
-Tamarin bokk na ci ay pratiquesu lekk ak yeneen usagesu aada. Jëfandikoo yi di wuute ci territoires ak njaboot, te war nañu leen jàng ci seen contexte.
-
-### Solo
-
-Tamarinier di lëkkale nature, lekk ak patrimoineu gastronomie. Mu di itam garab gu am solo ci paysage ak ci dundug nit ñi.`,
+Xam-xam ci dajale, saytu ak jëfandikoo meññum tamarin di mën a jaar ci njaboot yi ak communauté yi. Valorisationu produit bi ci boisson ak lekk mën na yokk solo bu garab gi am. Jëfandikoo bu wér ak aarug ressources di jàppale dencug patrimoine naturel ak culinaire.`,
   },
 
   'le-calao-terrestre-geant-social-des-savanes-senegalaises': {
