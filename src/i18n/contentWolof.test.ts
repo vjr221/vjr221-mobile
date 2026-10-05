@@ -1608,4 +1608,21 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
   });
 
 
+
+  it('covers the Wolof heritage and conservation enrichment wave 138', () => {
+    const slugs = [
+      'reserve-speciale-faune-guembeul',
+      'centre-dinterpretation-de-toubacouta-patrimoine-du-delta-du-saloum',
+      'centre-dinterpretation-de-bandafassi-patrimoine-du-pays-bassari',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
 });
