@@ -468,73 +468,61 @@ Sereer di am xam-xam bu dëgër ci suuf, mbay ak ressourcesu terroir. Denc xam-x
 Aada du nekk rekk ci li weesu; mu mën a wéy ci génération yi. Jàngale ndaw ñi, documentation ak participationu communauté di mën a jàppale transmissionu patrimoine ak yokk xam-xam ci diversitéu culture bu Senegaal.`,
   },
   'culture-mandingue-senegal-traditions': {
-    titleWo: 'Aada Mandingue',
-    excerptWo: 'Aada Mandingue, musique, récits ak xam-xam bu bokk ci patrimoine culturel bu Senegaal.',
+    titleWo: 'Aada Manding ci Senegaal',
+    excerptWo: 'Aada Manding di wone patrimoine bu yaatu bu aju ci cosaan, gëstu, musique, wax ak yoonu dund ci ay territoire yu Senegaal.',
     contentWo: `### Jëmmal
 
-Aada Mandingue bokk na ci patrimoine culturel bu Senegaal, rawatina ci diiwaan yi lëkkale ak histoireu Mande. Mu ëmb làkk, récits, musique, cérémonies, savoir-faire ak yoonu dund yu jaar ci générations.
+Aada Manding di bokk ci patrimoine culturel bu yaatu ci Senegaal ak ci yeneen réew yu Senegambia. Mu lëkkale cosaan, wax, musique, danse, arts ak xam-xam yu mag ñi di jàngale ndaw ñi. Aada bi di am ay melokaan yu wuute ci territoire yi.
 
-### Griot ak récits
+### Wax ak transmission
 
-Récits ak parole am nañu solo ci transmissionu mémoire. Griots di mën a denc taariix, cosaan, genealogie ak xibaar yu ñuy jàngale ci communauté. Waxtaan di jàppale lëkkale li weesu ak li ñuy dund tey.
+Wax ak leeralu histoire di am solo ci denc mémoireu communauté yi. Ay récits, généalogie ak leçonsu cosaan di jaar ci génération yi. Transmission bi di mën a jaar ci njaboot, ndaje, cérémonies ak yoonu jàngale yu aju ci territoire.
 
-### Kora ak musique
+### Musique ak patrimoine
 
-Kora ak yeneen instruments di bokk ci patrimoine musical. Musique di bokk ci cérémonies, fêtes ak waxtu yu am solo, te rythme ak mélodie di may artistes yoonu wone xam-xam ak émotion.
+Musique Manding di am instruments, chants ak rythmes yu am solo. Kora, tama ak yeneen instruments mën nañu bokk ci performances yu lëkkale musique ak histoire. Artistes yi di jàppale denc répertoire ak yokk xam-xamu patrimoine.
 
-### Aada ak communauté
+### Valorisation
 
-Cérémonies, accueil, lekkandoo ak jëf yu aada di jàppale solidarite. Pratiques yi mën a wuute ci terroir, waaye ñu bokk ci xel mu mag bu transmission ak respectu cosaan.
-
-### Patrimoine ak avenir
-
-Aada Mandingue di wéy ci génération yi. Documentation, enseignementu musique ak récits, ak participationu ndaw ñi di mën a jàppale denc patrimoine bi te di ko yokk ci contexteu jamono ju bees.`,
+Denc aada Manding di soxla respectu communautés ak conservationu patrimoine matériel ak immatériel. Festival, recherche, transmissionu écoles ak projetsu culture mën nañu jàppale xamle cosaan bi. Valorisationu patrimoine di itam mën a jàppale tourisme culturel ak économie créative.`,
   },
   'sebbe-koliyabe-tradition-culturelle-du-fouta': {
-    titleWo: 'Sebbe Koliyabe',
-    excerptWo: 'Pratique culturelle bu Fouta-Toro, bokk ci patrimoine Haalpulaar, ak cérémonie, communauté ak transmission.',
+    titleWo: 'Sebbe Koliyabe ci Fouta',
+    excerptWo: 'Sebbe Koliyabe di wone benn tradition culturelle bu Fouta, bu lëkkale identité, mémoire, cérémonie ak transmission.',
     contentWo: `### Jëmmal
 
-Sebbe Koliyabe mooy pratique culturelle bu Fouta-Toro bu bokk ci patrimoine Haalpulaar. Mu lëkkale aada, cérémonies, gestes ak transmissionu xam-xam ci diggante génération yi.
+Sebbe Koliyabe di bokk ci traditions yu am solo ci Fouta. Mu aju ci identitéu communauté, mémoire ak yoonu jàppale digganteu génération yi. Tradition bi di am sens ci contexteu territoire, ndaje ak waxtu yu ñuy def ay cérémonies.
 
-### Fouta-Toro ak communauté
+### Cérémonies ak communauté
 
-Fouta-Toro am na patrimoine culturel bu riche, te jëf yu aada di bokk ci dundug communauté. Waxtu yu ñuy dajale askan wi di may espace ngir séddale xam-xam, waxtaan ak wone respectu cosaan.
+Cérémonies di mën a boole nit ñi ci benn waxtu ngir denc cosaan ak jàppale solidarité. Ay gestes, paroles ak symboles di may sens ci événement bi. Ñu koy topp ak respectu yoonu communauté ak li mag ñi di jàngale.
 
-### Cérémonie ak symboles
+### Mémoire ak transmission
 
-Pratique bi mën a ëmb gestes, paroles, tenue walla yeneen symboles yu am solo ci contexteu cérémonie. Li ñuy def di aju ci cosaanu communauté ak li mag ñi di jàngale.
+Transmissionu Sebbe Koliyabe di jaar ci waxtaan, observation ak participation. Ndaw ñi di jàng ci mag ñi yoonu defar ay séquencesu cérémonie ak sensu symboles. Loolu di jàppale continuitéu patrimoine immatériel.
 
-### Transmissionu xam-xam
+### Denc patrimoine
 
-Xam-xam ci Sebbe Koliyabe di jaar ci génération yi. Làkk, récits, gestes ak participationu ndaw ñi di jàppale denc pratique bi. Transmission bi di tax patrimoine bi des vivant ci communauté.
-
-### Patrimoine bu Fouta
-
-Denc pratiquesu culturelles yi di jàppale xam taariix ak identitéu Fouta-Toro. Documentation ak valorisationu xam-xam mën nañu jàppale aar patrimoine immatériel bi, te communauté yi di nekk ci xolum processus bi.`,
+Denc tradition bi war na jàppale communauté yi, te documentation di mën a nekk outil ngir xamle histoire bi. Recherche ak archives mën nañu denc informations, waaye interprétationu patrimoine war na topp voix ak contexteu nit ñi koy dund. Valorisationu tradition di jàppale diversitéu cultureu Fouta.`,
   },
   'intronisation-beuleup-tradition-royale-du-senegal': {
-    titleWo: 'Intronisation Beuleup',
-    excerptWo: 'Cérémonie bu lëkkale tradition royale, njiit, symboles ak mémoire historique ci patrimoineu Senegaal.',
+    titleWo: 'Tànne Beuleup',
+    excerptWo: 'Tànne Beuleup di jëme ci benn tradition royale bu Senegaal, bu lëkkale pouvoir, cérémonie, mémoire ak identitéu territoire.',
     contentWo: `### Jëmmal
 
-Intronisation Beuleup mooy cérémonie bu lëkkale tradition royale, njiit ak patrimoine. Mu bokk ci pratiques historiques yi di wone organisationu société ak solo bu autorité traditionnelle am ci territoire.
+Tànne Beuleup di jëme ci traditionu tànne bu am solo ci histoireu ay royaume yu Senegaal. Cérémonie bi di lëkkale pouvoir, légitimité, symboles ak mémoireu communauté. Mu bokk ci patrimoine immatériel bu am solo ci compréhensionu histoire.
 
 ### Cérémonie ak symboles
 
-Cérémonie bi di ëmb jëf yu aada ak symboles yu ñuy jëfandikoo ngir wone changementu njiit. Tenue, paroles, gestes ak participationu communauté mën a am solo ci melokaanu cérémonie bi.
+Cérémoniesu tànne di mën a am ay paroles, gestes, objets ak séquences yu am sens. Yoonu defar bi di aju ci cosaan ak yoonu communauté. Symboles yi di mën a wone continuité, responsabilité ak digganteu boroom bérab ak nit ñi.
 
-### Njiit ak responsabilité
+### Histoire ak mémoire
 
-Intronisation di wone ne njiit du nekk rekk tur; mu am it responsabilité ci communauté. Respectu aada, aar intérêtsu askan wi ak denc équilibre ci digganteu njaboot ak territoire di bokk ci xel mu cérémonie.
+Tànne bi di may yoon ngir xam ni pouvoir ak société daan dox ci contexteu royaume. Mémoireu événement yi di jaar ci récits ak transmissionu njaboot. Jàng ci patrimoine bi di soxla toppatoo sources ak contexteu historique.
 
-### Mémoire ak histoire
+### Valorisation
 
-Pratique bi di bokk ci mémoire culturelle ak historique. Récits ak témoignages di mën a jox xibaar ci yoonu njiit yi doon dox ak yoonu société yi di organisé seen dund.
-
-### Transmission ak patrimoine
-
-Denc xam-xam ci intronisation di jàppale générations yi xam seen histoire. Documentation ak transmissionu récits, symboles ak pratiques di mën a aar patrimoine immatériel bi te di yokk xam-xamu territoire.`,
+Denc patrimoineu tànne di soxla documentation, recherche ak respectu communauté. Archives, témoignages ak travailu chercheurs mën nañu jàppale xamle histoire bi. Valorisationu patrimoine immatériel di mën a yokk xam-xam ci diversitéu histoireu Senegaal.`,
   },
   'super-diamono': {
     titleWo: 'Super Diamono',
