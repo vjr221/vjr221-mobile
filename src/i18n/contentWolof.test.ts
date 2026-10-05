@@ -551,6 +551,18 @@ describe('Wolof fiche translations', () => {
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof gastronomy enrichment wave 135', () => {
+    const slugs = ['cafe-touba', 'thiou', 'caldou'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('has no duplicate source keys across Wolof packs', () => {
     const seen = new Map<string, string>();
     const duplicates: string[] = [];
