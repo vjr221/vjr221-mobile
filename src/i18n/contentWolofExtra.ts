@@ -647,89 +647,64 @@ Denc bérab bu mel ni Fort Pinet-Laprade di jàppale transmissionu mémoire. Arc
 Documentation ak valorisationu patrimoine bi mën a jàppale tourisme culturel ak jàngat ci histoire. Aar bérab bi di soxla xam-xam, toppatoo ak participationu acteurs locaux ngir mémoire bi des ci yoon.`,
   },
   'centre-dinterpretation-de-toubacouta-patrimoine-du-delta-du-saloum': {
-    titleWo: 'Centre bu Toubacouta',
-    excerptWo: 'Bérab bu di jàppale xam, jàng ak denc patrimoineu Delta Saalum, ci diggante nature, culture ak histoire.',
+    titleWo: 'Centre d’interprétation bu Toubacouta',
+    excerptWo: 'Centre bu Toubacouta di jàppale xam patrimoineu Delta Saalum, ak mangrove, culture, histoire ak savoir-faireu communautés.',
     contentWo: `### Jëmmal
 
-Centre d’interprétation bu Toubacouta di jàppale xam patrimoineu Delta Saalum. Bérab bu mel ni mooy may ndaw ak mag ñu gën a xam environnement, culture ak histoireu territoire, te di jàppale nit ñi xam solo bu conservation am.
+Centre d’interprétation bu Toubacouta di jàppale visiteurs ak wa dëkk ñu gën a xam patrimoineu Delta Saalum. Bérab bu mel ni di boole xibaar, jàng ak transmission ngir xam digganteu nature, histoire ak dundug communautés. Mu mën a nekk ab yoon ngir gën a xam territoire bi ci yoonu respectu patrimoine.
 
-### Delta Saalum
+### Delta Saalum ak biodiversité
 
-Delta Saalum am na combinaison bu wuute bu géej, dex, mangrove, tannes ak dëkk yi. Nature ak dundug nit ñoo bokk ci identitéu bérab bi. Pêche, mbay ak yeneen activité yu local di sukkandiku ci ressourcesu territoire.
+Delta Saalum di boole géej, bolong, mangrove, tannes ak yeneen paysages yu wuute. Bérab yi di may habitat ci picc, jën ak yeneen xeetu mbindeef. Ressourcesu ndox ak suuf di itam bokk ci dundug nit ñi, rawatina ci pêche, mbay ak yeneen activité yu aju ci territoire.
 
 ### Jàng ak transmission
 
-Centre d’interprétation yi di may espace ngir jàng, waxtaan ak wone patrimoine. Xibaar ci mangrove, faune, pêche, aada ak histoire di mën a jox visiteurs xam-xam bu gën a dëgër.
+Centre bi di mën a joxe xibaar ci histoire, culture, environnement ak savoir-faire. Exposition, waxtaan ak guide di jàppale nit ñi xam solo bu mangrove, pêche, aada ak pratiquesu communautés. Transmissionu xam-xam di am solo ngir ndaw ñi ak gan yi gën a xam seen diggante ak territoire.
 
-### Aar environnement
+### Conservation ak communauté
 
-Xam-xamu territoire di jàppale nàmm ak aar ressources. Sensibilisation ci déchets, biodiversité ak jëfandikoo bu wér di mën a jàppale conservationu Delta Saalum.
-
-### Tourisme ak communauté
-
-Centre bi mën a bokk ci parcoursu tourisme culturel ak naturel. Participationu communautés yi, guide locaux ak acteursu territoire di mën a yokk njariñu visites te di denc patrimoine ci yoon wu dëgër.`,
+Aarug patrimoine du doon rekk toppatoo bérab; mu soxla it participationu nit ñi koy dund. Sensibilisation ci déchets, biodiversité ak jëfandikoo bu wér di mën a jàppale conservation. Tourisme bu wér, guide locaux ak participationu acteursu territoire di mën a boole njariñu économie locale ak denc patrimoine.
+`,
   },
   'centre-dinterpretation-de-bandafassi-patrimoine-du-pays-bassari': {
-    titleWo: 'Centre bu Bandafassi',
-    excerptWo: 'Bérab bu di jàppale xam ak valoriser patrimoineu Pays Bassari, ak culture, paysage ak savoir-faire.',
+    titleWo: 'Centre d’interprétation bu Bandafassi',
+    excerptWo: 'Centre bu Bandafassi di jàppale xam ak valoriser patrimoineu Pays Bassari, ak aada, paysage, architecture ak savoir-faire.',
     contentWo: `### Jëmmal
 
-Centre d’interprétation bu Bandafassi di bokk ci valorisationu patrimoineu Pays Bassari. Mu di jàppale visiteurs, xale yi ak wa dëkk ñu gën a xam culture, territoire ak environnement.
+Centre d’interprétation bu Bandafassi di bokk ci yoonu valoriser patrimoineu Pays Bassari. Bérab bi di mën a jàppale visiteurs, xale yi ak communautés ñu gën a xam histoire, culture ak environnementu territoire. Xam-xam bu mel ni di yokk solo bu patrimoine am ci dundug nit ñi.
 
-### Pays Bassari
+### Culture ak territoire
 
-Pays Bassari am na patrimoine culturel ak naturel bu riche. Aada, savoir-faire, paysage ak pratiquesu communauté yi di bokk ci identitéu territoire. Architecture, agriculture ak cérémonies di mën a joxe xibaar ci yoonu dund ak cosaan.
+Pays Bassari am na aada, cérémonies, savoir-faire ak architecture yu lëkkale nit ñi ak seen environnement. Pratiquesu agriculture, organisationu dëkk ak yoonu defar bérab di wone adaptationu communautés ci territoire. Denc ay récit ak ay pratiques di jàppale transmissionu identité culturelle.
 
-### Jàng ak exposition
+### Jàng ak transmission
 
-Centre bi mën a may espace ngir exposition, waxtaan ak activitésu jàng. Xibaar ci histoire, environnement ak patrimoine di jàppale nit ñi gën a xam seen solo ak seen liens ak territoire.
+Centre bi mën a nekk espaceu exposition, waxtaan ak apprentissage. Xibaar ci histoire, patrimoine naturel ak pratiquesu communautés di may nit ñi yoonu comprendre contexteu bérab bi. Mag ñi, guides ak acteurs culturels di mën a bokk ci transmissionu xam-xam ak mémoire.
 
-### Transmission ak communauté
+### Aar ak tourisme bu wér
 
-Aar patrimoine du doon rekk denc bérab; mu ëmb it xam-xam, récit ak participationu communauté yi. Mag ñi, guides ak acteurs locaux mën a bokk ci transmissionu savoir-faire ak mémoire.
-
-### Tourisme bu wér
-
-Valorisationu Pays Bassari mën a jàppale tourisme bu topp respectu culture ak environnement. Visites bu baax, gestionu flux ak participationu communauté di mën a boole développementu local ak conservation.`,
+Valorisationu Pays Bassari di soxla respectu culture ak environnement. Visites bu topp ndigal, participationu communauté ak gestion bu baax di mën a jàppale tourisme bu wér. Centre bi di mën a nekk ab yoon ngir boole conservationu patrimoine, jàng ak développementu local.
+`,
   },
   'reserve-speciale-faune-guembeul': {
     titleWo: 'Réserve spéciale de faune de Guembeul',
-    excerptWo: 'Barab bu aarug faune sahélienne ci wetu Saint-Louis, ak conservation ak réintroduction.',
+    excerptWo: 'Guembeul di ab barab bu aarug faune ci wetu Saint-Louis, fu biodiversité sahélienne, zones humides ak réintroductionu xeetu mbindeef di daje.',
     contentWo: `### Jëmmal
 
-Réserve spéciale de faune de Guembeul nekk na ci régionu Saint-Louis, ci wetu dëkk bi, diggante communes Ndiébène Gandiol ak Gandon. Ñu sos ko 30 mai 1983, te réserve bi am na 720 hectares.
+Réserve spéciale de faune de Guembeul di nekk ci wetu Saint-Louis, te mu bokk ci patrimoine naturel bu am solo ci aarug faune sahélienne. Bérab bi di boole conservation, recherche, sensibilisation ak transmissionu xam-xam ci environnement. Guembeul di wone ni aarug nature di soxla denc habitat ak xeetu mbindeef yi.
 
-### Zones humides ak Sahel
+### Zones humides ak environnement
 
-Guembeul dafa ëmb cuvette bu ndoxam safara, reliques de mangrove ak végétation sahélienne. Zones humides yi di dalal picc yu bare, te suuf su wër bi am na arbres ak herbacées.
+Réserve bi ëmb na cuvette ak zones yu ndox di mën a am solo ci dundug picc ak yeneen mbindeef. Végétationu Sahel ak bérab yu ndox di boole ay habitat yu wuute. Toppaatou ndox, suuf ak végétation di am solo ngir biodiversité bi mën a wéy ak xaalisu saison yi.
 
 ### Conservation ak réintroduction
 
-Réserve bi di jàppale conservation ak réacclimatationu xeetu mbindeef yu metti. Oryx algazelle, gazelle Dama ak gazelle Dorcas bokk nañu ci xeetu mbindeef yi ñuy sàmm.
+Guembeul di jàppale conservationu xeetu mbindeef yu ñu bëgg aar ak programmeu réintroduction. Aarug faune di soxla toppatoo habitats, surveillance ak xam-xam ci comportementu espèces yi. Réserve bi di itam ab espace bu mën a jàppale recherche ak suivi bi aju ci gestionu biodiversité.
 
-### Gazelle Dama
+### Jàng ak tourisme bu wér
 
-Gazelle Dama am na solo ci taariixu Guembeul. Ñu indi ko ci réserve bi ci 1984, te ci 2002 benn ci mbooloom yi dem ci Ferlo ngir jàppale programmeu réintroduction.
-
-### Picc ak faune
-
-Cuvette bi mooy habitat bu am solo ci picc yu ndox. Singe patas, chacal ak phacochère bokk nañu ci faune bi ñuy gis ci barab bi.
-
-### Jàngat ak conservation
-
-Guembeul man na nekk barab bu chercheurs di jàng ecology, zoologie, habitats ak conservationu xeetu mbindeef. Xam-xam boobu di jàppale yokkug doxalin yi ñuy def ngir aar nature.
-
-### Éducation ak sensibilisation
-
-Visites guidées ak jëf yu sensibilisation di dimbali xale yi ak gan yi xam solo bu biodiversité sahélienne am. Réserve bi di jàppale transmissionu xam-xam ci aarug nature.
-
-### Tourisme naturel
-
-Ku bëgg gis faune ak paysagesu Sahel man na xool réserve bi ak guide. War na topp ndigal yi, bañ a sonal mbindeef yi te sàmm habitats yi.
-
-### Solo ci patrimoine
-
-Guembeul wone na solo bu conservationu faune sahélienne am. Réserve bi bokk na ci patrimoine naturel bu Saint-Louis ak ci efforts yu ñuy def ngir denc biodiversité bi.`,
+Sensibilisation ak visites bu topp ndigal di mën a jàppale nit ñi gën a xam solo bu biodiversité sahélienne am. Ku koy seet war na respectu bérab bi, bañ a sonal mbindeef yi ak denc propreté. Guembeul di wone ni conservation, jàng ak découverteu patrimoine naturel mën a doxandoo ak participationu communauté.
+`,
   },
   'nature-du-ferlo-paysages-saheliens-faune-et-ressources': {
     titleWo: 'Nature bu Ferlo',
