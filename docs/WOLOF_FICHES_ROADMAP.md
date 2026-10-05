@@ -804,3 +804,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
+
+## Mise a jour - vague 138
+
+- Vague 138 : enrichissement de 3 fiches patrimoine naturel et centres d'interpretation - Reserve speciale de faune de Guembeul, Centre d'interpretation de Toubacouta et Centre d'interpretation de Bandafassi.
+- Contenus Wolof developpes autour de la conservation, de la biodiversite, de la transmission, du patrimoine culturel et de la participation des communautes.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
