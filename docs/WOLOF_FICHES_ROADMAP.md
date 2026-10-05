@@ -741,3 +741,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 131
+
+- Vague 131 : enrichissement de 3 fiches peche et gastronomie - Thiof, Ndambe et Thiere bu salte.
+- Contenus Wolof developpes autour des produits de la mer, des legumes secs, des cereales, des usages alimentaires et de la valorisation locale.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
