@@ -563,6 +563,18 @@ describe('Wolof fiche translations', () => {
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it('covers the Wolof gastronomy tourism enrichment wave 136', () => {
+    const slugs = ['thiere-bassi-salte', 'le-thiof-au-senegal-poisson-emblematique-peche-et-gastronomie', 'cap-skirring'];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
   it('has no duplicate source keys across Wolof packs', () => {
     const seen = new Map<string, string>();
     const duplicates: string[] = [];
