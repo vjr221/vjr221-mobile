@@ -705,3 +705,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 127
+
+- Vague 127 : enrichissement de 5 fiches gastronomie - Thiakry, Baila, Mafe, Jus de gingembre et Ceebu jen.
+- Contenus Wolof developpes autour de la preparation, des ingredients, du lekkandoo, du patrimoine culinaire et de la transmission.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
