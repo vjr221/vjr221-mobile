@@ -714,3 +714,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+
+## Mise a jour - vague 128
+
+- Vague 128 : enrichissement de 4 fiches patrimoine et tourisme - Plage de Ngor, Tata de Kedougou, Pointe des Almadies et Cap Skirring.
+- Contenus Wolof developpes autour du patrimoine, de l environnement, des usages locaux, du tourisme responsable et de la valorisation territoriale.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d abord avant preparation de la prochaine release.
