@@ -36,8 +36,11 @@ Découverteu mangrove yi man na nekk ci excursion ci pirogue, seet paysage ak xa
 
 ### Territoire
 
-Mangrove yi am nañu ci régionsu Ziguinchor, Sédhiou ak Kolda. Ñu lëkkale fleuve, bolong, villages, agriculture, pêche ak patrimoine culturel bu Casamance.`,
-  },
+Mangrove yi am nañu ci régionsu Ziguinchor, Sédhiou ak Kolda. Ñu lëkkale fleuve, bolong, villages, agriculture, pêche ak patrimoine culturel bu Casamance.
+
+### Transmission ak gestion bu wér
+
+Mangrove yi di bokk ci patrimoine naturel ak socialu Casamance. Aar leen di soxla xam-xam, surveillance, pratiquesu pêche yu wér ak participationu villages. Transmissionu savoir-faire yi ci ndaw ñi di jàppale conservation ak dund gu dëppoo ak ressourcesu bolong yi.`,
 
   'le-baobab-d-iwol-arbre-protecteur-et-memoire-des-bediks': {
     titleWo: 'Baobab bu Iwol : garab gu aar ak mémoire bu Bédik',
