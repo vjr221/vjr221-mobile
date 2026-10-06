@@ -24,8 +24,13 @@ Kër yu étage yi lëkkale nañu architecture, histoire, savoir-faire ak dundug 
 
 ### Aarug patrimoine
 
-Dencug kër yooyu soxla entretienu matériaux, transmissionu techniques ak jàppale dëkkandoo yi. Tourisme bu respectueux mën na dimbali ci valorisationu patrimoine bi, te war na fonk bérab bi ak nit ñi koy denc.`,
-  },
+Dencug kër yooyu soxla entretienu matériaux, transmissionu techniques ak jàppale dëkkandoo yi. Tourisme bu respectueux mën na dimbali ci valorisationu patrimoine bi, te war na fonk bérab bi ak nit ñi koy denc.### Architecture ak savoir-faire
+
+Cases à étage yi ci Mlomp di wone xam-xamu construction bu dëppoo ak environnementu Casamance. Formeu bâtiment, matériaux ak organisationu espace di joxe ay xibaar ci dundug communautés ak yoonu adaptation ci terroir.
+
+### Patrimoine ak transmission
+
+Dencug cases yi di soxla entretien, documentation ak transmissionu savoir-faire. Visiteu patrimoine bi mën na jàppale économie locale, te respectu communautés ak conservationu architecture di am solo.`,
   'cases-a-impluvium-royaume-bandial': {
     titleWo: 'Kër yu impluvium yu Nguurug Bandial',
     excerptWo: 'Architecture bu aada bu Basse-Casamance, ak cour bu digg buy dalal ndoxu taw ak leer.',
@@ -116,8 +121,13 @@ ENA di jàppale professionnalisationu acteurs culturels ak transmissionu savoirs
 
 ### Solo ci culture
 
-ENA di jàppale générationu artistes ak professionnels yu bees, te di yokk transmissionu savoirs ak développementu secteur culturel bu Senegaal.`,
-  },
+ENA di jàppale générationu artistes ak professionnels yu bees, te di yokk transmissionu savoirs ak développementu secteur culturel bu Senegaal.### Formation ak création
+
+Ecole nationale des arts di ab espaceu formation ci disciplines artistiques, te di jàppale ndaw yi yokk seen xam-xam ak seen pratique. Jàngu ci arts di lëkkale technique, créativité ak connaissanceu patrimoine culturel.
+
+### Artistes ak rayonnement
+
+Formationu artistes di bokk ci dundug scène culturelleu Senegaal. Projets, expositions ak spectacles mën nañu may étudiants yoon ngir wone seen talent, di waxtaan ak public ak di yokk rayonnementu arts.`,
   'marche-kermel-le-joyau-colonial-du-plateau-de-dakar': {
     titleWo: 'Marché Kermel — patrimoine architectural bu Plateau',
     excerptWo: 'Marché historique bu Dakar, ak rotonde bu fer forgé, commerce ak mémoire ci xolum Plateau.',
