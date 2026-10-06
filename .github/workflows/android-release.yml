@@ -38,7 +38,7 @@ jobs:
           path = "package-lock.json"
           with open(path) as f:
               lock = json.load(f)
-          names = ("mdn-data", "yaml", "lint-staged")
+          names = ("mdn-data", "yaml", "lint-staged", "string-argv", "domhandler")
           changed = 0
           for key, meta in list(lock.get("packages", {}).items()):
               name = key.split("node_modules/")[-1]
