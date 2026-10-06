@@ -41,6 +41,7 @@ Mangrove yi am nañu ci régionsu Ziguinchor, Sédhiou ak Kolda. Ñu lëkkale fl
 ### Transmission ak gestion bu wér
 
 Mangrove yi di bokk ci patrimoine naturel ak socialu Casamance. Aar leen di soxla xam-xam, surveillance, pratiquesu pêche yu wér ak participationu villages. Transmissionu savoir-faire yi ci ndaw ñi di jàppale conservation ak dund gu dëppoo ak ressourcesu bolong yi.`,
+  },
 
   'le-baobab-d-iwol-arbre-protecteur-et-memoire-des-bediks': {
     titleWo: 'Baobab bu Iwol : garab gu aar ak mémoire bu Bédik',
@@ -48,6 +49,7 @@ Mangrove yi di bokk ci patrimoine naturel ak socialu Casamance. Aar leen di soxl
     contentWo: `### Jëmmal\n\nBaobab bu Iwol nekk na ci buntu dëkk bi, te am na place bu am solo ci mémoire ak représentations culturelles yu Bédik. Mu bokk ci paysage culturel bu Iwol ak Pays Bassari.\n\n### Garab gu am solo\n\nBaobab bi mooy benn ci éléments yu feeñ ci paysageu Iwol. Tàmbali nañu ko jàppale ak mémoireu dëkk bi, te mu bokk ci xam-xam yi ñuy jàng ci environnement.\n\n### Iwol ak Pays Bédik\n\nIwol nekk na ci kawu colline ci Bandafassi, ci régionu Kédougou. Dëkk bi bokk na ci paysage culturel bu Pays Bassari, Bédik ak Peul, bi ñu bind ci patrimoine mondial UNESCO ci 2012.\n\n### Mémoire ak patrimoine\n\nBaobab bi di wone ni nature ak culture mën nañu lëkkale. Garab, colline, dëkk ak xam-xam yu aada yi bokk nañu ci benn patrimoine bu dëkk bi.\n\n### Tourisme culturel\n\nGan yi di dem Iwol mën nañu gis baobab bi ak paysageu colline yi. Découverte bi war na respectu dëkkandoo yi, sites yu am solo ak traditions yi.\n\n### Transmission\n\nDencug mémoire bu Iwol dafa aju ci transmissionu nettali, xam-xam ak jëf yi ci génération yi. Baobab bi di nekk benn repère bu naturel ci histoireu territoire bi.\n\n### Solo ci territoire\n\nBaobab bu Iwol di yokk valeur bu paysage culturel bu Kédougou. Mu lëkkale nature, mémoire, identité ak découverteu Pays Bédik.\n\n### Alalu Kédougou\n\nBaobab bi bokk na ci patrimoine naturel ak culturel bu Sénégal oriental, te di jàppale xam ni paysagesu Iwol ak dundug nit ñi lëkkale nañu.### Transmission ak protectionu patrimoine
 
 Baobab bi mën na bokk ci paysage ak mémoireu communautés Bedik. Aarug garab yi, jàng ci seen valeur culturelle ak transmissionu récits di jàppale dencug patrimoine. Visite ak découverte war nañu topp yoon wu wér, te respectu lieux yi ak pratiquesu populations mooy njëkk.`,
+  },
 
   'la-case-ronde-serere-architecture-traditionnelle-du-sine-saloum': {
     titleWo: 'Kër bu rondu Sereer : architecture traditionnelle bu Sine-Saloum',
@@ -82,9 +84,12 @@ Kër yu rond ci banco nekk nañu ba tey ci ay dëkk yu Sereer, waaye constructio
 
 ### Solo ci patrimoine
 
-Kër bu rondu Sereer wone na xam-xam bu architecture traditionnelle ak dëppoo gu am diggante nit, matériaux ak environnement. Mu bokk ci patrimoine architectural bu Sine-Saloum.### Architecture ak transmission
+Kër bu rondu Sereer wone na xam-xam bu architecture traditionnelle ak dëppoo gu am diggante nit, matériaux ak environnement. Mu bokk ci patrimoine architectural bu Sine-Saloum.
+
+### Architecture ak transmission
 
 Case ronde yi di wone xam-xamu construction bu aju ci terroir, climat ak dundug communauté. Forme, matériaux ak jëmmal bi mën na joxe xibaar ci organisationu espace ak aada. Dencug case yi ak transmissionu savoir-faire di jàppale patrimoineu Sine-Saloum wéy di dund ci générations yu bees.`,
+  },
 
   'le-royaume-du-jolof-formation-territoires-et-heritage-historique': {
     titleWo: 'Nguurug Jolof : sos, territoires ak alalu taariix',
@@ -124,4 +129,5 @@ Ku bëgg xam taariixu Senegaal mën na jàng Jolof ci wàllu pouvoir, commerce, 
 ### Mémoire ak patrimoine historique
 
 Taariixu Jolof di bokk ci mémoire bu réew mi, ndax mu lëkkale ay territoire, ay communautés ak ay formesu pouvoir ci jamono yu weesu. Jàngu ci Jolof war na boole taariix, géographie, oralité ak patrimoine. Transmissionu xam-xam yi mën na jàppale ndaw ñi xam fuñu jóge ak ni ay héritage mën a wéy ci jamono jii.`,
+  },
 };
