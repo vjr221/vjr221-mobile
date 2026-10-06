@@ -85,8 +85,13 @@ Galerie nationale bi lëkkale na ak École nationale des Arts, Musée des Civili
 
 ### Solo
 
-Galerie nationale des Arts di jàppale valorisationu arts visuels ak yokkug visibilité bu création contemporaine ci paysage culturel bu Senegaal.`,
-  },
+Galerie nationale des Arts di jàppale valorisationu arts visuels ak yokkug visibilité bu création contemporaine ci paysage culturel bu Senegaal.### Arts ak artistes
+
+Galerie bi di ab espace ngir wone ak valoriser ay œuvresu artistes Senegaal ak artistes yu bokk ci scène artistique. Expositions yi di jox public yoon ngir gis diversitéu styles, supports ak yoonu création.
+
+### Jàng ak transmission
+
+Galerie bi mën na nekk espaceu découverte ak jàng ci arts visuels. Waxtaan, visites ak expositions di jàppale ndaw ñi ak public xam ni arts di bokk ci patrimoine ak identitéu réew mi.`,
   'ecole-nationale-des-arts-du-senegal-formation-arts-culture': {
     titleWo: 'École nationale des Arts du Senegaal',
     excerptWo: 'Établissement public bu jàngal arts, culture ak métiers artistiques ci Dakar.',
