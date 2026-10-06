@@ -1711,4 +1711,20 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     }
     expect(new Set(slugs).size).toBe(slugs.length);
   });
+
+  it('covers the Wolof Casamance and cultural heritage waves 147-149', () => {
+    const slugs = [
+      'village-d-iwol-patrimoine-bedik-et-paysage-de-kedougou',
+      'palmier-a-huile-de-casamance-arbre-economie-et-culture',
+      'le-gumbe-rythme-danse-et-memoire-musicale-de-lespace-senegambien',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
 });
