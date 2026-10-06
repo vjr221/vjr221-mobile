@@ -852,3 +852,13 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+## Mise a jour - vagues 144 a 146
+
+- Vague 144 : enrichissement de la Chambre de commerce de Dakar et de son patrimoine architectural.
+- Vague 145 : enrichissement de la Galerie nationale des arts du Senegal.
+- Vague 146 : enrichissement du Calao terrestre geant des savanes senegalaises.
+- Contenus Wolof developpes autour du patrimoine bati, des arts visuels, de la biodiversite, de la conservation et de la transmission.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Tests dedies ajoutes avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
