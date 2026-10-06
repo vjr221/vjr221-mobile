@@ -31,6 +31,8 @@ Cases à étage yi ci Mlomp di wone xam-xamu construction bu dëppoo ak environn
 ### Patrimoine ak transmission
 
 Dencug cases yi di soxla entretien, documentation ak transmissionu savoir-faire. Visiteu patrimoine bi mën na jàppale économie locale, te respectu communautés ak conservationu architecture di am solo.`,
+  },
+
   'cases-a-impluvium-royaume-bandial': {
     titleWo: 'Kër yu impluvium yu Nguurug Bandial',
     excerptWo: 'Architecture bu aada bu Basse-Casamance, ak cour bu digg buy dalal ndoxu taw ak leer.',
@@ -97,6 +99,8 @@ Galerie bi di ab espace ngir wone ak valoriser ay œuvresu artistes Senegaal ak 
 ### Jàng ak transmission
 
 Galerie bi mën na nekk espaceu découverte ak jàng ci arts visuels. Waxtaan, visites ak expositions di jàppale ndaw ñi ak public xam ni arts di bokk ci patrimoine ak identitéu réew mi.`,
+  },
+
   'ecole-nationale-des-arts-du-senegal-formation-arts-culture': {
     titleWo: 'École nationale des Arts du Senegaal',
     excerptWo: 'Établissement public bu jàngal arts, culture ak métiers artistiques ci Dakar.',
@@ -128,6 +132,8 @@ Ecole nationale des arts di ab espaceu formation ci disciplines artistiques, te 
 ### Artistes ak rayonnement
 
 Formationu artistes di bokk ci dundug scène culturelleu Senegaal. Projets, expositions ak spectacles mën nañu may étudiants yoon ngir wone seen talent, di waxtaan ak public ak di yokk rayonnementu arts.`,
+  },
+
   'marche-kermel-le-joyau-colonial-du-plateau-de-dakar': {
     titleWo: 'Marché Kermel — patrimoine architectural bu Plateau',
     excerptWo: 'Marché historique bu Dakar, ak rotonde bu fer forgé, commerce ak mémoire ci xolum Plateau.',
