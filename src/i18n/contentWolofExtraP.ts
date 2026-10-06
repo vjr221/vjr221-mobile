@@ -57,6 +57,7 @@ Parc nationalu picci Djoudj mooy benn ci alal yu gën a am solo ci nature bu Sen
 ### Jàng ak tourisme bu wér
 
 Visite bi war a topp yoon yu aarug nature, te dox ci ndigalu guides ak acteurs yu local. Jàngat yi mën nañu xam njariñu zones humides, rôleu oiseaux yi ak solo bu environnement am ci dundug réew mi. Aarug site bi mooy li gën a am solo ngir patrimoine bi wéy di jàppale générations yu ñëw.`,
+  },
 
   'reserve-de-fathala': {
     titleWo: 'Réserve de Fathala',
@@ -116,6 +117,7 @@ Réserve de Fathala bokk na ci barab yu ñuy jëfandikoo ngir wone richesse natu
 ### Aarug nature ak communautés
 
 Fathala di wone ni conservation ak tourisme responsable mën nañu bokk benn yoon. Visite yi, encadrementu professionnels ak respectu habitats di jàppale aarug faune ak flore. Jàngat yi mën nañu itam gis solo bu communautés locales am ci accueil, savoir-faire ak valorisationu patrimoine.`,
+  },
 
   'parc-national-de-la-langue-de-barbarie': {
     titleWo: 'Parc nationalu Langue de Barbarie',
