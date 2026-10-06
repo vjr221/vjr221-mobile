@@ -108,8 +108,13 @@ Bâtimentu Place de l’Indépendance di jàppale xam ni centreu Dakar soppeeku 
 
 ### Patrimoine
 
-Dencug bâtimentsu Plateau soxla documentation, entretien ak valorisationu histoireu architecture. Ñoom bokk nañu ci paysageu historique bu capitale bi.`,
-  },
+Dencug bâtimentsu Plateau soxla documentation, entretien ak valorisationu histoireu architecture. Ñoom bokk nañu ci paysageu historique bu capitale bi.### Architecture ak mémoire
+
+Bâtiment bi di bokk ci paysage historiqueu Dakar, te architecture coloniale bi di wone ay tracesu jamono yu weesu. Bérab bi di lëkkale patrimoine bâti ak mémoireu vie économique ci dëkk bi.
+
+### Patrimoine ak transmission
+
+Dencug architecture yi war na boole entretienu bâtiment, documentation ak transmissionu taariix. Xam bérab yi di jàppale residents ak visiteurs gis solo bu patrimoine bâti am ci identitéu Dakar.`,
 
   'village-d-iwol-patrimoine-bedik-et-paysage-de-kedougou': {
     titleWo: 'Dëkkub Iwol — patrimoine Bédik ak paysageu Kédougou',
