@@ -160,7 +160,9 @@ Patrimoineu Iwol soxla documentation ak transmissionu savoir-faire, te itam cons
 
 ### Solo
 
-Iwol di wone lëkkaloo bu habitat, culture, nature ak mémoire ci Senegaal oriental. Mu bokk ci bérab yu am solo ci patrimoine Bédik ak Pays Bassari.### Village ak patrimoine
+Iwol di wone lëkkaloo bu habitat, culture, nature ak mémoire ci Senegaal oriental. Mu bokk ci bérab yu am solo ci patrimoine Bédik ak Pays Bassari.
+
+### Village ak patrimoine
 
 Iwol di ab bérab bu lëkkale dundug communauté Bedik, paysageu Kedougou ak patrimoine culturel. Jàng ci architecture, pratiquesu aada ak environnement di jàppale xam ni identitéu lieu bi di dëppoo ak territoire.
 
