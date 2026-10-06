@@ -862,3 +862,13 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Tests dedies ajoutes avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+## Mise a jour - vagues 147 a 149
+
+- Vague 147 : enrichissement du village d'Iwol et du patrimoine Bedik.
+- Vague 148 : enrichissement du palmier a huile de Casamance.
+- Vague 149 : enrichissement du gumbe et de la memoire musicale senegambienne.
+- Contenus Wolof developpes autour du patrimoine Bedik, des usages locaux, de la culture, de la musique et de la transmission.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Tests dedies ajoutes avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
