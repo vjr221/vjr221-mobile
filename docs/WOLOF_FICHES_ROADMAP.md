@@ -872,3 +872,12 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Tests dedies ajoutes avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+## Mise a jour - vagues 150 a 151
+
+- Vague 150 : enrichissement de l'Ecole nationale des arts du Senegal.
+- Vague 151 : enrichissement des cases a etage de Mlomp.
+- Contenus Wolof developpes autour de la formation artistique, de la creation, de l'architecture traditionnelle, du patrimoine et de la transmission.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Tests dedies ajoutes avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
