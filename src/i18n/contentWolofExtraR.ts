@@ -24,7 +24,9 @@ Kër yu étage yi lëkkale nañu architecture, histoire, savoir-faire ak dundug 
 
 ### Aarug patrimoine
 
-Dencug kër yooyu soxla entretienu matériaux, transmissionu techniques ak jàppale dëkkandoo yi. Tourisme bu respectueux mën na dimbali ci valorisationu patrimoine bi, te war na fonk bérab bi ak nit ñi koy denc.### Architecture ak savoir-faire
+Dencug kër yooyu soxla entretienu matériaux, transmissionu techniques ak jàppale dëkkandoo yi. Tourisme bu respectueux mën na dimbali ci valorisationu patrimoine bi, te war na fonk bérab bi ak nit ñi koy denc.
+
+### Architecture ak savoir-faire
 
 Cases à étage yi ci Mlomp di wone xam-xamu construction bu dëppoo ak environnementu Casamance. Formeu bâtiment, matériaux ak organisationu espace di joxe ay xibaar ci dundug communautés ak yoonu adaptation ci terroir.
 
@@ -92,7 +94,9 @@ Galerie nationale bi lëkkale na ak École nationale des Arts, Musée des Civili
 
 ### Solo
 
-Galerie nationale des Arts di jàppale valorisationu arts visuels ak yokkug visibilité bu création contemporaine ci paysage culturel bu Senegaal.### Arts ak artistes
+Galerie nationale des Arts di jàppale valorisationu arts visuels ak yokkug visibilité bu création contemporaine ci paysage culturel bu Senegaal.
+
+### Arts ak artistes
 
 Galerie bi di ab espace ngir wone ak valoriser ay œuvresu artistes Senegaal ak artistes yu bokk ci scène artistique. Expositions yi di jox public yoon ngir gis diversitéu styles, supports ak yoonu création.
 
@@ -125,7 +129,9 @@ ENA di jàppale professionnalisationu acteurs culturels ak transmissionu savoirs
 
 ### Solo ci culture
 
-ENA di jàppale générationu artistes ak professionnels yu bees, te di yokk transmissionu savoirs ak développementu secteur culturel bu Senegaal.### Formation ak création
+ENA di jàppale générationu artistes ak professionnels yu bees, te di yokk transmissionu savoirs ak développementu secteur culturel bu Senegaal.
+
+### Formation ak création
 
 Ecole nationale des arts di ab espaceu formation ci disciplines artistiques, te di jàppale ndaw yi yokk seen xam-xam ak seen pratique. Jàngu ci arts di lëkkale technique, créativité ak connaissanceu patrimoine culturel.
 
