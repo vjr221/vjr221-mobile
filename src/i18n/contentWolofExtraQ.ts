@@ -117,6 +117,9 @@ Territoires, traditions orales ak mémoire yi lëkkale nañu Jolof ak patrimoine
 
 ### Jàngat ak découverte
 
-Ku bëgg xam taariixu Senegaal mën na jàng Jolof ci wàllu pouvoir, commerce, territoires ak culture. Fiche bi di jàppale lëkkale taariixu nguur gi ak yeneen formations politiques yu réew mi.`,
-  },
+Ku bëgg xam taariixu Senegaal mën na jàng Jolof ci wàllu pouvoir, commerce, territoires ak culture. Fiche bi di jàppale lëkkale taariixu nguur gi ak yeneen formations politiques yu réew mi.
+
+### Mémoire ak patrimoine historique
+
+Taariixu Jolof di bokk ci mémoire bu réew mi, ndax mu lëkkale ay territoire, ay communautés ak ay formesu pouvoir ci jamono yu weesu. Jàngu ci Jolof war na boole taariix, géographie, oralité ak patrimoine. Transmissionu xam-xam yi mën na jàppale ndaw ñi xam fuñu jóge ak ni ay héritage mën a wéy ci jamono jii.`,
 };
