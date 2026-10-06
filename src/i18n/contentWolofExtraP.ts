@@ -52,8 +52,11 @@ Ku bëgg dem Djoudj war na topp yoon yi ñu may, te bañ a sonal picc yi. Aarug 
 
 ### Patrimoine naturel bu delta bi
 
-Parc nationalu picci Djoudj mooy benn ci alal yu gën a am solo ci nature bu Senegaal. Mu wone solo bu wetland yi am ci dundug picc yu tukki ak ci balance écologique bu delta du fleuve Sénégal.`,
-  },
+Parc nationalu picci Djoudj mooy benn ci alal yu gën a am solo ci nature bu Senegaal. Mu wone solo bu wetland yi am ci dundug picc yu tukki ak ci balance écologique bu delta du fleuve Sénégal.
+
+### Jàng ak tourisme bu wér
+
+Visite bi war a topp yoon yu aarug nature, te dox ci ndigalu guides ak acteurs yu local. Jàngat yi mën nañu xam njariñu zones humides, rôleu oiseaux yi ak solo bu environnement am ci dundug réew mi. Aarug site bi mooy li gën a am solo ngir patrimoine bi wéy di jàppale générations yu ñëw.`,
 
   'reserve-de-fathala': {
     titleWo: 'Réserve de Fathala',
