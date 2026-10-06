@@ -828,3 +828,11 @@ Consolidation Wolof : contenus structurés, contextualisés et contrôlés par t
 - Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
 - Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
 - Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
+
+## Mise a jour - vague 141
+
+- Vague 141 : enrichissement de 3 fiches patrimoine naturel - Parc national des oiseaux du Djoudj, Reserve de Fathala et mangroves de Casamance.
+- Contenus Wolof developpes autour de la conservation, du tourisme responsable, des zones humides, des communautes et de la transmission des savoir-faire.
+- Aucun nouveau slug, aucune suppression et aucun doublon cree ; contenu francais inchange.
+- Test dedie ajoute avec controle des champs, structure Markdown, longueur minimale superieure a 700 caracteres et unicite des cles.
+- Aucun APK intermediaire : validation CI d'abord avant preparation de la prochaine release.
