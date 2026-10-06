@@ -148,6 +148,11 @@ Picc yi mën nañu nekk ci groupe, te lëkkalekaay gi mën nañu jàppale aar, w
 
 ### Aarug biodiversité
 
-Conservationu savanes ak aarug habitats di am solo ngir dencug espèces yi. Xam-xamu faune ak surveillanceu zones naturelles di jàppale patrimoine naturel bu Senegaal.`,
-  },
+Conservationu savanes ak aarug habitats di am solo ngir dencug espèces yi. Xam-xamu faune ak surveillanceu zones naturelles di jàppale patrimoine naturel bu Senegaal.### Dundu ak environnement
+
+Calao terrestre di bokk ci biodiversitéu savanes yi. Dencug habitat yi, lutte contre perteu biodiversité ak xam-xamu espèces yi di jàppale aarug patrimoine naturel.
+
+### Jàng ak conservation
+
+Xam ni oiseaux yi di dund, di wut lekk ak di bokk ci ecosysteme mën na jàppale sensibilisation. Aarug savanes ak pratiques yu wér ci environnement di am solo ngir espèces yi ak communautés yu dëkk ci seen wet.`,
 };
