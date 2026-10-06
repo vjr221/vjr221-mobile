@@ -1727,4 +1727,19 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     }
     expect(new Set(slugs).size).toBe(slugs.length);
   });
+
+  it('covers the Wolof arts and architecture enrichment waves 150-151', () => {
+    const slugs = [
+      'ecole-nationale-des-arts-du-senegal-formation-arts-culture',
+      'cases-a-etage-de-mlomp-architecture-traditionnelle-casamance',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
 });
