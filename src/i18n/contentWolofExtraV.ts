@@ -28,13 +28,16 @@ Gumbe di dund ci pratiques yi nit ñi di def tey. Dencug ko war na boole documen
 
 ### Solo ci culture
 
-Gumbe di wone diversitéu patrimoine musical bu Senegaal ak lëkkaloo yi diggante Senegambie. Mu di itam yoonu xam ni musique mën na denc mémoire ak identité.### Rythme ak identité
+Gumbe di wone diversitéu patrimoine musical bu Senegaal ak lëkkaloo yi diggante Senegambie. Mu di itam yoonu xam ni musique mën na denc mémoire ak identité.
+
+### Rythme ak identité
 
 Gumbé di bokk ci patrimoine musical bu Senegambie, te rythme, danse ak percussion yi di joxe yoon ngir expressionu communauté. Pratiques yi di lëkkale musique ak mémoire, te di wone ni patrimoine immatériel mën a soppeeku te wéy di dund.
 
 ### Transmission ak scène culturelle
 
 Transmissionu gumbé ci ndaw ñi di soxla jàng, répétition ak participationu artistes. Spectacles ak projets culturels mën nañu jàppale valorisationu patrimoine, te di may public xam diversitéu traditions musicales.`,
+  },
 
   'palmier-a-huile-de-casamance-arbre-economie-et-culture': {
     titleWo: 'Palmier à huile bu Casamance — garab, ekonom ak aada',
@@ -61,13 +64,16 @@ Garab bi bokk na ci mémoireu territoiresu Casamance. Pratiques yi aju ci ko di 
 
 ### Dencug paysage
 
-Aarug palmier yi ak environnement yi di jàppale biodiversité ak ressourcesu dëkkandoo yi. Développement bu wér war na boole production, conservation ak xam-xam local.### Arbre ak dundug territoire
+Aarug palmier yi ak environnement yi di jàppale biodiversité ak ressourcesu dëkkandoo yi. Développement bu wér war na boole production, conservation ak xam-xam local.
+
+### Arbre ak dundug territoire
 
 Palmier à huile di bokk ci paysageu Casamance ak ay usages yu bari ci dundug nit ñi. Meññam mën na bokk ci alimentation, boisson ak ay pratiquesu production, te garab gi di lëkkale économie ak culture.
 
 ### Transmission ak valorisation
 
 Xam-xamu transformationu produits yi di jaar ci générations. Aarug ressources ak jëfandikoo yu wér di jàppale dundug filières locales, te transmissionu savoir-faire di denc patrimoineu Casamance.`,
+  },
 
   'les-metiers-de-la-forge-a-kaffrine-un-savoir-faire-artisanal-du-ndoucoumane': {
     titleWo: 'Métiersu forge ci Kaffrine — savoir-faire bu Ndoucoumane',
@@ -118,13 +124,16 @@ Bâtimentu Place de l’Indépendance di jàppale xam ni centreu Dakar soppeeku 
 
 ### Patrimoine
 
-Dencug bâtimentsu Plateau soxla documentation, entretien ak valorisationu histoireu architecture. Ñoom bokk nañu ci paysageu historique bu capitale bi.### Architecture ak mémoire
+Dencug bâtimentsu Plateau soxla documentation, entretien ak valorisationu histoireu architecture. Ñoom bokk nañu ci paysageu historique bu capitale bi.
+
+### Architecture ak mémoire
 
 Bâtiment bi di bokk ci paysage historiqueu Dakar, te architecture coloniale bi di wone ay tracesu jamono yu weesu. Bérab bi di lëkkale patrimoine bâti ak mémoireu vie économique ci dëkk bi.
 
 ### Patrimoine ak transmission
 
 Dencug architecture yi war na boole entretienu bâtiment, documentation ak transmissionu taariix. Xam bérab yi di jàppale residents ak visiteurs gis solo bu patrimoine bâti am ci identitéu Dakar.`,
+  },
 
   'village-d-iwol-patrimoine-bedik-et-paysage-de-kedougou': {
     titleWo: 'Dëkkub Iwol — patrimoine Bédik ak paysageu Kédougou',
@@ -158,4 +167,5 @@ Iwol di ab bérab bu lëkkale dundug communauté Bedik, paysageu Kedougou ak pat
 ### Aar ak tourisme responsable
 
 Visiteu village bi war na topp ndigalu communautés, respectu lieux ak pratiques. Tourisme responsable mën na jàppale économie locale te di denc mémoire, savoir-faire ak paysageu patrimoine.`,
+  },
 };
