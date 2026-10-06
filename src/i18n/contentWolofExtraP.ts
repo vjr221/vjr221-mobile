@@ -111,8 +111,11 @@ Ku bëgg xam faune ak paysagesu Sine-Saloum man na gis ci Fathala benn expérien
 
 ### Fathala ak patrimoine naturel
 
-Réserve de Fathala bokk na ci barab yu ñuy jëfandikoo ngir wone richesse nature bu Senegaal te yokk écotourisme. Mu bokk it ci patrimoine naturel bu Sine-Saloum.`,
-  },
+Réserve de Fathala bokk na ci barab yu ñuy jëfandikoo ngir wone richesse nature bu Senegaal te yokk écotourisme. Mu bokk it ci patrimoine naturel bu Sine-Saloum.
+
+### Aarug nature ak communautés
+
+Fathala di wone ni conservation ak tourisme responsable mën nañu bokk benn yoon. Visite yi, encadrementu professionnels ak respectu habitats di jàppale aarug faune ak flore. Jàngat yi mën nañu itam gis solo bu communautés locales am ci accueil, savoir-faire ak valorisationu patrimoine.`,
 
   'parc-national-de-la-langue-de-barbarie': {
     titleWo: 'Parc nationalu Langue de Barbarie',
