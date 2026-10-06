@@ -1695,4 +1695,20 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     }
     expect(new Set(slugs).size).toBe(slugs.length);
   });
+
+  it('covers the Wolof heritage and arts enrichment waves 144-146', () => {
+    const slugs = [
+      'chambre-de-commerce-de-dakar-architecture-coloniale-place-de-lindependance',
+      'galerie-nationale-des-arts-du-senegal',
+      'le-calao-terrestre-geant-social-des-savanes-senegalaises',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
 });
