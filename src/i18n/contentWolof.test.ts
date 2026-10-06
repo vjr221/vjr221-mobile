@@ -1680,4 +1680,19 @@ test('covers the Wolof Dakar geological heritage consolidation wave 100', () => 
     }
     expect(new Set(slugs).size).toBe(slugs.length);
   });
+
+  it('covers the Wolof heritage enrichment wave 143', () => {
+    const slugs = [
+      'le-baobab-d-iwol-arbre-protecteur-et-memoire-des-bediks',
+      'la-case-ronde-serere-architecture-traditionnelle-du-sine-saloum',
+    ];
+    for (const slug of slugs) {
+      const fiche = getWolofContentBySlug(slug);
+      expect(fiche?.titleWo).toBeTruthy();
+      expect(fiche?.excerptWo).toBeTruthy();
+      expect(fiche?.contentWo).toContain('###');
+      expect((fiche?.contentWo ?? '').length).toBeGreaterThan(700);
+    }
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
 });
